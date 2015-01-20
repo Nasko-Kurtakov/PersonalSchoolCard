@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E72002A-425E-4574-BAA8-A444BE3A5922}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SchoolCardDatabase</RootNamespace>
+    <AssemblyName>SchoolCardDatabase</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Absence.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Area.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Diplom.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Grade.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoursStudedSubject.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manicipality.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mark.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartialClasses\StudentPartialClass.cs" />
+    <Compile Include="PartialClasses\TeacherPartialClass.cs" />
+    <Compile Include="PersonalSchoolCardEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonalSchoolCardEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalSchoolCardEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalSchoolCardEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonalSchoolCardEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Picture.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="School.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolYear.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Settlement.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsSchoolYear.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subject.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectType.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Term.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeAbsence.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="PersonalSchoolCardEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PersonalSchoolCardEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PersonalSchoolCardEntities.edmx.diagram">
+      <DependentUpon>PersonalSchoolCardEntities.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PersonalSchoolCardEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PersonalSchoolCardEntities.edmx</DependentUpon>
+      <LastGenOutput>PersonalSchoolCardEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PersonalSchoolCardEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PersonalSchoolCardEntities.edmx</DependentUpon>
+      <LastGenOutput>PersonalSchoolCardEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
