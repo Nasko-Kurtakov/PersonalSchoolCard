@@ -17,6 +17,9 @@ namespace SchoolCardDatabase
         public Class()
         {
             this.StudentsSchoolYears = new HashSet<StudentsSchoolYear>();
+            this.Absences = new HashSet<Absence>();
+            this.HoursStudedSubjects = new HashSet<HoursStudedSubject>();
+            this.Marks = new HashSet<Mark>();
         }
     
         public int ClassID { get; set; }
@@ -29,5 +32,8 @@ namespace SchoolCardDatabase
         public virtual SchoolYear SchoolYear { get; set; }
         public virtual Teacher Teacher { get; set; }
         public virtual ICollection<StudentsSchoolYear> StudentsSchoolYears { get; set; }
+        public virtual ICollection<Absence> Absences { get; set; }
+        public virtual ICollection<HoursStudedSubject> HoursStudedSubjects { get; set; }
+        public virtual ICollection<Mark> Marks { get; set; }
     }
 }

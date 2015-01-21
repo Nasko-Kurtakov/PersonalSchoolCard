@@ -20,10 +20,12 @@ namespace SchoolCardDatabase
         public Nullable<byte> GradeID { get; set; }
         public byte TermID { get; set; }
         public string AbsencesNumber { get; set; }
+        public Nullable<int> ClassID { get; set; }
     
         public virtual Grade Grade { get; set; }
         public virtual Student Student { get; set; }
         public virtual Term Term { get; set; }
         public virtual TypeAbsence TypeAbsence { get; set; }
+        public virtual Class Class { get; set; }
     }
 }

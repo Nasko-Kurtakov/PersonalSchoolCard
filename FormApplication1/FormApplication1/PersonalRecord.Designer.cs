@@ -1,4 +1,4 @@
-﻿namespace FormApplication1
+﻿namespace PersonalShcoolCard
 {
     partial class PersonalRecord
     {

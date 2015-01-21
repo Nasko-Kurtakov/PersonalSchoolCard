@@ -11,7 +11,7 @@
             {
                 //var subjechtsNames = contex
             }
-            return string.Format("Name: {0} Subject: {1}", this.TeacherName,TeacherSubjectName(this.TaughtSubjectID));
+            return string.Format("Name: {0} {1} Subject: {2}", this.FirstName,this.LastName,TeacherSubjectName(this.TaughtSubjectID));
         }
         private string TeacherSubjectName(int thaughtSubjectId)
         {

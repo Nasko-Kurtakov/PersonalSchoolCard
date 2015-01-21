@@ -108,6 +108,12 @@
     <Compile Include="Settlement.cs">
       <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs">
       <DependentUpon>PersonalSchoolCardEntities.tt</DependentUpon>
     </Compile>

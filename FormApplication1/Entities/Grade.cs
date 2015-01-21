@@ -14,18 +14,7 @@ namespace Entities
     
     public partial class Grade
     {
-        public Grade()
-        {
-            this.Absences = new HashSet<Absence>();
-            this.HoursStudedSubjects = new HashSet<HoursStudedSubject>();
-            this.Marks = new HashSet<Mark>();
-        }
-    
         public byte GradeID { get; set; }
         public Nullable<byte> Grade1 { get; set; }
-    
-        public virtual ICollection<Absence> Absences { get; set; }
-        public virtual ICollection<HoursStudedSubject> HoursStudedSubjects { get; set; }
-        public virtual ICollection<Mark> Marks { get; set; }
     }
 }

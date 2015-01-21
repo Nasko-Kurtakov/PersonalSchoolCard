@@ -19,10 +19,12 @@ namespace SchoolCardDatabase
         public int SubjectID { get; set; }
         public byte SubjectTypeID { get; set; }
         public string HoursStudied { get; set; }
+        public int ClassID { get; set; }
     
         public virtual Grade Grade { get; set; }
         public virtual Profile Profile { get; set; }
         public virtual Subject Subject { get; set; }
         public virtual SubjectType SubjectType { get; set; }
+        public virtual Class Class { get; set; }
     }
 }

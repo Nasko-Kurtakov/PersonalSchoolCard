@@ -55,6 +55,9 @@
         <AssociationConnector Association="PersonalSchoolCardModel.FK_StudentsSchoolYear_Students" ManuallyRouted="false" />
         <AssociationConnector Association="PersonalSchoolCardModel.FK_Teachers_Subjects" ManuallyRouted="false" />
         <AssociationConnector Association="PersonalSchoolCardModel.ProfilesSubjects" ManuallyRouted="false" />
+        <AssociationConnector Association="PersonalSchoolCardModel.FK_Absences_Classes" />
+        <AssociationConnector Association="PersonalSchoolCardModel.FK_HoursStudedSubject_Classes" />
+        <AssociationConnector Association="PersonalSchoolCardModel.FK_Marks_Classes" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

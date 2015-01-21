@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FormApplication1
+namespace PersonalShcoolCard
 {
     public partial class Success : Form
     {

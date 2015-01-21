@@ -16,14 +16,14 @@ namespace Entities
     {
         public Term()
         {
-            this.Absences = new HashSet<Absence>();
             this.Marks = new HashSet<Mark>();
+            this.Absences = new HashSet<Absence>();
         }
     
         public byte TermID { get; set; }
         public string TermName { get; set; }
     
-        public virtual ICollection<Absence> Absences { get; set; }
         public virtual ICollection<Mark> Marks { get; set; }
+        public virtual ICollection<Absence> Absences { get; set; }
     }
 }
