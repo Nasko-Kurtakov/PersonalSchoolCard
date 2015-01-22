@@ -24,10 +24,11 @@ D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\D
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Success.resources
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\FormApplication1.exe
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\FormApplication1.pdb
-D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\Entities.dll
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.dll
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.SqlServer.dll
-D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\Entities.pdb
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.xml
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.SqlServer.xml
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Menu.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.AdminForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\PersonalSchoolCard.Data.pdb

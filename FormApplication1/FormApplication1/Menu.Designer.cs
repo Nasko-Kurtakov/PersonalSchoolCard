@@ -115,16 +115,16 @@
             // 
             this.panel1.BackgroundImage = global::PersonalShcoolCard.Properties.Resources.labelForButton;
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Location = new System.Drawing.Point(36, 370);
+            this.panel1.Location = new System.Drawing.Point(26, 338);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 52);
+            this.panel1.Size = new System.Drawing.Size(150, 51);
             this.panel1.TabIndex = 14;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Location = new System.Drawing.Point(33, 13);
+            this.label14.Location = new System.Drawing.Point(34, 16);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(83, 13);
             this.label14.TabIndex = 14;
