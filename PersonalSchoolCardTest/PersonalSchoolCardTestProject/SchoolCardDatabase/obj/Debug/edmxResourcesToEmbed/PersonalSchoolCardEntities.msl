@@ -1,18 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="PersonalSchoolCardModelStoreContainer" CdmEntityContainer="PersonalSchoolCardEntities">
-    <EntitySetMapping Name="Absences">
-      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Absence">
-        <MappingFragment StoreEntitySet="Absences">
-          <ScalarProperty Name="AbsencesID" ColumnName="AbsencesID" />
-          <ScalarProperty Name="TypeAbsencesID" ColumnName="TypeAbsencesID" />
-          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
-          <ScalarProperty Name="GradeID" ColumnName="GradeID" />
-          <ScalarProperty Name="TermID" ColumnName="TermID" />
-          <ScalarProperty Name="AbsencesNumber" ColumnName="AbsencesNumber" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Areas">
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.Area">
         <MappingFragment StoreEntitySet="Areas">
@@ -54,7 +42,7 @@
     <EntitySetMapping Name="HoursStudedSubjects">
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.HoursStudedSubject">
         <MappingFragment StoreEntitySet="HoursStudedSubject">
-          <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
           <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
           <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
           <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
@@ -77,7 +65,7 @@
           <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
           <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
           <ScalarProperty Name="TermID" ColumnName="TermID" />
-          <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
           <ScalarProperty Name="Mark1" ColumnName="Mark" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -193,7 +181,8 @@
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.Teacher">
         <MappingFragment StoreEntitySet="Teachers">
           <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
-          <ScalarProperty Name="TeacherName" ColumnName="TeacherName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="TaughtSubjectID" ColumnName="TaughtSubjectID" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -211,6 +200,17 @@
         <MappingFragment StoreEntitySet="TypeAbsences">
           <ScalarProperty Name="TypeAbsenceID" ColumnName="TypeAbsenceID" />
           <ScalarProperty Name="TypeAbsence1" ColumnName="TypeAbsence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Absences">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Absence">
+        <MappingFragment StoreEntitySet="Absences">
+          <ScalarProperty Name="TypeAbsencesID" ColumnName="TypeAbsencesID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="AbsencesNumber" ColumnName="AbsencesNumber" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

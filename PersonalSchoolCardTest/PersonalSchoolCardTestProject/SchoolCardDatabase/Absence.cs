@@ -14,18 +14,15 @@ namespace SchoolCardDatabase
     
     public partial class Absence
     {
-        public int AbsencesID { get; set; }
         public byte TypeAbsencesID { get; set; }
         public long StudentID { get; set; }
-        public Nullable<byte> GradeID { get; set; }
+        public Nullable<int> ClassID { get; set; }
         public byte TermID { get; set; }
         public string AbsencesNumber { get; set; }
-        public Nullable<int> ClassID { get; set; }
     
-        public virtual Grade Grade { get; set; }
+        public virtual Class Class { get; set; }
         public virtual Student Student { get; set; }
         public virtual Term Term { get; set; }
         public virtual TypeAbsence TypeAbsence { get; set; }
-        public virtual Class Class { get; set; }
     }
 }

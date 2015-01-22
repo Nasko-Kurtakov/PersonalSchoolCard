@@ -16,9 +16,9 @@ namespace SchoolCardDatabase
     {
         public Student()
         {
-            this.Absences = new HashSet<Absence>();
             this.Diploms = new HashSet<Diplom>();
             this.Marks = new HashSet<Mark>();
+            this.Absences = new HashSet<Absence>();
             this.StudentsSchoolYears = new HashSet<StudentsSchoolYear>();
         }
     
@@ -36,12 +36,12 @@ namespace SchoolCardDatabase
         public int ProfileID { get; set; }
         public Nullable<float> MarkFromDiplom { get; set; }
     
-        public virtual ICollection<Absence> Absences { get; set; }
         public virtual ICollection<Diplom> Diploms { get; set; }
         public virtual ICollection<Mark> Marks { get; set; }
         public virtual Picture Picture { get; set; }
         public virtual Profile Profile { get; set; }
         public virtual Settlement Settlement { get; set; }
+        public virtual ICollection<Absence> Absences { get; set; }
         public virtual ICollection<StudentsSchoolYear> StudentsSchoolYears { get; set; }
     }
 }

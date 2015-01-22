@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="PersonalSchoolCardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Absences">
     <Key>
-      <PropertyRef Name="AbsencesID" />
+      <PropertyRef Name="TypeAbsencesID" />
+      <PropertyRef Name="StudentID" />
+      <PropertyRef Name="TermID" />
     </Key>
-    <Property Name="AbsencesID" Type="int" Nullable="false" />
     <Property Name="TypeAbsencesID" Type="tinyint" Nullable="false" />
     <Property Name="StudentID" Type="bigint" Nullable="false" />
-    <Property Name="GradeID" Type="tinyint" />
+    <Property Name="ClassID" Type="int" />
     <Property Name="TermID" Type="tinyint" Nullable="false" />
     <Property Name="AbsencesNumber" Type="nvarchar" MaxLength="6" />
   </EntityType>
@@ -49,12 +52,12 @@
   </EntityType>
   <EntityType Name="HoursStudedSubject">
     <Key>
-      <PropertyRef Name="GradeID" />
+      <PropertyRef Name="ClassID" />
       <PropertyRef Name="ProfileID" />
       <PropertyRef Name="SubjectID" />
       <PropertyRef Name="SubjectTypeID" />
     </Key>
-    <Property Name="GradeID" Type="tinyint" Nullable="false" />
+    <Property Name="ClassID" Type="int" Nullable="false" />
     <Property Name="ProfileID" Type="int" Nullable="false" />
     <Property Name="SubjectID" Type="int" Nullable="false" />
     <Property Name="SubjectTypeID" Type="tinyint" Nullable="false" />
@@ -73,13 +76,13 @@
       <PropertyRef Name="SubjectID" />
       <PropertyRef Name="SubjectTypeID" />
       <PropertyRef Name="TermID" />
-      <PropertyRef Name="GradeID" />
+      <PropertyRef Name="ClassID" />
     </Key>
     <Property Name="StudentID" Type="bigint" Nullable="false" />
     <Property Name="SubjectID" Type="int" Nullable="false" />
     <Property Name="SubjectTypeID" Type="tinyint" Nullable="false" />
     <Property Name="TermID" Type="tinyint" Nullable="false" />
-    <Property Name="GradeID" Type="tinyint" Nullable="false" />
+    <Property Name="ClassID" Type="int" Nullable="false" />
     <Property Name="Mark" Type="tinyint" Nullable="false" />
   </EntityType>
   <EntityType Name="Pictures">
@@ -145,7 +148,7 @@
     <Property Name="SecondName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="PersonalNumber" Type="nchar" MaxLength="10" Nullable="false" />
-    <Property Name="PersonalCardNumber" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="PersonalCardNumber" Type="nchar" MaxLength="10" />
     <Property Name="DateOfBirth" Type="date" Nullable="false" />
     <Property Name="SettlementID" Type="int" Nullable="false" />
     <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -193,7 +196,8 @@
       <PropertyRef Name="TeacherID" />
     </Key>
     <Property Name="TeacherID" Type="int" Nullable="false" />
-    <Property Name="TeacherName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TaughtSubjectID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Terms">
@@ -210,15 +214,15 @@
     <Property Name="TypeAbsenceID" Type="tinyint" Nullable="false" />
     <Property Name="TypeAbsence" Type="nvarchar" MaxLength="15" />
   </EntityType>
-  <Association Name="FK_Absences_Grades">
-    <End Role="Grades" Type="Self.Grades" Multiplicity="0..1" />
+  <Association Name="FK_Absences_Classes">
+    <End Role="Classes" Type="Self.Classes" Multiplicity="0..1" />
     <End Role="Absences" Type="Self.Absences" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Grades">
-        <PropertyRef Name="GradeID" />
+      <Principal Role="Classes">
+        <PropertyRef Name="ClassID" />
       </Principal>
       <Dependent Role="Absences">
-        <PropertyRef Name="GradeID" />
+        <PropertyRef Name="ClassID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -330,15 +334,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_HoursStudedSubject_Grades">
-    <End Role="Grades" Type="Self.Grades" Multiplicity="1" />
+  <Association Name="FK_HoursStudedSubject_Classes">
+    <End Role="Classes" Type="Self.Classes" Multiplicity="1" />
     <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Grades">
-        <PropertyRef Name="GradeID" />
+      <Principal Role="Classes">
+        <PropertyRef Name="ClassID" />
       </Principal>
       <Dependent Role="HoursStudedSubject">
-        <PropertyRef Name="GradeID" />
+        <PropertyRef Name="ClassID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -378,15 +382,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Marks_Grades">
-    <End Role="Grades" Type="Self.Grades" Multiplicity="1" />
+  <Association Name="FK_Marks_Classes">
+    <End Role="Classes" Type="Self.Classes" Multiplicity="1" />
     <End Role="Marks" Type="Self.Marks" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Grades">
-        <PropertyRef Name="GradeID" />
+      <Principal Role="Classes">
+        <PropertyRef Name="ClassID" />
       </Principal>
       <Dependent Role="Marks">
-        <PropertyRef Name="GradeID" />
+        <PropertyRef Name="ClassID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -559,7 +563,6 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="PersonalSchoolCardModelStoreContainer">
-    <EntitySet Name="Absences" EntityType="Self.Absences" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Areas" EntityType="Self.Areas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Classes" EntityType="Self.Classes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Diploms" EntityType="Self.Diploms" Schema="dbo" store:Type="Tables" />
@@ -582,8 +585,17 @@
     <EntitySet Name="Teachers" EntityType="Self.Teachers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Terms" EntityType="Self.Terms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeAbsences" EntityType="Self.TypeAbsences" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Absences_Grades" Association="Self.FK_Absences_Grades">
-      <End Role="Grades" EntitySet="Grades" />
+    <EntitySet Name="Absences" EntityType="Self.Absences" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Absences].[TypeAbsencesID] AS [TypeAbsencesID], 
+    [Absences].[StudentID] AS [StudentID], 
+    [Absences].[ClassID] AS [ClassID], 
+    [Absences].[TermID] AS [TermID], 
+    [Absences].[AbsencesNumber] AS [AbsencesNumber]
+    FROM [dbo].[Absences] AS [Absences]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Absences_Classes" Association="Self.FK_Absences_Classes">
+      <End Role="Classes" EntitySet="Classes" />
       <End Role="Absences" EntitySet="Absences" />
     </AssociationSet>
     <AssociationSet Name="FK_Absences_Students" Association="Self.FK_Absences_Students">
@@ -622,8 +634,8 @@
       <End Role="SubjectTypes" EntitySet="SubjectTypes" />
       <End Role="Diploms" EntitySet="Diploms" />
     </AssociationSet>
-    <AssociationSet Name="FK_HoursStudedSubject_Grades" Association="Self.FK_HoursStudedSubject_Grades">
-      <End Role="Grades" EntitySet="Grades" />
+    <AssociationSet Name="FK_HoursStudedSubject_Classes" Association="Self.FK_HoursStudedSubject_Classes">
+      <End Role="Classes" EntitySet="Classes" />
       <End Role="HoursStudedSubject" EntitySet="HoursStudedSubject" />
     </AssociationSet>
     <AssociationSet Name="FK_HoursStudedSubject_Profiles" Association="Self.FK_HoursStudedSubject_Profiles">
@@ -638,8 +650,8 @@
       <End Role="SubjectTypes" EntitySet="SubjectTypes" />
       <End Role="HoursStudedSubject" EntitySet="HoursStudedSubject" />
     </AssociationSet>
-    <AssociationSet Name="FK_Marks_Grades" Association="Self.FK_Marks_Grades">
-      <End Role="Grades" EntitySet="Grades" />
+    <AssociationSet Name="FK_Marks_Classes" Association="Self.FK_Marks_Classes">
+      <End Role="Classes" EntitySet="Classes" />
       <End Role="Marks" EntitySet="Marks" />
     </AssociationSet>
     <AssociationSet Name="FK_Marks_Students" Association="Self.FK_Marks_Students">
