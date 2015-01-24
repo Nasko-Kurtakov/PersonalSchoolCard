@@ -1,0 +1,133 @@
+public static string GetStudentNames(int studentID)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var StudentName = context.Students
+                    .Where(student => student.StudentID == studentID)
+                    .Select(student => new
+                    {
+                        FirstName = student.FirstName,
+                        SecondName = student.SecondName,
+                        LastName = student.LastName
+                    })
+                    .FirstOrDefault()
+                    ;
+
+                string FullNames = StudentName.FirstName + " " + StudentName.SecondName
+                    + " " + StudentName.LastName;
+
+                return FullNames;
+
+            }
+        }
+
+        public static string GetStudentPersonalNumber(int studentID)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var StudentPersonalNumber = context.Students
+                    .Where(student => student.StudentID == studentID)
+                    .Select(student => student.PersonalNumber)
+                    .FirstOrDefault()
+                    ;
+
+                return StudentPersonalNumber.ToString();
+            }
+        }
+
+        public static string GetStudentAddress(int studentID)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var StudentAddress = context.Students
+                    .Where(student => student.StudentID == studentID)
+                    .Join(context.Settlements,
+                    s => s.SettlementID, st => st.SettlementID,
+                    (s, st) => new
+                    {
+                        Address = s.Address
+                    })
+                    .FirstOrDefault()
+                    ;
+                
+                return StudentAddress.Address;
+            }
+        }
+
+        public static string GetStudentSettlement(int studentID)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var StudentSettlement = context.Students
+                     .Where(student => student.StudentID == studentID)
+                    .Join(context.Settlements,
+                    o => o.SettlementID, od => od.SettlementID,
+                    (o, od) => new
+                    {
+                        Settlement = od.SettlemnetName
+                    })
+                    .FirstOrDefault()
+                    ;
+
+                string settlement = StudentSettlement.Settlement;
+
+                return settlement;
+
+            }
+        }
+
+        public static string GetStudentPersonalCardNumber(int studentID)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var StudentPersonalCardNumber = context.Students
+                    .Where(student => student.StudentID == studentID)
+                    .Select(student => student.PersonalCardNumber)
+                    .FirstOrDefault()
+                    ;
+
+                return StudentPersonalCardNumber.ToString();
+            }
+        }
+
+        public static int GetStudentEnrollmentYear(int studentID)
+        {
+            using ( var context = new PersonalSchoolCardEntities())
+            {
+                var EnrollmentYear = context.Students
+                    .Where(student => student.StudentID == studentID)
+                    .Select(student => student.EnrollmentYear)
+                    .FirstOrDefault()
+                    ;
+
+                return EnrollmentYear;
+            }
+        }
+
+        public static string GetStudentDateOfBirth(int studentID)
+        {
+            using ( var context = new PersonalSchoolCardEntities())
+            {
+                var DateBirth = context.Students
+                    .Where(student => student.StudentID == studentID)
+                    .Select(student => student.DateOfBirth)
+                    .FirstOrDefault()
+                    ;
+
+                return DateBirth.ToString();
+            }
+        }
+
+        public static string GetStudentMobilePhone(int studentID)
+        {
+            using ( var context = new PersonalSchoolCardEntities())
+            {
+                var StudentPhone = context.Students
+                    .Where( student => student.StudentID == studentID)
+                    .Select( student => student.Phone )
+                    .FirstOrDefault()
+                    ;
+
+                return StudentPhone;
+            }
+        }
