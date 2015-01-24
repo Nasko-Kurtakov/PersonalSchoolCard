@@ -14,7 +14,7 @@ namespace PersonalShcoolCard
     {
         public AdminForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void buttonAddSubjectTypes_Click(object sender, EventArgs e)
@@ -33,13 +33,16 @@ namespace PersonalShcoolCard
         {
             DataGridViewColumn subjectType = new DataGridViewColumn();
             var comboBoxSubjects = new DataGridViewComboBoxColumn();
+            Classes.AddSubjectsPanel.AddSubjects(dataGridViewSubjects);
+            
         }
 
         private void buttonAddSubjectsAndTypes_Click(object sender, EventArgs e)
        {
-            //shows the subject types currently in the database
+           
+           //shows the subject types currently in the database
            listBoxAlreadyAddedSubjectTypes.DataSource = Classes.AddSubjectsPanel.GetAllSubjectTypesName();
-            listBoxAlreadyAddedSubjects.DataSource = ;
+           listBoxAlreadyAddedSubjects.DataSource = Classes.AddSubjectsPanel.GetAllSubjectsNames();
            var subjectsTypes = Classes.AddSubjectsPanel.GetAllSubjectTypesName();
            //creates and load the column showing types of subjects in the add subjects data grid view
            //using the method in classes-> Add Subjects Panel -> AddSubjectsTypeColumn
@@ -47,7 +50,21 @@ namespace PersonalShcoolCard
             dataGridViewSubjects.Columns.Add(subjectTypesColumn);
             dataGridViewSubjects.Refresh();
             panelAddSubjects.BringToFront();
+
             panelAddSubjects.Visible = true;
+            panelAddTeachers.Visible = false;
+        }
+
+        private void buttonOpenAddTeachersPanel_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+            panelAddSubjects.Visible = false;
+            panelAddTeachers.Visible = true;
         }
     }
 }

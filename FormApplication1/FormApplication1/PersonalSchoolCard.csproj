@@ -63,6 +63,7 @@
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\AddSubjectsPanel.cs" />
+    <Compile Include="Classes\AddTeachersPanel.cs" />
     <Compile Include="Classes\Class1.cs" />
     <Compile Include="Classes\Queries.cs" />
     <Compile Include="Menu.cs">

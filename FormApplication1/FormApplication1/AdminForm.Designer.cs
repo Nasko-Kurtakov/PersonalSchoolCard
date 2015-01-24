@@ -38,6 +38,7 @@
             this.buttonAddSubjectsAndTypes = new System.Windows.Forms.Button();
             this.buttonCreateProfile = new System.Windows.Forms.Button();
             this.panelAddSubjects = new System.Windows.Forms.Panel();
+            this.listBoxAlreadyAddedSubjects = new System.Windows.Forms.ListBox();
             this.listBoxAlreadyAddedSubjectTypes = new System.Windows.Forms.ListBox();
             this.buttonAddSubjects = new System.Windows.Forms.Button();
             this.buttonAddSubjectTypes = new System.Windows.Forms.Button();
@@ -47,7 +48,13 @@
             this.dataGridViewSubjectTypes = new System.Windows.Forms.DataGridView();
             this.SubjectType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBoxAlreadyAddedSubjects = new System.Windows.Forms.ListBox();
+            this.panelAddTeachers = new System.Windows.Forms.Panel();
+            this.buttonOpenAddTeachersPanel = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,6 +62,8 @@
             this.panelAddSubjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).BeginInit();
+            this.panelAddTeachers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -65,6 +74,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.buttonOpenAddTeachersPanel);
             this.splitContainer1.Panel1.Controls.Add(this.buttonAddSchoolYear);
             this.splitContainer1.Panel1.Controls.Add(this.buttonMenageAccounts);
             this.splitContainer1.Panel1.Controls.Add(this.buttonTermManagement);
@@ -83,7 +93,7 @@
             // 
             // buttonAddSchoolYear
             // 
-            this.buttonAddSchoolYear.Location = new System.Drawing.Point(57, 114);
+            this.buttonAddSchoolYear.Location = new System.Drawing.Point(57, 159);
             this.buttonAddSchoolYear.Name = "buttonAddSchoolYear";
             this.buttonAddSchoolYear.Size = new System.Drawing.Size(143, 39);
             this.buttonAddSchoolYear.TabIndex = 7;
@@ -92,7 +102,7 @@
             // 
             // buttonMenageAccounts
             // 
-            this.buttonMenageAccounts.Location = new System.Drawing.Point(57, 294);
+            this.buttonMenageAccounts.Location = new System.Drawing.Point(57, 339);
             this.buttonMenageAccounts.Name = "buttonMenageAccounts";
             this.buttonMenageAccounts.Size = new System.Drawing.Size(143, 39);
             this.buttonMenageAccounts.TabIndex = 6;
@@ -101,7 +111,7 @@
             // 
             // buttonTermManagement
             // 
-            this.buttonTermManagement.Location = new System.Drawing.Point(57, 249);
+            this.buttonTermManagement.Location = new System.Drawing.Point(57, 294);
             this.buttonTermManagement.Name = "buttonTermManagement";
             this.buttonTermManagement.Size = new System.Drawing.Size(143, 39);
             this.buttonTermManagement.TabIndex = 5;
@@ -110,7 +120,7 @@
             // 
             // buttonAddSettlements
             // 
-            this.buttonAddSettlements.Location = new System.Drawing.Point(57, 204);
+            this.buttonAddSettlements.Location = new System.Drawing.Point(57, 249);
             this.buttonAddSettlements.Name = "buttonAddSettlements";
             this.buttonAddSettlements.Size = new System.Drawing.Size(143, 39);
             this.buttonAddSettlements.TabIndex = 4;
@@ -119,7 +129,7 @@
             // 
             // buttonAddAbsencesType
             // 
-            this.buttonAddAbsencesType.Location = new System.Drawing.Point(57, 159);
+            this.buttonAddAbsencesType.Location = new System.Drawing.Point(57, 204);
             this.buttonAddAbsencesType.Name = "buttonAddAbsencesType";
             this.buttonAddAbsencesType.Size = new System.Drawing.Size(143, 39);
             this.buttonAddAbsencesType.TabIndex = 3;
@@ -128,7 +138,7 @@
             // 
             // buttonEditSchoolInfo
             // 
-            this.buttonEditSchoolInfo.Location = new System.Drawing.Point(57, 375);
+            this.buttonEditSchoolInfo.Location = new System.Drawing.Point(57, 434);
             this.buttonEditSchoolInfo.Name = "buttonEditSchoolInfo";
             this.buttonEditSchoolInfo.Size = new System.Drawing.Size(143, 48);
             this.buttonEditSchoolInfo.TabIndex = 2;
@@ -156,6 +166,7 @@
             // 
             // panelAddSubjects
             // 
+            this.panelAddSubjects.Controls.Add(this.panelAddTeachers);
             this.panelAddSubjects.Controls.Add(this.listBoxAlreadyAddedSubjects);
             this.panelAddSubjects.Controls.Add(this.listBoxAlreadyAddedSubjectTypes);
             this.panelAddSubjects.Controls.Add(this.buttonAddSubjects);
@@ -168,6 +179,14 @@
             this.panelAddSubjects.Name = "panelAddSubjects";
             this.panelAddSubjects.Size = new System.Drawing.Size(502, 494);
             this.panelAddSubjects.TabIndex = 0;
+            // 
+            // listBoxAlreadyAddedSubjects
+            // 
+            this.listBoxAlreadyAddedSubjects.FormattingEnabled = true;
+            this.listBoxAlreadyAddedSubjects.Location = new System.Drawing.Point(338, 228);
+            this.listBoxAlreadyAddedSubjects.Name = "listBoxAlreadyAddedSubjects";
+            this.listBoxAlreadyAddedSubjects.Size = new System.Drawing.Size(152, 186);
+            this.listBoxAlreadyAddedSubjects.TabIndex = 6;
             // 
             // listBoxAlreadyAddedSubjectTypes
             // 
@@ -247,13 +266,67 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Добавяне на предмети";
             // 
-            // listBoxAlreadyAddedSubjects
+            // panelAddTeachers
             // 
-            this.listBoxAlreadyAddedSubjects.FormattingEnabled = true;
-            this.listBoxAlreadyAddedSubjects.Location = new System.Drawing.Point(338, 228);
-            this.listBoxAlreadyAddedSubjects.Name = "listBoxAlreadyAddedSubjects";
-            this.listBoxAlreadyAddedSubjects.Size = new System.Drawing.Size(152, 186);
-            this.listBoxAlreadyAddedSubjects.TabIndex = 6;
+            this.panelAddTeachers.Controls.Add(this.dataGridView1);
+            this.panelAddTeachers.Controls.Add(this.listBox1);
+            this.panelAddTeachers.Controls.Add(this.label2);
+            this.panelAddTeachers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAddTeachers.Location = new System.Drawing.Point(0, 0);
+            this.panelAddTeachers.Name = "panelAddTeachers";
+            this.panelAddTeachers.Size = new System.Drawing.Size(502, 494);
+            this.panelAddTeachers.TabIndex = 7;
+            // 
+            // buttonOpenAddTeachersPanel
+            // 
+            this.buttonOpenAddTeachersPanel.Location = new System.Drawing.Point(57, 114);
+            this.buttonOpenAddTeachersPanel.Name = "buttonOpenAddTeachersPanel";
+            this.buttonOpenAddTeachersPanel.Size = new System.Drawing.Size(143, 39);
+            this.buttonOpenAddTeachersPanel.TabIndex = 8;
+            this.buttonOpenAddTeachersPanel.Text = "Добавяне на учители";
+            this.buttonOpenAddTeachersPanel.UseVisualStyleBackColor = true;
+            this.buttonOpenAddTeachersPanel.Click += new System.EventHandler(this.buttonOpenAddTeachersPanel_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FirstName,
+            this.LastName});
+            this.dataGridView1.Location = new System.Drawing.Point(73, 58);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(366, 150);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(154, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(230, 33);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Добавяне на учители\r\n";
+            // 
+            // FirstName
+            // 
+            this.FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FirstName.HeaderText = "Име";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LastName.HeaderText = "Фамилия";
+            this.LastName.Name = "LastName";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(73, 249);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(366, 173);
+            this.listBox1.TabIndex = 2;
             // 
             // AdminForm
             // 
@@ -271,6 +344,9 @@
             this.panelAddSubjects.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).EndInit();
+            this.panelAddTeachers.ResumeLayout(false);
+            this.panelAddTeachers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,5 +373,12 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn TypeOfSubject;
         private System.Windows.Forms.ListBox listBoxAlreadyAddedSubjectTypes;
         private System.Windows.Forms.ListBox listBoxAlreadyAddedSubjects;
+        private System.Windows.Forms.Button buttonOpenAddTeachersPanel;
+        private System.Windows.Forms.Panel panelAddTeachers;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

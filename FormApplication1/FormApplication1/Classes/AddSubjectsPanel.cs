@@ -1,6 +1,7 @@
 ﻿namespace PersonalShcoolCard.Classes
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
     using PersonalSchoolCard;
@@ -97,7 +98,7 @@
                 return subjectTypes;
             }
         }
-        public static List<string> GetAllSubjectsNames()
+        public static List<string> GetAllSubjectsNames ()
         {
             using (var context = new PersonalSchoolCardEntities())
             {
