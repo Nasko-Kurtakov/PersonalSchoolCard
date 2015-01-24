@@ -4,15 +4,16 @@
     using System.Collections.Generic;
     using System.Linq;
     using SchoolCardDatabase;
+    using System.Collections;
 
     public class StudentsAccess
     {
-        public static List<Student> GetAllStudents()
+        public static List<string> GetAllStudents()
         {
             using (var context = new PersonalSchoolCardEntities())
             {
                 var studentsList = context.Students
-                                   .Select(student => student)
+                                   .Select(student => student.FirstName)
                                    .ToList();
                 return studentsList;
             }

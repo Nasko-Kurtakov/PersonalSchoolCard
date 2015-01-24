@@ -29,30 +29,32 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddSchoolYear = new System.Windows.Forms.Button();
+            this.buttonMenageAccounts = new System.Windows.Forms.Button();
+            this.buttonTermManagement = new System.Windows.Forms.Button();
+            this.buttonAddSettlements = new System.Windows.Forms.Button();
+            this.buttonAddAbsencesType = new System.Windows.Forms.Button();
+            this.buttonEditSchoolInfo = new System.Windows.Forms.Button();
+            this.buttonAddSubjectsAndTypes = new System.Windows.Forms.Button();
+            this.buttonCreateProfile = new System.Windows.Forms.Button();
             this.panelAddSubjects = new System.Windows.Forms.Panel();
-            this.dataGridViewSubjectTypes = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewSubjects = new System.Windows.Forms.DataGridView();
-            this.buttonAddSubjectTypes = new System.Windows.Forms.Button();
+            this.listBoxAlreadyAddedSubjectTypes = new System.Windows.Forms.ListBox();
             this.buttonAddSubjects = new System.Windows.Forms.Button();
-            this.SubjectType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonAddSubjectTypes = new System.Windows.Forms.Button();
+            this.dataGridViewSubjects = new System.Windows.Forms.DataGridView();
             this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TypeOfSubject = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewSubjectTypes = new System.Windows.Forms.DataGridView();
+            this.SubjectType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listBoxAlreadyAddedSubjects = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panelAddSubjects.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -63,14 +65,14 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.button8);
-            this.splitContainer1.Panel1.Controls.Add(this.button7);
-            this.splitContainer1.Panel1.Controls.Add(this.button6);
-            this.splitContainer1.Panel1.Controls.Add(this.button5);
-            this.splitContainer1.Panel1.Controls.Add(this.button4);
-            this.splitContainer1.Panel1.Controls.Add(this.button3);
-            this.splitContainer1.Panel1.Controls.Add(this.button2);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonAddSchoolYear);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonMenageAccounts);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonTermManagement);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonAddSettlements);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonAddAbsencesType);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonEditSchoolInfo);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonAddSubjectsAndTypes);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonCreateProfile);
             // 
             // splitContainer1.Panel2
             // 
@@ -79,81 +81,83 @@
             this.splitContainer1.SplitterDistance = 253;
             this.splitContainer1.TabIndex = 0;
             // 
-            // button8
+            // buttonAddSchoolYear
             // 
-            this.button8.Location = new System.Drawing.Point(57, 114);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(143, 39);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Добавяне на нова учебна година";
-            this.button8.UseVisualStyleBackColor = true;
+            this.buttonAddSchoolYear.Location = new System.Drawing.Point(57, 114);
+            this.buttonAddSchoolYear.Name = "buttonAddSchoolYear";
+            this.buttonAddSchoolYear.Size = new System.Drawing.Size(143, 39);
+            this.buttonAddSchoolYear.TabIndex = 7;
+            this.buttonAddSchoolYear.Text = "Добавяне на нова учебна година";
+            this.buttonAddSchoolYear.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // buttonMenageAccounts
             // 
-            this.button7.Location = new System.Drawing.Point(57, 294);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(143, 39);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Управление на акаунтите";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonMenageAccounts.Location = new System.Drawing.Point(57, 294);
+            this.buttonMenageAccounts.Name = "buttonMenageAccounts";
+            this.buttonMenageAccounts.Size = new System.Drawing.Size(143, 39);
+            this.buttonMenageAccounts.TabIndex = 6;
+            this.buttonMenageAccounts.Text = "Управление на акаунтите";
+            this.buttonMenageAccounts.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonTermManagement
             // 
-            this.button6.Location = new System.Drawing.Point(57, 249);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(143, 39);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Управление на сроковете";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonTermManagement.Location = new System.Drawing.Point(57, 249);
+            this.buttonTermManagement.Name = "buttonTermManagement";
+            this.buttonTermManagement.Size = new System.Drawing.Size(143, 39);
+            this.buttonTermManagement.TabIndex = 5;
+            this.buttonTermManagement.Text = "Управление на сроковете";
+            this.buttonTermManagement.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonAddSettlements
             // 
-            this.button5.Location = new System.Drawing.Point(57, 204);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(143, 39);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Добавяне на населени места";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonAddSettlements.Location = new System.Drawing.Point(57, 204);
+            this.buttonAddSettlements.Name = "buttonAddSettlements";
+            this.buttonAddSettlements.Size = new System.Drawing.Size(143, 39);
+            this.buttonAddSettlements.TabIndex = 4;
+            this.buttonAddSettlements.Text = "Добавяне на населени места";
+            this.buttonAddSettlements.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonAddAbsencesType
             // 
-            this.button4.Location = new System.Drawing.Point(57, 159);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 39);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Добавяне на тип отсъствия";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonAddAbsencesType.Location = new System.Drawing.Point(57, 159);
+            this.buttonAddAbsencesType.Name = "buttonAddAbsencesType";
+            this.buttonAddAbsencesType.Size = new System.Drawing.Size(143, 39);
+            this.buttonAddAbsencesType.TabIndex = 3;
+            this.buttonAddAbsencesType.Text = "Добавяне на тип отсъствия";
+            this.buttonAddAbsencesType.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonEditSchoolInfo
             // 
-            this.button3.Location = new System.Drawing.Point(57, 375);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 48);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Редактиране на информацията за училището";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonEditSchoolInfo.Location = new System.Drawing.Point(57, 375);
+            this.buttonEditSchoolInfo.Name = "buttonEditSchoolInfo";
+            this.buttonEditSchoolInfo.Size = new System.Drawing.Size(143, 48);
+            this.buttonEditSchoolInfo.TabIndex = 2;
+            this.buttonEditSchoolInfo.Text = "Редактиране на информацията за училището";
+            this.buttonEditSchoolInfo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonAddSubjectsAndTypes
             // 
-            this.button2.Location = new System.Drawing.Point(57, 69);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 39);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Добавяне на предмети";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonAddSubjectsAndTypes.Location = new System.Drawing.Point(57, 69);
+            this.buttonAddSubjectsAndTypes.Name = "buttonAddSubjectsAndTypes";
+            this.buttonAddSubjectsAndTypes.Size = new System.Drawing.Size(143, 39);
+            this.buttonAddSubjectsAndTypes.TabIndex = 1;
+            this.buttonAddSubjectsAndTypes.Text = "Добавяне на предмети";
+            this.buttonAddSubjectsAndTypes.UseVisualStyleBackColor = true;
+            this.buttonAddSubjectsAndTypes.Click += new System.EventHandler(this.buttonAddSubjectsAndTypes_Click);
             // 
-            // button1
+            // buttonCreateProfile
             // 
-            this.button1.Location = new System.Drawing.Point(57, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Създаване на профил";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonCreateProfile.Location = new System.Drawing.Point(57, 24);
+            this.buttonCreateProfile.Name = "buttonCreateProfile";
+            this.buttonCreateProfile.Size = new System.Drawing.Size(143, 39);
+            this.buttonCreateProfile.TabIndex = 0;
+            this.buttonCreateProfile.Text = "Създаване на профил";
+            this.buttonCreateProfile.UseVisualStyleBackColor = true;
             // 
             // panelAddSubjects
             // 
+            this.panelAddSubjects.Controls.Add(this.listBoxAlreadyAddedSubjects);
+            this.panelAddSubjects.Controls.Add(this.listBoxAlreadyAddedSubjectTypes);
             this.panelAddSubjects.Controls.Add(this.buttonAddSubjects);
             this.panelAddSubjects.Controls.Add(this.buttonAddSubjectTypes);
             this.panelAddSubjects.Controls.Add(this.dataGridViewSubjects);
@@ -165,25 +169,33 @@
             this.panelAddSubjects.Size = new System.Drawing.Size(502, 494);
             this.panelAddSubjects.TabIndex = 0;
             // 
-            // dataGridViewSubjectTypes
+            // listBoxAlreadyAddedSubjectTypes
             // 
-            this.dataGridViewSubjectTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSubjectTypes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SubjectType});
-            this.dataGridViewSubjectTypes.Location = new System.Drawing.Point(93, 69);
-            this.dataGridViewSubjectTypes.Name = "dataGridViewSubjectTypes";
-            this.dataGridViewSubjectTypes.Size = new System.Drawing.Size(332, 93);
-            this.dataGridViewSubjectTypes.TabIndex = 1;
+            this.listBoxAlreadyAddedSubjectTypes.FormattingEnabled = true;
+            this.listBoxAlreadyAddedSubjectTypes.Location = new System.Drawing.Point(383, 65);
+            this.listBoxAlreadyAddedSubjectTypes.Name = "listBoxAlreadyAddedSubjectTypes";
+            this.listBoxAlreadyAddedSubjectTypes.Size = new System.Drawing.Size(68, 95);
+            this.listBoxAlreadyAddedSubjectTypes.TabIndex = 5;
             // 
-            // label1
+            // buttonAddSubjects
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(139, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Добавяне на предмети";
+            this.buttonAddSubjects.Location = new System.Drawing.Point(27, 432);
+            this.buttonAddSubjects.Name = "buttonAddSubjects";
+            this.buttonAddSubjects.Size = new System.Drawing.Size(183, 29);
+            this.buttonAddSubjects.TabIndex = 4;
+            this.buttonAddSubjects.Text = "Добави предмети";
+            this.buttonAddSubjects.UseVisualStyleBackColor = true;
+            this.buttonAddSubjects.Click += new System.EventHandler(this.buttonAddSubjects_Click);
+            // 
+            // buttonAddSubjectTypes
+            // 
+            this.buttonAddSubjectTypes.Location = new System.Drawing.Point(27, 179);
+            this.buttonAddSubjectTypes.Name = "buttonAddSubjectTypes";
+            this.buttonAddSubjectTypes.Size = new System.Drawing.Size(183, 29);
+            this.buttonAddSubjectTypes.TabIndex = 3;
+            this.buttonAddSubjectTypes.Text = "Добави видове предмети";
+            this.buttonAddSubjectTypes.UseVisualStyleBackColor = true;
+            this.buttonAddSubjectTypes.Click += new System.EventHandler(this.buttonAddSubjectTypes_Click);
             // 
             // dataGridViewSubjects
             // 
@@ -191,36 +203,10 @@
             this.dataGridViewSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SubjectName,
             this.TypeOfSubject});
-            this.dataGridViewSubjects.Location = new System.Drawing.Point(93, 228);
+            this.dataGridViewSubjects.Location = new System.Drawing.Point(27, 228);
             this.dataGridViewSubjects.Name = "dataGridViewSubjects";
-            this.dataGridViewSubjects.Size = new System.Drawing.Size(332, 182);
+            this.dataGridViewSubjects.Size = new System.Drawing.Size(291, 182);
             this.dataGridViewSubjects.TabIndex = 2;
-            // 
-            // buttonAddSubjectTypes
-            // 
-            this.buttonAddSubjectTypes.Location = new System.Drawing.Point(284, 175);
-            this.buttonAddSubjectTypes.Name = "buttonAddSubjectTypes";
-            this.buttonAddSubjectTypes.Size = new System.Drawing.Size(141, 23);
-            this.buttonAddSubjectTypes.TabIndex = 3;
-            this.buttonAddSubjectTypes.Text = "Добави видове предмети";
-            this.buttonAddSubjectTypes.UseVisualStyleBackColor = true;
-            this.buttonAddSubjectTypes.Click += new System.EventHandler(this.buttonAddSubjectTypes_Click);
-            // 
-            // buttonAddSubjects
-            // 
-            this.buttonAddSubjects.Location = new System.Drawing.Point(284, 425);
-            this.buttonAddSubjects.Name = "buttonAddSubjects";
-            this.buttonAddSubjects.Size = new System.Drawing.Size(141, 23);
-            this.buttonAddSubjects.TabIndex = 4;
-            this.buttonAddSubjects.Text = "Добави предмети";
-            this.buttonAddSubjects.UseVisualStyleBackColor = true;
-            this.buttonAddSubjects.Click += new System.EventHandler(this.buttonAddSubjects_Click);
-            // 
-            // SubjectType
-            // 
-            this.SubjectType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SubjectType.HeaderText = "Видове предмети";
-            this.SubjectType.Name = "SubjectType";
             // 
             // SubjectName
             // 
@@ -232,7 +218,42 @@
             // 
             this.TypeOfSubject.HeaderText = "Вид предмет";
             this.TypeOfSubject.Name = "TypeOfSubject";
+            this.TypeOfSubject.Visible = false;
             this.TypeOfSubject.Width = 75;
+            // 
+            // dataGridViewSubjectTypes
+            // 
+            this.dataGridViewSubjectTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSubjectTypes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SubjectType});
+            this.dataGridViewSubjectTypes.Location = new System.Drawing.Point(30, 67);
+            this.dataGridViewSubjectTypes.Name = "dataGridViewSubjectTypes";
+            this.dataGridViewSubjectTypes.Size = new System.Drawing.Size(288, 93);
+            this.dataGridViewSubjectTypes.TabIndex = 1;
+            // 
+            // SubjectType
+            // 
+            this.SubjectType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SubjectType.HeaderText = "Видове предмети";
+            this.SubjectType.Name = "SubjectType";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(139, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(245, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Добавяне на предмети";
+            // 
+            // listBoxAlreadyAddedSubjects
+            // 
+            this.listBoxAlreadyAddedSubjects.FormattingEnabled = true;
+            this.listBoxAlreadyAddedSubjects.Location = new System.Drawing.Point(338, 228);
+            this.listBoxAlreadyAddedSubjects.Name = "listBoxAlreadyAddedSubjects";
+            this.listBoxAlreadyAddedSubjects.Size = new System.Drawing.Size(152, 186);
+            this.listBoxAlreadyAddedSubjects.TabIndex = 6;
             // 
             // AdminForm
             // 
@@ -248,8 +269,8 @@
             this.splitContainer1.ResumeLayout(false);
             this.panelAddSubjects.ResumeLayout(false);
             this.panelAddSubjects.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,14 +278,14 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddSchoolYear;
+        private System.Windows.Forms.Button buttonMenageAccounts;
+        private System.Windows.Forms.Button buttonTermManagement;
+        private System.Windows.Forms.Button buttonAddSettlements;
+        private System.Windows.Forms.Button buttonAddAbsencesType;
+        private System.Windows.Forms.Button buttonEditSchoolInfo;
+        private System.Windows.Forms.Button buttonAddSubjectsAndTypes;
+        private System.Windows.Forms.Button buttonCreateProfile;
         private System.Windows.Forms.Panel panelAddSubjects;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewSubjectTypes;
@@ -274,5 +295,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectType;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectName;
         private System.Windows.Forms.DataGridViewComboBoxColumn TypeOfSubject;
+        private System.Windows.Forms.ListBox listBoxAlreadyAddedSubjectTypes;
+        private System.Windows.Forms.ListBox listBoxAlreadyAddedSubjects;
     }
 }

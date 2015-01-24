@@ -171,7 +171,7 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
     <Key>
       <PropertyRef Name="SubjectID" />
     </Key>
-    <Property Name="SubjectID" Type="int" Nullable="false" />
+    <Property Name="SubjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SubjectName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="SubjectTypes">
