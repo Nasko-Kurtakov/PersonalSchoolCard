@@ -11,23 +11,30 @@ namespace PersonalShcoolCard.Classes
     {
         public static string GetStudentsName(int studentID)
         {
-            using (var context = new PersonalSchoolCEntities())
+            try
             {
-                var sn = context.Students
-                    .Where(student => student.StudentID == studentID)
-                    .Select(student => new
-                    {
-                        FirstName = student.FirstName,
-                        SecondName = student.SecondName,
-                        LastName = student.LastName
-                    })
-                    .FirstOrDefault()
-                    ;
+                using (var context = new PersonalSchoolCEntities())
+                {
+                    var sn = context.Students
+                        .Where(student => student.StudentID == studentID)
+                        .Select(student => new
+                        {
+                            FirstName = student.FirstName,
+                            SecondName = student.SecondName,
+                            LastName = student.LastName
+                        })
+                        .FirstOrDefault()
+                        ;
 
-                var nameS
-                    = sn.FirstName + " " + sn.SecondName + " " + sn.LastName;
+                    var nameS
+                        = sn.FirstName + " " + sn.SecondName + " " + sn.LastName;
 
-                return nameS;
+                    return nameS;
+                }
+            }
+            catch
+            {
+                return null;
             }
         }
 
@@ -158,19 +165,26 @@ namespace PersonalShcoolCard.Classes
 
         public static DateTime GetStudentDateOfBirth(int studentID)
         {
-            using ( var context = new PersonalSchoolCEntities())
+            try
             {
-                var StudentBirthDate = context.Students
-                    .Where(student => student.StudentID == studentID)
-                    .Select(student => student.DateOfBirth)
-                    .FirstOrDefault()
-                    ;
+                using (var context = new PersonalSchoolCEntities())
+                {
+                    var StudentBirthDate = context.Students
+                        .Where(student => student.StudentID == studentID)
+                        .Select(student => student.DateOfBirth)
+                        .FirstOrDefault()
+                        ;
 
-                return StudentBirthDate;
+                    return StudentBirthDate;
+                }
+            }
+            catch (Exception ex)
+            {
+                return DateTime.Now; //need to be checked
             }
         }
 
-        public static string GetStudentCurrentAddress(int studentID)
+          public static string GetStudentCurrentAddress(int studentID)
         {
             using ( var context = new PersonalSchoolCEntities())
             {
