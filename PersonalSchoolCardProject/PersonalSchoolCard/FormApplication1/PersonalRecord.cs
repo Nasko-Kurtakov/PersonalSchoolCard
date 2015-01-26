@@ -25,7 +25,7 @@ namespace PersonalShcoolCard
 
         private void PersonalRecord_Load(object sender, EventArgs e)
         {
-            int studentID = x;
+            int studentID = 1;
 
             label1StudentName.Text = Classes.Queries.GetStudentsName(studentID);
             label1AreaName.Text = Classes.Queries.GetStudentArea(studentID);

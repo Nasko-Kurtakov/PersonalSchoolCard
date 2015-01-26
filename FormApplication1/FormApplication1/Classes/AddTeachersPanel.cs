@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
-    class AddTeachersPanel
+    public class AddTeachersPanel
     {
         public static void AddTeachers(DataGridView gridView)
         {
@@ -58,13 +58,32 @@
 
         public static DataGridViewComboBoxColumn ShowSubjectsInCombobox<T>(T dataSource)
         {
-            DataGridViewComboBoxColumn subjectsColumn  = new DataGridViewComboBoxColumn()
+            DataGridViewComboBoxColumn subjectsColumn = new DataGridViewComboBoxColumn()
             {
                 HeaderText = "Предмети",
                 DataSource = dataSource,
                 Name = "TaughtSubjects"
             };
             return subjectsColumn;
+        }
+
+        public static List<string> GetAllTeachersNames()
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                try
+                {
+                    var teachersNamesList = context.Teachers
+                                          .Select(teacher => teacher.FirstName + teacher.LastName)
+                                          .ToList();
+                    return teachersNamesList;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return null;
+                }
+            }
         }
     }
 }

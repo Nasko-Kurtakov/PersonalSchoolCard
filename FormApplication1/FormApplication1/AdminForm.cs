@@ -14,7 +14,7 @@ namespace PersonalShcoolCard
     {
         public AdminForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void buttonAddSubjectTypes_Click(object sender, EventArgs e)
@@ -49,22 +49,28 @@ namespace PersonalShcoolCard
             var subjectTypesColumn = Classes.AddSubjectsPanel.AddSubjectsTypeColumn(subjectsTypes);           
             dataGridViewSubjects.Columns.Add(subjectTypesColumn);
             dataGridViewSubjects.Refresh();
-            panelAddSubjects.BringToFront();
 
-            panelAddSubjects.Visible = true;
+
+            panelAddSubjects.BringToFront();
             panelAddTeachers.Visible = false;
+            panelAddSubjects.Visible = true;
         }
 
         private void buttonOpenAddTeachersPanel_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
-            panelAddSubjects.Visible = false;
+            listBoxAlreadyAddedSubjects.DataSource = Classes.AddTeachersPanel.GetAllTeachersNames();
+            var taughtSubjects = Classes.AddSubjectsPanel.GetAllSubjectsNames();
+            var subjectsColumn = Classes.AddTeachersPanel.ShowSubjectsInCombobox(taughtSubjects);
+            dataGridViewAddTeacher.Columns.Add(subjectsColumn);
+            
+            
+            
             panelAddTeachers.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Classes.AddTeachersPanel.AddTeachers(dataGridViewAddTeacher);
         }
     }
 }

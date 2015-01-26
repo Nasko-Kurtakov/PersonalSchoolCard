@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PersonalSchoolCardModelStoreContainer" CdmEntityContainer="PersonalSchoolCardEntities">
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Area">
+        <MappingFragment StoreEntitySet="Areas">
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Class">
+        <MappingFragment StoreEntitySet="Classes">
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="SchoolYearID" ColumnName="SchoolYearID" />
+          <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diploms">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Diplom">
+        <MappingFragment StoreEntitySet="Diploms">
+          <ScalarProperty Name="SudentID" ColumnName="SudentID" />
+          <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+          <ScalarProperty Name="SujectTypeID" ColumnName="SujectTypeID" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="HoursStudied" ColumnName="HoursStudied" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grades">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Grade">
+        <MappingFragment StoreEntitySet="Grades">
+          <ScalarProperty Name="GradeID" ColumnName="GradeID" />
+          <ScalarProperty Name="Grade1" ColumnName="Grade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoursStudedSubjects">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.HoursStudedSubject">
+        <MappingFragment StoreEntitySet="HoursStudedSubject">
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+          <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+          <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
+          <ScalarProperty Name="HoursStudied" ColumnName="HoursStudied" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manicipalities">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Manicipality">
+        <MappingFragment StoreEntitySet="Manicipalities">
+          <ScalarProperty Name="ManicipalityID" ColumnName="ManicipalityID" />
+          <ScalarProperty Name="ManicipalityName" ColumnName="ManicipalityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Marks">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Mark">
+        <MappingFragment StoreEntitySet="Marks">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+          <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="Mark1" ColumnName="Mark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pictures">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Picture">
+        <MappingFragment StoreEntitySet="Pictures">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Principals">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Principal">
+        <MappingFragment StoreEntitySet="Principals">
+          <ScalarProperty Name="PrincipalID" ColumnName="PrincipalID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profiles">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Profile">
+        <MappingFragment StoreEntitySet="Profiles">
+          <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+          <ScalarProperty Name="ProfileName" ColumnName="ProfileName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schools">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.School">
+        <MappingFragment StoreEntitySet="Schools">
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchoolYears">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.SchoolYear">
+        <MappingFragment StoreEntitySet="SchoolYears">
+          <ScalarProperty Name="SchoolYearID" ColumnName="SchoolYearID" />
+          <ScalarProperty Name="SchoolYear1" ColumnName="SchoolYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settlements">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Settlement">
+        <MappingFragment StoreEntitySet="Settlements">
+          <ScalarProperty Name="SettlementID" ColumnName="SettlementID" />
+          <ScalarProperty Name="SettlemnetName" ColumnName="SettlemnetName" />
+          <ScalarProperty Name="ManicipalityID" ColumnName="ManicipalityID" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="PersonalNumber" ColumnName="PersonalNumber" />
+          <ScalarProperty Name="PersonalCardNumber" ColumnName="PersonalCardNumber" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="SettlementID" ColumnName="SettlementID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="EnrollmentYear" ColumnName="EnrollmentYear" />
+          <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+          <ScalarProperty Name="MarkFromDiplom" ColumnName="MarkFromDiplom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentsSchoolYears">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.StudentsSchoolYear">
+        <MappingFragment StoreEntitySet="StudentsSchoolYear">
+          <ScalarProperty Name="SchoolYearID" ColumnName="SchoolYearID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Subject">
+        <MappingFragment StoreEntitySet="Subjects">
+          <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+          <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectTypes">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.SubjectType">
+        <MappingFragment StoreEntitySet="SubjectTypes">
+          <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
+          <ScalarProperty Name="SubjectType1" ColumnName="SubjectType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Teacher">
+        <MappingFragment StoreEntitySet="Teachers">
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="TaughtSubjectID" ColumnName="TaughtSubjectID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Terms">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Term">
+        <MappingFragment StoreEntitySet="Terms">
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="TermName" ColumnName="TermName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeAbsences">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.TypeAbsence">
+        <MappingFragment StoreEntitySet="TypeAbsences">
+          <ScalarProperty Name="TypeAbsenceID" ColumnName="TypeAbsenceID" />
+          <ScalarProperty Name="TypeAbsence1" ColumnName="TypeAbsence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Absences">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Absence">
+        <MappingFragment StoreEntitySet="Absences">
+          <ScalarProperty Name="TypeAbsencesID" ColumnName="TypeAbsencesID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="AbsencesNumber" ColumnName="AbsencesNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ProfilesSubjects" TypeName="PersonalSchoolCardModel.ProfilesSubjects" StoreEntitySet="ProfilesSubjects">
+      <EndProperty Name="Profiles">
+        <ScalarProperty Name="ProfileID" ColumnName="ProfilesID" />
+      </EndProperty>
+      <EndProperty Name="Subjects">
+        <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

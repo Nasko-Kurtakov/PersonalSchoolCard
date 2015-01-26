@@ -11,7 +11,7 @@
     {
         public static void AddSubjectTypes(DataGridView gridView)
         {
-            using (var context = new PersonalSchoolCEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 try
                 {
@@ -45,7 +45,7 @@
 
         public static void AddSubjects(DataGridView gridView)
         {
-            using (var context = new PersonalSchoolCEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
 
                 try
@@ -90,7 +90,7 @@
         }
         public static List<string> GetAllSubjectTypesName()
         {
-            using (var context = new PersonalSchoolCEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 var subjectTypes = context.SubjectTypes
                                    .Select(subjectType => subjectType.SubjectType1)
@@ -100,7 +100,7 @@
         }
         public static List<string> GetAllSubjectsNames ()
         {
-            using (var context = new PersonalSchoolCEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 var subjectTypes = context.Subjects
                                    .Select(subject => subject.SubjectName)

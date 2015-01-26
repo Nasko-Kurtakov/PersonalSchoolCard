@@ -14,7 +14,13 @@ namespace PersonalShcoolCard
     {
         public AdminForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            panelAddTeachers.Parent = panelParent;
+            panelAddTeachers.Dock = DockStyle.Fill;
+            panelAddSubjects.Parent = panelParent;
+            panelAddSubjects.Dock = DockStyle.Fill;
+            panelStartPanel.Parent = panelParent;
+
         }
 
         private void buttonAddSubjectTypes_Click(object sender, EventArgs e)
@@ -48,29 +54,26 @@ namespace PersonalShcoolCard
            //using the method in classes-> Add Subjects Panel -> AddSubjectsTypeColumn
             var subjectTypesColumn = Classes.AddSubjectsPanel.AddSubjectsTypeColumn(subjectsTypes);           
             dataGridViewSubjects.Columns.Add(subjectTypesColumn);
-            dataGridViewSubjects.Refresh();
-            panelAddSubjects.BringToFront();
+            //dataGridViewSubjects.Refresh();
 
             panelAddSubjects.Visible = true;
-            panelAddTeachers.Visible = false;
+            panelStartPanel.Visible = false;
+            panelAddSubjects.BringToFront();
         }
 
         private void buttonOpenAddTeachersPanel_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-
-            panelAddSubjects.Visible = false;
+        {            
+            listBoxAlreadyAddedTeachers.DataSource = Classes.AddTeachersPanel.GetAllTeachersNames();
+            Classes.AddTeachersPanel.ShowSubjectsInCombobox(TaughtSubject, Classes.AddSubjectsPanel.GetAllSubjectsNames());
+            //dataGridViewAddTeacher.Refresh();
             panelAddTeachers.Visible = true;
+            panelAddTeachers.BringToFront();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PersonalRecord pr = new PersonalRecord();
-            pr.Show();
+            Classes.AddTeachersPanel.AddTeachers(dataGridViewAddTeacher);
         }
     }
 }

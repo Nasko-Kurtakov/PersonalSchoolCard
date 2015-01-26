@@ -5,40 +5,39 @@
     using System.Linq;
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
-    class AddTeachersPanel
+    public class AddTeachersPanel
     {
         public static void AddTeachers(DataGridView gridView)
         {
-            using (var context = new PersonalSchoolCEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
 
                 try
                 {
                     for (int rows = 0; rows < gridView.Rows.Count - 1; rows++)
                     {
-                        for (int col = 0; col < gridView.Rows[rows].Cells.Count; col++)
+
+                        string firstName = gridView.Rows[rows].Cells[0].Value.ToString();
+                        string lastName = gridView.Rows[rows].Cells[1].Value.ToString();
+                        string taughtSubject = gridView.Rows[rows].Cells[2].Value.ToString();
+                        if (firstName != null && firstName != "" && firstName != " ")
                         {
-                            string firstName = gridView.Rows[rows].Cells[1].Value.ToString();
-                            string lastName = gridView.Rows[rows].Cells[2].Value.ToString();
-                            string thaughtSubject = gridView.Rows[rows].Cells[3].Value.ToString();
-                            if (firstName != null && firstName != "" && firstName != " ")
+                            if (lastName != null && lastName != "" && lastName != " ")
                             {
-                                if (lastName != null && lastName != "" && lastName != " ")
+                                if (taughtSubject != null && taughtSubject != "" && taughtSubject != " ")
                                 {
-                                    if (thaughtSubject != null && thaughtSubject != "" && thaughtSubject != " ")
+                                    var thaughtSubjectID = context.Subjects
+                                                           .Where(subject => subject.SubjectName == taughtSubject)
+                                                           .Select(subject => subject.SubjectID)
+                                                           .First();
+                                    var teacher = new Teacher
                                     {
-                                        var thaughtSubjectID = context.Subjects
-                                                               .Where(subject => subject.SubjectName == thaughtSubject)
-                                                               .Select(subject => subject.SubjectID)
-                                                               .First();
-                                        var teacher = new Teacher
-                                        {
-                                            FirstName = firstName,
-                                            LastName = lastName,
-                                            TaughtSubjectID = thaughtSubjectID
-                                        };
-                                        context.Teachers.Add(teacher);
-                                    }
+                                        FirstName = firstName,
+                                        LastName = lastName,
+                                        TaughtSubjectID = thaughtSubjectID
+                                    };
+                                    context.Teachers.Add(teacher);
+
                                 }
                             }
                             else if (firstName == null || firstName == "" || firstName == " ")
@@ -56,15 +55,33 @@
             }
         }
 
-        public static DataGridViewComboBoxColumn ShowSubjectsInCombobox<T>(T dataSource)
+        public static void ShowSubjectsInCombobox<T>(DataGridViewComboBoxColumn column, T dataSource)
         {
-            DataGridViewComboBoxColumn subjectsColumn  = new DataGridViewComboBoxColumn()
+            column.DataSource = dataSource;
+        }
+
+        public static List<string> GetAllTeachersNames()
+        {
+            using (var context = new PersonalSchoolCardEntities())
             {
-                HeaderText = "Предмети",
-                DataSource = dataSource,
-                Name = "TaughtSubjects"
-            };
-            return subjectsColumn;
+                try
+                {
+                    var teachersList = context.Teachers
+                                          .Select(teacher => teacher).ToList();
+
+                    var teachersNamesList = new List<string>();
+                    foreach (var teacher in teachersList)
+                    {
+                        teachersNamesList.Add(teacher.GetFullName());
+                    }
+                    return teachersNamesList;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return null;
+                }
+            }
         }
     }
 }

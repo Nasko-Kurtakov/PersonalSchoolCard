@@ -40,10 +40,8 @@
             this.buttonCreateProfile = new System.Windows.Forms.Button();
             this.panelAddSubjects = new System.Windows.Forms.Panel();
             this.panelAddTeachers = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.listBoxAlreadyAddedTeachers = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.listBoxAlreadyAddedSubjects = new System.Windows.Forms.ListBox();
             this.listBoxAlreadyAddedSubjectTypes = new System.Windows.Forms.ListBox();
@@ -55,16 +53,24 @@
             this.dataGridViewSubjectTypes = new System.Windows.Forms.DataGridView();
             this.SubjectType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridViewAddTeacher = new System.Windows.Forms.DataGridView();
+            this.panelStartPanel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelParent = new System.Windows.Forms.Panel();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaughtSubject = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panelAddSubjects.SuspendLayout();
             this.panelAddTeachers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTeacher)).BeginInit();
+            this.panelStartPanel.SuspendLayout();
+            this.panelParent.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -87,7 +93,8 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panelAddSubjects);
+            this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer1.Panel2.Controls.Add(this.panelParent);
             this.splitContainer1.Size = new System.Drawing.Size(759, 494);
             this.splitContainer1.SplitterDistance = 253;
             this.splitContainer1.TabIndex = 0;
@@ -181,66 +188,55 @@
             this.panelAddSubjects.Controls.Add(this.listBoxAlreadyAddedSubjects);
             this.panelAddSubjects.Controls.Add(this.listBoxAlreadyAddedSubjectTypes);
             this.panelAddSubjects.Controls.Add(this.buttonAddSubjects);
+            this.panelAddSubjects.Controls.Add(this.panelStartPanel);
             this.panelAddSubjects.Controls.Add(this.buttonAddSubjectTypes);
             this.panelAddSubjects.Controls.Add(this.dataGridViewSubjects);
             this.panelAddSubjects.Controls.Add(this.dataGridViewSubjectTypes);
             this.panelAddSubjects.Controls.Add(this.label1);
-            this.panelAddSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAddSubjects.Location = new System.Drawing.Point(0, 0);
+            this.panelAddSubjects.Location = new System.Drawing.Point(3, 3);
             this.panelAddSubjects.Name = "panelAddSubjects";
             this.panelAddSubjects.Size = new System.Drawing.Size(502, 494);
             this.panelAddSubjects.TabIndex = 0;
+            this.panelAddSubjects.Visible = false;
             // 
             // panelAddTeachers
             // 
+            this.panelAddTeachers.BackColor = System.Drawing.SystemColors.Control;
             this.panelAddTeachers.Controls.Add(this.button1);
-            this.panelAddTeachers.Controls.Add(this.dataGridView1);
-            this.panelAddTeachers.Controls.Add(this.listBox1);
+            this.panelAddTeachers.Controls.Add(this.dataGridViewAddTeacher);
+            this.panelAddTeachers.Controls.Add(this.listBoxAlreadyAddedTeachers);
             this.panelAddTeachers.Controls.Add(this.label2);
-            this.panelAddTeachers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAddTeachers.Location = new System.Drawing.Point(0, 0);
+            this.panelAddTeachers.Location = new System.Drawing.Point(3, 3);
             this.panelAddTeachers.Name = "panelAddTeachers";
             this.panelAddTeachers.Size = new System.Drawing.Size(502, 494);
             this.panelAddTeachers.TabIndex = 7;
+            this.panelAddTeachers.Visible = false;
             // 
-            // dataGridView1
+            // button1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FirstName,
-            this.LastName});
-            this.dataGridView1.Location = new System.Drawing.Point(73, 58);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(366, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.button1.Location = new System.Drawing.Point(322, 443);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 39);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Добави учители";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // FirstName
+            // listBoxAlreadyAddedTeachers
             // 
-            this.FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FirstName.HeaderText = "Име";
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.LastName.HeaderText = "Фамилия";
-            this.LastName.Name = "LastName";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(73, 249);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(366, 173);
-            this.listBox1.TabIndex = 2;
+            this.listBoxAlreadyAddedTeachers.FormattingEnabled = true;
+            this.listBoxAlreadyAddedTeachers.Location = new System.Drawing.Point(73, 249);
+            this.listBoxAlreadyAddedTeachers.Name = "listBoxAlreadyAddedTeachers";
+            this.listBoxAlreadyAddedTeachers.Size = new System.Drawing.Size(366, 173);
+            this.listBoxAlreadyAddedTeachers.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(154, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 31);
+            this.label2.Size = new System.Drawing.Size(230, 33);
             this.label2.TabIndex = 1;
             this.label2.Text = "Добавяне на учители\r\n";
             // 
@@ -323,22 +319,70 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(139, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 31);
+            this.label1.Size = new System.Drawing.Size(245, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Добавяне на предмети";
             // 
-            // button1
+            // dataGridViewAddTeacher
             // 
-            this.button1.Location = new System.Drawing.Point(73, 434);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 27);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Следващ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridViewAddTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAddTeacher.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FirstName,
+            this.LastName,
+            this.TaughtSubject});
+            this.dataGridViewAddTeacher.Location = new System.Drawing.Point(73, 58);
+            this.dataGridViewAddTeacher.Name = "dataGridViewAddTeacher";
+            this.dataGridViewAddTeacher.Size = new System.Drawing.Size(366, 150);
+            this.dataGridViewAddTeacher.TabIndex = 0;
+            // 
+            // panelStartPanel
+            // 
+            this.panelStartPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panelStartPanel.Controls.Add(this.label3);
+            this.panelStartPanel.Location = new System.Drawing.Point(3, 0);
+            this.panelStartPanel.Name = "panelStartPanel";
+            this.panelStartPanel.Size = new System.Drawing.Size(493, 491);
+            this.panelStartPanel.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.CausesValidation = false;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(166, 199);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 26);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Добре дошли";
+            // 
+            // panelParent
+            // 
+            this.panelParent.Controls.Add(this.panelAddSubjects);
+            this.panelParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelParent.Location = new System.Drawing.Point(0, 0);
+            this.panelParent.Name = "panelParent";
+            this.panelParent.Size = new System.Drawing.Size(502, 494);
+            this.panelParent.TabIndex = 1;
+            // 
+            // FirstName
+            // 
+            this.FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FirstName.HeaderText = "Име";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LastName.HeaderText = "Фамилия";
+            this.LastName.Name = "LastName";
+            // 
+            // TaughtSubject
+            // 
+            this.TaughtSubject.HeaderText = "Предмет";
+            this.TaughtSubject.Name = "TaughtSubject";
             // 
             // AdminForm
             // 
@@ -356,9 +400,12 @@
             this.panelAddSubjects.PerformLayout();
             this.panelAddTeachers.ResumeLayout(false);
             this.panelAddTeachers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTeacher)).EndInit();
+            this.panelStartPanel.ResumeLayout(false);
+            this.panelStartPanel.PerformLayout();
+            this.panelParent.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -388,10 +435,14 @@
         private System.Windows.Forms.Button buttonOpenAddTeachersPanel;
         private System.Windows.Forms.Panel panelAddTeachers;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ListBox listBoxAlreadyAddedTeachers;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridViewAddTeacher;
+        private System.Windows.Forms.Panel panelStartPanel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelParent;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn TaughtSubject;
     }
 }
