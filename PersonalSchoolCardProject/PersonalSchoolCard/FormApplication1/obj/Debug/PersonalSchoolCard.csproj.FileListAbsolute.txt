@@ -69,5 +69,4 @@ D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoo
 D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\PersonalSchoolCard.Data.pdb
 D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.xml
 D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.SqlServer.xml
-D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe.config

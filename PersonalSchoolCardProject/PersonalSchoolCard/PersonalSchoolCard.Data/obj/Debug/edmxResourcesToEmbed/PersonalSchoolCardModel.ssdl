@@ -1,31 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="PersonalSchoolCardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+<Schema Namespace="PersonalSchoolCardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Absences">
     <Key>
-      <PropertyRef Name="TypeAbsencesID" />
       <PropertyRef Name="StudentID" />
+      <PropertyRef Name="ClassID" />
       <PropertyRef Name="TermID" />
+      <PropertyRef Name="TypeAbsenceID" />
     </Key>
-    <Property Name="TypeAbsencesID" Type="tinyint" Nullable="false" />
     <Property Name="StudentID" Type="bigint" Nullable="false" />
-    <Property Name="ClassID" Type="int" />
+    <Property Name="ClassID" Type="int" Nullable="false" />
     <Property Name="TermID" Type="tinyint" Nullable="false" />
+    <Property Name="TypeAbsenceID" Type="tinyint" Nullable="false" />
     <Property Name="AbsencesNumber" Type="nvarchar" MaxLength="6" />
-  </EntityType>
-  <EntityType Name="Areas">
-    <Key>
-      <PropertyRef Name="AreaID" />
-    </Key>
-    <Property Name="AreaID" Type="int" Nullable="false" />
-    <Property Name="AreaName" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Classes">
     <Key>
       <PropertyRef Name="ClassID" />
     </Key>
-    <Property Name="ClassID" Type="int" Nullable="false" />
+    <Property Name="ClassID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ClassName" Type="nvarchar" MaxLength="5" />
     <Property Name="SchoolYearID" Type="int" />
     <Property Name="ProfileID" Type="int" />
@@ -40,15 +32,8 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
     <Property Name="SudentID" Type="bigint" Nullable="false" />
     <Property Name="SubjectID" Type="int" Nullable="false" />
     <Property Name="SujectTypeID" Type="tinyint" Nullable="false" />
-    <Property Name="Mark" Type="real" />
+    <Property Name="Mark" Type="real" Nullable="false" />
     <Property Name="HoursStudied" Type="int" />
-  </EntityType>
-  <EntityType Name="Grades">
-    <Key>
-      <PropertyRef Name="GradeID" />
-    </Key>
-    <Property Name="GradeID" Type="tinyint" Nullable="false" />
-    <Property Name="Grade" Type="tinyint" />
   </EntityType>
   <EntityType Name="HoursStudedSubject">
     <Key>
@@ -61,14 +46,7 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
     <Property Name="ProfileID" Type="int" Nullable="false" />
     <Property Name="SubjectID" Type="int" Nullable="false" />
     <Property Name="SubjectTypeID" Type="tinyint" Nullable="false" />
-    <Property Name="HoursStudied" Type="nvarchar" MaxLength="4" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Manicipalities">
-    <Key>
-      <PropertyRef Name="ManicipalityID" />
-    </Key>
-    <Property Name="ManicipalityID" Type="int" Nullable="false" />
-    <Property Name="ManicipalityName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HoursStudied" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Marks">
     <Key>
@@ -83,7 +61,7 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
     <Property Name="SubjectTypeID" Type="tinyint" Nullable="false" />
     <Property Name="TermID" Type="tinyint" Nullable="false" />
     <Property Name="ClassID" Type="int" Nullable="false" />
-    <Property Name="Mark" Type="tinyint" Nullable="false" />
+    <Property Name="Mark" Type="tinyint" />
   </EntityType>
   <EntityType Name="Pictures">
     <Key>
@@ -96,16 +74,16 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
     <Key>
       <PropertyRef Name="PrincipalID" />
     </Key>
-    <Property Name="PrincipalID" Type="int" Nullable="false" />
+    <Property Name="PrincipalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
     <Property Name="SecondName" Type="nvarchar" MaxLength="50" />
-    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Profiles">
     <Key>
       <PropertyRef Name="ProfileID" />
     </Key>
-    <Property Name="ProfileID" Type="int" Nullable="false" />
+    <Property Name="ProfileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ProfileName" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="ProfilesSubjects">
@@ -120,21 +98,21 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
     <Key>
       <PropertyRef Name="SchoolID" />
     </Key>
-    <Property Name="SchoolID" Type="int" Nullable="false" />
+    <Property Name="SchoolID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SchoolName" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="SchoolYears">
     <Key>
       <PropertyRef Name="SchoolYearID" />
     </Key>
-    <Property Name="SchoolYearID" Type="int" Nullable="false" />
+    <Property Name="SchoolYearID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SchoolYear" Type="nchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="Settlements">
     <Key>
       <PropertyRef Name="SettlementID" />
     </Key>
-    <Property Name="SettlementID" Type="int" Nullable="false" />
+    <Property Name="SettlementID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SettlemnetName" Type="nvarchar" MaxLength="50" />
     <Property Name="ManicipalityID" Type="int" Nullable="false" />
     <Property Name="AreaID" Type="int" Nullable="false" />
@@ -143,28 +121,28 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
     <Key>
       <PropertyRef Name="StudentID" />
     </Key>
-    <Property Name="StudentID" Type="bigint" Nullable="false" />
+    <Property Name="StudentID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="SecondName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SecondName" Type="nvarchar" MaxLength="50" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="PersonalNumber" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="PersonalNumber" Type="nchar" MaxLength="10" />
     <Property Name="PersonalCardNumber" Type="nchar" MaxLength="10" />
-    <Property Name="DateOfBirth" Type="date" Nullable="false" />
+    <Property Name="DateOfBirth" Type="date" />
     <Property Name="SettlementID" Type="int" Nullable="false" />
-    <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Phone" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
     <Property Name="EnrollmentYear" Type="int" Nullable="false" />
     <Property Name="ProfileID" Type="int" Nullable="false" />
     <Property Name="MarkFromDiplom" Type="real" />
   </EntityType>
   <EntityType Name="StudentsSchoolYear">
     <Key>
-      <PropertyRef Name="SchoolYearID" />
       <PropertyRef Name="StudentID" />
+      <PropertyRef Name="SchoolYearID" />
       <PropertyRef Name="ClassID" />
     </Key>
-    <Property Name="SchoolYearID" Type="int" Nullable="false" />
     <Property Name="StudentID" Type="bigint" Nullable="false" />
+    <Property Name="SchoolYearID" Type="int" Nullable="false" />
     <Property Name="ClassID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Subjects">
@@ -197,25 +175,26 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
     </Key>
     <Property Name="TeacherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="TaughtSubjectID" Type="int" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="15" />
+    <Property Name="Password" Type="nvarchar" MaxLength="15" />
   </EntityType>
   <EntityType Name="Terms">
     <Key>
       <PropertyRef Name="TermID" />
     </Key>
-    <Property Name="TermID" Type="tinyint" Nullable="false" />
+    <Property Name="TermID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TermName" Type="nvarchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="TypeAbsences">
     <Key>
       <PropertyRef Name="TypeAbsenceID" />
     </Key>
-    <Property Name="TypeAbsenceID" Type="tinyint" Nullable="false" />
+    <Property Name="TypeAbsenceID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TypeAbsence" Type="nvarchar" MaxLength="15" />
   </EntityType>
-  <Association Name="FK_Absences_Classes">
-    <End Role="Classes" Type="Self.Classes" Multiplicity="0..1" />
+  <Association Name="FK_Absences_Classes1">
+    <End Role="Classes" Type="Self.Classes" Multiplicity="1" />
     <End Role="Absences" Type="Self.Absences" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Classes">
@@ -258,7 +237,7 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
         <PropertyRef Name="TypeAbsenceID" />
       </Principal>
       <Dependent Role="Absences">
-        <PropertyRef Name="TypeAbsencesID" />
+        <PropertyRef Name="TypeAbsenceID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -406,18 +385,6 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Marks_Subjects">
-    <End Role="Subjects" Type="Self.Subjects" Multiplicity="1" />
-    <End Role="Marks" Type="Self.Marks" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Subjects">
-        <PropertyRef Name="SubjectID" />
-      </Principal>
-      <Dependent Role="Marks">
-        <PropertyRef Name="SubjectID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Marks_Terms">
     <End Role="Terms" Type="Self.Terms" Multiplicity="1" />
     <End Role="Marks" Type="Self.Marks" Multiplicity="*" />
@@ -466,27 +433,27 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Settlements_Areas">
-    <End Role="Areas" Type="Self.Areas" Multiplicity="1" />
-    <End Role="Settlements" Type="Self.Settlements" Multiplicity="*" />
+  <Association Name="FK_Settlements_Settlements2">
+    <End Role="Settlements" Type="Self.Settlements" Multiplicity="1" />
+    <End Role="Settlements1" Type="Self.Settlements" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Areas">
-        <PropertyRef Name="AreaID" />
+      <Principal Role="Settlements">
+        <PropertyRef Name="SettlementID" />
       </Principal>
-      <Dependent Role="Settlements">
-        <PropertyRef Name="AreaID" />
+      <Dependent Role="Settlements1">
+        <PropertyRef Name="ManicipalityID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Settlements_Manicipalities">
-    <End Role="Manicipalities" Type="Self.Manicipalities" Multiplicity="1" />
-    <End Role="Settlements" Type="Self.Settlements" Multiplicity="*" />
+  <Association Name="FK_Settlements_Settlements3">
+    <End Role="Settlements" Type="Self.Settlements" Multiplicity="1" />
+    <End Role="Settlements1" Type="Self.Settlements" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Manicipalities">
-        <PropertyRef Name="ManicipalityID" />
+      <Principal Role="Settlements">
+        <PropertyRef Name="SettlementID" />
       </Principal>
-      <Dependent Role="Settlements">
-        <PropertyRef Name="ManicipalityID" />
+      <Dependent Role="Settlements1">
+        <PropertyRef Name="AreaID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -550,25 +517,11 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Teachers_Subjects">
-    <End Role="Subjects" Type="Self.Subjects" Multiplicity="1" />
-    <End Role="Teachers" Type="Self.Teachers" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Subjects">
-        <PropertyRef Name="SubjectID" />
-      </Principal>
-      <Dependent Role="Teachers">
-        <PropertyRef Name="TaughtSubjectID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="PersonalSchoolCardModelStoreContainer">
-    <EntitySet Name="Areas" EntityType="Self.Areas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Absences" EntityType="Self.Absences" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Classes" EntityType="Self.Classes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Diploms" EntityType="Self.Diploms" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Grades" EntityType="Self.Grades" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoursStudedSubject" EntityType="Self.HoursStudedSubject" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Manicipalities" EntityType="Self.Manicipalities" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Marks" EntityType="Self.Marks" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Pictures" EntityType="Self.Pictures" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Principals" EntityType="Self.Principals" Schema="dbo" store:Type="Tables" />
@@ -585,16 +538,7 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
     <EntitySet Name="Teachers" EntityType="Self.Teachers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Terms" EntityType="Self.Terms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeAbsences" EntityType="Self.TypeAbsences" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Absences" EntityType="Self.Absences" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Absences].[TypeAbsencesID] AS [TypeAbsencesID], 
-    [Absences].[StudentID] AS [StudentID], 
-    [Absences].[ClassID] AS [ClassID], 
-    [Absences].[TermID] AS [TermID], 
-    [Absences].[AbsencesNumber] AS [AbsencesNumber]
-    FROM [dbo].[Absences] AS [Absences]</DefiningQuery>
-    </EntitySet>
-    <AssociationSet Name="FK_Absences_Classes" Association="Self.FK_Absences_Classes">
+    <AssociationSet Name="FK_Absences_Classes1" Association="Self.FK_Absences_Classes1">
       <End Role="Classes" EntitySet="Classes" />
       <End Role="Absences" EntitySet="Absences" />
     </AssociationSet>
@@ -658,10 +602,6 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
       <End Role="Students" EntitySet="Students" />
       <End Role="Marks" EntitySet="Marks" />
     </AssociationSet>
-    <AssociationSet Name="FK_Marks_Subjects" Association="Self.FK_Marks_Subjects">
-      <End Role="Subjects" EntitySet="Subjects" />
-      <End Role="Marks" EntitySet="Marks" />
-    </AssociationSet>
     <AssociationSet Name="FK_Marks_Terms" Association="Self.FK_Marks_Terms">
       <End Role="Terms" EntitySet="Terms" />
       <End Role="Marks" EntitySet="Marks" />
@@ -678,13 +618,13 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
       <End Role="Subjects" EntitySet="Subjects" />
       <End Role="ProfilesSubjects" EntitySet="ProfilesSubjects" />
     </AssociationSet>
-    <AssociationSet Name="FK_Settlements_Areas" Association="Self.FK_Settlements_Areas">
-      <End Role="Areas" EntitySet="Areas" />
+    <AssociationSet Name="FK_Settlements_Settlements2" Association="Self.FK_Settlements_Settlements2">
       <End Role="Settlements" EntitySet="Settlements" />
+      <End Role="Settlements1" EntitySet="Settlements" />
     </AssociationSet>
-    <AssociationSet Name="FK_Settlements_Manicipalities" Association="Self.FK_Settlements_Manicipalities">
-      <End Role="Manicipalities" EntitySet="Manicipalities" />
+    <AssociationSet Name="FK_Settlements_Settlements3" Association="Self.FK_Settlements_Settlements3">
       <End Role="Settlements" EntitySet="Settlements" />
+      <End Role="Settlements1" EntitySet="Settlements" />
     </AssociationSet>
     <AssociationSet Name="FK_Students_Profiles" Association="Self.FK_Students_Profiles">
       <End Role="Profiles" EntitySet="Profiles" />
@@ -705,10 +645,6 @@ warning 6002: The table/view 'PersonalSchoolCard.dbo.Absences' does not have a p
     <AssociationSet Name="FK_StudentsSchoolYear_Students" Association="Self.FK_StudentsSchoolYear_Students">
       <End Role="Students" EntitySet="Students" />
       <End Role="StudentsSchoolYear" EntitySet="StudentsSchoolYear" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Teachers_Subjects" Association="Self.FK_Teachers_Subjects">
-      <End Role="Subjects" EntitySet="Subjects" />
-      <End Role="Teachers" EntitySet="Teachers" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

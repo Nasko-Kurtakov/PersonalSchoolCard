@@ -16,6 +16,8 @@ namespace PersonalSchoolCard.Data
     {
         public Settlement()
         {
+            this.Settlements1 = new HashSet<Settlement>();
+            this.Settlements11 = new HashSet<Settlement>();
             this.Students = new HashSet<Student>();
         }
     
@@ -24,8 +26,10 @@ namespace PersonalSchoolCard.Data
         public int ManicipalityID { get; set; }
         public int AreaID { get; set; }
     
-        public virtual Area Area { get; set; }
-        public virtual Manicipality Manicipality { get; set; }
+        public virtual ICollection<Settlement> Settlements1 { get; set; }
+        public virtual Settlement Settlement1 { get; set; }
+        public virtual ICollection<Settlement> Settlements11 { get; set; }
+        public virtual Settlement Settlement2 { get; set; }
         public virtual ICollection<Student> Students { get; set; }
     }
 }

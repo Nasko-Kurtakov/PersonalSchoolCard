@@ -16,7 +16,7 @@ namespace PersonalShcoolCard
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PersonalRecord());
+            Application.Run(new AdminForm());
         }
     }
 }

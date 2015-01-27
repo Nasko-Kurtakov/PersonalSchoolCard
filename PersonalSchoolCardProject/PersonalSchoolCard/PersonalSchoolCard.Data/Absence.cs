@@ -14,10 +14,10 @@ namespace PersonalSchoolCard.Data
     
     public partial class Absence
     {
-        public byte TypeAbsencesID { get; set; }
         public long StudentID { get; set; }
-        public Nullable<int> ClassID { get; set; }
+        public int ClassID { get; set; }
         public byte TermID { get; set; }
+        public byte TypeAbsenceID { get; set; }
         public string AbsencesNumber { get; set; }
     
         public virtual Class Class { get; set; }

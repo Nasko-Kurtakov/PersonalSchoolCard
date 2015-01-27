@@ -25,12 +25,10 @@ namespace PersonalSchoolCard.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Area> Areas { get; set; }
+        public virtual DbSet<Absence> Absences { get; set; }
         public virtual DbSet<Class> Classes { get; set; }
         public virtual DbSet<Diplom> Diploms { get; set; }
-        public virtual DbSet<Grade> Grades { get; set; }
         public virtual DbSet<HoursStudedSubject> HoursStudedSubjects { get; set; }
-        public virtual DbSet<Manicipality> Manicipalities { get; set; }
         public virtual DbSet<Mark> Marks { get; set; }
         public virtual DbSet<Picture> Pictures { get; set; }
         public virtual DbSet<Principal> Principals { get; set; }
@@ -46,6 +44,5 @@ namespace PersonalSchoolCard.Data
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<Term> Terms { get; set; }
         public virtual DbSet<TypeAbsence> TypeAbsences { get; set; }
-        public virtual DbSet<Absence> Absences { get; set; }
     }
 }

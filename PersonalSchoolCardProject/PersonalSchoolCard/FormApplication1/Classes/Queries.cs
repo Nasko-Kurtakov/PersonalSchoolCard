@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using PersonalSchoolCard.Data;
 
 namespace PersonalShcoolCard.Classes
@@ -42,17 +43,18 @@ namespace PersonalShcoolCard.Classes
         {
             using ( var context = new PersonalSchoolCardEntities() )
             {
-                var AreaName = (from s in context.Students
-                                join set in context.Settlements
-                                on s.SettlementID equals set.SettlementID
-                                join ar in context.Areas
-                                on set.AreaID equals ar.AreaID
-                                where s.StudentID == studentID
-                                select ar.AreaName)
-                                .FirstOrDefault()
-                                ;
+                //to be redone
+                //var AreaName = (from s in context.Students
+                //                join set in context.Settlements
+                //                on s.SettlementID equals set.SettlementID
+                //                join ar in context.Areas
+                //                on set.AreaID equals ar.AreaID
+                //                where s.StudentID == studentID
+                //                select ar.AreaName)
+                //                .FirstOrDefault();
 
-                return AreaName;
+                //return AreaName;
+                return null;
             }
         }
 
@@ -79,17 +81,18 @@ namespace PersonalShcoolCard.Classes
         {
             using ( var context = new PersonalSchoolCardEntities())
             {
-                var StudentMunicipality = (from s in context.Students
-                                           join set in context.Settlements
-                                           on s.SettlementID equals set.SettlementID
-                                           join mu in context.Manicipalities
-                                           on set.ManicipalityID equals mu.ManicipalityID
-                                           where s.StudentID == studentID
-                                           select mu.ManicipalityName)
-                                           .FirstOrDefault()
-                                           ;
+                //to be redone
+                //var StudentMunicipality = (from s in context.Students
+                //                           join set in context.Settlements
+                //                           on s.SettlementID equals set.SettlementID
+                //                           join mu in context.Manicipalities
+                //                           on set.ManicipalityID equals mu.ManicipalityID
+                //                           where s.StudentID == studentID
+                //                           select mu.ManicipalityName)
+                //                           .FirstOrDefault();
 
-                return StudentMunicipality;
+                //return StudentMunicipality;
+                return null;
             }
         }
 
@@ -172,15 +175,22 @@ namespace PersonalShcoolCard.Classes
                     var StudentBirthDate = context.Students
                         .Where(student => student.StudentID == studentID)
                         .Select(student => student.DateOfBirth)
-                        .FirstOrDefault()
-                        ;
-
-                    return StudentBirthDate;
+                        .First();
+                    if (StudentBirthDate !=null)
+                    {
+                        return (DateTime) StudentBirthDate;
+                    }
+                    else
+                    {
+                        throw new NullReferenceException();
+                    }
+                    
                 }
             }
             catch (Exception ex)
             {
-                return DateTime.Now; //need to be checked
+                MessageBox.Show(ex.Message);
+                return DateTime.Now;
             }
         }
 

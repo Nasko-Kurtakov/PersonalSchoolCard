@@ -16,9 +16,9 @@ namespace PersonalSchoolCard.Data
     {
         public Student()
         {
+            this.Absences = new HashSet<Absence>();
             this.Diploms = new HashSet<Diplom>();
             this.Marks = new HashSet<Mark>();
-            this.Absences = new HashSet<Absence>();
             this.StudentsSchoolYears = new HashSet<StudentsSchoolYear>();
         }
     
@@ -28,7 +28,7 @@ namespace PersonalSchoolCard.Data
         public string LastName { get; set; }
         public string PersonalNumber { get; set; }
         public string PersonalCardNumber { get; set; }
-        public System.DateTime DateOfBirth { get; set; }
+        public Nullable<System.DateTime> DateOfBirth { get; set; }
         public int SettlementID { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
@@ -36,12 +36,12 @@ namespace PersonalSchoolCard.Data
         public int ProfileID { get; set; }
         public Nullable<float> MarkFromDiplom { get; set; }
     
+        public virtual ICollection<Absence> Absences { get; set; }
         public virtual ICollection<Diplom> Diploms { get; set; }
         public virtual ICollection<Mark> Marks { get; set; }
         public virtual Picture Picture { get; set; }
         public virtual Profile Profile { get; set; }
         public virtual Settlement Settlement { get; set; }
-        public virtual ICollection<Absence> Absences { get; set; }
         public virtual ICollection<StudentsSchoolYear> StudentsSchoolYears { get; set; }
     }
 }

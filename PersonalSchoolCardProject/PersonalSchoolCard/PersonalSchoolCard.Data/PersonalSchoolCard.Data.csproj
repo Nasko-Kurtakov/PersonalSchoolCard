@@ -53,22 +53,13 @@
     <Compile Include="Absence.cs">
       <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Area.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Class.cs">
       <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Diplom.cs">
       <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Grade.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="HoursStudedSubject.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Manicipality.cs">
       <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Mark.cs">

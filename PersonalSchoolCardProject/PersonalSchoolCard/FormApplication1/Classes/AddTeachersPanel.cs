@@ -33,8 +33,7 @@
                                     var teacher = new Teacher
                                     {
                                         FirstName = firstName,
-                                        LastName = lastName,
-                                        TaughtSubjectID = thaughtSubjectID
+                                        LastName = lastName,                                        
                                     };
                                     context.Teachers.Add(teacher);
 

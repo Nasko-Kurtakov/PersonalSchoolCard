@@ -18,8 +18,6 @@ namespace PersonalSchoolCard.Data
         {
             this.Diploms = new HashSet<Diplom>();
             this.HoursStudedSubjects = new HashSet<HoursStudedSubject>();
-            this.Marks = new HashSet<Mark>();
-            this.Teachers = new HashSet<Teacher>();
             this.Profiles = new HashSet<Profile>();
         }
     
@@ -28,8 +26,6 @@ namespace PersonalSchoolCard.Data
     
         public virtual ICollection<Diplom> Diploms { get; set; }
         public virtual ICollection<HoursStudedSubject> HoursStudedSubjects { get; set; }
-        public virtual ICollection<Mark> Marks { get; set; }
-        public virtual ICollection<Teacher> Teachers { get; set; }
         public virtual ICollection<Profile> Profiles { get; set; }
     }
 }

@@ -14,8 +14,8 @@ namespace PersonalSchoolCard.Data
     
     public partial class StudentsSchoolYear
     {
-        public int SchoolYearID { get; set; }
         public long StudentID { get; set; }
+        public int SchoolYearID { get; set; }
         public int ClassID { get; set; }
     
         public virtual Class Class { get; set; }

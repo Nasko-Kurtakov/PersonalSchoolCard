@@ -17,7 +17,7 @@ namespace PersonalSchoolCard.Data
         public long SudentID { get; set; }
         public int SubjectID { get; set; }
         public byte SujectTypeID { get; set; }
-        public Nullable<float> Mark { get; set; }
+        public float Mark { get; set; }
         public Nullable<int> HoursStudied { get; set; }
     
         public virtual Student Student { get; set; }

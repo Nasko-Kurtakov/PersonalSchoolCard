@@ -18,7 +18,7 @@ namespace PersonalSchoolCard.Data
         public int ProfileID { get; set; }
         public int SubjectID { get; set; }
         public byte SubjectTypeID { get; set; }
-        public string HoursStudied { get; set; }
+        public int HoursStudied { get; set; }
     
         public virtual Class Class { get; set; }
         public virtual Profile Profile { get; set; }
