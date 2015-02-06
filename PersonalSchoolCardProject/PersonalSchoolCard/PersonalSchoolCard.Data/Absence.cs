@@ -20,7 +20,7 @@ namespace PersonalSchoolCard.Data
         public byte TypeAbsenceID { get; set; }
         public string AbsencesNumber { get; set; }
     
-        public virtual Class Class { get; set; }
+        public virtual SchoolClass SchoolClass { get; set; }
         public virtual Student Student { get; set; }
         public virtual Term Term { get; set; }
         public virtual TypeAbsence TypeAbsence { get; set; }

@@ -18,7 +18,7 @@ namespace PersonalSchoolCard.Data
         public int SchoolYearID { get; set; }
         public int ClassID { get; set; }
     
-        public virtual Class Class { get; set; }
+        public virtual SchoolClass SchoolClass { get; set; }
         public virtual SchoolYear SchoolYear { get; set; }
         public virtual Student Student { get; set; }
     }

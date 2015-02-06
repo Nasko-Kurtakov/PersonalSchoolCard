@@ -51,104 +51,104 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Absence.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Class.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="Diplom.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="HoursStudedSubject.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="Mark.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="PartialClasses\TeachersPartialClass.cs" />
-    <Compile Include="PersonalSchoolCardModel.Context.cs">
+    <Compile Include="PersonalSchoolCard.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PersonalSchoolCardModel.Context.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="PersonalSchoolCardModel.cs">
+    <Compile Include="PersonalSchoolCard.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
-    <Compile Include="PersonalSchoolCardModel.Designer.cs">
+    <Compile Include="PersonalSchoolCard.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PersonalSchoolCardModel.edmx</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.edmx</DependentUpon>
     </Compile>
     <Compile Include="Picture.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="Profile.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="School.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolClass.cs">
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="SchoolYear.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="Settlement.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="Student.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="StudentsSchoolYear.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="Subject.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="SubjectType.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="Teacher.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="Term.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
     <Compile Include="TypeAbsence.cs">
-      <DependentUpon>PersonalSchoolCardModel.tt</DependentUpon>
+      <DependentUpon>PersonalSchoolCard.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <EntityDeploy Include="PersonalSchoolCardModel.edmx">
+    <EntityDeploy Include="PersonalSchoolCard.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PersonalSchoolCardModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>PersonalSchoolCard.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="PersonalSchoolCardModel.edmx.diagram">
-      <DependentUpon>PersonalSchoolCardModel.edmx</DependentUpon>
+    <None Include="PersonalSchoolCard.edmx.diagram">
+      <DependentUpon>PersonalSchoolCard.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PersonalSchoolCardModel.Context.tt">
+    <Content Include="PersonalSchoolCard.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PersonalSchoolCardModel.edmx</DependentUpon>
-      <LastGenOutput>PersonalSchoolCardModel.Context.cs</LastGenOutput>
+      <DependentUpon>PersonalSchoolCard.edmx</DependentUpon>
+      <LastGenOutput>PersonalSchoolCard.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="PersonalSchoolCardModel.tt">
+    <Content Include="PersonalSchoolCard.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PersonalSchoolCardModel.edmx</DependentUpon>
-      <LastGenOutput>PersonalSchoolCardModel.cs</LastGenOutput>
+      <DependentUpon>PersonalSchoolCard.edmx</DependentUpon>
+      <LastGenOutput>PersonalSchoolCard.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

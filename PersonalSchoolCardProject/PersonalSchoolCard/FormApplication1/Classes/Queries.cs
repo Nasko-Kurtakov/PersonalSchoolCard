@@ -41,7 +41,7 @@ namespace PersonalShcoolCard.Classes
 
         public static string GetStudentArea(int studentID)
         {
-            using ( var context = new PersonalSchoolCardEntities() )
+            using (var context = new PersonalSchoolCardEntities())
             {
                 //to be redone
                 //var AreaName = (from s in context.Students
@@ -68,7 +68,7 @@ namespace PersonalShcoolCard.Classes
                     o => o.SettlementID, od => od.SettlementID,
                     (o, od) => new
                     {
-                        Settlement = od.SettlemnetName
+                        Settlement = od.SettlementName
                     })
                     .FirstOrDefault()
                     ;
@@ -79,7 +79,7 @@ namespace PersonalShcoolCard.Classes
 
         public static string GetStudentMunicipality(int studentID)
         {
-            using ( var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 //to be redone
                 //var StudentMunicipality = (from s in context.Students
@@ -98,7 +98,7 @@ namespace PersonalShcoolCard.Classes
 
         public static string GetStudentSchoolName()
         {
-            using ( var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 var SchoolName = (from s in context.Schools
                                   select s.SchoolName)
@@ -111,7 +111,7 @@ namespace PersonalShcoolCard.Classes
 
         public static string GetStudentID(int studentID)
         {
-            using ( var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 var StudentID = context.Students
                     .Where(student => student.StudentID == studentID)
@@ -125,7 +125,7 @@ namespace PersonalShcoolCard.Classes
 
         public static string GetStudentCardID(int studentID)
         {
-            using ( var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
 
                 var StudentCardID = context.Students
@@ -176,15 +176,15 @@ namespace PersonalShcoolCard.Classes
                         .Where(student => student.StudentID == studentID)
                         .Select(student => student.DateOfBirth)
                         .First();
-                    if (StudentBirthDate !=null)
+                    if (StudentBirthDate != null)
                     {
-                        return (DateTime) StudentBirthDate;
+                        return (DateTime)StudentBirthDate;
                     }
                     else
                     {
                         throw new NullReferenceException();
                     }
-                    
+
                 }
             }
             catch (Exception ex)
@@ -194,9 +194,9 @@ namespace PersonalShcoolCard.Classes
             }
         }
 
-          public static string GetStudentCurrentAddress(int studentID)
+        public static string GetStudentCurrentAddress(int studentID)
         {
-            using ( var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 var CurrentAddress = (from s in context.Students
                                       where s.StudentID == studentID
@@ -210,7 +210,7 @@ namespace PersonalShcoolCard.Classes
 
         public static string GetStudentMobilePhone(int studentID)
         {
-            using ( var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 var StudentMobilePhone = context.Students
                     .Where(student => student.StudentID == studentID)
@@ -224,7 +224,7 @@ namespace PersonalShcoolCard.Classes
 
         public static int GetStudentEnrollmentYear(int studentID)
         {
-            using ( var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 var StudentEnrollmentYear = context.Students
                     .Where(student => student.StudentID == studentID)

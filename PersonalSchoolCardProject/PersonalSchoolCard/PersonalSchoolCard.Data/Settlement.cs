@@ -22,9 +22,10 @@ namespace PersonalSchoolCard.Data
         }
     
         public int SettlementID { get; set; }
-        public string SettlemnetName { get; set; }
-        public int ManicipalityID { get; set; }
-        public int AreaID { get; set; }
+        public string SettlementName { get; set; }
+        public Nullable<int> ManicipalityID { get; set; }
+        public Nullable<int> AreaID { get; set; }
+        public string District { get; set; }
     
         public virtual ICollection<Settlement> Settlements1 { get; set; }
         public virtual Settlement Settlement1 { get; set; }

@@ -20,7 +20,7 @@ namespace PersonalSchoolCard.Data
         public byte SubjectTypeID { get; set; }
         public int HoursStudied { get; set; }
     
-        public virtual Class Class { get; set; }
+        public virtual SchoolClass SchoolClass { get; set; }
         public virtual Profile Profile { get; set; }
         public virtual Subject Subject { get; set; }
         public virtual SubjectType SubjectType { get; set; }

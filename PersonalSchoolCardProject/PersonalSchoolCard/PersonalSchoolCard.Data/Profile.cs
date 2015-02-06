@@ -16,8 +16,8 @@ namespace PersonalSchoolCard.Data
     {
         public Profile()
         {
-            this.Classes = new HashSet<Class>();
             this.HoursStudedSubjects = new HashSet<HoursStudedSubject>();
+            this.SchoolClasses = new HashSet<SchoolClass>();
             this.Students = new HashSet<Student>();
             this.Subjects = new HashSet<Subject>();
         }
@@ -25,8 +25,8 @@ namespace PersonalSchoolCard.Data
         public int ProfileID { get; set; }
         public string ProfileName { get; set; }
     
-        public virtual ICollection<Class> Classes { get; set; }
         public virtual ICollection<HoursStudedSubject> HoursStudedSubjects { get; set; }
+        public virtual ICollection<SchoolClass> SchoolClasses { get; set; }
         public virtual ICollection<Student> Students { get; set; }
         public virtual ICollection<Subject> Subjects { get; set; }
     }

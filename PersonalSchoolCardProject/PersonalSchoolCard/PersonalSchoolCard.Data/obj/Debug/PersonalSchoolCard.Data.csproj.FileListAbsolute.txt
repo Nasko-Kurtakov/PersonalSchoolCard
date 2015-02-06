@@ -28,3 +28,13 @@ D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoo
 D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.csprojResolveAssemblyReference.cache
 D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.dll
 D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.pdb
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.dll.config
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.pdb
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.dll
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.xml
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.csprojResolveAssemblyReference.cache
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.pdb

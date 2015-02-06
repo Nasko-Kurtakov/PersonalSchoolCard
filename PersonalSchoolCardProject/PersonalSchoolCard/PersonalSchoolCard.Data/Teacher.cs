@@ -16,7 +16,7 @@ namespace PersonalSchoolCard.Data
     {
         public Teacher()
         {
-            this.Classes = new HashSet<Class>();
+            this.SchoolClasses = new HashSet<SchoolClass>();
         }
     
         public int TeacherID { get; set; }
@@ -25,6 +25,6 @@ namespace PersonalSchoolCard.Data
         public string UserName { get; set; }
         public string Password { get; set; }
     
-        public virtual ICollection<Class> Classes { get; set; }
+        public virtual ICollection<SchoolClass> SchoolClasses { get; set; }
     }
 }

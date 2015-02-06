@@ -21,7 +21,7 @@ namespace PersonalSchoolCard.Data
         public int ClassID { get; set; }
         public Nullable<byte> Mark1 { get; set; }
     
-        public virtual Class Class { get; set; }
+        public virtual SchoolClass SchoolClass { get; set; }
         public virtual Student Student { get; set; }
         public virtual Term Term { get; set; }
     }

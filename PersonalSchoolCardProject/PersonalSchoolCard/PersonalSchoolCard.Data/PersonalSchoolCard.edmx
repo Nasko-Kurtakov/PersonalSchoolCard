@@ -1,0 +1,1556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PersonalSchoolCardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Absences">
+          <Key>
+            <PropertyRef Name="StudentID" />
+            <PropertyRef Name="ClassID" />
+            <PropertyRef Name="TermID" />
+            <PropertyRef Name="TypeAbsenceID" />
+          </Key>
+          <Property Name="StudentID" Type="bigint" Nullable="false" />
+          <Property Name="ClassID" Type="int" Nullable="false" />
+          <Property Name="TermID" Type="tinyint" Nullable="false" />
+          <Property Name="TypeAbsenceID" Type="tinyint" Nullable="false" />
+          <Property Name="AbsencesNumber" Type="nvarchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="Diploms">
+          <Key>
+            <PropertyRef Name="SudentID" />
+            <PropertyRef Name="SubjectID" />
+            <PropertyRef Name="SujectTypeID" />
+          </Key>
+          <Property Name="SudentID" Type="bigint" Nullable="false" />
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+          <Property Name="SujectTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="Mark" Type="real" Nullable="false" />
+          <Property Name="HoursStudied" Type="int" />
+        </EntityType>
+        <EntityType Name="HoursStudedSubject">
+          <Key>
+            <PropertyRef Name="ClassID" />
+            <PropertyRef Name="ProfileID" />
+            <PropertyRef Name="SubjectID" />
+            <PropertyRef Name="SubjectTypeID" />
+          </Key>
+          <Property Name="ClassID" Type="int" Nullable="false" />
+          <Property Name="ProfileID" Type="int" Nullable="false" />
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+          <Property Name="SubjectTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="HoursStudied" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Marks">
+          <Key>
+            <PropertyRef Name="StudentID" />
+            <PropertyRef Name="SubjectID" />
+            <PropertyRef Name="SubjectTypeID" />
+            <PropertyRef Name="TermID" />
+            <PropertyRef Name="ClassID" />
+          </Key>
+          <Property Name="StudentID" Type="bigint" Nullable="false" />
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+          <Property Name="SubjectTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="TermID" Type="tinyint" Nullable="false" />
+          <Property Name="ClassID" Type="int" Nullable="false" />
+          <Property Name="Mark" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="Pictures">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="bigint" Nullable="false" />
+          <Property Name="Picture" Type="image" />
+        </EntityType>
+        <EntityType Name="Principals">
+          <Key>
+            <PropertyRef Name="PrincipalID" />
+          </Key>
+          <Property Name="PrincipalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecondName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Profiles">
+          <Key>
+            <PropertyRef Name="ProfileID" />
+          </Key>
+          <Property Name="ProfileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProfileName" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProfilesSubjects">
+          <Key>
+            <PropertyRef Name="ProfilesID" />
+            <PropertyRef Name="SubjectID" />
+          </Key>
+          <Property Name="ProfilesID" Type="int" Nullable="false" />
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SchoolClasses">
+          <Key>
+            <PropertyRef Name="ClassID" />
+          </Key>
+          <Property Name="ClassID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassName" Type="nvarchar" MaxLength="5" />
+          <Property Name="SchoolYearID" Type="int" />
+          <Property Name="ProfileID" Type="int" />
+          <Property Name="TeacherID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Schools">
+          <Key>
+            <PropertyRef Name="SchoolID" />
+          </Key>
+          <Property Name="SchoolID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SchoolName" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SchoolYears">
+          <Key>
+            <PropertyRef Name="SchoolYearID" />
+          </Key>
+          <Property Name="SchoolYearID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SchoolYear" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Settlements">
+          <Key>
+            <PropertyRef Name="SettlementID" />
+          </Key>
+          <Property Name="SettlementID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SettlementName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ManicipalityID" Type="int" />
+          <Property Name="AreaID" Type="int" />
+          <Property Name="District" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SecondName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PersonalNumber" Type="nchar" MaxLength="10" />
+          <Property Name="PersonalCardNumber" Type="nchar" MaxLength="10" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="SettlementID" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="EnrollmentYear" Type="int" Nullable="false" />
+          <Property Name="ProfileID" Type="int" Nullable="false" />
+          <Property Name="MarkFromDiplom" Type="real" />
+        </EntityType>
+        <EntityType Name="StudentsSchoolYear">
+          <Key>
+            <PropertyRef Name="StudentID" />
+            <PropertyRef Name="SchoolYearID" />
+            <PropertyRef Name="ClassID" />
+          </Key>
+          <Property Name="StudentID" Type="bigint" Nullable="false" />
+          <Property Name="SchoolYearID" Type="int" Nullable="false" />
+          <Property Name="ClassID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subjects">
+          <Key>
+            <PropertyRef Name="SubjectID" />
+          </Key>
+          <Property Name="SubjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubjectName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SubjectTypes">
+          <Key>
+            <PropertyRef Name="SubjectTypeID" />
+          </Key>
+          <Property Name="SubjectTypeID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubjectType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Teachers">
+          <Key>
+            <PropertyRef Name="TeacherID" />
+          </Key>
+          <Property Name="TeacherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="15" />
+          <Property Name="Password" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Terms">
+          <Key>
+            <PropertyRef Name="TermID" />
+          </Key>
+          <Property Name="TermID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TermName" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TypeAbsences">
+          <Key>
+            <PropertyRef Name="TypeAbsenceID" />
+          </Key>
+          <Property Name="TypeAbsenceID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeAbsence" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <Association Name="FK_Absences_Classes1">
+          <End Role="SchoolClasses" Type="Self.SchoolClasses" Multiplicity="1" />
+          <End Role="Absences" Type="Self.Absences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolClasses">
+              <PropertyRef Name="ClassID" />
+            </Principal>
+            <Dependent Role="Absences">
+              <PropertyRef Name="ClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Absences_Students">
+          <End Role="Students" Type="Self.Students" Multiplicity="1" />
+          <End Role="Absences" Type="Self.Absences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Absences">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Absences_Terms">
+          <End Role="Terms" Type="Self.Terms" Multiplicity="1" />
+          <End Role="Absences" Type="Self.Absences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Terms">
+              <PropertyRef Name="TermID" />
+            </Principal>
+            <Dependent Role="Absences">
+              <PropertyRef Name="TermID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Absences_TypeAbsences">
+          <End Role="TypeAbsences" Type="Self.TypeAbsences" Multiplicity="1" />
+          <End Role="Absences" Type="Self.Absences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeAbsences">
+              <PropertyRef Name="TypeAbsenceID" />
+            </Principal>
+            <Dependent Role="Absences">
+              <PropertyRef Name="TypeAbsenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classes_Profiles">
+          <End Role="Profiles" Type="Self.Profiles" Multiplicity="0..1" />
+          <End Role="SchoolClasses" Type="Self.SchoolClasses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ProfileID" />
+            </Principal>
+            <Dependent Role="SchoolClasses">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classes_SchoolYears">
+          <End Role="SchoolYears" Type="Self.SchoolYears" Multiplicity="0..1" />
+          <End Role="SchoolClasses" Type="Self.SchoolClasses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolYears">
+              <PropertyRef Name="SchoolYearID" />
+            </Principal>
+            <Dependent Role="SchoolClasses">
+              <PropertyRef Name="SchoolYearID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classes_Teachers">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="1" />
+          <End Role="SchoolClasses" Type="Self.SchoolClasses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherID" />
+            </Principal>
+            <Dependent Role="SchoolClasses">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diploms_Students">
+          <End Role="Students" Type="Self.Students" Multiplicity="1" />
+          <End Role="Diploms" Type="Self.Diploms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Diploms">
+              <PropertyRef Name="SudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diploms_Subjects">
+          <End Role="Subjects" Type="Self.Subjects" Multiplicity="1" />
+          <End Role="Diploms" Type="Self.Diploms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="Diploms">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diploms_SubjectTypes">
+          <End Role="SubjectTypes" Type="Self.SubjectTypes" Multiplicity="1" />
+          <End Role="Diploms" Type="Self.Diploms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubjectTypes">
+              <PropertyRef Name="SubjectTypeID" />
+            </Principal>
+            <Dependent Role="Diploms">
+              <PropertyRef Name="SujectTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoursStudedSubject_Classes">
+          <End Role="SchoolClasses" Type="Self.SchoolClasses" Multiplicity="1" />
+          <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolClasses">
+              <PropertyRef Name="ClassID" />
+            </Principal>
+            <Dependent Role="HoursStudedSubject">
+              <PropertyRef Name="ClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoursStudedSubject_Profiles">
+          <End Role="Profiles" Type="Self.Profiles" Multiplicity="1" />
+          <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ProfileID" />
+            </Principal>
+            <Dependent Role="HoursStudedSubject">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoursStudedSubject_Subjects">
+          <End Role="Subjects" Type="Self.Subjects" Multiplicity="1" />
+          <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="HoursStudedSubject">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoursStudedSubject_SubjectTypes">
+          <End Role="SubjectTypes" Type="Self.SubjectTypes" Multiplicity="1" />
+          <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubjectTypes">
+              <PropertyRef Name="SubjectTypeID" />
+            </Principal>
+            <Dependent Role="HoursStudedSubject">
+              <PropertyRef Name="SubjectTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Marks_Classes">
+          <End Role="SchoolClasses" Type="Self.SchoolClasses" Multiplicity="1" />
+          <End Role="Marks" Type="Self.Marks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolClasses">
+              <PropertyRef Name="ClassID" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="ClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Marks_Students">
+          <End Role="Students" Type="Self.Students" Multiplicity="1" />
+          <End Role="Marks" Type="Self.Marks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Marks_Terms">
+          <End Role="Terms" Type="Self.Terms" Multiplicity="1" />
+          <End Role="Marks" Type="Self.Marks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Terms">
+              <PropertyRef Name="TermID" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="TermID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pictures_Students">
+          <End Role="Students" Type="Self.Students" Multiplicity="1" />
+          <End Role="Pictures" Type="Self.Pictures" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Pictures">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProfilesSubjects_Profiles">
+          <End Role="Profiles" Type="Self.Profiles" Multiplicity="1" />
+          <End Role="ProfilesSubjects" Type="Self.ProfilesSubjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ProfileID" />
+            </Principal>
+            <Dependent Role="ProfilesSubjects">
+              <PropertyRef Name="ProfilesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProfilesSubjects_Subjects">
+          <End Role="Subjects" Type="Self.Subjects" Multiplicity="1" />
+          <End Role="ProfilesSubjects" Type="Self.ProfilesSubjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="ProfilesSubjects">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settlements_Settlements2">
+          <End Role="Settlements" Type="Self.Settlements" Multiplicity="0..1" />
+          <End Role="Settlements1" Type="Self.Settlements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Settlements">
+              <PropertyRef Name="SettlementID" />
+            </Principal>
+            <Dependent Role="Settlements1">
+              <PropertyRef Name="ManicipalityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settlements_Settlements3">
+          <End Role="Settlements" Type="Self.Settlements" Multiplicity="0..1" />
+          <End Role="Settlements1" Type="Self.Settlements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Settlements">
+              <PropertyRef Name="SettlementID" />
+            </Principal>
+            <Dependent Role="Settlements1">
+              <PropertyRef Name="AreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Profiles">
+          <End Role="Profiles" Type="Self.Profiles" Multiplicity="1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ProfileID" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Settlements">
+          <End Role="Settlements" Type="Self.Settlements" Multiplicity="1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Settlements">
+              <PropertyRef Name="SettlementID" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="SettlementID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsSchoolYear_Classes">
+          <End Role="SchoolClasses" Type="Self.SchoolClasses" Multiplicity="1" />
+          <End Role="StudentsSchoolYear" Type="Self.StudentsSchoolYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolClasses">
+              <PropertyRef Name="ClassID" />
+            </Principal>
+            <Dependent Role="StudentsSchoolYear">
+              <PropertyRef Name="ClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsSchoolYear_SchoolYears">
+          <End Role="SchoolYears" Type="Self.SchoolYears" Multiplicity="1" />
+          <End Role="StudentsSchoolYear" Type="Self.StudentsSchoolYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolYears">
+              <PropertyRef Name="SchoolYearID" />
+            </Principal>
+            <Dependent Role="StudentsSchoolYear">
+              <PropertyRef Name="SchoolYearID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsSchoolYear_Students">
+          <End Role="Students" Type="Self.Students" Multiplicity="1" />
+          <End Role="StudentsSchoolYear" Type="Self.StudentsSchoolYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="StudentsSchoolYear">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PersonalSchoolCardModelStoreContainer">
+          <EntitySet Name="Absences" EntityType="Self.Absences" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Diploms" EntityType="Self.Diploms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoursStudedSubject" EntityType="Self.HoursStudedSubject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Marks" EntityType="Self.Marks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pictures" EntityType="Self.Pictures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Principals" EntityType="Self.Principals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Profiles" EntityType="Self.Profiles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProfilesSubjects" EntityType="Self.ProfilesSubjects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SchoolClasses" EntityType="Self.SchoolClasses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schools" EntityType="Self.Schools" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SchoolYears" EntityType="Self.SchoolYears" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settlements" EntityType="Self.Settlements" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentsSchoolYear" EntityType="Self.StudentsSchoolYear" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Subjects" EntityType="Self.Subjects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubjectTypes" EntityType="Self.SubjectTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teachers" EntityType="Self.Teachers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Terms" EntityType="Self.Terms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeAbsences" EntityType="Self.TypeAbsences" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Absences_Classes1" Association="Self.FK_Absences_Classes1">
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+            <End Role="Absences" EntitySet="Absences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Absences_Students" Association="Self.FK_Absences_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Absences" EntitySet="Absences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Absences_Terms" Association="Self.FK_Absences_Terms">
+            <End Role="Terms" EntitySet="Terms" />
+            <End Role="Absences" EntitySet="Absences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Absences_TypeAbsences" Association="Self.FK_Absences_TypeAbsences">
+            <End Role="TypeAbsences" EntitySet="TypeAbsences" />
+            <End Role="Absences" EntitySet="Absences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classes_Profiles" Association="Self.FK_Classes_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classes_SchoolYears" Association="Self.FK_Classes_SchoolYears">
+            <End Role="SchoolYears" EntitySet="SchoolYears" />
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classes_Teachers" Association="Self.FK_Classes_Teachers">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diploms_Students" Association="Self.FK_Diploms_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Diploms" EntitySet="Diploms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diploms_Subjects" Association="Self.FK_Diploms_Subjects">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="Diploms" EntitySet="Diploms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diploms_SubjectTypes" Association="Self.FK_Diploms_SubjectTypes">
+            <End Role="SubjectTypes" EntitySet="SubjectTypes" />
+            <End Role="Diploms" EntitySet="Diploms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoursStudedSubject_Classes" Association="Self.FK_HoursStudedSubject_Classes">
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+            <End Role="HoursStudedSubject" EntitySet="HoursStudedSubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoursStudedSubject_Profiles" Association="Self.FK_HoursStudedSubject_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="HoursStudedSubject" EntitySet="HoursStudedSubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoursStudedSubject_Subjects" Association="Self.FK_HoursStudedSubject_Subjects">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="HoursStudedSubject" EntitySet="HoursStudedSubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoursStudedSubject_SubjectTypes" Association="Self.FK_HoursStudedSubject_SubjectTypes">
+            <End Role="SubjectTypes" EntitySet="SubjectTypes" />
+            <End Role="HoursStudedSubject" EntitySet="HoursStudedSubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Marks_Classes" Association="Self.FK_Marks_Classes">
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Marks_Students" Association="Self.FK_Marks_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Marks_Terms" Association="Self.FK_Marks_Terms">
+            <End Role="Terms" EntitySet="Terms" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pictures_Students" Association="Self.FK_Pictures_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Pictures" EntitySet="Pictures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProfilesSubjects_Profiles" Association="Self.FK_ProfilesSubjects_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="ProfilesSubjects" EntitySet="ProfilesSubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProfilesSubjects_Subjects" Association="Self.FK_ProfilesSubjects_Subjects">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="ProfilesSubjects" EntitySet="ProfilesSubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settlements_Settlements2" Association="Self.FK_Settlements_Settlements2">
+            <End Role="Settlements" EntitySet="Settlements" />
+            <End Role="Settlements1" EntitySet="Settlements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settlements_Settlements3" Association="Self.FK_Settlements_Settlements3">
+            <End Role="Settlements" EntitySet="Settlements" />
+            <End Role="Settlements1" EntitySet="Settlements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Profiles" Association="Self.FK_Students_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Settlements" Association="Self.FK_Students_Settlements">
+            <End Role="Settlements" EntitySet="Settlements" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsSchoolYear_Classes" Association="Self.FK_StudentsSchoolYear_Classes">
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+            <End Role="StudentsSchoolYear" EntitySet="StudentsSchoolYear" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsSchoolYear_SchoolYears" Association="Self.FK_StudentsSchoolYear_SchoolYears">
+            <End Role="SchoolYears" EntitySet="SchoolYears" />
+            <End Role="StudentsSchoolYear" EntitySet="StudentsSchoolYear" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsSchoolYear_Students" Association="Self.FK_StudentsSchoolYear_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="StudentsSchoolYear" EntitySet="StudentsSchoolYear" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PersonalSchoolCardModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Absence">
+          <Key>
+            <PropertyRef Name="StudentID" />
+            <PropertyRef Name="ClassID" />
+            <PropertyRef Name="TermID" />
+            <PropertyRef Name="TypeAbsenceID" />
+          </Key>
+          <Property Name="StudentID" Type="Int64" Nullable="false" />
+          <Property Name="ClassID" Type="Int32" Nullable="false" />
+          <Property Name="TermID" Type="Byte" Nullable="false" />
+          <Property Name="TypeAbsenceID" Type="Byte" Nullable="false" />
+          <Property Name="AbsencesNumber" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SchoolClass" Relationship="Self.FK_Absences_Classes1" FromRole="Absences" ToRole="SchoolClasses" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_Absences_Students" FromRole="Absences" ToRole="Students" />
+          <NavigationProperty Name="Term" Relationship="Self.FK_Absences_Terms" FromRole="Absences" ToRole="Terms" />
+          <NavigationProperty Name="TypeAbsence" Relationship="Self.FK_Absences_TypeAbsences" FromRole="Absences" ToRole="TypeAbsences" />
+        </EntityType>
+        <EntityType Name="Diplom">
+          <Key>
+            <PropertyRef Name="SudentID" />
+            <PropertyRef Name="SubjectID" />
+            <PropertyRef Name="SujectTypeID" />
+          </Key>
+          <Property Name="SudentID" Type="Int64" Nullable="false" />
+          <Property Name="SubjectID" Type="Int32" Nullable="false" />
+          <Property Name="SujectTypeID" Type="Byte" Nullable="false" />
+          <Property Name="Mark" Type="Single" Nullable="false" />
+          <Property Name="HoursStudied" Type="Int32" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_Diploms_Students" FromRole="Diploms" ToRole="Students" />
+          <NavigationProperty Name="Subject" Relationship="Self.FK_Diploms_Subjects" FromRole="Diploms" ToRole="Subjects" />
+          <NavigationProperty Name="SubjectType" Relationship="Self.FK_Diploms_SubjectTypes" FromRole="Diploms" ToRole="SubjectTypes" />
+        </EntityType>
+        <EntityType Name="HoursStudedSubject">
+          <Key>
+            <PropertyRef Name="ClassID" />
+            <PropertyRef Name="ProfileID" />
+            <PropertyRef Name="SubjectID" />
+            <PropertyRef Name="SubjectTypeID" />
+          </Key>
+          <Property Name="ClassID" Type="Int32" Nullable="false" />
+          <Property Name="ProfileID" Type="Int32" Nullable="false" />
+          <Property Name="SubjectID" Type="Int32" Nullable="false" />
+          <Property Name="SubjectTypeID" Type="Byte" Nullable="false" />
+          <Property Name="HoursStudied" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SchoolClass" Relationship="Self.FK_HoursStudedSubject_Classes" FromRole="HoursStudedSubject" ToRole="SchoolClasses" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK_HoursStudedSubject_Profiles" FromRole="HoursStudedSubject" ToRole="Profiles" />
+          <NavigationProperty Name="Subject" Relationship="Self.FK_HoursStudedSubject_Subjects" FromRole="HoursStudedSubject" ToRole="Subjects" />
+          <NavigationProperty Name="SubjectType" Relationship="Self.FK_HoursStudedSubject_SubjectTypes" FromRole="HoursStudedSubject" ToRole="SubjectTypes" />
+        </EntityType>
+        <EntityType Name="Mark">
+          <Key>
+            <PropertyRef Name="StudentID" />
+            <PropertyRef Name="SubjectID" />
+            <PropertyRef Name="SubjectTypeID" />
+            <PropertyRef Name="TermID" />
+            <PropertyRef Name="ClassID" />
+          </Key>
+          <Property Name="StudentID" Type="Int64" Nullable="false" />
+          <Property Name="SubjectID" Type="Int32" Nullable="false" />
+          <Property Name="SubjectTypeID" Type="Byte" Nullable="false" />
+          <Property Name="TermID" Type="Byte" Nullable="false" />
+          <Property Name="ClassID" Type="Int32" Nullable="false" />
+          <Property Name="Mark1" Type="Byte" />
+          <NavigationProperty Name="SchoolClass" Relationship="Self.FK_Marks_Classes" FromRole="Marks" ToRole="SchoolClasses" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_Marks_Students" FromRole="Marks" ToRole="Students" />
+          <NavigationProperty Name="Term" Relationship="Self.FK_Marks_Terms" FromRole="Marks" ToRole="Terms" />
+        </EntityType>
+        <EntityType Name="Picture">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="Int64" Nullable="false" />
+          <Property Name="Picture1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_Pictures_Students" FromRole="Pictures" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="Principal">
+          <Key>
+            <PropertyRef Name="PrincipalID" />
+          </Key>
+          <Property Name="PrincipalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SecondName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Profile">
+          <Key>
+            <PropertyRef Name="ProfileID" />
+          </Key>
+          <Property Name="ProfileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProfileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_Profiles" FromRole="Profiles" ToRole="HoursStudedSubject" />
+          <NavigationProperty Name="SchoolClasses" Relationship="Self.FK_Classes_Profiles" FromRole="Profiles" ToRole="SchoolClasses" />
+          <NavigationProperty Name="Students" Relationship="Self.FK_Students_Profiles" FromRole="Profiles" ToRole="Students" />
+          <NavigationProperty Name="Subjects" Relationship="Self.ProfilesSubjects" FromRole="Profiles" ToRole="Subjects" />
+        </EntityType>
+        <EntityType Name="SchoolClass">
+          <Key>
+            <PropertyRef Name="ClassID" />
+          </Key>
+          <Property Name="ClassID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassName" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="SchoolYearID" Type="Int32" />
+          <Property Name="ProfileID" Type="Int32" />
+          <Property Name="TeacherID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Absences" Relationship="Self.FK_Absences_Classes1" FromRole="SchoolClasses" ToRole="Absences" />
+          <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_Classes" FromRole="SchoolClasses" ToRole="HoursStudedSubject" />
+          <NavigationProperty Name="Marks" Relationship="Self.FK_Marks_Classes" FromRole="SchoolClasses" ToRole="Marks" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK_Classes_Profiles" FromRole="SchoolClasses" ToRole="Profiles" />
+          <NavigationProperty Name="SchoolYear" Relationship="Self.FK_Classes_SchoolYears" FromRole="SchoolClasses" ToRole="SchoolYears" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK_Classes_Teachers" FromRole="SchoolClasses" ToRole="Teachers" />
+          <NavigationProperty Name="StudentsSchoolYears" Relationship="Self.FK_StudentsSchoolYear_Classes" FromRole="SchoolClasses" ToRole="StudentsSchoolYear" />
+        </EntityType>
+        <EntityType Name="School">
+          <Key>
+            <PropertyRef Name="SchoolID" />
+          </Key>
+          <Property Name="SchoolID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SchoolName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SchoolYear">
+          <Key>
+            <PropertyRef Name="SchoolYearID" />
+          </Key>
+          <Property Name="SchoolYearID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SchoolYearName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="SchoolClasses" Relationship="Self.FK_Classes_SchoolYears" FromRole="SchoolYears" ToRole="SchoolClasses" />
+          <NavigationProperty Name="StudentsSchoolYears" Relationship="Self.FK_StudentsSchoolYear_SchoolYears" FromRole="SchoolYears" ToRole="StudentsSchoolYear" />
+        </EntityType>
+        <EntityType Name="Settlement">
+          <Key>
+            <PropertyRef Name="SettlementID" />
+          </Key>
+          <Property Name="SettlementID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SettlementName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ManicipalityID" Type="Int32" />
+          <Property Name="AreaID" Type="Int32" />
+          <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Settlements1" Relationship="Self.FK_Settlements_Settlements2" FromRole="Settlements" ToRole="Settlements1" />
+          <NavigationProperty Name="Settlement1" Relationship="Self.FK_Settlements_Settlements2" FromRole="Settlements1" ToRole="Settlements" />
+          <NavigationProperty Name="Settlements11" Relationship="Self.FK_Settlements_Settlements3" FromRole="Settlements" ToRole="Settlements1" />
+          <NavigationProperty Name="Settlement2" Relationship="Self.FK_Settlements_Settlements3" FromRole="Settlements1" ToRole="Settlements" />
+          <NavigationProperty Name="Students" Relationship="Self.FK_Students_Settlements" FromRole="Settlements" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SecondName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PersonalNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="PersonalCardNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="SettlementID" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EnrollmentYear" Type="Int32" Nullable="false" />
+          <Property Name="ProfileID" Type="Int32" Nullable="false" />
+          <Property Name="MarkFromDiplom" Type="Single" />
+          <NavigationProperty Name="Absences" Relationship="Self.FK_Absences_Students" FromRole="Students" ToRole="Absences" />
+          <NavigationProperty Name="Diploms" Relationship="Self.FK_Diploms_Students" FromRole="Students" ToRole="Diploms" />
+          <NavigationProperty Name="Marks" Relationship="Self.FK_Marks_Students" FromRole="Students" ToRole="Marks" />
+          <NavigationProperty Name="Picture" Relationship="Self.FK_Pictures_Students" FromRole="Students" ToRole="Pictures" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK_Students_Profiles" FromRole="Students" ToRole="Profiles" />
+          <NavigationProperty Name="Settlement" Relationship="Self.FK_Students_Settlements" FromRole="Students" ToRole="Settlements" />
+          <NavigationProperty Name="StudentsSchoolYears" Relationship="Self.FK_StudentsSchoolYear_Students" FromRole="Students" ToRole="StudentsSchoolYear" />
+        </EntityType>
+        <EntityType Name="StudentsSchoolYear">
+          <Key>
+            <PropertyRef Name="StudentID" />
+            <PropertyRef Name="SchoolYearID" />
+            <PropertyRef Name="ClassID" />
+          </Key>
+          <Property Name="StudentID" Type="Int64" Nullable="false" />
+          <Property Name="SchoolYearID" Type="Int32" Nullable="false" />
+          <Property Name="ClassID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SchoolClass" Relationship="Self.FK_StudentsSchoolYear_Classes" FromRole="StudentsSchoolYear" ToRole="SchoolClasses" />
+          <NavigationProperty Name="SchoolYear" Relationship="Self.FK_StudentsSchoolYear_SchoolYears" FromRole="StudentsSchoolYear" ToRole="SchoolYears" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_StudentsSchoolYear_Students" FromRole="StudentsSchoolYear" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="SubjectID" />
+          </Key>
+          <Property Name="SubjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Diploms" Relationship="Self.FK_Diploms_Subjects" FromRole="Subjects" ToRole="Diploms" />
+          <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_Subjects" FromRole="Subjects" ToRole="HoursStudedSubject" />
+          <NavigationProperty Name="Profiles" Relationship="Self.ProfilesSubjects" FromRole="Subjects" ToRole="Profiles" />
+        </EntityType>
+        <EntityType Name="SubjectType">
+          <Key>
+            <PropertyRef Name="SubjectTypeID" />
+          </Key>
+          <Property Name="SubjectTypeID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubjectType1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Diploms" Relationship="Self.FK_Diploms_SubjectTypes" FromRole="SubjectTypes" ToRole="Diploms" />
+          <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_SubjectTypes" FromRole="SubjectTypes" ToRole="HoursStudedSubject" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="TeacherID" />
+          </Key>
+          <Property Name="TeacherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SchoolClasses" Relationship="Self.FK_Classes_Teachers" FromRole="Teachers" ToRole="SchoolClasses" />
+        </EntityType>
+        <EntityType Name="Term">
+          <Key>
+            <PropertyRef Name="TermID" />
+          </Key>
+          <Property Name="TermID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TermName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Absences" Relationship="Self.FK_Absences_Terms" FromRole="Terms" ToRole="Absences" />
+          <NavigationProperty Name="Marks" Relationship="Self.FK_Marks_Terms" FromRole="Terms" ToRole="Marks" />
+        </EntityType>
+        <EntityType Name="TypeAbsence">
+          <Key>
+            <PropertyRef Name="TypeAbsenceID" />
+          </Key>
+          <Property Name="TypeAbsenceID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeAbsenceName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Absences" Relationship="Self.FK_Absences_TypeAbsences" FromRole="TypeAbsences" ToRole="Absences" />
+        </EntityType>
+        <Association Name="FK_Absences_Classes1">
+          <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="1" />
+          <End Role="Absences" Type="Self.Absence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolClasses">
+              <PropertyRef Name="ClassID" />
+            </Principal>
+            <Dependent Role="Absences">
+              <PropertyRef Name="ClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Absences_Students">
+          <End Role="Students" Type="Self.Student" Multiplicity="1" />
+          <End Role="Absences" Type="Self.Absence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Absences">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Absences_Terms">
+          <End Role="Terms" Type="Self.Term" Multiplicity="1" />
+          <End Role="Absences" Type="Self.Absence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Terms">
+              <PropertyRef Name="TermID" />
+            </Principal>
+            <Dependent Role="Absences">
+              <PropertyRef Name="TermID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Absences_TypeAbsences">
+          <End Role="TypeAbsences" Type="Self.TypeAbsence" Multiplicity="1" />
+          <End Role="Absences" Type="Self.Absence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeAbsences">
+              <PropertyRef Name="TypeAbsenceID" />
+            </Principal>
+            <Dependent Role="Absences">
+              <PropertyRef Name="TypeAbsenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diploms_Students">
+          <End Role="Students" Type="Self.Student" Multiplicity="1" />
+          <End Role="Diploms" Type="Self.Diplom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Diploms">
+              <PropertyRef Name="SudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diploms_Subjects">
+          <End Role="Subjects" Type="Self.Subject" Multiplicity="1" />
+          <End Role="Diploms" Type="Self.Diplom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="Diploms">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diploms_SubjectTypes">
+          <End Role="SubjectTypes" Type="Self.SubjectType" Multiplicity="1" />
+          <End Role="Diploms" Type="Self.Diplom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubjectTypes">
+              <PropertyRef Name="SubjectTypeID" />
+            </Principal>
+            <Dependent Role="Diploms">
+              <PropertyRef Name="SujectTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoursStudedSubject_Classes">
+          <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="1" />
+          <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolClasses">
+              <PropertyRef Name="ClassID" />
+            </Principal>
+            <Dependent Role="HoursStudedSubject">
+              <PropertyRef Name="ClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoursStudedSubject_Profiles">
+          <End Role="Profiles" Type="Self.Profile" Multiplicity="1" />
+          <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ProfileID" />
+            </Principal>
+            <Dependent Role="HoursStudedSubject">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoursStudedSubject_Subjects">
+          <End Role="Subjects" Type="Self.Subject" Multiplicity="1" />
+          <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="HoursStudedSubject">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoursStudedSubject_SubjectTypes">
+          <End Role="SubjectTypes" Type="Self.SubjectType" Multiplicity="1" />
+          <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubjectTypes">
+              <PropertyRef Name="SubjectTypeID" />
+            </Principal>
+            <Dependent Role="HoursStudedSubject">
+              <PropertyRef Name="SubjectTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Marks_Classes">
+          <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="1" />
+          <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolClasses">
+              <PropertyRef Name="ClassID" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="ClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Marks_Students">
+          <End Role="Students" Type="Self.Student" Multiplicity="1" />
+          <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Marks_Terms">
+          <End Role="Terms" Type="Self.Term" Multiplicity="1" />
+          <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Terms">
+              <PropertyRef Name="TermID" />
+            </Principal>
+            <Dependent Role="Marks">
+              <PropertyRef Name="TermID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pictures_Students">
+          <End Role="Students" Type="Self.Student" Multiplicity="1" />
+          <End Role="Pictures" Type="Self.Picture" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="Pictures">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classes_Profiles">
+          <End Role="Profiles" Type="Self.Profile" Multiplicity="0..1" />
+          <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ProfileID" />
+            </Principal>
+            <Dependent Role="SchoolClasses">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Profiles">
+          <End Role="Profiles" Type="Self.Profile" Multiplicity="1" />
+          <End Role="Students" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ProfileID" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classes_SchoolYears">
+          <End Role="SchoolYears" Type="Self.SchoolYear" Multiplicity="0..1" />
+          <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolYears">
+              <PropertyRef Name="SchoolYearID" />
+            </Principal>
+            <Dependent Role="SchoolClasses">
+              <PropertyRef Name="SchoolYearID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Classes_Teachers">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
+          <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherID" />
+            </Principal>
+            <Dependent Role="SchoolClasses">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsSchoolYear_Classes">
+          <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="1" />
+          <End Role="StudentsSchoolYear" Type="Self.StudentsSchoolYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolClasses">
+              <PropertyRef Name="ClassID" />
+            </Principal>
+            <Dependent Role="StudentsSchoolYear">
+              <PropertyRef Name="ClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsSchoolYear_SchoolYears">
+          <End Role="SchoolYears" Type="Self.SchoolYear" Multiplicity="1" />
+          <End Role="StudentsSchoolYear" Type="Self.StudentsSchoolYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SchoolYears">
+              <PropertyRef Name="SchoolYearID" />
+            </Principal>
+            <Dependent Role="StudentsSchoolYear">
+              <PropertyRef Name="SchoolYearID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settlements_Settlements2">
+          <End Role="Settlements" Type="Self.Settlement" Multiplicity="0..1" />
+          <End Role="Settlements1" Type="Self.Settlement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Settlements">
+              <PropertyRef Name="SettlementID" />
+            </Principal>
+            <Dependent Role="Settlements1">
+              <PropertyRef Name="ManicipalityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settlements_Settlements3">
+          <End Role="Settlements" Type="Self.Settlement" Multiplicity="0..1" />
+          <End Role="Settlements1" Type="Self.Settlement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Settlements">
+              <PropertyRef Name="SettlementID" />
+            </Principal>
+            <Dependent Role="Settlements1">
+              <PropertyRef Name="AreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Settlements">
+          <End Role="Settlements" Type="Self.Settlement" Multiplicity="1" />
+          <End Role="Students" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Settlements">
+              <PropertyRef Name="SettlementID" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="SettlementID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsSchoolYear_Students">
+          <End Role="Students" Type="Self.Student" Multiplicity="1" />
+          <End Role="StudentsSchoolYear" Type="Self.StudentsSchoolYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="StudentsSchoolYear">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProfilesSubjects">
+          <End Role="Profiles" Type="Self.Profile" Multiplicity="*" />
+          <End Role="Subjects" Type="Self.Subject" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="PersonalSchoolCardEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Absences" EntityType="Self.Absence" />
+          <EntitySet Name="Diploms" EntityType="Self.Diplom" />
+          <EntitySet Name="HoursStudedSubjects" EntityType="Self.HoursStudedSubject" />
+          <EntitySet Name="Marks" EntityType="Self.Mark" />
+          <EntitySet Name="Pictures" EntityType="Self.Picture" />
+          <EntitySet Name="Principals" EntityType="Self.Principal" />
+          <EntitySet Name="Profiles" EntityType="Self.Profile" />
+          <EntitySet Name="SchoolClasses" EntityType="Self.SchoolClass" />
+          <EntitySet Name="Schools" EntityType="Self.School" />
+          <EntitySet Name="SchoolYears" EntityType="Self.SchoolYear" />
+          <EntitySet Name="Settlements" EntityType="Self.Settlement" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <EntitySet Name="StudentsSchoolYears" EntityType="Self.StudentsSchoolYear" />
+          <EntitySet Name="Subjects" EntityType="Self.Subject" />
+          <EntitySet Name="SubjectTypes" EntityType="Self.SubjectType" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Teachers" EntityType="Self.Teacher" />
+          <EntitySet Name="Terms" EntityType="Self.Term" />
+          <EntitySet Name="TypeAbsences" EntityType="Self.TypeAbsence" />
+          <AssociationSet Name="FK_Absences_Classes1" Association="Self.FK_Absences_Classes1">
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+            <End Role="Absences" EntitySet="Absences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Absences_Students" Association="Self.FK_Absences_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Absences" EntitySet="Absences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Absences_Terms" Association="Self.FK_Absences_Terms">
+            <End Role="Terms" EntitySet="Terms" />
+            <End Role="Absences" EntitySet="Absences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Absences_TypeAbsences" Association="Self.FK_Absences_TypeAbsences">
+            <End Role="TypeAbsences" EntitySet="TypeAbsences" />
+            <End Role="Absences" EntitySet="Absences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diploms_Students" Association="Self.FK_Diploms_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Diploms" EntitySet="Diploms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diploms_Subjects" Association="Self.FK_Diploms_Subjects">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="Diploms" EntitySet="Diploms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diploms_SubjectTypes" Association="Self.FK_Diploms_SubjectTypes">
+            <End Role="SubjectTypes" EntitySet="SubjectTypes" />
+            <End Role="Diploms" EntitySet="Diploms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoursStudedSubject_Classes" Association="Self.FK_HoursStudedSubject_Classes">
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+            <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoursStudedSubject_Profiles" Association="Self.FK_HoursStudedSubject_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoursStudedSubject_Subjects" Association="Self.FK_HoursStudedSubject_Subjects">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoursStudedSubject_SubjectTypes" Association="Self.FK_HoursStudedSubject_SubjectTypes">
+            <End Role="SubjectTypes" EntitySet="SubjectTypes" />
+            <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Marks_Classes" Association="Self.FK_Marks_Classes">
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Marks_Students" Association="Self.FK_Marks_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Marks_Terms" Association="Self.FK_Marks_Terms">
+            <End Role="Terms" EntitySet="Terms" />
+            <End Role="Marks" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pictures_Students" Association="Self.FK_Pictures_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="Pictures" EntitySet="Pictures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classes_Profiles" Association="Self.FK_Classes_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Profiles" Association="Self.FK_Students_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classes_SchoolYears" Association="Self.FK_Classes_SchoolYears">
+            <End Role="SchoolYears" EntitySet="SchoolYears" />
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Classes_Teachers" Association="Self.FK_Classes_Teachers">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsSchoolYear_Classes" Association="Self.FK_StudentsSchoolYear_Classes">
+            <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+            <End Role="StudentsSchoolYear" EntitySet="StudentsSchoolYears" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsSchoolYear_SchoolYears" Association="Self.FK_StudentsSchoolYear_SchoolYears">
+            <End Role="SchoolYears" EntitySet="SchoolYears" />
+            <End Role="StudentsSchoolYear" EntitySet="StudentsSchoolYears" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settlements_Settlements2" Association="Self.FK_Settlements_Settlements2">
+            <End Role="Settlements" EntitySet="Settlements" />
+            <End Role="Settlements1" EntitySet="Settlements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settlements_Settlements3" Association="Self.FK_Settlements_Settlements3">
+            <End Role="Settlements" EntitySet="Settlements" />
+            <End Role="Settlements1" EntitySet="Settlements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Settlements" Association="Self.FK_Students_Settlements">
+            <End Role="Settlements" EntitySet="Settlements" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsSchoolYear_Students" Association="Self.FK_StudentsSchoolYear_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="StudentsSchoolYear" EntitySet="StudentsSchoolYears" />
+          </AssociationSet>
+          <AssociationSet Name="ProfilesSubjects" Association="Self.ProfilesSubjects">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="Subjects" EntitySet="Subjects" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PersonalSchoolCardModelStoreContainer" CdmEntityContainer="PersonalSchoolCardEntities">
+          <EntitySetMapping Name="Absences">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Absence">
+              <MappingFragment StoreEntitySet="Absences">
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+                <ScalarProperty Name="TermID" ColumnName="TermID" />
+                <ScalarProperty Name="TypeAbsenceID" ColumnName="TypeAbsenceID" />
+                <ScalarProperty Name="AbsencesNumber" ColumnName="AbsencesNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diploms">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Diplom">
+              <MappingFragment StoreEntitySet="Diploms">
+                <ScalarProperty Name="SudentID" ColumnName="SudentID" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="SujectTypeID" ColumnName="SujectTypeID" />
+                <ScalarProperty Name="Mark" ColumnName="Mark" />
+                <ScalarProperty Name="HoursStudied" ColumnName="HoursStudied" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoursStudedSubjects">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.HoursStudedSubject">
+              <MappingFragment StoreEntitySet="HoursStudedSubject">
+                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
+                <ScalarProperty Name="HoursStudied" ColumnName="HoursStudied" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Marks">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Mark">
+              <MappingFragment StoreEntitySet="Marks">
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
+                <ScalarProperty Name="TermID" ColumnName="TermID" />
+                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+                <ScalarProperty Name="Mark1" ColumnName="Mark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pictures">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Picture">
+              <MappingFragment StoreEntitySet="Pictures">
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="Picture1" ColumnName="Picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Principals">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Principal">
+              <MappingFragment StoreEntitySet="Principals">
+                <ScalarProperty Name="PrincipalID" ColumnName="PrincipalID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profiles">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Profile">
+              <MappingFragment StoreEntitySet="Profiles">
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="ProfileName" ColumnName="ProfileName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SchoolClasses">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.SchoolClass">
+              <MappingFragment StoreEntitySet="SchoolClasses">
+                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="SchoolYearID" ColumnName="SchoolYearID" />
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schools">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.School">
+              <MappingFragment StoreEntitySet="Schools">
+                <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+                <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SchoolYears">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.SchoolYear">
+              <MappingFragment StoreEntitySet="SchoolYears">
+                <ScalarProperty Name="SchoolYearID" ColumnName="SchoolYearID" />
+                <ScalarProperty Name="SchoolYearName" ColumnName="SchoolYear" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settlements">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Settlement">
+              <MappingFragment StoreEntitySet="Settlements">
+                <ScalarProperty Name="SettlementID" ColumnName="SettlementID" />
+                <ScalarProperty Name="SettlementName" ColumnName="SettlementName" />
+                <ScalarProperty Name="ManicipalityID" ColumnName="ManicipalityID" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="District" ColumnName="District" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Student">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="PersonalNumber" ColumnName="PersonalNumber" />
+                <ScalarProperty Name="PersonalCardNumber" ColumnName="PersonalCardNumber" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="SettlementID" ColumnName="SettlementID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="EnrollmentYear" ColumnName="EnrollmentYear" />
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="MarkFromDiplom" ColumnName="MarkFromDiplom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentsSchoolYears">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.StudentsSchoolYear">
+              <MappingFragment StoreEntitySet="StudentsSchoolYear">
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="SchoolYearID" ColumnName="SchoolYearID" />
+                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Subject">
+              <MappingFragment StoreEntitySet="Subjects">
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubjectTypes">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.SubjectType">
+              <MappingFragment StoreEntitySet="SubjectTypes">
+                <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
+                <ScalarProperty Name="SubjectType1" ColumnName="SubjectType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teachers">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Teacher">
+              <MappingFragment StoreEntitySet="Teachers">
+                <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Terms">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.Term">
+              <MappingFragment StoreEntitySet="Terms">
+                <ScalarProperty Name="TermID" ColumnName="TermID" />
+                <ScalarProperty Name="TermName" ColumnName="TermName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeAbsences">
+            <EntityTypeMapping TypeName="PersonalSchoolCardModel.TypeAbsence">
+              <MappingFragment StoreEntitySet="TypeAbsences">
+                <ScalarProperty Name="TypeAbsenceID" ColumnName="TypeAbsenceID" />
+                <ScalarProperty Name="TypeAbsenceName" ColumnName="TypeAbsence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="ProfilesSubjects" TypeName="PersonalSchoolCardModel.ProfilesSubjects" StoreEntitySet="ProfilesSubjects">
+            <EndProperty Name="Profiles">
+              <ScalarProperty Name="ProfileID" ColumnName="ProfilesID" />
+            </EndProperty>
+            <EndProperty Name="Subjects">
+              <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

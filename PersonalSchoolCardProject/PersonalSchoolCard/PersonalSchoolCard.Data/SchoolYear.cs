@@ -16,14 +16,14 @@ namespace PersonalSchoolCard.Data
     {
         public SchoolYear()
         {
-            this.Classes = new HashSet<Class>();
+            this.SchoolClasses = new HashSet<SchoolClass>();
             this.StudentsSchoolYears = new HashSet<StudentsSchoolYear>();
         }
     
         public int SchoolYearID { get; set; }
-        public string SchoolYear1 { get; set; }
+        public string SchoolYearName { get; set; }
     
-        public virtual ICollection<Class> Classes { get; set; }
+        public virtual ICollection<SchoolClass> SchoolClasses { get; set; }
         public virtual ICollection<StudentsSchoolYear> StudentsSchoolYears { get; set; }
     }
 }
