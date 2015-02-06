@@ -39,9 +39,8 @@
             this.buttonAddSubjectsAndTypes = new System.Windows.Forms.Button();
             this.buttonCreateProfile = new System.Windows.Forms.Button();
             this.panelParent = new System.Windows.Forms.Panel();
-            this.panelStartPanel = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panelSchoolInfo = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.comboBoxSchoolCity = new System.Windows.Forms.ComboBox();
             this.buttonUpdateInfo = new System.Windows.Forms.Button();
@@ -140,13 +139,13 @@
             this.Teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelStartPanel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panelParent.SuspendLayout();
-            this.panelStartPanel.SuspendLayout();
             this.panelSchoolInfo.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -170,6 +169,7 @@
             this.ManageSchoolClassesTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowChanges)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowCurrentClasses)).BeginInit();
+            this.panelStartPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -309,26 +309,6 @@
             this.panelParent.Size = new System.Drawing.Size(505, 517);
             this.panelParent.TabIndex = 1;
             // 
-            // panelStartPanel
-            // 
-            this.panelStartPanel.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panelStartPanel.Controls.Add(this.label3);
-            this.panelStartPanel.Location = new System.Drawing.Point(12, 114);
-            this.panelStartPanel.Name = "panelStartPanel";
-            this.panelStartPanel.Size = new System.Drawing.Size(484, 13);
-            this.panelStartPanel.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.CausesValidation = false;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(166, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 26);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Добре дошли";
-            // 
             // panelSchoolInfo
             // 
             this.panelSchoolInfo.BackColor = System.Drawing.SystemColors.Control;
@@ -345,6 +325,15 @@
             this.panelSchoolInfo.Size = new System.Drawing.Size(469, 537);
             this.panelSchoolInfo.TabIndex = 9;
             this.panelSchoolInfo.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(250, 448);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(171, 35);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Добави нов директор";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -439,10 +428,10 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(90, 24);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(294, 33);
+            this.label14.Size = new System.Drawing.Size(361, 31);
             this.label14.TabIndex = 6;
             this.label14.Text = "Информация за училището";
             // 
@@ -507,10 +496,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(108, 23);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(286, 33);
+            this.label16.Size = new System.Drawing.Size(364, 31);
             this.label16.TabIndex = 23;
             this.label16.Text = "Добавяне на учебни години";
             // 
@@ -583,10 +572,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(154, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 33);
+            this.label2.Size = new System.Drawing.Size(283, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Добавяне на учители\r\n";
             // 
@@ -629,10 +618,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(93, 23);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(304, 33);
+            this.label5.Size = new System.Drawing.Size(360, 31);
             this.label5.TabIndex = 2;
             this.label5.Text = "Добавяне нa тип отсъствия";
             // 
@@ -740,10 +729,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(139, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 33);
+            this.label1.Size = new System.Drawing.Size(305, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Добавяне на предмети";
             // 
@@ -809,10 +798,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.Location = new System.Drawing.Point(77, 246);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(346, 18);
+            this.label12.Size = new System.Drawing.Size(413, 20);
             this.label12.TabIndex = 10;
             this.label12.Text = "Пример: Информатика, Математика, Английски език";
             // 
@@ -829,10 +818,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(113, 21);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(220, 33);
+            this.label10.Size = new System.Drawing.Size(280, 31);
             this.label10.TabIndex = 5;
             this.label10.Text = "Добавяне на профил";
             // 
@@ -939,10 +928,10 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(106, 25);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(300, 33);
+            this.label19.Size = new System.Drawing.Size(384, 31);
             this.label19.TabIndex = 24;
             this.label19.Text = "Добавяне на населени места";
             // 
@@ -994,10 +983,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(130, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(267, 33);
+            this.label4.Size = new System.Drawing.Size(338, 31);
             this.label4.TabIndex = 3;
             this.label4.Text = "Управление на сроковете";
             // 
@@ -1027,10 +1016,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(95, 22);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(244, 33);
+            this.label17.Size = new System.Drawing.Size(311, 31);
             this.label17.TabIndex = 22;
             this.label17.Text = "Добавяне на осми клас";
             // 
@@ -1265,21 +1254,32 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(107, 4);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(266, 33);
+            this.label6.Size = new System.Drawing.Size(338, 31);
             this.label6.TabIndex = 19;
             this.label6.Text = "Управление на класовете";
             // 
-            // button1
+            // panelStartPanel
             // 
-            this.button1.Location = new System.Drawing.Point(250, 448);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 35);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Добави нов директор";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panelStartPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panelStartPanel.Controls.Add(this.label3);
+            this.panelStartPanel.Location = new System.Drawing.Point(12, 114);
+            this.panelStartPanel.Name = "panelStartPanel";
+            this.panelStartPanel.Size = new System.Drawing.Size(484, 13);
+            this.panelStartPanel.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.CausesValidation = false;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(166, 199);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 26);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Добре дошли";
             // 
             // AdminForm
             // 
@@ -1289,14 +1289,13 @@
             this.Controls.Add(this.splitContainer1);
             this.MaximizeBox = false;
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panelParent.ResumeLayout(false);
-            this.panelStartPanel.ResumeLayout(false);
-            this.panelStartPanel.PerformLayout();
             this.panelSchoolInfo.ResumeLayout(false);
             this.panelSchoolInfo.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1331,6 +1330,8 @@
             this.ManageSchoolClassesTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowChanges)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowCurrentClasses)).EndInit();
+            this.panelStartPanel.ResumeLayout(false);
+            this.panelStartPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }

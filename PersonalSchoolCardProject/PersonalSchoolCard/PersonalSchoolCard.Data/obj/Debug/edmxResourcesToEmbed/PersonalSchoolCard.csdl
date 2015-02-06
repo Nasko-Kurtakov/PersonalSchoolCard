@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="PersonalSchoolCardModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="PersonalSchoolCardModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Absence">
     <Key>
       <PropertyRef Name="StudentID" />
@@ -199,16 +199,6 @@
     <Property Name="SubjectType1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Diploms" Relationship="Self.FK_Diploms_SubjectTypes" FromRole="SubjectTypes" ToRole="Diploms" />
     <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_SubjectTypes" FromRole="SubjectTypes" ToRole="HoursStudedSubject" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Teacher">
     <Key>
@@ -558,7 +548,6 @@
     <EntitySet Name="StudentsSchoolYears" EntityType="Self.StudentsSchoolYear" />
     <EntitySet Name="Subjects" EntityType="Self.Subject" />
     <EntitySet Name="SubjectTypes" EntityType="Self.SubjectType" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="Teachers" EntityType="Self.Teacher" />
     <EntitySet Name="Terms" EntityType="Self.Term" />
     <EntitySet Name="TypeAbsences" EntityType="Self.TypeAbsence" />

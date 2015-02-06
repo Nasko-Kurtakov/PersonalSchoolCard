@@ -32,3 +32,23 @@ D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\D
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.AdminForm.resources
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\PersonalSchoolCard.Data.dll
 D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\PersonalSchoolCard.Data.pdb
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\FormApplication1.exe.config
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\FormApplication1.exe
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\FormApplication1.pdb
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\FormApplication1.exe
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\FormApplication1.pdb
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.dll
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\PersonalSchoolCard.Data.dll
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\PersonalSchoolCard.Data.pdb
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.xml
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalSchoolCard.csprojResolveAssemblyReference.cache
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.AdminForm.resources
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Menu.resources
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.PersonalRecord.resources
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Properties.Resources.resources
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Success.resources
+C:\Users\Alex Goranov\Documents\GitHub\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache
