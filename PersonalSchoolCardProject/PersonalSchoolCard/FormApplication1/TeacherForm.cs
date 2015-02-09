@@ -20,20 +20,39 @@ namespace PersonalShcoolCard
             InitializeComponent();
 
             this.teacherID = teacherID;
+
+            panelEditStudentsInfo.Parent = panelParent;
+            panelEditStudentsInfo.Dock = DockStyle.Fill;
         }
 
         private void TeacherForm_Load(object sender, EventArgs e)
         {
-            string TeacherName = Classes.Queries.GetTeacherName(teacherID);
-            label1.Text = "Здравейте" + " , " + TeacherName;
-            panel1Parent.BringToFront();
-            panelSlideOne.Visible = false;
+            labelHi.Text += Classes.TeacherFormClasses.OnLogin.GetTeacherName(teacherID)+ ".";
+            panelParent.BringToFront();
             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void TeacherForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonEditStudentsInfo_Click(object sender, EventArgs e)
+        {
+            dataGridViewStudents.AutoGenerateColumns = false;
+            dataGridViewStudents.DataSource = Classes.AddStudents.GetStudentByTeacher(teacherID);
+            panelEditStudentsInfo.Visible = true;
+            panelEditStudentsInfo.BringToFront();
+        }
+
+        private void TeacherForm_Resize(object sender, EventArgs e)
+        {
+            panelEditStudentsInfo.Dock = DockStyle.Fill;
+            panelEditStudentsInfo.Refresh();
         }
     }
 }

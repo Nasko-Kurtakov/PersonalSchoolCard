@@ -7,130 +7,99 @@
     using System.Windows.Forms;
     public class Settlements
     {
-        public static void AddSettlement(TextBox cityName, ComboBox manicipality, ComboBox area, bool isManicipality = false, bool isArea = false)
+
+        public static void ModifySettlement(int settlementID, int manicipalityID, int areaID)
         {
             using (var context = new PersonalSchoolCardEntities())
             {
-                try
+                var settlement = context.Settlements
+                   .Where(st => st.SettlementID == settlementID).FirstOrDefault();
+                settlement.ManicipalityID = manicipalityID;
+                settlement.AreaID = areaID;
+                context.SaveChanges();
+            }
+        }
+        public static int GetSettlementID(string settlementName)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var settlement = context.Settlements
+                    .Where(st => st.SettlementName == settlementName).FirstOrDefault();
+                return settlement.SettlementID;
+
+            }
+        }
+        public static int CreateSettlement(string newSettlementName)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var settlement = new Settlement
                 {
-                    if (cityName.Text != "" && cityName.Text != null && cityName.Text != " ")
+                    SettlementName = newSettlementName,
+
+                };
+                context.Settlements.Add(settlement);
+                context.SaveChanges();
+                return settlement.SettlementID;
+            }
+
+        }
+        public static void AddSettlement(string cityName, int manicipalityID, int areaID, bool isManicipality = false, bool isArea = false)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+
+                if (cityName != "" && cityName != null && cityName != " ")
+                {
+                    if (isManicipality && isArea)
                     {
-                        if (isManicipality && isArea)
-                        {
-                            var newSettlement = new Settlement();
-                            newSettlement.SettlementName = cityName.Text;
-                            context.Settlements.Add(newSettlement);
-                            context.SaveChanges();
+                        var settlementID = CreateSettlement(cityName);
 
-                            var newSettlementID = context.Settlements
-                                                  .Where(settlement => settlement.SettlementName == cityName.Text)
-                                                  .Select(settlement => settlement.SettlementID)
-                                                  .First();
-
-                            newSettlement.AreaID = newSettlementID;
-                            newSettlement.ManicipalityID = newSettlementID;
-                            context.SaveChanges();
-                        }
-                        if (isManicipality==true && isArea==false )
-                        {
-                            var newSettlement = new Settlement();
-                            newSettlement.SettlementName = cityName.Text;
-
-                            context.Settlements.Add(newSettlement);
-                            context.SaveChanges();
-
-                            var newSettlementID = context.Settlements
-                                                  .Where(settlement => settlement.SettlementName == cityName.Text)
-                                                  .Select(settlement => settlement.SettlementID)
-                                                  .First();
-                            var areaID = context.Settlements
-                                         .Where(settlement => settlement.SettlementName == area.SelectedItem.ToString())
-                                         .Select(settlement => settlement.SettlementID)
-                                         .First();
-
-                            newSettlement.AreaID = areaID;
-                            newSettlement.ManicipalityID = newSettlement.SettlementID;
-                            context.SaveChanges();
-                        }
-
-                        if(!isManicipality && !isArea)
-                        {
-                            var newSettlement = new Settlement();
-                            newSettlement.SettlementName = cityName.Text;
-
-                            context.Settlements.Add(newSettlement);
-                            context.SaveChanges();
-
-                            var areaID = context.Settlements
-                                         .Where(settlement => settlement.SettlementName == area.SelectedItem)
-                                         .Select(settlement => settlement.SettlementID)
-                                         .First();
-
-                            var manicipalityID = context.Settlements
-                                               .Where(settlement => settlement.SettlementName == manicipality.SelectedItem)
-                                               .Select(settlement => settlement.SettlementID)
-                                               .First();
-
-                            newSettlement.AreaID = areaID;
-                            newSettlement.ManicipalityID = manicipalityID;
-                            context.SaveChanges();
-                        }
+                        ModifySettlement(settlementID, settlementID, settlementID);
                     }
-                    else
+                    if (isManicipality == true && isArea == false)
                     {
-                        throw new Exception("Грашни входни данни.");
+                        var settlementID = CreateSettlement(cityName);
+
+                        ModifySettlement(settlementID, settlementID, areaID);
+                    }
+
+                    if (!isManicipality && !isArea)
+                    {
+                        var settlementID = CreateSettlement(cityName);
+
+                        ModifySettlement(settlementID, manicipalityID, areaID);
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
             }
         }
 
-        public static List<string> GetAreas()
+        public static List<Settlement> GetAreas()
         {
             using (var context = new PersonalSchoolCardEntities())
             {
-                try
-                {
-                    var areas = context.Settlements
-                                .Where(settlement => settlement.SettlementID == settlement.AreaID)
-                                .Select(settlement => settlement.SettlementName)
-                                .ToList();
-                    return areas;
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    return null;
-                }
+
+                var areas = context.Settlements
+                            .Where(settlement => settlement.SettlementID == settlement.AreaID)
+                            .ToList();
+                return areas;
+
             }
         }
-
-        public static List<string> GetMinicipalities()
+        public static List<Settlement> GetMinicipalities()
         {
             using (var context = new PersonalSchoolCardEntities())
             {
-                try
-                {
-                    var minicipalities = context.Settlements
-                                .Where(settlement => settlement.SettlementID == settlement.ManicipalityID)
-                                .Select(settlement => settlement.SettlementName)
-                                .ToList();
-                    return minicipalities;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    return null;
-                }
+
+                var minicipalities = context.Settlements
+                            .Where(settlement => settlement.SettlementID == settlement.ManicipalityID)
+                            .ToList();
+                return minicipalities;
             }
         }
-
         public static List<string> GetVillages()
         {
-            using(var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 try
                 {
@@ -139,7 +108,7 @@
                                     .ToList();
                     return cities;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                     return null;

@@ -111,5 +111,4 @@ C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoo
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.TeacherForm.resources
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.LoginForm.resources
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.TeacherForm.resources
-D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe.config

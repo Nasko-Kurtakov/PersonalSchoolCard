@@ -31,8 +31,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LoginButt = new System.Windows.Forms.Button();
-            this.PasswordBox = new PersonalShcoolCard.Classes.WaterMark();
-            this.UserNameBox = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxPassword = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxUserName = new PersonalShcoolCard.Classes.WaterMark();
             this.SuspendLayout();
             // 
             // label4
@@ -70,30 +70,30 @@
             this.LoginButt.UseVisualStyleBackColor = true;
             this.LoginButt.Click += new System.EventHandler(this.LoginButt_Click);
             // 
-            // PasswordBox
+            // textBoxPassword
             // 
-            this.PasswordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.PasswordBox.Location = new System.Drawing.Point(424, 352);
-            this.PasswordBox.Multiline = true;
-            this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.PasswordChar = '*';
-            this.PasswordBox.Size = new System.Drawing.Size(154, 28);
-            this.PasswordBox.TabIndex = 11;
-            this.PasswordBox.WaterMarkColor = System.Drawing.Color.Gray;
-            this.PasswordBox.WaterMarkText = "Въведете парола";
-            this.PasswordBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordBox_KeyPress);
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.textBoxPassword.Location = new System.Drawing.Point(424, 352);
+            this.textBoxPassword.Multiline = true;
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(154, 28);
+            this.textBoxPassword.TabIndex = 11;
+            this.textBoxPassword.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxPassword.WaterMarkText = "Въведете парола";
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordBox_KeyPress);
             // 
-            // UserNameBox
+            // textBoxUserName
             // 
-            this.UserNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.UserNameBox.Location = new System.Drawing.Point(388, 286);
-            this.UserNameBox.Multiline = true;
-            this.UserNameBox.Name = "UserNameBox";
-            this.UserNameBox.Size = new System.Drawing.Size(154, 28);
-            this.UserNameBox.TabIndex = 10;
-            this.UserNameBox.WaterMarkColor = System.Drawing.Color.Gray;
-            this.UserNameBox.WaterMarkText = "Въведете име";
-            this.UserNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UserNameBox_KeyPress);
+            this.textBoxUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.textBoxUserName.Location = new System.Drawing.Point(388, 286);
+            this.textBoxUserName.Multiline = true;
+            this.textBoxUserName.Name = "textBoxUserName";
+            this.textBoxUserName.Size = new System.Drawing.Size(154, 28);
+            this.textBoxUserName.TabIndex = 10;
+            this.textBoxUserName.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxUserName.WaterMarkText = "Въведете име";
+            this.textBoxUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UserNameBox_KeyPress);
             // 
             // LoginForm
             // 
@@ -101,14 +101,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.PasswordBox);
-            this.Controls.Add(this.UserNameBox);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textBoxUserName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LoginButt);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LoginForm_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,7 +121,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button LoginButt;
-        private Classes.WaterMark UserNameBox;
-        private Classes.WaterMark PasswordBox;
+        private Classes.WaterMark textBoxUserName;
+        private Classes.WaterMark textBoxPassword;
     }
 }

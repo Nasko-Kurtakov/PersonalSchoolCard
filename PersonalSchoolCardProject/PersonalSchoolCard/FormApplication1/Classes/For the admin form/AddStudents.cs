@@ -138,5 +138,17 @@
             }
 
         }
+
+        public static List<Student> GetStudentByTeacher(int teacherID)
+        {
+            using(var context = new PersonalSchoolCardEntities())
+            {
+                var studentsList = context.StudentsSchoolYears
+                                    .Where(student => student.SchoolClass.TeacherID == teacherID)
+                                    .Select(student =>student.Student )
+                                    .ToList();
+                return  studentsList;
+            }
+        }
     }
 }

@@ -41,6 +41,45 @@
             this.buttonAddSubjectsAndTypes = new System.Windows.Forms.Button();
             this.buttonCreateProfile = new System.Windows.Forms.Button();
             this.panelParent = new System.Windows.Forms.Panel();
+            this.panelSettlements = new System.Windows.Forms.Panel();
+            this.labelAddCityDone = new System.Windows.Forms.Label();
+            this.buttonAddNewSettlement = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.comboBoxChooseArea = new System.Windows.Forms.ComboBox();
+            this.comboBoxChooseManicipality = new System.Windows.Forms.ComboBox();
+            this.checkBoxIsArea = new System.Windows.Forms.CheckBox();
+            this.checkBoxIsManicipality = new System.Windows.Forms.CheckBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBoxCityName = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panelSchoolInfo = new System.Windows.Forms.Panel();
+            this.labelSchoolInfoChangesDone = new System.Windows.Forms.Label();
+            this.buttonChangeCity = new System.Windows.Forms.Button();
+            this.buttonChangeSchoolName = new System.Windows.Forms.Button();
+            this.buttonAddNewPrincipal = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.comboBoxSchoolCity = new System.Windows.Forms.ComboBox();
+            this.buttonUpdateInfo = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxPrincipalLastName = new System.Windows.Forms.TextBox();
+            this.textBoxPrincipalFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxPrincipalSecondName = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBoxSchoolName = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panelAddNewPrincipal = new System.Windows.Forms.Panel();
+            this.labelAddedPrincipalDone = new System.Windows.Forms.Label();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonAddPrincipal = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBoxNewPrincipalLastName = new System.Windows.Forms.TextBox();
+            this.textBoxNewPrincipalFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxNewPrincipalSecondName = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panelStartPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panelAddStudent = new System.Windows.Forms.Panel();
@@ -95,45 +134,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panelSchoolInfo = new System.Windows.Forms.Panel();
-            this.labelSchoolInfoChangesDone = new System.Windows.Forms.Label();
-            this.buttonChangeCity = new System.Windows.Forms.Button();
-            this.buttonChangeSchoolName = new System.Windows.Forms.Button();
-            this.buttonAddNewPrincipal = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.comboBoxSchoolCity = new System.Windows.Forms.ComboBox();
-            this.buttonUpdateInfo = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxPrincipalLastName = new System.Windows.Forms.TextBox();
-            this.textBoxPrincipalFirstName = new System.Windows.Forms.TextBox();
-            this.textBoxPrincipalSecondName = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBoxSchoolName = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panelAddNewPrincipal = new System.Windows.Forms.Panel();
-            this.labelAddedPrincipalDone = new System.Windows.Forms.Label();
-            this.buttonBack = new System.Windows.Forms.Button();
-            this.buttonAddPrincipal = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBoxNewPrincipalLastName = new System.Windows.Forms.TextBox();
-            this.textBoxNewPrincipalFirstName = new System.Windows.Forms.TextBox();
-            this.textBoxNewPrincipalSecondName = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panelSettlements = new System.Windows.Forms.Panel();
-            this.labelAddCityDone = new System.Windows.Forms.Label();
-            this.buttonAddNewSettlement = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.comboBoxChooseArea = new System.Windows.Forms.ComboBox();
-            this.comboBoxChooseManicipality = new System.Windows.Forms.ComboBox();
-            this.checkBoxIsArea = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsManicipality = new System.Windows.Forms.CheckBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBoxCityName = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.panelAddSubjects = new System.Windows.Forms.Panel();
             this.listBoxAlreadyAddedSubjects = new System.Windows.Forms.ListBox();
             this.listBoxAlreadyAddedSubjectTypes = new System.Windows.Forms.ListBox();
@@ -186,6 +186,11 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panelParent.SuspendLayout();
+            this.panelSettlements.SuspendLayout();
+            this.panelSchoolInfo.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panelAddNewPrincipal.SuspendLayout();
             this.panelStartPanel.SuspendLayout();
             this.panelAddStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddStudents)).BeginInit();
@@ -197,11 +202,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowCurrentClasses)).BeginInit();
             this.panelAddProfiles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddProfile)).BeginInit();
-            this.panelSchoolInfo.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panelAddNewPrincipal.SuspendLayout();
-            this.panelSettlements.SuspendLayout();
             this.panelAddSubjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).BeginInit();
@@ -347,12 +347,12 @@
             // panelParent
             // 
             this.panelParent.BackColor = System.Drawing.SystemColors.Control;
+            this.panelParent.Controls.Add(this.panelSettlements);
             this.panelParent.Controls.Add(this.panelSchoolInfo);
             this.panelParent.Controls.Add(this.panelStartPanel);
             this.panelParent.Controls.Add(this.panelAddStudent);
             this.panelParent.Controls.Add(this.AddNewSchoolClass);
             this.panelParent.Controls.Add(this.panelAddProfiles);
-            this.panelParent.Controls.Add(this.panelSettlements);
             this.panelParent.Controls.Add(this.panelAddSubjects);
             this.panelParent.Controls.Add(this.panelAddSchoolYears);
             this.panelParent.Controls.Add(this.panelAddTeachers);
@@ -363,6 +363,397 @@
             this.panelParent.Name = "panelParent";
             this.panelParent.Size = new System.Drawing.Size(505, 517);
             this.panelParent.TabIndex = 1;
+            // 
+            // panelSettlements
+            // 
+            this.panelSettlements.Controls.Add(this.labelAddCityDone);
+            this.panelSettlements.Controls.Add(this.buttonAddNewSettlement);
+            this.panelSettlements.Controls.Add(this.label22);
+            this.panelSettlements.Controls.Add(this.label21);
+            this.panelSettlements.Controls.Add(this.comboBoxChooseArea);
+            this.panelSettlements.Controls.Add(this.comboBoxChooseManicipality);
+            this.panelSettlements.Controls.Add(this.checkBoxIsArea);
+            this.panelSettlements.Controls.Add(this.checkBoxIsManicipality);
+            this.panelSettlements.Controls.Add(this.label20);
+            this.panelSettlements.Controls.Add(this.textBoxCityName);
+            this.panelSettlements.Controls.Add(this.label19);
+            this.panelSettlements.Location = new System.Drawing.Point(3, 22);
+            this.panelSettlements.Name = "panelSettlements";
+            this.panelSettlements.Size = new System.Drawing.Size(496, 492);
+            this.panelSettlements.TabIndex = 28;
+            this.panelSettlements.Visible = false;
+            // 
+            // labelAddCityDone
+            // 
+            this.labelAddCityDone.AutoSize = true;
+            this.labelAddCityDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddCityDone.Location = new System.Drawing.Point(229, 272);
+            this.labelAddCityDone.Name = "labelAddCityDone";
+            this.labelAddCityDone.Size = new System.Drawing.Size(70, 18);
+            this.labelAddCityDone.TabIndex = 34;
+            this.labelAddCityDone.Text = "Добавен";
+            this.labelAddCityDone.Visible = false;
+            // 
+            // buttonAddNewSettlement
+            // 
+            this.buttonAddNewSettlement.Location = new System.Drawing.Point(167, 416);
+            this.buttonAddNewSettlement.Name = "buttonAddNewSettlement";
+            this.buttonAddNewSettlement.Size = new System.Drawing.Size(177, 43);
+            this.buttonAddNewSettlement.TabIndex = 33;
+            this.buttonAddNewSettlement.Text = "Запиши";
+            this.buttonAddNewSettlement.UseVisualStyleBackColor = true;
+            this.buttonAddNewSettlement.Click += new System.EventHandler(this.buttonAddNewSettlement_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(291, 163);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(94, 13);
+            this.label22.TabIndex = 32;
+            this.label22.Text = "Изберете област";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(79, 163);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(98, 13);
+            this.label21.TabIndex = 31;
+            this.label21.Text = "Изберете община";
+            // 
+            // comboBoxChooseArea
+            // 
+            this.comboBoxChooseArea.DisplayMember = "SettlementName";
+            this.comboBoxChooseArea.FormattingEnabled = true;
+            this.comboBoxChooseArea.Location = new System.Drawing.Point(294, 193);
+            this.comboBoxChooseArea.Name = "comboBoxChooseArea";
+            this.comboBoxChooseArea.Size = new System.Drawing.Size(152, 21);
+            this.comboBoxChooseArea.TabIndex = 30;
+            this.comboBoxChooseArea.ValueMember = "SettlementID";
+            // 
+            // comboBoxChooseManicipality
+            // 
+            this.comboBoxChooseManicipality.DisplayMember = "SettlementName";
+            this.comboBoxChooseManicipality.FormattingEnabled = true;
+            this.comboBoxChooseManicipality.Location = new System.Drawing.Point(82, 193);
+            this.comboBoxChooseManicipality.Name = "comboBoxChooseManicipality";
+            this.comboBoxChooseManicipality.Size = new System.Drawing.Size(152, 21);
+            this.comboBoxChooseManicipality.TabIndex = 29;
+            this.comboBoxChooseManicipality.ValueMember = "SettlementID";
+            // 
+            // checkBoxIsArea
+            // 
+            this.checkBoxIsArea.AutoSize = true;
+            this.checkBoxIsArea.Location = new System.Drawing.Point(370, 84);
+            this.checkBoxIsArea.Name = "checkBoxIsArea";
+            this.checkBoxIsArea.Size = new System.Drawing.Size(63, 17);
+            this.checkBoxIsArea.TabIndex = 28;
+            this.checkBoxIsArea.Text = "Област";
+            this.checkBoxIsArea.UseVisualStyleBackColor = true;
+            this.checkBoxIsArea.CheckedChanged += new System.EventHandler(this.checkBoxIsArea_CheckedChanged);
+            // 
+            // checkBoxIsManicipality
+            // 
+            this.checkBoxIsManicipality.AutoSize = true;
+            this.checkBoxIsManicipality.Location = new System.Drawing.Point(257, 82);
+            this.checkBoxIsManicipality.Name = "checkBoxIsManicipality";
+            this.checkBoxIsManicipality.Size = new System.Drawing.Size(67, 17);
+            this.checkBoxIsManicipality.TabIndex = 27;
+            this.checkBoxIsManicipality.Text = "Община";
+            this.checkBoxIsManicipality.UseVisualStyleBackColor = true;
+            this.checkBoxIsManicipality.CheckedChanged += new System.EventHandler(this.checkBoxIsManicipality_CheckedChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(79, 59);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(60, 13);
+            this.label20.TabIndex = 26;
+            this.label20.Text = "Град/село";
+            // 
+            // textBoxCityName
+            // 
+            this.textBoxCityName.Location = new System.Drawing.Point(82, 82);
+            this.textBoxCityName.Name = "textBoxCityName";
+            this.textBoxCityName.Size = new System.Drawing.Size(135, 20);
+            this.textBoxCityName.TabIndex = 25;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(106, 25);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(384, 31);
+            this.label19.TabIndex = 24;
+            this.label19.Text = "Добавяне на населени места";
+            // 
+            // panelSchoolInfo
+            // 
+            this.panelSchoolInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.panelSchoolInfo.Controls.Add(this.labelSchoolInfoChangesDone);
+            this.panelSchoolInfo.Controls.Add(this.buttonChangeCity);
+            this.panelSchoolInfo.Controls.Add(this.buttonChangeSchoolName);
+            this.panelSchoolInfo.Controls.Add(this.buttonAddNewPrincipal);
+            this.panelSchoolInfo.Controls.Add(this.label23);
+            this.panelSchoolInfo.Controls.Add(this.comboBoxSchoolCity);
+            this.panelSchoolInfo.Controls.Add(this.buttonUpdateInfo);
+            this.panelSchoolInfo.Controls.Add(this.groupBox2);
+            this.panelSchoolInfo.Controls.Add(this.label15);
+            this.panelSchoolInfo.Controls.Add(this.textBoxSchoolName);
+            this.panelSchoolInfo.Controls.Add(this.label14);
+            this.panelSchoolInfo.Controls.Add(this.panelAddNewPrincipal);
+            this.panelSchoolInfo.Location = new System.Drawing.Point(6, 462);
+            this.panelSchoolInfo.Name = "panelSchoolInfo";
+            this.panelSchoolInfo.Size = new System.Drawing.Size(508, 52);
+            this.panelSchoolInfo.TabIndex = 9;
+            this.panelSchoolInfo.Visible = false;
+            // 
+            // labelSchoolInfoChangesDone
+            // 
+            this.labelSchoolInfoChangesDone.AutoSize = true;
+            this.labelSchoolInfoChangesDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSchoolInfoChangesDone.Location = new System.Drawing.Point(129, 320);
+            this.labelSchoolInfoChangesDone.Name = "labelSchoolInfoChangesDone";
+            this.labelSchoolInfoChangesDone.Size = new System.Drawing.Size(201, 20);
+            this.labelSchoolInfoChangesDone.TabIndex = 32;
+            this.labelSchoolInfoChangesDone.Text = "Промените са направени";
+            this.labelSchoolInfoChangesDone.Visible = false;
+            // 
+            // buttonChangeCity
+            // 
+            this.buttonChangeCity.Location = new System.Drawing.Point(138, 405);
+            this.buttonChangeCity.Name = "buttonChangeCity";
+            this.buttonChangeCity.Size = new System.Drawing.Size(159, 23);
+            this.buttonChangeCity.TabIndex = 30;
+            this.buttonChangeCity.Text = "Смени града";
+            this.buttonChangeCity.UseVisualStyleBackColor = true;
+            this.buttonChangeCity.Click += new System.EventHandler(this.buttonChangeCity_Click);
+            // 
+            // buttonChangeSchoolName
+            // 
+            this.buttonChangeSchoolName.Location = new System.Drawing.Point(385, 95);
+            this.buttonChangeSchoolName.Name = "buttonChangeSchoolName";
+            this.buttonChangeSchoolName.Size = new System.Drawing.Size(105, 37);
+            this.buttonChangeSchoolName.TabIndex = 29;
+            this.buttonChangeSchoolName.Text = "Смени името на училището";
+            this.buttonChangeSchoolName.UseVisualStyleBackColor = true;
+            this.buttonChangeSchoolName.Click += new System.EventHandler(this.buttonChangeSchoolName_Click);
+            // 
+            // buttonAddNewPrincipal
+            // 
+            this.buttonAddNewPrincipal.Location = new System.Drawing.Point(250, 448);
+            this.buttonAddNewPrincipal.Name = "buttonAddNewPrincipal";
+            this.buttonAddNewPrincipal.Size = new System.Drawing.Size(171, 35);
+            this.buttonAddNewPrincipal.TabIndex = 28;
+            this.buttonAddNewPrincipal.Text = "Добави нов директор";
+            this.buttonAddNewPrincipal.UseVisualStyleBackColor = true;
+            this.buttonAddNewPrincipal.Click += new System.EventHandler(this.buttonAddNewPrincipal_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(118, 346);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(82, 13);
+            this.label23.TabIndex = 27;
+            this.label23.Text = "Изберете град";
+            // 
+            // comboBoxSchoolCity
+            // 
+            this.comboBoxSchoolCity.FormattingEnabled = true;
+            this.comboBoxSchoolCity.Location = new System.Drawing.Point(121, 372);
+            this.comboBoxSchoolCity.Name = "comboBoxSchoolCity";
+            this.comboBoxSchoolCity.Size = new System.Drawing.Size(198, 21);
+            this.comboBoxSchoolCity.TabIndex = 24;
+            // 
+            // buttonUpdateInfo
+            // 
+            this.buttonUpdateInfo.Location = new System.Drawing.Point(21, 448);
+            this.buttonUpdateInfo.Name = "buttonUpdateInfo";
+            this.buttonUpdateInfo.Size = new System.Drawing.Size(160, 35);
+            this.buttonUpdateInfo.TabIndex = 10;
+            this.buttonUpdateInfo.Text = "Обнови информацията";
+            this.buttonUpdateInfo.UseVisualStyleBackColor = true;
+            this.buttonUpdateInfo.Click += new System.EventHandler(this.buttonUpdateInfo_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Location = new System.Drawing.Point(67, 145);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(307, 164);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Ръководство";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBoxPrincipalLastName);
+            this.groupBox1.Controls.Add(this.textBoxPrincipalFirstName);
+            this.groupBox1.Controls.Add(this.textBoxPrincipalSecondName);
+            this.groupBox1.Location = new System.Drawing.Point(7, 22);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(290, 130);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Директор";
+            // 
+            // textBoxPrincipalLastName
+            // 
+            this.textBoxPrincipalLastName.Location = new System.Drawing.Point(8, 92);
+            this.textBoxPrincipalLastName.Name = "textBoxPrincipalLastName";
+            this.textBoxPrincipalLastName.Size = new System.Drawing.Size(282, 20);
+            this.textBoxPrincipalLastName.TabIndex = 3;
+            // 
+            // textBoxPrincipalFirstName
+            // 
+            this.textBoxPrincipalFirstName.Location = new System.Drawing.Point(8, 26);
+            this.textBoxPrincipalFirstName.Name = "textBoxPrincipalFirstName";
+            this.textBoxPrincipalFirstName.Size = new System.Drawing.Size(282, 20);
+            this.textBoxPrincipalFirstName.TabIndex = 1;
+            // 
+            // textBoxPrincipalSecondName
+            // 
+            this.textBoxPrincipalSecondName.Location = new System.Drawing.Point(8, 58);
+            this.textBoxPrincipalSecondName.Name = "textBoxPrincipalSecondName";
+            this.textBoxPrincipalSecondName.Size = new System.Drawing.Size(282, 20);
+            this.textBoxPrincipalSecondName.TabIndex = 2;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(64, 88);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 13);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Име";
+            // 
+            // textBoxSchoolName
+            // 
+            this.textBoxSchoolName.Location = new System.Drawing.Point(67, 104);
+            this.textBoxSchoolName.Name = "textBoxSchoolName";
+            this.textBoxSchoolName.Size = new System.Drawing.Size(305, 20);
+            this.textBoxSchoolName.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(90, 24);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(361, 31);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Информация за училището";
+            // 
+            // panelAddNewPrincipal
+            // 
+            this.panelAddNewPrincipal.Controls.Add(this.labelAddedPrincipalDone);
+            this.panelAddNewPrincipal.Controls.Add(this.buttonBack);
+            this.panelAddNewPrincipal.Controls.Add(this.buttonAddPrincipal);
+            this.panelAddNewPrincipal.Controls.Add(this.label25);
+            this.panelAddNewPrincipal.Controls.Add(this.label24);
+            this.panelAddNewPrincipal.Controls.Add(this.label18);
+            this.panelAddNewPrincipal.Controls.Add(this.textBoxNewPrincipalLastName);
+            this.panelAddNewPrincipal.Controls.Add(this.textBoxNewPrincipalFirstName);
+            this.panelAddNewPrincipal.Controls.Add(this.textBoxNewPrincipalSecondName);
+            this.panelAddNewPrincipal.Controls.Add(this.label9);
+            this.panelAddNewPrincipal.Location = new System.Drawing.Point(3, 114);
+            this.panelAddNewPrincipal.Name = "panelAddNewPrincipal";
+            this.panelAddNewPrincipal.Size = new System.Drawing.Size(505, 59);
+            this.panelAddNewPrincipal.TabIndex = 31;
+            this.panelAddNewPrincipal.Visible = false;
+            // 
+            // labelAddedPrincipalDone
+            // 
+            this.labelAddedPrincipalDone.AutoSize = true;
+            this.labelAddedPrincipalDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddedPrincipalDone.Location = new System.Drawing.Point(191, 281);
+            this.labelAddedPrincipalDone.Name = "labelAddedPrincipalDone";
+            this.labelAddedPrincipalDone.Size = new System.Drawing.Size(75, 20);
+            this.labelAddedPrincipalDone.TabIndex = 20;
+            this.labelAddedPrincipalDone.Text = "Добавен";
+            this.labelAddedPrincipalDone.Visible = false;
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(33, 412);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(118, 35);
+            this.buttonBack.TabIndex = 19;
+            this.buttonBack.Text = "Назад";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
+            // buttonAddPrincipal
+            // 
+            this.buttonAddPrincipal.Location = new System.Drawing.Point(172, 320);
+            this.buttonAddPrincipal.Name = "buttonAddPrincipal";
+            this.buttonAddPrincipal.Size = new System.Drawing.Size(118, 35);
+            this.buttonAddPrincipal.TabIndex = 18;
+            this.buttonAddPrincipal.Text = "Добави директор";
+            this.buttonAddPrincipal.UseVisualStyleBackColor = true;
+            this.buttonAddPrincipal.Click += new System.EventHandler(this.buttonAddPrincipal_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(105, 215);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(56, 13);
+            this.label25.TabIndex = 17;
+            this.label25.Text = "Фамилия";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(102, 165);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(53, 13);
+            this.label24.TabIndex = 16;
+            this.label24.Text = "Презиме";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(105, 112);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(29, 13);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "Име";
+            // 
+            // textBoxNewPrincipalLastName
+            // 
+            this.textBoxNewPrincipalLastName.Location = new System.Drawing.Point(105, 232);
+            this.textBoxNewPrincipalLastName.Name = "textBoxNewPrincipalLastName";
+            this.textBoxNewPrincipalLastName.Size = new System.Drawing.Size(282, 20);
+            this.textBoxNewPrincipalLastName.TabIndex = 14;
+            // 
+            // textBoxNewPrincipalFirstName
+            // 
+            this.textBoxNewPrincipalFirstName.Location = new System.Drawing.Point(105, 135);
+            this.textBoxNewPrincipalFirstName.Name = "textBoxNewPrincipalFirstName";
+            this.textBoxNewPrincipalFirstName.Size = new System.Drawing.Size(282, 20);
+            this.textBoxNewPrincipalFirstName.TabIndex = 12;
+            // 
+            // textBoxNewPrincipalSecondName
+            // 
+            this.textBoxNewPrincipalSecondName.Location = new System.Drawing.Point(105, 181);
+            this.textBoxNewPrincipalSecondName.Name = "textBoxNewPrincipalSecondName";
+            this.textBoxNewPrincipalSecondName.Size = new System.Drawing.Size(282, 20);
+            this.textBoxNewPrincipalSecondName.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(115, 31);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(300, 31);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Добавяне на директор";
             // 
             // panelStartPanel
             // 
@@ -899,393 +1290,6 @@
             this.label10.TabIndex = 5;
             this.label10.Text = "Добавяне на профил";
             // 
-            // panelSchoolInfo
-            // 
-            this.panelSchoolInfo.BackColor = System.Drawing.SystemColors.Control;
-            this.panelSchoolInfo.Controls.Add(this.labelSchoolInfoChangesDone);
-            this.panelSchoolInfo.Controls.Add(this.buttonChangeCity);
-            this.panelSchoolInfo.Controls.Add(this.buttonChangeSchoolName);
-            this.panelSchoolInfo.Controls.Add(this.buttonAddNewPrincipal);
-            this.panelSchoolInfo.Controls.Add(this.label23);
-            this.panelSchoolInfo.Controls.Add(this.comboBoxSchoolCity);
-            this.panelSchoolInfo.Controls.Add(this.buttonUpdateInfo);
-            this.panelSchoolInfo.Controls.Add(this.groupBox2);
-            this.panelSchoolInfo.Controls.Add(this.label15);
-            this.panelSchoolInfo.Controls.Add(this.textBoxSchoolName);
-            this.panelSchoolInfo.Controls.Add(this.label14);
-            this.panelSchoolInfo.Controls.Add(this.panelAddNewPrincipal);
-            this.panelSchoolInfo.Location = new System.Drawing.Point(6, 462);
-            this.panelSchoolInfo.Name = "panelSchoolInfo";
-            this.panelSchoolInfo.Size = new System.Drawing.Size(508, 52);
-            this.panelSchoolInfo.TabIndex = 9;
-            this.panelSchoolInfo.Visible = false;
-            // 
-            // labelSchoolInfoChangesDone
-            // 
-            this.labelSchoolInfoChangesDone.AutoSize = true;
-            this.labelSchoolInfoChangesDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSchoolInfoChangesDone.Location = new System.Drawing.Point(129, 320);
-            this.labelSchoolInfoChangesDone.Name = "labelSchoolInfoChangesDone";
-            this.labelSchoolInfoChangesDone.Size = new System.Drawing.Size(201, 20);
-            this.labelSchoolInfoChangesDone.TabIndex = 32;
-            this.labelSchoolInfoChangesDone.Text = "Промените са направени";
-            this.labelSchoolInfoChangesDone.Visible = false;
-            // 
-            // buttonChangeCity
-            // 
-            this.buttonChangeCity.Location = new System.Drawing.Point(138, 405);
-            this.buttonChangeCity.Name = "buttonChangeCity";
-            this.buttonChangeCity.Size = new System.Drawing.Size(159, 23);
-            this.buttonChangeCity.TabIndex = 30;
-            this.buttonChangeCity.Text = "Смени града";
-            this.buttonChangeCity.UseVisualStyleBackColor = true;
-            this.buttonChangeCity.Click += new System.EventHandler(this.buttonChangeCity_Click);
-            // 
-            // buttonChangeSchoolName
-            // 
-            this.buttonChangeSchoolName.Location = new System.Drawing.Point(385, 95);
-            this.buttonChangeSchoolName.Name = "buttonChangeSchoolName";
-            this.buttonChangeSchoolName.Size = new System.Drawing.Size(105, 37);
-            this.buttonChangeSchoolName.TabIndex = 29;
-            this.buttonChangeSchoolName.Text = "Смени името на училището";
-            this.buttonChangeSchoolName.UseVisualStyleBackColor = true;
-            this.buttonChangeSchoolName.Click += new System.EventHandler(this.buttonChangeSchoolName_Click);
-            // 
-            // buttonAddNewPrincipal
-            // 
-            this.buttonAddNewPrincipal.Location = new System.Drawing.Point(250, 448);
-            this.buttonAddNewPrincipal.Name = "buttonAddNewPrincipal";
-            this.buttonAddNewPrincipal.Size = new System.Drawing.Size(171, 35);
-            this.buttonAddNewPrincipal.TabIndex = 28;
-            this.buttonAddNewPrincipal.Text = "Добави нов директор";
-            this.buttonAddNewPrincipal.UseVisualStyleBackColor = true;
-            this.buttonAddNewPrincipal.Click += new System.EventHandler(this.buttonAddNewPrincipal_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(118, 346);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(82, 13);
-            this.label23.TabIndex = 27;
-            this.label23.Text = "Изберете град";
-            // 
-            // comboBoxSchoolCity
-            // 
-            this.comboBoxSchoolCity.FormattingEnabled = true;
-            this.comboBoxSchoolCity.Location = new System.Drawing.Point(121, 372);
-            this.comboBoxSchoolCity.Name = "comboBoxSchoolCity";
-            this.comboBoxSchoolCity.Size = new System.Drawing.Size(198, 21);
-            this.comboBoxSchoolCity.TabIndex = 24;
-            // 
-            // buttonUpdateInfo
-            // 
-            this.buttonUpdateInfo.Location = new System.Drawing.Point(21, 448);
-            this.buttonUpdateInfo.Name = "buttonUpdateInfo";
-            this.buttonUpdateInfo.Size = new System.Drawing.Size(160, 35);
-            this.buttonUpdateInfo.TabIndex = 10;
-            this.buttonUpdateInfo.Text = "Обнови информацията";
-            this.buttonUpdateInfo.UseVisualStyleBackColor = true;
-            this.buttonUpdateInfo.Click += new System.EventHandler(this.buttonUpdateInfo_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Location = new System.Drawing.Point(67, 145);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(307, 164);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Ръководство";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBoxPrincipalLastName);
-            this.groupBox1.Controls.Add(this.textBoxPrincipalFirstName);
-            this.groupBox1.Controls.Add(this.textBoxPrincipalSecondName);
-            this.groupBox1.Location = new System.Drawing.Point(7, 22);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(290, 130);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Директор";
-            // 
-            // textBoxPrincipalLastName
-            // 
-            this.textBoxPrincipalLastName.Location = new System.Drawing.Point(8, 92);
-            this.textBoxPrincipalLastName.Name = "textBoxPrincipalLastName";
-            this.textBoxPrincipalLastName.Size = new System.Drawing.Size(282, 20);
-            this.textBoxPrincipalLastName.TabIndex = 3;
-            // 
-            // textBoxPrincipalFirstName
-            // 
-            this.textBoxPrincipalFirstName.Location = new System.Drawing.Point(8, 26);
-            this.textBoxPrincipalFirstName.Name = "textBoxPrincipalFirstName";
-            this.textBoxPrincipalFirstName.Size = new System.Drawing.Size(282, 20);
-            this.textBoxPrincipalFirstName.TabIndex = 1;
-            // 
-            // textBoxPrincipalSecondName
-            // 
-            this.textBoxPrincipalSecondName.Location = new System.Drawing.Point(8, 58);
-            this.textBoxPrincipalSecondName.Name = "textBoxPrincipalSecondName";
-            this.textBoxPrincipalSecondName.Size = new System.Drawing.Size(282, 20);
-            this.textBoxPrincipalSecondName.TabIndex = 2;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(64, 88);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(29, 13);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "Име";
-            // 
-            // textBoxSchoolName
-            // 
-            this.textBoxSchoolName.Location = new System.Drawing.Point(67, 104);
-            this.textBoxSchoolName.Name = "textBoxSchoolName";
-            this.textBoxSchoolName.Size = new System.Drawing.Size(305, 20);
-            this.textBoxSchoolName.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(90, 24);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(361, 31);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Информация за училището";
-            // 
-            // panelAddNewPrincipal
-            // 
-            this.panelAddNewPrincipal.Controls.Add(this.labelAddedPrincipalDone);
-            this.panelAddNewPrincipal.Controls.Add(this.buttonBack);
-            this.panelAddNewPrincipal.Controls.Add(this.buttonAddPrincipal);
-            this.panelAddNewPrincipal.Controls.Add(this.label25);
-            this.panelAddNewPrincipal.Controls.Add(this.label24);
-            this.panelAddNewPrincipal.Controls.Add(this.label18);
-            this.panelAddNewPrincipal.Controls.Add(this.textBoxNewPrincipalLastName);
-            this.panelAddNewPrincipal.Controls.Add(this.textBoxNewPrincipalFirstName);
-            this.panelAddNewPrincipal.Controls.Add(this.textBoxNewPrincipalSecondName);
-            this.panelAddNewPrincipal.Controls.Add(this.label9);
-            this.panelAddNewPrincipal.Location = new System.Drawing.Point(3, 114);
-            this.panelAddNewPrincipal.Name = "panelAddNewPrincipal";
-            this.panelAddNewPrincipal.Size = new System.Drawing.Size(505, 59);
-            this.panelAddNewPrincipal.TabIndex = 31;
-            this.panelAddNewPrincipal.Visible = false;
-            // 
-            // labelAddedPrincipalDone
-            // 
-            this.labelAddedPrincipalDone.AutoSize = true;
-            this.labelAddedPrincipalDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddedPrincipalDone.Location = new System.Drawing.Point(191, 281);
-            this.labelAddedPrincipalDone.Name = "labelAddedPrincipalDone";
-            this.labelAddedPrincipalDone.Size = new System.Drawing.Size(75, 20);
-            this.labelAddedPrincipalDone.TabIndex = 20;
-            this.labelAddedPrincipalDone.Text = "Добавен";
-            this.labelAddedPrincipalDone.Visible = false;
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.Location = new System.Drawing.Point(33, 412);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(118, 35);
-            this.buttonBack.TabIndex = 19;
-            this.buttonBack.Text = "Назад";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
-            // buttonAddPrincipal
-            // 
-            this.buttonAddPrincipal.Location = new System.Drawing.Point(172, 320);
-            this.buttonAddPrincipal.Name = "buttonAddPrincipal";
-            this.buttonAddPrincipal.Size = new System.Drawing.Size(118, 35);
-            this.buttonAddPrincipal.TabIndex = 18;
-            this.buttonAddPrincipal.Text = "Добави директор";
-            this.buttonAddPrincipal.UseVisualStyleBackColor = true;
-            this.buttonAddPrincipal.Click += new System.EventHandler(this.buttonAddPrincipal_Click);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(105, 215);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(56, 13);
-            this.label25.TabIndex = 17;
-            this.label25.Text = "Фамилия";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(102, 165);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(53, 13);
-            this.label24.TabIndex = 16;
-            this.label24.Text = "Презиме";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(105, 112);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 13);
-            this.label18.TabIndex = 15;
-            this.label18.Text = "Име";
-            // 
-            // textBoxNewPrincipalLastName
-            // 
-            this.textBoxNewPrincipalLastName.Location = new System.Drawing.Point(105, 232);
-            this.textBoxNewPrincipalLastName.Name = "textBoxNewPrincipalLastName";
-            this.textBoxNewPrincipalLastName.Size = new System.Drawing.Size(282, 20);
-            this.textBoxNewPrincipalLastName.TabIndex = 14;
-            // 
-            // textBoxNewPrincipalFirstName
-            // 
-            this.textBoxNewPrincipalFirstName.Location = new System.Drawing.Point(105, 135);
-            this.textBoxNewPrincipalFirstName.Name = "textBoxNewPrincipalFirstName";
-            this.textBoxNewPrincipalFirstName.Size = new System.Drawing.Size(282, 20);
-            this.textBoxNewPrincipalFirstName.TabIndex = 12;
-            // 
-            // textBoxNewPrincipalSecondName
-            // 
-            this.textBoxNewPrincipalSecondName.Location = new System.Drawing.Point(105, 181);
-            this.textBoxNewPrincipalSecondName.Name = "textBoxNewPrincipalSecondName";
-            this.textBoxNewPrincipalSecondName.Size = new System.Drawing.Size(282, 20);
-            this.textBoxNewPrincipalSecondName.TabIndex = 13;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(115, 31);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(300, 31);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Добавяне на директор";
-            // 
-            // panelSettlements
-            // 
-            this.panelSettlements.Controls.Add(this.labelAddCityDone);
-            this.panelSettlements.Controls.Add(this.buttonAddNewSettlement);
-            this.panelSettlements.Controls.Add(this.label22);
-            this.panelSettlements.Controls.Add(this.label21);
-            this.panelSettlements.Controls.Add(this.comboBoxChooseArea);
-            this.panelSettlements.Controls.Add(this.comboBoxChooseManicipality);
-            this.panelSettlements.Controls.Add(this.checkBoxIsArea);
-            this.panelSettlements.Controls.Add(this.checkBoxIsManicipality);
-            this.panelSettlements.Controls.Add(this.label20);
-            this.panelSettlements.Controls.Add(this.textBoxCityName);
-            this.panelSettlements.Controls.Add(this.label19);
-            this.panelSettlements.Location = new System.Drawing.Point(3, 283);
-            this.panelSettlements.Name = "panelSettlements";
-            this.panelSettlements.Size = new System.Drawing.Size(496, 54);
-            this.panelSettlements.TabIndex = 28;
-            this.panelSettlements.Visible = false;
-            // 
-            // labelAddCityDone
-            // 
-            this.labelAddCityDone.AutoSize = true;
-            this.labelAddCityDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddCityDone.Location = new System.Drawing.Point(229, 272);
-            this.labelAddCityDone.Name = "labelAddCityDone";
-            this.labelAddCityDone.Size = new System.Drawing.Size(70, 18);
-            this.labelAddCityDone.TabIndex = 34;
-            this.labelAddCityDone.Text = "Добавен";
-            this.labelAddCityDone.Visible = false;
-            // 
-            // buttonAddNewSettlement
-            // 
-            this.buttonAddNewSettlement.Location = new System.Drawing.Point(167, 416);
-            this.buttonAddNewSettlement.Name = "buttonAddNewSettlement";
-            this.buttonAddNewSettlement.Size = new System.Drawing.Size(177, 43);
-            this.buttonAddNewSettlement.TabIndex = 33;
-            this.buttonAddNewSettlement.Text = "Запиши";
-            this.buttonAddNewSettlement.UseVisualStyleBackColor = true;
-            this.buttonAddNewSettlement.Click += new System.EventHandler(this.buttonAddNewSettlement_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(291, 163);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(94, 13);
-            this.label22.TabIndex = 32;
-            this.label22.Text = "Изберете област";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(79, 163);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(98, 13);
-            this.label21.TabIndex = 31;
-            this.label21.Text = "Изберете община";
-            // 
-            // comboBoxChooseArea
-            // 
-            this.comboBoxChooseArea.FormattingEnabled = true;
-            this.comboBoxChooseArea.Location = new System.Drawing.Point(294, 193);
-            this.comboBoxChooseArea.Name = "comboBoxChooseArea";
-            this.comboBoxChooseArea.Size = new System.Drawing.Size(152, 21);
-            this.comboBoxChooseArea.TabIndex = 30;
-            // 
-            // comboBoxChooseManicipality
-            // 
-            this.comboBoxChooseManicipality.FormattingEnabled = true;
-            this.comboBoxChooseManicipality.Location = new System.Drawing.Point(82, 193);
-            this.comboBoxChooseManicipality.Name = "comboBoxChooseManicipality";
-            this.comboBoxChooseManicipality.Size = new System.Drawing.Size(152, 21);
-            this.comboBoxChooseManicipality.TabIndex = 29;
-            // 
-            // checkBoxIsArea
-            // 
-            this.checkBoxIsArea.AutoSize = true;
-            this.checkBoxIsArea.Location = new System.Drawing.Point(370, 84);
-            this.checkBoxIsArea.Name = "checkBoxIsArea";
-            this.checkBoxIsArea.Size = new System.Drawing.Size(63, 17);
-            this.checkBoxIsArea.TabIndex = 28;
-            this.checkBoxIsArea.Text = "Област";
-            this.checkBoxIsArea.UseVisualStyleBackColor = true;
-            this.checkBoxIsArea.CheckedChanged += new System.EventHandler(this.checkBoxIsArea_CheckedChanged);
-            // 
-            // checkBoxIsManicipality
-            // 
-            this.checkBoxIsManicipality.AutoSize = true;
-            this.checkBoxIsManicipality.Location = new System.Drawing.Point(257, 82);
-            this.checkBoxIsManicipality.Name = "checkBoxIsManicipality";
-            this.checkBoxIsManicipality.Size = new System.Drawing.Size(67, 17);
-            this.checkBoxIsManicipality.TabIndex = 27;
-            this.checkBoxIsManicipality.Text = "Община";
-            this.checkBoxIsManicipality.UseVisualStyleBackColor = true;
-            this.checkBoxIsManicipality.CheckedChanged += new System.EventHandler(this.checkBoxIsManicipality_CheckedChanged);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(79, 59);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(60, 13);
-            this.label20.TabIndex = 26;
-            this.label20.Text = "Град/село";
-            // 
-            // textBoxCityName
-            // 
-            this.textBoxCityName.Location = new System.Drawing.Point(82, 82);
-            this.textBoxCityName.Name = "textBoxCityName";
-            this.textBoxCityName.Size = new System.Drawing.Size(135, 20);
-            this.textBoxCityName.TabIndex = 25;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(106, 25);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(384, 31);
-            this.label19.TabIndex = 24;
-            this.label19.Text = "Добавяне на населени места";
-            // 
             // panelAddSubjects
             // 
             this.panelAddSubjects.Controls.Add(this.listBoxAlreadyAddedSubjects);
@@ -1698,12 +1702,22 @@
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Администратор";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminForm_FormClosing);
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panelParent.ResumeLayout(false);
+            this.panelSettlements.ResumeLayout(false);
+            this.panelSettlements.PerformLayout();
+            this.panelSchoolInfo.ResumeLayout(false);
+            this.panelSchoolInfo.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panelAddNewPrincipal.ResumeLayout(false);
+            this.panelAddNewPrincipal.PerformLayout();
             this.panelStartPanel.ResumeLayout(false);
             this.panelStartPanel.PerformLayout();
             this.panelAddStudent.ResumeLayout(false);
@@ -1720,15 +1734,6 @@
             this.panelAddProfiles.ResumeLayout(false);
             this.panelAddProfiles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddProfile)).EndInit();
-            this.panelSchoolInfo.ResumeLayout(false);
-            this.panelSchoolInfo.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panelAddNewPrincipal.ResumeLayout(false);
-            this.panelAddNewPrincipal.PerformLayout();
-            this.panelSettlements.ResumeLayout(false);
-            this.panelSettlements.PerformLayout();
             this.panelAddSubjects.ResumeLayout(false);
             this.panelAddSubjects.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).EndInit();

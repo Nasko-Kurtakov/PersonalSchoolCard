@@ -189,17 +189,21 @@ namespace PersonalShcoolCard
         {
             if (checkBoxIsManicipality.Checked && checkBoxIsArea.Checked)
             {
-                Classes.Settlements.AddSettlement(textBoxCityName, comboBoxChooseManicipality, comboBoxChooseArea, true, true);
+                Classes.Settlements.AddSettlement(textBoxCityName.Text, int.Parse(comboBoxChooseManicipality.SelectedValue.ToString()), int.Parse(comboBoxChooseArea.SelectedValue.ToString()), true, true);
             }
             else
                 if (checkBoxIsManicipality.Checked)
                 {
-                    Classes.Settlements.AddSettlement(textBoxCityName, comboBoxChooseManicipality, comboBoxChooseArea, true, false);
+                    Classes.Settlements.AddSettlement(textBoxCityName.Text, int.Parse(comboBoxChooseManicipality.SelectedValue.ToString()), int.Parse(comboBoxChooseArea.SelectedValue.ToString()), true, false);
                 }
                 else
                 {
-                    Classes.Settlements.AddSettlement(textBoxCityName, comboBoxChooseManicipality, comboBoxChooseArea);
+                    Classes.Settlements.AddSettlement(textBoxCityName.Text, int.Parse(comboBoxChooseManicipality.SelectedValue.ToString()), int.Parse(comboBoxChooseArea.SelectedValue.ToString()));
                 }
+            comboBoxChooseArea.DataSource = Classes.Settlements.GetAreas();
+            comboBoxChooseManicipality.DataSource = Classes.Settlements.GetMinicipalities();
+            comboBoxChooseArea.Refresh();
+            comboBoxChooseManicipality.Refresh();
             textBoxCityName.Clear();
             labelAddCityDone.Visible = true;
             timerAddCityDone.Start();
@@ -394,5 +398,12 @@ namespace PersonalShcoolCard
             }
         }
         #endregion
+
+        
+
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
