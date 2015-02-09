@@ -16,10 +16,7 @@ namespace PersonalShcoolCard
         public LoginForm()
         {
             InitializeComponent();
-
-            
         }
-
         private void LoginButt_Click(object sender, EventArgs e)
         {
             bool UserValidation = false;
@@ -40,17 +37,17 @@ namespace PersonalShcoolCard
                 var context = new PersonalSchoolCardEntities();
                 var teacherUserName = context.Teachers
                     .Select(teacher => teacher.UserName)
-                    .ToList()
-                    ;
+                    .ToList();
+
                 var teacherPassword = context.Teachers
                     .Select(teacher => teacher.Password)
-                    .ToList()
-                    ;
-                for (int iii = 0; iii < teacherUserName.Count; iii++ )
+                    .ToList();
+
+                for (int i = 0; i < teacherUserName.Count; i++ )
                 {
-                    if(UserNameBox.Text == teacherUserName[iii] && PasswordBox.Text == teacherPassword[iii])
+                    if(UserNameBox.Text == teacherUserName[i] && PasswordBox.Text == teacherPassword[i])
                     {
-                        teacherUName = teacherUserName[iii];
+                        teacherUName = teacherUserName[i];
                         break;
                     }
                 }
@@ -58,8 +55,7 @@ namespace PersonalShcoolCard
                 teacherID = context.Teachers
                     .Where(teacher => teacher.UserName == teacherUName)
                     .Select(teacher => teacher.TeacherID)
-                    .FirstOrDefault()
-                    ;
+                    .FirstOrDefault();
 
 
 
@@ -81,9 +77,28 @@ namespace PersonalShcoolCard
             }
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
+        private void LoginForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                LoginButt_Click(sender, e);
+            }
+        }
+
+        private void PasswordBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                LoginButt_Click(sender, e);
+            }
+        }
+
+        private void UserNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                LoginButt_Click(sender, e);
+            }
         }
     }
 }

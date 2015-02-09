@@ -87,7 +87,6 @@ D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplicati
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Properties.Resources.resources
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Success.resources
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache
-D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe.config
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe.config
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\FormApplication1.exe
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\FormApplication1.pdb
@@ -110,3 +109,7 @@ C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoo
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.LoginForm.resources
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.TeacherForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.LoginForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.TeacherForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe.config

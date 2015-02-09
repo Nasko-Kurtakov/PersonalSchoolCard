@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
-    public class SchoolYearsPanel
+    public class SchoolYears
     {
         public static void AddSchooYear(DataGridView gridView)
         {
@@ -15,7 +15,7 @@
                 {
                     for (int rows = 0; rows < gridView.Rows.Count - 1; rows++)
                     {
-                        var schoolYear = gridView.Rows[rows].Cells[0].ToString();
+                        var schoolYear = gridView.Rows[rows].Cells[0].Value.ToString();
 
                         if (schoolYear.Length == 9)
                         {
@@ -79,6 +79,11 @@
                     return null;
                 }
             }
+        }
+
+        public static string GetCurrentSchoolYear()
+        {
+            return string.Format("{0}/{1}", DateTime.Now.Year, DateTime.Now.Year + 1);
         }
     }
 }

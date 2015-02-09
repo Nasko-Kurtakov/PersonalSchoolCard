@@ -6,7 +6,7 @@
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
 
-    public class ManageSchoolClassesPanel
+    public class ManageSchoolClasses
     {
         public static List<SchoolClassInfo> GetCurrentSchoolClasses(string schoolYear)
         {
@@ -48,15 +48,15 @@
                 try
                 {
                     var schoolClassesList = new List<SchoolClassInfo>();
-                    for (int rows = 0; rows < gridView.Rows.Count - 1; rows++)
+                    for (int rows = 0; rows < gridView.Rows.Count; rows++)
                     {
 
                         string className = gridView.Rows[rows].Cells[0].Value.ToString();
                         string schoolYear = gridView.Rows[rows].Cells[1].Value.ToString();
                         string teacherName = gridView.Rows[rows].Cells[3].Value.ToString();
                         int profileID = int.Parse(gridView.Rows[rows].Cells[2].Value.ToString());
-
-                        if (className != null && className != "" && className != " ")
+                        string newClassName = (int.Parse(className.Substring(0, 2))).ToString();
+                        if (className != null && className != "" && className != " " && newClassName!="12")
                         {
                             if (schoolYear != null && schoolYear != "" && schoolYear != " ")
                             {
@@ -121,7 +121,7 @@
                 try
                 {
                     var schoolClassesList = new List<SchoolClassInfo>();
-                    for (int rows = 0; rows < gridView.Rows.Count - 1; rows++)
+                    for (int rows = 0; rows < gridView.Rows.Count; rows++)
                     {
 
                         string className = gridView.Rows[rows].Cells[0].Value.ToString();

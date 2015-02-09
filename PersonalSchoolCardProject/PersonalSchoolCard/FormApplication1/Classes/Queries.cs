@@ -222,7 +222,7 @@ namespace PersonalShcoolCard.Classes
             }
         }
 
-        public static int GetStudentEnrollmentYear(int studentID)
+        public static int? GetStudentEnrollmentYear(int studentID)
         {
             using (var context = new PersonalSchoolCardEntities())
             {

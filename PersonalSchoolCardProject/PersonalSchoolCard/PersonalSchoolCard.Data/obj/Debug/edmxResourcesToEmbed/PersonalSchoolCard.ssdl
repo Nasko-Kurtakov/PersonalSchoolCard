@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="PersonalSchoolCardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="PersonalSchoolCardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Absences">
     <Key>
       <PropertyRef Name="StudentID" />
@@ -100,6 +100,7 @@
     </Key>
     <Property Name="SchoolID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SchoolName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SettlementID" Type="int" />
   </EntityType>
   <EntityType Name="SchoolYears">
     <Key>
@@ -123,17 +124,17 @@
       <PropertyRef Name="StudentID" />
     </Key>
     <Property Name="StudentID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
     <Property Name="SecondName" Type="nvarchar" MaxLength="50" />
-    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
     <Property Name="PersonalNumber" Type="nchar" MaxLength="10" />
     <Property Name="PersonalCardNumber" Type="nchar" MaxLength="10" />
     <Property Name="DateOfBirth" Type="date" />
-    <Property Name="SettlementID" Type="int" Nullable="false" />
+    <Property Name="SettlementID" Type="int" />
     <Property Name="Address" Type="nvarchar" MaxLength="100" />
     <Property Name="Phone" Type="nvarchar" MaxLength="20" />
-    <Property Name="EnrollmentYear" Type="int" Nullable="false" />
-    <Property Name="ProfileID" Type="int" Nullable="false" />
+    <Property Name="EnrollmentYear" Type="int" />
+    <Property Name="ProfileID" Type="int" />
     <Property Name="MarkFromDiplom" Type="real" />
   </EntityType>
   <EntityType Name="StudentsSchoolYear">
@@ -159,6 +160,16 @@
     </Key>
     <Property Name="SubjectTypeID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SubjectType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Teachers">
     <Key>
@@ -424,6 +435,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Schools_Settlements">
+    <End Role="Settlements" Type="Self.Settlements" Multiplicity="0..1" />
+    <End Role="Schools" Type="Self.Schools" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Settlements">
+        <PropertyRef Name="SettlementID" />
+      </Principal>
+      <Dependent Role="Schools">
+        <PropertyRef Name="SettlementID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Settlements_Settlements2">
     <End Role="Settlements" Type="Self.Settlements" Multiplicity="0..1" />
     <End Role="Settlements1" Type="Self.Settlements" Multiplicity="*" />
@@ -449,7 +472,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Students_Profiles">
-    <End Role="Profiles" Type="Self.Profiles" Multiplicity="1" />
+    <End Role="Profiles" Type="Self.Profiles" Multiplicity="0..1" />
     <End Role="Students" Type="Self.Students" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Profiles">
@@ -461,7 +484,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Students_Settlements">
-    <End Role="Settlements" Type="Self.Settlements" Multiplicity="1" />
+    <End Role="Settlements" Type="Self.Settlements" Multiplicity="0..1" />
     <End Role="Students" Type="Self.Students" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Settlements">
@@ -525,6 +548,7 @@
     <EntitySet Name="StudentsSchoolYear" EntityType="Self.StudentsSchoolYear" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Subjects" EntityType="Self.Subjects" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SubjectTypes" EntityType="Self.SubjectTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Teachers" EntityType="Self.Teachers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Terms" EntityType="Self.Terms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeAbsences" EntityType="Self.TypeAbsences" Schema="dbo" store:Type="Tables" />
@@ -607,6 +631,10 @@
     <AssociationSet Name="FK_ProfilesSubjects_Subjects" Association="Self.FK_ProfilesSubjects_Subjects">
       <End Role="Subjects" EntitySet="Subjects" />
       <End Role="ProfilesSubjects" EntitySet="ProfilesSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schools_Settlements" Association="Self.FK_Schools_Settlements">
+      <End Role="Settlements" EntitySet="Settlements" />
+      <End Role="Schools" EntitySet="Schools" />
     </AssociationSet>
     <AssociationSet Name="FK_Settlements_Settlements2" Association="Self.FK_Settlements_Settlements2">
       <End Role="Settlements" EntitySet="Settlements" />

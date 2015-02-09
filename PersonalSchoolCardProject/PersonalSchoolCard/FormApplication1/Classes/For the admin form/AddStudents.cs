@@ -31,14 +31,13 @@
                 }
             }
         }
-
         public static void AddStudent(DataGridView gridView, ComboBox selectedClass)
         {
             using (var context = new PersonalSchoolCardEntities())
             {
                 try
                 {
-                    string currentSchoolYear = Classes.SchoolYearsPanel.GetCurrentSchoolYear();
+                    string currentSchoolYear = Classes.SchoolYears.GetCurrentSchoolYear();
                     var currentSchoolYearId = context.SchoolYears
                                         .Where(schoolYear => schoolYear.SchoolYearName == currentSchoolYear)
                                         .Select(schoolYear => schoolYear.SchoolYearID)
@@ -51,9 +50,9 @@
                                     .Where(schoolClass => schoolClass.ClassName == selectedClass.SelectedItem.ToString() && schoolClass.SchoolYearID == currentSchoolYearId)
                                     .Select(schoolClass => schoolClass.ProfileID)
                                     .First();
-                    
-                   
-                    
+
+
+
 
                     for (int rows = 0; rows < gridView.Rows.Count - 1; rows++)
                     {
@@ -68,8 +67,7 @@
                                 FirstName = firstName,
                                 SecondName = secondName,
                                 LastName = lastName,
-                                ProfileID = profileId
-                                
+                                ProfileID = (int)profileId
                             };
                             context.Students.Add(newStudent);
                             context.SaveChanges();
@@ -94,26 +92,51 @@
                 }
             }
         }
-        public static DataTable  AddStudentToDatagridFromExcel(string path)
+        public static DataTable AddStudentToDatagridFromExcel(string path)
         {
             try
             {
-                string pathConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + ";Mode=ReadWrite;Extended Properties=\"Excel 8.0;HDR=YES;IMEX=1\"";
+                string pathConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + ";Mode=ReadWrite;Extended Properties=Excel 8.0;";
                 OleDbConnection conn = new OleDbConnection(pathConn);
                 conn.Open();
                 OleDbDataAdapter myDataAdapter = new OleDbDataAdapter("Select * from [" + "Sheet1" + "$]", conn);
-                
+
                 DataTable dt = new DataTable();
                 myDataAdapter.Fill(dt);
+                dt.Columns[0].ColumnName = "NewStudentFirstName";
+                dt.Columns[1].ColumnName = "NewStudentSecondName";
+                dt.Columns[2].ColumnName = "NewStudentLastName";
 
                 return dt;
-                
+
             }
             catch (Exception)
             {
                 MessageBox.Show("Грешка! Въведете правилно име на листа от файла с имената!");
                 return null;
             }
+        }
+        public static List<string> GetClassesForThisSchoolYear()
+        {
+            string currentSchoolYear = Classes.SchoolYears.GetCurrentSchoolYear();
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                try
+                {
+                    var schoolClassesNamesList = context.SchoolClasses
+                                                  .Where(schoolClasses => schoolClasses.SchoolYear.SchoolYearName == currentSchoolYear)
+                                                  .Select(schoolClasses => schoolClasses.ClassName)
+                                                  .ToList();
+                    return schoolClassesNamesList;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return null;
+                }
+
+            }
+
         }
     }
 }

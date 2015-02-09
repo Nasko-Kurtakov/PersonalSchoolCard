@@ -7,7 +7,7 @@
     using PersonalSchoolCard;
     using PersonalSchoolCard.Data;
     using System.Windows.Forms;
-    public class AddSubjectsPanel
+    public class AddSubject
     {
         public static void AddSubjectTypes(DataGridView gridView)
         {
@@ -52,9 +52,8 @@
                 {
                     for (int rows = 0; rows < gridView.Rows.Count - 1; rows++)
                     {
-                        for (int col = 0; col < gridView.Rows[rows].Cells.Count; col++)
-                        {
-                            string input = gridView.Rows[rows].Cells[col].Value.ToString().ToUpper();
+                        
+                            string input = gridView.Rows[rows].Cells[0].Value.ToString();
                             if (input != null && input != "" && input != " ")
                             {
                                 var subject = new Subject
@@ -67,7 +66,7 @@
                             {
                                 throw new ArgumentNullException("Невалидни входни параметри");
                             }
-                        }
+                        
                     }
                     context.SaveChanges();
                 }
@@ -77,16 +76,6 @@
                 }
             }
 
-        }
-        public static DataGridViewComboBoxColumn AddSubjectsTypeColumn<T>(T dataSource)
-        {
-            DataGridViewComboBoxColumn subjectTypesColumn = new DataGridViewComboBoxColumn()
-            {
-                HeaderText = "Видове предмети",
-                DataSource = dataSource,
-                Name = "TypesOfSubjects"
-            };
-            return subjectTypesColumn;
         }
         public static List<string> GetAllSubjectTypesName()
         {

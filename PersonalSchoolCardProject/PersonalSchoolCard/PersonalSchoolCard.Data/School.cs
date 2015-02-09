@@ -16,5 +16,8 @@ namespace PersonalSchoolCard.Data
     {
         public int SchoolID { get; set; }
         public string SchoolName { get; set; }
+        public Nullable<int> SettlementID { get; set; }
+    
+        public virtual Settlement Settlement { get; set; }
     }
 }

@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
-    public class AddProfilesPanel
+    public class AddProfiles
     {
         public static void AddProfile(DataGridView gridView)
         {

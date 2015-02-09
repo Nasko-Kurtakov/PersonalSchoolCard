@@ -6,7 +6,7 @@
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
 
-    public class SchoolInfoPanel
+    public class SchoolInfo
     {
         public static string GetSchoolName()
         {
@@ -55,73 +55,33 @@
             }
         }
 
-        public static void UpdatePrincipalFirstName(TextBox principalFirstName)
+        public static void UpdatePrincipalNames(TextBox principalFirstName, TextBox principalSecondName, TextBox principalLastName)
         {
             using (var context = new PersonalSchoolCardEntities())
             {
                 try
                 {
-                    var input = principalFirstName.Text;
-                    if (input != null)
+                    var firstName = principalFirstName.Text;
+                    var secondName = principalSecondName.Text;
+                    var lastName = principalLastName.Text;
+                    if (firstName != null && firstName!="" &&firstName!=" " )
                     {
-                        context.Principals.Select(principal => principal).FirstOrDefault().FirstName = input;
-                        context.SaveChanges();
+                        if (secondName != null && secondName != "" && secondName != " ")
+                        {
+                            if (lastName != null && lastName != "" && lastName != " ")
+                            {
+                                context.Principals.Select(principal => principal).ToList().Last().FirstName = firstName;
+                                context.Principals.Select(principal => principal).ToList().Last().SecondName = secondName;
+                                context.Principals.Select(principal => principal).ToList().Last().LastName = lastName;
+                                context.SaveChanges();
+                            }
+                        }
                     }
-                    else if (input == "" || input==null || input == " ")
+                    else
                     {
                         throw new Exception("Грешни входни данни");
                     }
                     
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
-        public static void UpdatePrincipalSecondName(TextBox principalSecondName)
-        {
-            using (var context = new PersonalSchoolCardEntities())
-            {
-                try
-                {
-                    var input = principalSecondName.Text;
-                    if (input != null)
-                    {
-                        context.Principals.Select(principal => principal).FirstOrDefault().SecondName = input;
-                        context.SaveChanges();
-                    }
-                    else if (input == "" || input == null || input == " ")
-                    {
-                        throw new Exception("Грешни входни данни");
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
-        public static void UpdatePrincipalLastName(TextBox principalLastName)
-        {
-            using (var context = new PersonalSchoolCardEntities())
-            {
-                try
-                {
-                    var input = principalLastName.Text;
-                    if (input != null)
-                    {
-                        context.Principals.Select(principal => principal).FirstOrDefault().LastName = input;
-                        context.SaveChanges();
-                    }
-                    else if (input == "" || input == null || input == " ")
-                    {
-                        throw new Exception("Грешни входни данни");
-                    }
-
                 }
                 catch (Exception ex)
                 {
@@ -138,7 +98,8 @@
                 {
                     var principalFirstName = context.Principals
                                      .Select(principal => principal.FirstName)
-                                     .FirstOrDefault();
+                                     .ToList()
+                                     .Last();
                     return principalFirstName;
                 }
                 catch (Exception ex)
@@ -157,7 +118,8 @@
                 {
                     var principalSecondName = context.Principals
                                      .Select(principal => principal.SecondName)
-                                     .FirstOrDefault();
+                                     .ToList()
+                                     .Last();
                     return principalSecondName;
                 }
                 catch (Exception ex)
@@ -176,13 +138,55 @@
                 {
                     var principalLastName = context.Principals
                                      .Select(principal => principal.LastName)
-                                     .FirstOrDefault();
+                                     .ToList()
+                                     .Last();
                     return principalLastName;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                     return null;
+                }
+            }
+        }
+        public static void NewPrincipal(TextBox firstName, TextBox secondName, TextBox lastName)
+        {
+            using (var contex = new PersonalSchoolCardEntities())
+            {
+                try
+                {
+                    var principal = new Principal
+                    {
+                        FirstName = firstName.Text,
+                        SecondName = secondName.Text,
+                        LastName = lastName.Text
+                    };
+                    contex.Principals.Add(principal);
+                    contex.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        public static void ChangeSchoolCity(ComboBox cityName)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                try
+                {
+                    var cityID = context.Settlements
+                                .Where(settlement => settlement.SettlementName == cityName.SelectedItem.ToString())
+                                .Select(settlement => settlement.SettlementID)
+                                .First();
+
+                    context.Schools.First().SettlementID = cityID;
+                    context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
         }

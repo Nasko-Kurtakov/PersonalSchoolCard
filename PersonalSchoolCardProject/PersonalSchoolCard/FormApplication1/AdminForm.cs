@@ -24,8 +24,8 @@ namespace PersonalShcoolCard
             panelStartPanel.Parent = panelParent;
             panelAddAbsencesType.Parent = panelParent;
             panelAddAbsencesType.Dock = DockStyle.Fill;
-            panelMenageTerms.Parent = panelParent;
-            panelMenageTerms.Dock = DockStyle.Fill;
+            panelManageTerms.Parent = panelParent;
+            panelManageTerms.Dock = DockStyle.Fill;
             panelAddProfiles.Parent = panelParent;
             panelAddProfiles.Dock = DockStyle.Fill;
             panelSchoolInfo.Parent = panelParent;
@@ -36,20 +36,27 @@ namespace PersonalShcoolCard
             panelAddSchoolYears.Dock = DockStyle.Fill;
             panelSettlements.Parent = panelParent;
             panelSettlements.Dock = DockStyle.Fill;
+            panelAddNewPrincipal.Parent = panelParent;
+            panelAddNewPrincipal.Dock = DockStyle.Fill;
+            panelAddStudent.Parent = panelParent;
+            panelAddStudent.Dock = DockStyle.Fill;
+        }
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+            labelcurrentSchoolYear.Text += Classes.SchoolYears.GetCurrentSchoolYear();
+            labelSchowCurrentSchoolYear.Text += Classes.SchoolYears.GetCurrentSchoolYear();
+            labelSchoolYear.Text += Classes.SchoolYears.GetCurrentSchoolYear();
         }
 
         #region//subjects and subject types methods
         private void buttonAddSubjectTypes_Click(object sender, EventArgs e)
         {
-            Classes.AddSubjectsPanel.AddSubjectTypes(dataGridViewSubjectTypes);
+            Classes.AddSubject.AddSubjectTypes(dataGridViewSubjectTypes);
 
             //refreshes the subject types column and updates it if there are changes
-            var subjectsTypes = Classes.AddSubjectsPanel.GetAllSubjectTypesName();
-            var subjectTypesColumn = Classes.AddSubjectsPanel.AddSubjectsTypeColumn(subjectsTypes);
-            dataGridViewSubjects.Columns.Remove(subjectTypesColumn.Name);
-            dataGridViewSubjects.Columns.Add(subjectTypesColumn);
+            var subjectsTypes = Classes.AddSubject.GetAllSubjectTypesName();
             dataGridViewSubjects.Refresh();
-            listBoxAlreadyAddedSubjectTypes.DataSource = Classes.AddSubjectsPanel.GetAllSubjectTypesName();
+            listBoxAlreadyAddedSubjectTypes.DataSource = Classes.AddSubject.GetAllSubjectTypesName();
             listBoxAlreadyAddedSubjectTypes.Refresh();
         } //done
 
@@ -57,8 +64,8 @@ namespace PersonalShcoolCard
         {
             DataGridViewColumn subjectType = new DataGridViewColumn();
             var comboBoxSubjects = new DataGridViewComboBoxColumn();
-            Classes.AddSubjectsPanel.AddSubjects(dataGridViewSubjects);
-            listBoxAlreadyAddedSubjects.DataSource = Classes.AddSubjectsPanel.GetAllSubjectsNames();
+            Classes.AddSubject.AddSubjects(dataGridViewSubjects);
+            listBoxAlreadyAddedSubjects.DataSource = Classes.AddSubject.GetAllSubjectsNames();
             listBoxAlreadyAddedSubjects.Refresh();
 
         } //done
@@ -67,14 +74,9 @@ namespace PersonalShcoolCard
         {
 
             //shows the subject types currently in the database
-            listBoxAlreadyAddedSubjectTypes.DataSource = Classes.AddSubjectsPanel.GetAllSubjectTypesName();
-            listBoxAlreadyAddedSubjects.DataSource = Classes.AddSubjectsPanel.GetAllSubjectsNames();
-            var subjectsTypes = Classes.AddSubjectsPanel.GetAllSubjectTypesName();
-            //creates and load the column showing types of subjects in the add subjects data grid view
-            //using the method in classes-> Add Subjects Panel -> AddSubjectsTypeColumn
-            var subjectTypesColumn = Classes.AddSubjectsPanel.AddSubjectsTypeColumn(subjectsTypes);
-            dataGridViewSubjects.Columns.Add(subjectTypesColumn);
-            //dataGridViewSubjects.Refresh();
+            listBoxAlreadyAddedSubjectTypes.DataSource = Classes.AddSubject.GetAllSubjectTypesName();
+            listBoxAlreadyAddedSubjects.DataSource = Classes.AddSubject.GetAllSubjectsNames();
+            var subjectsTypes = Classes.AddSubject.GetAllSubjectTypesName();
 
             panelAddSubjects.Visible = true;
             panelStartPanel.Visible = false;
@@ -86,7 +88,7 @@ namespace PersonalShcoolCard
         private void buttonOpenAddTeachersPanel_Click(object sender, EventArgs e)
         {
 
-            listBoxAlreadyAddedTeachers.DataSource = Classes.AddTeachersPanel.GetAllTeachersNames();
+            listBoxAlreadyAddedTeachers.DataSource = Classes.AddTeacher.GetAllTeachersNames();
 
             panelAddTeachers.Visible = true;
             panelAddTeachers.BringToFront();
@@ -95,9 +97,9 @@ namespace PersonalShcoolCard
 
         private void buttonAddTeachers_Click(object sender, EventArgs e)
         {
-            listBoxAlreadyAddedTeachers.DataSource = Classes.AddTeachersPanel.GetAllTeachersNames();
+            listBoxAlreadyAddedTeachers.DataSource = Classes.AddTeacher.GetAllTeachersNames();
             listBoxAlreadyAddedTeachers.Refresh();
-            Classes.AddTeachersPanel.AddTeachers(dataGridViewAddTeacher);
+            Classes.AddTeacher.AddTeachers(dataGridViewAddTeacher);
         } //done
         #endregion
 
@@ -117,33 +119,33 @@ namespace PersonalShcoolCard
         } //done
         #endregion
 
-        #region //meneging terms methods
+        #region //managing terms methods
         private void buttonTermManagement_Click(object sender, EventArgs e)
         {
-            listBoxAlreadyAddedTerms.DataSource = Classes.AddTermsPanel.GetTerms();
-            panelMenageTerms.Visible = true;
-            panelMenageTerms.BringToFront();
+            listBoxAlreadyAddedTerms.DataSource = Classes.AddTerm.GetTerms();
+            panelManageTerms.Visible = true;
+            panelManageTerms.BringToFront();
         } //done
 
         private void buttonAddTerms_Click(object sender, EventArgs e)
         {
-            Classes.AddTermsPanel.AddTerms(dataGridViewAddTerms);
-            listBoxAlreadyAddedTerms.DataSource = Classes.AddTermsPanel.GetTerms();
+            Classes.AddTerm.AddTerms(dataGridViewAddTerms);
+            listBoxAlreadyAddedTerms.DataSource = Classes.AddTerm.GetTerms();
             listBoxAlreadyAddedTerms.Refresh();
         } //done
         #endregion
 
-        #region //meneging classes
+        #region //managing classes
         private void buttonMenageClasses_Click(object sender, EventArgs e)
         {
-            //comboBoxSchoolYears.DataSource = ////TODO
 
-            dataGridViewShowCurrentClasses.DataSource = Classes.ManageSchoolClassesPanel.GetCurrentSchoolClasses("2013/2014");
-            NewSchoolClassProfile.DataSource = Classes.AddProfilesPanel.GetAllProfiles();
-            NewSchoolClassTeacher.DataSource = Classes.AddTeachersPanel.GetAllTeachersNames();
+
+            dataGridViewShowCurrentClasses.DataSource = Classes.ManageSchoolClasses.GetCurrentSchoolClasses("2013/2014");
+            NewSchoolClassProfile.DataSource = Classes.AddProfiles.GetAllProfiles();
+            NewSchoolClassTeacher.DataSource = Classes.AddTeacher.GetAllTeachersNames();
             AddNewSchoolClass.Visible = true;
             AddNewSchoolClass.BringToFront();
-        } //done 
+        }
         private void buttonWarning_Click_1(object sender, EventArgs e)
         {
             labelWarning.Visible = true;
@@ -151,17 +153,27 @@ namespace PersonalShcoolCard
         }
         private void buttonShowChanges_Click_1(object sender, EventArgs e)
         {
-            dataGridViewShowChanges.DataSource = Classes.ManageSchoolClassesPanel.VisualizeChanges(dataGridViewShowCurrentClasses);
+            dataGridViewShowChanges.DataSource = Classes.ManageSchoolClasses.VisualizeChanges(dataGridViewShowCurrentClasses);
         }
         private void buttonAccept_Click_1(object sender, EventArgs e)
         {
-            Classes.ManageSchoolClassesPanel.SaveUpdatedSchoolClasses(dataGridViewShowChanges);
+            Classes.ManageSchoolClasses.SaveUpdatedSchoolClasses(dataGridViewShowChanges);
             labelWarning.Visible = false;
             buttonAccept.Visible = false;
+            labelUpdatedScholClassesDone.Visible = true;
+            timerManageSchoolClasses.Start();
         }
         private void buttonAddNewSchoolClasses_Click(object sender, EventArgs e)
         {
-            Classes.ManageSchoolClassesPanel.SaveNewSchoolClasses(dataGridViewAddNewSchoolClasses);
+            Classes.ManageSchoolClasses.SaveNewSchoolClasses(dataGridViewAddNewSchoolClasses);
+            labelAddedNewSchoolClassesDone.Visible = true;
+            timerManageSchoolClasses.Start();
+        }
+        private void timerManageSchoolClasses_Tick(object sender, EventArgs e)
+        {
+            labelAddedNewSchoolClassesDone.Visible = false;
+            labelUpdatedScholClassesDone.Visible = false;
+            timerManageSchoolClasses.Stop();
         }
         #endregion
 
@@ -188,8 +200,14 @@ namespace PersonalShcoolCard
                 {
                     Classes.Settlements.AddSettlement(textBoxCityName, comboBoxChooseManicipality, comboBoxChooseArea);
                 }
-
-
+            textBoxCityName.Clear();
+            labelAddCityDone.Visible = true;
+            timerAddCityDone.Start();
+        }
+        private void timerAddCityDone_Tick(object sender, EventArgs e)
+        {
+            labelAddCityDone.Visible = false;
+            timerAddCityDone.Stop();
         }
         private void checkBoxIsManicipality_CheckedChanged(object sender, EventArgs e)
         {
@@ -219,7 +237,7 @@ namespace PersonalShcoolCard
         #region //creating profiles
         private void buttonCreateProfile_Click(object sender, EventArgs e)
         {
-            listBoxAlreadyAddedProfiles.DataSource = Classes.AddProfilesPanel.GetAllProfiles();
+            listBoxAlreadyAddedProfiles.DataSource = Classes.AddProfiles.GetAllProfiles();
 
             panelAddProfiles.Visible = true;
             panelAddProfiles.BringToFront();
@@ -227,8 +245,8 @@ namespace PersonalShcoolCard
 
         private void buttonAddProfile_Click(object sender, EventArgs e)
         {
-            Classes.AddProfilesPanel.AddProfile(dataGridViewAddProfile);
-            listBoxAlreadyAddedProfiles.DataSource = Classes.AddProfilesPanel.GetAllProfiles();
+            Classes.AddProfiles.AddProfile(dataGridViewAddProfile);
+            listBoxAlreadyAddedProfiles.DataSource = Classes.AddProfiles.GetAllProfiles();
             listBoxAlreadyAddedProfiles.Refresh();
         }//done
         #endregion
@@ -237,44 +255,71 @@ namespace PersonalShcoolCard
         private void buttonEditSchoolInfo_Click(object sender, EventArgs e)
         {
 
-            textBoxSchoolName.Text = Classes.SchoolInfoPanel.GetSchoolName();
-            textBoxPrincipalFirstName.Text = Classes.SchoolInfoPanel.GetPrincipalFirstName();
-            textBoxPrincipalSecondName.Text = Classes.SchoolInfoPanel.GetPrincipalSecondName();
-            textBoxPrincipalLastName.Text = Classes.SchoolInfoPanel.GetPrincipalLastName();
+            textBoxSchoolName.Text = Classes.SchoolInfo.GetSchoolName();
+            textBoxPrincipalFirstName.Text = Classes.SchoolInfo.GetPrincipalFirstName();
+            textBoxPrincipalSecondName.Text = Classes.SchoolInfo.GetPrincipalSecondName();
+            textBoxPrincipalLastName.Text = Classes.SchoolInfo.GetPrincipalLastName();
             comboBoxSchoolCity.DataSource = Classes.Settlements.GetVillages();
             panelSchoolInfo.Visible = true;
             panelSchoolInfo.BringToFront();
         }
 
-        private void textBoxSchoolName_TextChanged(object sender, EventArgs e)
+        private void buttonAddNewPrincipal_Click(object sender, EventArgs e)
         {
-            //schoolNameChanged = true;
-            buttonUpdateInfo.Enabled = true;
+            panelAddNewPrincipal.Visible = true;
+            panelAddNewPrincipal.BringToFront();
         }
 
-        private void textBoxPrincipalFirstName_TextChanged(object sender, EventArgs e)
+        private void buttonUpdateInfo_Click(object sender, EventArgs e)
         {
-            //firstNameChanged = true;
-            buttonUpdateInfo.Enabled = true;
+            Classes.SchoolInfo.UpdatePrincipalNames(textBoxPrincipalFirstName, textBoxPrincipalSecondName, textBoxPrincipalLastName);
+            labelSchoolInfoChangesDone.Visible = true;
+            timerChangesDone.Start();
         }
-
-        private void textBoxPrincipalSecondName_TextChanged(object sender, EventArgs e)
+        private void buttonChangeSchoolName_Click(object sender, EventArgs e)
         {
-            //secondNameChanged = true;
-            buttonUpdateInfo.Enabled = true;
+            Classes.SchoolInfo.UpdateSchoolName(textBoxSchoolName);
+            labelSchoolInfoChangesDone.Visible = true;
+            timerChangesDone.Start();
         }
-
-        private void textBoxPrincipalLastName_TextChanged(object sender, EventArgs e)
+        private void buttonAddPrincipal_Click(object sender, EventArgs e)
         {
-            //lastNameChanged = true;
-            buttonUpdateInfo.Enabled = true;
+            Classes.SchoolInfo.NewPrincipal(textBoxNewPrincipalFirstName, textBoxNewPrincipalSecondName, textBoxNewPrincipalLastName);
+            textBoxNewPrincipalFirstName.Clear();
+            textBoxNewPrincipalSecondName.Clear();
+            textBoxNewPrincipalLastName.Clear();
+            labelAddedPrincipalDone.Visible = true;
+            timerAddedNewPrincipal.Start();
         }
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            textBoxPrincipalFirstName.Text = Classes.SchoolInfo.GetPrincipalFirstName();
+            textBoxPrincipalSecondName.Text = Classes.SchoolInfo.GetPrincipalSecondName();
+            textBoxPrincipalLastName.Text = Classes.SchoolInfo.GetPrincipalLastName();
+            panelAddNewPrincipal.Visible = false;
+            panelSchoolInfo.BringToFront();
+        }
+        private void timerAddedNewPrincipal_Tick(object sender, EventArgs e)
+        {
+            labelAddedPrincipalDone.Visible = false;
+            timerAddedNewPrincipal.Stop();
+        }
+        private void buttonChangeCity_Click(object sender, EventArgs e)
+        {
+            Classes.SchoolInfo.ChangeSchoolCity(comboBoxSchoolCity);
+        }
+        private void timerChangesDone_Tick(object sender, EventArgs e)
+        {
+            labelSchoolInfoChangesDone.Visible = false;
+            timerChangesDone.Stop();
+        }
+        
         #endregion
 
         #region//adding new school years
         private void buttonAddSchoolYear_Click(object sender, EventArgs e)
         {
-            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYearsPanel.GetAllSchoolYears();
+            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYears.GetAllSchoolYears();
             panelAddSchoolYears.Visible = true;
             panelAddSchoolYears.BringToFront();
         }
@@ -288,17 +333,65 @@ namespace PersonalShcoolCard
 
         private void buttonNewSchoolYear_Click(object sender, EventArgs e)
         {
-            Classes.SchoolYearsPanel.AddSchooYear(dataGridViewSchoolYears);
-            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYearsPanel.GetAllSchoolYears();
+            Classes.SchoolYears.AddSchooYear(dataGridViewSchoolYears);
+            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYears.GetAllSchoolYears();
             listBoxAlreadyAddedSchoolYears.Refresh();
+            labelAddedSchoolYearDone.Visible = true;
+            timerAddSchoolYear.Start();
+        }
+        private void timerAddSchoolYear_Tick(object sender, EventArgs e)
+        {
+            labelAddedSchoolYearDone.Visible = false;
+            timerAddSchoolYear.Stop();
         }
 
         private void buttonAddNextOnly_Click(object sender, EventArgs e)
         {
-            Classes.SchoolYearsPanel.AddNextSchoolYearOnly();
-            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYearsPanel.GetAllSchoolYears();
+            Classes.SchoolYears.AddNextSchoolYearOnly();
+            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYears.GetAllSchoolYears();
             listBoxAlreadyAddedSchoolYears.Refresh();
             buttonAddNextOnly.Enabled = false;
+            labelAddedSchoolYearDone.Visible = true;
+            timerAddSchoolYear.Start();
+        }
+        #endregion
+
+        #region//add students to school classes
+        private void buttonAddStudents_Click(object sender, EventArgs e)
+        {
+            panelAddStudent.Visible = true;
+            panelAddStudent.BringToFront();
+        }
+        private void comboBoxClassesForCurrentSchoolYear_Click(object sender, EventArgs e)
+        {
+            comboBoxClassesForCurrentSchoolYear.DataSource = Classes.AddStudents.GetClassesForThisSchoolYear();
+        }
+
+        private void comboBoxClassesForCurrentSchoolYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBoxAlreadyAddedStudents.DataSource = Classes.AddStudents.GetStudentsInClasses(comboBoxClassesForCurrentSchoolYear);
+        }
+        private void buttonAddNewStudents_Click(object sender, EventArgs e)
+        {
+            Classes.AddStudents.AddStudent(dataGridViewAddStudents, comboBoxClassesForCurrentSchoolYear);
+            labelAddedNewStudents.Visible = true;
+            timerAddedStudentsDone.Start();
+        }
+
+        private void timerAddedStudentsDone_Tick(object sender, EventArgs e)
+        {
+            labelAddedNewStudents.Visible = false;
+            timerAddedStudentsDone.Stop();
+        }
+
+        private void buttonAddStudentsFromExcel_Click(object sender, EventArgs e)
+        {
+            if (openFileDialogLoadFromExcel.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                dataGridViewAddStudents.AutoGenerateColumns = false;
+                string path = openFileDialogLoadFromExcel.FileName;
+                dataGridViewAddStudents.DataSource = Classes.AddStudents.AddStudentToDatagridFromExcel(path);
+            }
         }
         #endregion
     }

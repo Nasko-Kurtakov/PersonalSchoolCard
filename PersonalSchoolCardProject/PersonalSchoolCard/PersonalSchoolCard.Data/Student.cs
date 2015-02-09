@@ -29,11 +29,11 @@ namespace PersonalSchoolCard.Data
         public string PersonalNumber { get; set; }
         public string PersonalCardNumber { get; set; }
         public Nullable<System.DateTime> DateOfBirth { get; set; }
-        public int SettlementID { get; set; }
+        public Nullable<int> SettlementID { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
-        public int EnrollmentYear { get; set; }
-        public int ProfileID { get; set; }
+        public Nullable<int> EnrollmentYear { get; set; }
+        public Nullable<int> ProfileID { get; set; }
         public Nullable<float> MarkFromDiplom { get; set; }
     
         public virtual ICollection<Absence> Absences { get; set; }

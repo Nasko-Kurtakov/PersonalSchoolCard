@@ -40,6 +40,7 @@ namespace PersonalSchoolCard.Data
         public virtual DbSet<StudentsSchoolYear> StudentsSchoolYears { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
         public virtual DbSet<SubjectType> SubjectTypes { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<Term> Terms { get; set; }
         public virtual DbSet<TypeAbsence> TypeAbsences { get; set; }

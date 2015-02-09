@@ -27,11 +27,11 @@
                                                   .Select(settlement => settlement.SettlementID)
                                                   .First();
 
-                            newSettlement.AreaID = newSettlement.SettlementID;
-                            newSettlement.ManicipalityID = newSettlement.SettlementID;
+                            newSettlement.AreaID = newSettlementID;
+                            newSettlement.ManicipalityID = newSettlementID;
                             context.SaveChanges();
                         }
-                        if (isManicipality)
+                        if (isManicipality==true && isArea==false )
                         {
                             var newSettlement = new Settlement();
                             newSettlement.SettlementName = cityName.Text;
@@ -44,7 +44,7 @@
                                                   .Select(settlement => settlement.SettlementID)
                                                   .First();
                             var areaID = context.Settlements
-                                         .Where(settlement => settlement.SettlementName == area.SelectedText)
+                                         .Where(settlement => settlement.SettlementName == area.SelectedItem.ToString())
                                          .Select(settlement => settlement.SettlementID)
                                          .First();
 

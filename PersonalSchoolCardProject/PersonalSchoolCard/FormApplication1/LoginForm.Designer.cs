@@ -81,6 +81,7 @@
             this.PasswordBox.TabIndex = 11;
             this.PasswordBox.WaterMarkColor = System.Drawing.Color.Gray;
             this.PasswordBox.WaterMarkText = "Въведете парола";
+            this.PasswordBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordBox_KeyPress);
             // 
             // UserNameBox
             // 
@@ -92,6 +93,7 @@
             this.UserNameBox.TabIndex = 10;
             this.UserNameBox.WaterMarkColor = System.Drawing.Color.Gray;
             this.UserNameBox.WaterMarkText = "Въведете име";
+            this.UserNameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UserNameBox_KeyPress);
             // 
             // LoginForm
             // 
@@ -107,7 +109,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LoginForm_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
