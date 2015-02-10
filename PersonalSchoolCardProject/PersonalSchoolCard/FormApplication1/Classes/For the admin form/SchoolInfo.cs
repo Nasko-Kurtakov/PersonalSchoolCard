@@ -110,14 +110,14 @@
             }
         }
 
-        public static string GetPrincipalSecondName()
+        public static Principal GetPrincipalName()
         {
             using (var context = new PersonalSchoolCardEntities())
             {
                 try
                 {
                     var principalSecondName = context.Principals
-                                     .Select(principal => principal.SecondName)
+                                     .Select(principal => principal)
                                      .ToList()
                                      .Last();
                     return principalSecondName;

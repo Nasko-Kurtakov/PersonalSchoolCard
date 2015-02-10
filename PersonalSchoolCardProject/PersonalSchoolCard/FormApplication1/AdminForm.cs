@@ -260,9 +260,9 @@ namespace PersonalShcoolCard
         {
 
             textBoxSchoolName.Text = Classes.SchoolInfo.GetSchoolName();
-            textBoxPrincipalFirstName.Text = Classes.SchoolInfo.GetPrincipalFirstName();
-            textBoxPrincipalSecondName.Text = Classes.SchoolInfo.GetPrincipalSecondName();
-            textBoxPrincipalLastName.Text = Classes.SchoolInfo.GetPrincipalLastName();
+            textBoxPrincipalFirstName.Text = Classes.SchoolInfo.GetPrincipalName().FirstName;
+            textBoxPrincipalSecondName.Text = Classes.SchoolInfo.GetPrincipalName().SecondName;
+            textBoxPrincipalLastName.Text = Classes.SchoolInfo.GetPrincipalName().LastName;
             comboBoxSchoolCity.DataSource = Classes.Settlements.GetVillages();
             panelSchoolInfo.Visible = true;
             panelSchoolInfo.BringToFront();
@@ -297,9 +297,9 @@ namespace PersonalShcoolCard
         }
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            textBoxPrincipalFirstName.Text = Classes.SchoolInfo.GetPrincipalFirstName();
-            textBoxPrincipalSecondName.Text = Classes.SchoolInfo.GetPrincipalSecondName();
-            textBoxPrincipalLastName.Text = Classes.SchoolInfo.GetPrincipalLastName();
+            textBoxPrincipalFirstName.Text = Classes.SchoolInfo.GetPrincipalName().FirstName;
+            textBoxPrincipalSecondName.Text = Classes.SchoolInfo.GetPrincipalName().SecondName;
+            textBoxPrincipalLastName.Text = Classes.SchoolInfo.GetPrincipalName().LastName;
             panelAddNewPrincipal.Visible = false;
             panelSchoolInfo.BringToFront();
         }

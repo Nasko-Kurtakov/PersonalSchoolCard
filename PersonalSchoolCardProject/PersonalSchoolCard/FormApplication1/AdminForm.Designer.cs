@@ -347,8 +347,8 @@
             // panelParent
             // 
             this.panelParent.BackColor = System.Drawing.SystemColors.Control;
-            this.panelParent.Controls.Add(this.panelSettlements);
             this.panelParent.Controls.Add(this.panelSchoolInfo);
+            this.panelParent.Controls.Add(this.panelSettlements);
             this.panelParent.Controls.Add(this.panelStartPanel);
             this.panelParent.Controls.Add(this.panelAddStudent);
             this.panelParent.Controls.Add(this.AddNewSchoolClass);
@@ -377,9 +377,9 @@
             this.panelSettlements.Controls.Add(this.label20);
             this.panelSettlements.Controls.Add(this.textBoxCityName);
             this.panelSettlements.Controls.Add(this.label19);
-            this.panelSettlements.Location = new System.Drawing.Point(3, 22);
+            this.panelSettlements.Location = new System.Drawing.Point(2, 286);
             this.panelSettlements.Name = "panelSettlements";
-            this.panelSettlements.Size = new System.Drawing.Size(496, 492);
+            this.panelSettlements.Size = new System.Drawing.Size(496, 45);
             this.panelSettlements.TabIndex = 28;
             this.panelSettlements.Visible = false;
             // 
@@ -505,9 +505,9 @@
             this.panelSchoolInfo.Controls.Add(this.textBoxSchoolName);
             this.panelSchoolInfo.Controls.Add(this.label14);
             this.panelSchoolInfo.Controls.Add(this.panelAddNewPrincipal);
-            this.panelSchoolInfo.Location = new System.Drawing.Point(6, 462);
+            this.panelSchoolInfo.Location = new System.Drawing.Point(6, 3);
             this.panelSchoolInfo.Name = "panelSchoolInfo";
-            this.panelSchoolInfo.Size = new System.Drawing.Size(508, 52);
+            this.panelSchoolInfo.Size = new System.Drawing.Size(508, 511);
             this.panelSchoolInfo.TabIndex = 9;
             this.panelSchoolInfo.Visible = false;
             // 

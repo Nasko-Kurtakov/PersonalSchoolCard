@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panelParent = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelHi = new System.Windows.Forms.Label();
             this.buttonEditStudentsInfo = new System.Windows.Forms.Button();
+            this.panelParent = new System.Windows.Forms.Panel();
             this.panelEditStudentsInfo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewStudents = new System.Windows.Forms.DataGridView();
             this.StudentFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SecondName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelHi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -67,37 +67,6 @@
             this.splitContainer1.SplitterDistance = 270;
             this.splitContainer1.TabIndex = 0;
             // 
-            // panelParent
-            // 
-            this.panelParent.Controls.Add(this.panelEditStudentsInfo);
-            this.panelParent.Controls.Add(this.label2);
-            this.panelParent.Controls.Add(this.labelHi);
-            this.panelParent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelParent.Location = new System.Drawing.Point(0, 0);
-            this.panelParent.Name = "panelParent";
-            this.panelParent.Size = new System.Drawing.Size(619, 533);
-            this.panelParent.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(159, 242);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(318, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Изберете действие от левия панел!\r\n";
-            // 
-            // labelHi
-            // 
-            this.labelHi.AutoSize = true;
-            this.labelHi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHi.Location = new System.Drawing.Point(177, 211);
-            this.labelHi.Name = "labelHi";
-            this.labelHi.Size = new System.Drawing.Size(108, 20);
-            this.labelHi.TabIndex = 4;
-            this.labelHi.Text = "Здравейте,";
-            // 
             // buttonEditStudentsInfo
             // 
             this.buttonEditStudentsInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,6 +78,17 @@
             this.buttonEditStudentsInfo.UseVisualStyleBackColor = true;
             this.buttonEditStudentsInfo.Click += new System.EventHandler(this.buttonEditStudentsInfo_Click);
             // 
+            // panelParent
+            // 
+            this.panelParent.Controls.Add(this.panelEditStudentsInfo);
+            this.panelParent.Controls.Add(this.label2);
+            this.panelParent.Controls.Add(this.labelHi);
+            this.panelParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelParent.Location = new System.Drawing.Point(0, 0);
+            this.panelParent.Name = "panelParent";
+            this.panelParent.Size = new System.Drawing.Size(619, 533);
+            this.panelParent.TabIndex = 0;
+            // 
             // panelEditStudentsInfo
             // 
             this.panelEditStudentsInfo.Controls.Add(this.dataGridViewStudents);
@@ -119,16 +99,6 @@
             this.panelEditStudentsInfo.TabIndex = 6;
             this.panelEditStudentsInfo.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(516, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Редактиране на информацията за учениците";
-            // 
             // dataGridViewStudents
             // 
             this.dataGridViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -136,7 +106,7 @@
             this.StudentFirstName,
             this.SecondName,
             this.LastName});
-            this.dataGridViewStudents.Location = new System.Drawing.Point(87, 86);
+            this.dataGridViewStudents.Location = new System.Drawing.Point(64, 95);
             this.dataGridViewStudents.Name = "dataGridViewStudents";
             this.dataGridViewStudents.Size = new System.Drawing.Size(481, 283);
             this.dataGridViewStudents.TabIndex = 1;
@@ -161,6 +131,36 @@
             this.LastName.DataPropertyName = "LastName";
             this.LastName.HeaderText = "Фамилия";
             this.LastName.Name = "LastName";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(91, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(516, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Редактиране на информацията за учениците";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(159, 242);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(318, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Изберете действие от левия панел!\r\n";
+            // 
+            // labelHi
+            // 
+            this.labelHi.AutoSize = true;
+            this.labelHi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHi.Location = new System.Drawing.Point(177, 211);
+            this.labelHi.Name = "labelHi";
+            this.labelHi.Size = new System.Drawing.Size(108, 20);
+            this.labelHi.TabIndex = 4;
+            this.labelHi.Text = "Здравейте,";
             // 
             // TeacherForm
             // 
