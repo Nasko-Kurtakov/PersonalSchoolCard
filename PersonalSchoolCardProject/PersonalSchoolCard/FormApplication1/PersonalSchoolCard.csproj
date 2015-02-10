@@ -77,20 +77,19 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\For the admin form\AddProfiles.cs" />
-    <Compile Include="Classes\For the admin form\AddStudents.cs" />
-    <Compile Include="Classes\For the admin form\AddSubjects.cs" />
-    <Compile Include="Classes\For the admin form\AddTeachers.cs" />
-    <Compile Include="Classes\Class1.cs" />
-    <Compile Include="Classes\For the admin form\AddAbsencesType.cs" />
-    <Compile Include="Classes\For the admin form\AddTerms.cs" />
-    <Compile Include="Classes\For the admin form\ManageSchoolClasses.cs" />
+    <Compile Include="Classes\Profile.cs" />
+    <Compile Include="Classes\Student.cs" />
+    <Compile Include="Classes\Subject.cs" />
+    <Compile Include="Classes\Teacher.cs" />
+    <Compile Include="Classes\AbsencesType.cs" />
+    <Compile Include="Classes\Term.cs" />
+    <Compile Include="Classes\SchoolClass.cs" />
     <Compile Include="Classes\LogIn.cs" />
     <Compile Include="Classes\Queries.cs" />
-    <Compile Include="Classes\For the admin form\SchoolClassInfo.cs" />
-    <Compile Include="Classes\For the admin form\SchoolInfo.cs" />
-    <Compile Include="Classes\For the admin form\SchoolYears.cs" />
-    <Compile Include="Classes\For the admin form\Settlements.cs" />
+    <Compile Include="Classes\SchoolClassInfo.cs" />
+    <Compile Include="Classes\SchoolInfo.cs" />
+    <Compile Include="Classes\SchoolYear.cs" />
+    <Compile Include="Classes\Settlement.cs" />
     <Compile Include="Classes\Teacher form classes\EditStudents.cs" />
     <Compile Include="Classes\Teacher form classes\OnLogin.cs" />
     <Compile Include="Classes\WaterMark.cs">

@@ -347,14 +347,13 @@
             // panelParent
             // 
             this.panelParent.BackColor = System.Drawing.SystemColors.Control;
+            this.panelParent.Controls.Add(this.AddNewSchoolClass);
             this.panelParent.Controls.Add(this.panelSchoolInfo);
+            this.panelParent.Controls.Add(this.panelAddSchoolYears);
             this.panelParent.Controls.Add(this.panelSettlements);
             this.panelParent.Controls.Add(this.panelStartPanel);
-            this.panelParent.Controls.Add(this.panelAddStudent);
-            this.panelParent.Controls.Add(this.AddNewSchoolClass);
             this.panelParent.Controls.Add(this.panelAddProfiles);
             this.panelParent.Controls.Add(this.panelAddSubjects);
-            this.panelParent.Controls.Add(this.panelAddSchoolYears);
             this.panelParent.Controls.Add(this.panelAddTeachers);
             this.panelParent.Controls.Add(this.panelAddAbsencesType);
             this.panelParent.Controls.Add(this.panelManageTerms);
@@ -505,9 +504,9 @@
             this.panelSchoolInfo.Controls.Add(this.textBoxSchoolName);
             this.panelSchoolInfo.Controls.Add(this.label14);
             this.panelSchoolInfo.Controls.Add(this.panelAddNewPrincipal);
-            this.panelSchoolInfo.Location = new System.Drawing.Point(6, 3);
+            this.panelSchoolInfo.Location = new System.Drawing.Point(6, 465);
             this.panelSchoolInfo.Name = "panelSchoolInfo";
-            this.panelSchoolInfo.Size = new System.Drawing.Size(508, 511);
+            this.panelSchoolInfo.Size = new System.Drawing.Size(508, 44);
             this.panelSchoolInfo.TabIndex = 9;
             this.panelSchoolInfo.Visible = false;
             // 
@@ -786,9 +785,9 @@
             this.panelAddStudent.Controls.Add(this.dataGridViewAddStudents);
             this.panelAddStudent.Controls.Add(this.comboBoxClassesForCurrentSchoolYear);
             this.panelAddStudent.Controls.Add(this.label26);
-            this.panelAddStudent.Location = new System.Drawing.Point(3, 388);
+            this.panelAddStudent.Location = new System.Drawing.Point(3, 57);
             this.panelAddStudent.Name = "panelAddStudent";
-            this.panelAddStudent.Size = new System.Drawing.Size(505, 48);
+            this.panelAddStudent.Size = new System.Drawing.Size(505, 37);
             this.panelAddStudent.TabIndex = 29;
             this.panelAddStudent.Visible = false;
             // 
@@ -907,10 +906,10 @@
             // 
             this.AddNewSchoolClass.Controls.Add(this.AddNewSchoolClassTabPage);
             this.AddNewSchoolClass.Controls.Add(this.ManageSchoolClassesTabPage);
-            this.AddNewSchoolClass.Location = new System.Drawing.Point(6, 434);
+            this.AddNewSchoolClass.Location = new System.Drawing.Point(6, 431);
             this.AddNewSchoolClass.Name = "AddNewSchoolClass";
             this.AddNewSchoolClass.SelectedIndex = 0;
-            this.AddNewSchoolClass.Size = new System.Drawing.Size(493, 29);
+            this.AddNewSchoolClass.Size = new System.Drawing.Size(493, 31);
             this.AddNewSchoolClass.TabIndex = 20;
             this.AddNewSchoolClass.Visible = false;
             // 
@@ -925,9 +924,9 @@
             this.AddNewSchoolClassTabPage.Location = new System.Drawing.Point(4, 22);
             this.AddNewSchoolClassTabPage.Name = "AddNewSchoolClassTabPage";
             this.AddNewSchoolClassTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.AddNewSchoolClassTabPage.Size = new System.Drawing.Size(485, 3);
+            this.AddNewSchoolClassTabPage.Size = new System.Drawing.Size(485, 5);
             this.AddNewSchoolClassTabPage.TabIndex = 0;
-            this.AddNewSchoolClassTabPage.Text = "Добавяне на осми клас";
+            this.AddNewSchoolClassTabPage.Text = "Добавяне на девети клас";
             // 
             // labelAddedNewSchoolClassesDone
             // 
@@ -955,9 +954,9 @@
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(95, 22);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(311, 31);
+            this.label17.Size = new System.Drawing.Size(335, 31);
             this.label17.TabIndex = 22;
-            this.label17.Text = "Добавяне на осми клас";
+            this.label17.Text = "Добавяне на девети клас";
             // 
             // dataGridViewAddNewSchoolClasses
             // 
@@ -1016,7 +1015,7 @@
             this.ManageSchoolClassesTabPage.Location = new System.Drawing.Point(4, 22);
             this.ManageSchoolClassesTabPage.Name = "ManageSchoolClassesTabPage";
             this.ManageSchoolClassesTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ManageSchoolClassesTabPage.Size = new System.Drawing.Size(485, 3);
+            this.ManageSchoolClassesTabPage.Size = new System.Drawing.Size(485, 488);
             this.ManageSchoolClassesTabPage.TabIndex = 1;
             this.ManageSchoolClassesTabPage.Text = "Преминаване в по-горен клас";
             // 
@@ -1399,9 +1398,9 @@
             this.panelAddSchoolYears.Controls.Add(this.listBoxAlreadyAddedSchoolYears);
             this.panelAddSchoolYears.Controls.Add(this.dataGridViewSchoolYears);
             this.panelAddSchoolYears.Controls.Add(this.label16);
-            this.panelAddSchoolYears.Location = new System.Drawing.Point(0, 175);
+            this.panelAddSchoolYears.Location = new System.Drawing.Point(3, 176);
             this.panelAddSchoolYears.Name = "panelAddSchoolYears";
-            this.panelAddSchoolYears.Size = new System.Drawing.Size(493, 51);
+            this.panelAddSchoolYears.Size = new System.Drawing.Size(493, 61);
             this.panelAddSchoolYears.TabIndex = 23;
             this.panelAddSchoolYears.Visible = false;
             // 
@@ -1605,6 +1604,7 @@
             // 
             // panelManageTerms
             // 
+            this.panelManageTerms.Controls.Add(this.panelAddStudent);
             this.panelManageTerms.Controls.Add(this.buttonAddTerms);
             this.panelManageTerms.Controls.Add(this.listBoxAlreadyAddedTerms);
             this.panelManageTerms.Controls.Add(this.dataGridViewAddTerms);

@@ -44,7 +44,7 @@ namespace PersonalShcoolCard
         private void buttonEditStudentsInfo_Click(object sender, EventArgs e)
         {
             dataGridViewStudents.AutoGenerateColumns = false;
-            dataGridViewStudents.DataSource = Classes.AddStudents.GetStudentByTeacher(teacherID);
+            dataGridViewStudents.DataSource = Classes.Student.GetStudentByTeacher(teacherID);
             panelEditStudentsInfo.Visible = true;
             panelEditStudentsInfo.BringToFront();
         }

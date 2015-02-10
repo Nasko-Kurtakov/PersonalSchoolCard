@@ -159,7 +159,7 @@
             this.buttonAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonAddStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonAddStudent.Image = global::PersonalShcoolCard.Properties.Resources.labelForButton;
-            this.buttonAddStudent.Location = new System.Drawing.Point(58, 61);
+            this.buttonAddStudent.Location = new System.Drawing.Point(58, 68);
             this.buttonAddStudent.Name = "buttonAddStudent";
             this.buttonAddStudent.Size = new System.Drawing.Size(156, 56);
             this.buttonAddStudent.TabIndex = 8;
@@ -192,6 +192,7 @@
             // 
             this.buttonAddClass.AutoSize = true;
             this.buttonAddClass.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAddClass.BackgroundImage = global::PersonalShcoolCard.Properties.Resources.labelForButton;
             this.buttonAddClass.Location = new System.Drawing.Point(58, 134);
             this.buttonAddClass.Name = "buttonAddClass";
             this.buttonAddClass.Size = new System.Drawing.Size(156, 46);

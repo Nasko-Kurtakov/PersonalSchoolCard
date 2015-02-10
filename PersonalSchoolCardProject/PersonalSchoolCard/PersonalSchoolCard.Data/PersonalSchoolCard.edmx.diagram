@@ -17,7 +17,7 @@
         <EntityTypeShape EntityType="PersonalSchoolCardModel.SchoolYear" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonalSchoolCardModel.Settlement" Width="1.5" PointX="3.75" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonalSchoolCardModel.Student" Width="1.5" PointX="6" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonalSchoolCardModel.StudentsSchoolYear" Width="1.5" PointX="8.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonalSchoolCardModel.StudentsSchoolYear" Width="2.125" PointX="8.25" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonalSchoolCardModel.Subject" Width="1.5" PointX="3" PointY="24.625" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonalSchoolCardModel.SubjectType" Width="1.5" PointX="6" PointY="21.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonalSchoolCardModel.sysdiagram" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />

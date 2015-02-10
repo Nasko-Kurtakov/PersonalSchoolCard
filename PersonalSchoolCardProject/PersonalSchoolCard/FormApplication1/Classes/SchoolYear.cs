@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
-    public class SchoolYears
+    public class SchoolYear
     {
         public static void AddSchooYear(DataGridView gridView)
         {

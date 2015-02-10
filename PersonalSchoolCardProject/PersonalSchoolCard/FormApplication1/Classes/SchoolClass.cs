@@ -6,7 +6,7 @@
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
 
-    public class ManageSchoolClasses
+    public class SchoolClass
     {
         public static List<SchoolClassInfo> GetCurrentSchoolClasses(string schoolYear)
         {

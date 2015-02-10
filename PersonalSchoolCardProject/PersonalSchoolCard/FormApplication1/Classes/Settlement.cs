@@ -5,7 +5,7 @@
     using System.Linq;
     using PersonalSchoolCard.Data;
     using System.Windows.Forms;
-    public class Settlements
+    public class Settlement
     {
 
         public static void ModifySettlement(int settlementID, int manicipalityID, int areaID)

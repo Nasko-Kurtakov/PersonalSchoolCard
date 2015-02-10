@@ -43,9 +43,9 @@ namespace PersonalShcoolCard
         }
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            labelcurrentSchoolYear.Text += Classes.SchoolYears.GetCurrentSchoolYear();
-            labelSchowCurrentSchoolYear.Text += Classes.SchoolYears.GetCurrentSchoolYear();
-            labelSchoolYear.Text += Classes.SchoolYears.GetCurrentSchoolYear();
+            labelcurrentSchoolYear.Text += Classes.SchoolYear.GetCurrentSchoolYear();
+            labelSchowCurrentSchoolYear.Text += Classes.SchoolYear.GetCurrentSchoolYear();
+            labelSchoolYear.Text += Classes.SchoolYear.GetCurrentSchoolYear();
         }
 
         #region//subjects and subject types methods
@@ -140,8 +140,8 @@ namespace PersonalShcoolCard
         {
 
 
-            dataGridViewShowCurrentClasses.DataSource = Classes.ManageSchoolClasses.GetCurrentSchoolClasses("2013/2014");
-            NewSchoolClassProfile.DataSource = Classes.AddProfiles.GetAllProfiles();
+            dataGridViewShowCurrentClasses.DataSource = Classes.SchoolClass.GetCurrentSchoolClasses("2013/2014");
+            NewSchoolClassProfile.DataSource = Classes.Profile.GetAllProfiles();
             NewSchoolClassTeacher.DataSource = Classes.AddTeacher.GetAllTeachersNames();
             AddNewSchoolClass.Visible = true;
             AddNewSchoolClass.BringToFront();
@@ -153,11 +153,11 @@ namespace PersonalShcoolCard
         }
         private void buttonShowChanges_Click_1(object sender, EventArgs e)
         {
-            dataGridViewShowChanges.DataSource = Classes.ManageSchoolClasses.VisualizeChanges(dataGridViewShowCurrentClasses);
+            dataGridViewShowChanges.DataSource = Classes.SchoolClass.VisualizeChanges(dataGridViewShowCurrentClasses);
         }
         private void buttonAccept_Click_1(object sender, EventArgs e)
         {
-            Classes.ManageSchoolClasses.SaveUpdatedSchoolClasses(dataGridViewShowChanges);
+            Classes.SchoolClass.SaveUpdatedSchoolClasses(dataGridViewShowChanges);
             labelWarning.Visible = false;
             buttonAccept.Visible = false;
             labelUpdatedScholClassesDone.Visible = true;
@@ -165,7 +165,7 @@ namespace PersonalShcoolCard
         }
         private void buttonAddNewSchoolClasses_Click(object sender, EventArgs e)
         {
-            Classes.ManageSchoolClasses.SaveNewSchoolClasses(dataGridViewAddNewSchoolClasses);
+            Classes.SchoolClass.SaveNewSchoolClasses(dataGridViewAddNewSchoolClasses);
             labelAddedNewSchoolClassesDone.Visible = true;
             timerManageSchoolClasses.Start();
         }
@@ -180,8 +180,8 @@ namespace PersonalShcoolCard
         #region //adding settlements
         private void buttonAddSettlements_Click(object sender, EventArgs e)
         {
-            comboBoxChooseArea.DataSource = Classes.Settlements.GetAreas();
-            comboBoxChooseManicipality.DataSource = Classes.Settlements.GetMinicipalities();
+            comboBoxChooseArea.DataSource = Classes.Settlement.GetAreas();
+            comboBoxChooseManicipality.DataSource = Classes.Settlement.GetMinicipalities();
             panelSettlements.Visible = true;
             panelSettlements.BringToFront();
         }
@@ -189,19 +189,19 @@ namespace PersonalShcoolCard
         {
             if (checkBoxIsManicipality.Checked && checkBoxIsArea.Checked)
             {
-                Classes.Settlements.AddSettlement(textBoxCityName.Text, int.Parse(comboBoxChooseManicipality.SelectedValue.ToString()), int.Parse(comboBoxChooseArea.SelectedValue.ToString()), true, true);
+                Classes.Settlement.AddSettlement(textBoxCityName.Text, int.Parse(comboBoxChooseManicipality.SelectedValue.ToString()), int.Parse(comboBoxChooseArea.SelectedValue.ToString()), true, true);
             }
             else
                 if (checkBoxIsManicipality.Checked)
                 {
-                    Classes.Settlements.AddSettlement(textBoxCityName.Text, int.Parse(comboBoxChooseManicipality.SelectedValue.ToString()), int.Parse(comboBoxChooseArea.SelectedValue.ToString()), true, false);
+                    Classes.Settlement.AddSettlement(textBoxCityName.Text, int.Parse(comboBoxChooseManicipality.SelectedValue.ToString()), int.Parse(comboBoxChooseArea.SelectedValue.ToString()), true, false);
                 }
                 else
                 {
-                    Classes.Settlements.AddSettlement(textBoxCityName.Text, int.Parse(comboBoxChooseManicipality.SelectedValue.ToString()), int.Parse(comboBoxChooseArea.SelectedValue.ToString()));
+                    Classes.Settlement.AddSettlement(textBoxCityName.Text, int.Parse(comboBoxChooseManicipality.SelectedValue.ToString()), int.Parse(comboBoxChooseArea.SelectedValue.ToString()));
                 }
-            comboBoxChooseArea.DataSource = Classes.Settlements.GetAreas();
-            comboBoxChooseManicipality.DataSource = Classes.Settlements.GetMinicipalities();
+            comboBoxChooseArea.DataSource = Classes.Settlement.GetAreas();
+            comboBoxChooseManicipality.DataSource = Classes.Settlement.GetMinicipalities();
             comboBoxChooseArea.Refresh();
             comboBoxChooseManicipality.Refresh();
             textBoxCityName.Clear();
@@ -241,7 +241,7 @@ namespace PersonalShcoolCard
         #region //creating profiles
         private void buttonCreateProfile_Click(object sender, EventArgs e)
         {
-            listBoxAlreadyAddedProfiles.DataSource = Classes.AddProfiles.GetAllProfiles();
+            listBoxAlreadyAddedProfiles.DataSource = Classes.Profile.GetAllProfiles();
 
             panelAddProfiles.Visible = true;
             panelAddProfiles.BringToFront();
@@ -249,8 +249,8 @@ namespace PersonalShcoolCard
 
         private void buttonAddProfile_Click(object sender, EventArgs e)
         {
-            Classes.AddProfiles.AddProfile(dataGridViewAddProfile);
-            listBoxAlreadyAddedProfiles.DataSource = Classes.AddProfiles.GetAllProfiles();
+            Classes.Profile.AddProfile(dataGridViewAddProfile);
+            listBoxAlreadyAddedProfiles.DataSource = Classes.Profile.GetAllProfiles();
             listBoxAlreadyAddedProfiles.Refresh();
         }//done
         #endregion
@@ -263,7 +263,7 @@ namespace PersonalShcoolCard
             textBoxPrincipalFirstName.Text = Classes.SchoolInfo.GetPrincipalName().FirstName;
             textBoxPrincipalSecondName.Text = Classes.SchoolInfo.GetPrincipalName().SecondName;
             textBoxPrincipalLastName.Text = Classes.SchoolInfo.GetPrincipalName().LastName;
-            comboBoxSchoolCity.DataSource = Classes.Settlements.GetVillages();
+            comboBoxSchoolCity.DataSource = Classes.Settlement.GetVillages();
             panelSchoolInfo.Visible = true;
             panelSchoolInfo.BringToFront();
         }
@@ -323,7 +323,7 @@ namespace PersonalShcoolCard
         #region//adding new school years
         private void buttonAddSchoolYear_Click(object sender, EventArgs e)
         {
-            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYears.GetAllSchoolYears();
+            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYear.GetAllSchoolYears();
             panelAddSchoolYears.Visible = true;
             panelAddSchoolYears.BringToFront();
         }
@@ -337,8 +337,8 @@ namespace PersonalShcoolCard
 
         private void buttonNewSchoolYear_Click(object sender, EventArgs e)
         {
-            Classes.SchoolYears.AddSchooYear(dataGridViewSchoolYears);
-            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYears.GetAllSchoolYears();
+            Classes.SchoolYear.AddSchooYear(dataGridViewSchoolYears);
+            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYear.GetAllSchoolYears();
             listBoxAlreadyAddedSchoolYears.Refresh();
             labelAddedSchoolYearDone.Visible = true;
             timerAddSchoolYear.Start();
@@ -351,8 +351,8 @@ namespace PersonalShcoolCard
 
         private void buttonAddNextOnly_Click(object sender, EventArgs e)
         {
-            Classes.SchoolYears.AddNextSchoolYearOnly();
-            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYears.GetAllSchoolYears();
+            Classes.SchoolYear.AddNextSchoolYearOnly();
+            listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYear.GetAllSchoolYears();
             listBoxAlreadyAddedSchoolYears.Refresh();
             buttonAddNextOnly.Enabled = false;
             labelAddedSchoolYearDone.Visible = true;
@@ -368,16 +368,16 @@ namespace PersonalShcoolCard
         }
         private void comboBoxClassesForCurrentSchoolYear_Click(object sender, EventArgs e)
         {
-            comboBoxClassesForCurrentSchoolYear.DataSource = Classes.AddStudents.GetClassesForThisSchoolYear();
+            comboBoxClassesForCurrentSchoolYear.DataSource = Classes.Student.GetClassesForThisSchoolYear();
         }
 
         private void comboBoxClassesForCurrentSchoolYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listBoxAlreadyAddedStudents.DataSource = Classes.AddStudents.GetStudentsInClasses(comboBoxClassesForCurrentSchoolYear);
+            listBoxAlreadyAddedStudents.DataSource = Classes.Student.GetStudentsInClasses(comboBoxClassesForCurrentSchoolYear);
         }
         private void buttonAddNewStudents_Click(object sender, EventArgs e)
         {
-            Classes.AddStudents.AddStudent(dataGridViewAddStudents, comboBoxClassesForCurrentSchoolYear);
+            Classes.Student.AddStudent(dataGridViewAddStudents, comboBoxClassesForCurrentSchoolYear);
             labelAddedNewStudents.Visible = true;
             timerAddedStudentsDone.Start();
         }
@@ -394,7 +394,7 @@ namespace PersonalShcoolCard
             {
                 dataGridViewAddStudents.AutoGenerateColumns = false;
                 string path = openFileDialogLoadFromExcel.FileName;
-                dataGridViewAddStudents.DataSource = Classes.AddStudents.AddStudentToDatagridFromExcel(path);
+                dataGridViewAddStudents.DataSource = Classes.Student.AddStudentToDatagridFromExcel(path);
             }
         }
         #endregion
