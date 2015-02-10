@@ -6,7 +6,7 @@
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
 
-    public class SchoolInfo
+    public class SchoolInfoDA
     {
         public static string GetSchoolName()
         {

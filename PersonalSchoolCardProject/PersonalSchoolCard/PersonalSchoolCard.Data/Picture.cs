@@ -15,7 +15,7 @@ namespace PersonalSchoolCard.Data
     public partial class Picture
     {
         public long StudentID { get; set; }
-        public byte[] Picture1 { get; set; }
+        public string PicturePath { get; set; }
     
         public virtual Student Student { get; set; }
     }

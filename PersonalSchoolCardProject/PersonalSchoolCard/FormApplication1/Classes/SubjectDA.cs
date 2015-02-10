@@ -7,7 +7,7 @@
     using PersonalSchoolCard;
     using PersonalSchoolCard.Data;
     using System.Windows.Forms;
-    public class AddSubject
+    public class SubjectDA
     {
         public static void AddSubjectTypes(DataGridView gridView)
         {

@@ -5,7 +5,7 @@
     using System.Linq;
     using PersonalSchoolCard.Data;
     using System.Windows.Forms;
-    public class Settlement
+    public class SettlementDA
     {
 
         public static void ModifySettlement(int settlementID, int manicipalityID, int areaID)
@@ -97,14 +97,14 @@
                 return minicipalities;
             }
         }
-        public static List<string> GetVillages()
+        public static List<Settlement> GetVillages()
         {
             using (var context = new PersonalSchoolCardEntities())
             {
                 try
                 {
                     var cities = context.Settlements
-                                    .Select(setlement => setlement.SettlementName)
+                                    .Select(setlement => setlement)
                                     .ToList();
                     return cities;
                 }

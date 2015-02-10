@@ -6,7 +6,7 @@
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
 
-    public class SchoolClass
+    public class SchoolClassDA
     {
         public static List<SchoolClassInfo> GetCurrentSchoolClasses(string schoolYear)
         {
@@ -16,6 +16,7 @@
                 {
                     var currentSchoolClasses = contex.SchoolClasses
                                                 .Where(schoolClasses => schoolClasses.SchoolYear.SchoolYearName == schoolYear)
+                                                .OrderBy(schoolClass=>schoolClass.ClassName)
                                                .Select(schoolClasses => schoolClasses)
                                                .ToList();
                     var currentSchoolClassesInfoList = new List<SchoolClassInfo>();

@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
-    public class AddTerm
+    public class TermDA
     {
         public static void AddTerms(DataGridView gridView)
         {

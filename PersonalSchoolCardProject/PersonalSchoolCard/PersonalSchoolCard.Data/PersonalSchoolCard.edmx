@@ -63,7 +63,7 @@
             <PropertyRef Name="StudentID" />
           </Key>
           <Property Name="StudentID" Type="bigint" Nullable="false" />
-          <Property Name="Picture" Type="image" />
+          <Property Name="PicturePath" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Principals">
           <Key>
@@ -747,7 +747,7 @@
             <PropertyRef Name="StudentID" />
           </Key>
           <Property Name="StudentID" Type="Int64" Nullable="false" />
-          <Property Name="Picture1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PicturePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Student" Relationship="Self.FK_Pictures_Students" FromRole="Pictures" ToRole="Students" />
         </EntityType>
         <EntityType Name="Principal">
@@ -1416,7 +1416,7 @@
             <EntityTypeMapping TypeName="PersonalSchoolCardModel.Picture">
               <MappingFragment StoreEntitySet="Pictures">
                 <ScalarProperty Name="StudentID" ColumnName="StudentID" />
-                <ScalarProperty Name="Picture1" ColumnName="Picture" />
+                <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

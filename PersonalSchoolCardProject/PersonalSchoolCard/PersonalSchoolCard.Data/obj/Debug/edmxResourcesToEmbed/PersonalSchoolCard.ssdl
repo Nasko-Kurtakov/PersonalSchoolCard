@@ -58,7 +58,7 @@
       <PropertyRef Name="StudentID" />
     </Key>
     <Property Name="StudentID" Type="bigint" Nullable="false" />
-    <Property Name="Picture" Type="image" />
+    <Property Name="PicturePath" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Principals">
     <Key>

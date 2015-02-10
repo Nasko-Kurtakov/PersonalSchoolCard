@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
-    public class AddTeacher
+    public class TeacherDA
     {
         public static void AddTeachers(DataGridView gridView)
         {

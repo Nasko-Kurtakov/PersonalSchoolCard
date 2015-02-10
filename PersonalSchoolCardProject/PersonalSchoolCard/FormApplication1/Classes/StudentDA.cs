@@ -7,8 +7,7 @@
     using PersonalSchoolCard.Data;
     using System.Data.OleDb;
     using System.Data;
-    //using Microsoft.Office.Interop.Excel;
-    public class Student
+    public class StudentDA
     {
         public static List<string> GetStudentsInClasses(ComboBox selectedClass)
         {
@@ -37,7 +36,7 @@
             {
                 try
                 {
-                    string currentSchoolYear = Classes.SchoolYear.GetCurrentSchoolYear();
+                    string currentSchoolYear = Classes.SchoolYearDA.GetCurrentSchoolYear();
                     var currentSchoolYearId = context.SchoolYears
                                         .Where(schoolYear => schoolYear.SchoolYearName == currentSchoolYear)
                                         .Select(schoolYear => schoolYear.SchoolYearID)
@@ -118,7 +117,7 @@
         }
         public static List<string> GetClassesForThisSchoolYear()
         {
-            string currentSchoolYear = Classes.SchoolYear.GetCurrentSchoolYear();
+            string currentSchoolYear = Classes.SchoolYearDA.GetCurrentSchoolYear();
             using (var context = new PersonalSchoolCardEntities())
             {
                 try
@@ -141,16 +140,44 @@
 
         public static List<Student> GetStudentByTeacher(int teacherID)
         {
-            using(var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
-                var currentSchoolYear = SchoolYear.GetCurrentSchoolYear();
+                var currentSchoolYear = SchoolYearDA.GetCurrentSchoolYear();
                 var studentsList = context.StudentsSchoolYears
                                     .Where(student => student.SchoolClass.TeacherID == teacherID && student.SchoolClass.SchoolYear.SchoolYearName == currentSchoolYear)
-                                    .Select(student =>student.Student )
+                                    .Select(student => student.Student)
                                     .ToList();
-                return  studentsList;
+                return studentsList;
             }
         }
+        public static long GetStudentID(int teacherID, string firstName, string secondName, string lastName)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var studentID = context.StudentsSchoolYears
+                      .Where(student => student.Student.FirstName == firstName
+                          && student.Student.SecondName == secondName
+                          && student.Student.LastName == lastName
+                           && student.SchoolClass.TeacherID == teacherID)
+                           .Select(student => student.StudentID)
+                           .FirstOrDefault();
+                return studentID;
+            }
+        }
+
+        public static Student SelectStudent(long studentID)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var student = context.Students
+                                .Where(stu => stu.StudentID == studentID)
+                                .Select(stu => stu)
+                                .First();
+                return student;
+            }
+        }
+
+
         public static string GetStudentsName(int studentID)
         {
             try
@@ -250,19 +277,7 @@
             }
         }
 
-        public static string GetStudentID(int studentID)
-        {
-            using (var context = new PersonalSchoolCardEntities())
-            {
-                var StudentID = context.Students
-                    .Where(student => student.StudentID == studentID)
-                    .Select(student => student.PersonalNumber)
-                    .FirstOrDefault()
-                    ;
-
-                return StudentID;
-            }
-        }
+        
 
         public static string GetStudentCardID(int studentID)
         {

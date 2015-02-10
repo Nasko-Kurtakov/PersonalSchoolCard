@@ -72,7 +72,7 @@
       <PropertyRef Name="StudentID" />
     </Key>
     <Property Name="StudentID" Type="Int64" Nullable="false" />
-    <Property Name="Picture1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PicturePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Student" Relationship="Self.FK_Pictures_Students" FromRole="Pictures" ToRole="Students" />
   </EntityType>
   <EntityType Name="Principal">

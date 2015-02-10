@@ -50,7 +50,7 @@
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.Picture">
         <MappingFragment StoreEntitySet="Pictures">
           <ScalarProperty Name="StudentID" ColumnName="StudentID" />
-          <ScalarProperty Name="Picture1" ColumnName="Picture" />
+          <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

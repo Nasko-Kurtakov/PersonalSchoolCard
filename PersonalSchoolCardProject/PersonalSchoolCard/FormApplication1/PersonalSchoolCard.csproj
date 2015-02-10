@@ -77,19 +77,19 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Profile.cs" />
-    <Compile Include="Classes\Student.cs" />
-    <Compile Include="Classes\Subject.cs" />
-    <Compile Include="Classes\Teacher.cs" />
-    <Compile Include="Classes\AbsencesType.cs" />
-    <Compile Include="Classes\Term.cs" />
-    <Compile Include="Classes\SchoolClass.cs" />
+    <Compile Include="Classes\ProfileDA.cs" />
+    <Compile Include="Classes\StudentDA.cs" />
+    <Compile Include="Classes\SubjectDA.cs" />
+    <Compile Include="Classes\TeacherDA.cs" />
+    <Compile Include="Classes\AbsencesTypeDA.cs" />
+    <Compile Include="Classes\TermDA.cs" />
+    <Compile Include="Classes\SchoolClassDA.cs" />
     <Compile Include="Classes\LogIn.cs" />
     <Compile Include="Classes\Queries.cs" />
     <Compile Include="Classes\SchoolClassInfo.cs" />
-    <Compile Include="Classes\SchoolInfo.cs" />
-    <Compile Include="Classes\SchoolYear.cs" />
-    <Compile Include="Classes\Settlement.cs" />
+    <Compile Include="Classes\SchoolInfoDA.cs" />
+    <Compile Include="Classes\SchoolYearDA.cs" />
+    <Compile Include="Classes\SettlementDA.cs" />
     <Compile Include="Classes\Teacher form classes\EditStudents.cs" />
     <Compile Include="Classes\Teacher form classes\OnLogin.cs" />
     <Compile Include="Classes\WaterMark.cs">
