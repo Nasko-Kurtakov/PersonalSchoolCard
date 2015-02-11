@@ -12,17 +12,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Classes">
-      <EntityTypeMapping TypeName="PersonalSchoolCardModel.Class">
-        <MappingFragment StoreEntitySet="Classes">
-          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
-          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
-          <ScalarProperty Name="SchoolYearID" ColumnName="SchoolYearID" />
-          <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
-          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Diploms">
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.Diplom">
         <MappingFragment StoreEntitySet="Diploms">
@@ -83,6 +72,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="SchoolClasses">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.SchoolClass">
+        <MappingFragment StoreEntitySet="SchoolClasses">
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="SchoolYearID" ColumnName="SchoolYearID" />
+          <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Schools">
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.School">
         <MappingFragment StoreEntitySet="Schools">
@@ -103,9 +103,10 @@
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.Settlement">
         <MappingFragment StoreEntitySet="Settlements">
           <ScalarProperty Name="SettlementID" ColumnName="SettlementID" />
-          <ScalarProperty Name="SettlemnetName" ColumnName="SettlemnetName" />
+          <ScalarProperty Name="SettlementName" ColumnName="SettlementName" />
           <ScalarProperty Name="ManicipalityID" ColumnName="ManicipalityID" />
           <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="District" ColumnName="District" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -153,17 +154,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="PersonalSchoolCardModel.sysdiagram">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Teachers">
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.Teacher">
         <MappingFragment StoreEntitySet="Teachers">
@@ -187,7 +177,7 @@
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.TypeAbsence">
         <MappingFragment StoreEntitySet="TypeAbsences">
           <ScalarProperty Name="TypeAbsenceID" ColumnName="TypeAbsenceID" />
-          <ScalarProperty Name="TypeAbsenceName" ColumnName="TypeAbsence" />
+          <ScalarProperty Name="TypeAbsence1" ColumnName="TypeAbsence" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
