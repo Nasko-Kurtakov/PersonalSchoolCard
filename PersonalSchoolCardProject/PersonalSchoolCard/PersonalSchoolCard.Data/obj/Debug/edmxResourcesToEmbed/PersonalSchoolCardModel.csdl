@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="PersonalSchoolCardModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="PersonalSchoolCardModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Absence">
     <Key>
       <PropertyRef Name="StudentID" />
@@ -12,27 +12,10 @@
     <Property Name="TermID" Type="Byte" Nullable="false" />
     <Property Name="TypeAbsenceID" Type="Byte" Nullable="false" />
     <Property Name="AbsencesNumber" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Class" Relationship="Self.FK_Absences_Classes1" FromRole="Absences" ToRole="Classes" />
+    <NavigationProperty Name="SchoolClass" Relationship="Self.FK_Absences_Classes1" FromRole="Absences" ToRole="SchoolClasses" />
     <NavigationProperty Name="Student" Relationship="Self.FK_Absences_Students" FromRole="Absences" ToRole="Students" />
     <NavigationProperty Name="Term" Relationship="Self.FK_Absences_Terms" FromRole="Absences" ToRole="Terms" />
     <NavigationProperty Name="TypeAbsence" Relationship="Self.FK_Absences_TypeAbsences" FromRole="Absences" ToRole="TypeAbsences" />
-  </EntityType>
-  <EntityType Name="Class">
-    <Key>
-      <PropertyRef Name="ClassID" />
-    </Key>
-    <Property Name="ClassID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ClassName" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-    <Property Name="SchoolYearID" Type="Int32" />
-    <Property Name="ProfileID" Type="Int32" />
-    <Property Name="TeacherID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Absences" Relationship="Self.FK_Absences_Classes1" FromRole="Classes" ToRole="Absences" />
-    <NavigationProperty Name="Profile" Relationship="Self.FK_Classes_Profiles" FromRole="Classes" ToRole="Profiles" />
-    <NavigationProperty Name="SchoolYear" Relationship="Self.FK_Classes_SchoolYears" FromRole="Classes" ToRole="SchoolYears" />
-    <NavigationProperty Name="Teacher" Relationship="Self.FK_Classes_Teachers" FromRole="Classes" ToRole="Teachers" />
-    <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_Classes" FromRole="Classes" ToRole="HoursStudedSubject" />
-    <NavigationProperty Name="Marks" Relationship="Self.FK_Marks_Classes" FromRole="Classes" ToRole="Marks" />
-    <NavigationProperty Name="StudentsSchoolYears" Relationship="Self.FK_StudentsSchoolYear_Classes" FromRole="Classes" ToRole="StudentsSchoolYear" />
   </EntityType>
   <EntityType Name="Diplom">
     <Key>
@@ -61,7 +44,7 @@
     <Property Name="SubjectID" Type="Int32" Nullable="false" />
     <Property Name="SubjectTypeID" Type="Byte" Nullable="false" />
     <Property Name="HoursStudied" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Class" Relationship="Self.FK_HoursStudedSubject_Classes" FromRole="HoursStudedSubject" ToRole="Classes" />
+    <NavigationProperty Name="SchoolClass" Relationship="Self.FK_HoursStudedSubject_Classes" FromRole="HoursStudedSubject" ToRole="SchoolClasses" />
     <NavigationProperty Name="Profile" Relationship="Self.FK_HoursStudedSubject_Profiles" FromRole="HoursStudedSubject" ToRole="Profiles" />
     <NavigationProperty Name="Subject" Relationship="Self.FK_HoursStudedSubject_Subjects" FromRole="HoursStudedSubject" ToRole="Subjects" />
     <NavigationProperty Name="SubjectType" Relationship="Self.FK_HoursStudedSubject_SubjectTypes" FromRole="HoursStudedSubject" ToRole="SubjectTypes" />
@@ -80,7 +63,7 @@
     <Property Name="TermID" Type="Byte" Nullable="false" />
     <Property Name="ClassID" Type="Int32" Nullable="false" />
     <Property Name="Mark1" Type="Byte" />
-    <NavigationProperty Name="Class" Relationship="Self.FK_Marks_Classes" FromRole="Marks" ToRole="Classes" />
+    <NavigationProperty Name="SchoolClass" Relationship="Self.FK_Marks_Classes" FromRole="Marks" ToRole="SchoolClasses" />
     <NavigationProperty Name="Student" Relationship="Self.FK_Marks_Students" FromRole="Marks" ToRole="Students" />
     <NavigationProperty Name="Term" Relationship="Self.FK_Marks_Terms" FromRole="Marks" ToRole="Terms" />
   </EntityType>
@@ -107,10 +90,27 @@
     </Key>
     <Property Name="ProfileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ProfileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Classes" Relationship="Self.FK_Classes_Profiles" FromRole="Profiles" ToRole="Classes" />
     <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_Profiles" FromRole="Profiles" ToRole="HoursStudedSubject" />
+    <NavigationProperty Name="SchoolClasses" Relationship="Self.FK_Classes_Profiles" FromRole="Profiles" ToRole="SchoolClasses" />
     <NavigationProperty Name="Students" Relationship="Self.FK_Students_Profiles" FromRole="Profiles" ToRole="Students" />
     <NavigationProperty Name="Subjects" Relationship="Self.ProfilesSubjects" FromRole="Profiles" ToRole="Subjects" />
+  </EntityType>
+  <EntityType Name="SchoolClass">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassName" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolYearID" Type="Int32" />
+    <Property Name="ProfileID" Type="Int32" />
+    <Property Name="TeacherID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Absences" Relationship="Self.FK_Absences_Classes1" FromRole="SchoolClasses" ToRole="Absences" />
+    <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_Classes" FromRole="SchoolClasses" ToRole="HoursStudedSubject" />
+    <NavigationProperty Name="Marks" Relationship="Self.FK_Marks_Classes" FromRole="SchoolClasses" ToRole="Marks" />
+    <NavigationProperty Name="Profile" Relationship="Self.FK_Classes_Profiles" FromRole="SchoolClasses" ToRole="Profiles" />
+    <NavigationProperty Name="SchoolYear" Relationship="Self.FK_Classes_SchoolYears" FromRole="SchoolClasses" ToRole="SchoolYears" />
+    <NavigationProperty Name="Teacher" Relationship="Self.FK_Classes_Teachers" FromRole="SchoolClasses" ToRole="Teachers" />
+    <NavigationProperty Name="StudentsSchoolYears" Relationship="Self.FK_StudentsSchoolYear_Classes" FromRole="SchoolClasses" ToRole="StudentsSchoolYear" />
   </EntityType>
   <EntityType Name="School">
     <Key>
@@ -125,7 +125,7 @@
     </Key>
     <Property Name="SchoolYearID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="SchoolYear1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <NavigationProperty Name="Classes" Relationship="Self.FK_Classes_SchoolYears" FromRole="SchoolYears" ToRole="Classes" />
+    <NavigationProperty Name="SchoolClasses" Relationship="Self.FK_Classes_SchoolYears" FromRole="SchoolYears" ToRole="SchoolClasses" />
     <NavigationProperty Name="StudentsSchoolYears" Relationship="Self.FK_StudentsSchoolYear_SchoolYears" FromRole="SchoolYears" ToRole="StudentsSchoolYear" />
   </EntityType>
   <EntityType Name="Settlement">
@@ -133,9 +133,10 @@
       <PropertyRef Name="SettlementID" />
     </Key>
     <Property Name="SettlementID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="SettlemnetName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="ManicipalityID" Type="Int32" Nullable="false" />
-    <Property Name="AreaID" Type="Int32" Nullable="false" />
+    <Property Name="SettlementName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ManicipalityID" Type="Int32" />
+    <Property Name="AreaID" Type="Int32" />
+    <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Settlements1" Relationship="Self.FK_Settlements_Settlements2" FromRole="Settlements" ToRole="Settlements1" />
     <NavigationProperty Name="Settlement1" Relationship="Self.FK_Settlements_Settlements2" FromRole="Settlements1" ToRole="Settlements" />
     <NavigationProperty Name="Settlements11" Relationship="Self.FK_Settlements_Settlements3" FromRole="Settlements" ToRole="Settlements1" />
@@ -176,7 +177,7 @@
     <Property Name="StudentID" Type="Int64" Nullable="false" />
     <Property Name="SchoolYearID" Type="Int32" Nullable="false" />
     <Property Name="ClassID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Class" Relationship="Self.FK_StudentsSchoolYear_Classes" FromRole="StudentsSchoolYear" ToRole="Classes" />
+    <NavigationProperty Name="SchoolClass" Relationship="Self.FK_StudentsSchoolYear_Classes" FromRole="StudentsSchoolYear" ToRole="SchoolClasses" />
     <NavigationProperty Name="SchoolYear" Relationship="Self.FK_StudentsSchoolYear_SchoolYears" FromRole="StudentsSchoolYear" ToRole="SchoolYears" />
     <NavigationProperty Name="Student" Relationship="Self.FK_StudentsSchoolYear_Students" FromRole="StudentsSchoolYear" ToRole="Students" />
   </EntityType>
@@ -199,16 +200,6 @@
     <NavigationProperty Name="Diploms" Relationship="Self.FK_Diploms_SubjectTypes" FromRole="SubjectTypes" ToRole="Diploms" />
     <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_SubjectTypes" FromRole="SubjectTypes" ToRole="HoursStudedSubject" />
   </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="Teacher">
     <Key>
       <PropertyRef Name="TeacherID" />
@@ -218,7 +209,7 @@
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="UserName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Classes" Relationship="Self.FK_Classes_Teachers" FromRole="Teachers" ToRole="Classes" />
+    <NavigationProperty Name="SchoolClasses" Relationship="Self.FK_Classes_Teachers" FromRole="Teachers" ToRole="SchoolClasses" />
   </EntityType>
   <EntityType Name="Term">
     <Key>
@@ -234,14 +225,14 @@
       <PropertyRef Name="TypeAbsenceID" />
     </Key>
     <Property Name="TypeAbsenceID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TypeAbsenceName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TypeAbsence1" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Absences" Relationship="Self.FK_Absences_TypeAbsences" FromRole="TypeAbsences" ToRole="Absences" />
   </EntityType>
   <Association Name="FK_Absences_Classes1">
-    <End Role="Classes" Type="Self.Class" Multiplicity="1" />
+    <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="1" />
     <End Role="Absences" Type="Self.Absence" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Classes">
+      <Principal Role="SchoolClasses">
         <PropertyRef Name="ClassID" />
       </Principal>
       <Dependent Role="Absences">
@@ -285,78 +276,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Classes_Profiles">
-    <End Role="Profiles" Type="Self.Profile" Multiplicity="0..1" />
-    <End Role="Classes" Type="Self.Class" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Profiles">
-        <PropertyRef Name="ProfileID" />
-      </Principal>
-      <Dependent Role="Classes">
-        <PropertyRef Name="ProfileID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Classes_SchoolYears">
-    <End Role="SchoolYears" Type="Self.SchoolYear" Multiplicity="0..1" />
-    <End Role="Classes" Type="Self.Class" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="SchoolYears">
-        <PropertyRef Name="SchoolYearID" />
-      </Principal>
-      <Dependent Role="Classes">
-        <PropertyRef Name="SchoolYearID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Classes_Teachers">
-    <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
-    <End Role="Classes" Type="Self.Class" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Teachers">
-        <PropertyRef Name="TeacherID" />
-      </Principal>
-      <Dependent Role="Classes">
-        <PropertyRef Name="TeacherID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_HoursStudedSubject_Classes">
-    <End Role="Classes" Type="Self.Class" Multiplicity="1" />
-    <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Classes">
-        <PropertyRef Name="ClassID" />
-      </Principal>
-      <Dependent Role="HoursStudedSubject">
-        <PropertyRef Name="ClassID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Marks_Classes">
-    <End Role="Classes" Type="Self.Class" Multiplicity="1" />
-    <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Classes">
-        <PropertyRef Name="ClassID" />
-      </Principal>
-      <Dependent Role="Marks">
-        <PropertyRef Name="ClassID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_StudentsSchoolYear_Classes">
-    <End Role="Classes" Type="Self.Class" Multiplicity="1" />
-    <End Role="StudentsSchoolYear" Type="Self.StudentsSchoolYear" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Classes">
-        <PropertyRef Name="ClassID" />
-      </Principal>
-      <Dependent Role="StudentsSchoolYear">
-        <PropertyRef Name="ClassID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Diploms_Students">
     <End Role="Students" Type="Self.Student" Multiplicity="1" />
     <End Role="Diploms" Type="Self.Diplom" Multiplicity="*" />
@@ -390,6 +309,18 @@
       </Principal>
       <Dependent Role="Diploms">
         <PropertyRef Name="SujectTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoursStudedSubject_Classes">
+    <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="1" />
+    <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolClasses">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="HoursStudedSubject">
+        <PropertyRef Name="ClassID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -429,6 +360,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Marks_Classes">
+    <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="1" />
+    <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolClasses">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="Marks">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Marks_Students">
     <End Role="Students" Type="Self.Student" Multiplicity="1" />
     <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
@@ -465,6 +408,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Classes_Profiles">
+    <End Role="Profiles" Type="Self.Profile" Multiplicity="0..1" />
+    <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profiles">
+        <PropertyRef Name="ProfileID" />
+      </Principal>
+      <Dependent Role="SchoolClasses">
+        <PropertyRef Name="ProfileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Students_Profiles">
     <End Role="Profiles" Type="Self.Profile" Multiplicity="1" />
     <End Role="Students" Type="Self.Student" Multiplicity="*" />
@@ -474,6 +429,42 @@
       </Principal>
       <Dependent Role="Students">
         <PropertyRef Name="ProfileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Classes_SchoolYears">
+    <End Role="SchoolYears" Type="Self.SchoolYear" Multiplicity="0..1" />
+    <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolYears">
+        <PropertyRef Name="SchoolYearID" />
+      </Principal>
+      <Dependent Role="SchoolClasses">
+        <PropertyRef Name="SchoolYearID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Classes_Teachers">
+    <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="TeacherID" />
+      </Principal>
+      <Dependent Role="SchoolClasses">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentsSchoolYear_Classes">
+    <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="1" />
+    <End Role="StudentsSchoolYear" Type="Self.StudentsSchoolYear" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolClasses">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="StudentsSchoolYear">
+        <PropertyRef Name="ClassID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -490,7 +481,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Settlements_Settlements2">
-    <End Role="Settlements" Type="Self.Settlement" Multiplicity="1" />
+    <End Role="Settlements" Type="Self.Settlement" Multiplicity="0..1" />
     <End Role="Settlements1" Type="Self.Settlement" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Settlements">
@@ -502,7 +493,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Settlements_Settlements3">
-    <End Role="Settlements" Type="Self.Settlement" Multiplicity="1" />
+    <End Role="Settlements" Type="Self.Settlement" Multiplicity="0..1" />
     <End Role="Settlements1" Type="Self.Settlement" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Settlements">
@@ -543,13 +534,13 @@
   </Association>
   <EntityContainer Name="PersonalSchoolCardEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Absences" EntityType="Self.Absence" />
-    <EntitySet Name="Classes" EntityType="Self.Class" />
     <EntitySet Name="Diploms" EntityType="Self.Diplom" />
     <EntitySet Name="HoursStudedSubjects" EntityType="Self.HoursStudedSubject" />
     <EntitySet Name="Marks" EntityType="Self.Mark" />
     <EntitySet Name="Pictures" EntityType="Self.Picture" />
     <EntitySet Name="Principals" EntityType="Self.Principal" />
     <EntitySet Name="Profiles" EntityType="Self.Profile" />
+    <EntitySet Name="SchoolClasses" EntityType="Self.SchoolClass" />
     <EntitySet Name="Schools" EntityType="Self.School" />
     <EntitySet Name="SchoolYears" EntityType="Self.SchoolYear" />
     <EntitySet Name="Settlements" EntityType="Self.Settlement" />
@@ -557,12 +548,11 @@
     <EntitySet Name="StudentsSchoolYears" EntityType="Self.StudentsSchoolYear" />
     <EntitySet Name="Subjects" EntityType="Self.Subject" />
     <EntitySet Name="SubjectTypes" EntityType="Self.SubjectType" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="Teachers" EntityType="Self.Teacher" />
     <EntitySet Name="Terms" EntityType="Self.Term" />
     <EntitySet Name="TypeAbsences" EntityType="Self.TypeAbsence" />
     <AssociationSet Name="FK_Absences_Classes1" Association="Self.FK_Absences_Classes1">
-      <End Role="Classes" EntitySet="Classes" />
+      <End Role="SchoolClasses" EntitySet="SchoolClasses" />
       <End Role="Absences" EntitySet="Absences" />
     </AssociationSet>
     <AssociationSet Name="FK_Absences_Students" Association="Self.FK_Absences_Students">
@@ -577,30 +567,6 @@
       <End Role="TypeAbsences" EntitySet="TypeAbsences" />
       <End Role="Absences" EntitySet="Absences" />
     </AssociationSet>
-    <AssociationSet Name="FK_Classes_Profiles" Association="Self.FK_Classes_Profiles">
-      <End Role="Profiles" EntitySet="Profiles" />
-      <End Role="Classes" EntitySet="Classes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Classes_SchoolYears" Association="Self.FK_Classes_SchoolYears">
-      <End Role="SchoolYears" EntitySet="SchoolYears" />
-      <End Role="Classes" EntitySet="Classes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Classes_Teachers" Association="Self.FK_Classes_Teachers">
-      <End Role="Teachers" EntitySet="Teachers" />
-      <End Role="Classes" EntitySet="Classes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_HoursStudedSubject_Classes" Association="Self.FK_HoursStudedSubject_Classes">
-      <End Role="Classes" EntitySet="Classes" />
-      <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Marks_Classes" Association="Self.FK_Marks_Classes">
-      <End Role="Classes" EntitySet="Classes" />
-      <End Role="Marks" EntitySet="Marks" />
-    </AssociationSet>
-    <AssociationSet Name="FK_StudentsSchoolYear_Classes" Association="Self.FK_StudentsSchoolYear_Classes">
-      <End Role="Classes" EntitySet="Classes" />
-      <End Role="StudentsSchoolYear" EntitySet="StudentsSchoolYears" />
-    </AssociationSet>
     <AssociationSet Name="FK_Diploms_Students" Association="Self.FK_Diploms_Students">
       <End Role="Students" EntitySet="Students" />
       <End Role="Diploms" EntitySet="Diploms" />
@@ -612,6 +578,10 @@
     <AssociationSet Name="FK_Diploms_SubjectTypes" Association="Self.FK_Diploms_SubjectTypes">
       <End Role="SubjectTypes" EntitySet="SubjectTypes" />
       <End Role="Diploms" EntitySet="Diploms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoursStudedSubject_Classes" Association="Self.FK_HoursStudedSubject_Classes">
+      <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+      <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
     </AssociationSet>
     <AssociationSet Name="FK_HoursStudedSubject_Profiles" Association="Self.FK_HoursStudedSubject_Profiles">
       <End Role="Profiles" EntitySet="Profiles" />
@@ -625,6 +595,10 @@
       <End Role="SubjectTypes" EntitySet="SubjectTypes" />
       <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
     </AssociationSet>
+    <AssociationSet Name="FK_Marks_Classes" Association="Self.FK_Marks_Classes">
+      <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+      <End Role="Marks" EntitySet="Marks" />
+    </AssociationSet>
     <AssociationSet Name="FK_Marks_Students" Association="Self.FK_Marks_Students">
       <End Role="Students" EntitySet="Students" />
       <End Role="Marks" EntitySet="Marks" />
@@ -637,9 +611,25 @@
       <End Role="Students" EntitySet="Students" />
       <End Role="Pictures" EntitySet="Pictures" />
     </AssociationSet>
+    <AssociationSet Name="FK_Classes_Profiles" Association="Self.FK_Classes_Profiles">
+      <End Role="Profiles" EntitySet="Profiles" />
+      <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+    </AssociationSet>
     <AssociationSet Name="FK_Students_Profiles" Association="Self.FK_Students_Profiles">
       <End Role="Profiles" EntitySet="Profiles" />
       <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Classes_SchoolYears" Association="Self.FK_Classes_SchoolYears">
+      <End Role="SchoolYears" EntitySet="SchoolYears" />
+      <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Classes_Teachers" Association="Self.FK_Classes_Teachers">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentsSchoolYear_Classes" Association="Self.FK_StudentsSchoolYear_Classes">
+      <End Role="SchoolClasses" EntitySet="SchoolClasses" />
+      <End Role="StudentsSchoolYear" EntitySet="StudentsSchoolYears" />
     </AssociationSet>
     <AssociationSet Name="FK_StudentsSchoolYear_SchoolYears" Association="Self.FK_StudentsSchoolYear_SchoolYears">
       <End Role="SchoolYears" EntitySet="SchoolYears" />

@@ -23,6 +23,12 @@ namespace PersonalShcoolCard
             
             panelEditStudentsInfo.Parent = panelParent;
             panelEditStudentsInfo.Dock = DockStyle.Fill;
+
+            panelShowStudents.Parent = panelParent;
+            panelShowStudents.Dock = DockStyle.Fill;
+
+            panelStudentInfo.Parent = panelParent;
+            panelStudentInfo.Dock = DockStyle.Fill;
         }
 
         private void TeacherForm_Load(object sender, EventArgs e)
@@ -108,6 +114,22 @@ namespace PersonalShcoolCard
             {
                 path = openFileDialogLoadPortrait.FileName;
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            dataGridViewShowStudents.AutoGenerateColumns = false;
+            dataGridViewShowStudents.DataSource = Classes.StudentDA.GetStudentByTeacher(teacherID);
+
+            panelShowStudents.Visible = true;
+            panelShowStudents.BringToFront();
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panelStudentInfo.Visible = true;
+            panelStudentInfo.BringToFront();
         }
     }
 }

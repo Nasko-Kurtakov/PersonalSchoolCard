@@ -309,17 +309,32 @@
 
         }
 
-        public static string GetStudentGenderAssist()
+        public static string GetStudentGenderAssist(int studentID)
         {
-            //using ( var context = new PersonalSchoolCardEntities())
-            //{
-            //  code
-            //  code
-            //  code
-            //  return code;
-            //}
+            using ( var context = new PersonalSchoolCardEntities())
+            {
+                string familyName = context.Students
+                    .Where(stu => stu.StudentID == studentID)
+                    .Select(stu => stu.LastName)
+                    .FirstOrDefault()
+                    ;
 
-            return "н";
+                int charCount = 0;
+                
+                foreach(char c in familyName)
+                {
+                    charCount++;
+                }
+
+                char genderAssist = familyName[charCount - 1];
+
+                if (genderAssist == 'а')
+                {
+                    return "на";
+                }
+                else
+                    return "н";
+            }
         }
 
         public static DateTime GetStudentDateOfBirth(int studentID)
