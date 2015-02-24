@@ -35,7 +35,6 @@ D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoo
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.SqlServer.dll
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.xml
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.SqlServer.xml
-D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.csprojResolveAssemblyReference.cache
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.dll
 D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.pdb
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.dll.config

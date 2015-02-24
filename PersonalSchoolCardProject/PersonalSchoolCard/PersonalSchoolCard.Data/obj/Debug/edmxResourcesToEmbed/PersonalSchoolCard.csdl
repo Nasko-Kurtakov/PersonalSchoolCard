@@ -19,35 +19,30 @@
   </EntityType>
   <EntityType Name="Diplom">
     <Key>
-      <PropertyRef Name="SudentID" />
+      <PropertyRef Name="StudentID" />
       <PropertyRef Name="SubjectID" />
-      <PropertyRef Name="SujectTypeID" />
+      <PropertyRef Name="SubjectTypeID" />
     </Key>
-    <Property Name="SudentID" Type="Int64" Nullable="false" />
+    <Property Name="StudentID" Type="Int64" Nullable="false" />
     <Property Name="SubjectID" Type="Int32" Nullable="false" />
-    <Property Name="SujectTypeID" Type="Byte" Nullable="false" />
+    <Property Name="SubjectTypeID" Type="Byte" Nullable="false" />
     <Property Name="Mark" Type="Single" Nullable="false" />
     <Property Name="HoursStudied" Type="Int32" />
     <NavigationProperty Name="Student" Relationship="Self.FK_Diploms_Students" FromRole="Diploms" ToRole="Students" />
     <NavigationProperty Name="Subject" Relationship="Self.FK_Diploms_Subjects" FromRole="Diploms" ToRole="Subjects" />
     <NavigationProperty Name="SubjectType" Relationship="Self.FK_Diploms_SubjectTypes" FromRole="Diploms" ToRole="SubjectTypes" />
   </EntityType>
-  <EntityType Name="HoursStudedSubject">
+  <EntityType Name="HoursStudiedSubject">
     <Key>
       <PropertyRef Name="ClassID" />
-      <PropertyRef Name="ProfileID" />
       <PropertyRef Name="SubjectID" />
       <PropertyRef Name="SubjectTypeID" />
     </Key>
     <Property Name="ClassID" Type="Int32" Nullable="false" />
-    <Property Name="ProfileID" Type="Int32" Nullable="false" />
+    <Property Name="ProfileID" Type="Int32" />
     <Property Name="SubjectID" Type="Int32" Nullable="false" />
     <Property Name="SubjectTypeID" Type="Byte" Nullable="false" />
     <Property Name="HoursStudied" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="SchoolClass" Relationship="Self.FK_HoursStudedSubject_Classes" FromRole="HoursStudedSubject" ToRole="SchoolClasses" />
-    <NavigationProperty Name="Profile" Relationship="Self.FK_HoursStudedSubject_Profiles" FromRole="HoursStudedSubject" ToRole="Profiles" />
-    <NavigationProperty Name="Subject" Relationship="Self.FK_HoursStudedSubject_Subjects" FromRole="HoursStudedSubject" ToRole="Subjects" />
-    <NavigationProperty Name="SubjectType" Relationship="Self.FK_HoursStudedSubject_SubjectTypes" FromRole="HoursStudedSubject" ToRole="SubjectTypes" />
   </EntityType>
   <EntityType Name="Mark">
     <Key>
@@ -62,7 +57,7 @@
     <Property Name="SubjectTypeID" Type="Byte" Nullable="false" />
     <Property Name="TermID" Type="Byte" Nullable="false" />
     <Property Name="ClassID" Type="Int32" Nullable="false" />
-    <Property Name="Mark1" Type="Byte" />
+    <Property Name="Grade" Type="Byte" />
     <NavigationProperty Name="SchoolClass" Relationship="Self.FK_Marks_Classes" FromRole="Marks" ToRole="SchoolClasses" />
     <NavigationProperty Name="Student" Relationship="Self.FK_Marks_Students" FromRole="Marks" ToRole="Students" />
     <NavigationProperty Name="Term" Relationship="Self.FK_Marks_Terms" FromRole="Marks" ToRole="Terms" />
@@ -90,7 +85,6 @@
     </Key>
     <Property Name="ProfileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ProfileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_Profiles" FromRole="Profiles" ToRole="HoursStudedSubject" />
     <NavigationProperty Name="SchoolClasses" Relationship="Self.FK_Classes_Profiles" FromRole="Profiles" ToRole="SchoolClasses" />
     <NavigationProperty Name="Students" Relationship="Self.FK_Students_Profiles" FromRole="Profiles" ToRole="Students" />
     <NavigationProperty Name="Subjects" Relationship="Self.ProfilesSubjects" FromRole="Profiles" ToRole="Subjects" />
@@ -105,7 +99,6 @@
     <Property Name="ProfileID" Type="Int32" />
     <Property Name="TeacherID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Absences" Relationship="Self.FK_Absences_Classes1" FromRole="SchoolClasses" ToRole="Absences" />
-    <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_Classes" FromRole="SchoolClasses" ToRole="HoursStudedSubject" />
     <NavigationProperty Name="Marks" Relationship="Self.FK_Marks_Classes" FromRole="SchoolClasses" ToRole="Marks" />
     <NavigationProperty Name="Profile" Relationship="Self.FK_Classes_Profiles" FromRole="SchoolClasses" ToRole="Profiles" />
     <NavigationProperty Name="SchoolYear" Relationship="Self.FK_Classes_SchoolYears" FromRole="SchoolClasses" ToRole="SchoolYears" />
@@ -140,10 +133,10 @@
     <Property Name="AreaID" Type="Int32" />
     <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Schools" Relationship="Self.FK_Schools_Settlements" FromRole="Settlements" ToRole="Schools" />
-    <NavigationProperty Name="Settlements1" Relationship="Self.FK_Settlements_Settlements2" FromRole="Settlements" ToRole="Settlements1" />
-    <NavigationProperty Name="Settlement1" Relationship="Self.FK_Settlements_Settlements2" FromRole="Settlements1" ToRole="Settlements" />
-    <NavigationProperty Name="Settlements11" Relationship="Self.FK_Settlements_Settlements3" FromRole="Settlements" ToRole="Settlements1" />
-    <NavigationProperty Name="Settlement2" Relationship="Self.FK_Settlements_Settlements3" FromRole="Settlements1" ToRole="Settlements" />
+    <NavigationProperty Name="Settlements1" Relationship="Self.FK_SetlementID_To_ManicipalityID" FromRole="Settlements" ToRole="Settlements1" />
+    <NavigationProperty Name="Settlement1" Relationship="Self.FK_SetlementID_To_ManicipalityID" FromRole="Settlements1" ToRole="Settlements" />
+    <NavigationProperty Name="Settlements11" Relationship="Self.FK_SettlementId_To_AreaID" FromRole="Settlements" ToRole="Settlements1" />
+    <NavigationProperty Name="Settlement2" Relationship="Self.FK_SettlementId_To_AreaID" FromRole="Settlements1" ToRole="Settlements" />
     <NavigationProperty Name="Students" Relationship="Self.FK_Students_Settlements" FromRole="Settlements" ToRole="Students" />
   </EntityType>
   <EntityType Name="Student">
@@ -191,7 +184,6 @@
     <Property Name="SubjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="SubjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Diploms" Relationship="Self.FK_Diploms_Subjects" FromRole="Subjects" ToRole="Diploms" />
-    <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_Subjects" FromRole="Subjects" ToRole="HoursStudedSubject" />
     <NavigationProperty Name="Profiles" Relationship="Self.ProfilesSubjects" FromRole="Subjects" ToRole="Profiles" />
   </EntityType>
   <EntityType Name="SubjectType">
@@ -199,9 +191,8 @@
       <PropertyRef Name="SubjectTypeID" />
     </Key>
     <Property Name="SubjectTypeID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="SubjectType1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SubjectTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Diploms" Relationship="Self.FK_Diploms_SubjectTypes" FromRole="SubjectTypes" ToRole="Diploms" />
-    <NavigationProperty Name="HoursStudedSubjects" Relationship="Self.FK_HoursStudedSubject_SubjectTypes" FromRole="SubjectTypes" ToRole="HoursStudedSubject" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -297,7 +288,7 @@
         <PropertyRef Name="StudentID" />
       </Principal>
       <Dependent Role="Diploms">
-        <PropertyRef Name="SudentID" />
+        <PropertyRef Name="StudentID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -321,54 +312,6 @@
         <PropertyRef Name="SubjectTypeID" />
       </Principal>
       <Dependent Role="Diploms">
-        <PropertyRef Name="SujectTypeID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_HoursStudedSubject_Classes">
-    <End Role="SchoolClasses" Type="Self.SchoolClass" Multiplicity="1" />
-    <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="SchoolClasses">
-        <PropertyRef Name="ClassID" />
-      </Principal>
-      <Dependent Role="HoursStudedSubject">
-        <PropertyRef Name="ClassID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_HoursStudedSubject_Profiles">
-    <End Role="Profiles" Type="Self.Profile" Multiplicity="1" />
-    <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Profiles">
-        <PropertyRef Name="ProfileID" />
-      </Principal>
-      <Dependent Role="HoursStudedSubject">
-        <PropertyRef Name="ProfileID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_HoursStudedSubject_Subjects">
-    <End Role="Subjects" Type="Self.Subject" Multiplicity="1" />
-    <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Subjects">
-        <PropertyRef Name="SubjectID" />
-      </Principal>
-      <Dependent Role="HoursStudedSubject">
-        <PropertyRef Name="SubjectID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_HoursStudedSubject_SubjectTypes">
-    <End Role="SubjectTypes" Type="Self.SubjectType" Multiplicity="1" />
-    <End Role="HoursStudedSubject" Type="Self.HoursStudedSubject" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="SubjectTypes">
-        <PropertyRef Name="SubjectTypeID" />
-      </Principal>
-      <Dependent Role="HoursStudedSubject">
         <PropertyRef Name="SubjectTypeID" />
       </Dependent>
     </ReferentialConstraint>
@@ -505,7 +448,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Settlements_Settlements2">
+  <Association Name="FK_SetlementID_To_ManicipalityID">
     <End Role="Settlements" Type="Self.Settlement" Multiplicity="0..1" />
     <End Role="Settlements1" Type="Self.Settlement" Multiplicity="*" />
     <ReferentialConstraint>
@@ -517,7 +460,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Settlements_Settlements3">
+  <Association Name="FK_SettlementId_To_AreaID">
     <End Role="Settlements" Type="Self.Settlement" Multiplicity="0..1" />
     <End Role="Settlements1" Type="Self.Settlement" Multiplicity="*" />
     <ReferentialConstraint>
@@ -560,7 +503,7 @@
   <EntityContainer Name="PersonalSchoolCardEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Absences" EntityType="Self.Absence" />
     <EntitySet Name="Diploms" EntityType="Self.Diplom" />
-    <EntitySet Name="HoursStudedSubjects" EntityType="Self.HoursStudedSubject" />
+    <EntitySet Name="HoursStudiedSubjects" EntityType="Self.HoursStudiedSubject" />
     <EntitySet Name="Marks" EntityType="Self.Mark" />
     <EntitySet Name="Pictures" EntityType="Self.Picture" />
     <EntitySet Name="Principals" EntityType="Self.Principal" />
@@ -604,22 +547,6 @@
     <AssociationSet Name="FK_Diploms_SubjectTypes" Association="Self.FK_Diploms_SubjectTypes">
       <End Role="SubjectTypes" EntitySet="SubjectTypes" />
       <End Role="Diploms" EntitySet="Diploms" />
-    </AssociationSet>
-    <AssociationSet Name="FK_HoursStudedSubject_Classes" Association="Self.FK_HoursStudedSubject_Classes">
-      <End Role="SchoolClasses" EntitySet="SchoolClasses" />
-      <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
-    </AssociationSet>
-    <AssociationSet Name="FK_HoursStudedSubject_Profiles" Association="Self.FK_HoursStudedSubject_Profiles">
-      <End Role="Profiles" EntitySet="Profiles" />
-      <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
-    </AssociationSet>
-    <AssociationSet Name="FK_HoursStudedSubject_Subjects" Association="Self.FK_HoursStudedSubject_Subjects">
-      <End Role="Subjects" EntitySet="Subjects" />
-      <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
-    </AssociationSet>
-    <AssociationSet Name="FK_HoursStudedSubject_SubjectTypes" Association="Self.FK_HoursStudedSubject_SubjectTypes">
-      <End Role="SubjectTypes" EntitySet="SubjectTypes" />
-      <End Role="HoursStudedSubject" EntitySet="HoursStudedSubjects" />
     </AssociationSet>
     <AssociationSet Name="FK_Marks_Classes" Association="Self.FK_Marks_Classes">
       <End Role="SchoolClasses" EntitySet="SchoolClasses" />
@@ -665,11 +592,11 @@
       <End Role="SchoolYears" EntitySet="SchoolYears" />
       <End Role="StudentsSchoolYear" EntitySet="StudentsSchoolYears" />
     </AssociationSet>
-    <AssociationSet Name="FK_Settlements_Settlements2" Association="Self.FK_Settlements_Settlements2">
+    <AssociationSet Name="FK_SetlementID_To_ManicipalityID" Association="Self.FK_SetlementID_To_ManicipalityID">
       <End Role="Settlements" EntitySet="Settlements" />
       <End Role="Settlements1" EntitySet="Settlements" />
     </AssociationSet>
-    <AssociationSet Name="FK_Settlements_Settlements3" Association="Self.FK_Settlements_Settlements3">
+    <AssociationSet Name="FK_SettlementId_To_AreaID" Association="Self.FK_SettlementId_To_AreaID">
       <End Role="Settlements" EntitySet="Settlements" />
       <End Role="Settlements1" EntitySet="Settlements" />
     </AssociationSet>

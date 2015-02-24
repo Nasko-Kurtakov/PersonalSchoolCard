@@ -1,0 +1,135 @@
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\bin\Debug\FormApplication1.exe.config
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\obj\Debug\FormApplication1.exe
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\obj\Debug\FormApplication1.pdb
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\bin\Debug\FormApplication1.exe
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\bin\Debug\FormApplication1.pdb
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\bin\Debug\Entities.dll
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\bin\Debug\EntityFramework.dll
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\bin\Debug\Entities.pdb
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\bin\Debug\EntityFramework.xml
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\obj\Debug\PersonalSchoolCard.csprojResolveAssemblyReference.cache
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\obj\Debug\FormApplication1.PersonalRecord.resources
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\obj\Debug\FormApplication1.Properties.Resources.resources
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\obj\Debug\FormApplication1.Success.resources
+C:\Users\Alex Goranov\Documents\Visual Studio 2013\Projects\FormApplication1\FormApplication1\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\FormApplication1.exe.config
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\FormApplication1.exe
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\FormApplication1.pdb
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalSchoolCard.csprojResolveAssemblyReference.cache
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.PersonalRecord.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Properties.Resources.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Success.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\FormApplication1.exe
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\FormApplication1.pdb
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.dll
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.SqlServer.dll
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.xml
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\EntityFramework.SqlServer.xml
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Menu.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.AdminForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard\PersonalSchoolCard\FormApplication1\FormApplication1\bin\Debug\PersonalSchoolCard.Data.pdb
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\FormApplication1.exe.config
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\obj\Debug\FormApplication1.exe
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\obj\Debug\FormApplication1.pdb
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\obj\Debug\PersonalSchoolCard.csprojResolveAssemblyReference.cache
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.AdminForm.resources
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Menu.resources
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.PersonalRecord.resources
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Properties.Resources.resources
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\obj\Debug\PersonalShcoolCard.Success.resources
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\FormApplication1.exe
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\FormApplication1.pdb
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\EntityFramework.dll
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\PersonalSchoolCard.Data.dll
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\PersonalSchoolCard.Data.pdb
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\EntityFramework.xml
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alex Goranov\Documents\Hah 1\PersonalSchoolCard-master\FormApplication1\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\FormApplication1.exe
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\FormApplication1.pdb
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalSchoolCard.csprojResolveAssemblyReference.cache
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.AdminForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Menu.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.PersonalRecord.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Properties.Resources.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Success.resources
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.pdb
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.dll
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.SqlServer.dll
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\PersonalSchoolCard.Data.pdb
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.xml
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.SqlServer.xml
+D:\PersonalSchoolCard\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe.config
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\FormApplication1.exe
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\FormApplication1.pdb
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.pdb
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.dll
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.SqlServer.dll
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\PersonalSchoolCard.Data.pdb
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.xml
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.SqlServer.xml
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalSchoolCard.csprojResolveAssemblyReference.cache
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.AdminForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Menu.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.PersonalRecord.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Properties.Resources.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Success.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe.config
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\FormApplication1.exe
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\FormApplication1.pdb
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalSchoolCard.csprojResolveAssemblyReference.cache
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.AdminForm.resources
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Menu.resources
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.PersonalRecord.resources
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Properties.Resources.resources
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.Success.resources
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.pdb
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.dll
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\PersonalSchoolCard.Data.dll
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\PersonalSchoolCard.Data.pdb
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.xml
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.LoginForm.resources
+C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.TeacherForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.LoginForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\obj\Debug\PersonalShcoolCard.TeacherForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\FormApplication1.exe.config
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\FormApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\FormApplication1.exe.config
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\FormApplication1.exe
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\FormApplication1.pdb
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\FormApplication1.exe
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\FormApplication1.pdb
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.dll
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.SqlServer.dll
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.Data.pdb
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.xml
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.SqlServer.xml
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalSchoolCard.csprojResolveAssemblyReference.cache
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.AdminForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.LoginForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.Menu.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.PersonalRecord.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.Properties.Resources.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.Success.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.TeacherForm.resources
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache

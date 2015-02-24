@@ -3,9 +3,17 @@
     using System;
     public partial class Teacher
     {
-        public string GetFullName()
+        public string FullName
         {
-            return string.Format("{0} {1}", this.FirstName, this.LastName);
+            get
+            {
+                return string.Format("{0} {1}", this.FirstName, this.LastName);
+            }
         }
+
+        //public string GetFullName()
+        //{
+        //    return string.Format("{0} {1}", this.FirstName, this.LastName);
+        //}
     }
 }

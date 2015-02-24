@@ -15,17 +15,17 @@
     <EntitySetMapping Name="Diploms">
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.Diplom">
         <MappingFragment StoreEntitySet="Diploms">
-          <ScalarProperty Name="SudentID" ColumnName="SudentID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
           <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
-          <ScalarProperty Name="SujectTypeID" ColumnName="SujectTypeID" />
+          <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
           <ScalarProperty Name="Mark" ColumnName="Mark" />
           <ScalarProperty Name="HoursStudied" ColumnName="HoursStudied" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="HoursStudedSubjects">
-      <EntityTypeMapping TypeName="PersonalSchoolCardModel.HoursStudedSubject">
-        <MappingFragment StoreEntitySet="HoursStudedSubject">
+    <EntitySetMapping Name="HoursStudiedSubjects">
+      <EntityTypeMapping TypeName="PersonalSchoolCardModel.HoursStudiedSubject">
+        <MappingFragment StoreEntitySet="HoursStudiedSubject">
           <ScalarProperty Name="ClassID" ColumnName="ClassID" />
           <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
           <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
@@ -42,7 +42,7 @@
           <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
           <ScalarProperty Name="TermID" ColumnName="TermID" />
           <ScalarProperty Name="ClassID" ColumnName="ClassID" />
-          <ScalarProperty Name="Mark1" ColumnName="Mark" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -96,7 +96,7 @@
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.SchoolYear">
         <MappingFragment StoreEntitySet="SchoolYears">
           <ScalarProperty Name="SchoolYearID" ColumnName="SchoolYearID" />
-          <ScalarProperty Name="SchoolYearName" ColumnName="SchoolYear" />
+          <ScalarProperty Name="SchoolYearName" ColumnName="SchoolYearName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -151,7 +151,7 @@
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.SubjectType">
         <MappingFragment StoreEntitySet="SubjectTypes">
           <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
-          <ScalarProperty Name="SubjectType1" ColumnName="SubjectType" />
+          <ScalarProperty Name="SubjectTypeName" ColumnName="SubjectTypeName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -189,7 +189,7 @@
       <EntityTypeMapping TypeName="PersonalSchoolCardModel.TypeAbsence">
         <MappingFragment StoreEntitySet="TypeAbsences">
           <ScalarProperty Name="TypeAbsenceID" ColumnName="TypeAbsenceID" />
-          <ScalarProperty Name="TypeAbsenceName" ColumnName="TypeAbsence" />
+          <ScalarProperty Name="TypeAbsenceName" ColumnName="TypeAbsenceName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
