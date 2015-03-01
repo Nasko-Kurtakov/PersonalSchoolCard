@@ -13,7 +13,7 @@
             {
                 var newHourStudied = new HoursStudiedSubject
                 {
-                    ClassID = SchoolClassDA.GetClassIDByTeacherID(teacherID),
+                    ClassID = TeacherDA.GetClassIDByTeacherID(teacherID),
                     SubjectID = SubjectDA.GetSubjectID(gridView.Rows[i].Cells[0].ToString()),
                     //SubjectTypeID = SubjectDA.GetSubjectTypeID()
 

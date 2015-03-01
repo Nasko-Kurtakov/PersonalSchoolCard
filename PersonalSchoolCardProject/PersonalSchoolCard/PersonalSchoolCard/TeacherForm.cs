@@ -51,7 +51,7 @@
         {
             teacherName = Classes.TeacherDA.GetTeacher(teacherID).FullName;
             this.Text = teacherName;
-            string className = Classes.SchoolClassDA.GetClassNameByTeacherID(teacherID, schoolYear);
+            string className = Classes.TeacherDA.GetClassNameByTeacherID(teacherID, schoolYear);
             labelHi.Text += teacherName + "!";
             labelSchooYear.Text += schoolYear + " година";
             labelSchoolClassName.Text += className;
@@ -543,7 +543,7 @@
         #region//adding marks for the end of 12 grade exams
         private void buttonAddMarksFromExams_Click(object sender, EventArgs e)
         {
-            if (Classes.SchoolClassDA.GetClassNumberByTeacherID(teacherID) != 12)
+            if (Classes.TeacherDA.GetClassNumberByTeacherID(teacherID) != 12)
             {
                 labelExamWarning.Visible = true;
                 buttonSaveExamMarks.Enabled = false;

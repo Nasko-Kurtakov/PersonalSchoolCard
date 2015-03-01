@@ -39,22 +39,9 @@
             {
                 try
                 {
-                    string currentSchoolYear = Classes.SchoolYearDA.GetCurrentSchoolYear();
-                    var currentSchoolYearId = context.SchoolYears
-                                        .Where(schoolYear => schoolYear.SchoolYearName == currentSchoolYear)
-                                        .Select(schoolYear => schoolYear.SchoolYearID)
-                                        .First();
-                    var classId = context.SchoolClasses
-                                    .Where(schoolClass => schoolClass.ClassName == selectedClass.SelectedItem.ToString() && schoolClass.SchoolYearID == currentSchoolYearId)
-                                    .Select(schoolClass => schoolClass.ClassID)
-                                    .First();
-                    var profileId = context.SchoolClasses
-                                    .Where(schoolClass => schoolClass.ClassName == selectedClass.SelectedItem.ToString() && schoolClass.SchoolYearID == currentSchoolYearId)
-                                    .Select(schoolClass => schoolClass.ProfileID)
-                                    .First();
-
-
-
+                    int currentSchoolYearID = SchoolYearDA.GetCurrentSchoolYearID();
+                    var classID = SchoolClassDA.GetClassID(selectedClass.SelectedItem.ToString());
+                    var profileId = ProfileDA.GetProfileIDByClassName(selectedClass.SelectedItem.ToString());
 
                     for (int rows = 0; rows < gridView.Rows.Count - 1; rows++)
                     {
@@ -75,9 +62,9 @@
                             context.SaveChanges();
                             var newStudentsSchoolYear = new StudentsSchoolYear
                             {
-                                SchoolYearID = currentSchoolYearId,
+                                SchoolYearID = currentSchoolYearID,
                                 StudentID = newStudent.StudentID,
-                                ClassID = classId
+                                ClassID = classID
                             };
                             context.StudentsSchoolYears.Add(newStudentsSchoolYear);
                         }
@@ -117,29 +104,7 @@
                 MessageBox.Show("Грешка! Въведете правилно име на листа от файла с имената!");
                 return null;
             }
-        }
-        public static List<string> GetClassesForThisSchoolYear()
-        {
-            string currentSchoolYear = Classes.SchoolYearDA.GetCurrentSchoolYear();
-            using (var context = new PersonalSchoolCardEntities())
-            {
-                try
-                {
-                    var schoolClassesNamesList = context.SchoolClasses
-                                                  .Where(schoolClasses => schoolClasses.SchoolYear.SchoolYearName == currentSchoolYear)
-                                                  .Select(schoolClasses => schoolClasses.ClassName)
-                                                  .ToList();
-                    return schoolClassesNamesList;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    return null;
-                }
-
-            }
-
-        }
+        }        
         public static List<Student> GetStudentByTeacher(int teacherID)
         {
             using (var context = new PersonalSchoolCardEntities())

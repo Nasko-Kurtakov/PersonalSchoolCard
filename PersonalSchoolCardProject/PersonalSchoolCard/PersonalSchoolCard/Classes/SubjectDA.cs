@@ -122,7 +122,7 @@
         {
             using (var context = new PersonalSchoolCardEntities())
             {
-                var profileID = SchoolClassDA.GetClassProfileIDByTeacher(teacherID, SchoolYearDA.GetCurrentSchoolYear());
+                var profileID = TeacherDA.GetClassProfileIDByTeacher(teacherID, SchoolYearDA.GetCurrentSchoolYear());
                 var profile = context.Profiles
                                             .Where(prof => prof.ProfileID == profileID)
                                             .Select(prof => prof).FirstOrDefault();

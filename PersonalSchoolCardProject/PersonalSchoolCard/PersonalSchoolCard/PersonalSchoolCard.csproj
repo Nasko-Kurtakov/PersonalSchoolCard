@@ -95,7 +95,6 @@
     <Compile Include="Classes\SchoolInfoDA.cs" />
     <Compile Include="Classes\SchoolYearDA.cs" />
     <Compile Include="Classes\SettlementDA.cs" />
-    <Compile Include="Classes\OnLogin.cs" />
     <Compile Include="Classes\WaterMark.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -38,7 +38,6 @@
                 }
             }
         }
-
         public static void AddNextSchoolYearOnly()
         {
             using (var context = new PersonalSchoolCardEntities())
@@ -60,7 +59,6 @@
                 }
             }
         }
-
         public static List<string> GetAllSchoolYears()
         {
             using (var context = new PersonalSchoolCardEntities())
@@ -80,7 +78,6 @@
                 }
             }
         }
-
         public static string GetCurrentSchoolYear()
         {
             if (DateTime.Now.Month < 9)
@@ -92,6 +89,18 @@
                 return string.Format("{0}/{1}", DateTime.Now.Year, DateTime.Now.Year + 1);
             }
         }
+        public static int GetCurrentSchoolYearID()
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var currentSchooYear = GetCurrentSchoolYear();
+                var currentSchoolYearID = context.SchoolYears
+                    .Where(schoolYear => schoolYear.SchoolYearName == currentSchooYear)
+                    .Select(schoolYear => schoolYear.SchoolYearID)
+                    .First();
+                return currentSchoolYearID;
+            }
+        }
         public static List<string> GetAllStudiedYears()
         {
             var years = new List<string>();
@@ -100,6 +109,19 @@
             years.Add(string.Format("{0}/{1}", DateTime.Now.Year - 2, DateTime.Now.Year - 1));
             years.Add(string.Format("{0}/{1}", DateTime.Now.Year - 1, DateTime.Now.Year));
             return years;
+        }
+        public static string GetNextSchoolYear(string currentSchoolYear = "")
+        {
+            if (currentSchoolYear == "")
+            {
+                currentSchoolYear = GetCurrentSchoolYear();
+            }
+            string shoolYearFirstHalf = currentSchoolYear.Substring(0, 4);
+            int shoolYearFirstHalfAsInt = int.Parse(shoolYearFirstHalf) + 1;
+            string schoolYearSecondHalf = currentSchoolYear.Substring(5, 4);
+            int schoolYearSecondHalfAsInt = int.Parse(schoolYearSecondHalf) + 1;
+            string schoolYearChanged = string.Format("{0}/{1}", shoolYearFirstHalfAsInt, schoolYearSecondHalfAsInt);
+            return schoolYearChanged;
         }
     }
 }

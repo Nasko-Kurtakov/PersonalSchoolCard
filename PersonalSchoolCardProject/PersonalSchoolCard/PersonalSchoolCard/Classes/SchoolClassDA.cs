@@ -61,7 +61,7 @@
                                     var schoolClass = new SchoolClassInfo
                                     {
                                         ClassName = GetNextClassName(className),
-                                        SchoolYear = GetNextSchoolYear(schoolYear),
+                                        SchoolYear = SchoolYearDA.GetNextSchoolYear(schoolYear),
                                         ProfileID = profileID,
                                         TeacherName = teacherName
                                     };
@@ -76,16 +76,7 @@
                     return null;
                 }
             }
-        }
-        private static string GetNextSchoolYear(string currentSchoolYear)
-        {
-            string shoolYearFirstHalf = currentSchoolYear.Substring(0, 4);
-            int shoolYearFirstHalfAsInt = int.Parse(shoolYearFirstHalf) + 1;
-            string schoolYearSecondHalf = currentSchoolYear.Substring(5, 4);
-            int schoolYearSecondHalfAsInt = int.Parse(schoolYearSecondHalf) + 1;
-            string schoolYearChanged = string.Format("{0}/{1}", shoolYearFirstHalfAsInt, schoolYearSecondHalfAsInt);
-            return schoolYearChanged;
-        }
+        }        
         private static string GetNextClassName(string className)
         {
             if (className.Length < 4 && className != "12")
@@ -205,50 +196,38 @@
                 }
             }
         }
-        public static string GetClassNameByTeacherID(int teacherID,string schoolYear)
+        public static List<string> GetClassesForThisSchoolYear()
+        {
+            string currentSchoolYear = Classes.SchoolYearDA.GetCurrentSchoolYear();
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                try
+                {
+                    var schoolClassesNamesList = context.SchoolClasses
+                                                  .Where(schoolClasses => schoolClasses.SchoolYear.SchoolYearName == currentSchoolYear)
+                                                  .Select(schoolClasses => schoolClasses.ClassName)
+                                                  .ToList();
+                    return schoolClassesNamesList;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return null;
+                }
+
+            }
+
+        }
+        public static int GetClassID (string className)
         {
             using(var context = new PersonalSchoolCardEntities())
             {
-                var className = context.SchoolClasses
-                                    .Where(schoolClass => schoolClass.TeacherID == teacherID && schoolClass.SchoolYear.SchoolYearName == schoolYear)
-                                    .Select(schoolClass => schoolClass.ClassName)
-                                    .FirstOrDefault();
-                return className;
-            }
-        }
-        public static int GetClassIDByTeacherID(int teacherID)
-        {
-            using (var context = new PersonalSchoolCardEntities())
-            {
-                var currentSchoolYear = SchoolYearDA.GetCurrentSchoolYear();
+                var currentSchoolYearID = SchoolYearDA.GetCurrentSchoolYearID();
                 var classID = context.SchoolClasses
-                                        .Where(schoolClass => schoolClass.TeacherID == teacherID && schoolClass.SchoolYear.SchoolYearName == currentSchoolYear)
-                                        .Select(schoolClass => schoolClass.ClassID)
-                                        .FirstOrDefault();
+                                    .Where(schoolClass => schoolClass.ClassName == className && schoolClass.SchoolYearID == currentSchoolYearID)
+                                    .Select(schoolClass => schoolClass.ClassID)
+                                    .First();
                 return classID;
-            }
-        }
-        public static int GetClassNumberByTeacherID(int teacherID)
-        {
-            using(var context = new PersonalSchoolCardEntities())
-            {
-                var currentSchoolYear = SchoolYearDA.GetCurrentSchoolYear();
-                var selectedSchoolClass = context.SchoolClasses
-                                .Where(schoolClass => schoolClass.TeacherID == teacherID && schoolClass.SchoolYear.SchoolYearName == currentSchoolYear)
-                                .Select(schoolClass => schoolClass)
-                                .FirstOrDefault();
-                return selectedSchoolClass.ClassNumber;
-            }
-        }
-        public static int? GetClassProfileIDByTeacher(int teacherID,string schoolYear)
-        {
-            using (var context = new PersonalSchoolCardEntities())
-            {
-                var className = context.SchoolClasses
-                                    .Where(schoolClass => schoolClass.TeacherID == teacherID && schoolClass.SchoolYear.SchoolYearName == schoolYear)
-                                    .Select(schoolClass => schoolClass.ProfileID)
-                                    .FirstOrDefault();
-                return className;
             }
         }
     }

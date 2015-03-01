@@ -20,7 +20,7 @@
                         {
                             var profile = new Profile
                             {
-                                 ProfileName = input
+                                ProfileName = input
                             };
                             context.Profiles.Add(profile);
                         }
@@ -68,14 +68,26 @@
         }
         public static string GetProfileByTeacher(int teacherID)
         {
-            using(var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
-                var profileID = SchoolClassDA.GetClassProfileIDByTeacher(teacherID, SchoolYearDA.GetCurrentSchoolYear());
+                var profileID = TeacherDA.GetClassProfileIDByTeacher(teacherID, SchoolYearDA.GetCurrentSchoolYear());
                 var profileName = context.Profiles
                                 .Where(profile => profile.ProfileID == profileID)
                                 .Select(profile => profile.ProfileName)
                                 .First();
                 return profileName;
+            }
+        }
+        public static int GetProfileIDByClassName(string className)
+        {
+            using(var context = new PersonalSchoolCardEntities())
+            {
+                var currentSchoolYearID = SchoolYearDA.GetCurrentSchoolYearID();
+                var profileID = context.SchoolClasses
+                                    .Where(schoolClass => schoolClass.ClassName == className && schoolClass.SchoolYearID == currentSchoolYearID)
+                                    .Select(schoolClass => schoolClass.ProfileID)
+                                    .First();
+                return profileID
             }
         }
     }

@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace PersonalShcoolCard
+﻿namespace PersonalShcoolCard
 {
+    using System;
+    using System.Collections.Generic;
+    using PersonalSchoolCard.Data;
+    using System.Windows.Forms;
     public partial class AdminForm : Form
     {
+        List<int> profileSubjects = new List<int>();
         public AdminForm()
         {
             InitializeComponent();
@@ -244,14 +239,14 @@ namespace PersonalShcoolCard
 
             panelAddProfiles.Visible = true;
             panelAddProfiles.BringToFront();
-        }//done
+        }
 
         private void buttonAddProfile_Click(object sender, EventArgs e)
         {
             Classes.ProfileDA.AddProfile(dataGridViewAddProfile);
             listBoxAlreadyAddedProfiles.DataSource = Classes.ProfileDA.GetAllProfiles();
             listBoxAlreadyAddedProfiles.Refresh();
-        }//done
+        }
         #endregion
 
         #region//Editing school info and principals info
@@ -275,19 +270,19 @@ namespace PersonalShcoolCard
 
         private void buttonUpdateInfo_Click(object sender, EventArgs e)
         {
-            Classes.SchoolInfoDA.UpdatePrincipalNames(textBoxPrincipalFirstName, textBoxPrincipalSecondName, textBoxPrincipalLastName);
+            Classes.SchoolInfoDA.UpdatePrincipalNames(textBoxPrincipalFirstName.Text, textBoxPrincipalSecondName.Text, textBoxPrincipalLastName.Text);
             labelSchoolInfoChangesDone.Visible = true;
             timerChangesDone.Start();
         }
         private void buttonChangeSchoolName_Click(object sender, EventArgs e)
         {
-            Classes.SchoolInfoDA.UpdateSchoolName(textBoxSchoolName);
+            Classes.SchoolInfoDA.UpdateSchoolName(textBoxSchoolName.Text);
             labelSchoolInfoChangesDone.Visible = true;
             timerChangesDone.Start();
         }
         private void buttonAddPrincipal_Click(object sender, EventArgs e)
         {
-            Classes.SchoolInfoDA.NewPrincipal(textBoxNewPrincipalFirstName, textBoxNewPrincipalSecondName, textBoxNewPrincipalLastName);
+            Classes.SchoolInfoDA.NewPrincipal(textBoxNewPrincipalFirstName.Text, textBoxNewPrincipalSecondName.Text, textBoxNewPrincipalLastName.Text);
             textBoxNewPrincipalFirstName.Clear();
             textBoxNewPrincipalSecondName.Clear();
             textBoxNewPrincipalLastName.Clear();
@@ -367,7 +362,7 @@ namespace PersonalShcoolCard
         }
         private void comboBoxClassesForCurrentSchoolYear_Click(object sender, EventArgs e)
         {
-            comboBoxClassesForCurrentSchoolYear.DataSource = Classes.StudentDA.GetClassesForThisSchoolYear();
+            comboBoxClassesForCurrentSchoolYear.DataSource = Classes.SchoolClassDA.GetClassesForThisSchoolYear();
         }
 
         private void comboBoxClassesForCurrentSchoolYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -399,9 +394,8 @@ namespace PersonalShcoolCard
         }
         #endregion
 
-        private void panelAddSubjects_Paint(object sender, PaintEventArgs e)
-        {
+        
 
-        }
+        
     }
 }

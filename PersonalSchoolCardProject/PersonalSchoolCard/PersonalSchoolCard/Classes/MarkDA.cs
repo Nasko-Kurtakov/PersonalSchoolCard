@@ -39,7 +39,7 @@
         {
             using (var context = new PersonalSchoolCardEntities())
             {
-                var classID = SchoolClassDA.GetClassIDByTeacherID(teacherID);
+                var classID = TeacherDA.GetClassIDByTeacherID(teacherID);
                 if (!isForExtraSubjects)
                 {
                     for (int i = 0; i < gridView.Rows.Count; i++)
@@ -131,7 +131,7 @@
             using (var context = new PersonalSchoolCardEntities())
             {
                 var subjectID = SubjectDA.GetSubjectID(subjectName);
-                var classID = SchoolClassDA.GetClassIDByTeacherID(teacherID);
+                var classID = TeacherDA.GetClassIDByTeacherID(teacherID);
                 var mark = context.Marks
                             .Where(subject => subject.StudentID == studentID && subject.SubjectID == subjectID
                                     && subject.ClassID == classID && subject.SubjectTypeID == subjectTypeID && subject.TermID == termID)

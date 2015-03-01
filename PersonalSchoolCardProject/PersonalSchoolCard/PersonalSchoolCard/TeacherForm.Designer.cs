@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.buttonShowDiplomReady = new System.Windows.Forms.Button();
             this.buttonShowDiplom = new System.Windows.Forms.Button();
@@ -179,6 +179,39 @@
             this.label79 = new System.Windows.Forms.Label();
             this.label2First = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label50 = new System.Windows.Forms.Label();
+            this.labelFifthExtraSubjectMark = new System.Windows.Forms.Label();
+            this.labelFourthExtraSubjectMark = new System.Windows.Forms.Label();
+            this.labelFifthExtraSubjectMarkWords = new System.Windows.Forms.Label();
+            this.labelFourthExtraSubjectMarkWords = new System.Windows.Forms.Label();
+            this.labelFifthExtraSubject = new System.Windows.Forms.Label();
+            this.labelFourthExtraSubject = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.labelThirdExtraSubjectMark = new System.Windows.Forms.Label();
+            this.labelSecondExtraSubjectMark = new System.Windows.Forms.Label();
+            this.labelFirstExtraSubjectMark = new System.Windows.Forms.Label();
+            this.labelThirdExtraSubjectMarkWords = new System.Windows.Forms.Label();
+            this.labelSecondExtraSubjectMarkWords = new System.Windows.Forms.Label();
+            this.labelFirstExtraSubjectMarkWords = new System.Windows.Forms.Label();
+            this.labelThirdExtraSubject = new System.Windows.Forms.Label();
+            this.labelSecondExtraSubject = new System.Windows.Forms.Label();
+            this.labelFirstExtraSubject = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.labelThirdChosenSubjectMark = new System.Windows.Forms.Label();
+            this.labelSecondChosenSubjectMark = new System.Windows.Forms.Label();
+            this.labelFirstChosenSubjectMar = new System.Windows.Forms.Label();
+            this.labelThirdChosenSubjectMarkWords = new System.Windows.Forms.Label();
+            this.labelSecondChosenSubjectMarkWords = new System.Windows.Forms.Label();
+            this.labelFirstChosenSubjectMarkWords = new System.Windows.Forms.Label();
+            this.labelThirdChosenSubject = new System.Windows.Forms.Label();
+            this.labelSecondChosenSubject = new System.Windows.Forms.Label();
+            this.labelFirstChosenSubject = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
             this.label86 = new System.Windows.Forms.Label();
@@ -426,6 +459,15 @@
             this.labelCurrentSchoolYear = new System.Windows.Forms.Label();
             this.labelTeacherName = new System.Windows.Forms.Label();
             this.labelClassName = new System.Windows.Forms.Label();
+            this.textBoxPersonalCardNumber = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxDateOfBirth = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxMobilePhone = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxEnrollmentYear = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxAddress = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxPersonalNumber = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxLastName = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxSecondName = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxFirstName = new PersonalShcoolCard.Classes.WaterMark();
             this.labelPictureNotSelected = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -453,48 +495,6 @@
             this.timerTeacherChanges = new System.Windows.Forms.Timer(this.components);
             this.timerSaveSuccessExtraSubjects = new System.Windows.Forms.Timer(this.components);
             this.timerAbcensesSaveSuccessful = new System.Windows.Forms.Timer(this.components);
-            this.labelFirstChosenSubject = new System.Windows.Forms.Label();
-            this.labelSecondChosenSubject = new System.Windows.Forms.Label();
-            this.labelThirdChosenSubject = new System.Windows.Forms.Label();
-            this.labelFirstChosenSubjectMarkWords = new System.Windows.Forms.Label();
-            this.labelSecondChosenSubjectMarkWords = new System.Windows.Forms.Label();
-            this.labelThirdChosenSubjectMarkWords = new System.Windows.Forms.Label();
-            this.labelFirstChosenSubjectMar = new System.Windows.Forms.Label();
-            this.labelSecondChosenSubjectMark = new System.Windows.Forms.Label();
-            this.labelThirdChosenSubjectMark = new System.Windows.Forms.Label();
-            this.labelThirdExtraSubjectMark = new System.Windows.Forms.Label();
-            this.labelSecondExtraSubjectMark = new System.Windows.Forms.Label();
-            this.labelFirstExtraSubjectMark = new System.Windows.Forms.Label();
-            this.labelThirdExtraSubjectMarkWords = new System.Windows.Forms.Label();
-            this.labelSecondExtraSubjectMarkWords = new System.Windows.Forms.Label();
-            this.labelFirstExtraSubjectMarkWords = new System.Windows.Forms.Label();
-            this.labelThirdExtraSubject = new System.Windows.Forms.Label();
-            this.labelSecondExtraSubject = new System.Windows.Forms.Label();
-            this.labelFirstExtraSubject = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
-            this.label106 = new System.Windows.Forms.Label();
-            this.label107 = new System.Windows.Forms.Label();
-            this.label108 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
-            this.labelFifthExtraSubjectMark = new System.Windows.Forms.Label();
-            this.labelFourthExtraSubjectMark = new System.Windows.Forms.Label();
-            this.labelFifthExtraSubjectMarkWords = new System.Windows.Forms.Label();
-            this.labelFourthExtraSubjectMarkWords = new System.Windows.Forms.Label();
-            this.labelFifthExtraSubject = new System.Windows.Forms.Label();
-            this.labelFourthExtraSubject = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.textBoxPersonalCardNumber = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxDateOfBirth = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxMobilePhone = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxEnrollmentYear = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxAddress = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxPersonalNumber = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxLastName = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxSecondName = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxFirstName = new PersonalShcoolCard.Classes.WaterMark();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -686,10 +686,10 @@
             this.tabControlDiplom.Controls.Add(this.tabPageInfo);
             this.tabControlDiplom.Controls.Add(this.tabPage2);
             this.tabControlDiplom.Controls.Add(this.tabPage3);
-            this.tabControlDiplom.Location = new System.Drawing.Point(3, 3);
+            this.tabControlDiplom.Location = new System.Drawing.Point(3, 248);
             this.tabControlDiplom.Name = "tabControlDiplom";
             this.tabControlDiplom.SelectedIndex = 0;
-            this.tabControlDiplom.Size = new System.Drawing.Size(1043, 725);
+            this.tabControlDiplom.Size = new System.Drawing.Size(1043, 35);
             this.tabControlDiplom.TabIndex = 1153;
             this.tabControlDiplom.Visible = false;
             // 
@@ -740,7 +740,7 @@
             this.tabPageInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPageInfo.Name = "tabPageInfo";
             this.tabPageInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInfo.Size = new System.Drawing.Size(1035, 699);
+            this.tabPageInfo.Size = new System.Drawing.Size(1035, 9);
             this.tabPageInfo.TabIndex = 0;
             this.tabPageInfo.Text = "Първа страница";
             // 
@@ -1184,7 +1184,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1035, 280);
+            this.tabPage2.Size = new System.Drawing.Size(1035, 699);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Втора страница";
             // 
@@ -1286,7 +1286,7 @@
             this.panelMandatorySubjectsMarks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMandatorySubjectsMarks.Location = new System.Drawing.Point(3, 3);
             this.panelMandatorySubjectsMarks.Name = "panelMandatorySubjectsMarks";
-            this.panelMandatorySubjectsMarks.Size = new System.Drawing.Size(1029, 274);
+            this.panelMandatorySubjectsMarks.Size = new System.Drawing.Size(1029, 693);
             this.panelMandatorySubjectsMarks.TabIndex = 228;
             // 
             // label92
@@ -2333,6 +2333,319 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Трета страница";
             // 
+            // label50
+            // 
+            this.label50.BackColor = System.Drawing.Color.Olive;
+            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label50.Location = new System.Drawing.Point(137, 567);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(763, 4);
+            this.label50.TabIndex = 177;
+            // 
+            // labelFifthExtraSubjectMark
+            // 
+            this.labelFifthExtraSubjectMark.AutoSize = true;
+            this.labelFifthExtraSubjectMark.Location = new System.Drawing.Point(739, 516);
+            this.labelFifthExtraSubjectMark.Name = "labelFifthExtraSubjectMark";
+            this.labelFifthExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
+            this.labelFifthExtraSubjectMark.TabIndex = 176;
+            this.labelFifthExtraSubjectMark.Text = "-";
+            // 
+            // labelFourthExtraSubjectMark
+            // 
+            this.labelFourthExtraSubjectMark.AutoSize = true;
+            this.labelFourthExtraSubjectMark.Location = new System.Drawing.Point(739, 488);
+            this.labelFourthExtraSubjectMark.Name = "labelFourthExtraSubjectMark";
+            this.labelFourthExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
+            this.labelFourthExtraSubjectMark.TabIndex = 175;
+            this.labelFourthExtraSubjectMark.Text = "-";
+            // 
+            // labelFifthExtraSubjectMarkWords
+            // 
+            this.labelFifthExtraSubjectMarkWords.AutoSize = true;
+            this.labelFifthExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 514);
+            this.labelFifthExtraSubjectMarkWords.Name = "labelFifthExtraSubjectMarkWords";
+            this.labelFifthExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelFifthExtraSubjectMarkWords.TabIndex = 174;
+            this.labelFifthExtraSubjectMarkWords.Text = "-";
+            // 
+            // labelFourthExtraSubjectMarkWords
+            // 
+            this.labelFourthExtraSubjectMarkWords.AutoSize = true;
+            this.labelFourthExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 487);
+            this.labelFourthExtraSubjectMarkWords.Name = "labelFourthExtraSubjectMarkWords";
+            this.labelFourthExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelFourthExtraSubjectMarkWords.TabIndex = 173;
+            this.labelFourthExtraSubjectMarkWords.Text = "-";
+            // 
+            // labelFifthExtraSubject
+            // 
+            this.labelFifthExtraSubject.AutoSize = true;
+            this.labelFifthExtraSubject.Location = new System.Drawing.Point(219, 517);
+            this.labelFifthExtraSubject.Name = "labelFifthExtraSubject";
+            this.labelFifthExtraSubject.Size = new System.Drawing.Size(10, 13);
+            this.labelFifthExtraSubject.TabIndex = 172;
+            this.labelFifthExtraSubject.Text = "-";
+            // 
+            // labelFourthExtraSubject
+            // 
+            this.labelFourthExtraSubject.AutoSize = true;
+            this.labelFourthExtraSubject.Location = new System.Drawing.Point(219, 488);
+            this.labelFourthExtraSubject.Name = "labelFourthExtraSubject";
+            this.labelFourthExtraSubject.Size = new System.Drawing.Size(10, 13);
+            this.labelFourthExtraSubject.TabIndex = 171;
+            this.labelFourthExtraSubject.Text = "-";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label93.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label93.Location = new System.Drawing.Point(179, 518);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(667, 15);
+            this.label93.TabIndex = 170;
+            this.label93.Text = resources.GetString("label93.Text");
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label96.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label96.Location = new System.Drawing.Point(179, 491);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(667, 15);
+            this.label96.TabIndex = 169;
+            this.label96.Text = resources.GetString("label96.Text");
+            // 
+            // labelThirdExtraSubjectMark
+            // 
+            this.labelThirdExtraSubjectMark.AutoSize = true;
+            this.labelThirdExtraSubjectMark.Location = new System.Drawing.Point(739, 460);
+            this.labelThirdExtraSubjectMark.Name = "labelThirdExtraSubjectMark";
+            this.labelThirdExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
+            this.labelThirdExtraSubjectMark.TabIndex = 168;
+            this.labelThirdExtraSubjectMark.Text = "-";
+            // 
+            // labelSecondExtraSubjectMark
+            // 
+            this.labelSecondExtraSubjectMark.AutoSize = true;
+            this.labelSecondExtraSubjectMark.Location = new System.Drawing.Point(739, 432);
+            this.labelSecondExtraSubjectMark.Name = "labelSecondExtraSubjectMark";
+            this.labelSecondExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
+            this.labelSecondExtraSubjectMark.TabIndex = 167;
+            this.labelSecondExtraSubjectMark.Text = "-";
+            // 
+            // labelFirstExtraSubjectMark
+            // 
+            this.labelFirstExtraSubjectMark.AutoSize = true;
+            this.labelFirstExtraSubjectMark.Location = new System.Drawing.Point(739, 404);
+            this.labelFirstExtraSubjectMark.Name = "labelFirstExtraSubjectMark";
+            this.labelFirstExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
+            this.labelFirstExtraSubjectMark.TabIndex = 166;
+            this.labelFirstExtraSubjectMark.Text = "-";
+            // 
+            // labelThirdExtraSubjectMarkWords
+            // 
+            this.labelThirdExtraSubjectMarkWords.AutoSize = true;
+            this.labelThirdExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 460);
+            this.labelThirdExtraSubjectMarkWords.Name = "labelThirdExtraSubjectMarkWords";
+            this.labelThirdExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelThirdExtraSubjectMarkWords.TabIndex = 165;
+            this.labelThirdExtraSubjectMarkWords.Text = "-";
+            // 
+            // labelSecondExtraSubjectMarkWords
+            // 
+            this.labelSecondExtraSubjectMarkWords.AutoSize = true;
+            this.labelSecondExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 433);
+            this.labelSecondExtraSubjectMarkWords.Name = "labelSecondExtraSubjectMarkWords";
+            this.labelSecondExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelSecondExtraSubjectMarkWords.TabIndex = 164;
+            this.labelSecondExtraSubjectMarkWords.Text = "-";
+            // 
+            // labelFirstExtraSubjectMarkWords
+            // 
+            this.labelFirstExtraSubjectMarkWords.AutoSize = true;
+            this.labelFirstExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 406);
+            this.labelFirstExtraSubjectMarkWords.Name = "labelFirstExtraSubjectMarkWords";
+            this.labelFirstExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelFirstExtraSubjectMarkWords.TabIndex = 163;
+            this.labelFirstExtraSubjectMarkWords.Text = "-";
+            // 
+            // labelThirdExtraSubject
+            // 
+            this.labelThirdExtraSubject.AutoSize = true;
+            this.labelThirdExtraSubject.Location = new System.Drawing.Point(219, 459);
+            this.labelThirdExtraSubject.Name = "labelThirdExtraSubject";
+            this.labelThirdExtraSubject.Size = new System.Drawing.Size(10, 13);
+            this.labelThirdExtraSubject.TabIndex = 162;
+            this.labelThirdExtraSubject.Text = "-";
+            // 
+            // labelSecondExtraSubject
+            // 
+            this.labelSecondExtraSubject.AutoSize = true;
+            this.labelSecondExtraSubject.Location = new System.Drawing.Point(219, 430);
+            this.labelSecondExtraSubject.Name = "labelSecondExtraSubject";
+            this.labelSecondExtraSubject.Size = new System.Drawing.Size(10, 13);
+            this.labelSecondExtraSubject.TabIndex = 161;
+            this.labelSecondExtraSubject.Text = "-";
+            // 
+            // labelFirstExtraSubject
+            // 
+            this.labelFirstExtraSubject.AutoSize = true;
+            this.labelFirstExtraSubject.Location = new System.Drawing.Point(219, 401);
+            this.labelFirstExtraSubject.Name = "labelFirstExtraSubject";
+            this.labelFirstExtraSubject.Size = new System.Drawing.Size(10, 13);
+            this.labelFirstExtraSubject.TabIndex = 160;
+            this.labelFirstExtraSubject.Text = "-";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label105.Location = new System.Drawing.Point(742, 382);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(72, 12);
+            this.label105.TabIndex = 159;
+            this.label105.Text = "оценки с цифри";
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label106.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label106.Location = new System.Drawing.Point(555, 382);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(65, 12);
+            this.label106.TabIndex = 158;
+            this.label106.Text = "оценки с думи";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label107.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label107.Location = new System.Drawing.Point(179, 464);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(667, 15);
+            this.label107.TabIndex = 156;
+            this.label107.Text = resources.GetString("label107.Text");
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label108.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label108.Location = new System.Drawing.Point(179, 437);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(667, 15);
+            this.label108.TabIndex = 157;
+            this.label108.Text = resources.GetString("label108.Text");
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label109.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label109.Location = new System.Drawing.Point(179, 410);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(667, 15);
+            this.label109.TabIndex = 155;
+            this.label109.Text = resources.GetString("label109.Text");
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label111.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label111.Location = new System.Drawing.Point(150, 362);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(264, 15);
+            this.label111.TabIndex = 153;
+            this.label111.Text = "СВОБОДНОИЗБИРАЕМА ПОДГОТОВКА";
+            // 
+            // labelThirdChosenSubjectMark
+            // 
+            this.labelThirdChosenSubjectMark.AutoSize = true;
+            this.labelThirdChosenSubjectMark.Location = new System.Drawing.Point(739, 273);
+            this.labelThirdChosenSubjectMark.Name = "labelThirdChosenSubjectMark";
+            this.labelThirdChosenSubjectMark.Size = new System.Drawing.Size(10, 13);
+            this.labelThirdChosenSubjectMark.TabIndex = 152;
+            this.labelThirdChosenSubjectMark.Text = "-";
+            // 
+            // labelSecondChosenSubjectMark
+            // 
+            this.labelSecondChosenSubjectMark.AutoSize = true;
+            this.labelSecondChosenSubjectMark.Location = new System.Drawing.Point(739, 242);
+            this.labelSecondChosenSubjectMark.Name = "labelSecondChosenSubjectMark";
+            this.labelSecondChosenSubjectMark.Size = new System.Drawing.Size(10, 13);
+            this.labelSecondChosenSubjectMark.TabIndex = 151;
+            this.labelSecondChosenSubjectMark.Text = "-";
+            // 
+            // labelFirstChosenSubjectMar
+            // 
+            this.labelFirstChosenSubjectMar.AutoSize = true;
+            this.labelFirstChosenSubjectMar.Location = new System.Drawing.Point(739, 213);
+            this.labelFirstChosenSubjectMar.Name = "labelFirstChosenSubjectMar";
+            this.labelFirstChosenSubjectMar.Size = new System.Drawing.Size(10, 13);
+            this.labelFirstChosenSubjectMar.TabIndex = 150;
+            this.labelFirstChosenSubjectMar.Text = "-";
+            // 
+            // labelThirdChosenSubjectMarkWords
+            // 
+            this.labelThirdChosenSubjectMarkWords.AutoSize = true;
+            this.labelThirdChosenSubjectMarkWords.Location = new System.Drawing.Point(554, 270);
+            this.labelThirdChosenSubjectMarkWords.Name = "labelThirdChosenSubjectMarkWords";
+            this.labelThirdChosenSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelThirdChosenSubjectMarkWords.TabIndex = 149;
+            this.labelThirdChosenSubjectMarkWords.Text = "-";
+            // 
+            // labelSecondChosenSubjectMarkWords
+            // 
+            this.labelSecondChosenSubjectMarkWords.AutoSize = true;
+            this.labelSecondChosenSubjectMarkWords.Location = new System.Drawing.Point(554, 239);
+            this.labelSecondChosenSubjectMarkWords.Name = "labelSecondChosenSubjectMarkWords";
+            this.labelSecondChosenSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelSecondChosenSubjectMarkWords.TabIndex = 148;
+            this.labelSecondChosenSubjectMarkWords.Text = "-";
+            // 
+            // labelFirstChosenSubjectMarkWords
+            // 
+            this.labelFirstChosenSubjectMarkWords.AutoSize = true;
+            this.labelFirstChosenSubjectMarkWords.Location = new System.Drawing.Point(554, 213);
+            this.labelFirstChosenSubjectMarkWords.Name = "labelFirstChosenSubjectMarkWords";
+            this.labelFirstChosenSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelFirstChosenSubjectMarkWords.TabIndex = 147;
+            this.labelFirstChosenSubjectMarkWords.Text = "-";
+            // 
+            // labelThirdChosenSubject
+            // 
+            this.labelThirdChosenSubject.AutoSize = true;
+            this.labelThirdChosenSubject.Location = new System.Drawing.Point(219, 270);
+            this.labelThirdChosenSubject.Name = "labelThirdChosenSubject";
+            this.labelThirdChosenSubject.Size = new System.Drawing.Size(10, 13);
+            this.labelThirdChosenSubject.TabIndex = 146;
+            this.labelThirdChosenSubject.Text = "-";
+            // 
+            // labelSecondChosenSubject
+            // 
+            this.labelSecondChosenSubject.AutoSize = true;
+            this.labelSecondChosenSubject.Location = new System.Drawing.Point(219, 239);
+            this.labelSecondChosenSubject.Name = "labelSecondChosenSubject";
+            this.labelSecondChosenSubject.Size = new System.Drawing.Size(10, 13);
+            this.labelSecondChosenSubject.TabIndex = 145;
+            this.labelSecondChosenSubject.Text = "-";
+            // 
+            // labelFirstChosenSubject
+            // 
+            this.labelFirstChosenSubject.AutoSize = true;
+            this.labelFirstChosenSubject.Location = new System.Drawing.Point(219, 207);
+            this.labelFirstChosenSubject.Name = "labelFirstChosenSubject";
+            this.labelFirstChosenSubject.Size = new System.Drawing.Size(10, 13);
+            this.labelFirstChosenSubject.TabIndex = 144;
+            this.labelFirstChosenSubject.Text = "-";
+            // 
             // label80
             // 
             this.label80.BackColor = System.Drawing.Color.Olive;
@@ -3063,7 +3376,7 @@
             this.tabPageExtraSubjects.Location = new System.Drawing.Point(4, 22);
             this.tabPageExtraSubjects.Name = "tabPageExtraSubjects";
             this.tabPageExtraSubjects.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageExtraSubjects.Size = new System.Drawing.Size(1033, 80);
+            this.tabPageExtraSubjects.Size = new System.Drawing.Size(1033, 69);
             this.tabPageExtraSubjects.TabIndex = 1;
             this.tabPageExtraSubjects.Text = "Успех от СИП";
             this.tabPageExtraSubjects.UseVisualStyleBackColor = true;
@@ -3095,7 +3408,7 @@
             this.panelMarksExtraSubjectsSummary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMarksExtraSubjectsSummary.Location = new System.Drawing.Point(3, 3);
             this.panelMarksExtraSubjectsSummary.Name = "panelMarksExtraSubjectsSummary";
-            this.panelMarksExtraSubjectsSummary.Size = new System.Drawing.Size(1027, 74);
+            this.panelMarksExtraSubjectsSummary.Size = new System.Drawing.Size(1027, 63);
             this.panelMarksExtraSubjectsSummary.TabIndex = 0;
             // 
             // textBoxAverageExtraSubjects
@@ -3520,7 +3833,7 @@
             this.tabControlMarksExtraSubjects.Location = new System.Drawing.Point(3, 81);
             this.tabControlMarksExtraSubjects.Name = "tabControlMarksExtraSubjects";
             this.tabControlMarksExtraSubjects.SelectedIndex = 0;
-            this.tabControlMarksExtraSubjects.Size = new System.Drawing.Size(1037, 38);
+            this.tabControlMarksExtraSubjects.Size = new System.Drawing.Size(1037, 35);
             this.tabControlMarksExtraSubjects.TabIndex = 1151;
             this.tabControlMarksExtraSubjects.Visible = false;
             this.tabControlMarksExtraSubjects.SelectedIndexChanged += new System.EventHandler(this.tabControlMarksExtraSubjects_SelectedIndexChanged);
@@ -3533,7 +3846,7 @@
             this.tabPageChoseExtraSubjects.Location = new System.Drawing.Point(4, 22);
             this.tabPageChoseExtraSubjects.Name = "tabPageChoseExtraSubjects";
             this.tabPageChoseExtraSubjects.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageChoseExtraSubjects.Size = new System.Drawing.Size(1029, 12);
+            this.tabPageChoseExtraSubjects.Size = new System.Drawing.Size(1029, 9);
             this.tabPageChoseExtraSubjects.TabIndex = 3;
             this.tabPageChoseExtraSubjects.Text = "СИП предмети";
             // 
@@ -3547,7 +3860,7 @@
             this.panelChooseExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelChooseExtraSubjects.Location = new System.Drawing.Point(3, 3);
             this.panelChooseExtraSubjects.Name = "panelChooseExtraSubjects";
-            this.panelChooseExtraSubjects.Size = new System.Drawing.Size(1023, 6);
+            this.panelChooseExtraSubjects.Size = new System.Drawing.Size(1023, 3);
             this.panelChooseExtraSubjects.TabIndex = 1134;
             // 
             // label29
@@ -5190,6 +5503,105 @@
             this.labelClassName.TabIndex = 37;
             this.labelClassName.Text = "от ";
             // 
+            // textBoxPersonalCardNumber
+            // 
+            this.textBoxPersonalCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxPersonalCardNumber.Location = new System.Drawing.Point(821, 189);
+            this.textBoxPersonalCardNumber.Multiline = true;
+            this.textBoxPersonalCardNumber.Name = "textBoxPersonalCardNumber";
+            this.textBoxPersonalCardNumber.Size = new System.Drawing.Size(153, 23);
+            this.textBoxPersonalCardNumber.TabIndex = 36;
+            this.textBoxPersonalCardNumber.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxPersonalCardNumber.WaterMarkText = "ЛНЧ";
+            // 
+            // textBoxDateOfBirth
+            // 
+            this.textBoxDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxDateOfBirth.Location = new System.Drawing.Point(821, 259);
+            this.textBoxDateOfBirth.Multiline = true;
+            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
+            this.textBoxDateOfBirth.Size = new System.Drawing.Size(153, 23);
+            this.textBoxDateOfBirth.TabIndex = 35;
+            this.textBoxDateOfBirth.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxDateOfBirth.WaterMarkText = "ДД/ММ/ГГГГ";
+            // 
+            // textBoxMobilePhone
+            // 
+            this.textBoxMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxMobilePhone.Location = new System.Drawing.Point(820, 329);
+            this.textBoxMobilePhone.Multiline = true;
+            this.textBoxMobilePhone.Name = "textBoxMobilePhone";
+            this.textBoxMobilePhone.Size = new System.Drawing.Size(153, 23);
+            this.textBoxMobilePhone.TabIndex = 34;
+            this.textBoxMobilePhone.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxMobilePhone.WaterMarkText = "Номер";
+            // 
+            // textBoxEnrollmentYear
+            // 
+            this.textBoxEnrollmentYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxEnrollmentYear.Location = new System.Drawing.Point(586, 329);
+            this.textBoxEnrollmentYear.Multiline = true;
+            this.textBoxEnrollmentYear.Name = "textBoxEnrollmentYear";
+            this.textBoxEnrollmentYear.Size = new System.Drawing.Size(153, 23);
+            this.textBoxEnrollmentYear.TabIndex = 33;
+            this.textBoxEnrollmentYear.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxEnrollmentYear.WaterMarkText = "Година на приемане";
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxAddress.Location = new System.Drawing.Point(586, 407);
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(388, 23);
+            this.textBoxAddress.TabIndex = 32;
+            this.textBoxAddress.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxAddress.WaterMarkText = "Адрес";
+            // 
+            // textBoxPersonalNumber
+            // 
+            this.textBoxPersonalNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxPersonalNumber.Location = new System.Drawing.Point(820, 121);
+            this.textBoxPersonalNumber.Multiline = true;
+            this.textBoxPersonalNumber.Name = "textBoxPersonalNumber";
+            this.textBoxPersonalNumber.Size = new System.Drawing.Size(153, 23);
+            this.textBoxPersonalNumber.TabIndex = 31;
+            this.textBoxPersonalNumber.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxPersonalNumber.WaterMarkText = "ЕГН";
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxLastName.Location = new System.Drawing.Point(586, 259);
+            this.textBoxLastName.Multiline = true;
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(153, 23);
+            this.textBoxLastName.TabIndex = 30;
+            this.textBoxLastName.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxLastName.WaterMarkText = "Фамилия";
+            // 
+            // textBoxSecondName
+            // 
+            this.textBoxSecondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxSecondName.Location = new System.Drawing.Point(586, 189);
+            this.textBoxSecondName.Multiline = true;
+            this.textBoxSecondName.Name = "textBoxSecondName";
+            this.textBoxSecondName.Size = new System.Drawing.Size(153, 23);
+            this.textBoxSecondName.TabIndex = 29;
+            this.textBoxSecondName.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxSecondName.WaterMarkText = "Презиме";
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxFirstName.Location = new System.Drawing.Point(586, 121);
+            this.textBoxFirstName.Multiline = true;
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(153, 23);
+            this.textBoxFirstName.TabIndex = 28;
+            this.textBoxFirstName.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxFirstName.WaterMarkText = "Име";
+            // 
             // labelPictureNotSelected
             // 
             this.labelPictureNotSelected.AutoSize = true;
@@ -5427,418 +5839,6 @@
             // timerAbcensesSaveSuccessful
             // 
             this.timerAbcensesSaveSuccessful.Interval = 3000;
-            // 
-            // labelFirstChosenSubject
-            // 
-            this.labelFirstChosenSubject.AutoSize = true;
-            this.labelFirstChosenSubject.Location = new System.Drawing.Point(219, 207);
-            this.labelFirstChosenSubject.Name = "labelFirstChosenSubject";
-            this.labelFirstChosenSubject.Size = new System.Drawing.Size(10, 13);
-            this.labelFirstChosenSubject.TabIndex = 144;
-            this.labelFirstChosenSubject.Text = "-";
-            // 
-            // labelSecondChosenSubject
-            // 
-            this.labelSecondChosenSubject.AutoSize = true;
-            this.labelSecondChosenSubject.Location = new System.Drawing.Point(219, 239);
-            this.labelSecondChosenSubject.Name = "labelSecondChosenSubject";
-            this.labelSecondChosenSubject.Size = new System.Drawing.Size(10, 13);
-            this.labelSecondChosenSubject.TabIndex = 145;
-            this.labelSecondChosenSubject.Text = "-";
-            // 
-            // labelThirdChosenSubject
-            // 
-            this.labelThirdChosenSubject.AutoSize = true;
-            this.labelThirdChosenSubject.Location = new System.Drawing.Point(219, 270);
-            this.labelThirdChosenSubject.Name = "labelThirdChosenSubject";
-            this.labelThirdChosenSubject.Size = new System.Drawing.Size(10, 13);
-            this.labelThirdChosenSubject.TabIndex = 146;
-            this.labelThirdChosenSubject.Text = "-";
-            // 
-            // labelFirstChosenSubjectMarkWords
-            // 
-            this.labelFirstChosenSubjectMarkWords.AutoSize = true;
-            this.labelFirstChosenSubjectMarkWords.Location = new System.Drawing.Point(554, 213);
-            this.labelFirstChosenSubjectMarkWords.Name = "labelFirstChosenSubjectMarkWords";
-            this.labelFirstChosenSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
-            this.labelFirstChosenSubjectMarkWords.TabIndex = 147;
-            this.labelFirstChosenSubjectMarkWords.Text = "-";
-            // 
-            // labelSecondChosenSubjectMarkWords
-            // 
-            this.labelSecondChosenSubjectMarkWords.AutoSize = true;
-            this.labelSecondChosenSubjectMarkWords.Location = new System.Drawing.Point(554, 239);
-            this.labelSecondChosenSubjectMarkWords.Name = "labelSecondChosenSubjectMarkWords";
-            this.labelSecondChosenSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
-            this.labelSecondChosenSubjectMarkWords.TabIndex = 148;
-            this.labelSecondChosenSubjectMarkWords.Text = "-";
-            // 
-            // labelThirdChosenSubjectMarkWords
-            // 
-            this.labelThirdChosenSubjectMarkWords.AutoSize = true;
-            this.labelThirdChosenSubjectMarkWords.Location = new System.Drawing.Point(554, 270);
-            this.labelThirdChosenSubjectMarkWords.Name = "labelThirdChosenSubjectMarkWords";
-            this.labelThirdChosenSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
-            this.labelThirdChosenSubjectMarkWords.TabIndex = 149;
-            this.labelThirdChosenSubjectMarkWords.Text = "-";
-            // 
-            // labelFirstChosenSubjectMar
-            // 
-            this.labelFirstChosenSubjectMar.AutoSize = true;
-            this.labelFirstChosenSubjectMar.Location = new System.Drawing.Point(739, 213);
-            this.labelFirstChosenSubjectMar.Name = "labelFirstChosenSubjectMar";
-            this.labelFirstChosenSubjectMar.Size = new System.Drawing.Size(10, 13);
-            this.labelFirstChosenSubjectMar.TabIndex = 150;
-            this.labelFirstChosenSubjectMar.Text = "-";
-            // 
-            // labelSecondChosenSubjectMark
-            // 
-            this.labelSecondChosenSubjectMark.AutoSize = true;
-            this.labelSecondChosenSubjectMark.Location = new System.Drawing.Point(739, 242);
-            this.labelSecondChosenSubjectMark.Name = "labelSecondChosenSubjectMark";
-            this.labelSecondChosenSubjectMark.Size = new System.Drawing.Size(10, 13);
-            this.labelSecondChosenSubjectMark.TabIndex = 151;
-            this.labelSecondChosenSubjectMark.Text = "-";
-            // 
-            // labelThirdChosenSubjectMark
-            // 
-            this.labelThirdChosenSubjectMark.AutoSize = true;
-            this.labelThirdChosenSubjectMark.Location = new System.Drawing.Point(739, 273);
-            this.labelThirdChosenSubjectMark.Name = "labelThirdChosenSubjectMark";
-            this.labelThirdChosenSubjectMark.Size = new System.Drawing.Size(10, 13);
-            this.labelThirdChosenSubjectMark.TabIndex = 152;
-            this.labelThirdChosenSubjectMark.Text = "-";
-            // 
-            // labelThirdExtraSubjectMark
-            // 
-            this.labelThirdExtraSubjectMark.AutoSize = true;
-            this.labelThirdExtraSubjectMark.Location = new System.Drawing.Point(739, 460);
-            this.labelThirdExtraSubjectMark.Name = "labelThirdExtraSubjectMark";
-            this.labelThirdExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
-            this.labelThirdExtraSubjectMark.TabIndex = 168;
-            this.labelThirdExtraSubjectMark.Text = "-";
-            // 
-            // labelSecondExtraSubjectMark
-            // 
-            this.labelSecondExtraSubjectMark.AutoSize = true;
-            this.labelSecondExtraSubjectMark.Location = new System.Drawing.Point(739, 432);
-            this.labelSecondExtraSubjectMark.Name = "labelSecondExtraSubjectMark";
-            this.labelSecondExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
-            this.labelSecondExtraSubjectMark.TabIndex = 167;
-            this.labelSecondExtraSubjectMark.Text = "-";
-            // 
-            // labelFirstExtraSubjectMark
-            // 
-            this.labelFirstExtraSubjectMark.AutoSize = true;
-            this.labelFirstExtraSubjectMark.Location = new System.Drawing.Point(739, 404);
-            this.labelFirstExtraSubjectMark.Name = "labelFirstExtraSubjectMark";
-            this.labelFirstExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
-            this.labelFirstExtraSubjectMark.TabIndex = 166;
-            this.labelFirstExtraSubjectMark.Text = "-";
-            // 
-            // labelThirdExtraSubjectMarkWords
-            // 
-            this.labelThirdExtraSubjectMarkWords.AutoSize = true;
-            this.labelThirdExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 460);
-            this.labelThirdExtraSubjectMarkWords.Name = "labelThirdExtraSubjectMarkWords";
-            this.labelThirdExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
-            this.labelThirdExtraSubjectMarkWords.TabIndex = 165;
-            this.labelThirdExtraSubjectMarkWords.Text = "-";
-            // 
-            // labelSecondExtraSubjectMarkWords
-            // 
-            this.labelSecondExtraSubjectMarkWords.AutoSize = true;
-            this.labelSecondExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 433);
-            this.labelSecondExtraSubjectMarkWords.Name = "labelSecondExtraSubjectMarkWords";
-            this.labelSecondExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
-            this.labelSecondExtraSubjectMarkWords.TabIndex = 164;
-            this.labelSecondExtraSubjectMarkWords.Text = "-";
-            // 
-            // labelFirstExtraSubjectMarkWords
-            // 
-            this.labelFirstExtraSubjectMarkWords.AutoSize = true;
-            this.labelFirstExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 406);
-            this.labelFirstExtraSubjectMarkWords.Name = "labelFirstExtraSubjectMarkWords";
-            this.labelFirstExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
-            this.labelFirstExtraSubjectMarkWords.TabIndex = 163;
-            this.labelFirstExtraSubjectMarkWords.Text = "-";
-            // 
-            // labelThirdExtraSubject
-            // 
-            this.labelThirdExtraSubject.AutoSize = true;
-            this.labelThirdExtraSubject.Location = new System.Drawing.Point(219, 459);
-            this.labelThirdExtraSubject.Name = "labelThirdExtraSubject";
-            this.labelThirdExtraSubject.Size = new System.Drawing.Size(10, 13);
-            this.labelThirdExtraSubject.TabIndex = 162;
-            this.labelThirdExtraSubject.Text = "-";
-            // 
-            // labelSecondExtraSubject
-            // 
-            this.labelSecondExtraSubject.AutoSize = true;
-            this.labelSecondExtraSubject.Location = new System.Drawing.Point(219, 430);
-            this.labelSecondExtraSubject.Name = "labelSecondExtraSubject";
-            this.labelSecondExtraSubject.Size = new System.Drawing.Size(10, 13);
-            this.labelSecondExtraSubject.TabIndex = 161;
-            this.labelSecondExtraSubject.Text = "-";
-            // 
-            // labelFirstExtraSubject
-            // 
-            this.labelFirstExtraSubject.AutoSize = true;
-            this.labelFirstExtraSubject.Location = new System.Drawing.Point(219, 401);
-            this.labelFirstExtraSubject.Name = "labelFirstExtraSubject";
-            this.labelFirstExtraSubject.Size = new System.Drawing.Size(10, 13);
-            this.labelFirstExtraSubject.TabIndex = 160;
-            this.labelFirstExtraSubject.Text = "-";
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label105.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label105.Location = new System.Drawing.Point(742, 382);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(72, 12);
-            this.label105.TabIndex = 159;
-            this.label105.Text = "оценки с цифри";
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label106.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label106.Location = new System.Drawing.Point(555, 382);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(65, 12);
-            this.label106.TabIndex = 158;
-            this.label106.Text = "оценки с думи";
-            // 
-            // label107
-            // 
-            this.label107.AutoSize = true;
-            this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label107.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label107.Location = new System.Drawing.Point(179, 464);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(667, 15);
-            this.label107.TabIndex = 156;
-            this.label107.Text = resources.GetString("label107.Text");
-            // 
-            // label108
-            // 
-            this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label108.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label108.Location = new System.Drawing.Point(179, 437);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(667, 15);
-            this.label108.TabIndex = 157;
-            this.label108.Text = resources.GetString("label108.Text");
-            // 
-            // label109
-            // 
-            this.label109.AutoSize = true;
-            this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label109.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label109.Location = new System.Drawing.Point(179, 410);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(667, 15);
-            this.label109.TabIndex = 155;
-            this.label109.Text = resources.GetString("label109.Text");
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label111.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label111.Location = new System.Drawing.Point(150, 362);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(264, 15);
-            this.label111.TabIndex = 153;
-            this.label111.Text = "СВОБОДНОИЗБИРАЕМА ПОДГОТОВКА";
-            // 
-            // labelFifthExtraSubjectMark
-            // 
-            this.labelFifthExtraSubjectMark.AutoSize = true;
-            this.labelFifthExtraSubjectMark.Location = new System.Drawing.Point(739, 516);
-            this.labelFifthExtraSubjectMark.Name = "labelFifthExtraSubjectMark";
-            this.labelFifthExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
-            this.labelFifthExtraSubjectMark.TabIndex = 176;
-            this.labelFifthExtraSubjectMark.Text = "-";
-            // 
-            // labelFourthExtraSubjectMark
-            // 
-            this.labelFourthExtraSubjectMark.AutoSize = true;
-            this.labelFourthExtraSubjectMark.Location = new System.Drawing.Point(739, 488);
-            this.labelFourthExtraSubjectMark.Name = "labelFourthExtraSubjectMark";
-            this.labelFourthExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
-            this.labelFourthExtraSubjectMark.TabIndex = 175;
-            this.labelFourthExtraSubjectMark.Text = "-";
-            // 
-            // labelFifthExtraSubjectMarkWords
-            // 
-            this.labelFifthExtraSubjectMarkWords.AutoSize = true;
-            this.labelFifthExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 514);
-            this.labelFifthExtraSubjectMarkWords.Name = "labelFifthExtraSubjectMarkWords";
-            this.labelFifthExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
-            this.labelFifthExtraSubjectMarkWords.TabIndex = 174;
-            this.labelFifthExtraSubjectMarkWords.Text = "-";
-            // 
-            // labelFourthExtraSubjectMarkWords
-            // 
-            this.labelFourthExtraSubjectMarkWords.AutoSize = true;
-            this.labelFourthExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 487);
-            this.labelFourthExtraSubjectMarkWords.Name = "labelFourthExtraSubjectMarkWords";
-            this.labelFourthExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
-            this.labelFourthExtraSubjectMarkWords.TabIndex = 173;
-            this.labelFourthExtraSubjectMarkWords.Text = "-";
-            // 
-            // labelFifthExtraSubject
-            // 
-            this.labelFifthExtraSubject.AutoSize = true;
-            this.labelFifthExtraSubject.Location = new System.Drawing.Point(219, 517);
-            this.labelFifthExtraSubject.Name = "labelFifthExtraSubject";
-            this.labelFifthExtraSubject.Size = new System.Drawing.Size(10, 13);
-            this.labelFifthExtraSubject.TabIndex = 172;
-            this.labelFifthExtraSubject.Text = "-";
-            // 
-            // labelFourthExtraSubject
-            // 
-            this.labelFourthExtraSubject.AutoSize = true;
-            this.labelFourthExtraSubject.Location = new System.Drawing.Point(219, 488);
-            this.labelFourthExtraSubject.Name = "labelFourthExtraSubject";
-            this.labelFourthExtraSubject.Size = new System.Drawing.Size(10, 13);
-            this.labelFourthExtraSubject.TabIndex = 171;
-            this.labelFourthExtraSubject.Text = "-";
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label93.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label93.Location = new System.Drawing.Point(179, 518);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(667, 15);
-            this.label93.TabIndex = 170;
-            this.label93.Text = resources.GetString("label93.Text");
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label96.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label96.Location = new System.Drawing.Point(179, 491);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(667, 15);
-            this.label96.TabIndex = 169;
-            this.label96.Text = resources.GetString("label96.Text");
-            // 
-            // label50
-            // 
-            this.label50.BackColor = System.Drawing.Color.Olive;
-            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label50.Location = new System.Drawing.Point(137, 567);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(763, 4);
-            this.label50.TabIndex = 177;
-            // 
-            // textBoxPersonalCardNumber
-            // 
-            this.textBoxPersonalCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxPersonalCardNumber.Location = new System.Drawing.Point(821, 189);
-            this.textBoxPersonalCardNumber.Multiline = true;
-            this.textBoxPersonalCardNumber.Name = "textBoxPersonalCardNumber";
-            this.textBoxPersonalCardNumber.Size = new System.Drawing.Size(153, 23);
-            this.textBoxPersonalCardNumber.TabIndex = 36;
-            this.textBoxPersonalCardNumber.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxPersonalCardNumber.WaterMarkText = "ЛНЧ";
-            // 
-            // textBoxDateOfBirth
-            // 
-            this.textBoxDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxDateOfBirth.Location = new System.Drawing.Point(821, 259);
-            this.textBoxDateOfBirth.Multiline = true;
-            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
-            this.textBoxDateOfBirth.Size = new System.Drawing.Size(153, 23);
-            this.textBoxDateOfBirth.TabIndex = 35;
-            this.textBoxDateOfBirth.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxDateOfBirth.WaterMarkText = "ДД/ММ/ГГГГ";
-            // 
-            // textBoxMobilePhone
-            // 
-            this.textBoxMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxMobilePhone.Location = new System.Drawing.Point(820, 329);
-            this.textBoxMobilePhone.Multiline = true;
-            this.textBoxMobilePhone.Name = "textBoxMobilePhone";
-            this.textBoxMobilePhone.Size = new System.Drawing.Size(153, 23);
-            this.textBoxMobilePhone.TabIndex = 34;
-            this.textBoxMobilePhone.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxMobilePhone.WaterMarkText = "Номер";
-            // 
-            // textBoxEnrollmentYear
-            // 
-            this.textBoxEnrollmentYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxEnrollmentYear.Location = new System.Drawing.Point(586, 329);
-            this.textBoxEnrollmentYear.Multiline = true;
-            this.textBoxEnrollmentYear.Name = "textBoxEnrollmentYear";
-            this.textBoxEnrollmentYear.Size = new System.Drawing.Size(153, 23);
-            this.textBoxEnrollmentYear.TabIndex = 33;
-            this.textBoxEnrollmentYear.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxEnrollmentYear.WaterMarkText = "Година на приемане";
-            // 
-            // textBoxAddress
-            // 
-            this.textBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxAddress.Location = new System.Drawing.Point(586, 407);
-            this.textBoxAddress.Multiline = true;
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(388, 23);
-            this.textBoxAddress.TabIndex = 32;
-            this.textBoxAddress.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxAddress.WaterMarkText = "Адрес";
-            // 
-            // textBoxPersonalNumber
-            // 
-            this.textBoxPersonalNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxPersonalNumber.Location = new System.Drawing.Point(820, 121);
-            this.textBoxPersonalNumber.Multiline = true;
-            this.textBoxPersonalNumber.Name = "textBoxPersonalNumber";
-            this.textBoxPersonalNumber.Size = new System.Drawing.Size(153, 23);
-            this.textBoxPersonalNumber.TabIndex = 31;
-            this.textBoxPersonalNumber.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxPersonalNumber.WaterMarkText = "ЕГН";
-            // 
-            // textBoxLastName
-            // 
-            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxLastName.Location = new System.Drawing.Point(586, 259);
-            this.textBoxLastName.Multiline = true;
-            this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(153, 23);
-            this.textBoxLastName.TabIndex = 30;
-            this.textBoxLastName.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxLastName.WaterMarkText = "Фамилия";
-            // 
-            // textBoxSecondName
-            // 
-            this.textBoxSecondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxSecondName.Location = new System.Drawing.Point(586, 189);
-            this.textBoxSecondName.Multiline = true;
-            this.textBoxSecondName.Name = "textBoxSecondName";
-            this.textBoxSecondName.Size = new System.Drawing.Size(153, 23);
-            this.textBoxSecondName.TabIndex = 29;
-            this.textBoxSecondName.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxSecondName.WaterMarkText = "Презиме";
-            // 
-            // textBoxFirstName
-            // 
-            this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxFirstName.Location = new System.Drawing.Point(586, 121);
-            this.textBoxFirstName.Multiline = true;
-            this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(153, 23);
-            this.textBoxFirstName.TabIndex = 28;
-            this.textBoxFirstName.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxFirstName.WaterMarkText = "Име";
             // 
             // TeacherForm
             // 
