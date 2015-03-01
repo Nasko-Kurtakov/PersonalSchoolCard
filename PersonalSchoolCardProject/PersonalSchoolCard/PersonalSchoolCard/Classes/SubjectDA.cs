@@ -42,7 +42,6 @@
                 }
             }
         }
-
         public static void AddSubjects(DataGridView gridView)
         {
             using (var context = new PersonalSchoolCardEntities())
@@ -97,12 +96,12 @@
                 return subjectTypes;
             }
         }
-        public static byte GetSubjectTypeID(string columnName)
+        public static byte GetSubjectTypeID(string name)
         {
             using (var context = new PersonalSchoolCardEntities())
             {
                 var subjectTypeID = context.SubjectTypes
-                                    .Where(subjectType => subjectType.SubjectTypeName == columnName)
+                                    .Where(subjectType => subjectType.SubjectTypeName == name)
                                     .Select(subjectType => subjectType.SubjectTypeID)
                                     .FirstOrDefault();
                 return subjectTypeID;
@@ -119,7 +118,57 @@
                 return subjectID;
             }
         }
-        
+        public static List<Subject> GetProfileSubjects(long studentID, int teacherID)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var profileID = SchoolClassDA.GetClassProfileIDByTeacher(teacherID, SchoolYearDA.GetCurrentSchoolYear());
+                var profile = context.Profiles
+                                            .Where(prof => prof.ProfileID == profileID)
+                                            .Select(prof => prof).FirstOrDefault();
+
+                var profileSubjectList = context.Subjects.ToList()
+                                         .Where(psb => psb.Profiles.Contains(profile)).ToList();
+
+                return profileSubjectList;
+            }
+        }
+        public static List<Subject> GetForeignLanguage(long studentID)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var languages = context.Subjects
+                         .Where(subject => subject.SubjectName.Substring(subject.SubjectName.Length - 4, 4) == "език")
+                         .Select(subject => subject)
+                         .ToList();
+                var subjectTypeID = GetSubjectTypeID("ЗП");
+                var subjectIDDiplom = context.Diploms
+                                        .Where(student => student.StudentID == studentID && student.SubjectTypeID == subjectTypeID)
+                                        .Select(subject => subject.SubjectID)
+                                        .ToList();
+                var studiedForeignLanguages = new List<Subject>();
+                for (int i = 0; i < subjectIDDiplom.Count; i++)
+                    for (int k = 0; k < languages.Count; k++)
+                    {
+                        if (languages[k].SubjectID == subjectIDDiplom[i])
+                        {
+                            studiedForeignLanguages.Add(languages[k]);
+                        }
+                    }
+                return studiedForeignLanguages;
+            }
+        }
+        public static string GetSubjectName(int subjectID)
+        {
+            using(var context = new PersonalSchoolCardEntities())
+            {
+                var subjectName = context.Subjects
+                                    .Where(subject => subject.SubjectID == subjectID)
+                                    .Select(subject => subject.SubjectName)
+                                    .First();
+                return subjectName;
+            }
+        }
     }
 }
 

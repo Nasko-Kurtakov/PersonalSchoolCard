@@ -47,3 +47,4 @@ C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoo
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.csprojResolveAssemblyReference.cache
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.dll
 C:\Users\Alex Goranov\Downloads\Master 6\PersonalSchoolCard-master\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.pdb
+D:\PersonalSchoolCard\PersonalSchoolCardProject\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.csprojResolveAssemblyReference.cache

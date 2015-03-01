@@ -41,7 +41,6 @@
                 }
             }
         }
-
         public static List<SchoolClassInfo> VisualizeChanges(DataGridView gridView)
         {
             using (var context = new PersonalSchoolCardEntities())
@@ -239,6 +238,17 @@
                                 .Select(schoolClass => schoolClass)
                                 .FirstOrDefault();
                 return selectedSchoolClass.ClassNumber;
+            }
+        }
+        public static int? GetClassProfileIDByTeacher(int teacherID,string schoolYear)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var className = context.SchoolClasses
+                                    .Where(schoolClass => schoolClass.TeacherID == teacherID && schoolClass.SchoolYear.SchoolYearName == schoolYear)
+                                    .Select(schoolClass => schoolClass.ProfileID)
+                                    .FirstOrDefault();
+                return className;
             }
         }
     }

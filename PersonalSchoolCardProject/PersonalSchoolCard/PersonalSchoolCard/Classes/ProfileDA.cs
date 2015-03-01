@@ -66,5 +66,17 @@
                 return profile;
             }
         }
+        public static string GetProfileByTeacher(int teacherID)
+        {
+            using(var context = new PersonalSchoolCardEntities())
+            {
+                var profileID = SchoolClassDA.GetClassProfileIDByTeacher(teacherID, SchoolYearDA.GetCurrentSchoolYear());
+                var profileName = context.Profiles
+                                .Where(profile => profile.ProfileID == profileID)
+                                .Select(profile => profile.ProfileName)
+                                .First();
+                return profileName;
+            }
+        }
     }
 }

@@ -398,5 +398,10 @@ namespace PersonalShcoolCard
             }
         }
         #endregion
+
+        private void panelAddSubjects_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

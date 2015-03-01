@@ -211,6 +211,15 @@
                 return "на";
             }
         }
-
+        public static void SaveMarkForDiplom(long studentID)
+        {
+            using(var context = new PersonalSchoolCardEntities())
+            {
+                var markToBeSaved = DiplomsDA.CalculateDiplomMark(studentID);
+                context.Students.Where(student => student.StudentID == studentID)
+                               .Select(student => student).First().MarkFromDiplom = (float)markToBeSaved;
+                context.SaveChanges();
+            }
+        }
     }
 }

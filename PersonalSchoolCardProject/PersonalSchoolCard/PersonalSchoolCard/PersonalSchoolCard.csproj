@@ -91,7 +91,6 @@
     <Compile Include="Classes\TermDA.cs" />
     <Compile Include="Classes\SchoolClassDA.cs" />
     <Compile Include="Classes\LogIn.cs" />
-    <Compile Include="Classes\Queries.cs" />
     <Compile Include="Classes\SchoolClassInfo.cs" />
     <Compile Include="Classes\SchoolInfoDA.cs" />
     <Compile Include="Classes\SchoolYearDA.cs" />

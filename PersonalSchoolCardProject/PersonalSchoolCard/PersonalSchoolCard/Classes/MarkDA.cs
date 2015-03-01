@@ -7,19 +7,33 @@
     using PersonalSchoolCard.Data;
     public class MarkDA
     {
-        public static string GetMarkWithWords(string rowValue)
+        public static string GetMarkWithWords(string value)
         {
-            string markAsWord = "";
-            switch (rowValue)
+            
+            var valueAsFloat = float.Parse(value);
+            if(valueAsFloat>=2.0 && valueAsFloat<=2.49)
             {
-                case "2": markAsWord = "Слаб"; break;
-                case "3": markAsWord = "Среден"; break;
-                case "4": markAsWord = "Добър"; break;
-                case "5": markAsWord = "Много добър"; break;
-                case "6": markAsWord = "Отличен"; break;
-                default: markAsWord = "Грешни входни данни"; break;
+                return "Слаб";
+            }else
+            if(valueAsFloat>=2.50 && valueAsFloat<=3.49)
+            {
+                return "Среден";
             }
-            return markAsWord;
+            else if(valueAsFloat>=3.50 && valueAsFloat<=4.49)
+            {
+                return "Добър";
+            }
+            else if(valueAsFloat>=4.50 && valueAsFloat<=5.49)
+            {
+                return "Мн. добър";
+            }
+            else if(valueAsFloat>=5.50 && valueAsFloat<=6.00)
+            {
+                return "Отличен";
+            }else
+            {
+                return "Грешни входни данни";
+            }
         }
         public static void SaveMark(DataGridView gridView, int teacherID, long studentID, byte termID, bool isForExtraSubjects = false)
         {
@@ -139,15 +153,14 @@
                                     .Where(type => type.SubjectTypeName == subjectTypeName)
                                     .Select(type => type.SubjectTypeID)
                                     .FirstOrDefault();
-
                 var mark = context.Marks
-                                .Where(student => student.StudentID == studentID)
-                                .Where(schoolClass => schoolClass.ClassID == classID)
-                                .Where(term => term.TermID == 3)
-                                .Where(type => type.SubjectTypeID == subjectTypeID)
-                                .Where(subject => subject.SubjectID == subjectID)
-                                .Select(grade => grade.Grade)
-                                .FirstOrDefault();
+                                        .Where(student => student.StudentID == studentID)
+                                        .Where(schoolClass => schoolClass.ClassID == classID)
+                                        .Where(term => term.TermID == 3)
+                                        .Where(type => type.SubjectTypeID == subjectTypeID)
+                                        .Where(subject => subject.SubjectID == subjectID)
+                                        .Select(grade => grade.Grade)
+                                        .FirstOrDefault();
                 return mark;
             }
         }
