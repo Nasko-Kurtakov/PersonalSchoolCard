@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.buttonShowDiplomReady = new System.Windows.Forms.Button();
             this.buttonShowDiplom = new System.Windows.Forms.Button();
@@ -42,6 +42,205 @@
             this.buttonAddMarksFirstTerm = new System.Windows.Forms.Button();
             this.buttonEditStudentsInfo = new System.Windows.Forms.Button();
             this.panelParent = new System.Windows.Forms.Panel();
+            this.panelEditTeacherInfo = new System.Windows.Forms.Panel();
+            this.buttonSaveChangesTeacherInfo = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBoxUserName = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBoxTeacherFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxTeacherLastName = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.labelChangesMade = new System.Windows.Forms.Label();
+            this.tabControlMarksSummary = new System.Windows.Forms.TabControl();
+            this.tabPageMandatoryAndChosenSubjects = new System.Windows.Forms.TabPage();
+            this.panelMarksMandatoryAndChosenSubjectsSummary = new System.Windows.Forms.Panel();
+            this.labelDiplomMarksSaveSuccessful = new System.Windows.Forms.Label();
+            this.textBoxAverageExams = new System.Windows.Forms.TextBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.textBoxAverageChosenSubjects = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.textBoxAverageMandatorySubjects = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.buttonSaveDiplomMarks = new System.Windows.Forms.Button();
+            this.comboBoxStudentsNamesDiplomMarks = new System.Windows.Forms.ComboBox();
+            this.dataGridViewDiplom = new System.Windows.Forms.DataGridView();
+            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithWordsMandatoryFirstYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MandatorySubjectFirstYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithWordsChosenFirstYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChosenFirstYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithWordsMandatorySecondYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MandatorySecondYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithWordsChosenSecondYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChosenSecondYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithWordsMandatoryThirdYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MandatoryThirdYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithWordsChosenThirdYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChosenThirdYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithWordsMandatoryFourthYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MandatoryFourthYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithWordsChosenFourthYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChosenFourthYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithWordsMandatoryFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AverageMarkMandatorySubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithWordsChosenFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AverageMarkChosenSubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.textBoxFourthYear = new System.Windows.Forms.TextBox();
+            this.textBox44 = new System.Windows.Forms.TextBox();
+            this.textBoxThirdYear = new System.Windows.Forms.TextBox();
+            this.textBox46 = new System.Windows.Forms.TextBox();
+            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.textBox51 = new System.Windows.Forms.TextBox();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.textBox50 = new System.Windows.Forms.TextBox();
+            this.textBox49 = new System.Windows.Forms.TextBox();
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.textBoxSecondYear = new System.Windows.Forms.TextBox();
+            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.textBoxFirstYear = new System.Windows.Forms.TextBox();
+            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.textBox40 = new System.Windows.Forms.TextBox();
+            this.textBox42 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.tabPageExtraSubjects = new System.Windows.Forms.TabPage();
+            this.panelMarksExtraSubjectsSummary = new System.Windows.Forms.Panel();
+            this.textBoxAverageExtraSubjects = new System.Windows.Forms.TextBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.buttonSaveMaksFinalExtraSubjects = new System.Windows.Forms.Button();
+            this.dataGridViewDiplomExtraSubjects = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewExtraSubjectFirstYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewExtraSubjectSecondYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewExtraSubjectThirdYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewExtraSubjectFourthYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FinalMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewFinalMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBoxStudentsNamesExtraSubjectsMarks = new System.Windows.Forms.ComboBox();
+            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.textBoxFourthYearExtraSubject = new System.Windows.Forms.TextBox();
+            this.textBox45 = new System.Windows.Forms.TextBox();
+            this.textBoxThirdYearExtraSubject = new System.Windows.Forms.TextBox();
+            this.textBox52 = new System.Windows.Forms.TextBox();
+            this.textBox53 = new System.Windows.Forms.TextBox();
+            this.textBox58 = new System.Windows.Forms.TextBox();
+            this.textBoxSecondYearExtraSubject = new System.Windows.Forms.TextBox();
+            this.textBox60 = new System.Windows.Forms.TextBox();
+            this.textBox61 = new System.Windows.Forms.TextBox();
+            this.textBoxFirstYearExtraSubject = new System.Windows.Forms.TextBox();
+            this.textBox63 = new System.Windows.Forms.TextBox();
+            this.textBox64 = new System.Windows.Forms.TextBox();
+            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.tabControlMarks = new System.Windows.Forms.TabControl();
+            this.tabPageSelectSubjects = new System.Windows.Forms.TabPage();
+            this.panelSelectSubjects = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.checkedListBoxSubjects = new System.Windows.Forms.CheckedListBox();
+            this.tabPageFirstTerm = new System.Windows.Forms.TabPage();
+            this.panelMarksFirstTerm = new System.Windows.Forms.Panel();
+            this.labelSuccessFirstTerm = new System.Windows.Forms.Label();
+            this.buttonSaveMarksFirstTerm = new System.Windows.Forms.Button();
+            this.dataGridViewMarksFirstTerm = new System.Windows.Forms.DataGridView();
+            this.SubjectsFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MarkMandatoryWithWordsSubjectsFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ЗПFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MarkChoosenWithWordsSubjectsFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ЗИПFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox900 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBoxStudentsNames = new System.Windows.Forms.ComboBox();
+            this.tabPageSecondTerm = new System.Windows.Forms.TabPage();
+            this.panelMarksSecondTerm = new System.Windows.Forms.Panel();
+            this.labelSuccessSecondTerm = new System.Windows.Forms.Label();
+            this.buttonSaveMarksSecondTerm = new System.Windows.Forms.Button();
+            this.dataGridViewMarksSecondTerm = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ЗПSecendTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ЗИПSecondTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPageYear = new System.Windows.Forms.TabPage();
+            this.panelMarksYear = new System.Windows.Forms.Panel();
+            this.labelSuccessSaveMarks = new System.Windows.Forms.Label();
+            this.buttonSaveMarksYear = new System.Windows.Forms.Button();
+            this.dataGridViewMarksYear = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ЗПMarkYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ЗИПMarkYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.tabControlMarksExtraSubjects = new System.Windows.Forms.TabControl();
+            this.tabPageChoseExtraSubjects = new System.Windows.Forms.TabPage();
+            this.panelChooseExtraSubjects = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.checkedListBoxExtraSubjects = new System.Windows.Forms.CheckedListBox();
+            this.tabPageMarksExtraSubjectsFirstTerm = new System.Windows.Forms.TabPage();
+            this.panelExtraSubjectsFirstTerm = new System.Windows.Forms.Panel();
+            this.buttonSaveMarksExtraSubjectsFirstTerm = new System.Windows.Forms.Button();
+            this.dataGridViewExtraSubjectsFirstTerm = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.СИПFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.comboBoxStudentsNamesExtraSubjects = new System.Windows.Forms.ComboBox();
+            this.tabPageMarksExtraSubjectsSecondTerm = new System.Windows.Forms.TabPage();
+            this.panelExtraSubjectsSecondTerm = new System.Windows.Forms.Panel();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.buttonSaveMarksExtraSubjectsSecondTerm = new System.Windows.Forms.Button();
+            this.dataGridViewExtraSubjectsSecondTerm = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.СИПSecondTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tabPageMarksExtraSubjectsYear = new System.Windows.Forms.TabPage();
+            this.panelExtraSubjectsYearTerm = new System.Windows.Forms.Panel();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.labelSaveSuccessExtraSubjectsMarks = new System.Windows.Forms.Label();
+            this.buttonSaveMarksExtraSubjectsYear = new System.Windows.Forms.Button();
+            this.dataGridViewExtraSubjectsYear = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.СИПYearGrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label28 = new System.Windows.Forms.Label();
             this.tabControlDiplom = new System.Windows.Forms.TabControl();
             this.tabPageInfo = new System.Windows.Forms.TabPage();
             this.labelPictureNotAvailable = new System.Windows.Forms.Label();
@@ -179,6 +378,22 @@
             this.label79 = new System.Windows.Forms.Label();
             this.label2First = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label51 = new System.Windows.Forms.Label();
+            this.labelThirdExamMark = new System.Windows.Forms.Label();
+            this.labelSecondExamMark = new System.Windows.Forms.Label();
+            this.labelFirstExamMark = new System.Windows.Forms.Label();
+            this.labelThirdExamMarkWords = new System.Windows.Forms.Label();
+            this.labelSecondExamMarkWords = new System.Windows.Forms.Label();
+            this.labelFirstExamMarkWords = new System.Windows.Forms.Label();
+            this.labelThirdExam = new System.Windows.Forms.Label();
+            this.labelSecondExam = new System.Windows.Forms.Label();
+            this.labelFirstExam = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.labelFifthExtraSubjectMark = new System.Windows.Forms.Label();
             this.labelFourthExtraSubjectMark = new System.Windows.Forms.Label();
@@ -221,195 +436,12 @@
             this.label98 = new System.Windows.Forms.Label();
             this.label99 = new System.Windows.Forms.Label();
             this.label3First = new System.Windows.Forms.Label();
-            this.tabControlMarksSummary = new System.Windows.Forms.TabControl();
-            this.tabPageMandatoryAndChosenSubjects = new System.Windows.Forms.TabPage();
-            this.panelMarksMandatoryAndChosenSubjectsSummary = new System.Windows.Forms.Panel();
-            this.textBoxAverageExams = new System.Windows.Forms.TextBox();
-            this.label89 = new System.Windows.Forms.Label();
-            this.textBoxAverageChosenSubjects = new System.Windows.Forms.TextBox();
-            this.label66 = new System.Windows.Forms.Label();
-            this.textBoxAverageMandatorySubjects = new System.Windows.Forms.TextBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.buttonSaveDiplomMarks = new System.Windows.Forms.Button();
-            this.comboBoxStudentsNamesDiplomMarks = new System.Windows.Forms.ComboBox();
-            this.dataGridViewDiplom = new System.Windows.Forms.DataGridView();
-            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WithWordsMandatoryFirstYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MandatorySubjectFirstYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WithWordsChosenFirstYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChosenFirstYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WithWordsMandatorySecondYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MandatorySecondYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WithWordsChosenSecondYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChosenSecondYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WithWordsMandatoryThirdYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MandatoryThirdYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WithWordsChosenThirdYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChosenThirdYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WithWordsMandatoryFourthYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MandatoryFourthYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WithWordsChosenFourthYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChosenFourthYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WithWordsMandatoryFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AverageMarkMandatorySubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WithWordsChosenFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AverageMarkChosenSubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBoxFourthYear = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBoxThirdYear = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox51 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox50 = new System.Windows.Forms.TextBox();
-            this.textBox49 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBoxSecondYear = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBoxFirstYear = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.tabPageExtraSubjects = new System.Windows.Forms.TabPage();
-            this.panelMarksExtraSubjectsSummary = new System.Windows.Forms.Panel();
-            this.textBoxAverageExtraSubjects = new System.Windows.Forms.TextBox();
-            this.label88 = new System.Windows.Forms.Label();
-            this.buttonSaveMaksFinalExtraSubjects = new System.Windows.Forms.Button();
-            this.dataGridViewDiplomExtraSubjects = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewExtraSubjectFirstYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewExtraSubjectSecondYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewExtraSubjectThirdYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewExtraSubjectFourthYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FinalMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewFinalMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBoxStudentsNamesExtraSubjectsMarks = new System.Windows.Forms.ComboBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBoxFourthYearExtraSubject = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBoxThirdYearExtraSubject = new System.Windows.Forms.TextBox();
-            this.textBox52 = new System.Windows.Forms.TextBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.textBoxSecondYearExtraSubject = new System.Windows.Forms.TextBox();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.textBox61 = new System.Windows.Forms.TextBox();
-            this.textBoxFirstYearExtraSubject = new System.Windows.Forms.TextBox();
-            this.textBox63 = new System.Windows.Forms.TextBox();
-            this.textBox64 = new System.Windows.Forms.TextBox();
-            this.textBox65 = new System.Windows.Forms.TextBox();
-            this.label48 = new System.Windows.Forms.Label();
             this.panelWelcome = new System.Windows.Forms.Panel();
             this.labelProfile = new System.Windows.Forms.Label();
             this.labelSchoolClassName = new System.Windows.Forms.Label();
             this.labelSchooYear = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelHi = new System.Windows.Forms.Label();
-            this.tabControlMarksExtraSubjects = new System.Windows.Forms.TabControl();
-            this.tabPageChoseExtraSubjects = new System.Windows.Forms.TabPage();
-            this.panelChooseExtraSubjects = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.checkedListBoxExtraSubjects = new System.Windows.Forms.CheckedListBox();
-            this.tabPageMarksExtraSubjectsFirstTerm = new System.Windows.Forms.TabPage();
-            this.panelExtraSubjectsFirstTerm = new System.Windows.Forms.Panel();
-            this.buttonSaveMarksExtraSubjectsFirstTerm = new System.Windows.Forms.Button();
-            this.dataGridViewExtraSubjectsFirstTerm = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.СИПFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.comboBoxStudentsNamesExtraSubjects = new System.Windows.Forms.ComboBox();
-            this.tabPageMarksExtraSubjectsSecondTerm = new System.Windows.Forms.TabPage();
-            this.panelExtraSubjectsSecondTerm = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.buttonSaveMarksExtraSubjectsSecondTerm = new System.Windows.Forms.Button();
-            this.dataGridViewExtraSubjectsSecondTerm = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.СИПSecondTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label26 = new System.Windows.Forms.Label();
-            this.tabPageMarksExtraSubjectsYear = new System.Windows.Forms.TabPage();
-            this.panelExtraSubjectsYearTerm = new System.Windows.Forms.Panel();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.labelSaveSuccessExtraSubjectsMarks = new System.Windows.Forms.Label();
-            this.buttonSaveMarksExtraSubjectsYear = new System.Windows.Forms.Button();
-            this.dataGridViewExtraSubjectsYear = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.СИПYearGrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label28 = new System.Windows.Forms.Label();
-            this.tabControlMarks = new System.Windows.Forms.TabControl();
-            this.tabPageSelectSubjects = new System.Windows.Forms.TabPage();
-            this.panelSelectSubjects = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.checkedListBoxSubjects = new System.Windows.Forms.CheckedListBox();
-            this.tabPageFirstTerm = new System.Windows.Forms.TabPage();
-            this.panelMarksFirstTerm = new System.Windows.Forms.Panel();
-            this.labelSuccessFirstTerm = new System.Windows.Forms.Label();
-            this.buttonSaveMarksFirstTerm = new System.Windows.Forms.Button();
-            this.dataGridViewMarksFirstTerm = new System.Windows.Forms.DataGridView();
-            this.SubjectsFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MarkMandatoryWithWordsSubjectsFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ЗПFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MarkChoosenWithWordsSubjectsFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ЗИПFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox900 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBoxStudentsNames = new System.Windows.Forms.ComboBox();
-            this.tabPageSecondTerm = new System.Windows.Forms.TabPage();
-            this.panelMarksSecondTerm = new System.Windows.Forms.Panel();
-            this.labelSuccessSecondTerm = new System.Windows.Forms.Label();
-            this.buttonSaveMarksSecondTerm = new System.Windows.Forms.Button();
-            this.dataGridViewMarksSecondTerm = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ЗПSecendTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ЗИПSecondTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tabPageYear = new System.Windows.Forms.TabPage();
-            this.panelMarksYear = new System.Windows.Forms.Panel();
-            this.labelSuccessYear = new System.Windows.Forms.Label();
-            this.buttonSaveMarksYear = new System.Windows.Forms.Button();
-            this.dataGridViewMarksYear = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ЗПMarkYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ЗИПMarkYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.panelMarksExam = new System.Windows.Forms.Panel();
             this.labelExamWarning = new System.Windows.Forms.Label();
             this.label103 = new System.Windows.Forms.Label();
@@ -440,21 +472,6 @@
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.panelEditTeacherInfo = new System.Windows.Forms.Panel();
-            this.labelChangesMade = new System.Windows.Forms.Label();
-            this.buttonSaveChangesTeacherInfo = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBoxUserName = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBoxTeacherFirstName = new System.Windows.Forms.TextBox();
-            this.textBoxTeacherLastName = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.panelEditStudentsInfo = new System.Windows.Forms.Panel();
             this.labelCurrentSchoolYear = new System.Windows.Forms.Label();
             this.labelTeacherName = new System.Windows.Forms.Label();
@@ -491,21 +508,19 @@
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialogLoadPortrait = new System.Windows.Forms.OpenFileDialog();
-            this.timerSuccess = new System.Windows.Forms.Timer(this.components);
+            this.timerSuccessSaveMarks = new System.Windows.Forms.Timer(this.components);
             this.timerTeacherChanges = new System.Windows.Forms.Timer(this.components);
             this.timerSaveSuccessExtraSubjects = new System.Windows.Forms.Timer(this.components);
             this.timerAbcensesSaveSuccessful = new System.Windows.Forms.Timer(this.components);
+            this.timerDiplomMarksSaved = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panelParent.SuspendLayout();
-            this.tabControlDiplom.SuspendLayout();
-            this.tabPageInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentPortrait)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.panelMandatorySubjectsMarks.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.panelEditTeacherInfo.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabControlMarksSummary.SuspendLayout();
             this.tabPageMandatoryAndChosenSubjects.SuspendLayout();
             this.panelMarksMandatoryAndChosenSubjectsSummary.SuspendLayout();
@@ -513,19 +528,6 @@
             this.tabPageExtraSubjects.SuspendLayout();
             this.panelMarksExtraSubjectsSummary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiplomExtraSubjects)).BeginInit();
-            this.panelWelcome.SuspendLayout();
-            this.tabControlMarksExtraSubjects.SuspendLayout();
-            this.tabPageChoseExtraSubjects.SuspendLayout();
-            this.panelChooseExtraSubjects.SuspendLayout();
-            this.tabPageMarksExtraSubjectsFirstTerm.SuspendLayout();
-            this.panelExtraSubjectsFirstTerm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsFirstTerm)).BeginInit();
-            this.tabPageMarksExtraSubjectsSecondTerm.SuspendLayout();
-            this.panelExtraSubjectsSecondTerm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsSecondTerm)).BeginInit();
-            this.tabPageMarksExtraSubjectsYear.SuspendLayout();
-            this.panelExtraSubjectsYearTerm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsYear)).BeginInit();
             this.tabControlMarks.SuspendLayout();
             this.tabPageSelectSubjects.SuspendLayout();
             this.panelSelectSubjects.SuspendLayout();
@@ -538,12 +540,28 @@
             this.tabPageYear.SuspendLayout();
             this.panelMarksYear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarksYear)).BeginInit();
+            this.tabControlMarksExtraSubjects.SuspendLayout();
+            this.tabPageChoseExtraSubjects.SuspendLayout();
+            this.panelChooseExtraSubjects.SuspendLayout();
+            this.tabPageMarksExtraSubjectsFirstTerm.SuspendLayout();
+            this.panelExtraSubjectsFirstTerm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsFirstTerm)).BeginInit();
+            this.tabPageMarksExtraSubjectsSecondTerm.SuspendLayout();
+            this.panelExtraSubjectsSecondTerm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsSecondTerm)).BeginInit();
+            this.tabPageMarksExtraSubjectsYear.SuspendLayout();
+            this.panelExtraSubjectsYearTerm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsYear)).BeginInit();
+            this.tabControlDiplom.SuspendLayout();
+            this.tabPageInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentPortrait)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.panelMandatorySubjectsMarks.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.panelWelcome.SuspendLayout();
             this.panelMarksExam.SuspendLayout();
             this.panelAddAbsences.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbsences)).BeginInit();
-            this.panelEditTeacherInfo.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panelEditStudentsInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPortrait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
@@ -579,7 +597,7 @@
             // buttonShowDiplomReady
             // 
             this.buttonShowDiplomReady.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShowDiplomReady.Location = new System.Drawing.Point(40, 359);
+            this.buttonShowDiplomReady.Location = new System.Drawing.Point(40, 443);
             this.buttonShowDiplomReady.Name = "buttonShowDiplomReady";
             this.buttonShowDiplomReady.Size = new System.Drawing.Size(173, 63);
             this.buttonShowDiplomReady.TabIndex = 12;
@@ -601,7 +619,7 @@
             // buttonAddMarksFromExams
             // 
             this.buttonAddMarksFromExams.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddMarksFromExams.Location = new System.Drawing.Point(40, 443);
+            this.buttonAddMarksFromExams.Location = new System.Drawing.Point(40, 359);
             this.buttonAddMarksFromExams.Name = "buttonAddMarksFromExams";
             this.buttonAddMarksFromExams.Size = new System.Drawing.Size(173, 63);
             this.buttonAddMarksFromExams.TabIndex = 10;
@@ -666,30 +684,2328 @@
             // 
             // panelParent
             // 
-            this.panelParent.Controls.Add(this.tabControlDiplom);
+            this.panelParent.Controls.Add(this.panelEditStudentsInfo);
+            this.panelParent.Controls.Add(this.panelEditTeacherInfo);
             this.panelParent.Controls.Add(this.tabControlMarksSummary);
-            this.panelParent.Controls.Add(this.panelWelcome);
-            this.panelParent.Controls.Add(this.tabControlMarksExtraSubjects);
             this.panelParent.Controls.Add(this.tabControlMarks);
+            this.panelParent.Controls.Add(this.tabControlMarksExtraSubjects);
+            this.panelParent.Controls.Add(this.tabControlDiplom);
+            this.panelParent.Controls.Add(this.panelWelcome);
             this.panelParent.Controls.Add(this.panelMarksExam);
             this.panelParent.Controls.Add(this.panelAddAbsences);
-            this.panelParent.Controls.Add(this.panelEditTeacherInfo);
-            this.panelParent.Controls.Add(this.panelEditStudentsInfo);
             this.panelParent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelParent.Location = new System.Drawing.Point(0, 0);
             this.panelParent.Name = "panelParent";
             this.panelParent.Size = new System.Drawing.Size(1038, 730);
             this.panelParent.TabIndex = 6;
             // 
+            // panelEditTeacherInfo
+            // 
+            this.panelEditTeacherInfo.AutoScroll = true;
+            this.panelEditTeacherInfo.Controls.Add(this.buttonSaveChangesTeacherInfo);
+            this.panelEditTeacherInfo.Controls.Add(this.groupBox2);
+            this.panelEditTeacherInfo.Controls.Add(this.groupBox1);
+            this.panelEditTeacherInfo.Controls.Add(this.label19);
+            this.panelEditTeacherInfo.Controls.Add(this.labelChangesMade);
+            this.panelEditTeacherInfo.Location = new System.Drawing.Point(1, 650);
+            this.panelEditTeacherInfo.Name = "panelEditTeacherInfo";
+            this.panelEditTeacherInfo.Size = new System.Drawing.Size(1031, 78);
+            this.panelEditTeacherInfo.TabIndex = 1149;
+            this.panelEditTeacherInfo.Visible = false;
+            // 
+            // buttonSaveChangesTeacherInfo
+            // 
+            this.buttonSaveChangesTeacherInfo.Enabled = false;
+            this.buttonSaveChangesTeacherInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveChangesTeacherInfo.Location = new System.Drawing.Point(492, 617);
+            this.buttonSaveChangesTeacherInfo.Name = "buttonSaveChangesTeacherInfo";
+            this.buttonSaveChangesTeacherInfo.Size = new System.Drawing.Size(132, 44);
+            this.buttonSaveChangesTeacherInfo.TabIndex = 1145;
+            this.buttonSaveChangesTeacherInfo.Text = "Запиши";
+            this.buttonSaveChangesTeacherInfo.UseVisualStyleBackColor = true;
+            this.buttonSaveChangesTeacherInfo.Click += new System.EventHandler(this.buttonSaveChangesTeacherInfo_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.textBoxUserName);
+            this.groupBox2.Controls.Add(this.textBoxPassword);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(323, 390);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(478, 202);
+            this.groupBox2.TabIndex = 1144;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Потребителски данни";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(96, 152);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(278, 40);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "Паролата ще бъде показана, само \r\nкогато я посочите с мишката";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(96, 94);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(67, 20);
+            this.label23.TabIndex = 5;
+            this.label23.Text = "Парола";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(96, 26);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(161, 20);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "Потребителско име";
+            // 
+            // textBoxUserName
+            // 
+            this.textBoxUserName.Location = new System.Drawing.Point(100, 55);
+            this.textBoxUserName.Name = "textBoxUserName";
+            this.textBoxUserName.Size = new System.Drawing.Size(282, 26);
+            this.textBoxUserName.TabIndex = 1;
+            this.textBoxUserName.TextChanged += new System.EventHandler(this.textBoxUserName_TextChanged);
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Location = new System.Drawing.Point(99, 119);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(282, 26);
+            this.textBoxPassword.TabIndex = 2;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
+            this.textBoxPassword.MouseEnter += new System.EventHandler(this.textBoxPassword_MouseEnter);
+            this.textBoxPassword.MouseLeave += new System.EventHandler(this.textBoxPassword_MouseLeave);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Controls.Add(this.textBoxTeacherFirstName);
+            this.groupBox1.Controls.Add(this.textBoxTeacherLastName);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(323, 129);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(478, 202);
+            this.groupBox1.TabIndex = 1142;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Лична информация";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(96, 94);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(81, 20);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Фамилия";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(96, 26);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(40, 20);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "Име";
+            // 
+            // textBoxTeacherFirstName
+            // 
+            this.textBoxTeacherFirstName.Location = new System.Drawing.Point(100, 55);
+            this.textBoxTeacherFirstName.Name = "textBoxTeacherFirstName";
+            this.textBoxTeacherFirstName.Size = new System.Drawing.Size(282, 26);
+            this.textBoxTeacherFirstName.TabIndex = 1;
+            this.textBoxTeacherFirstName.TextChanged += new System.EventHandler(this.textBoxTeacherFirstName_TextChanged);
+            // 
+            // textBoxTeacherLastName
+            // 
+            this.textBoxTeacherLastName.Location = new System.Drawing.Point(99, 119);
+            this.textBoxTeacherLastName.Name = "textBoxTeacherLastName";
+            this.textBoxTeacherLastName.Size = new System.Drawing.Size(282, 26);
+            this.textBoxTeacherLastName.TabIndex = 2;
+            this.textBoxTeacherLastName.TextChanged += new System.EventHandler(this.textBoxTeacherLastName_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(360, 42);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(358, 33);
+            this.label19.TabIndex = 1141;
+            this.label19.Text = "Редактиране на личните данни\r\n";
+            // 
+            // labelChangesMade
+            // 
+            this.labelChangesMade.AutoSize = true;
+            this.labelChangesMade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChangesMade.Location = new System.Drawing.Point(612, 349);
+            this.labelChangesMade.Name = "labelChangesMade";
+            this.labelChangesMade.Size = new System.Drawing.Size(331, 25);
+            this.labelChangesMade.TabIndex = 1146;
+            this.labelChangesMade.Text = "Промените са направени успешно";
+            this.labelChangesMade.Visible = false;
+            // 
+            // tabControlMarksSummary
+            // 
+            this.tabControlMarksSummary.Controls.Add(this.tabPageMandatoryAndChosenSubjects);
+            this.tabControlMarksSummary.Controls.Add(this.tabPageExtraSubjects);
+            this.tabControlMarksSummary.Location = new System.Drawing.Point(3, 290);
+            this.tabControlMarksSummary.Name = "tabControlMarksSummary";
+            this.tabControlMarksSummary.SelectedIndex = 0;
+            this.tabControlMarksSummary.Size = new System.Drawing.Size(1041, 42);
+            this.tabControlMarksSummary.TabIndex = 1133;
+            this.tabControlMarksSummary.Visible = false;
+            // 
+            // tabPageMandatoryAndChosenSubjects
+            // 
+            this.tabPageMandatoryAndChosenSubjects.Controls.Add(this.panelMarksMandatoryAndChosenSubjectsSummary);
+            this.tabPageMandatoryAndChosenSubjects.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMandatoryAndChosenSubjects.Name = "tabPageMandatoryAndChosenSubjects";
+            this.tabPageMandatoryAndChosenSubjects.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMandatoryAndChosenSubjects.Size = new System.Drawing.Size(1033, 16);
+            this.tabPageMandatoryAndChosenSubjects.TabIndex = 0;
+            this.tabPageMandatoryAndChosenSubjects.Text = "Успех от ЗП и ЗИП";
+            this.tabPageMandatoryAndChosenSubjects.UseVisualStyleBackColor = true;
+            // 
+            // panelMarksMandatoryAndChosenSubjectsSummary
+            // 
+            this.panelMarksMandatoryAndChosenSubjectsSummary.AutoScroll = true;
+            this.panelMarksMandatoryAndChosenSubjectsSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.labelDiplomMarksSaveSuccessful);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxAverageExams);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.label89);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxAverageChosenSubjects);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.label66);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxAverageMandatorySubjects);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.label54);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.buttonSaveDiplomMarks);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.comboBoxStudentsNamesDiplomMarks);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.dataGridViewDiplom);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox27);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox32);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox37);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxFourthYear);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox44);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxThirdYear);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox46);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox47);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox51);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox31);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox50);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox49);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox33);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxSecondYear);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox35);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox36);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxFirstYear);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox38);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox40);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox42);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.label36);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Location = new System.Drawing.Point(3, 3);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Name = "panelMarksMandatoryAndChosenSubjectsSummary";
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Size = new System.Drawing.Size(1027, 10);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.TabIndex = 1155;
+            // 
+            // labelDiplomMarksSaveSuccessful
+            // 
+            this.labelDiplomMarksSaveSuccessful.AutoSize = true;
+            this.labelDiplomMarksSaveSuccessful.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiplomMarksSaveSuccessful.Location = new System.Drawing.Point(494, 377);
+            this.labelDiplomMarksSaveSuccessful.Name = "labelDiplomMarksSaveSuccessful";
+            this.labelDiplomMarksSaveSuccessful.Size = new System.Drawing.Size(168, 31);
+            this.labelDiplomMarksSaveSuccessful.TabIndex = 1140;
+            this.labelDiplomMarksSaveSuccessful.Text = "ЗАПИСАНО";
+            this.labelDiplomMarksSaveSuccessful.Visible = false;
+            // 
+            // textBoxAverageExams
+            // 
+            this.textBoxAverageExams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBoxAverageExams.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAverageExams.Location = new System.Drawing.Point(219, 641);
+            this.textBoxAverageExams.Multiline = true;
+            this.textBoxAverageExams.Name = "textBoxAverageExams";
+            this.textBoxAverageExams.ReadOnly = true;
+            this.textBoxAverageExams.Size = new System.Drawing.Size(52, 25);
+            this.textBoxAverageExams.TabIndex = 1139;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(96, 648);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(116, 13);
+            this.label89.TabIndex = 1138;
+            this.label89.Text = "Среден успех от ДЗИ";
+            // 
+            // textBoxAverageChosenSubjects
+            // 
+            this.textBoxAverageChosenSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBoxAverageChosenSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAverageChosenSubjects.Location = new System.Drawing.Point(649, 640);
+            this.textBoxAverageChosenSubjects.Multiline = true;
+            this.textBoxAverageChosenSubjects.Name = "textBoxAverageChosenSubjects";
+            this.textBoxAverageChosenSubjects.ReadOnly = true;
+            this.textBoxAverageChosenSubjects.Size = new System.Drawing.Size(52, 25);
+            this.textBoxAverageChosenSubjects.TabIndex = 1137;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(526, 647);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(115, 13);
+            this.label66.TabIndex = 1136;
+            this.label66.Text = "Среден успех от ЗИП";
+            // 
+            // textBoxAverageMandatorySubjects
+            // 
+            this.textBoxAverageMandatorySubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBoxAverageMandatorySubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAverageMandatorySubjects.Location = new System.Drawing.Point(439, 641);
+            this.textBoxAverageMandatorySubjects.Multiline = true;
+            this.textBoxAverageMandatorySubjects.Name = "textBoxAverageMandatorySubjects";
+            this.textBoxAverageMandatorySubjects.ReadOnly = true;
+            this.textBoxAverageMandatorySubjects.Size = new System.Drawing.Size(52, 25);
+            this.textBoxAverageMandatorySubjects.TabIndex = 1135;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(316, 648);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(107, 13);
+            this.label54.TabIndex = 1134;
+            this.label54.Text = "Среден успех от ЗП";
+            // 
+            // buttonSaveDiplomMarks
+            // 
+            this.buttonSaveDiplomMarks.Location = new System.Drawing.Point(814, 628);
+            this.buttonSaveDiplomMarks.Name = "buttonSaveDiplomMarks";
+            this.buttonSaveDiplomMarks.Size = new System.Drawing.Size(150, 51);
+            this.buttonSaveDiplomMarks.TabIndex = 1133;
+            this.buttonSaveDiplomMarks.Text = "Запазване на окончателните оценки";
+            this.buttonSaveDiplomMarks.UseVisualStyleBackColor = true;
+            this.buttonSaveDiplomMarks.Click += new System.EventHandler(this.buttonSaveDiplomMarks_Click);
+            // 
+            // comboBoxStudentsNamesDiplomMarks
+            // 
+            this.comboBoxStudentsNamesDiplomMarks.CausesValidation = false;
+            this.comboBoxStudentsNamesDiplomMarks.DisplayMember = "FullName";
+            this.comboBoxStudentsNamesDiplomMarks.FormattingEnabled = true;
+            this.comboBoxStudentsNamesDiplomMarks.Location = new System.Drawing.Point(748, 29);
+            this.comboBoxStudentsNamesDiplomMarks.Name = "comboBoxStudentsNamesDiplomMarks";
+            this.comboBoxStudentsNamesDiplomMarks.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxStudentsNamesDiplomMarks.TabIndex = 1132;
+            this.comboBoxStudentsNamesDiplomMarks.Text = "Изберете ученик от класа ви";
+            this.comboBoxStudentsNamesDiplomMarks.ValueMember = "StudentID";
+            this.comboBoxStudentsNamesDiplomMarks.SelectionChangeCommitted += new System.EventHandler(this.comboBoxStudentsNamesDiplomMarks_SelectionChangeCommitted);
+            this.comboBoxStudentsNamesDiplomMarks.Click += new System.EventHandler(this.comboBoxStudentsNamesDiplomMarks_Click);
+            // 
+            // dataGridViewDiplom
+            // 
+            this.dataGridViewDiplom.AllowUserToAddRows = false;
+            this.dataGridViewDiplom.AllowUserToDeleteRows = false;
+            this.dataGridViewDiplom.AllowUserToResizeColumns = false;
+            this.dataGridViewDiplom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridViewDiplom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDiplom.ColumnHeadersVisible = false;
+            this.dataGridViewDiplom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SubjectName,
+            this.WithWordsMandatoryFirstYear,
+            this.MandatorySubjectFirstYear,
+            this.WithWordsChosenFirstYear,
+            this.ChosenFirstYear,
+            this.WithWordsMandatorySecondYear,
+            this.MandatorySecondYear,
+            this.WithWordsChosenSecondYear,
+            this.ChosenSecondYear,
+            this.WithWordsMandatoryThirdYear,
+            this.MandatoryThirdYear,
+            this.WithWordsChosenThirdYear,
+            this.ChosenThirdYear,
+            this.WithWordsMandatoryFourthYear,
+            this.MandatoryFourthYear,
+            this.WithWordsChosenFourthYear,
+            this.ChosenFourthYear,
+            this.WithWordsMandatoryFinal,
+            this.AverageMarkMandatorySubject,
+            this.WithWordsChosenFinal,
+            this.AverageMarkChosenSubject});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDiplom.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewDiplom.Location = new System.Drawing.Point(42, 156);
+            this.dataGridViewDiplom.Name = "dataGridViewDiplom";
+            this.dataGridViewDiplom.RowHeadersVisible = false;
+            this.dataGridViewDiplom.Size = new System.Drawing.Size(935, 452);
+            this.dataGridViewDiplom.TabIndex = 1125;
+            // 
+            // SubjectName
+            // 
+            this.SubjectName.DataPropertyName = "Subject";
+            this.SubjectName.HeaderText = "Предмет";
+            this.SubjectName.Name = "SubjectName";
+            this.SubjectName.ReadOnly = true;
+            this.SubjectName.Width = 174;
+            // 
+            // WithWordsMandatoryFirstYear
+            // 
+            this.WithWordsMandatoryFirstYear.HeaderText = "Оценка";
+            this.WithWordsMandatoryFirstYear.Name = "WithWordsMandatoryFirstYear";
+            this.WithWordsMandatoryFirstYear.ReadOnly = true;
+            this.WithWordsMandatoryFirstYear.Width = 50;
+            // 
+            // MandatorySubjectFirstYear
+            // 
+            this.MandatorySubjectFirstYear.DataPropertyName = "MandatorySubjectFirstYear";
+            this.MandatorySubjectFirstYear.HeaderText = "ЗП/ПП";
+            this.MandatorySubjectFirstYear.Name = "MandatorySubjectFirstYear";
+            this.MandatorySubjectFirstYear.ReadOnly = true;
+            this.MandatorySubjectFirstYear.Width = 20;
+            // 
+            // WithWordsChosenFirstYear
+            // 
+            this.WithWordsChosenFirstYear.HeaderText = "Оценка";
+            this.WithWordsChosenFirstYear.Name = "WithWordsChosenFirstYear";
+            this.WithWordsChosenFirstYear.ReadOnly = true;
+            this.WithWordsChosenFirstYear.Width = 51;
+            // 
+            // ChosenFirstYear
+            // 
+            this.ChosenFirstYear.DataPropertyName = "ChosenSubjectFirstYear";
+            this.ChosenFirstYear.HeaderText = "ЗИП";
+            this.ChosenFirstYear.Name = "ChosenFirstYear";
+            this.ChosenFirstYear.ReadOnly = true;
+            this.ChosenFirstYear.Width = 20;
+            // 
+            // WithWordsMandatorySecondYear
+            // 
+            this.WithWordsMandatorySecondYear.HeaderText = "Оценка";
+            this.WithWordsMandatorySecondYear.Name = "WithWordsMandatorySecondYear";
+            this.WithWordsMandatorySecondYear.ReadOnly = true;
+            this.WithWordsMandatorySecondYear.Width = 51;
+            // 
+            // MandatorySecondYear
+            // 
+            this.MandatorySecondYear.DataPropertyName = "MandatorySubjectSecondYear";
+            this.MandatorySecondYear.HeaderText = "ЗП/ПП";
+            this.MandatorySecondYear.Name = "MandatorySecondYear";
+            this.MandatorySecondYear.ReadOnly = true;
+            this.MandatorySecondYear.Width = 20;
+            // 
+            // WithWordsChosenSecondYear
+            // 
+            this.WithWordsChosenSecondYear.HeaderText = "Оценка";
+            this.WithWordsChosenSecondYear.Name = "WithWordsChosenSecondYear";
+            this.WithWordsChosenSecondYear.ReadOnly = true;
+            this.WithWordsChosenSecondYear.Width = 51;
+            // 
+            // ChosenSecondYear
+            // 
+            this.ChosenSecondYear.DataPropertyName = "ChosenSubjectSecondYear";
+            this.ChosenSecondYear.HeaderText = "ЗИП";
+            this.ChosenSecondYear.Name = "ChosenSecondYear";
+            this.ChosenSecondYear.ReadOnly = true;
+            this.ChosenSecondYear.Width = 20;
+            // 
+            // WithWordsMandatoryThirdYear
+            // 
+            this.WithWordsMandatoryThirdYear.HeaderText = "Оценка";
+            this.WithWordsMandatoryThirdYear.Name = "WithWordsMandatoryThirdYear";
+            this.WithWordsMandatoryThirdYear.ReadOnly = true;
+            this.WithWordsMandatoryThirdYear.Width = 50;
+            // 
+            // MandatoryThirdYear
+            // 
+            this.MandatoryThirdYear.DataPropertyName = "MandatorySubjectThirdYear";
+            this.MandatoryThirdYear.HeaderText = "ЗП/ПП";
+            this.MandatoryThirdYear.Name = "MandatoryThirdYear";
+            this.MandatoryThirdYear.ReadOnly = true;
+            this.MandatoryThirdYear.Width = 20;
+            // 
+            // WithWordsChosenThirdYear
+            // 
+            this.WithWordsChosenThirdYear.HeaderText = "Оценка";
+            this.WithWordsChosenThirdYear.Name = "WithWordsChosenThirdYear";
+            this.WithWordsChosenThirdYear.ReadOnly = true;
+            this.WithWordsChosenThirdYear.Width = 52;
+            // 
+            // ChosenThirdYear
+            // 
+            this.ChosenThirdYear.DataPropertyName = "ChosenSubjectThirdYear";
+            this.ChosenThirdYear.HeaderText = "ЗИП";
+            this.ChosenThirdYear.Name = "ChosenThirdYear";
+            this.ChosenThirdYear.ReadOnly = true;
+            this.ChosenThirdYear.Width = 20;
+            // 
+            // WithWordsMandatoryFourthYear
+            // 
+            this.WithWordsMandatoryFourthYear.HeaderText = "Оценка";
+            this.WithWordsMandatoryFourthYear.Name = "WithWordsMandatoryFourthYear";
+            this.WithWordsMandatoryFourthYear.ReadOnly = true;
+            this.WithWordsMandatoryFourthYear.Width = 51;
+            // 
+            // MandatoryFourthYear
+            // 
+            this.MandatoryFourthYear.DataPropertyName = "MandatorySubjectFourthYear";
+            this.MandatoryFourthYear.HeaderText = "ЗП/ПП";
+            this.MandatoryFourthYear.Name = "MandatoryFourthYear";
+            this.MandatoryFourthYear.ReadOnly = true;
+            this.MandatoryFourthYear.Width = 20;
+            // 
+            // WithWordsChosenFourthYear
+            // 
+            this.WithWordsChosenFourthYear.HeaderText = "Оценка";
+            this.WithWordsChosenFourthYear.Name = "WithWordsChosenFourthYear";
+            this.WithWordsChosenFourthYear.ReadOnly = true;
+            this.WithWordsChosenFourthYear.Width = 51;
+            // 
+            // ChosenFourthYear
+            // 
+            this.ChosenFourthYear.DataPropertyName = "ChosenSubjectFourthYear";
+            this.ChosenFourthYear.HeaderText = "ЗИП";
+            this.ChosenFourthYear.Name = "ChosenFourthYear";
+            this.ChosenFourthYear.ReadOnly = true;
+            this.ChosenFourthYear.Width = 20;
+            // 
+            // WithWordsMandatoryFinal
+            // 
+            this.WithWordsMandatoryFinal.HeaderText = "Оценка";
+            this.WithWordsMandatoryFinal.Name = "WithWordsMandatoryFinal";
+            this.WithWordsMandatoryFinal.ReadOnly = true;
+            this.WithWordsMandatoryFinal.Width = 65;
+            // 
+            // AverageMarkMandatorySubject
+            // 
+            this.AverageMarkMandatorySubject.DataPropertyName = "AverageMarkMandatorySubject";
+            this.AverageMarkMandatorySubject.HeaderText = "ЗП/ПП";
+            this.AverageMarkMandatorySubject.Name = "AverageMarkMandatorySubject";
+            this.AverageMarkMandatorySubject.ReadOnly = true;
+            this.AverageMarkMandatorySubject.Width = 33;
+            // 
+            // WithWordsChosenFinal
+            // 
+            this.WithWordsChosenFinal.HeaderText = "Оценка";
+            this.WithWordsChosenFinal.Name = "WithWordsChosenFinal";
+            this.WithWordsChosenFinal.ReadOnly = true;
+            this.WithWordsChosenFinal.Width = 65;
+            // 
+            // AverageMarkChosenSubject
+            // 
+            this.AverageMarkChosenSubject.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.AverageMarkChosenSubject.DataPropertyName = "AverageMarkChosenSubject";
+            this.AverageMarkChosenSubject.HeaderText = "ЗИП";
+            this.AverageMarkChosenSubject.Name = "AverageMarkChosenSubject";
+            this.AverageMarkChosenSubject.ReadOnly = true;
+            // 
+            // textBox27
+            // 
+            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox27.Location = new System.Drawing.Point(713, 114);
+            this.textBox27.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox27.Multiline = true;
+            this.textBox27.Name = "textBox27";
+            this.textBox27.ReadOnly = true;
+            this.textBox27.Size = new System.Drawing.Size(72, 43);
+            this.textBox27.TabIndex = 1124;
+            this.textBox27.TabStop = false;
+            this.textBox27.Text = "ЗИП";
+            this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox32
+            // 
+            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox32.Location = new System.Drawing.Point(570, 114);
+            this.textBox32.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox32.Multiline = true;
+            this.textBox32.Name = "textBox32";
+            this.textBox32.ReadOnly = true;
+            this.textBox32.Size = new System.Drawing.Size(73, 43);
+            this.textBox32.TabIndex = 1123;
+            this.textBox32.TabStop = false;
+            this.textBox32.Text = "ЗИП";
+            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox37
+            // 
+            this.textBox37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox37.Location = new System.Drawing.Point(642, 114);
+            this.textBox37.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox37.Multiline = true;
+            this.textBox37.Name = "textBox37";
+            this.textBox37.ReadOnly = true;
+            this.textBox37.Size = new System.Drawing.Size(72, 43);
+            this.textBox37.TabIndex = 1122;
+            this.textBox37.TabStop = false;
+            this.textBox37.Text = "ЗП или профилирана подготовка";
+            this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxFourthYear
+            // 
+            this.textBoxFourthYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxFourthYear.Location = new System.Drawing.Point(642, 76);
+            this.textBoxFourthYear.Multiline = true;
+            this.textBoxFourthYear.Name = "textBoxFourthYear";
+            this.textBoxFourthYear.ReadOnly = true;
+            this.textBoxFourthYear.Size = new System.Drawing.Size(143, 20);
+            this.textBoxFourthYear.TabIndex = 1120;
+            this.textBoxFourthYear.Text = "уч.г.";
+            this.textBoxFourthYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox44
+            // 
+            this.textBox44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox44.Location = new System.Drawing.Point(500, 114);
+            this.textBox44.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox44.Multiline = true;
+            this.textBox44.Name = "textBox44";
+            this.textBox44.ReadOnly = true;
+            this.textBox44.Size = new System.Drawing.Size(72, 43);
+            this.textBox44.TabIndex = 1121;
+            this.textBox44.TabStop = false;
+            this.textBox44.Text = "ЗП или профилирана подготовка";
+            this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxThirdYear
+            // 
+            this.textBoxThirdYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxThirdYear.Location = new System.Drawing.Point(500, 76);
+            this.textBoxThirdYear.Multiline = true;
+            this.textBoxThirdYear.Name = "textBoxThirdYear";
+            this.textBoxThirdYear.ReadOnly = true;
+            this.textBoxThirdYear.Size = new System.Drawing.Size(143, 20);
+            this.textBoxThirdYear.TabIndex = 1119;
+            this.textBoxThirdYear.Text = "уч.г.";
+            this.textBoxThirdYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox46
+            // 
+            this.textBox46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox46.Location = new System.Drawing.Point(642, 95);
+            this.textBox46.Multiline = true;
+            this.textBox46.Name = "textBox46";
+            this.textBox46.ReadOnly = true;
+            this.textBox46.Size = new System.Drawing.Size(143, 20);
+            this.textBox46.TabIndex = 1118;
+            this.textBox46.Text = "XII клас";
+            this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox47
+            // 
+            this.textBox47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox47.Location = new System.Drawing.Point(500, 95);
+            this.textBox47.Multiline = true;
+            this.textBox47.Name = "textBox47";
+            this.textBox47.ReadOnly = true;
+            this.textBox47.Size = new System.Drawing.Size(143, 20);
+            this.textBox47.TabIndex = 1117;
+            this.textBox47.Text = "XI клас";
+            this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox51
+            // 
+            this.textBox51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox51.Location = new System.Drawing.Point(881, 114);
+            this.textBox51.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox51.Multiline = true;
+            this.textBox51.Name = "textBox51";
+            this.textBox51.ReadOnly = true;
+            this.textBox51.Size = new System.Drawing.Size(96, 43);
+            this.textBox51.TabIndex = 1116;
+            this.textBox51.TabStop = false;
+            this.textBox51.Text = "ЗИП";
+            this.textBox51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox31
+            // 
+            this.textBox31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox31.Location = new System.Drawing.Point(429, 114);
+            this.textBox31.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox31.Multiline = true;
+            this.textBox31.Name = "textBox31";
+            this.textBox31.ReadOnly = true;
+            this.textBox31.Size = new System.Drawing.Size(72, 43);
+            this.textBox31.TabIndex = 1114;
+            this.textBox31.TabStop = false;
+            this.textBox31.Text = "ЗИП";
+            this.textBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox50
+            // 
+            this.textBox50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox50.Location = new System.Drawing.Point(784, 114);
+            this.textBox50.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox50.Multiline = true;
+            this.textBox50.Name = "textBox50";
+            this.textBox50.ReadOnly = true;
+            this.textBox50.Size = new System.Drawing.Size(98, 43);
+            this.textBox50.TabIndex = 1111;
+            this.textBox50.TabStop = false;
+            this.textBox50.Text = "ЗП или профилирана подготовка";
+            this.textBox50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox49
+            // 
+            this.textBox49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox49.Location = new System.Drawing.Point(287, 114);
+            this.textBox49.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox49.Multiline = true;
+            this.textBox49.Name = "textBox49";
+            this.textBox49.ReadOnly = true;
+            this.textBox49.Size = new System.Drawing.Size(72, 43);
+            this.textBox49.TabIndex = 1113;
+            this.textBox49.TabStop = false;
+            this.textBox49.Text = "ЗИП";
+            this.textBox49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox33
+            // 
+            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox33.Location = new System.Drawing.Point(358, 114);
+            this.textBox33.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox33.Multiline = true;
+            this.textBox33.Name = "textBox33";
+            this.textBox33.ReadOnly = true;
+            this.textBox33.Size = new System.Drawing.Size(72, 43);
+            this.textBox33.TabIndex = 1108;
+            this.textBox33.TabStop = false;
+            this.textBox33.Text = "ЗП или профилирана подготовка";
+            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxSecondYear
+            // 
+            this.textBoxSecondYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSecondYear.Location = new System.Drawing.Point(358, 76);
+            this.textBoxSecondYear.Multiline = true;
+            this.textBoxSecondYear.Name = "textBoxSecondYear";
+            this.textBoxSecondYear.ReadOnly = true;
+            this.textBoxSecondYear.Size = new System.Drawing.Size(143, 20);
+            this.textBoxSecondYear.TabIndex = 1106;
+            this.textBoxSecondYear.Text = "уч.г.";
+            this.textBoxSecondYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox35
+            // 
+            this.textBox35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox35.Location = new System.Drawing.Point(784, 76);
+            this.textBox35.Multiline = true;
+            this.textBox35.Name = "textBox35";
+            this.textBox35.ReadOnly = true;
+            this.textBox35.Size = new System.Drawing.Size(193, 39);
+            this.textBox35.TabIndex = 1104;
+            this.textBox35.TabStop = false;
+            this.textBox35.Text = "\r\nОкончателна оценка за дипломата";
+            this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox36
+            // 
+            this.textBox36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox36.Location = new System.Drawing.Point(217, 114);
+            this.textBox36.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox36.Multiline = true;
+            this.textBox36.Name = "textBox36";
+            this.textBox36.ReadOnly = true;
+            this.textBox36.Size = new System.Drawing.Size(72, 43);
+            this.textBox36.TabIndex = 1107;
+            this.textBox36.TabStop = false;
+            this.textBox36.Text = "ЗП или профилирана подготовка";
+            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxFirstYear
+            // 
+            this.textBoxFirstYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxFirstYear.Location = new System.Drawing.Point(217, 76);
+            this.textBoxFirstYear.Multiline = true;
+            this.textBoxFirstYear.Name = "textBoxFirstYear";
+            this.textBoxFirstYear.ReadOnly = true;
+            this.textBoxFirstYear.Size = new System.Drawing.Size(142, 20);
+            this.textBoxFirstYear.TabIndex = 1102;
+            this.textBoxFirstYear.Text = "уч.г.";
+            this.textBoxFirstYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox38
+            // 
+            this.textBox38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox38.Location = new System.Drawing.Point(358, 95);
+            this.textBox38.Multiline = true;
+            this.textBox38.Name = "textBox38";
+            this.textBox38.ReadOnly = true;
+            this.textBox38.Size = new System.Drawing.Size(143, 20);
+            this.textBox38.TabIndex = 1101;
+            this.textBox38.Text = "X клас";
+            this.textBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox40
+            // 
+            this.textBox40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox40.Location = new System.Drawing.Point(217, 95);
+            this.textBox40.Multiline = true;
+            this.textBox40.Name = "textBox40";
+            this.textBox40.ReadOnly = true;
+            this.textBox40.Size = new System.Drawing.Size(142, 20);
+            this.textBox40.TabIndex = 1100;
+            this.textBox40.Text = "IX клас";
+            this.textBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox42
+            // 
+            this.textBox42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox42.Location = new System.Drawing.Point(42, 76);
+            this.textBox42.Multiline = true;
+            this.textBox42.Name = "textBox42";
+            this.textBox42.ReadOnly = true;
+            this.textBox42.Size = new System.Drawing.Size(176, 81);
+            this.textBox42.TabIndex = 1097;
+            this.textBox42.Text = "\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(390, 29);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(239, 33);
+            this.label36.TabIndex = 2;
+            this.label36.Text = "Успех за дипломата";
+            // 
+            // tabPageExtraSubjects
+            // 
+            this.tabPageExtraSubjects.Controls.Add(this.panelMarksExtraSubjectsSummary);
+            this.tabPageExtraSubjects.Location = new System.Drawing.Point(4, 22);
+            this.tabPageExtraSubjects.Name = "tabPageExtraSubjects";
+            this.tabPageExtraSubjects.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageExtraSubjects.Size = new System.Drawing.Size(1033, 16);
+            this.tabPageExtraSubjects.TabIndex = 1;
+            this.tabPageExtraSubjects.Text = "Успех от СИП";
+            this.tabPageExtraSubjects.UseVisualStyleBackColor = true;
+            // 
+            // panelMarksExtraSubjectsSummary
+            // 
+            this.panelMarksExtraSubjectsSummary.AutoScroll = true;
+            this.panelMarksExtraSubjectsSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBoxAverageExtraSubjects);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.label88);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.buttonSaveMaksFinalExtraSubjects);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.dataGridViewDiplomExtraSubjects);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.comboBoxStudentsNamesExtraSubjectsMarks);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox41);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBoxFourthYearExtraSubject);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox45);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBoxThirdYearExtraSubject);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox52);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox53);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox58);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBoxSecondYearExtraSubject);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox60);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox61);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBoxFirstYearExtraSubject);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox63);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox64);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox65);
+            this.panelMarksExtraSubjectsSummary.Controls.Add(this.label48);
+            this.panelMarksExtraSubjectsSummary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMarksExtraSubjectsSummary.Location = new System.Drawing.Point(3, 3);
+            this.panelMarksExtraSubjectsSummary.Name = "panelMarksExtraSubjectsSummary";
+            this.panelMarksExtraSubjectsSummary.Size = new System.Drawing.Size(1027, 10);
+            this.panelMarksExtraSubjectsSummary.TabIndex = 0;
+            // 
+            // textBoxAverageExtraSubjects
+            // 
+            this.textBoxAverageExtraSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBoxAverageExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAverageExtraSubjects.Location = new System.Drawing.Point(603, 634);
+            this.textBoxAverageExtraSubjects.Multiline = true;
+            this.textBoxAverageExtraSubjects.Name = "textBoxAverageExtraSubjects";
+            this.textBoxAverageExtraSubjects.Size = new System.Drawing.Size(52, 25);
+            this.textBoxAverageExtraSubjects.TabIndex = 1150;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(480, 641);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(115, 13);
+            this.label88.TabIndex = 1149;
+            this.label88.Text = "Среден успех от СИП";
+            // 
+            // buttonSaveMaksFinalExtraSubjects
+            // 
+            this.buttonSaveMaksFinalExtraSubjects.Location = new System.Drawing.Point(820, 625);
+            this.buttonSaveMaksFinalExtraSubjects.Name = "buttonSaveMaksFinalExtraSubjects";
+            this.buttonSaveMaksFinalExtraSubjects.Size = new System.Drawing.Size(149, 52);
+            this.buttonSaveMaksFinalExtraSubjects.TabIndex = 1148;
+            this.buttonSaveMaksFinalExtraSubjects.Text = "Запазване на окончателните оценки по СИП";
+            this.buttonSaveMaksFinalExtraSubjects.UseVisualStyleBackColor = true;
+            this.buttonSaveMaksFinalExtraSubjects.Click += new System.EventHandler(this.buttonSaveMaksFinalExtraSubjects_Click);
+            // 
+            // dataGridViewDiplomExtraSubjects
+            // 
+            this.dataGridViewDiplomExtraSubjects.AllowUserToAddRows = false;
+            this.dataGridViewDiplomExtraSubjects.AllowUserToDeleteRows = false;
+            this.dataGridViewDiplomExtraSubjects.AllowUserToResizeColumns = false;
+            this.dataGridViewDiplomExtraSubjects.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridViewDiplomExtraSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDiplomExtraSubjects.ColumnHeadersVisible = false;
+            this.dataGridViewDiplomExtraSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewExtraSubjectFirstYear,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewExtraSubjectSecondYear,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewExtraSubjectThirdYear,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewExtraSubjectFourthYear,
+            this.FinalMark,
+            this.dataGridViewFinalMark});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDiplomExtraSubjects.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewDiplomExtraSubjects.Location = new System.Drawing.Point(42, 147);
+            this.dataGridViewDiplomExtraSubjects.Name = "dataGridViewDiplomExtraSubjects";
+            this.dataGridViewDiplomExtraSubjects.RowHeadersVisible = false;
+            this.dataGridViewDiplomExtraSubjects.Size = new System.Drawing.Size(935, 458);
+            this.dataGridViewDiplomExtraSubjects.TabIndex = 1147;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Subject";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Предмет";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 174;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Оценка";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Width = 120;
+            // 
+            // dataGridViewExtraSubjectFirstYear
+            // 
+            this.dataGridViewExtraSubjectFirstYear.DataPropertyName = "ExtraSubjectFirstYear";
+            this.dataGridViewExtraSubjectFirstYear.HeaderText = "СИП";
+            this.dataGridViewExtraSubjectFirstYear.Name = "dataGridViewExtraSubjectFirstYear";
+            this.dataGridViewExtraSubjectFirstYear.ReadOnly = true;
+            this.dataGridViewExtraSubjectFirstYear.Width = 22;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "Оценка";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Width = 119;
+            // 
+            // dataGridViewExtraSubjectSecondYear
+            // 
+            this.dataGridViewExtraSubjectSecondYear.DataPropertyName = "ExtraSubjectSecondYear";
+            this.dataGridViewExtraSubjectSecondYear.HeaderText = "СИП";
+            this.dataGridViewExtraSubjectSecondYear.Name = "dataGridViewExtraSubjectSecondYear";
+            this.dataGridViewExtraSubjectSecondYear.ReadOnly = true;
+            this.dataGridViewExtraSubjectSecondYear.Width = 22;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.HeaderText = "Оценка";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.Width = 119;
+            // 
+            // dataGridViewExtraSubjectThirdYear
+            // 
+            this.dataGridViewExtraSubjectThirdYear.DataPropertyName = "ExtraSubjectThirdYear";
+            this.dataGridViewExtraSubjectThirdYear.HeaderText = "СИП";
+            this.dataGridViewExtraSubjectThirdYear.Name = "dataGridViewExtraSubjectThirdYear";
+            this.dataGridViewExtraSubjectThirdYear.ReadOnly = true;
+            this.dataGridViewExtraSubjectThirdYear.Width = 23;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.HeaderText = "Оценка";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            this.dataGridViewTextBoxColumn28.Width = 119;
+            // 
+            // dataGridViewExtraSubjectFourthYear
+            // 
+            this.dataGridViewExtraSubjectFourthYear.DataPropertyName = "ExtraSubjectFourthYear";
+            this.dataGridViewExtraSubjectFourthYear.HeaderText = "СИП";
+            this.dataGridViewExtraSubjectFourthYear.Name = "dataGridViewExtraSubjectFourthYear";
+            this.dataGridViewExtraSubjectFourthYear.ReadOnly = true;
+            this.dataGridViewExtraSubjectFourthYear.Width = 22;
+            // 
+            // FinalMark
+            // 
+            this.FinalMark.HeaderText = "Оценка";
+            this.FinalMark.Name = "FinalMark";
+            this.FinalMark.ReadOnly = true;
+            this.FinalMark.Width = 150;
+            // 
+            // dataGridViewFinalMark
+            // 
+            this.dataGridViewFinalMark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewFinalMark.DataPropertyName = "AverageMarkExtraSubject";
+            this.dataGridViewFinalMark.HeaderText = "СИП";
+            this.dataGridViewFinalMark.Name = "dataGridViewFinalMark";
+            this.dataGridViewFinalMark.ReadOnly = true;
+            // 
+            // comboBoxStudentsNamesExtraSubjectsMarks
+            // 
+            this.comboBoxStudentsNamesExtraSubjectsMarks.DisplayMember = "FullName";
+            this.comboBoxStudentsNamesExtraSubjectsMarks.FormattingEnabled = true;
+            this.comboBoxStudentsNamesExtraSubjectsMarks.Location = new System.Drawing.Point(748, 29);
+            this.comboBoxStudentsNamesExtraSubjectsMarks.Name = "comboBoxStudentsNamesExtraSubjectsMarks";
+            this.comboBoxStudentsNamesExtraSubjectsMarks.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxStudentsNamesExtraSubjectsMarks.TabIndex = 1146;
+            this.comboBoxStudentsNamesExtraSubjectsMarks.Text = "Изберете ученик от класа ви";
+            this.comboBoxStudentsNamesExtraSubjectsMarks.ValueMember = "StudentID";
+            this.comboBoxStudentsNamesExtraSubjectsMarks.SelectionChangeCommitted += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjectsMarks_SelectionChangeCommitted);
+            this.comboBoxStudentsNamesExtraSubjectsMarks.Click += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjectsMarks_Click);
+            // 
+            // textBox41
+            // 
+            this.textBox41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox41.Location = new System.Drawing.Point(642, 105);
+            this.textBox41.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox41.Multiline = true;
+            this.textBox41.Name = "textBox41";
+            this.textBox41.ReadOnly = true;
+            this.textBox41.Size = new System.Drawing.Size(143, 43);
+            this.textBox41.TabIndex = 1143;
+            this.textBox41.TabStop = false;
+            this.textBox41.Text = "\r\nГодишна оценка";
+            this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxFourthYearExtraSubject
+            // 
+            this.textBoxFourthYearExtraSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxFourthYearExtraSubject.Location = new System.Drawing.Point(642, 67);
+            this.textBoxFourthYearExtraSubject.Multiline = true;
+            this.textBoxFourthYearExtraSubject.Name = "textBoxFourthYearExtraSubject";
+            this.textBoxFourthYearExtraSubject.ReadOnly = true;
+            this.textBoxFourthYearExtraSubject.Size = new System.Drawing.Size(143, 20);
+            this.textBoxFourthYearExtraSubject.TabIndex = 1141;
+            this.textBoxFourthYearExtraSubject.Text = "уч.г.";
+            this.textBoxFourthYearExtraSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox45
+            // 
+            this.textBox45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox45.Location = new System.Drawing.Point(500, 105);
+            this.textBox45.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox45.Multiline = true;
+            this.textBox45.Name = "textBox45";
+            this.textBox45.ReadOnly = true;
+            this.textBox45.Size = new System.Drawing.Size(143, 43);
+            this.textBox45.TabIndex = 1142;
+            this.textBox45.TabStop = false;
+            this.textBox45.Text = "\r\nГодишна оценка";
+            this.textBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxThirdYearExtraSubject
+            // 
+            this.textBoxThirdYearExtraSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxThirdYearExtraSubject.Location = new System.Drawing.Point(500, 67);
+            this.textBoxThirdYearExtraSubject.Multiline = true;
+            this.textBoxThirdYearExtraSubject.Name = "textBoxThirdYearExtraSubject";
+            this.textBoxThirdYearExtraSubject.ReadOnly = true;
+            this.textBoxThirdYearExtraSubject.Size = new System.Drawing.Size(143, 20);
+            this.textBoxThirdYearExtraSubject.TabIndex = 1140;
+            this.textBoxThirdYearExtraSubject.Text = "уч.г.";
+            this.textBoxThirdYearExtraSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox52
+            // 
+            this.textBox52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox52.Location = new System.Drawing.Point(642, 86);
+            this.textBox52.Multiline = true;
+            this.textBox52.Name = "textBox52";
+            this.textBox52.ReadOnly = true;
+            this.textBox52.Size = new System.Drawing.Size(143, 20);
+            this.textBox52.TabIndex = 1139;
+            this.textBox52.Text = "XII клас";
+            this.textBox52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox53
+            // 
+            this.textBox53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox53.Location = new System.Drawing.Point(500, 86);
+            this.textBox53.Multiline = true;
+            this.textBox53.Name = "textBox53";
+            this.textBox53.ReadOnly = true;
+            this.textBox53.Size = new System.Drawing.Size(143, 20);
+            this.textBox53.TabIndex = 1138;
+            this.textBox53.Text = "XI клас";
+            this.textBox53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox58
+            // 
+            this.textBox58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox58.Location = new System.Drawing.Point(358, 105);
+            this.textBox58.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox58.Multiline = true;
+            this.textBox58.Name = "textBox58";
+            this.textBox58.ReadOnly = true;
+            this.textBox58.Size = new System.Drawing.Size(143, 43);
+            this.textBox58.TabIndex = 1133;
+            this.textBox58.TabStop = false;
+            this.textBox58.Text = "\r\nГодишна оценка";
+            this.textBox58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxSecondYearExtraSubject
+            // 
+            this.textBoxSecondYearExtraSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSecondYearExtraSubject.Location = new System.Drawing.Point(358, 67);
+            this.textBoxSecondYearExtraSubject.Multiline = true;
+            this.textBoxSecondYearExtraSubject.Name = "textBoxSecondYearExtraSubject";
+            this.textBoxSecondYearExtraSubject.ReadOnly = true;
+            this.textBoxSecondYearExtraSubject.Size = new System.Drawing.Size(143, 20);
+            this.textBoxSecondYearExtraSubject.TabIndex = 1131;
+            this.textBoxSecondYearExtraSubject.Text = "уч.г.";
+            this.textBoxSecondYearExtraSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox60
+            // 
+            this.textBox60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox60.Location = new System.Drawing.Point(784, 67);
+            this.textBox60.Multiline = true;
+            this.textBox60.Name = "textBox60";
+            this.textBox60.ReadOnly = true;
+            this.textBox60.Size = new System.Drawing.Size(193, 81);
+            this.textBox60.TabIndex = 1130;
+            this.textBox60.TabStop = false;
+            this.textBox60.Text = "\r\n\r\nОкончателна оценка за дипломата";
+            this.textBox60.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox61
+            // 
+            this.textBox61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox61.Location = new System.Drawing.Point(217, 105);
+            this.textBox61.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox61.Multiline = true;
+            this.textBox61.Name = "textBox61";
+            this.textBox61.ReadOnly = true;
+            this.textBox61.Size = new System.Drawing.Size(142, 43);
+            this.textBox61.TabIndex = 1132;
+            this.textBox61.TabStop = false;
+            this.textBox61.Text = "\r\nГодишна оценка";
+            this.textBox61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxFirstYearExtraSubject
+            // 
+            this.textBoxFirstYearExtraSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxFirstYearExtraSubject.Location = new System.Drawing.Point(217, 67);
+            this.textBoxFirstYearExtraSubject.Multiline = true;
+            this.textBoxFirstYearExtraSubject.Name = "textBoxFirstYearExtraSubject";
+            this.textBoxFirstYearExtraSubject.ReadOnly = true;
+            this.textBoxFirstYearExtraSubject.Size = new System.Drawing.Size(142, 20);
+            this.textBoxFirstYearExtraSubject.TabIndex = 1129;
+            this.textBoxFirstYearExtraSubject.Text = "уч.г.";
+            this.textBoxFirstYearExtraSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox63
+            // 
+            this.textBox63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox63.Location = new System.Drawing.Point(358, 86);
+            this.textBox63.Multiline = true;
+            this.textBox63.Name = "textBox63";
+            this.textBox63.ReadOnly = true;
+            this.textBox63.Size = new System.Drawing.Size(143, 20);
+            this.textBox63.TabIndex = 1128;
+            this.textBox63.Text = "X клас";
+            this.textBox63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox64
+            // 
+            this.textBox64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox64.Location = new System.Drawing.Point(217, 86);
+            this.textBox64.Multiline = true;
+            this.textBox64.Name = "textBox64";
+            this.textBox64.ReadOnly = true;
+            this.textBox64.Size = new System.Drawing.Size(142, 20);
+            this.textBox64.TabIndex = 1127;
+            this.textBox64.Text = "IX клас";
+            this.textBox64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox65
+            // 
+            this.textBox65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox65.Location = new System.Drawing.Point(42, 67);
+            this.textBox65.Multiline = true;
+            this.textBox65.Name = "textBox65";
+            this.textBox65.ReadOnly = true;
+            this.textBox65.Size = new System.Drawing.Size(176, 81);
+            this.textBox65.TabIndex = 1126;
+            this.textBox65.Text = "\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(115, 20);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(625, 33);
+            this.label48.TabIndex = 1125;
+            this.label48.Text = "Успех за дипломата по свободно избираема подготовка";
+            // 
+            // tabControlMarks
+            // 
+            this.tabControlMarks.Controls.Add(this.tabPageSelectSubjects);
+            this.tabControlMarks.Controls.Add(this.tabPageFirstTerm);
+            this.tabControlMarks.Controls.Add(this.tabPageSecondTerm);
+            this.tabControlMarks.Controls.Add(this.tabPageYear);
+            this.tabControlMarks.Location = new System.Drawing.Point(1, 205);
+            this.tabControlMarks.Name = "tabControlMarks";
+            this.tabControlMarks.SelectedIndex = 0;
+            this.tabControlMarks.Size = new System.Drawing.Size(1031, 38);
+            this.tabControlMarks.TabIndex = 1150;
+            this.tabControlMarks.Visible = false;
+            this.tabControlMarks.SelectedIndexChanged += new System.EventHandler(this.tabControlMarks_SelectedIndexChanged);
+            // 
+            // tabPageSelectSubjects
+            // 
+            this.tabPageSelectSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageSelectSubjects.Controls.Add(this.panelSelectSubjects);
+            this.tabPageSelectSubjects.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSelectSubjects.Name = "tabPageSelectSubjects";
+            this.tabPageSelectSubjects.Size = new System.Drawing.Size(1023, 12);
+            this.tabPageSelectSubjects.TabIndex = 3;
+            this.tabPageSelectSubjects.Text = "Предмети";
+            // 
+            // panelSelectSubjects
+            // 
+            this.panelSelectSubjects.AutoScroll = true;
+            this.panelSelectSubjects.Controls.Add(this.label17);
+            this.panelSelectSubjects.Controls.Add(this.label16);
+            this.panelSelectSubjects.Controls.Add(this.checkedListBoxSubjects);
+            this.panelSelectSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSelectSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelSelectSubjects.Location = new System.Drawing.Point(0, 0);
+            this.panelSelectSubjects.Name = "panelSelectSubjects";
+            this.panelSelectSubjects.Size = new System.Drawing.Size(1023, 12);
+            this.panelSelectSubjects.TabIndex = 1133;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(317, 115);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(361, 50);
+            this.label17.TabIndex = 1134;
+            this.label17.Text = "Маркирайте предметите, който ще \r\nсе изучават през тази учебна година.";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(291, 36);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(425, 33);
+            this.label16.TabIndex = 1133;
+            this.label16.Text = "Избор на изучавани учебни предмети";
+            // 
+            // checkedListBoxSubjects
+            // 
+            this.checkedListBoxSubjects.CheckOnClick = true;
+            this.checkedListBoxSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBoxSubjects.FormattingEnabled = true;
+            this.checkedListBoxSubjects.Location = new System.Drawing.Point(378, 192);
+            this.checkedListBoxSubjects.Name = "checkedListBoxSubjects";
+            this.checkedListBoxSubjects.Size = new System.Drawing.Size(229, 418);
+            this.checkedListBoxSubjects.TabIndex = 1132;
+            this.checkedListBoxSubjects.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxSubjects_ItemCheck);
+            // 
+            // tabPageFirstTerm
+            // 
+            this.tabPageFirstTerm.AutoScroll = true;
+            this.tabPageFirstTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageFirstTerm.Controls.Add(this.panelMarksFirstTerm);
+            this.tabPageFirstTerm.Location = new System.Drawing.Point(4, 22);
+            this.tabPageFirstTerm.Name = "tabPageFirstTerm";
+            this.tabPageFirstTerm.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageFirstTerm.Size = new System.Drawing.Size(1023, 12);
+            this.tabPageFirstTerm.TabIndex = 0;
+            this.tabPageFirstTerm.Text = "Първи срок";
+            // 
+            // panelMarksFirstTerm
+            // 
+            this.panelMarksFirstTerm.AutoScroll = true;
+            this.panelMarksFirstTerm.Controls.Add(this.labelSuccessFirstTerm);
+            this.panelMarksFirstTerm.Controls.Add(this.buttonSaveMarksFirstTerm);
+            this.panelMarksFirstTerm.Controls.Add(this.dataGridViewMarksFirstTerm);
+            this.panelMarksFirstTerm.Controls.Add(this.textBox7);
+            this.panelMarksFirstTerm.Controls.Add(this.textBox900);
+            this.panelMarksFirstTerm.Controls.Add(this.textBox17);
+            this.panelMarksFirstTerm.Controls.Add(this.textBox11);
+            this.panelMarksFirstTerm.Controls.Add(this.textBox2);
+            this.panelMarksFirstTerm.Controls.Add(this.label14);
+            this.panelMarksFirstTerm.Controls.Add(this.comboBoxStudentsNames);
+            this.panelMarksFirstTerm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMarksFirstTerm.Location = new System.Drawing.Point(3, 3);
+            this.panelMarksFirstTerm.Name = "panelMarksFirstTerm";
+            this.panelMarksFirstTerm.Size = new System.Drawing.Size(1017, 6);
+            this.panelMarksFirstTerm.TabIndex = 40;
+            // 
+            // labelSuccessFirstTerm
+            // 
+            this.labelSuccessFirstTerm.AutoSize = true;
+            this.labelSuccessFirstTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSuccessFirstTerm.Location = new System.Drawing.Point(849, 1110);
+            this.labelSuccessFirstTerm.Name = "labelSuccessFirstTerm";
+            this.labelSuccessFirstTerm.Size = new System.Drawing.Size(104, 25);
+            this.labelSuccessFirstTerm.TabIndex = 1133;
+            this.labelSuccessFirstTerm.Text = "Добавено";
+            this.labelSuccessFirstTerm.Visible = false;
+            // 
+            // buttonSaveMarksFirstTerm
+            // 
+            this.buttonSaveMarksFirstTerm.Location = new System.Drawing.Point(833, 389);
+            this.buttonSaveMarksFirstTerm.Name = "buttonSaveMarksFirstTerm";
+            this.buttonSaveMarksFirstTerm.Size = new System.Drawing.Size(136, 49);
+            this.buttonSaveMarksFirstTerm.TabIndex = 1129;
+            this.buttonSaveMarksFirstTerm.Text = "Запиши оценките";
+            this.buttonSaveMarksFirstTerm.UseVisualStyleBackColor = true;
+            this.buttonSaveMarksFirstTerm.Click += new System.EventHandler(this.buttonSaveMarksFirstTerm_Click);
+            // 
+            // dataGridViewMarksFirstTerm
+            // 
+            this.dataGridViewMarksFirstTerm.AllowUserToAddRows = false;
+            this.dataGridViewMarksFirstTerm.AllowUserToDeleteRows = false;
+            this.dataGridViewMarksFirstTerm.AllowUserToResizeColumns = false;
+            this.dataGridViewMarksFirstTerm.AllowUserToResizeRows = false;
+            this.dataGridViewMarksFirstTerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMarksFirstTerm.ColumnHeadersVisible = false;
+            this.dataGridViewMarksFirstTerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SubjectsFirstTerm,
+            this.MarkMandatoryWithWordsSubjectsFirstTerm,
+            this.ЗПFirstTerm,
+            this.MarkChoosenWithWordsSubjectsFirstTerm,
+            this.ЗИПFirstTerm});
+            this.dataGridViewMarksFirstTerm.Location = new System.Drawing.Point(262, 206);
+            this.dataGridViewMarksFirstTerm.MultiSelect = false;
+            this.dataGridViewMarksFirstTerm.Name = "dataGridViewMarksFirstTerm";
+            this.dataGridViewMarksFirstTerm.RowHeadersVisible = false;
+            this.dataGridViewMarksFirstTerm.Size = new System.Drawing.Size(519, 443);
+            this.dataGridViewMarksFirstTerm.TabIndex = 1128;
+            this.dataGridViewMarksFirstTerm.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarksFirstTerm_CellEndEdit);
+            // 
+            // SubjectsFirstTerm
+            // 
+            this.SubjectsFirstTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.SubjectsFirstTerm.HeaderText = "Предмети";
+            this.SubjectsFirstTerm.Name = "SubjectsFirstTerm";
+            this.SubjectsFirstTerm.ReadOnly = true;
+            this.SubjectsFirstTerm.Width = 200;
+            // 
+            // MarkMandatoryWithWordsSubjectsFirstTerm
+            // 
+            this.MarkMandatoryWithWordsSubjectsFirstTerm.HeaderText = "ЗП-Първи скок";
+            this.MarkMandatoryWithWordsSubjectsFirstTerm.Name = "MarkMandatoryWithWordsSubjectsFirstTerm";
+            this.MarkMandatoryWithWordsSubjectsFirstTerm.ReadOnly = true;
+            this.MarkMandatoryWithWordsSubjectsFirstTerm.Width = 128;
+            // 
+            // ЗПFirstTerm
+            // 
+            this.ЗПFirstTerm.HeaderText = "Оценка";
+            this.ЗПFirstTerm.Name = "ЗПFirstTerm";
+            this.ЗПFirstTerm.Width = 30;
+            // 
+            // MarkChoosenWithWordsSubjectsFirstTerm
+            // 
+            this.MarkChoosenWithWordsSubjectsFirstTerm.HeaderText = "ЗПП-Първи срок";
+            this.MarkChoosenWithWordsSubjectsFirstTerm.Name = "MarkChoosenWithWordsSubjectsFirstTerm";
+            this.MarkChoosenWithWordsSubjectsFirstTerm.ReadOnly = true;
+            this.MarkChoosenWithWordsSubjectsFirstTerm.Width = 128;
+            // 
+            // ЗИПFirstTerm
+            // 
+            this.ЗИПFirstTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ЗИПFirstTerm.HeaderText = "Оценка";
+            this.ЗИПFirstTerm.Name = "ЗИПFirstTerm";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.Location = new System.Drawing.Point(621, 163);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(160, 43);
+            this.textBox7.TabIndex = 1127;
+            this.textBox7.TabStop = false;
+            this.textBox7.Text = "Оценка\r\nза първи учебен\r\nсрок";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox900
+            // 
+            this.textBox900.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox900.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox900.Location = new System.Drawing.Point(462, 163);
+            this.textBox900.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox900.Multiline = true;
+            this.textBox900.Name = "textBox900";
+            this.textBox900.ReadOnly = true;
+            this.textBox900.Size = new System.Drawing.Size(160, 43);
+            this.textBox900.TabIndex = 1126;
+            this.textBox900.TabStop = false;
+            this.textBox900.Text = "Оценка \r\nпърви учебен \r\n    срок\r\n\r\n";
+            this.textBox900.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox17
+            // 
+            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox17.Location = new System.Drawing.Point(621, 96);
+            this.textBox17.Multiline = true;
+            this.textBox17.Name = "textBox17";
+            this.textBox17.ReadOnly = true;
+            this.textBox17.Size = new System.Drawing.Size(160, 68);
+            this.textBox17.TabIndex = 1125;
+            this.textBox17.Text = "ЗАДЪЛЖИТЕЛНОИЗБИРАЕМА  ПОДГОТОВКА (ЗИП)";
+            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox11.Location = new System.Drawing.Point(462, 96);
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(160, 68);
+            this.textBox11.TabIndex = 1124;
+            this.textBox11.Text = "ЗАДЪЛЖИТЕЛНА ПОДГОТОВКА (ЗП) ИЛИ ПРОФИЛИРАНА ПОДГОТОВКА";
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(262, 96);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(201, 110);
+            this.textBox2.TabIndex = 1123;
+            this.textBox2.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(370, 32);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(402, 33);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Въвеждане на оценки за първи срок";
+            // 
+            // comboBoxStudentsNames
+            // 
+            this.comboBoxStudentsNames.DisplayMember = "FullName";
+            this.comboBoxStudentsNames.FormattingEnabled = true;
+            this.comboBoxStudentsNames.Location = new System.Drawing.Point(16, 63);
+            this.comboBoxStudentsNames.Name = "comboBoxStudentsNames";
+            this.comboBoxStudentsNames.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxStudentsNames.TabIndex = 1130;
+            this.comboBoxStudentsNames.Text = "Изберете ученик от класа ви";
+            this.comboBoxStudentsNames.ValueMember = "StudentID";
+            this.comboBoxStudentsNames.MouseEnter += new System.EventHandler(this.comboBoxStudentsNamesFirstTerm_MouseEnter);
+            // 
+            // tabPageSecondTerm
+            // 
+            this.tabPageSecondTerm.AutoScroll = true;
+            this.tabPageSecondTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageSecondTerm.Controls.Add(this.panelMarksSecondTerm);
+            this.tabPageSecondTerm.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSecondTerm.Name = "tabPageSecondTerm";
+            this.tabPageSecondTerm.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSecondTerm.Size = new System.Drawing.Size(1023, 12);
+            this.tabPageSecondTerm.TabIndex = 1;
+            this.tabPageSecondTerm.Text = "Втори срок";
+            // 
+            // panelMarksSecondTerm
+            // 
+            this.panelMarksSecondTerm.AutoScroll = true;
+            this.panelMarksSecondTerm.Controls.Add(this.labelSuccessSecondTerm);
+            this.panelMarksSecondTerm.Controls.Add(this.buttonSaveMarksSecondTerm);
+            this.panelMarksSecondTerm.Controls.Add(this.dataGridViewMarksSecondTerm);
+            this.panelMarksSecondTerm.Controls.Add(this.textBox1);
+            this.panelMarksSecondTerm.Controls.Add(this.textBox3);
+            this.panelMarksSecondTerm.Controls.Add(this.textBox4);
+            this.panelMarksSecondTerm.Controls.Add(this.textBox5);
+            this.panelMarksSecondTerm.Controls.Add(this.textBox6);
+            this.panelMarksSecondTerm.Controls.Add(this.label15);
+            this.panelMarksSecondTerm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMarksSecondTerm.Location = new System.Drawing.Point(3, 3);
+            this.panelMarksSecondTerm.Name = "panelMarksSecondTerm";
+            this.panelMarksSecondTerm.Size = new System.Drawing.Size(1017, 6);
+            this.panelMarksSecondTerm.TabIndex = 1131;
+            // 
+            // labelSuccessSecondTerm
+            // 
+            this.labelSuccessSecondTerm.AutoSize = true;
+            this.labelSuccessSecondTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSuccessSecondTerm.Location = new System.Drawing.Point(798, 444);
+            this.labelSuccessSecondTerm.Name = "labelSuccessSecondTerm";
+            this.labelSuccessSecondTerm.Size = new System.Drawing.Size(104, 25);
+            this.labelSuccessSecondTerm.TabIndex = 1139;
+            this.labelSuccessSecondTerm.Text = "Добавено";
+            this.labelSuccessSecondTerm.Visible = false;
+            // 
+            // buttonSaveMarksSecondTerm
+            // 
+            this.buttonSaveMarksSecondTerm.Location = new System.Drawing.Point(779, 380);
+            this.buttonSaveMarksSecondTerm.Name = "buttonSaveMarksSecondTerm";
+            this.buttonSaveMarksSecondTerm.Size = new System.Drawing.Size(136, 49);
+            this.buttonSaveMarksSecondTerm.TabIndex = 1138;
+            this.buttonSaveMarksSecondTerm.Text = "Запиши оценките";
+            this.buttonSaveMarksSecondTerm.UseVisualStyleBackColor = true;
+            this.buttonSaveMarksSecondTerm.Click += new System.EventHandler(this.buttonSaveMarksSecondTerm_Click);
+            // 
+            // dataGridViewMarksSecondTerm
+            // 
+            this.dataGridViewMarksSecondTerm.AllowUserToAddRows = false;
+            this.dataGridViewMarksSecondTerm.AllowUserToDeleteRows = false;
+            this.dataGridViewMarksSecondTerm.AllowUserToResizeColumns = false;
+            this.dataGridViewMarksSecondTerm.AllowUserToResizeRows = false;
+            this.dataGridViewMarksSecondTerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMarksSecondTerm.ColumnHeadersVisible = false;
+            this.dataGridViewMarksSecondTerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.ЗПSecendTerm,
+            this.dataGridViewTextBoxColumn4,
+            this.ЗИПSecondTerm});
+            this.dataGridViewMarksSecondTerm.Location = new System.Drawing.Point(208, 197);
+            this.dataGridViewMarksSecondTerm.MultiSelect = false;
+            this.dataGridViewMarksSecondTerm.Name = "dataGridViewMarksSecondTerm";
+            this.dataGridViewMarksSecondTerm.RowHeadersVisible = false;
+            this.dataGridViewMarksSecondTerm.Size = new System.Drawing.Size(538, 443);
+            this.dataGridViewMarksSecondTerm.TabIndex = 1137;
+            this.dataGridViewMarksSecondTerm.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarksSecondTerm_CellEndEdit);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Предмети";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "ЗП-Първи скок";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 128;
+            // 
+            // ЗПSecendTerm
+            // 
+            this.ЗПSecendTerm.HeaderText = "Оценка";
+            this.ЗПSecendTerm.Name = "ЗПSecendTerm";
+            this.ЗПSecendTerm.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "ЗПП-Първи срок";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 128;
+            // 
+            // ЗИПSecondTerm
+            // 
+            this.ЗИПSecondTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ЗИПSecondTerm.HeaderText = "Оценка";
+            this.ЗИПSecondTerm.Name = "ЗИПSecondTerm";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(567, 154);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(160, 43);
+            this.textBox1.TabIndex = 1136;
+            this.textBox1.TabStop = false;
+            this.textBox1.Text = "Оценка \r\nвтори учебен \r\n    срок";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(408, 154);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(160, 43);
+            this.textBox3.TabIndex = 1135;
+            this.textBox3.TabStop = false;
+            this.textBox3.Text = "Оценка \r\nвтори учебен \r\n    срок\r\n\r\n";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Location = new System.Drawing.Point(567, 87);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(160, 68);
+            this.textBox4.TabIndex = 1134;
+            this.textBox4.Text = "ЗАДЪЛЖИТЕЛНОИЗБИРАЕМА  ПОДГОТОВКА (ЗИП)";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Location = new System.Drawing.Point(408, 87);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(160, 68);
+            this.textBox5.TabIndex = 1133;
+            this.textBox5.Text = "ЗАДЪЛЖИТЕЛНА ПОДГОТОВКА (ЗП) ИЛИ ПРОФИЛИРАНА ПОДГОТОВКА";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Location = new System.Drawing.Point(208, 87);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(201, 110);
+            this.textBox6.TabIndex = 1132;
+            this.textBox6.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(316, 23);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(405, 33);
+            this.label15.TabIndex = 1131;
+            this.label15.Text = "Въвеждане на оценки за втори срок";
+            // 
+            // tabPageYear
+            // 
+            this.tabPageYear.AutoScroll = true;
+            this.tabPageYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageYear.Controls.Add(this.panelMarksYear);
+            this.tabPageYear.Location = new System.Drawing.Point(4, 22);
+            this.tabPageYear.Name = "tabPageYear";
+            this.tabPageYear.Size = new System.Drawing.Size(1023, 12);
+            this.tabPageYear.TabIndex = 2;
+            this.tabPageYear.Text = "Годишени оценки";
+            // 
+            // panelMarksYear
+            // 
+            this.panelMarksYear.AutoScroll = true;
+            this.panelMarksYear.Controls.Add(this.labelSuccessSaveMarks);
+            this.panelMarksYear.Controls.Add(this.buttonSaveMarksYear);
+            this.panelMarksYear.Controls.Add(this.dataGridViewMarksYear);
+            this.panelMarksYear.Controls.Add(this.textBox8);
+            this.panelMarksYear.Controls.Add(this.textBox9);
+            this.panelMarksYear.Controls.Add(this.textBox10);
+            this.panelMarksYear.Controls.Add(this.textBox12);
+            this.panelMarksYear.Controls.Add(this.textBox13);
+            this.panelMarksYear.Controls.Add(this.label18);
+            this.panelMarksYear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMarksYear.Location = new System.Drawing.Point(0, 0);
+            this.panelMarksYear.Name = "panelMarksYear";
+            this.panelMarksYear.Size = new System.Drawing.Size(1023, 12);
+            this.panelMarksYear.TabIndex = 1140;
+            // 
+            // labelSuccessSaveMarks
+            // 
+            this.labelSuccessSaveMarks.AutoSize = true;
+            this.labelSuccessSaveMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSuccessSaveMarks.Location = new System.Drawing.Point(850, 459);
+            this.labelSuccessSaveMarks.Name = "labelSuccessSaveMarks";
+            this.labelSuccessSaveMarks.Size = new System.Drawing.Size(104, 25);
+            this.labelSuccessSaveMarks.TabIndex = 1132;
+            this.labelSuccessSaveMarks.Text = "Добавено";
+            this.labelSuccessSaveMarks.Visible = false;
+            // 
+            // buttonSaveMarksYear
+            // 
+            this.buttonSaveMarksYear.Location = new System.Drawing.Point(831, 391);
+            this.buttonSaveMarksYear.Name = "buttonSaveMarksYear";
+            this.buttonSaveMarksYear.Size = new System.Drawing.Size(136, 49);
+            this.buttonSaveMarksYear.TabIndex = 1147;
+            this.buttonSaveMarksYear.Text = "Запиши оценките";
+            this.buttonSaveMarksYear.UseVisualStyleBackColor = true;
+            this.buttonSaveMarksYear.Click += new System.EventHandler(this.buttonSaveMarksYear_Click);
+            // 
+            // dataGridViewMarksYear
+            // 
+            this.dataGridViewMarksYear.AllowUserToAddRows = false;
+            this.dataGridViewMarksYear.AllowUserToDeleteRows = false;
+            this.dataGridViewMarksYear.AllowUserToResizeColumns = false;
+            this.dataGridViewMarksYear.AllowUserToResizeRows = false;
+            this.dataGridViewMarksYear.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMarksYear.ColumnHeadersVisible = false;
+            this.dataGridViewMarksYear.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn5,
+            this.ЗПMarkYear,
+            this.dataGridViewTextBoxColumn7,
+            this.ЗИПMarkYear});
+            this.dataGridViewMarksYear.Location = new System.Drawing.Point(260, 208);
+            this.dataGridViewMarksYear.MultiSelect = false;
+            this.dataGridViewMarksYear.Name = "dataGridViewMarksYear";
+            this.dataGridViewMarksYear.RowHeadersVisible = false;
+            this.dataGridViewMarksYear.Size = new System.Drawing.Size(538, 443);
+            this.dataGridViewMarksYear.TabIndex = 1146;
+            this.dataGridViewMarksYear.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarksYear_CellEndEdit);
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Предмети";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "ЗП-Първи скок";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 128;
+            // 
+            // ЗПMarkYear
+            // 
+            this.ЗПMarkYear.HeaderText = "Оценка";
+            this.ЗПMarkYear.Name = "ЗПMarkYear";
+            this.ЗПMarkYear.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "ЗПП-Първи срок";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 128;
+            // 
+            // ЗИПMarkYear
+            // 
+            this.ЗИПMarkYear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ЗИПMarkYear.HeaderText = "Оценка";
+            this.ЗИПMarkYear.Name = "ЗИПMarkYear";
+            // 
+            // textBox8
+            // 
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox8.Location = new System.Drawing.Point(619, 165);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(160, 43);
+            this.textBox8.TabIndex = 1145;
+            this.textBox8.TabStop = false;
+            this.textBox8.Text = "Оценка \r\nза годината\r\n";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox9
+            // 
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox9.Location = new System.Drawing.Point(460, 165);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(160, 43);
+            this.textBox9.TabIndex = 1144;
+            this.textBox9.TabStop = false;
+            this.textBox9.Text = "Оценка \r\nза годината";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox10.Location = new System.Drawing.Point(619, 98);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(160, 68);
+            this.textBox10.TabIndex = 1143;
+            this.textBox10.Text = "ЗАДЪЛЖИТЕЛНОИЗБИРАЕМА  ПОДГОТОВКА (ЗИП)";
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox12
+            // 
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox12.Location = new System.Drawing.Point(460, 98);
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
+            this.textBox12.Size = new System.Drawing.Size(160, 68);
+            this.textBox12.TabIndex = 1142;
+            this.textBox12.Text = "ЗАДЪЛЖИТЕЛНА ПОДГОТОВКА (ЗП) ИЛИ ПРОФИЛИРАНА ПОДГОТОВКА";
+            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox13
+            // 
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox13.Location = new System.Drawing.Point(260, 98);
+            this.textBox13.Multiline = true;
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(201, 110);
+            this.textBox13.TabIndex = 1141;
+            this.textBox13.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(368, 34);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(351, 33);
+            this.label18.TabIndex = 1140;
+            this.label18.Text = "Въвеждане на годишни оценки ";
+            // 
+            // tabControlMarksExtraSubjects
+            // 
+            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageChoseExtraSubjects);
+            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsFirstTerm);
+            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsSecondTerm);
+            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsYear);
+            this.tabControlMarksExtraSubjects.Location = new System.Drawing.Point(3, 78);
+            this.tabControlMarksExtraSubjects.Name = "tabControlMarksExtraSubjects";
+            this.tabControlMarksExtraSubjects.SelectedIndex = 0;
+            this.tabControlMarksExtraSubjects.Size = new System.Drawing.Size(1037, 66);
+            this.tabControlMarksExtraSubjects.TabIndex = 1151;
+            this.tabControlMarksExtraSubjects.Visible = false;
+            this.tabControlMarksExtraSubjects.SelectedIndexChanged += new System.EventHandler(this.tabControlMarksExtraSubjects_SelectedIndexChanged);
+            // 
+            // tabPageChoseExtraSubjects
+            // 
+            this.tabPageChoseExtraSubjects.AutoScroll = true;
+            this.tabPageChoseExtraSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageChoseExtraSubjects.Controls.Add(this.panelChooseExtraSubjects);
+            this.tabPageChoseExtraSubjects.Location = new System.Drawing.Point(4, 22);
+            this.tabPageChoseExtraSubjects.Name = "tabPageChoseExtraSubjects";
+            this.tabPageChoseExtraSubjects.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageChoseExtraSubjects.Size = new System.Drawing.Size(1029, 40);
+            this.tabPageChoseExtraSubjects.TabIndex = 3;
+            this.tabPageChoseExtraSubjects.Text = "СИП предмети";
+            // 
+            // panelChooseExtraSubjects
+            // 
+            this.panelChooseExtraSubjects.AutoScroll = true;
+            this.panelChooseExtraSubjects.Controls.Add(this.label29);
+            this.panelChooseExtraSubjects.Controls.Add(this.label30);
+            this.panelChooseExtraSubjects.Controls.Add(this.checkedListBoxExtraSubjects);
+            this.panelChooseExtraSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChooseExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelChooseExtraSubjects.Location = new System.Drawing.Point(3, 3);
+            this.panelChooseExtraSubjects.Name = "panelChooseExtraSubjects";
+            this.panelChooseExtraSubjects.Size = new System.Drawing.Size(1023, 34);
+            this.panelChooseExtraSubjects.TabIndex = 1134;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(363, 107);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(421, 75);
+            this.label29.TabIndex = 1134;
+            this.label29.Text = "Маркирайте СИП предметите, \r\nкоито се изучават през тази учебна година \r\nот вашия" +
+    " клас.";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(355, 53);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(405, 33);
+            this.label30.TabIndex = 1133;
+            this.label30.Text = "Избор на изучавани СИП предмети";
+            // 
+            // checkedListBoxExtraSubjects
+            // 
+            this.checkedListBoxExtraSubjects.CheckOnClick = true;
+            this.checkedListBoxExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBoxExtraSubjects.FormattingEnabled = true;
+            this.checkedListBoxExtraSubjects.Location = new System.Drawing.Point(442, 209);
+            this.checkedListBoxExtraSubjects.Name = "checkedListBoxExtraSubjects";
+            this.checkedListBoxExtraSubjects.Size = new System.Drawing.Size(229, 418);
+            this.checkedListBoxExtraSubjects.TabIndex = 1132;
+            this.checkedListBoxExtraSubjects.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxExtraSubjects_ItemCheck);
+            // 
+            // tabPageMarksExtraSubjectsFirstTerm
+            // 
+            this.tabPageMarksExtraSubjectsFirstTerm.AutoScroll = true;
+            this.tabPageMarksExtraSubjectsFirstTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageMarksExtraSubjectsFirstTerm.Controls.Add(this.panelExtraSubjectsFirstTerm);
+            this.tabPageMarksExtraSubjectsFirstTerm.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMarksExtraSubjectsFirstTerm.Name = "tabPageMarksExtraSubjectsFirstTerm";
+            this.tabPageMarksExtraSubjectsFirstTerm.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMarksExtraSubjectsFirstTerm.Size = new System.Drawing.Size(1029, 40);
+            this.tabPageMarksExtraSubjectsFirstTerm.TabIndex = 0;
+            this.tabPageMarksExtraSubjectsFirstTerm.Text = "Първи срок";
+            // 
+            // panelExtraSubjectsFirstTerm
+            // 
+            this.panelExtraSubjectsFirstTerm.AutoScroll = true;
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.buttonSaveMarksExtraSubjectsFirstTerm);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.dataGridViewExtraSubjectsFirstTerm);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox15);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox18);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox19);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.label25);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.comboBoxStudentsNamesExtraSubjects);
+            this.panelExtraSubjectsFirstTerm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelExtraSubjectsFirstTerm.Location = new System.Drawing.Point(3, 3);
+            this.panelExtraSubjectsFirstTerm.Name = "panelExtraSubjectsFirstTerm";
+            this.panelExtraSubjectsFirstTerm.Size = new System.Drawing.Size(1023, 34);
+            this.panelExtraSubjectsFirstTerm.TabIndex = 40;
+            // 
+            // buttonSaveMarksExtraSubjectsFirstTerm
+            // 
+            this.buttonSaveMarksExtraSubjectsFirstTerm.Location = new System.Drawing.Point(838, 374);
+            this.buttonSaveMarksExtraSubjectsFirstTerm.Name = "buttonSaveMarksExtraSubjectsFirstTerm";
+            this.buttonSaveMarksExtraSubjectsFirstTerm.Size = new System.Drawing.Size(136, 49);
+            this.buttonSaveMarksExtraSubjectsFirstTerm.TabIndex = 1129;
+            this.buttonSaveMarksExtraSubjectsFirstTerm.Text = "Запиши оценките";
+            this.buttonSaveMarksExtraSubjectsFirstTerm.UseVisualStyleBackColor = true;
+            this.buttonSaveMarksExtraSubjectsFirstTerm.Click += new System.EventHandler(this.buttonSaveMarksExtraSubjectsFirstTerm_Click);
+            // 
+            // dataGridViewExtraSubjectsFirstTerm
+            // 
+            this.dataGridViewExtraSubjectsFirstTerm.AllowUserToAddRows = false;
+            this.dataGridViewExtraSubjectsFirstTerm.AllowUserToDeleteRows = false;
+            this.dataGridViewExtraSubjectsFirstTerm.AllowUserToResizeColumns = false;
+            this.dataGridViewExtraSubjectsFirstTerm.AllowUserToResizeRows = false;
+            this.dataGridViewExtraSubjectsFirstTerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewExtraSubjectsFirstTerm.ColumnHeadersVisible = false;
+            this.dataGridViewExtraSubjectsFirstTerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn8,
+            this.СИПFirstTerm});
+            this.dataGridViewExtraSubjectsFirstTerm.Location = new System.Drawing.Point(349, 188);
+            this.dataGridViewExtraSubjectsFirstTerm.MultiSelect = false;
+            this.dataGridViewExtraSubjectsFirstTerm.Name = "dataGridViewExtraSubjectsFirstTerm";
+            this.dataGridViewExtraSubjectsFirstTerm.RowHeadersVisible = false;
+            this.dataGridViewExtraSubjectsFirstTerm.Size = new System.Drawing.Size(379, 443);
+            this.dataGridViewExtraSubjectsFirstTerm.TabIndex = 1128;
+            this.dataGridViewExtraSubjectsFirstTerm.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExtraSubjectsFirstTerm_CellEndEdit);
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "SubjectName";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Предмети";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "СИП-Първи скок";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 128;
+            // 
+            // СИПFirstTerm
+            // 
+            this.СИПFirstTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.СИПFirstTerm.HeaderText = "Оценка";
+            this.СИПFirstTerm.Name = "СИПFirstTerm";
+            // 
+            // textBox15
+            // 
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox15.Location = new System.Drawing.Point(549, 145);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox15.Multiline = true;
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(179, 43);
+            this.textBox15.TabIndex = 1126;
+            this.textBox15.TabStop = false;
+            this.textBox15.Text = "Оценка \r\nпърви учебен \r\n    срок\r\n\r\n";
+            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox18
+            // 
+            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox18.Location = new System.Drawing.Point(549, 78);
+            this.textBox18.Multiline = true;
+            this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
+            this.textBox18.Size = new System.Drawing.Size(179, 68);
+            this.textBox18.TabIndex = 1124;
+            this.textBox18.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
+            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox19
+            // 
+            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox19.Location = new System.Drawing.Point(349, 78);
+            this.textBox19.Multiline = true;
+            this.textBox19.Name = "textBox19";
+            this.textBox19.ReadOnly = true;
+            this.textBox19.Size = new System.Drawing.Size(201, 110);
+            this.textBox19.TabIndex = 1123;
+            this.textBox19.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(343, 20);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(402, 33);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Въвеждане на оценки за първи срок";
+            // 
+            // comboBoxStudentsNamesExtraSubjects
+            // 
+            this.comboBoxStudentsNamesExtraSubjects.DisplayMember = "FullName";
+            this.comboBoxStudentsNamesExtraSubjects.FormattingEnabled = true;
+            this.comboBoxStudentsNamesExtraSubjects.Location = new System.Drawing.Point(42, 78);
+            this.comboBoxStudentsNamesExtraSubjects.Name = "comboBoxStudentsNamesExtraSubjects";
+            this.comboBoxStudentsNamesExtraSubjects.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxStudentsNamesExtraSubjects.TabIndex = 1130;
+            this.comboBoxStudentsNamesExtraSubjects.Text = "Изберете ученик от класа ви";
+            this.comboBoxStudentsNamesExtraSubjects.ValueMember = "StudentID";
+            this.comboBoxStudentsNamesExtraSubjects.MouseEnter += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjects_MouseEnter);
+            // 
+            // tabPageMarksExtraSubjectsSecondTerm
+            // 
+            this.tabPageMarksExtraSubjectsSecondTerm.AutoScroll = true;
+            this.tabPageMarksExtraSubjectsSecondTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageMarksExtraSubjectsSecondTerm.Controls.Add(this.panelExtraSubjectsSecondTerm);
+            this.tabPageMarksExtraSubjectsSecondTerm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabPageMarksExtraSubjectsSecondTerm.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMarksExtraSubjectsSecondTerm.Name = "tabPageMarksExtraSubjectsSecondTerm";
+            this.tabPageMarksExtraSubjectsSecondTerm.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMarksExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1029, 40);
+            this.tabPageMarksExtraSubjectsSecondTerm.TabIndex = 1;
+            this.tabPageMarksExtraSubjectsSecondTerm.Text = "Втори срок";
+            // 
+            // panelExtraSubjectsSecondTerm
+            // 
+            this.panelExtraSubjectsSecondTerm.AutoScroll = true;
+            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox14);
+            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox16);
+            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox30);
+            this.panelExtraSubjectsSecondTerm.Controls.Add(this.buttonSaveMarksExtraSubjectsSecondTerm);
+            this.panelExtraSubjectsSecondTerm.Controls.Add(this.dataGridViewExtraSubjectsSecondTerm);
+            this.panelExtraSubjectsSecondTerm.Controls.Add(this.label26);
+            this.panelExtraSubjectsSecondTerm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelExtraSubjectsSecondTerm.Location = new System.Drawing.Point(3, 3);
+            this.panelExtraSubjectsSecondTerm.Name = "panelExtraSubjectsSecondTerm";
+            this.panelExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1023, 34);
+            this.panelExtraSubjectsSecondTerm.TabIndex = 1131;
+            // 
+            // textBox14
+            // 
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox14.Location = new System.Drawing.Point(542, 162);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox14.Multiline = true;
+            this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
+            this.textBox14.Size = new System.Drawing.Size(179, 43);
+            this.textBox14.TabIndex = 1142;
+            this.textBox14.TabStop = false;
+            this.textBox14.Text = "Оценка \r\nвтори учебен \r\n    срок\r\n\r\n";
+            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox16
+            // 
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox16.Location = new System.Drawing.Point(542, 95);
+            this.textBox16.Multiline = true;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
+            this.textBox16.Size = new System.Drawing.Size(179, 68);
+            this.textBox16.TabIndex = 1141;
+            this.textBox16.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
+            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox30
+            // 
+            this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox30.Location = new System.Drawing.Point(342, 95);
+            this.textBox30.Multiline = true;
+            this.textBox30.Name = "textBox30";
+            this.textBox30.ReadOnly = true;
+            this.textBox30.Size = new System.Drawing.Size(201, 110);
+            this.textBox30.TabIndex = 1140;
+            this.textBox30.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonSaveMarksExtraSubjectsSecondTerm
+            // 
+            this.buttonSaveMarksExtraSubjectsSecondTerm.Location = new System.Drawing.Point(831, 391);
+            this.buttonSaveMarksExtraSubjectsSecondTerm.Name = "buttonSaveMarksExtraSubjectsSecondTerm";
+            this.buttonSaveMarksExtraSubjectsSecondTerm.Size = new System.Drawing.Size(136, 49);
+            this.buttonSaveMarksExtraSubjectsSecondTerm.TabIndex = 1138;
+            this.buttonSaveMarksExtraSubjectsSecondTerm.Text = "Запиши оценките";
+            this.buttonSaveMarksExtraSubjectsSecondTerm.UseVisualStyleBackColor = true;
+            this.buttonSaveMarksExtraSubjectsSecondTerm.Click += new System.EventHandler(this.buttonSaveMarksExtraSubjectsSecondTerm_Click);
+            // 
+            // dataGridViewExtraSubjectsSecondTerm
+            // 
+            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToAddRows = false;
+            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToDeleteRows = false;
+            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToResizeColumns = false;
+            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToResizeRows = false;
+            this.dataGridViewExtraSubjectsSecondTerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewExtraSubjectsSecondTerm.ColumnHeadersVisible = false;
+            this.dataGridViewExtraSubjectsSecondTerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.СИПSecondTerm});
+            this.dataGridViewExtraSubjectsSecondTerm.Location = new System.Drawing.Point(342, 205);
+            this.dataGridViewExtraSubjectsSecondTerm.MultiSelect = false;
+            this.dataGridViewExtraSubjectsSecondTerm.Name = "dataGridViewExtraSubjectsSecondTerm";
+            this.dataGridViewExtraSubjectsSecondTerm.RowHeadersVisible = false;
+            this.dataGridViewExtraSubjectsSecondTerm.Size = new System.Drawing.Size(379, 443);
+            this.dataGridViewExtraSubjectsSecondTerm.TabIndex = 1137;
+            this.dataGridViewExtraSubjectsSecondTerm.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExtraSubjectsSecondTerm_CellEndEdit);
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "SubjectName";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Предмети";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "ЗП-Първи скок";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 128;
+            // 
+            // СИПSecondTerm
+            // 
+            this.СИПSecondTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.СИПSecondTerm.HeaderText = "Оценка";
+            this.СИПSecondTerm.Name = "СИПSecondTerm";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(368, 34);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(405, 33);
+            this.label26.TabIndex = 1131;
+            this.label26.Text = "Въвеждане на оценки за втори срок";
+            // 
+            // tabPageMarksExtraSubjectsYear
+            // 
+            this.tabPageMarksExtraSubjectsYear.AutoScroll = true;
+            this.tabPageMarksExtraSubjectsYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageMarksExtraSubjectsYear.Controls.Add(this.panelExtraSubjectsYearTerm);
+            this.tabPageMarksExtraSubjectsYear.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMarksExtraSubjectsYear.Name = "tabPageMarksExtraSubjectsYear";
+            this.tabPageMarksExtraSubjectsYear.Size = new System.Drawing.Size(1029, 40);
+            this.tabPageMarksExtraSubjectsYear.TabIndex = 2;
+            this.tabPageMarksExtraSubjectsYear.Text = "Годишени оценки";
+            // 
+            // panelExtraSubjectsYearTerm
+            // 
+            this.panelExtraSubjectsYearTerm.AutoScroll = true;
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox20);
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox21);
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox22);
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.labelSaveSuccessExtraSubjectsMarks);
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.buttonSaveMarksExtraSubjectsYear);
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.dataGridViewExtraSubjectsYear);
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.label28);
+            this.panelExtraSubjectsYearTerm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelExtraSubjectsYearTerm.Location = new System.Drawing.Point(0, 0);
+            this.panelExtraSubjectsYearTerm.Name = "panelExtraSubjectsYearTerm";
+            this.panelExtraSubjectsYearTerm.Size = new System.Drawing.Size(1029, 40);
+            this.panelExtraSubjectsYearTerm.TabIndex = 1140;
+            // 
+            // textBox20
+            // 
+            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox20.Location = new System.Drawing.Point(542, 162);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox20.Multiline = true;
+            this.textBox20.Name = "textBox20";
+            this.textBox20.ReadOnly = true;
+            this.textBox20.Size = new System.Drawing.Size(179, 43);
+            this.textBox20.TabIndex = 1151;
+            this.textBox20.TabStop = false;
+            this.textBox20.Text = "Оценка \r\nза годината\r\n\r\n";
+            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox21
+            // 
+            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox21.Location = new System.Drawing.Point(542, 95);
+            this.textBox21.Multiline = true;
+            this.textBox21.Name = "textBox21";
+            this.textBox21.ReadOnly = true;
+            this.textBox21.Size = new System.Drawing.Size(179, 68);
+            this.textBox21.TabIndex = 1150;
+            this.textBox21.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
+            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox22
+            // 
+            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox22.Location = new System.Drawing.Point(342, 95);
+            this.textBox22.Multiline = true;
+            this.textBox22.Name = "textBox22";
+            this.textBox22.ReadOnly = true;
+            this.textBox22.Size = new System.Drawing.Size(201, 110);
+            this.textBox22.TabIndex = 1149;
+            this.textBox22.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelSaveSuccessExtraSubjectsMarks
+            // 
+            this.labelSaveSuccessExtraSubjectsMarks.AutoSize = true;
+            this.labelSaveSuccessExtraSubjectsMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSaveSuccessExtraSubjectsMarks.Location = new System.Drawing.Point(850, 459);
+            this.labelSaveSuccessExtraSubjectsMarks.Name = "labelSaveSuccessExtraSubjectsMarks";
+            this.labelSaveSuccessExtraSubjectsMarks.Size = new System.Drawing.Size(104, 25);
+            this.labelSaveSuccessExtraSubjectsMarks.TabIndex = 1132;
+            this.labelSaveSuccessExtraSubjectsMarks.Text = "Добавено";
+            this.labelSaveSuccessExtraSubjectsMarks.Visible = false;
+            // 
+            // buttonSaveMarksExtraSubjectsYear
+            // 
+            this.buttonSaveMarksExtraSubjectsYear.Location = new System.Drawing.Point(831, 391);
+            this.buttonSaveMarksExtraSubjectsYear.Name = "buttonSaveMarksExtraSubjectsYear";
+            this.buttonSaveMarksExtraSubjectsYear.Size = new System.Drawing.Size(136, 49);
+            this.buttonSaveMarksExtraSubjectsYear.TabIndex = 1147;
+            this.buttonSaveMarksExtraSubjectsYear.Text = "Запиши оценките";
+            this.buttonSaveMarksExtraSubjectsYear.UseVisualStyleBackColor = true;
+            this.buttonSaveMarksExtraSubjectsYear.Click += new System.EventHandler(this.buttonSaveMarksExtraSubjectsYear_Click);
+            // 
+            // dataGridViewExtraSubjectsYear
+            // 
+            this.dataGridViewExtraSubjectsYear.AllowUserToAddRows = false;
+            this.dataGridViewExtraSubjectsYear.AllowUserToDeleteRows = false;
+            this.dataGridViewExtraSubjectsYear.AllowUserToResizeColumns = false;
+            this.dataGridViewExtraSubjectsYear.AllowUserToResizeRows = false;
+            this.dataGridViewExtraSubjectsYear.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewExtraSubjectsYear.ColumnHeadersVisible = false;
+            this.dataGridViewExtraSubjectsYear.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.СИПYearGrade});
+            this.dataGridViewExtraSubjectsYear.Location = new System.Drawing.Point(342, 205);
+            this.dataGridViewExtraSubjectsYear.MultiSelect = false;
+            this.dataGridViewExtraSubjectsYear.Name = "dataGridViewExtraSubjectsYear";
+            this.dataGridViewExtraSubjectsYear.RowHeadersVisible = false;
+            this.dataGridViewExtraSubjectsYear.Size = new System.Drawing.Size(379, 443);
+            this.dataGridViewExtraSubjectsYear.TabIndex = 1146;
+            this.dataGridViewExtraSubjectsYear.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExtraSubjectsYear_CellEndEdit);
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "SubjectName";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Предмети";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.HeaderText = "ЗП-Първи скок";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Width = 128;
+            // 
+            // СИПYearGrade
+            // 
+            this.СИПYearGrade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.СИПYearGrade.HeaderText = "Оценка";
+            this.СИПYearGrade.Name = "СИПYearGrade";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(368, 34);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(351, 33);
+            this.label28.TabIndex = 1140;
+            this.label28.Text = "Въвеждане на годишни оценки ";
+            // 
             // tabControlDiplom
             // 
             this.tabControlDiplom.Controls.Add(this.tabPageInfo);
             this.tabControlDiplom.Controls.Add(this.tabPage2);
             this.tabControlDiplom.Controls.Add(this.tabPage3);
-            this.tabControlDiplom.Location = new System.Drawing.Point(3, 248);
+            this.tabControlDiplom.Location = new System.Drawing.Point(3, 247);
             this.tabControlDiplom.Name = "tabControlDiplom";
             this.tabControlDiplom.SelectedIndex = 0;
-            this.tabControlDiplom.Size = new System.Drawing.Size(1043, 35);
+            this.tabControlDiplom.Size = new System.Drawing.Size(1043, 41);
             this.tabControlDiplom.TabIndex = 1153;
             this.tabControlDiplom.Visible = false;
             // 
@@ -740,7 +3056,7 @@
             this.tabPageInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPageInfo.Name = "tabPageInfo";
             this.tabPageInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInfo.Size = new System.Drawing.Size(1035, 9);
+            this.tabPageInfo.Size = new System.Drawing.Size(1035, 15);
             this.tabPageInfo.TabIndex = 0;
             this.tabPageInfo.Text = "Първа страница";
             // 
@@ -1184,7 +3500,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1035, 699);
+            this.tabPage2.Size = new System.Drawing.Size(1035, 15);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Втора страница";
             // 
@@ -1286,7 +3602,7 @@
             this.panelMandatorySubjectsMarks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMandatorySubjectsMarks.Location = new System.Drawing.Point(3, 3);
             this.panelMandatorySubjectsMarks.Name = "panelMandatorySubjectsMarks";
-            this.panelMandatorySubjectsMarks.Size = new System.Drawing.Size(1029, 693);
+            this.panelMandatorySubjectsMarks.Size = new System.Drawing.Size(1029, 9);
             this.panelMandatorySubjectsMarks.TabIndex = 228;
             // 
             // label92
@@ -2284,6 +4600,22 @@
             // 
             this.tabPage3.AutoScroll = true;
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPage3.Controls.Add(this.label51);
+            this.tabPage3.Controls.Add(this.labelThirdExamMark);
+            this.tabPage3.Controls.Add(this.labelSecondExamMark);
+            this.tabPage3.Controls.Add(this.labelFirstExamMark);
+            this.tabPage3.Controls.Add(this.labelThirdExamMarkWords);
+            this.tabPage3.Controls.Add(this.labelSecondExamMarkWords);
+            this.tabPage3.Controls.Add(this.labelFirstExamMarkWords);
+            this.tabPage3.Controls.Add(this.labelThirdExam);
+            this.tabPage3.Controls.Add(this.labelSecondExam);
+            this.tabPage3.Controls.Add(this.labelFirstExam);
+            this.tabPage3.Controls.Add(this.label115);
+            this.tabPage3.Controls.Add(this.label116);
+            this.tabPage3.Controls.Add(this.label117);
+            this.tabPage3.Controls.Add(this.label118);
+            this.tabPage3.Controls.Add(this.label119);
+            this.tabPage3.Controls.Add(this.label121);
             this.tabPage3.Controls.Add(this.label50);
             this.tabPage3.Controls.Add(this.labelFifthExtraSubjectMark);
             this.tabPage3.Controls.Add(this.labelFourthExtraSubjectMark);
@@ -2329,15 +4661,171 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1035, 699);
+            this.tabPage3.Size = new System.Drawing.Size(1035, 15);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Трета страница";
+            // 
+            // label51
+            // 
+            this.label51.BackColor = System.Drawing.Color.Olive;
+            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label51.Location = new System.Drawing.Point(138, 243);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(763, 4);
+            this.label51.TabIndex = 211;
+            // 
+            // labelThirdExamMark
+            // 
+            this.labelThirdExamMark.AutoSize = true;
+            this.labelThirdExamMark.Location = new System.Drawing.Point(740, 385);
+            this.labelThirdExamMark.Name = "labelThirdExamMark";
+            this.labelThirdExamMark.Size = new System.Drawing.Size(10, 13);
+            this.labelThirdExamMark.TabIndex = 210;
+            this.labelThirdExamMark.Text = "-";
+            // 
+            // labelSecondExamMark
+            // 
+            this.labelSecondExamMark.AutoSize = true;
+            this.labelSecondExamMark.Location = new System.Drawing.Point(740, 358);
+            this.labelSecondExamMark.Name = "labelSecondExamMark";
+            this.labelSecondExamMark.Size = new System.Drawing.Size(10, 13);
+            this.labelSecondExamMark.TabIndex = 209;
+            this.labelSecondExamMark.Text = "-";
+            // 
+            // labelFirstExamMark
+            // 
+            this.labelFirstExamMark.AutoSize = true;
+            this.labelFirstExamMark.Location = new System.Drawing.Point(740, 330);
+            this.labelFirstExamMark.Name = "labelFirstExamMark";
+            this.labelFirstExamMark.Size = new System.Drawing.Size(10, 13);
+            this.labelFirstExamMark.TabIndex = 208;
+            this.labelFirstExamMark.Text = "-";
+            // 
+            // labelThirdExamMarkWords
+            // 
+            this.labelThirdExamMarkWords.AutoSize = true;
+            this.labelThirdExamMarkWords.Location = new System.Drawing.Point(555, 385);
+            this.labelThirdExamMarkWords.Name = "labelThirdExamMarkWords";
+            this.labelThirdExamMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelThirdExamMarkWords.TabIndex = 207;
+            this.labelThirdExamMarkWords.Text = "-";
+            // 
+            // labelSecondExamMarkWords
+            // 
+            this.labelSecondExamMarkWords.AutoSize = true;
+            this.labelSecondExamMarkWords.Location = new System.Drawing.Point(555, 358);
+            this.labelSecondExamMarkWords.Name = "labelSecondExamMarkWords";
+            this.labelSecondExamMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelSecondExamMarkWords.TabIndex = 206;
+            this.labelSecondExamMarkWords.Text = "-";
+            // 
+            // labelFirstExamMarkWords
+            // 
+            this.labelFirstExamMarkWords.AutoSize = true;
+            this.labelFirstExamMarkWords.Location = new System.Drawing.Point(555, 329);
+            this.labelFirstExamMarkWords.Name = "labelFirstExamMarkWords";
+            this.labelFirstExamMarkWords.Size = new System.Drawing.Size(10, 13);
+            this.labelFirstExamMarkWords.TabIndex = 205;
+            this.labelFirstExamMarkWords.Text = "-";
+            // 
+            // labelThirdExam
+            // 
+            this.labelThirdExam.AutoSize = true;
+            this.labelThirdExam.Location = new System.Drawing.Point(217, 385);
+            this.labelThirdExam.Name = "labelThirdExam";
+            this.labelThirdExam.Size = new System.Drawing.Size(10, 13);
+            this.labelThirdExam.TabIndex = 204;
+            this.labelThirdExam.Text = "-";
+            // 
+            // labelSecondExam
+            // 
+            this.labelSecondExam.AutoSize = true;
+            this.labelSecondExam.Location = new System.Drawing.Point(217, 358);
+            this.labelSecondExam.Name = "labelSecondExam";
+            this.labelSecondExam.Size = new System.Drawing.Size(10, 13);
+            this.labelSecondExam.TabIndex = 203;
+            this.labelSecondExam.Text = "-";
+            // 
+            // labelFirstExam
+            // 
+            this.labelFirstExam.AutoSize = true;
+            this.labelFirstExam.Location = new System.Drawing.Point(217, 330);
+            this.labelFirstExam.Name = "labelFirstExam";
+            this.labelFirstExam.Size = new System.Drawing.Size(10, 13);
+            this.labelFirstExam.TabIndex = 202;
+            this.labelFirstExam.Text = "-";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label115.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label115.Location = new System.Drawing.Point(743, 309);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(72, 12);
+            this.label115.TabIndex = 201;
+            this.label115.Text = "оценки с цифри";
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label116.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label116.Location = new System.Drawing.Point(556, 309);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(65, 12);
+            this.label116.TabIndex = 200;
+            this.label116.Text = "оценки с думи";
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label117.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label117.Location = new System.Drawing.Point(180, 389);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(667, 15);
+            this.label117.TabIndex = 198;
+            this.label117.Text = resources.GetString("label117.Text");
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label118.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label118.Location = new System.Drawing.Point(180, 363);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(667, 15);
+            this.label118.TabIndex = 199;
+            this.label118.Text = resources.GetString("label118.Text");
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label119.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label119.Location = new System.Drawing.Point(180, 337);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(667, 15);
+            this.label119.TabIndex = 197;
+            this.label119.Text = resources.GetString("label119.Text");
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label121.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label121.Location = new System.Drawing.Point(151, 279);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(305, 15);
+            this.label121.TabIndex = 196;
+            this.label121.Text = "УСПЕХ ОТ ДЪРЖАВНИ ЗРЕЛОСТНИ ИЗПИТИ";
             // 
             // label50
             // 
             this.label50.BackColor = System.Drawing.Color.Olive;
             this.label50.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label50.Location = new System.Drawing.Point(137, 567);
+            this.label50.Location = new System.Drawing.Point(138, 648);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(763, 4);
             this.label50.TabIndex = 177;
@@ -2345,7 +4833,7 @@
             // labelFifthExtraSubjectMark
             // 
             this.labelFifthExtraSubjectMark.AutoSize = true;
-            this.labelFifthExtraSubjectMark.Location = new System.Drawing.Point(739, 516);
+            this.labelFifthExtraSubjectMark.Location = new System.Drawing.Point(740, 611);
             this.labelFifthExtraSubjectMark.Name = "labelFifthExtraSubjectMark";
             this.labelFifthExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelFifthExtraSubjectMark.TabIndex = 176;
@@ -2354,7 +4842,7 @@
             // labelFourthExtraSubjectMark
             // 
             this.labelFourthExtraSubjectMark.AutoSize = true;
-            this.labelFourthExtraSubjectMark.Location = new System.Drawing.Point(739, 488);
+            this.labelFourthExtraSubjectMark.Location = new System.Drawing.Point(740, 584);
             this.labelFourthExtraSubjectMark.Name = "labelFourthExtraSubjectMark";
             this.labelFourthExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelFourthExtraSubjectMark.TabIndex = 175;
@@ -2363,7 +4851,7 @@
             // labelFifthExtraSubjectMarkWords
             // 
             this.labelFifthExtraSubjectMarkWords.AutoSize = true;
-            this.labelFifthExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 514);
+            this.labelFifthExtraSubjectMarkWords.Location = new System.Drawing.Point(555, 611);
             this.labelFifthExtraSubjectMarkWords.Name = "labelFifthExtraSubjectMarkWords";
             this.labelFifthExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelFifthExtraSubjectMarkWords.TabIndex = 174;
@@ -2372,7 +4860,7 @@
             // labelFourthExtraSubjectMarkWords
             // 
             this.labelFourthExtraSubjectMarkWords.AutoSize = true;
-            this.labelFourthExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 487);
+            this.labelFourthExtraSubjectMarkWords.Location = new System.Drawing.Point(555, 584);
             this.labelFourthExtraSubjectMarkWords.Name = "labelFourthExtraSubjectMarkWords";
             this.labelFourthExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelFourthExtraSubjectMarkWords.TabIndex = 173;
@@ -2381,7 +4869,7 @@
             // labelFifthExtraSubject
             // 
             this.labelFifthExtraSubject.AutoSize = true;
-            this.labelFifthExtraSubject.Location = new System.Drawing.Point(219, 517);
+            this.labelFifthExtraSubject.Location = new System.Drawing.Point(220, 612);
             this.labelFifthExtraSubject.Name = "labelFifthExtraSubject";
             this.labelFifthExtraSubject.Size = new System.Drawing.Size(10, 13);
             this.labelFifthExtraSubject.TabIndex = 172;
@@ -2390,7 +4878,7 @@
             // labelFourthExtraSubject
             // 
             this.labelFourthExtraSubject.AutoSize = true;
-            this.labelFourthExtraSubject.Location = new System.Drawing.Point(219, 488);
+            this.labelFourthExtraSubject.Location = new System.Drawing.Point(220, 587);
             this.labelFourthExtraSubject.Name = "labelFourthExtraSubject";
             this.labelFourthExtraSubject.Size = new System.Drawing.Size(10, 13);
             this.labelFourthExtraSubject.TabIndex = 171;
@@ -2401,7 +4889,7 @@
             this.label93.AutoSize = true;
             this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label93.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label93.Location = new System.Drawing.Point(179, 518);
+            this.label93.Location = new System.Drawing.Point(180, 614);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(667, 15);
             this.label93.TabIndex = 170;
@@ -2412,7 +4900,7 @@
             this.label96.AutoSize = true;
             this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label96.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label96.Location = new System.Drawing.Point(179, 491);
+            this.label96.Location = new System.Drawing.Point(180, 589);
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(667, 15);
             this.label96.TabIndex = 169;
@@ -2421,7 +4909,7 @@
             // labelThirdExtraSubjectMark
             // 
             this.labelThirdExtraSubjectMark.AutoSize = true;
-            this.labelThirdExtraSubjectMark.Location = new System.Drawing.Point(739, 460);
+            this.labelThirdExtraSubjectMark.Location = new System.Drawing.Point(740, 559);
             this.labelThirdExtraSubjectMark.Name = "labelThirdExtraSubjectMark";
             this.labelThirdExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelThirdExtraSubjectMark.TabIndex = 168;
@@ -2430,7 +4918,7 @@
             // labelSecondExtraSubjectMark
             // 
             this.labelSecondExtraSubjectMark.AutoSize = true;
-            this.labelSecondExtraSubjectMark.Location = new System.Drawing.Point(739, 432);
+            this.labelSecondExtraSubjectMark.Location = new System.Drawing.Point(740, 530);
             this.labelSecondExtraSubjectMark.Name = "labelSecondExtraSubjectMark";
             this.labelSecondExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelSecondExtraSubjectMark.TabIndex = 167;
@@ -2439,7 +4927,7 @@
             // labelFirstExtraSubjectMark
             // 
             this.labelFirstExtraSubjectMark.AutoSize = true;
-            this.labelFirstExtraSubjectMark.Location = new System.Drawing.Point(739, 404);
+            this.labelFirstExtraSubjectMark.Location = new System.Drawing.Point(740, 503);
             this.labelFirstExtraSubjectMark.Name = "labelFirstExtraSubjectMark";
             this.labelFirstExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelFirstExtraSubjectMark.TabIndex = 166;
@@ -2448,7 +4936,7 @@
             // labelThirdExtraSubjectMarkWords
             // 
             this.labelThirdExtraSubjectMarkWords.AutoSize = true;
-            this.labelThirdExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 460);
+            this.labelThirdExtraSubjectMarkWords.Location = new System.Drawing.Point(555, 557);
             this.labelThirdExtraSubjectMarkWords.Name = "labelThirdExtraSubjectMarkWords";
             this.labelThirdExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelThirdExtraSubjectMarkWords.TabIndex = 165;
@@ -2457,7 +4945,7 @@
             // labelSecondExtraSubjectMarkWords
             // 
             this.labelSecondExtraSubjectMarkWords.AutoSize = true;
-            this.labelSecondExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 433);
+            this.labelSecondExtraSubjectMarkWords.Location = new System.Drawing.Point(555, 533);
             this.labelSecondExtraSubjectMarkWords.Name = "labelSecondExtraSubjectMarkWords";
             this.labelSecondExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelSecondExtraSubjectMarkWords.TabIndex = 164;
@@ -2466,7 +4954,7 @@
             // labelFirstExtraSubjectMarkWords
             // 
             this.labelFirstExtraSubjectMarkWords.AutoSize = true;
-            this.labelFirstExtraSubjectMarkWords.Location = new System.Drawing.Point(552, 406);
+            this.labelFirstExtraSubjectMarkWords.Location = new System.Drawing.Point(555, 503);
             this.labelFirstExtraSubjectMarkWords.Name = "labelFirstExtraSubjectMarkWords";
             this.labelFirstExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelFirstExtraSubjectMarkWords.TabIndex = 163;
@@ -2475,7 +4963,7 @@
             // labelThirdExtraSubject
             // 
             this.labelThirdExtraSubject.AutoSize = true;
-            this.labelThirdExtraSubject.Location = new System.Drawing.Point(219, 459);
+            this.labelThirdExtraSubject.Location = new System.Drawing.Point(220, 561);
             this.labelThirdExtraSubject.Name = "labelThirdExtraSubject";
             this.labelThirdExtraSubject.Size = new System.Drawing.Size(10, 13);
             this.labelThirdExtraSubject.TabIndex = 162;
@@ -2484,7 +4972,7 @@
             // labelSecondExtraSubject
             // 
             this.labelSecondExtraSubject.AutoSize = true;
-            this.labelSecondExtraSubject.Location = new System.Drawing.Point(219, 430);
+            this.labelSecondExtraSubject.Location = new System.Drawing.Point(220, 533);
             this.labelSecondExtraSubject.Name = "labelSecondExtraSubject";
             this.labelSecondExtraSubject.Size = new System.Drawing.Size(10, 13);
             this.labelSecondExtraSubject.TabIndex = 161;
@@ -2493,7 +4981,7 @@
             // labelFirstExtraSubject
             // 
             this.labelFirstExtraSubject.AutoSize = true;
-            this.labelFirstExtraSubject.Location = new System.Drawing.Point(219, 401);
+            this.labelFirstExtraSubject.Location = new System.Drawing.Point(220, 505);
             this.labelFirstExtraSubject.Name = "labelFirstExtraSubject";
             this.labelFirstExtraSubject.Size = new System.Drawing.Size(10, 13);
             this.labelFirstExtraSubject.TabIndex = 160;
@@ -2504,7 +4992,7 @@
             this.label105.AutoSize = true;
             this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label105.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label105.Location = new System.Drawing.Point(742, 382);
+            this.label105.Location = new System.Drawing.Point(727, 482);
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(72, 12);
             this.label105.TabIndex = 159;
@@ -2515,7 +5003,7 @@
             this.label106.AutoSize = true;
             this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label106.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label106.Location = new System.Drawing.Point(555, 382);
+            this.label106.Location = new System.Drawing.Point(540, 482);
             this.label106.Name = "label106";
             this.label106.Size = new System.Drawing.Size(65, 12);
             this.label106.TabIndex = 158;
@@ -2526,7 +5014,7 @@
             this.label107.AutoSize = true;
             this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label107.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label107.Location = new System.Drawing.Point(179, 464);
+            this.label107.Location = new System.Drawing.Point(180, 564);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(667, 15);
             this.label107.TabIndex = 156;
@@ -2537,7 +5025,7 @@
             this.label108.AutoSize = true;
             this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label108.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label108.Location = new System.Drawing.Point(179, 437);
+            this.label108.Location = new System.Drawing.Point(180, 539);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(667, 15);
             this.label108.TabIndex = 157;
@@ -2548,7 +5036,7 @@
             this.label109.AutoSize = true;
             this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label109.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label109.Location = new System.Drawing.Point(179, 410);
+            this.label109.Location = new System.Drawing.Point(180, 514);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(667, 15);
             this.label109.TabIndex = 155;
@@ -2559,7 +5047,7 @@
             this.label111.AutoSize = true;
             this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label111.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label111.Location = new System.Drawing.Point(150, 362);
+            this.label111.Location = new System.Drawing.Point(151, 461);
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(264, 15);
             this.label111.TabIndex = 153;
@@ -2568,7 +5056,7 @@
             // labelThirdChosenSubjectMark
             // 
             this.labelThirdChosenSubjectMark.AutoSize = true;
-            this.labelThirdChosenSubjectMark.Location = new System.Drawing.Point(739, 273);
+            this.labelThirdChosenSubjectMark.Location = new System.Drawing.Point(740, 205);
             this.labelThirdChosenSubjectMark.Name = "labelThirdChosenSubjectMark";
             this.labelThirdChosenSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelThirdChosenSubjectMark.TabIndex = 152;
@@ -2577,7 +5065,7 @@
             // labelSecondChosenSubjectMark
             // 
             this.labelSecondChosenSubjectMark.AutoSize = true;
-            this.labelSecondChosenSubjectMark.Location = new System.Drawing.Point(739, 242);
+            this.labelSecondChosenSubjectMark.Location = new System.Drawing.Point(740, 174);
             this.labelSecondChosenSubjectMark.Name = "labelSecondChosenSubjectMark";
             this.labelSecondChosenSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelSecondChosenSubjectMark.TabIndex = 151;
@@ -2586,7 +5074,7 @@
             // labelFirstChosenSubjectMar
             // 
             this.labelFirstChosenSubjectMar.AutoSize = true;
-            this.labelFirstChosenSubjectMar.Location = new System.Drawing.Point(739, 213);
+            this.labelFirstChosenSubjectMar.Location = new System.Drawing.Point(740, 145);
             this.labelFirstChosenSubjectMar.Name = "labelFirstChosenSubjectMar";
             this.labelFirstChosenSubjectMar.Size = new System.Drawing.Size(10, 13);
             this.labelFirstChosenSubjectMar.TabIndex = 150;
@@ -2595,7 +5083,7 @@
             // labelThirdChosenSubjectMarkWords
             // 
             this.labelThirdChosenSubjectMarkWords.AutoSize = true;
-            this.labelThirdChosenSubjectMarkWords.Location = new System.Drawing.Point(554, 270);
+            this.labelThirdChosenSubjectMarkWords.Location = new System.Drawing.Point(555, 202);
             this.labelThirdChosenSubjectMarkWords.Name = "labelThirdChosenSubjectMarkWords";
             this.labelThirdChosenSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelThirdChosenSubjectMarkWords.TabIndex = 149;
@@ -2604,7 +5092,7 @@
             // labelSecondChosenSubjectMarkWords
             // 
             this.labelSecondChosenSubjectMarkWords.AutoSize = true;
-            this.labelSecondChosenSubjectMarkWords.Location = new System.Drawing.Point(554, 239);
+            this.labelSecondChosenSubjectMarkWords.Location = new System.Drawing.Point(555, 171);
             this.labelSecondChosenSubjectMarkWords.Name = "labelSecondChosenSubjectMarkWords";
             this.labelSecondChosenSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelSecondChosenSubjectMarkWords.TabIndex = 148;
@@ -2613,7 +5101,7 @@
             // labelFirstChosenSubjectMarkWords
             // 
             this.labelFirstChosenSubjectMarkWords.AutoSize = true;
-            this.labelFirstChosenSubjectMarkWords.Location = new System.Drawing.Point(554, 213);
+            this.labelFirstChosenSubjectMarkWords.Location = new System.Drawing.Point(555, 145);
             this.labelFirstChosenSubjectMarkWords.Name = "labelFirstChosenSubjectMarkWords";
             this.labelFirstChosenSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelFirstChosenSubjectMarkWords.TabIndex = 147;
@@ -2622,7 +5110,7 @@
             // labelThirdChosenSubject
             // 
             this.labelThirdChosenSubject.AutoSize = true;
-            this.labelThirdChosenSubject.Location = new System.Drawing.Point(219, 270);
+            this.labelThirdChosenSubject.Location = new System.Drawing.Point(220, 202);
             this.labelThirdChosenSubject.Name = "labelThirdChosenSubject";
             this.labelThirdChosenSubject.Size = new System.Drawing.Size(10, 13);
             this.labelThirdChosenSubject.TabIndex = 146;
@@ -2631,7 +5119,7 @@
             // labelSecondChosenSubject
             // 
             this.labelSecondChosenSubject.AutoSize = true;
-            this.labelSecondChosenSubject.Location = new System.Drawing.Point(219, 239);
+            this.labelSecondChosenSubject.Location = new System.Drawing.Point(220, 171);
             this.labelSecondChosenSubject.Name = "labelSecondChosenSubject";
             this.labelSecondChosenSubject.Size = new System.Drawing.Size(10, 13);
             this.labelSecondChosenSubject.TabIndex = 145;
@@ -2640,7 +5128,7 @@
             // labelFirstChosenSubject
             // 
             this.labelFirstChosenSubject.AutoSize = true;
-            this.labelFirstChosenSubject.Location = new System.Drawing.Point(219, 207);
+            this.labelFirstChosenSubject.Location = new System.Drawing.Point(220, 139);
             this.labelFirstChosenSubject.Name = "labelFirstChosenSubject";
             this.labelFirstChosenSubject.Size = new System.Drawing.Size(10, 13);
             this.labelFirstChosenSubject.TabIndex = 144;
@@ -2650,7 +5138,7 @@
             // 
             this.label80.BackColor = System.Drawing.Color.Olive;
             this.label80.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label80.Location = new System.Drawing.Point(137, 330);
+            this.label80.Location = new System.Drawing.Point(138, 425);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(763, 4);
             this.label80.TabIndex = 143;
@@ -2660,7 +5148,7 @@
             this.label85.AutoSize = true;
             this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label85.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label85.Location = new System.Drawing.Point(742, 193);
+            this.label85.Location = new System.Drawing.Point(743, 125);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(72, 12);
             this.label85.TabIndex = 141;
@@ -2671,7 +5159,7 @@
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label86.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label86.Location = new System.Drawing.Point(555, 193);
+            this.label86.Location = new System.Drawing.Point(556, 125);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(65, 12);
             this.label86.TabIndex = 140;
@@ -2682,7 +5170,7 @@
             this.label94.AutoSize = true;
             this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label94.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label94.Location = new System.Drawing.Point(179, 274);
+            this.label94.Location = new System.Drawing.Point(180, 206);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(667, 15);
             this.label94.TabIndex = 136;
@@ -2693,7 +5181,7 @@
             this.label95.AutoSize = true;
             this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label95.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label95.Location = new System.Drawing.Point(179, 246);
+            this.label95.Location = new System.Drawing.Point(180, 178);
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(667, 15);
             this.label95.TabIndex = 137;
@@ -2704,7 +5192,7 @@
             this.label97.AutoSize = true;
             this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label97.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label97.Location = new System.Drawing.Point(179, 221);
+            this.label97.Location = new System.Drawing.Point(180, 153);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(667, 15);
             this.label97.TabIndex = 134;
@@ -2715,7 +5203,7 @@
             this.label98.AutoSize = true;
             this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label98.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label98.Location = new System.Drawing.Point(150, 164);
+            this.label98.Location = new System.Drawing.Point(151, 96);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(402, 13);
             this.label98.TabIndex = 108;
@@ -2726,7 +5214,7 @@
             this.label99.AutoSize = true;
             this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label99.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label99.Location = new System.Drawing.Point(150, 136);
+            this.label99.Location = new System.Drawing.Point(151, 68);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(301, 15);
             this.label99.TabIndex = 107;
@@ -2736,1030 +5224,10 @@
             // 
             this.label3First.BackColor = System.Drawing.Color.Olive;
             this.label3First.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3First.Location = new System.Drawing.Point(137, 93);
+            this.label3First.Location = new System.Drawing.Point(138, 25);
             this.label3First.Name = "label3First";
             this.label3First.Size = new System.Drawing.Size(763, 4);
             this.label3First.TabIndex = 95;
-            // 
-            // tabControlMarksSummary
-            // 
-            this.tabControlMarksSummary.Controls.Add(this.tabPageMandatoryAndChosenSubjects);
-            this.tabControlMarksSummary.Controls.Add(this.tabPageExtraSubjects);
-            this.tabControlMarksSummary.Location = new System.Drawing.Point(3, 377);
-            this.tabControlMarksSummary.Name = "tabControlMarksSummary";
-            this.tabControlMarksSummary.SelectedIndex = 0;
-            this.tabControlMarksSummary.Size = new System.Drawing.Size(1041, 95);
-            this.tabControlMarksSummary.TabIndex = 1133;
-            this.tabControlMarksSummary.Visible = false;
-            // 
-            // tabPageMandatoryAndChosenSubjects
-            // 
-            this.tabPageMandatoryAndChosenSubjects.Controls.Add(this.panelMarksMandatoryAndChosenSubjectsSummary);
-            this.tabPageMandatoryAndChosenSubjects.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMandatoryAndChosenSubjects.Name = "tabPageMandatoryAndChosenSubjects";
-            this.tabPageMandatoryAndChosenSubjects.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMandatoryAndChosenSubjects.Size = new System.Drawing.Size(1033, 69);
-            this.tabPageMandatoryAndChosenSubjects.TabIndex = 0;
-            this.tabPageMandatoryAndChosenSubjects.Text = "Успех от ЗП и ЗИП";
-            this.tabPageMandatoryAndChosenSubjects.UseVisualStyleBackColor = true;
-            // 
-            // panelMarksMandatoryAndChosenSubjectsSummary
-            // 
-            this.panelMarksMandatoryAndChosenSubjectsSummary.AutoScroll = true;
-            this.panelMarksMandatoryAndChosenSubjectsSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxAverageExams);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.label89);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxAverageChosenSubjects);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.label66);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxAverageMandatorySubjects);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.label54);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.buttonSaveDiplomMarks);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.comboBoxStudentsNamesDiplomMarks);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.dataGridViewDiplom);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox27);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox32);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox37);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxFourthYear);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox44);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxThirdYear);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox46);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox47);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox51);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox31);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox50);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox49);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox33);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxSecondYear);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox35);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox36);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBoxFirstYear);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox38);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox40);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.textBox42);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Controls.Add(this.label36);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Location = new System.Drawing.Point(3, 3);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Name = "panelMarksMandatoryAndChosenSubjectsSummary";
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Size = new System.Drawing.Size(1027, 63);
-            this.panelMarksMandatoryAndChosenSubjectsSummary.TabIndex = 1155;
-            // 
-            // textBoxAverageExams
-            // 
-            this.textBoxAverageExams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBoxAverageExams.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAverageExams.Location = new System.Drawing.Point(219, 641);
-            this.textBoxAverageExams.Multiline = true;
-            this.textBoxAverageExams.Name = "textBoxAverageExams";
-            this.textBoxAverageExams.ReadOnly = true;
-            this.textBoxAverageExams.Size = new System.Drawing.Size(52, 25);
-            this.textBoxAverageExams.TabIndex = 1139;
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(96, 648);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(116, 13);
-            this.label89.TabIndex = 1138;
-            this.label89.Text = "Среден успех от ДЗИ";
-            // 
-            // textBoxAverageChosenSubjects
-            // 
-            this.textBoxAverageChosenSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBoxAverageChosenSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAverageChosenSubjects.Location = new System.Drawing.Point(649, 640);
-            this.textBoxAverageChosenSubjects.Multiline = true;
-            this.textBoxAverageChosenSubjects.Name = "textBoxAverageChosenSubjects";
-            this.textBoxAverageChosenSubjects.ReadOnly = true;
-            this.textBoxAverageChosenSubjects.Size = new System.Drawing.Size(52, 25);
-            this.textBoxAverageChosenSubjects.TabIndex = 1137;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(526, 647);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(115, 13);
-            this.label66.TabIndex = 1136;
-            this.label66.Text = "Среден успех от ЗИП";
-            // 
-            // textBoxAverageMandatorySubjects
-            // 
-            this.textBoxAverageMandatorySubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBoxAverageMandatorySubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAverageMandatorySubjects.Location = new System.Drawing.Point(439, 641);
-            this.textBoxAverageMandatorySubjects.Multiline = true;
-            this.textBoxAverageMandatorySubjects.Name = "textBoxAverageMandatorySubjects";
-            this.textBoxAverageMandatorySubjects.ReadOnly = true;
-            this.textBoxAverageMandatorySubjects.Size = new System.Drawing.Size(52, 25);
-            this.textBoxAverageMandatorySubjects.TabIndex = 1135;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(316, 648);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(107, 13);
-            this.label54.TabIndex = 1134;
-            this.label54.Text = "Среден успех от ЗП";
-            // 
-            // buttonSaveDiplomMarks
-            // 
-            this.buttonSaveDiplomMarks.Location = new System.Drawing.Point(814, 628);
-            this.buttonSaveDiplomMarks.Name = "buttonSaveDiplomMarks";
-            this.buttonSaveDiplomMarks.Size = new System.Drawing.Size(150, 51);
-            this.buttonSaveDiplomMarks.TabIndex = 1133;
-            this.buttonSaveDiplomMarks.Text = "Запазване на окончателните оценки";
-            this.buttonSaveDiplomMarks.UseVisualStyleBackColor = true;
-            this.buttonSaveDiplomMarks.Click += new System.EventHandler(this.buttonSaveDiplomMarks_Click);
-            // 
-            // comboBoxStudentsNamesDiplomMarks
-            // 
-            this.comboBoxStudentsNamesDiplomMarks.CausesValidation = false;
-            this.comboBoxStudentsNamesDiplomMarks.DisplayMember = "FullName";
-            this.comboBoxStudentsNamesDiplomMarks.FormattingEnabled = true;
-            this.comboBoxStudentsNamesDiplomMarks.Location = new System.Drawing.Point(748, 29);
-            this.comboBoxStudentsNamesDiplomMarks.Name = "comboBoxStudentsNamesDiplomMarks";
-            this.comboBoxStudentsNamesDiplomMarks.Size = new System.Drawing.Size(229, 21);
-            this.comboBoxStudentsNamesDiplomMarks.TabIndex = 1132;
-            this.comboBoxStudentsNamesDiplomMarks.Text = "Изберете ученик от класа ви";
-            this.comboBoxStudentsNamesDiplomMarks.ValueMember = "StudentID";
-            this.comboBoxStudentsNamesDiplomMarks.SelectionChangeCommitted += new System.EventHandler(this.comboBoxStudentsNamesDiplomMarks_SelectionChangeCommitted);
-            this.comboBoxStudentsNamesDiplomMarks.Click += new System.EventHandler(this.comboBoxStudentsNamesDiplomMarks_Click);
-            // 
-            // dataGridViewDiplom
-            // 
-            this.dataGridViewDiplom.AllowUserToAddRows = false;
-            this.dataGridViewDiplom.AllowUserToDeleteRows = false;
-            this.dataGridViewDiplom.AllowUserToResizeColumns = false;
-            this.dataGridViewDiplom.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridViewDiplom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDiplom.ColumnHeadersVisible = false;
-            this.dataGridViewDiplom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SubjectName,
-            this.WithWordsMandatoryFirstYear,
-            this.MandatorySubjectFirstYear,
-            this.WithWordsChosenFirstYear,
-            this.ChosenFirstYear,
-            this.WithWordsMandatorySecondYear,
-            this.MandatorySecondYear,
-            this.WithWordsChosenSecondYear,
-            this.ChosenSecondYear,
-            this.WithWordsMandatoryThirdYear,
-            this.MandatoryThirdYear,
-            this.WithWordsChosenThirdYear,
-            this.ChosenThirdYear,
-            this.WithWordsMandatoryFourthYear,
-            this.MandatoryFourthYear,
-            this.WithWordsChosenFourthYear,
-            this.ChosenFourthYear,
-            this.WithWordsMandatoryFinal,
-            this.AverageMarkMandatorySubject,
-            this.WithWordsChosenFinal,
-            this.AverageMarkChosenSubject});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDiplom.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewDiplom.Location = new System.Drawing.Point(42, 156);
-            this.dataGridViewDiplom.Name = "dataGridViewDiplom";
-            this.dataGridViewDiplom.RowHeadersVisible = false;
-            this.dataGridViewDiplom.Size = new System.Drawing.Size(935, 452);
-            this.dataGridViewDiplom.TabIndex = 1125;
-            // 
-            // SubjectName
-            // 
-            this.SubjectName.DataPropertyName = "Subject";
-            this.SubjectName.HeaderText = "Предмет";
-            this.SubjectName.Name = "SubjectName";
-            this.SubjectName.ReadOnly = true;
-            this.SubjectName.Width = 174;
-            // 
-            // WithWordsMandatoryFirstYear
-            // 
-            this.WithWordsMandatoryFirstYear.HeaderText = "Оценка";
-            this.WithWordsMandatoryFirstYear.Name = "WithWordsMandatoryFirstYear";
-            this.WithWordsMandatoryFirstYear.ReadOnly = true;
-            this.WithWordsMandatoryFirstYear.Width = 50;
-            // 
-            // MandatorySubjectFirstYear
-            // 
-            this.MandatorySubjectFirstYear.DataPropertyName = "MandatorySubjectFirstYear";
-            this.MandatorySubjectFirstYear.HeaderText = "ЗП/ПП";
-            this.MandatorySubjectFirstYear.Name = "MandatorySubjectFirstYear";
-            this.MandatorySubjectFirstYear.ReadOnly = true;
-            this.MandatorySubjectFirstYear.Width = 20;
-            // 
-            // WithWordsChosenFirstYear
-            // 
-            this.WithWordsChosenFirstYear.HeaderText = "Оценка";
-            this.WithWordsChosenFirstYear.Name = "WithWordsChosenFirstYear";
-            this.WithWordsChosenFirstYear.ReadOnly = true;
-            this.WithWordsChosenFirstYear.Width = 51;
-            // 
-            // ChosenFirstYear
-            // 
-            this.ChosenFirstYear.DataPropertyName = "ChosenSubjectFirstYear";
-            this.ChosenFirstYear.HeaderText = "ЗИП";
-            this.ChosenFirstYear.Name = "ChosenFirstYear";
-            this.ChosenFirstYear.ReadOnly = true;
-            this.ChosenFirstYear.Width = 20;
-            // 
-            // WithWordsMandatorySecondYear
-            // 
-            this.WithWordsMandatorySecondYear.HeaderText = "Оценка";
-            this.WithWordsMandatorySecondYear.Name = "WithWordsMandatorySecondYear";
-            this.WithWordsMandatorySecondYear.ReadOnly = true;
-            this.WithWordsMandatorySecondYear.Width = 51;
-            // 
-            // MandatorySecondYear
-            // 
-            this.MandatorySecondYear.DataPropertyName = "MandatorySubjectSecondYear";
-            this.MandatorySecondYear.HeaderText = "ЗП/ПП";
-            this.MandatorySecondYear.Name = "MandatorySecondYear";
-            this.MandatorySecondYear.ReadOnly = true;
-            this.MandatorySecondYear.Width = 20;
-            // 
-            // WithWordsChosenSecondYear
-            // 
-            this.WithWordsChosenSecondYear.HeaderText = "Оценка";
-            this.WithWordsChosenSecondYear.Name = "WithWordsChosenSecondYear";
-            this.WithWordsChosenSecondYear.ReadOnly = true;
-            this.WithWordsChosenSecondYear.Width = 51;
-            // 
-            // ChosenSecondYear
-            // 
-            this.ChosenSecondYear.DataPropertyName = "ChosenSubjectSecondYear";
-            this.ChosenSecondYear.HeaderText = "ЗИП";
-            this.ChosenSecondYear.Name = "ChosenSecondYear";
-            this.ChosenSecondYear.ReadOnly = true;
-            this.ChosenSecondYear.Width = 20;
-            // 
-            // WithWordsMandatoryThirdYear
-            // 
-            this.WithWordsMandatoryThirdYear.HeaderText = "Оценка";
-            this.WithWordsMandatoryThirdYear.Name = "WithWordsMandatoryThirdYear";
-            this.WithWordsMandatoryThirdYear.ReadOnly = true;
-            this.WithWordsMandatoryThirdYear.Width = 50;
-            // 
-            // MandatoryThirdYear
-            // 
-            this.MandatoryThirdYear.DataPropertyName = "MandatorySubjectThirdYear";
-            this.MandatoryThirdYear.HeaderText = "ЗП/ПП";
-            this.MandatoryThirdYear.Name = "MandatoryThirdYear";
-            this.MandatoryThirdYear.ReadOnly = true;
-            this.MandatoryThirdYear.Width = 20;
-            // 
-            // WithWordsChosenThirdYear
-            // 
-            this.WithWordsChosenThirdYear.HeaderText = "Оценка";
-            this.WithWordsChosenThirdYear.Name = "WithWordsChosenThirdYear";
-            this.WithWordsChosenThirdYear.ReadOnly = true;
-            this.WithWordsChosenThirdYear.Width = 52;
-            // 
-            // ChosenThirdYear
-            // 
-            this.ChosenThirdYear.DataPropertyName = "ChosenSubjectThirdYear";
-            this.ChosenThirdYear.HeaderText = "ЗИП";
-            this.ChosenThirdYear.Name = "ChosenThirdYear";
-            this.ChosenThirdYear.ReadOnly = true;
-            this.ChosenThirdYear.Width = 20;
-            // 
-            // WithWordsMandatoryFourthYear
-            // 
-            this.WithWordsMandatoryFourthYear.HeaderText = "Оценка";
-            this.WithWordsMandatoryFourthYear.Name = "WithWordsMandatoryFourthYear";
-            this.WithWordsMandatoryFourthYear.ReadOnly = true;
-            this.WithWordsMandatoryFourthYear.Width = 51;
-            // 
-            // MandatoryFourthYear
-            // 
-            this.MandatoryFourthYear.DataPropertyName = "MandatorySubjectFourthYear";
-            this.MandatoryFourthYear.HeaderText = "ЗП/ПП";
-            this.MandatoryFourthYear.Name = "MandatoryFourthYear";
-            this.MandatoryFourthYear.ReadOnly = true;
-            this.MandatoryFourthYear.Width = 20;
-            // 
-            // WithWordsChosenFourthYear
-            // 
-            this.WithWordsChosenFourthYear.HeaderText = "Оценка";
-            this.WithWordsChosenFourthYear.Name = "WithWordsChosenFourthYear";
-            this.WithWordsChosenFourthYear.ReadOnly = true;
-            this.WithWordsChosenFourthYear.Width = 51;
-            // 
-            // ChosenFourthYear
-            // 
-            this.ChosenFourthYear.DataPropertyName = "ChosenSubjectFourthYear";
-            this.ChosenFourthYear.HeaderText = "ЗИП";
-            this.ChosenFourthYear.Name = "ChosenFourthYear";
-            this.ChosenFourthYear.ReadOnly = true;
-            this.ChosenFourthYear.Width = 20;
-            // 
-            // WithWordsMandatoryFinal
-            // 
-            this.WithWordsMandatoryFinal.HeaderText = "Оценка";
-            this.WithWordsMandatoryFinal.Name = "WithWordsMandatoryFinal";
-            this.WithWordsMandatoryFinal.ReadOnly = true;
-            this.WithWordsMandatoryFinal.Width = 65;
-            // 
-            // AverageMarkMandatorySubject
-            // 
-            this.AverageMarkMandatorySubject.DataPropertyName = "AverageMarkMandatorySubject";
-            this.AverageMarkMandatorySubject.HeaderText = "ЗП/ПП";
-            this.AverageMarkMandatorySubject.Name = "AverageMarkMandatorySubject";
-            this.AverageMarkMandatorySubject.ReadOnly = true;
-            this.AverageMarkMandatorySubject.Width = 33;
-            // 
-            // WithWordsChosenFinal
-            // 
-            this.WithWordsChosenFinal.HeaderText = "Оценка";
-            this.WithWordsChosenFinal.Name = "WithWordsChosenFinal";
-            this.WithWordsChosenFinal.ReadOnly = true;
-            this.WithWordsChosenFinal.Width = 65;
-            // 
-            // AverageMarkChosenSubject
-            // 
-            this.AverageMarkChosenSubject.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.AverageMarkChosenSubject.DataPropertyName = "AverageMarkChosenSubject";
-            this.AverageMarkChosenSubject.HeaderText = "ЗИП";
-            this.AverageMarkChosenSubject.Name = "AverageMarkChosenSubject";
-            this.AverageMarkChosenSubject.ReadOnly = true;
-            // 
-            // textBox27
-            // 
-            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox27.Location = new System.Drawing.Point(713, 114);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox27.Multiline = true;
-            this.textBox27.Name = "textBox27";
-            this.textBox27.ReadOnly = true;
-            this.textBox27.Size = new System.Drawing.Size(72, 43);
-            this.textBox27.TabIndex = 1124;
-            this.textBox27.TabStop = false;
-            this.textBox27.Text = "ЗИП";
-            this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox32
-            // 
-            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox32.Location = new System.Drawing.Point(570, 114);
-            this.textBox32.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox32.Multiline = true;
-            this.textBox32.Name = "textBox32";
-            this.textBox32.ReadOnly = true;
-            this.textBox32.Size = new System.Drawing.Size(73, 43);
-            this.textBox32.TabIndex = 1123;
-            this.textBox32.TabStop = false;
-            this.textBox32.Text = "ЗИП";
-            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox37
-            // 
-            this.textBox37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox37.Location = new System.Drawing.Point(642, 114);
-            this.textBox37.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox37.Multiline = true;
-            this.textBox37.Name = "textBox37";
-            this.textBox37.ReadOnly = true;
-            this.textBox37.Size = new System.Drawing.Size(72, 43);
-            this.textBox37.TabIndex = 1122;
-            this.textBox37.TabStop = false;
-            this.textBox37.Text = "ЗП или профилирана подготовка";
-            this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxFourthYear
-            // 
-            this.textBoxFourthYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxFourthYear.Location = new System.Drawing.Point(642, 76);
-            this.textBoxFourthYear.Multiline = true;
-            this.textBoxFourthYear.Name = "textBoxFourthYear";
-            this.textBoxFourthYear.ReadOnly = true;
-            this.textBoxFourthYear.Size = new System.Drawing.Size(143, 20);
-            this.textBoxFourthYear.TabIndex = 1120;
-            this.textBoxFourthYear.Text = "уч.г.";
-            this.textBoxFourthYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox44
-            // 
-            this.textBox44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox44.Location = new System.Drawing.Point(500, 114);
-            this.textBox44.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox44.Multiline = true;
-            this.textBox44.Name = "textBox44";
-            this.textBox44.ReadOnly = true;
-            this.textBox44.Size = new System.Drawing.Size(72, 43);
-            this.textBox44.TabIndex = 1121;
-            this.textBox44.TabStop = false;
-            this.textBox44.Text = "ЗП или профилирана подготовка";
-            this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxThirdYear
-            // 
-            this.textBoxThirdYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxThirdYear.Location = new System.Drawing.Point(500, 76);
-            this.textBoxThirdYear.Multiline = true;
-            this.textBoxThirdYear.Name = "textBoxThirdYear";
-            this.textBoxThirdYear.ReadOnly = true;
-            this.textBoxThirdYear.Size = new System.Drawing.Size(143, 20);
-            this.textBoxThirdYear.TabIndex = 1119;
-            this.textBoxThirdYear.Text = "уч.г.";
-            this.textBoxThirdYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox46
-            // 
-            this.textBox46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox46.Location = new System.Drawing.Point(642, 95);
-            this.textBox46.Multiline = true;
-            this.textBox46.Name = "textBox46";
-            this.textBox46.ReadOnly = true;
-            this.textBox46.Size = new System.Drawing.Size(143, 20);
-            this.textBox46.TabIndex = 1118;
-            this.textBox46.Text = "XII клас";
-            this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox47
-            // 
-            this.textBox47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox47.Location = new System.Drawing.Point(500, 95);
-            this.textBox47.Multiline = true;
-            this.textBox47.Name = "textBox47";
-            this.textBox47.ReadOnly = true;
-            this.textBox47.Size = new System.Drawing.Size(143, 20);
-            this.textBox47.TabIndex = 1117;
-            this.textBox47.Text = "XI клас";
-            this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox51
-            // 
-            this.textBox51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox51.Location = new System.Drawing.Point(881, 114);
-            this.textBox51.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox51.Multiline = true;
-            this.textBox51.Name = "textBox51";
-            this.textBox51.ReadOnly = true;
-            this.textBox51.Size = new System.Drawing.Size(96, 43);
-            this.textBox51.TabIndex = 1116;
-            this.textBox51.TabStop = false;
-            this.textBox51.Text = "ЗИП";
-            this.textBox51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox31
-            // 
-            this.textBox31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox31.Location = new System.Drawing.Point(429, 114);
-            this.textBox31.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox31.Multiline = true;
-            this.textBox31.Name = "textBox31";
-            this.textBox31.ReadOnly = true;
-            this.textBox31.Size = new System.Drawing.Size(72, 43);
-            this.textBox31.TabIndex = 1114;
-            this.textBox31.TabStop = false;
-            this.textBox31.Text = "ЗИП";
-            this.textBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox50
-            // 
-            this.textBox50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox50.Location = new System.Drawing.Point(784, 114);
-            this.textBox50.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox50.Multiline = true;
-            this.textBox50.Name = "textBox50";
-            this.textBox50.ReadOnly = true;
-            this.textBox50.Size = new System.Drawing.Size(98, 43);
-            this.textBox50.TabIndex = 1111;
-            this.textBox50.TabStop = false;
-            this.textBox50.Text = "ЗП или профилирана подготовка";
-            this.textBox50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox49
-            // 
-            this.textBox49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox49.Location = new System.Drawing.Point(287, 114);
-            this.textBox49.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox49.Multiline = true;
-            this.textBox49.Name = "textBox49";
-            this.textBox49.ReadOnly = true;
-            this.textBox49.Size = new System.Drawing.Size(72, 43);
-            this.textBox49.TabIndex = 1113;
-            this.textBox49.TabStop = false;
-            this.textBox49.Text = "ЗИП";
-            this.textBox49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox33
-            // 
-            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox33.Location = new System.Drawing.Point(358, 114);
-            this.textBox33.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox33.Multiline = true;
-            this.textBox33.Name = "textBox33";
-            this.textBox33.ReadOnly = true;
-            this.textBox33.Size = new System.Drawing.Size(72, 43);
-            this.textBox33.TabIndex = 1108;
-            this.textBox33.TabStop = false;
-            this.textBox33.Text = "ЗП или профилирана подготовка";
-            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxSecondYear
-            // 
-            this.textBoxSecondYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxSecondYear.Location = new System.Drawing.Point(358, 76);
-            this.textBoxSecondYear.Multiline = true;
-            this.textBoxSecondYear.Name = "textBoxSecondYear";
-            this.textBoxSecondYear.ReadOnly = true;
-            this.textBoxSecondYear.Size = new System.Drawing.Size(143, 20);
-            this.textBoxSecondYear.TabIndex = 1106;
-            this.textBoxSecondYear.Text = "уч.г.";
-            this.textBoxSecondYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox35
-            // 
-            this.textBox35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox35.Location = new System.Drawing.Point(784, 76);
-            this.textBox35.Multiline = true;
-            this.textBox35.Name = "textBox35";
-            this.textBox35.ReadOnly = true;
-            this.textBox35.Size = new System.Drawing.Size(193, 39);
-            this.textBox35.TabIndex = 1104;
-            this.textBox35.TabStop = false;
-            this.textBox35.Text = "\r\nОкончателна оценка за дипломата";
-            this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox36
-            // 
-            this.textBox36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox36.Location = new System.Drawing.Point(217, 114);
-            this.textBox36.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox36.Multiline = true;
-            this.textBox36.Name = "textBox36";
-            this.textBox36.ReadOnly = true;
-            this.textBox36.Size = new System.Drawing.Size(72, 43);
-            this.textBox36.TabIndex = 1107;
-            this.textBox36.TabStop = false;
-            this.textBox36.Text = "ЗП или профилирана подготовка";
-            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxFirstYear
-            // 
-            this.textBoxFirstYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxFirstYear.Location = new System.Drawing.Point(217, 76);
-            this.textBoxFirstYear.Multiline = true;
-            this.textBoxFirstYear.Name = "textBoxFirstYear";
-            this.textBoxFirstYear.ReadOnly = true;
-            this.textBoxFirstYear.Size = new System.Drawing.Size(142, 20);
-            this.textBoxFirstYear.TabIndex = 1102;
-            this.textBoxFirstYear.Text = "уч.г.";
-            this.textBoxFirstYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox38
-            // 
-            this.textBox38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox38.Location = new System.Drawing.Point(358, 95);
-            this.textBox38.Multiline = true;
-            this.textBox38.Name = "textBox38";
-            this.textBox38.ReadOnly = true;
-            this.textBox38.Size = new System.Drawing.Size(143, 20);
-            this.textBox38.TabIndex = 1101;
-            this.textBox38.Text = "X клас";
-            this.textBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox40
-            // 
-            this.textBox40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox40.Location = new System.Drawing.Point(217, 95);
-            this.textBox40.Multiline = true;
-            this.textBox40.Name = "textBox40";
-            this.textBox40.ReadOnly = true;
-            this.textBox40.Size = new System.Drawing.Size(142, 20);
-            this.textBox40.TabIndex = 1100;
-            this.textBox40.Text = "IX клас";
-            this.textBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox42
-            // 
-            this.textBox42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox42.Location = new System.Drawing.Point(42, 76);
-            this.textBox42.Multiline = true;
-            this.textBox42.Name = "textBox42";
-            this.textBox42.ReadOnly = true;
-            this.textBox42.Size = new System.Drawing.Size(176, 81);
-            this.textBox42.TabIndex = 1097;
-            this.textBox42.Text = "\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(390, 29);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(239, 33);
-            this.label36.TabIndex = 2;
-            this.label36.Text = "Успех за дипломата";
-            // 
-            // tabPageExtraSubjects
-            // 
-            this.tabPageExtraSubjects.Controls.Add(this.panelMarksExtraSubjectsSummary);
-            this.tabPageExtraSubjects.Location = new System.Drawing.Point(4, 22);
-            this.tabPageExtraSubjects.Name = "tabPageExtraSubjects";
-            this.tabPageExtraSubjects.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageExtraSubjects.Size = new System.Drawing.Size(1033, 69);
-            this.tabPageExtraSubjects.TabIndex = 1;
-            this.tabPageExtraSubjects.Text = "Успех от СИП";
-            this.tabPageExtraSubjects.UseVisualStyleBackColor = true;
-            // 
-            // panelMarksExtraSubjectsSummary
-            // 
-            this.panelMarksExtraSubjectsSummary.AutoScroll = true;
-            this.panelMarksExtraSubjectsSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBoxAverageExtraSubjects);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.label88);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.buttonSaveMaksFinalExtraSubjects);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.dataGridViewDiplomExtraSubjects);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.comboBoxStudentsNamesExtraSubjectsMarks);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox41);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBoxFourthYearExtraSubject);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox45);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBoxThirdYearExtraSubject);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox52);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox53);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox58);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBoxSecondYearExtraSubject);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox60);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox61);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBoxFirstYearExtraSubject);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox63);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox64);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.textBox65);
-            this.panelMarksExtraSubjectsSummary.Controls.Add(this.label48);
-            this.panelMarksExtraSubjectsSummary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMarksExtraSubjectsSummary.Location = new System.Drawing.Point(3, 3);
-            this.panelMarksExtraSubjectsSummary.Name = "panelMarksExtraSubjectsSummary";
-            this.panelMarksExtraSubjectsSummary.Size = new System.Drawing.Size(1027, 63);
-            this.panelMarksExtraSubjectsSummary.TabIndex = 0;
-            // 
-            // textBoxAverageExtraSubjects
-            // 
-            this.textBoxAverageExtraSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBoxAverageExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAverageExtraSubjects.Location = new System.Drawing.Point(603, 634);
-            this.textBoxAverageExtraSubjects.Multiline = true;
-            this.textBoxAverageExtraSubjects.Name = "textBoxAverageExtraSubjects";
-            this.textBoxAverageExtraSubjects.Size = new System.Drawing.Size(52, 25);
-            this.textBoxAverageExtraSubjects.TabIndex = 1150;
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(480, 641);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(115, 13);
-            this.label88.TabIndex = 1149;
-            this.label88.Text = "Среден успех от СИП";
-            // 
-            // buttonSaveMaksFinalExtraSubjects
-            // 
-            this.buttonSaveMaksFinalExtraSubjects.Location = new System.Drawing.Point(820, 625);
-            this.buttonSaveMaksFinalExtraSubjects.Name = "buttonSaveMaksFinalExtraSubjects";
-            this.buttonSaveMaksFinalExtraSubjects.Size = new System.Drawing.Size(149, 52);
-            this.buttonSaveMaksFinalExtraSubjects.TabIndex = 1148;
-            this.buttonSaveMaksFinalExtraSubjects.Text = "Запазване на окончателните оценки по СИП";
-            this.buttonSaveMaksFinalExtraSubjects.UseVisualStyleBackColor = true;
-            this.buttonSaveMaksFinalExtraSubjects.Click += new System.EventHandler(this.buttonSaveMaksFinalExtraSubjects_Click);
-            // 
-            // dataGridViewDiplomExtraSubjects
-            // 
-            this.dataGridViewDiplomExtraSubjects.AllowUserToAddRows = false;
-            this.dataGridViewDiplomExtraSubjects.AllowUserToDeleteRows = false;
-            this.dataGridViewDiplomExtraSubjects.AllowUserToResizeColumns = false;
-            this.dataGridViewDiplomExtraSubjects.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridViewDiplomExtraSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDiplomExtraSubjects.ColumnHeadersVisible = false;
-            this.dataGridViewDiplomExtraSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewExtraSubjectFirstYear,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewExtraSubjectSecondYear,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewExtraSubjectThirdYear,
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewExtraSubjectFourthYear,
-            this.FinalMark,
-            this.dataGridViewFinalMark});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDiplomExtraSubjects.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewDiplomExtraSubjects.Location = new System.Drawing.Point(42, 147);
-            this.dataGridViewDiplomExtraSubjects.Name = "dataGridViewDiplomExtraSubjects";
-            this.dataGridViewDiplomExtraSubjects.RowHeadersVisible = false;
-            this.dataGridViewDiplomExtraSubjects.Size = new System.Drawing.Size(935, 458);
-            this.dataGridViewDiplomExtraSubjects.TabIndex = 1147;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Subject";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Предмет";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 174;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Оценка";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Width = 120;
-            // 
-            // dataGridViewExtraSubjectFirstYear
-            // 
-            this.dataGridViewExtraSubjectFirstYear.DataPropertyName = "ExtraSubjectFirstYear";
-            this.dataGridViewExtraSubjectFirstYear.HeaderText = "СИП";
-            this.dataGridViewExtraSubjectFirstYear.Name = "dataGridViewExtraSubjectFirstYear";
-            this.dataGridViewExtraSubjectFirstYear.ReadOnly = true;
-            this.dataGridViewExtraSubjectFirstYear.Width = 22;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.HeaderText = "Оценка";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Width = 119;
-            // 
-            // dataGridViewExtraSubjectSecondYear
-            // 
-            this.dataGridViewExtraSubjectSecondYear.DataPropertyName = "ExtraSubjectSecondYear";
-            this.dataGridViewExtraSubjectSecondYear.HeaderText = "СИП";
-            this.dataGridViewExtraSubjectSecondYear.Name = "dataGridViewExtraSubjectSecondYear";
-            this.dataGridViewExtraSubjectSecondYear.ReadOnly = true;
-            this.dataGridViewExtraSubjectSecondYear.Width = 22;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.HeaderText = "Оценка";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            this.dataGridViewTextBoxColumn22.Width = 119;
-            // 
-            // dataGridViewExtraSubjectThirdYear
-            // 
-            this.dataGridViewExtraSubjectThirdYear.DataPropertyName = "ExtraSubjectThirdYear";
-            this.dataGridViewExtraSubjectThirdYear.HeaderText = "СИП";
-            this.dataGridViewExtraSubjectThirdYear.Name = "dataGridViewExtraSubjectThirdYear";
-            this.dataGridViewExtraSubjectThirdYear.ReadOnly = true;
-            this.dataGridViewExtraSubjectThirdYear.Width = 23;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.HeaderText = "Оценка";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
-            this.dataGridViewTextBoxColumn28.Width = 119;
-            // 
-            // dataGridViewExtraSubjectFourthYear
-            // 
-            this.dataGridViewExtraSubjectFourthYear.DataPropertyName = "ExtraSubjectFourthYear";
-            this.dataGridViewExtraSubjectFourthYear.HeaderText = "СИП";
-            this.dataGridViewExtraSubjectFourthYear.Name = "dataGridViewExtraSubjectFourthYear";
-            this.dataGridViewExtraSubjectFourthYear.ReadOnly = true;
-            this.dataGridViewExtraSubjectFourthYear.Width = 22;
-            // 
-            // FinalMark
-            // 
-            this.FinalMark.HeaderText = "Оценка";
-            this.FinalMark.Name = "FinalMark";
-            this.FinalMark.ReadOnly = true;
-            this.FinalMark.Width = 150;
-            // 
-            // dataGridViewFinalMark
-            // 
-            this.dataGridViewFinalMark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewFinalMark.DataPropertyName = "AverageMarkExtraSubject";
-            this.dataGridViewFinalMark.HeaderText = "СИП";
-            this.dataGridViewFinalMark.Name = "dataGridViewFinalMark";
-            this.dataGridViewFinalMark.ReadOnly = true;
-            // 
-            // comboBoxStudentsNamesExtraSubjectsMarks
-            // 
-            this.comboBoxStudentsNamesExtraSubjectsMarks.DisplayMember = "FullName";
-            this.comboBoxStudentsNamesExtraSubjectsMarks.FormattingEnabled = true;
-            this.comboBoxStudentsNamesExtraSubjectsMarks.Location = new System.Drawing.Point(748, 29);
-            this.comboBoxStudentsNamesExtraSubjectsMarks.Name = "comboBoxStudentsNamesExtraSubjectsMarks";
-            this.comboBoxStudentsNamesExtraSubjectsMarks.Size = new System.Drawing.Size(229, 21);
-            this.comboBoxStudentsNamesExtraSubjectsMarks.TabIndex = 1146;
-            this.comboBoxStudentsNamesExtraSubjectsMarks.Text = "Изберете ученик от класа ви";
-            this.comboBoxStudentsNamesExtraSubjectsMarks.ValueMember = "StudentID";
-            this.comboBoxStudentsNamesExtraSubjectsMarks.SelectionChangeCommitted += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjectsMarks_SelectionChangeCommitted);
-            this.comboBoxStudentsNamesExtraSubjectsMarks.Click += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjectsMarks_Click);
-            // 
-            // textBox41
-            // 
-            this.textBox41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox41.Location = new System.Drawing.Point(642, 105);
-            this.textBox41.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox41.Multiline = true;
-            this.textBox41.Name = "textBox41";
-            this.textBox41.ReadOnly = true;
-            this.textBox41.Size = new System.Drawing.Size(143, 43);
-            this.textBox41.TabIndex = 1143;
-            this.textBox41.TabStop = false;
-            this.textBox41.Text = "\r\nГодишна оценка";
-            this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxFourthYearExtraSubject
-            // 
-            this.textBoxFourthYearExtraSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxFourthYearExtraSubject.Location = new System.Drawing.Point(642, 67);
-            this.textBoxFourthYearExtraSubject.Multiline = true;
-            this.textBoxFourthYearExtraSubject.Name = "textBoxFourthYearExtraSubject";
-            this.textBoxFourthYearExtraSubject.ReadOnly = true;
-            this.textBoxFourthYearExtraSubject.Size = new System.Drawing.Size(143, 20);
-            this.textBoxFourthYearExtraSubject.TabIndex = 1141;
-            this.textBoxFourthYearExtraSubject.Text = "уч.г.";
-            this.textBoxFourthYearExtraSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox45
-            // 
-            this.textBox45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox45.Location = new System.Drawing.Point(500, 105);
-            this.textBox45.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox45.Multiline = true;
-            this.textBox45.Name = "textBox45";
-            this.textBox45.ReadOnly = true;
-            this.textBox45.Size = new System.Drawing.Size(143, 43);
-            this.textBox45.TabIndex = 1142;
-            this.textBox45.TabStop = false;
-            this.textBox45.Text = "\r\nГодишна оценка";
-            this.textBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxThirdYearExtraSubject
-            // 
-            this.textBoxThirdYearExtraSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxThirdYearExtraSubject.Location = new System.Drawing.Point(500, 67);
-            this.textBoxThirdYearExtraSubject.Multiline = true;
-            this.textBoxThirdYearExtraSubject.Name = "textBoxThirdYearExtraSubject";
-            this.textBoxThirdYearExtraSubject.ReadOnly = true;
-            this.textBoxThirdYearExtraSubject.Size = new System.Drawing.Size(143, 20);
-            this.textBoxThirdYearExtraSubject.TabIndex = 1140;
-            this.textBoxThirdYearExtraSubject.Text = "уч.г.";
-            this.textBoxThirdYearExtraSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox52
-            // 
-            this.textBox52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox52.Location = new System.Drawing.Point(642, 86);
-            this.textBox52.Multiline = true;
-            this.textBox52.Name = "textBox52";
-            this.textBox52.ReadOnly = true;
-            this.textBox52.Size = new System.Drawing.Size(143, 20);
-            this.textBox52.TabIndex = 1139;
-            this.textBox52.Text = "XII клас";
-            this.textBox52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox53
-            // 
-            this.textBox53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox53.Location = new System.Drawing.Point(500, 86);
-            this.textBox53.Multiline = true;
-            this.textBox53.Name = "textBox53";
-            this.textBox53.ReadOnly = true;
-            this.textBox53.Size = new System.Drawing.Size(143, 20);
-            this.textBox53.TabIndex = 1138;
-            this.textBox53.Text = "XI клас";
-            this.textBox53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox58
-            // 
-            this.textBox58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox58.Location = new System.Drawing.Point(358, 105);
-            this.textBox58.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox58.Multiline = true;
-            this.textBox58.Name = "textBox58";
-            this.textBox58.ReadOnly = true;
-            this.textBox58.Size = new System.Drawing.Size(143, 43);
-            this.textBox58.TabIndex = 1133;
-            this.textBox58.TabStop = false;
-            this.textBox58.Text = "\r\nГодишна оценка";
-            this.textBox58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxSecondYearExtraSubject
-            // 
-            this.textBoxSecondYearExtraSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxSecondYearExtraSubject.Location = new System.Drawing.Point(358, 67);
-            this.textBoxSecondYearExtraSubject.Multiline = true;
-            this.textBoxSecondYearExtraSubject.Name = "textBoxSecondYearExtraSubject";
-            this.textBoxSecondYearExtraSubject.ReadOnly = true;
-            this.textBoxSecondYearExtraSubject.Size = new System.Drawing.Size(143, 20);
-            this.textBoxSecondYearExtraSubject.TabIndex = 1131;
-            this.textBoxSecondYearExtraSubject.Text = "уч.г.";
-            this.textBoxSecondYearExtraSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox60
-            // 
-            this.textBox60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox60.Location = new System.Drawing.Point(784, 67);
-            this.textBox60.Multiline = true;
-            this.textBox60.Name = "textBox60";
-            this.textBox60.ReadOnly = true;
-            this.textBox60.Size = new System.Drawing.Size(193, 81);
-            this.textBox60.TabIndex = 1130;
-            this.textBox60.TabStop = false;
-            this.textBox60.Text = "\r\n\r\nОкончателна оценка за дипломата";
-            this.textBox60.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox61
-            // 
-            this.textBox61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox61.Location = new System.Drawing.Point(217, 105);
-            this.textBox61.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox61.Multiline = true;
-            this.textBox61.Name = "textBox61";
-            this.textBox61.ReadOnly = true;
-            this.textBox61.Size = new System.Drawing.Size(142, 43);
-            this.textBox61.TabIndex = 1132;
-            this.textBox61.TabStop = false;
-            this.textBox61.Text = "\r\nГодишна оценка";
-            this.textBox61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxFirstYearExtraSubject
-            // 
-            this.textBoxFirstYearExtraSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxFirstYearExtraSubject.Location = new System.Drawing.Point(217, 67);
-            this.textBoxFirstYearExtraSubject.Multiline = true;
-            this.textBoxFirstYearExtraSubject.Name = "textBoxFirstYearExtraSubject";
-            this.textBoxFirstYearExtraSubject.ReadOnly = true;
-            this.textBoxFirstYearExtraSubject.Size = new System.Drawing.Size(142, 20);
-            this.textBoxFirstYearExtraSubject.TabIndex = 1129;
-            this.textBoxFirstYearExtraSubject.Text = "уч.г.";
-            this.textBoxFirstYearExtraSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox63
-            // 
-            this.textBox63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox63.Location = new System.Drawing.Point(358, 86);
-            this.textBox63.Multiline = true;
-            this.textBox63.Name = "textBox63";
-            this.textBox63.ReadOnly = true;
-            this.textBox63.Size = new System.Drawing.Size(143, 20);
-            this.textBox63.TabIndex = 1128;
-            this.textBox63.Text = "X клас";
-            this.textBox63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox64
-            // 
-            this.textBox64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox64.Location = new System.Drawing.Point(217, 86);
-            this.textBox64.Multiline = true;
-            this.textBox64.Name = "textBox64";
-            this.textBox64.ReadOnly = true;
-            this.textBox64.Size = new System.Drawing.Size(142, 20);
-            this.textBox64.TabIndex = 1127;
-            this.textBox64.Text = "IX клас";
-            this.textBox64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox65
-            // 
-            this.textBox65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox65.Location = new System.Drawing.Point(42, 67);
-            this.textBox65.Multiline = true;
-            this.textBox65.Name = "textBox65";
-            this.textBox65.ReadOnly = true;
-            this.textBox65.Size = new System.Drawing.Size(176, 81);
-            this.textBox65.TabIndex = 1126;
-            this.textBox65.Text = "\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(115, 20);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(625, 33);
-            this.label48.TabIndex = 1125;
-            this.label48.Text = "Успех за дипломата по свободно избираема подготовка";
             // 
             // panelWelcome
             // 
@@ -3823,1115 +5291,6 @@
             this.labelHi.Size = new System.Drawing.Size(113, 20);
             this.labelHi.TabIndex = 4;
             this.labelHi.Text = "Здравейте, ";
-            // 
-            // tabControlMarksExtraSubjects
-            // 
-            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageChoseExtraSubjects);
-            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsFirstTerm);
-            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsSecondTerm);
-            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsYear);
-            this.tabControlMarksExtraSubjects.Location = new System.Drawing.Point(3, 81);
-            this.tabControlMarksExtraSubjects.Name = "tabControlMarksExtraSubjects";
-            this.tabControlMarksExtraSubjects.SelectedIndex = 0;
-            this.tabControlMarksExtraSubjects.Size = new System.Drawing.Size(1037, 35);
-            this.tabControlMarksExtraSubjects.TabIndex = 1151;
-            this.tabControlMarksExtraSubjects.Visible = false;
-            this.tabControlMarksExtraSubjects.SelectedIndexChanged += new System.EventHandler(this.tabControlMarksExtraSubjects_SelectedIndexChanged);
-            // 
-            // tabPageChoseExtraSubjects
-            // 
-            this.tabPageChoseExtraSubjects.AutoScroll = true;
-            this.tabPageChoseExtraSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageChoseExtraSubjects.Controls.Add(this.panelChooseExtraSubjects);
-            this.tabPageChoseExtraSubjects.Location = new System.Drawing.Point(4, 22);
-            this.tabPageChoseExtraSubjects.Name = "tabPageChoseExtraSubjects";
-            this.tabPageChoseExtraSubjects.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageChoseExtraSubjects.Size = new System.Drawing.Size(1029, 9);
-            this.tabPageChoseExtraSubjects.TabIndex = 3;
-            this.tabPageChoseExtraSubjects.Text = "СИП предмети";
-            // 
-            // panelChooseExtraSubjects
-            // 
-            this.panelChooseExtraSubjects.AutoScroll = true;
-            this.panelChooseExtraSubjects.Controls.Add(this.label29);
-            this.panelChooseExtraSubjects.Controls.Add(this.label30);
-            this.panelChooseExtraSubjects.Controls.Add(this.checkedListBoxExtraSubjects);
-            this.panelChooseExtraSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChooseExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelChooseExtraSubjects.Location = new System.Drawing.Point(3, 3);
-            this.panelChooseExtraSubjects.Name = "panelChooseExtraSubjects";
-            this.panelChooseExtraSubjects.Size = new System.Drawing.Size(1023, 3);
-            this.panelChooseExtraSubjects.TabIndex = 1134;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(363, 107);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(421, 75);
-            this.label29.TabIndex = 1134;
-            this.label29.Text = "Маркирайте СИП предметите, \r\nкоито се изучават през тази учебна година \r\nот вашия" +
-    " клас.";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(355, 53);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(405, 33);
-            this.label30.TabIndex = 1133;
-            this.label30.Text = "Избор на изучавани СИП предмети";
-            // 
-            // checkedListBoxExtraSubjects
-            // 
-            this.checkedListBoxExtraSubjects.CheckOnClick = true;
-            this.checkedListBoxExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBoxExtraSubjects.FormattingEnabled = true;
-            this.checkedListBoxExtraSubjects.Location = new System.Drawing.Point(442, 209);
-            this.checkedListBoxExtraSubjects.Name = "checkedListBoxExtraSubjects";
-            this.checkedListBoxExtraSubjects.Size = new System.Drawing.Size(229, 418);
-            this.checkedListBoxExtraSubjects.TabIndex = 1132;
-            this.checkedListBoxExtraSubjects.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxExtraSubjects_ItemCheck);
-            // 
-            // tabPageMarksExtraSubjectsFirstTerm
-            // 
-            this.tabPageMarksExtraSubjectsFirstTerm.AutoScroll = true;
-            this.tabPageMarksExtraSubjectsFirstTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageMarksExtraSubjectsFirstTerm.Controls.Add(this.panelExtraSubjectsFirstTerm);
-            this.tabPageMarksExtraSubjectsFirstTerm.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMarksExtraSubjectsFirstTerm.Name = "tabPageMarksExtraSubjectsFirstTerm";
-            this.tabPageMarksExtraSubjectsFirstTerm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMarksExtraSubjectsFirstTerm.Size = new System.Drawing.Size(1029, 12);
-            this.tabPageMarksExtraSubjectsFirstTerm.TabIndex = 0;
-            this.tabPageMarksExtraSubjectsFirstTerm.Text = "Първи срок";
-            // 
-            // panelExtraSubjectsFirstTerm
-            // 
-            this.panelExtraSubjectsFirstTerm.AutoScroll = true;
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.buttonSaveMarksExtraSubjectsFirstTerm);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.dataGridViewExtraSubjectsFirstTerm);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox15);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox18);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox19);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.label25);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.comboBoxStudentsNamesExtraSubjects);
-            this.panelExtraSubjectsFirstTerm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelExtraSubjectsFirstTerm.Location = new System.Drawing.Point(3, 3);
-            this.panelExtraSubjectsFirstTerm.Name = "panelExtraSubjectsFirstTerm";
-            this.panelExtraSubjectsFirstTerm.Size = new System.Drawing.Size(1023, 6);
-            this.panelExtraSubjectsFirstTerm.TabIndex = 40;
-            // 
-            // buttonSaveMarksExtraSubjectsFirstTerm
-            // 
-            this.buttonSaveMarksExtraSubjectsFirstTerm.Location = new System.Drawing.Point(838, 374);
-            this.buttonSaveMarksExtraSubjectsFirstTerm.Name = "buttonSaveMarksExtraSubjectsFirstTerm";
-            this.buttonSaveMarksExtraSubjectsFirstTerm.Size = new System.Drawing.Size(136, 49);
-            this.buttonSaveMarksExtraSubjectsFirstTerm.TabIndex = 1129;
-            this.buttonSaveMarksExtraSubjectsFirstTerm.Text = "Запиши оценките";
-            this.buttonSaveMarksExtraSubjectsFirstTerm.UseVisualStyleBackColor = true;
-            this.buttonSaveMarksExtraSubjectsFirstTerm.Click += new System.EventHandler(this.buttonSaveMarksExtraSubjectsFirstTerm_Click);
-            // 
-            // dataGridViewExtraSubjectsFirstTerm
-            // 
-            this.dataGridViewExtraSubjectsFirstTerm.AllowUserToAddRows = false;
-            this.dataGridViewExtraSubjectsFirstTerm.AllowUserToDeleteRows = false;
-            this.dataGridViewExtraSubjectsFirstTerm.AllowUserToResizeColumns = false;
-            this.dataGridViewExtraSubjectsFirstTerm.AllowUserToResizeRows = false;
-            this.dataGridViewExtraSubjectsFirstTerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExtraSubjectsFirstTerm.ColumnHeadersVisible = false;
-            this.dataGridViewExtraSubjectsFirstTerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn8,
-            this.СИПFirstTerm});
-            this.dataGridViewExtraSubjectsFirstTerm.Location = new System.Drawing.Point(349, 188);
-            this.dataGridViewExtraSubjectsFirstTerm.MultiSelect = false;
-            this.dataGridViewExtraSubjectsFirstTerm.Name = "dataGridViewExtraSubjectsFirstTerm";
-            this.dataGridViewExtraSubjectsFirstTerm.RowHeadersVisible = false;
-            this.dataGridViewExtraSubjectsFirstTerm.Size = new System.Drawing.Size(379, 443);
-            this.dataGridViewExtraSubjectsFirstTerm.TabIndex = 1128;
-            this.dataGridViewExtraSubjectsFirstTerm.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExtraSubjectsFirstTerm_CellEndEdit);
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "SubjectName";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Предмети";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "СИП-Първи скок";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 128;
-            // 
-            // СИПFirstTerm
-            // 
-            this.СИПFirstTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.СИПFirstTerm.HeaderText = "Оценка";
-            this.СИПFirstTerm.Name = "СИПFirstTerm";
-            // 
-            // textBox15
-            // 
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox15.Location = new System.Drawing.Point(549, 145);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(179, 43);
-            this.textBox15.TabIndex = 1126;
-            this.textBox15.TabStop = false;
-            this.textBox15.Text = "Оценка \r\nпърви учебен \r\n    срок\r\n\r\n";
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox18
-            // 
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox18.Location = new System.Drawing.Point(549, 78);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(179, 68);
-            this.textBox18.TabIndex = 1124;
-            this.textBox18.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox19
-            // 
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox19.Location = new System.Drawing.Point(349, 78);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(201, 110);
-            this.textBox19.TabIndex = 1123;
-            this.textBox19.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(343, 20);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(402, 33);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "Въвеждане на оценки за първи срок";
-            // 
-            // comboBoxStudentsNamesExtraSubjects
-            // 
-            this.comboBoxStudentsNamesExtraSubjects.DisplayMember = "FullName";
-            this.comboBoxStudentsNamesExtraSubjects.FormattingEnabled = true;
-            this.comboBoxStudentsNamesExtraSubjects.Location = new System.Drawing.Point(42, 78);
-            this.comboBoxStudentsNamesExtraSubjects.Name = "comboBoxStudentsNamesExtraSubjects";
-            this.comboBoxStudentsNamesExtraSubjects.Size = new System.Drawing.Size(229, 21);
-            this.comboBoxStudentsNamesExtraSubjects.TabIndex = 1130;
-            this.comboBoxStudentsNamesExtraSubjects.Text = "Изберете ученик от класа ви";
-            this.comboBoxStudentsNamesExtraSubjects.ValueMember = "StudentID";
-            this.comboBoxStudentsNamesExtraSubjects.MouseEnter += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjects_MouseEnter);
-            // 
-            // tabPageMarksExtraSubjectsSecondTerm
-            // 
-            this.tabPageMarksExtraSubjectsSecondTerm.AutoScroll = true;
-            this.tabPageMarksExtraSubjectsSecondTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageMarksExtraSubjectsSecondTerm.Controls.Add(this.panelExtraSubjectsSecondTerm);
-            this.tabPageMarksExtraSubjectsSecondTerm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabPageMarksExtraSubjectsSecondTerm.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMarksExtraSubjectsSecondTerm.Name = "tabPageMarksExtraSubjectsSecondTerm";
-            this.tabPageMarksExtraSubjectsSecondTerm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMarksExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1029, 12);
-            this.tabPageMarksExtraSubjectsSecondTerm.TabIndex = 1;
-            this.tabPageMarksExtraSubjectsSecondTerm.Text = "Втори срок";
-            // 
-            // panelExtraSubjectsSecondTerm
-            // 
-            this.panelExtraSubjectsSecondTerm.AutoScroll = true;
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox14);
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox16);
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox30);
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.buttonSaveMarksExtraSubjectsSecondTerm);
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.dataGridViewExtraSubjectsSecondTerm);
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.label26);
-            this.panelExtraSubjectsSecondTerm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelExtraSubjectsSecondTerm.Location = new System.Drawing.Point(3, 3);
-            this.panelExtraSubjectsSecondTerm.Name = "panelExtraSubjectsSecondTerm";
-            this.panelExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1023, 6);
-            this.panelExtraSubjectsSecondTerm.TabIndex = 1131;
-            // 
-            // textBox14
-            // 
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox14.Location = new System.Drawing.Point(542, 162);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(179, 43);
-            this.textBox14.TabIndex = 1142;
-            this.textBox14.TabStop = false;
-            this.textBox14.Text = "Оценка \r\nпърви учебен \r\n    срок\r\n\r\n";
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox16
-            // 
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox16.Location = new System.Drawing.Point(542, 95);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(179, 68);
-            this.textBox16.TabIndex = 1141;
-            this.textBox16.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox30
-            // 
-            this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox30.Location = new System.Drawing.Point(342, 95);
-            this.textBox30.Multiline = true;
-            this.textBox30.Name = "textBox30";
-            this.textBox30.ReadOnly = true;
-            this.textBox30.Size = new System.Drawing.Size(201, 110);
-            this.textBox30.TabIndex = 1140;
-            this.textBox30.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // buttonSaveMarksExtraSubjectsSecondTerm
-            // 
-            this.buttonSaveMarksExtraSubjectsSecondTerm.Location = new System.Drawing.Point(831, 391);
-            this.buttonSaveMarksExtraSubjectsSecondTerm.Name = "buttonSaveMarksExtraSubjectsSecondTerm";
-            this.buttonSaveMarksExtraSubjectsSecondTerm.Size = new System.Drawing.Size(136, 49);
-            this.buttonSaveMarksExtraSubjectsSecondTerm.TabIndex = 1138;
-            this.buttonSaveMarksExtraSubjectsSecondTerm.Text = "Запиши оценките";
-            this.buttonSaveMarksExtraSubjectsSecondTerm.UseVisualStyleBackColor = true;
-            this.buttonSaveMarksExtraSubjectsSecondTerm.Click += new System.EventHandler(this.buttonSaveMarksExtraSubjectsSecondTerm_Click);
-            // 
-            // dataGridViewExtraSubjectsSecondTerm
-            // 
-            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToAddRows = false;
-            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToDeleteRows = false;
-            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToResizeColumns = false;
-            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToResizeRows = false;
-            this.dataGridViewExtraSubjectsSecondTerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExtraSubjectsSecondTerm.ColumnHeadersVisible = false;
-            this.dataGridViewExtraSubjectsSecondTerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.СИПSecondTerm});
-            this.dataGridViewExtraSubjectsSecondTerm.Location = new System.Drawing.Point(342, 205);
-            this.dataGridViewExtraSubjectsSecondTerm.MultiSelect = false;
-            this.dataGridViewExtraSubjectsSecondTerm.Name = "dataGridViewExtraSubjectsSecondTerm";
-            this.dataGridViewExtraSubjectsSecondTerm.RowHeadersVisible = false;
-            this.dataGridViewExtraSubjectsSecondTerm.Size = new System.Drawing.Size(379, 443);
-            this.dataGridViewExtraSubjectsSecondTerm.TabIndex = 1137;
-            this.dataGridViewExtraSubjectsSecondTerm.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExtraSubjectsSecondTerm_CellEndEdit);
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "SubjectName";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Предмети";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "ЗП-Първи скок";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 128;
-            // 
-            // СИПSecondTerm
-            // 
-            this.СИПSecondTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.СИПSecondTerm.HeaderText = "Оценка";
-            this.СИПSecondTerm.Name = "СИПSecondTerm";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(368, 34);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(405, 33);
-            this.label26.TabIndex = 1131;
-            this.label26.Text = "Въвеждане на оценки за втори срок";
-            // 
-            // tabPageMarksExtraSubjectsYear
-            // 
-            this.tabPageMarksExtraSubjectsYear.AutoScroll = true;
-            this.tabPageMarksExtraSubjectsYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageMarksExtraSubjectsYear.Controls.Add(this.panelExtraSubjectsYearTerm);
-            this.tabPageMarksExtraSubjectsYear.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMarksExtraSubjectsYear.Name = "tabPageMarksExtraSubjectsYear";
-            this.tabPageMarksExtraSubjectsYear.Size = new System.Drawing.Size(1029, 12);
-            this.tabPageMarksExtraSubjectsYear.TabIndex = 2;
-            this.tabPageMarksExtraSubjectsYear.Text = "Годишени оценки";
-            // 
-            // panelExtraSubjectsYearTerm
-            // 
-            this.panelExtraSubjectsYearTerm.AutoScroll = true;
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox20);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox21);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox22);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.labelSaveSuccessExtraSubjectsMarks);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.buttonSaveMarksExtraSubjectsYear);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.dataGridViewExtraSubjectsYear);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.label28);
-            this.panelExtraSubjectsYearTerm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelExtraSubjectsYearTerm.Location = new System.Drawing.Point(0, 0);
-            this.panelExtraSubjectsYearTerm.Name = "panelExtraSubjectsYearTerm";
-            this.panelExtraSubjectsYearTerm.Size = new System.Drawing.Size(1029, 12);
-            this.panelExtraSubjectsYearTerm.TabIndex = 1140;
-            // 
-            // textBox20
-            // 
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox20.Location = new System.Drawing.Point(542, 162);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(179, 43);
-            this.textBox20.TabIndex = 1151;
-            this.textBox20.TabStop = false;
-            this.textBox20.Text = "Оценка \r\nпърви учебен \r\n    срок\r\n\r\n";
-            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox21
-            // 
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox21.Location = new System.Drawing.Point(542, 95);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(179, 68);
-            this.textBox21.TabIndex = 1150;
-            this.textBox21.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox22
-            // 
-            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox22.Location = new System.Drawing.Point(342, 95);
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(201, 110);
-            this.textBox22.TabIndex = 1149;
-            this.textBox22.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // labelSaveSuccessExtraSubjectsMarks
-            // 
-            this.labelSaveSuccessExtraSubjectsMarks.AutoSize = true;
-            this.labelSaveSuccessExtraSubjectsMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaveSuccessExtraSubjectsMarks.Location = new System.Drawing.Point(850, 459);
-            this.labelSaveSuccessExtraSubjectsMarks.Name = "labelSaveSuccessExtraSubjectsMarks";
-            this.labelSaveSuccessExtraSubjectsMarks.Size = new System.Drawing.Size(104, 25);
-            this.labelSaveSuccessExtraSubjectsMarks.TabIndex = 1132;
-            this.labelSaveSuccessExtraSubjectsMarks.Text = "Добавено";
-            this.labelSaveSuccessExtraSubjectsMarks.Visible = false;
-            // 
-            // buttonSaveMarksExtraSubjectsYear
-            // 
-            this.buttonSaveMarksExtraSubjectsYear.Location = new System.Drawing.Point(831, 391);
-            this.buttonSaveMarksExtraSubjectsYear.Name = "buttonSaveMarksExtraSubjectsYear";
-            this.buttonSaveMarksExtraSubjectsYear.Size = new System.Drawing.Size(136, 49);
-            this.buttonSaveMarksExtraSubjectsYear.TabIndex = 1147;
-            this.buttonSaveMarksExtraSubjectsYear.Text = "Запиши оценките";
-            this.buttonSaveMarksExtraSubjectsYear.UseVisualStyleBackColor = true;
-            this.buttonSaveMarksExtraSubjectsYear.Click += new System.EventHandler(this.buttonSaveMarksExtraSubjectsYear_Click);
-            // 
-            // dataGridViewExtraSubjectsYear
-            // 
-            this.dataGridViewExtraSubjectsYear.AllowUserToAddRows = false;
-            this.dataGridViewExtraSubjectsYear.AllowUserToDeleteRows = false;
-            this.dataGridViewExtraSubjectsYear.AllowUserToResizeColumns = false;
-            this.dataGridViewExtraSubjectsYear.AllowUserToResizeRows = false;
-            this.dataGridViewExtraSubjectsYear.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExtraSubjectsYear.ColumnHeadersVisible = false;
-            this.dataGridViewExtraSubjectsYear.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.СИПYearGrade});
-            this.dataGridViewExtraSubjectsYear.Location = new System.Drawing.Point(342, 205);
-            this.dataGridViewExtraSubjectsYear.MultiSelect = false;
-            this.dataGridViewExtraSubjectsYear.Name = "dataGridViewExtraSubjectsYear";
-            this.dataGridViewExtraSubjectsYear.RowHeadersVisible = false;
-            this.dataGridViewExtraSubjectsYear.Size = new System.Drawing.Size(379, 443);
-            this.dataGridViewExtraSubjectsYear.TabIndex = 1146;
-            this.dataGridViewExtraSubjectsYear.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExtraSubjectsYear_CellEndEdit);
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "SubjectName";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Предмети";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            this.dataGridViewTextBoxColumn17.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.HeaderText = "ЗП-Първи скок";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Width = 128;
-            // 
-            // СИПYearGrade
-            // 
-            this.СИПYearGrade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.СИПYearGrade.HeaderText = "Оценка";
-            this.СИПYearGrade.Name = "СИПYearGrade";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(368, 34);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(351, 33);
-            this.label28.TabIndex = 1140;
-            this.label28.Text = "Въвеждане на годишни оценки ";
-            // 
-            // tabControlMarks
-            // 
-            this.tabControlMarks.Controls.Add(this.tabPageSelectSubjects);
-            this.tabControlMarks.Controls.Add(this.tabPageFirstTerm);
-            this.tabControlMarks.Controls.Add(this.tabPageSecondTerm);
-            this.tabControlMarks.Controls.Add(this.tabPageYear);
-            this.tabControlMarks.Location = new System.Drawing.Point(3, 206);
-            this.tabControlMarks.Name = "tabControlMarks";
-            this.tabControlMarks.SelectedIndex = 0;
-            this.tabControlMarks.Size = new System.Drawing.Size(1031, 39);
-            this.tabControlMarks.TabIndex = 1150;
-            this.tabControlMarks.Visible = false;
-            this.tabControlMarks.SelectedIndexChanged += new System.EventHandler(this.tabControlMarks_SelectedIndexChanged);
-            // 
-            // tabPageSelectSubjects
-            // 
-            this.tabPageSelectSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageSelectSubjects.Controls.Add(this.panelSelectSubjects);
-            this.tabPageSelectSubjects.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSelectSubjects.Name = "tabPageSelectSubjects";
-            this.tabPageSelectSubjects.Size = new System.Drawing.Size(1023, 13);
-            this.tabPageSelectSubjects.TabIndex = 3;
-            this.tabPageSelectSubjects.Text = "Предмети";
-            // 
-            // panelSelectSubjects
-            // 
-            this.panelSelectSubjects.AutoScroll = true;
-            this.panelSelectSubjects.Controls.Add(this.label17);
-            this.panelSelectSubjects.Controls.Add(this.label16);
-            this.panelSelectSubjects.Controls.Add(this.checkedListBoxSubjects);
-            this.panelSelectSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSelectSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSelectSubjects.Location = new System.Drawing.Point(0, 0);
-            this.panelSelectSubjects.Name = "panelSelectSubjects";
-            this.panelSelectSubjects.Size = new System.Drawing.Size(1023, 13);
-            this.panelSelectSubjects.TabIndex = 1133;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(317, 115);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(361, 50);
-            this.label17.TabIndex = 1134;
-            this.label17.Text = "Маркирайте предметите, който ще \r\nсе изучават през тази учебна година.";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(291, 36);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(425, 33);
-            this.label16.TabIndex = 1133;
-            this.label16.Text = "Избор на изучавани учебни предмети";
-            // 
-            // checkedListBoxSubjects
-            // 
-            this.checkedListBoxSubjects.CheckOnClick = true;
-            this.checkedListBoxSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBoxSubjects.FormattingEnabled = true;
-            this.checkedListBoxSubjects.Location = new System.Drawing.Point(378, 192);
-            this.checkedListBoxSubjects.Name = "checkedListBoxSubjects";
-            this.checkedListBoxSubjects.Size = new System.Drawing.Size(229, 418);
-            this.checkedListBoxSubjects.TabIndex = 1132;
-            this.checkedListBoxSubjects.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxSubjects_ItemCheck);
-            // 
-            // tabPageFirstTerm
-            // 
-            this.tabPageFirstTerm.AutoScroll = true;
-            this.tabPageFirstTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageFirstTerm.Controls.Add(this.panelMarksFirstTerm);
-            this.tabPageFirstTerm.Location = new System.Drawing.Point(4, 22);
-            this.tabPageFirstTerm.Name = "tabPageFirstTerm";
-            this.tabPageFirstTerm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageFirstTerm.Size = new System.Drawing.Size(1023, 13);
-            this.tabPageFirstTerm.TabIndex = 0;
-            this.tabPageFirstTerm.Text = "Първи срок";
-            // 
-            // panelMarksFirstTerm
-            // 
-            this.panelMarksFirstTerm.AutoScroll = true;
-            this.panelMarksFirstTerm.Controls.Add(this.labelSuccessFirstTerm);
-            this.panelMarksFirstTerm.Controls.Add(this.buttonSaveMarksFirstTerm);
-            this.panelMarksFirstTerm.Controls.Add(this.dataGridViewMarksFirstTerm);
-            this.panelMarksFirstTerm.Controls.Add(this.textBox7);
-            this.panelMarksFirstTerm.Controls.Add(this.textBox900);
-            this.panelMarksFirstTerm.Controls.Add(this.textBox17);
-            this.panelMarksFirstTerm.Controls.Add(this.textBox11);
-            this.panelMarksFirstTerm.Controls.Add(this.textBox2);
-            this.panelMarksFirstTerm.Controls.Add(this.label14);
-            this.panelMarksFirstTerm.Controls.Add(this.comboBoxStudentsNames);
-            this.panelMarksFirstTerm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMarksFirstTerm.Location = new System.Drawing.Point(3, 3);
-            this.panelMarksFirstTerm.Name = "panelMarksFirstTerm";
-            this.panelMarksFirstTerm.Size = new System.Drawing.Size(1017, 7);
-            this.panelMarksFirstTerm.TabIndex = 40;
-            // 
-            // labelSuccessFirstTerm
-            // 
-            this.labelSuccessFirstTerm.AutoSize = true;
-            this.labelSuccessFirstTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSuccessFirstTerm.Location = new System.Drawing.Point(849, 1110);
-            this.labelSuccessFirstTerm.Name = "labelSuccessFirstTerm";
-            this.labelSuccessFirstTerm.Size = new System.Drawing.Size(104, 25);
-            this.labelSuccessFirstTerm.TabIndex = 1133;
-            this.labelSuccessFirstTerm.Text = "Добавено";
-            this.labelSuccessFirstTerm.Visible = false;
-            // 
-            // buttonSaveMarksFirstTerm
-            // 
-            this.buttonSaveMarksFirstTerm.Location = new System.Drawing.Point(833, 389);
-            this.buttonSaveMarksFirstTerm.Name = "buttonSaveMarksFirstTerm";
-            this.buttonSaveMarksFirstTerm.Size = new System.Drawing.Size(136, 49);
-            this.buttonSaveMarksFirstTerm.TabIndex = 1129;
-            this.buttonSaveMarksFirstTerm.Text = "Запиши оценките";
-            this.buttonSaveMarksFirstTerm.UseVisualStyleBackColor = true;
-            this.buttonSaveMarksFirstTerm.Click += new System.EventHandler(this.buttonSaveMarksFirstTerm_Click);
-            // 
-            // dataGridViewMarksFirstTerm
-            // 
-            this.dataGridViewMarksFirstTerm.AllowUserToAddRows = false;
-            this.dataGridViewMarksFirstTerm.AllowUserToDeleteRows = false;
-            this.dataGridViewMarksFirstTerm.AllowUserToResizeColumns = false;
-            this.dataGridViewMarksFirstTerm.AllowUserToResizeRows = false;
-            this.dataGridViewMarksFirstTerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMarksFirstTerm.ColumnHeadersVisible = false;
-            this.dataGridViewMarksFirstTerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SubjectsFirstTerm,
-            this.MarkMandatoryWithWordsSubjectsFirstTerm,
-            this.ЗПFirstTerm,
-            this.MarkChoosenWithWordsSubjectsFirstTerm,
-            this.ЗИПFirstTerm});
-            this.dataGridViewMarksFirstTerm.Location = new System.Drawing.Point(262, 206);
-            this.dataGridViewMarksFirstTerm.MultiSelect = false;
-            this.dataGridViewMarksFirstTerm.Name = "dataGridViewMarksFirstTerm";
-            this.dataGridViewMarksFirstTerm.RowHeadersVisible = false;
-            this.dataGridViewMarksFirstTerm.Size = new System.Drawing.Size(538, 443);
-            this.dataGridViewMarksFirstTerm.TabIndex = 1128;
-            this.dataGridViewMarksFirstTerm.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarksFirstTerm_CellEndEdit);
-            // 
-            // SubjectsFirstTerm
-            // 
-            this.SubjectsFirstTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SubjectsFirstTerm.HeaderText = "Предмети";
-            this.SubjectsFirstTerm.Name = "SubjectsFirstTerm";
-            this.SubjectsFirstTerm.ReadOnly = true;
-            this.SubjectsFirstTerm.Width = 200;
-            // 
-            // MarkMandatoryWithWordsSubjectsFirstTerm
-            // 
-            this.MarkMandatoryWithWordsSubjectsFirstTerm.HeaderText = "ЗП-Първи скок";
-            this.MarkMandatoryWithWordsSubjectsFirstTerm.Name = "MarkMandatoryWithWordsSubjectsFirstTerm";
-            this.MarkMandatoryWithWordsSubjectsFirstTerm.ReadOnly = true;
-            this.MarkMandatoryWithWordsSubjectsFirstTerm.Width = 128;
-            // 
-            // ЗПFirstTerm
-            // 
-            this.ЗПFirstTerm.HeaderText = "Оценка";
-            this.ЗПFirstTerm.Name = "ЗПFirstTerm";
-            this.ЗПFirstTerm.Width = 30;
-            // 
-            // MarkChoosenWithWordsSubjectsFirstTerm
-            // 
-            this.MarkChoosenWithWordsSubjectsFirstTerm.HeaderText = "ЗПП-Първи срок";
-            this.MarkChoosenWithWordsSubjectsFirstTerm.Name = "MarkChoosenWithWordsSubjectsFirstTerm";
-            this.MarkChoosenWithWordsSubjectsFirstTerm.ReadOnly = true;
-            this.MarkChoosenWithWordsSubjectsFirstTerm.Width = 128;
-            // 
-            // ЗИПFirstTerm
-            // 
-            this.ЗИПFirstTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ЗИПFirstTerm.HeaderText = "Оценка";
-            this.ЗИПFirstTerm.Name = "ЗИПFirstTerm";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(621, 163);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(160, 43);
-            this.textBox7.TabIndex = 1127;
-            this.textBox7.TabStop = false;
-            this.textBox7.Text = "Оценка\r\nза първи учебен\r\nсрок";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox900
-            // 
-            this.textBox900.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox900.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox900.Location = new System.Drawing.Point(462, 163);
-            this.textBox900.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox900.Multiline = true;
-            this.textBox900.Name = "textBox900";
-            this.textBox900.ReadOnly = true;
-            this.textBox900.Size = new System.Drawing.Size(160, 43);
-            this.textBox900.TabIndex = 1126;
-            this.textBox900.TabStop = false;
-            this.textBox900.Text = "Оценка \r\nпърви учебен \r\n    срок\r\n\r\n";
-            this.textBox900.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox17
-            // 
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox17.Location = new System.Drawing.Point(621, 96);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(160, 68);
-            this.textBox17.TabIndex = 1125;
-            this.textBox17.Text = "ЗАДЪЛЖИТЕЛНОИЗБИРАЕМА  ПОДГОТОВКА (ЗИП)";
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox11
-            // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Location = new System.Drawing.Point(462, 96);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(160, 68);
-            this.textBox11.TabIndex = 1124;
-            this.textBox11.Text = "ЗАДЪЛЖИТЕЛНА ПОДГОТОВКА (ЗП) ИЛИ ПРОФИЛИРАНА ПОДГОТОВКА";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(262, 96);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(201, 110);
-            this.textBox2.TabIndex = 1123;
-            this.textBox2.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(370, 32);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(402, 33);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Въвеждане на оценки за първи срок";
-            // 
-            // comboBoxStudentsNames
-            // 
-            this.comboBoxStudentsNames.DisplayMember = "FullName";
-            this.comboBoxStudentsNames.FormattingEnabled = true;
-            this.comboBoxStudentsNames.Location = new System.Drawing.Point(16, 63);
-            this.comboBoxStudentsNames.Name = "comboBoxStudentsNames";
-            this.comboBoxStudentsNames.Size = new System.Drawing.Size(229, 21);
-            this.comboBoxStudentsNames.TabIndex = 1130;
-            this.comboBoxStudentsNames.Text = "Изберете ученик от класа ви";
-            this.comboBoxStudentsNames.ValueMember = "StudentID";
-            this.comboBoxStudentsNames.MouseEnter += new System.EventHandler(this.comboBoxStudentsNamesFirstTerm_MouseEnter);
-            // 
-            // tabPageSecondTerm
-            // 
-            this.tabPageSecondTerm.AutoScroll = true;
-            this.tabPageSecondTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageSecondTerm.Controls.Add(this.panelMarksSecondTerm);
-            this.tabPageSecondTerm.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSecondTerm.Name = "tabPageSecondTerm";
-            this.tabPageSecondTerm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSecondTerm.Size = new System.Drawing.Size(1023, 13);
-            this.tabPageSecondTerm.TabIndex = 1;
-            this.tabPageSecondTerm.Text = "Втори срок";
-            // 
-            // panelMarksSecondTerm
-            // 
-            this.panelMarksSecondTerm.AutoScroll = true;
-            this.panelMarksSecondTerm.Controls.Add(this.labelSuccessSecondTerm);
-            this.panelMarksSecondTerm.Controls.Add(this.buttonSaveMarksSecondTerm);
-            this.panelMarksSecondTerm.Controls.Add(this.dataGridViewMarksSecondTerm);
-            this.panelMarksSecondTerm.Controls.Add(this.textBox1);
-            this.panelMarksSecondTerm.Controls.Add(this.textBox3);
-            this.panelMarksSecondTerm.Controls.Add(this.textBox4);
-            this.panelMarksSecondTerm.Controls.Add(this.textBox5);
-            this.panelMarksSecondTerm.Controls.Add(this.textBox6);
-            this.panelMarksSecondTerm.Controls.Add(this.label15);
-            this.panelMarksSecondTerm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMarksSecondTerm.Location = new System.Drawing.Point(3, 3);
-            this.panelMarksSecondTerm.Name = "panelMarksSecondTerm";
-            this.panelMarksSecondTerm.Size = new System.Drawing.Size(1017, 7);
-            this.panelMarksSecondTerm.TabIndex = 1131;
-            // 
-            // labelSuccessSecondTerm
-            // 
-            this.labelSuccessSecondTerm.AutoSize = true;
-            this.labelSuccessSecondTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSuccessSecondTerm.Location = new System.Drawing.Point(798, 444);
-            this.labelSuccessSecondTerm.Name = "labelSuccessSecondTerm";
-            this.labelSuccessSecondTerm.Size = new System.Drawing.Size(104, 25);
-            this.labelSuccessSecondTerm.TabIndex = 1139;
-            this.labelSuccessSecondTerm.Text = "Добавено";
-            this.labelSuccessSecondTerm.Visible = false;
-            // 
-            // buttonSaveMarksSecondTerm
-            // 
-            this.buttonSaveMarksSecondTerm.Location = new System.Drawing.Point(779, 380);
-            this.buttonSaveMarksSecondTerm.Name = "buttonSaveMarksSecondTerm";
-            this.buttonSaveMarksSecondTerm.Size = new System.Drawing.Size(136, 49);
-            this.buttonSaveMarksSecondTerm.TabIndex = 1138;
-            this.buttonSaveMarksSecondTerm.Text = "Запиши оценките";
-            this.buttonSaveMarksSecondTerm.UseVisualStyleBackColor = true;
-            this.buttonSaveMarksSecondTerm.Click += new System.EventHandler(this.buttonSaveMarksSecondTerm_Click);
-            // 
-            // dataGridViewMarksSecondTerm
-            // 
-            this.dataGridViewMarksSecondTerm.AllowUserToAddRows = false;
-            this.dataGridViewMarksSecondTerm.AllowUserToDeleteRows = false;
-            this.dataGridViewMarksSecondTerm.AllowUserToResizeColumns = false;
-            this.dataGridViewMarksSecondTerm.AllowUserToResizeRows = false;
-            this.dataGridViewMarksSecondTerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMarksSecondTerm.ColumnHeadersVisible = false;
-            this.dataGridViewMarksSecondTerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.ЗПSecendTerm,
-            this.dataGridViewTextBoxColumn4,
-            this.ЗИПSecondTerm});
-            this.dataGridViewMarksSecondTerm.Location = new System.Drawing.Point(208, 197);
-            this.dataGridViewMarksSecondTerm.MultiSelect = false;
-            this.dataGridViewMarksSecondTerm.Name = "dataGridViewMarksSecondTerm";
-            this.dataGridViewMarksSecondTerm.RowHeadersVisible = false;
-            this.dataGridViewMarksSecondTerm.Size = new System.Drawing.Size(538, 443);
-            this.dataGridViewMarksSecondTerm.TabIndex = 1137;
-            this.dataGridViewMarksSecondTerm.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarksSecondTerm_CellEndEdit);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Предмети";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "ЗП-Първи скок";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 128;
-            // 
-            // ЗПSecendTerm
-            // 
-            this.ЗПSecendTerm.HeaderText = "Оценка";
-            this.ЗПSecendTerm.Name = "ЗПSecendTerm";
-            this.ЗПSecendTerm.Width = 30;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "ЗПП-Първи срок";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 128;
-            // 
-            // ЗИПSecondTerm
-            // 
-            this.ЗИПSecondTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ЗИПSecondTerm.HeaderText = "Оценка";
-            this.ЗИПSecondTerm.Name = "ЗИПSecondTerm";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(567, 154);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(160, 43);
-            this.textBox1.TabIndex = 1136;
-            this.textBox1.TabStop = false;
-            this.textBox1.Text = "Оценка\r\nза първи учебен\r\nсрок";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(408, 154);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(160, 43);
-            this.textBox3.TabIndex = 1135;
-            this.textBox3.TabStop = false;
-            this.textBox3.Text = "Оценка \r\nпърви учебен \r\n    срок\r\n\r\n";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(567, 87);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(160, 68);
-            this.textBox4.TabIndex = 1134;
-            this.textBox4.Text = "ЗАДЪЛЖИТЕЛНОИЗБИРАЕМА  ПОДГОТОВКА (ЗИП)";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(408, 87);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(160, 68);
-            this.textBox5.TabIndex = 1133;
-            this.textBox5.Text = "ЗАДЪЛЖИТЕЛНА ПОДГОТОВКА (ЗП) ИЛИ ПРОФИЛИРАНА ПОДГОТОВКА";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(208, 87);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(201, 110);
-            this.textBox6.TabIndex = 1132;
-            this.textBox6.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(316, 23);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(405, 33);
-            this.label15.TabIndex = 1131;
-            this.label15.Text = "Въвеждане на оценки за втори срок";
-            // 
-            // tabPageYear
-            // 
-            this.tabPageYear.AutoScroll = true;
-            this.tabPageYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageYear.Controls.Add(this.panelMarksYear);
-            this.tabPageYear.Location = new System.Drawing.Point(4, 22);
-            this.tabPageYear.Name = "tabPageYear";
-            this.tabPageYear.Size = new System.Drawing.Size(1023, 13);
-            this.tabPageYear.TabIndex = 2;
-            this.tabPageYear.Text = "Годишени оценки";
-            // 
-            // panelMarksYear
-            // 
-            this.panelMarksYear.AutoScroll = true;
-            this.panelMarksYear.Controls.Add(this.labelSuccessYear);
-            this.panelMarksYear.Controls.Add(this.buttonSaveMarksYear);
-            this.panelMarksYear.Controls.Add(this.dataGridViewMarksYear);
-            this.panelMarksYear.Controls.Add(this.textBox8);
-            this.panelMarksYear.Controls.Add(this.textBox9);
-            this.panelMarksYear.Controls.Add(this.textBox10);
-            this.panelMarksYear.Controls.Add(this.textBox12);
-            this.panelMarksYear.Controls.Add(this.textBox13);
-            this.panelMarksYear.Controls.Add(this.label18);
-            this.panelMarksYear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMarksYear.Location = new System.Drawing.Point(0, 0);
-            this.panelMarksYear.Name = "panelMarksYear";
-            this.panelMarksYear.Size = new System.Drawing.Size(1023, 13);
-            this.panelMarksYear.TabIndex = 1140;
-            // 
-            // labelSuccessYear
-            // 
-            this.labelSuccessYear.AutoSize = true;
-            this.labelSuccessYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSuccessYear.Location = new System.Drawing.Point(850, 459);
-            this.labelSuccessYear.Name = "labelSuccessYear";
-            this.labelSuccessYear.Size = new System.Drawing.Size(104, 25);
-            this.labelSuccessYear.TabIndex = 1132;
-            this.labelSuccessYear.Text = "Добавено";
-            this.labelSuccessYear.Visible = false;
-            // 
-            // buttonSaveMarksYear
-            // 
-            this.buttonSaveMarksYear.Location = new System.Drawing.Point(831, 391);
-            this.buttonSaveMarksYear.Name = "buttonSaveMarksYear";
-            this.buttonSaveMarksYear.Size = new System.Drawing.Size(136, 49);
-            this.buttonSaveMarksYear.TabIndex = 1147;
-            this.buttonSaveMarksYear.Text = "Запиши оценките";
-            this.buttonSaveMarksYear.UseVisualStyleBackColor = true;
-            this.buttonSaveMarksYear.Click += new System.EventHandler(this.buttonSaveMarksYear_Click);
-            // 
-            // dataGridViewMarksYear
-            // 
-            this.dataGridViewMarksYear.AllowUserToAddRows = false;
-            this.dataGridViewMarksYear.AllowUserToDeleteRows = false;
-            this.dataGridViewMarksYear.AllowUserToResizeColumns = false;
-            this.dataGridViewMarksYear.AllowUserToResizeRows = false;
-            this.dataGridViewMarksYear.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMarksYear.ColumnHeadersVisible = false;
-            this.dataGridViewMarksYear.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn5,
-            this.ЗПMarkYear,
-            this.dataGridViewTextBoxColumn7,
-            this.ЗИПMarkYear});
-            this.dataGridViewMarksYear.Location = new System.Drawing.Point(260, 208);
-            this.dataGridViewMarksYear.MultiSelect = false;
-            this.dataGridViewMarksYear.Name = "dataGridViewMarksYear";
-            this.dataGridViewMarksYear.RowHeadersVisible = false;
-            this.dataGridViewMarksYear.Size = new System.Drawing.Size(538, 443);
-            this.dataGridViewMarksYear.TabIndex = 1146;
-            this.dataGridViewMarksYear.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarksYear_CellEndEdit);
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Предмети";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "ЗП-Първи скок";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 128;
-            // 
-            // ЗПMarkYear
-            // 
-            this.ЗПMarkYear.HeaderText = "Оценка";
-            this.ЗПMarkYear.Name = "ЗПMarkYear";
-            this.ЗПMarkYear.Width = 30;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "ЗПП-Първи срок";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 128;
-            // 
-            // ЗИПMarkYear
-            // 
-            this.ЗИПMarkYear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ЗИПMarkYear.HeaderText = "Оценка";
-            this.ЗИПMarkYear.Name = "ЗИПMarkYear";
-            // 
-            // textBox8
-            // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(619, 165);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(160, 43);
-            this.textBox8.TabIndex = 1145;
-            this.textBox8.TabStop = false;
-            this.textBox8.Text = "Оценка\r\nза първи учебен\r\nсрок";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox9.Location = new System.Drawing.Point(460, 165);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(160, 43);
-            this.textBox9.TabIndex = 1144;
-            this.textBox9.TabStop = false;
-            this.textBox9.Text = "Оценка \r\nпърви учебен \r\n    срок\r\n\r\n";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Location = new System.Drawing.Point(619, 98);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(160, 68);
-            this.textBox10.TabIndex = 1143;
-            this.textBox10.Text = "ЗАДЪЛЖИТЕЛНОИЗБИРАЕМА  ПОДГОТОВКА (ЗИП)";
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox12
-            // 
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Location = new System.Drawing.Point(460, 98);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(160, 68);
-            this.textBox12.TabIndex = 1142;
-            this.textBox12.Text = "ЗАДЪЛЖИТЕЛНА ПОДГОТОВКА (ЗП) ИЛИ ПРОФИЛИРАНА ПОДГОТОВКА";
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox13
-            // 
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Location = new System.Drawing.Point(260, 98);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(201, 110);
-            this.textBox13.TabIndex = 1141;
-            this.textBox13.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(368, 34);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(351, 33);
-            this.label18.TabIndex = 1140;
-            this.label18.Text = "Въвеждане на годишни оценки ";
             // 
             // panelMarksExam
             // 
@@ -5278,163 +5637,6 @@
             this.label27.TabIndex = 1;
             this.label27.Text = "Запис на отсъствия";
             // 
-            // panelEditTeacherInfo
-            // 
-            this.panelEditTeacherInfo.AutoScroll = true;
-            this.panelEditTeacherInfo.Controls.Add(this.labelChangesMade);
-            this.panelEditTeacherInfo.Controls.Add(this.buttonSaveChangesTeacherInfo);
-            this.panelEditTeacherInfo.Controls.Add(this.groupBox2);
-            this.panelEditTeacherInfo.Controls.Add(this.groupBox1);
-            this.panelEditTeacherInfo.Controls.Add(this.label19);
-            this.panelEditTeacherInfo.Location = new System.Drawing.Point(1, 650);
-            this.panelEditTeacherInfo.Name = "panelEditTeacherInfo";
-            this.panelEditTeacherInfo.Size = new System.Drawing.Size(1031, 78);
-            this.panelEditTeacherInfo.TabIndex = 1149;
-            this.panelEditTeacherInfo.Visible = false;
-            // 
-            // labelChangesMade
-            // 
-            this.labelChangesMade.AutoSize = true;
-            this.labelChangesMade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChangesMade.Location = new System.Drawing.Point(672, 349);
-            this.labelChangesMade.Name = "labelChangesMade";
-            this.labelChangesMade.Size = new System.Drawing.Size(331, 25);
-            this.labelChangesMade.TabIndex = 1146;
-            this.labelChangesMade.Text = "Промените са направени успешно";
-            this.labelChangesMade.Visible = false;
-            // 
-            // buttonSaveChangesTeacherInfo
-            // 
-            this.buttonSaveChangesTeacherInfo.Enabled = false;
-            this.buttonSaveChangesTeacherInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveChangesTeacherInfo.Location = new System.Drawing.Point(492, 617);
-            this.buttonSaveChangesTeacherInfo.Name = "buttonSaveChangesTeacherInfo";
-            this.buttonSaveChangesTeacherInfo.Size = new System.Drawing.Size(132, 44);
-            this.buttonSaveChangesTeacherInfo.TabIndex = 1145;
-            this.buttonSaveChangesTeacherInfo.Text = "Запиши";
-            this.buttonSaveChangesTeacherInfo.UseVisualStyleBackColor = true;
-            this.buttonSaveChangesTeacherInfo.Click += new System.EventHandler(this.buttonSaveChangesTeacherInfo_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.textBoxUserName);
-            this.groupBox2.Controls.Add(this.textBoxPassword);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(323, 390);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(478, 202);
-            this.groupBox2.TabIndex = 1144;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Потребителски данни";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(96, 152);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(278, 40);
-            this.label22.TabIndex = 6;
-            this.label22.Text = "Паролата ще бъде показана, само \r\nкогато я посочите с мишката";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(96, 94);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(67, 20);
-            this.label23.TabIndex = 5;
-            this.label23.Text = "Парола";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(96, 26);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(161, 20);
-            this.label24.TabIndex = 4;
-            this.label24.Text = "Потребителско име";
-            // 
-            // textBoxUserName
-            // 
-            this.textBoxUserName.Location = new System.Drawing.Point(100, 55);
-            this.textBoxUserName.Name = "textBoxUserName";
-            this.textBoxUserName.Size = new System.Drawing.Size(282, 26);
-            this.textBoxUserName.TabIndex = 1;
-            this.textBoxUserName.TextChanged += new System.EventHandler(this.textBoxUserName_TextChanged);
-            // 
-            // textBoxPassword
-            // 
-            this.textBoxPassword.Location = new System.Drawing.Point(99, 119);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(282, 26);
-            this.textBoxPassword.TabIndex = 2;
-            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
-            this.textBoxPassword.MouseEnter += new System.EventHandler(this.textBoxPassword_MouseEnter);
-            this.textBoxPassword.MouseLeave += new System.EventHandler(this.textBoxPassword_MouseLeave);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.textBoxTeacherFirstName);
-            this.groupBox1.Controls.Add(this.textBoxTeacherLastName);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(323, 129);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(478, 202);
-            this.groupBox1.TabIndex = 1142;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Лична информация";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(96, 94);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(81, 20);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Фамилия";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(96, 26);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 20);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "Име";
-            // 
-            // textBoxTeacherFirstName
-            // 
-            this.textBoxTeacherFirstName.Location = new System.Drawing.Point(100, 55);
-            this.textBoxTeacherFirstName.Name = "textBoxTeacherFirstName";
-            this.textBoxTeacherFirstName.Size = new System.Drawing.Size(282, 26);
-            this.textBoxTeacherFirstName.TabIndex = 1;
-            this.textBoxTeacherFirstName.TextChanged += new System.EventHandler(this.textBoxTeacherFirstName_TextChanged);
-            // 
-            // textBoxTeacherLastName
-            // 
-            this.textBoxTeacherLastName.Location = new System.Drawing.Point(99, 119);
-            this.textBoxTeacherLastName.Name = "textBoxTeacherLastName";
-            this.textBoxTeacherLastName.Size = new System.Drawing.Size(282, 26);
-            this.textBoxTeacherLastName.TabIndex = 2;
-            this.textBoxTeacherLastName.TextChanged += new System.EventHandler(this.textBoxTeacherLastName_TextChanged);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(360, 42);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(358, 33);
-            this.label19.TabIndex = 1141;
-            this.label19.Text = "Редактиране на личните данни\r\n";
-            // 
             // panelEditStudentsInfo
             // 
             this.panelEditStudentsInfo.AutoScroll = true;
@@ -5469,10 +5671,11 @@
             this.panelEditStudentsInfo.Controls.Add(this.comboBoxSettlementName);
             this.panelEditStudentsInfo.Controls.Add(this.dataGridViewStudents);
             this.panelEditStudentsInfo.Controls.Add(this.label1);
+            this.panelEditStudentsInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEditStudentsInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelEditStudentsInfo.Location = new System.Drawing.Point(3, 18);
+            this.panelEditStudentsInfo.Location = new System.Drawing.Point(0, 0);
             this.panelEditStudentsInfo.Name = "panelEditStudentsInfo";
-            this.panelEditStudentsInfo.Size = new System.Drawing.Size(1028, 57);
+            this.panelEditStudentsInfo.Size = new System.Drawing.Size(1038, 730);
             this.panelEditStudentsInfo.TabIndex = 6;
             this.panelEditStudentsInfo.Visible = false;
             // 
@@ -5821,10 +6024,10 @@
             // 
             this.openFileDialogLoadPortrait.FileName = "Изберете файл";
             // 
-            // timerSuccess
+            // timerSuccessSaveMarks
             // 
-            this.timerSuccess.Interval = 3000;
-            this.timerSuccess.Tick += new System.EventHandler(this.timerSuccess_Tick);
+            this.timerSuccessSaveMarks.Interval = 3000;
+            this.timerSuccessSaveMarks.Tick += new System.EventHandler(this.timerSuccess_Tick);
             // 
             // timerTeacherChanges
             // 
@@ -5839,6 +6042,11 @@
             // timerAbcensesSaveSuccessful
             // 
             this.timerAbcensesSaveSuccessful.Interval = 3000;
+            // 
+            // timerDiplomMarksSaved
+            // 
+            this.timerDiplomMarksSaved.Interval = 3000;
+            this.timerDiplomMarksSaved.Tick += new System.EventHandler(this.timerDiplomMarksSaved_Tick);
             // 
             // TeacherForm
             // 
@@ -5857,15 +6065,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panelParent.ResumeLayout(false);
-            this.tabControlDiplom.ResumeLayout(false);
-            this.tabPageInfo.ResumeLayout(false);
-            this.tabPageInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentPortrait)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.panelMandatorySubjectsMarks.ResumeLayout(false);
-            this.panelMandatorySubjectsMarks.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.panelEditTeacherInfo.ResumeLayout(false);
+            this.panelEditTeacherInfo.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabControlMarksSummary.ResumeLayout(false);
             this.tabPageMandatoryAndChosenSubjects.ResumeLayout(false);
             this.panelMarksMandatoryAndChosenSubjectsSummary.ResumeLayout(false);
@@ -5875,24 +6080,6 @@
             this.panelMarksExtraSubjectsSummary.ResumeLayout(false);
             this.panelMarksExtraSubjectsSummary.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiplomExtraSubjects)).EndInit();
-            this.panelWelcome.ResumeLayout(false);
-            this.panelWelcome.PerformLayout();
-            this.tabControlMarksExtraSubjects.ResumeLayout(false);
-            this.tabPageChoseExtraSubjects.ResumeLayout(false);
-            this.panelChooseExtraSubjects.ResumeLayout(false);
-            this.panelChooseExtraSubjects.PerformLayout();
-            this.tabPageMarksExtraSubjectsFirstTerm.ResumeLayout(false);
-            this.panelExtraSubjectsFirstTerm.ResumeLayout(false);
-            this.panelExtraSubjectsFirstTerm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsFirstTerm)).EndInit();
-            this.tabPageMarksExtraSubjectsSecondTerm.ResumeLayout(false);
-            this.panelExtraSubjectsSecondTerm.ResumeLayout(false);
-            this.panelExtraSubjectsSecondTerm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsSecondTerm)).EndInit();
-            this.tabPageMarksExtraSubjectsYear.ResumeLayout(false);
-            this.panelExtraSubjectsYearTerm.ResumeLayout(false);
-            this.panelExtraSubjectsYearTerm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsYear)).EndInit();
             this.tabControlMarks.ResumeLayout(false);
             this.tabPageSelectSubjects.ResumeLayout(false);
             this.panelSelectSubjects.ResumeLayout(false);
@@ -5909,17 +6096,38 @@
             this.panelMarksYear.ResumeLayout(false);
             this.panelMarksYear.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarksYear)).EndInit();
+            this.tabControlMarksExtraSubjects.ResumeLayout(false);
+            this.tabPageChoseExtraSubjects.ResumeLayout(false);
+            this.panelChooseExtraSubjects.ResumeLayout(false);
+            this.panelChooseExtraSubjects.PerformLayout();
+            this.tabPageMarksExtraSubjectsFirstTerm.ResumeLayout(false);
+            this.panelExtraSubjectsFirstTerm.ResumeLayout(false);
+            this.panelExtraSubjectsFirstTerm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsFirstTerm)).EndInit();
+            this.tabPageMarksExtraSubjectsSecondTerm.ResumeLayout(false);
+            this.panelExtraSubjectsSecondTerm.ResumeLayout(false);
+            this.panelExtraSubjectsSecondTerm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsSecondTerm)).EndInit();
+            this.tabPageMarksExtraSubjectsYear.ResumeLayout(false);
+            this.panelExtraSubjectsYearTerm.ResumeLayout(false);
+            this.panelExtraSubjectsYearTerm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsYear)).EndInit();
+            this.tabControlDiplom.ResumeLayout(false);
+            this.tabPageInfo.ResumeLayout(false);
+            this.tabPageInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentPortrait)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.panelMandatorySubjectsMarks.ResumeLayout(false);
+            this.panelMandatorySubjectsMarks.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.panelWelcome.ResumeLayout(false);
+            this.panelWelcome.PerformLayout();
             this.panelMarksExam.ResumeLayout(false);
             this.panelMarksExam.PerformLayout();
             this.panelAddAbsences.ResumeLayout(false);
             this.panelAddAbsences.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbsences)).EndInit();
-            this.panelEditTeacherInfo.ResumeLayout(false);
-            this.panelEditTeacherInfo.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panelEditStudentsInfo.ResumeLayout(false);
             this.panelEditStudentsInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPortrait)).EndInit();
@@ -6015,8 +6223,8 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label labelSuccessYear;
-        private System.Windows.Forms.Timer timerSuccess;
+        private System.Windows.Forms.Label labelSuccessSaveMarks;
+        private System.Windows.Forms.Timer timerSuccessSaveMarks;
         private System.Windows.Forms.Panel panelEditTeacherInfo;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -6393,5 +6601,23 @@
         private System.Windows.Forms.Label labelThirdChosenSubject;
         private System.Windows.Forms.Label labelSecondChosenSubject;
         private System.Windows.Forms.Label labelFirstChosenSubject;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label labelThirdExamMark;
+        private System.Windows.Forms.Label labelSecondExamMark;
+        private System.Windows.Forms.Label labelFirstExamMark;
+        private System.Windows.Forms.Label labelThirdExamMarkWords;
+        private System.Windows.Forms.Label labelSecondExamMarkWords;
+        private System.Windows.Forms.Label labelFirstExamMarkWords;
+        private System.Windows.Forms.Label labelThirdExam;
+        private System.Windows.Forms.Label labelSecondExam;
+        private System.Windows.Forms.Label labelFirstExam;
+        private System.Windows.Forms.Label label115;
+        private System.Windows.Forms.Label label116;
+        private System.Windows.Forms.Label label117;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.Label labelDiplomMarksSaveSuccessful;
+        private System.Windows.Forms.Timer timerDiplomMarksSaved;
     }
 }

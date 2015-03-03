@@ -230,5 +230,17 @@
                 return classID;
             }
         }
+        public static int GetClassIDByStudent(long studentID, string schoolYear)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var classID = context.StudentsSchoolYears
+                                        .Where(student => student.StudentID == studentID)
+                                        .Where(year => year.SchoolYear.SchoolYearName == schoolYear)
+                                        .Select(schoolClass => schoolClass.ClassID)
+                                        .FirstOrDefault();
+                return classID;
+            }
+        }
     }
 }

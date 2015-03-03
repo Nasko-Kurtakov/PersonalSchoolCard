@@ -78,7 +78,7 @@
                 return profileName;
             }
         }
-        public static int GetProfileIDByClassName(string className)
+        public static int? GetProfileIDByClassName(string className)
         {
             using(var context = new PersonalSchoolCardEntities())
             {
@@ -87,7 +87,7 @@
                                     .Where(schoolClass => schoolClass.ClassName == className && schoolClass.SchoolYearID == currentSchoolYearID)
                                     .Select(schoolClass => schoolClass.ProfileID)
                                     .First();
-                return profileID
+                return profileID;
             }
         }
     }

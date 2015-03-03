@@ -16,7 +16,6 @@
         int teacherID;
         string path = null;
         long studentID;
-        Student studentInfoToBeSaved = new Student();
         string schoolYear = Classes.SchoolYearDA.GetCurrentSchoolYear();
         string teacherName;
         string comboBoxSettlementNameInitialText = "Град/Село";
@@ -110,25 +109,55 @@
         private void buttonSaveChanges_Click(object sender, EventArgs e)
         {
 
-            var studentInfoToBeSaved = new Student
+            var studentInfoToBeSaved = new Student();
+            if(textBoxFirstName.Text!=null && textBoxFirstName.Text!="")
             {
-                FirstName = textBoxFirstName.Text,
-                SecondName = textBoxSecondName.Text,
-                LastName = textBoxLastName.Text,
-                PersonalNumber = textBoxPersonalNumber.Text,
-                PersonalCardNumber = textBoxPersonalCardNumber.Text,
-                DateOfBirth = Convert.ToDateTime(textBoxDateOfBirth.Text),
-                Address = textBoxAddress.Text,
-                Phone = textBoxMobilePhone.Text,
-                EnrollmentYear = int.Parse(textBoxEnrollmentYear.Text),
-                SettlementID = int.Parse(comboBoxSettlementName.SelectedValue.ToString()),
-            };
+                studentInfoToBeSaved.FirstName = textBoxFirstName.Text;
+            }
+            if(textBoxSecondName.Text!=null && textBoxSecondName.Text!="")
+            {
+                studentInfoToBeSaved.SecondName = textBoxSecondName.Text;
+            }
+            if(textBoxLastName.Text!=null && textBoxLastName.Text!="")
+            {
+                studentInfoToBeSaved.LastName = textBoxLastName.Text;
+            }
+            if(textBoxPersonalNumber.Text!=null && textBoxPersonalNumber.Text!="")
+            {
+                studentInfoToBeSaved.PersonalNumber = textBoxPersonalNumber.Text;
+            }
+            if(textBoxPersonalCardNumber.Text!=null && textBoxPersonalCardNumber.Text!="")
+            {
+                studentInfoToBeSaved.PersonalCardNumber = textBoxPersonalCardNumber.Text;
+            }
+            if(textBoxMobilePhone.Text!=null && textBoxMobilePhone.Text!="")
+            {
+                studentInfoToBeSaved.Phone = textBoxMobilePhone.Text;
+            }
+            if(textBoxEnrollmentYear.Text!=null && textBoxEnrollmentYear.Text!="")
+            {
+                studentInfoToBeSaved.EnrollmentYear = int.Parse(textBoxEnrollmentYear.Text);
+            }
+            if(textBoxLastName.Text!=null && textBoxLastName.Text!="")
+            {
+                studentInfoToBeSaved.LastName = textBoxLastName.Text;
+            }
+            if(comboBoxSettlementName.SelectedValue!=null)
+            {
+                studentInfoToBeSaved.SettlementID = int.Parse(comboBoxSettlementName.SelectedValue.ToString());
+            }
+            if (textBoxDateOfBirth.Text != null && textBoxDateOfBirth.Text != "")
+            {
+                studentInfoToBeSaved.DateOfBirth = Convert.ToDateTime(textBoxDateOfBirth.Text);
+            }
+
             Classes.StudentDA.UpdateStudentInfo(studentID, studentInfoToBeSaved);
             Classes.PictureDA.SetPortraitPath(studentID, path);
         }
         private void comboBoxSettlementName_Click(object sender, EventArgs e)
         {
             comboBoxSettlementName.DataSource = Classes.SettlementDA.GetVillages();
+            comboBoxSettlementName.Click -= comboBoxSettlementName_Click;
         }
         private void buttonBack_Click(object sender, EventArgs e)
         {
@@ -217,7 +246,7 @@
                 if (dataGridViewMarksFirstTerm.Rows.Count != 0)
                 {
                     Classes.MarkDA.SaveMark(dataGridViewMarksFirstTerm, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), 1);
-                    ChangesMadeSuccessfully(labelSuccessFirstTerm, timerSuccess);
+                    ChangesMadeSuccessfully(labelSuccessFirstTerm, timerSuccessSaveMarks);
                 }
                 else
                 {
@@ -246,7 +275,7 @@
         private void buttonSaveMarksSecondTerm_Click(object sender, EventArgs e)
         {
             Classes.MarkDA.SaveMark(dataGridViewMarksSecondTerm, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), 2);
-            ChangesMadeSuccessfully(labelSuccessSecondTerm, timerSuccess);
+            ChangesMadeSuccessfully(labelSuccessSecondTerm, timerSuccessSaveMarks);
         }
         private void dataGridViewMarksSecondTerm_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -255,7 +284,7 @@
         private void buttonSaveMarksYear_Click(object sender, EventArgs e)
         {
             Classes.MarkDA.SaveMark(dataGridViewMarksYear, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), 3);
-            ChangesMadeSuccessfully(labelSuccessYear, timerSuccess);
+            ChangesMadeSuccessfully(labelSuccessSaveMarks, timerSuccessSaveMarks);
         }
         private void dataGridViewMarksYear_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -286,6 +315,11 @@
             ParseSubjectsToDataGridView(dataGridViewMarksSecondTerm, e, selectedSubjectName);
             ParseSubjectsToDataGridView(dataGridViewMarksYear, e, selectedSubjectName);
 
+        }
+        private void timerSuccess_Tick(object sender, EventArgs e)
+        {
+            labelSuccessSaveMarks.Visible = false;
+            timerSuccessSaveMarks.Stop();
         }
         #endregion
 
@@ -501,11 +535,7 @@
 
             }
         }
-        private void timerSuccess_Tick(object sender, EventArgs e)
-        {
-            labelSuccessYear.Visible = false;
-            timerSuccess.Stop();
-        }
+        
         private void ShowSchoolYears(TextBox firstYear, TextBox secondYear, TextBox thirdYear, TextBox fourthYear)
         {
             firstYear.Text = string.Format("{0}/{1} {2}", DateTime.Now.Year - 4, DateTime.Now.Year - 3, firstYear.Text);
@@ -778,16 +808,23 @@
             {
                 labelSchoolArea.Text = "-";
             }
-            var portraitPath = Classes.PictureDA.GetPortraitPath(student.StudentID);
-            if (portraitPath != null && portraitPath != "")
+            try
             {
-                pictureBoxStudentPortrait.Image = Image.FromFile(portraitPath);
-                labelPictureNotAvailable.Visible = false;
+                var portraitPath = Classes.PictureDA.GetPortraitPath(student.StudentID);
+                if (portraitPath != null && portraitPath != "")
+                {
+                    pictureBoxStudentPortrait.Image = Image.FromFile(portraitPath);
+                    labelPictureNotAvailable.Visible = false;
+                }
+                else
+                {
+                    pictureBoxStudentPortrait.Image = null;
+                    labelPictureNotAvailable.Visible = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                pictureBoxStudentPortrait.Image = null;
-                labelPictureNotAvailable.Visible = true;
+                MessageBox.Show("Снимката не е намерена на този адрес " + ex.Message);
             }
 
         }
@@ -901,6 +938,26 @@
                 professionalSubjectsMarks[i].Text = professionalSubjects[i].Mark.ToString("f2");
                 professionalSubjectsMarksWords[i].Text = Classes.MarkDA.GetMarkWithWords(professionalSubjectsMarks[i].Text);
             }
+            //exam subjects and marks
+            ClearLabel(labelFirstExam);
+            ClearLabel(labelFirstExamMark);
+            ClearLabel(labelFirstExamMarkWords);
+            ClearLabel(labelSecondExam);
+            ClearLabel(labelSecondExamMark);
+            ClearLabel(labelSecondExamMarkWords);
+            ClearLabel(labelThirdExam);
+            ClearLabel(labelThirdExamMark);
+            ClearLabel(labelThirdExamMarkWords);
+            var examSubjects = Classes.DiplomsDA.GetAllDiplomMarks(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), "ДЗИ");
+            var examSubjectsNames = new List<Label> { labelFirstExam, labelSecondExam, labelThirdExam };
+            var examSubjectsMarks = new List<Label> { labelFirstExamMark, labelSecondExamMark, labelThirdExamMark };
+            var examSubjectsMarksWords = new List<Label> { labelFirstExamMarkWords, labelSecondExamMarkWords, labelThirdExamMarkWords };
+            for (int i = 0; i < examSubjects.Count; i++)
+            {
+                examSubjectsNames[i].Text = Classes.SubjectDA.GetSubjectName(examSubjects[i].SubjectID);
+                examSubjectsMarks[i].Text = examSubjects[i].Mark.ToString("f2");
+                examSubjectsMarksWords[i].Text = Classes.MarkDA.GetMarkWithWords(examSubjectsMarks[i].Text);
+            }
         }
         #endregion
 
@@ -912,30 +969,11 @@
             tabControlMarksSummary.Visible = true;
             tabControlMarksSummary.BringToFront();
         }
-
-        #endregion
-
-        private void comboBoxStudentsNamesDiplomMarks_Click(object sender, EventArgs e)
+        private void buttonSaveMaksFinalExtraSubjects_Click(object sender, EventArgs e)
         {
-            ParseStudentsToComboBox(comboBoxStudentsNamesDiplomMarks);
-            comboBoxStudentsNamesDiplomMarks.Click -= comboBoxStudentsNamesDiplomMarks_Click;
-        }
-        private void comboBoxStudentsNamesExtraSubjectsMarks_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            panelMarksExtraSubjectsSummary.Focus();
-            dataGridViewDiplomExtraSubjects.DataSource = Classes.DiplomMarksInfo.GetAllMarksExtraSubjects(long.Parse(comboBoxStudentsNamesExtraSubjectsMarks.SelectedValue.ToString()));
-            MarksWithWords(dataGridViewDiplomExtraSubjects);
-        }
-        private void comboBoxStudentsNamesDiplomMarks_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            panelMarksMandatoryAndChosenSubjectsSummary.Focus();
-            dataGridViewDiplom.DataSource = Classes.DiplomMarksInfo.GetAllMarksForDiplomRegularSubjects(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()));
-            MarksWithWords(dataGridViewDiplom);
-        }
-        private void comboBoxStudentsNamesExtraSubjectsMarks_Click(object sender, EventArgs e)
-        {
-            ParseStudentsToComboBox(comboBoxStudentsNamesExtraSubjectsMarks);
-            comboBoxStudentsNamesExtraSubjectsMarks.Click -= comboBoxStudentsNamesExtraSubjectsMarks_Click;
+            Classes.DiplomsDA.SaveMarkFinal(dataGridViewDiplomExtraSubjects, long.Parse(comboBoxStudentsNamesExtraSubjectsMarks.SelectedValue.ToString()), "СИП", teacherID);
+            textBoxAverageExtraSubjects.Clear();
+            textBoxAverageExtraSubjects.Text = Classes.DiplomsDA.CalculateAverageMark(long.Parse(comboBoxStudentsNamesExtraSubjectsMarks.SelectedValue.ToString()), "СИП").ToString();
         }
         private void buttonSaveDiplomMarks_Click(object sender, EventArgs e)
         {
@@ -953,12 +991,37 @@
                 textBoxAverageExams.Text = Classes.DiplomsDA.CalculateAverageMark(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ДЗИ").ToString("f2");
                 Classes.StudentDA.SaveMarkForDiplom(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()));
             }
+            ChangesMadeSuccessfully(labelDiplomMarksSaveSuccessful, timerDiplomMarksSaved);
         }
-        private void buttonSaveMaksFinalExtraSubjects_Click(object sender, EventArgs e)
+        private void comboBoxStudentsNamesDiplomMarks_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Classes.DiplomsDA.SaveMarkFinal(dataGridViewDiplomExtraSubjects, long.Parse(comboBoxStudentsNamesExtraSubjectsMarks.SelectedValue.ToString()), "СИП", teacherID);
-            textBoxAverageExtraSubjects.Clear();
-            textBoxAverageExtraSubjects.Text = Classes.DiplomsDA.CalculateAverageMark(long.Parse(comboBoxStudentsNamesExtraSubjectsMarks.SelectedValue.ToString()), "СИП").ToString();
+            panelMarksMandatoryAndChosenSubjectsSummary.Focus();
+            dataGridViewDiplom.DataSource = Classes.DiplomMarksInfo.GetAllMarksForDiplomRegularSubjects(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()));
+            MarksWithWords(dataGridViewDiplom);
         }
+        private void comboBoxStudentsNamesExtraSubjectsMarks_Click(object sender, EventArgs e)
+        {
+            ParseStudentsToComboBox(comboBoxStudentsNamesExtraSubjectsMarks);
+            comboBoxStudentsNamesExtraSubjectsMarks.Click -= comboBoxStudentsNamesExtraSubjectsMarks_Click;
+        }
+        private void comboBoxStudentsNamesExtraSubjectsMarks_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            panelMarksExtraSubjectsSummary.Focus();
+            dataGridViewDiplomExtraSubjects.DataSource = Classes.DiplomMarksInfo.GetAllMarksExtraSubjects(long.Parse(comboBoxStudentsNamesExtraSubjectsMarks.SelectedValue.ToString()));
+            MarksWithWords(dataGridViewDiplomExtraSubjects);
+        }
+        private void comboBoxStudentsNamesDiplomMarks_Click(object sender, EventArgs e)
+        {
+            ParseStudentsToComboBox(comboBoxStudentsNamesDiplomMarks);
+            comboBoxStudentsNamesDiplomMarks.Click -= comboBoxStudentsNamesDiplomMarks_Click;
+        }
+        private void timerDiplomMarksSaved_Tick(object sender, EventArgs e)
+        {
+            labelDiplomMarksSaveSuccessful.Visible = false;
+            timerDiplomMarksSaved.Stop();
+        }
+        #endregion
+
+        
     }
 }

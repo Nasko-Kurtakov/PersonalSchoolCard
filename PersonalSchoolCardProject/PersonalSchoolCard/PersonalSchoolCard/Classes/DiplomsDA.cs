@@ -17,7 +17,7 @@
                 {
                     StudentID = studentID,
                     SubjectID = subjectID,
-                    SubjectTypeID = 5,
+                    SubjectTypeID = SubjectDA.GetSubjectTypeID("ДЗИ"),
                     Mark = markAsFloat
                 };
                 contex.Diploms.Add(ExamMark);

@@ -47,10 +47,7 @@
                         if (gridView.Rows[i].Cells[2].Value != null)
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
-                            var subjectID = context.Subjects
-                                            .Where(subject => subject.SubjectName == subjectName)
-                                            .Select(subject => subject.SubjectID)
-                                            .FirstOrDefault();
+                            var subjectID = SubjectDA.GetSubjectID(subjectName);
                             var subjectTypeID = SubjectDA.GetSubjectTypeID(gridView.Columns[2].Name.ToString().Substring(0, 2));
                             var mark = new Mark
                             {
@@ -66,10 +63,7 @@
                         if (gridView.Rows[i].Cells[4].Value != null)
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
-                            var subjectID = context.Subjects
-                                            .Where(subject => subject.SubjectName == subjectName)
-                                            .Select(subject => subject.SubjectID)
-                                            .FirstOrDefault();
+                            var subjectID = SubjectDA.GetSubjectID(subjectName);
                             var subjectTypeID = SubjectDA.GetSubjectTypeID(gridView.Columns[4].Name.ToString().Substring(0, 3));
                             var mark = new Mark
                             {
@@ -100,10 +94,7 @@
                         if (gridView.Rows[i].Cells[2].Value != null)
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
-                            var subjectID = context.Subjects
-                                            .Where(subject => subject.SubjectName == subjectName)
-                                            .Select(subject => subject.SubjectID)
-                                            .FirstOrDefault();
+                            var subjectID = SubjectDA.GetSubjectID(subjectName);
                             var subjectTypeID = SubjectDA.GetSubjectTypeID(gridView.Columns[2].Name.ToString().Substring(0, 3));
                             var mark = new Mark
                             {
@@ -144,15 +135,8 @@
         {
             using (var context = new PersonalSchoolCardEntities())
             {
-                var classID = context.StudentsSchoolYears
-                                    .Where(student => student.StudentID == studentID)
-                                    .Where(year => year.SchoolYear.SchoolYearName == schoolYear)
-                                    .Select(schoolClass => schoolClass.ClassID)
-                                    .FirstOrDefault();
-                var subjectTypeID = context.SubjectTypes
-                                    .Where(type => type.SubjectTypeName == subjectTypeName)
-                                    .Select(type => type.SubjectTypeID)
-                                    .FirstOrDefault();
+                int classID = SchoolClassDA.GetClassIDByStudent(studentID, schoolYear);
+                byte subjectTypeID = SubjectDA.GetSubjectTypeID(subjectTypeName);
                 var mark = context.Marks
                                         .Where(student => student.StudentID == studentID)
                                         .Where(schoolClass => schoolClass.ClassID == classID)
