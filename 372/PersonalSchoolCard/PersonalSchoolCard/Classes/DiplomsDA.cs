@@ -5,6 +5,7 @@
     using System.Linq;
     using PersonalSchoolCard.Data;
     using System.Windows.Forms;
+    using System.Drawing.Printing;
     public class DiplomsDA
     {
         public static void SaveMarkExam(long studentID, string subjectName, string mark)

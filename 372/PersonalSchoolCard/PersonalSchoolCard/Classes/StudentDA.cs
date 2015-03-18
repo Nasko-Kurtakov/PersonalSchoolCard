@@ -19,9 +19,9 @@
                                         .Where(year => year.SchoolYearName == schoolYear)
                                         .Select(year => year.SchoolYearID)
                                         .FirstOrDefault();
-
+                    var schoolClassID = SchoolClassDA.GetClassID(selectedClass);
                     var studentsList = context.StudentsSchoolYears
-                                        .Where(schoolClass => schoolClass.SchoolClass.ClassID == 2029 && schoolClass.SchoolYear.SchoolYearName == schoolYear)
+                                        .Where(schoolClass => schoolClass.SchoolClass.ClassID == schoolClassID && schoolClass.SchoolYear.SchoolYearName == schoolYear)
                                         .Select(student => student.Student)
                                         .ToList();
                     return studentsList;
@@ -166,15 +166,24 @@
         }
         public static string GenderAssist(string personalNumber)
         {
-            int secondToLastCharOfPersonalNum = int.Parse(personalNumber.Substring(personalNumber.Length - 2, 1));
-            if (secondToLastCharOfPersonalNum % 2 == 0)
+            try
             {
-                return "н";
+                int secondToLastCharOfPersonalNum = int.Parse(personalNumber.Substring(personalNumber.Length - 2, 1));
+                if (secondToLastCharOfPersonalNum % 2 == 0)
+                {
+                    return "н";
+                }
+                else
+                {
+                    return "на";
+                }
             }
-            else
+            catch
             {
-                return "на";
+                MessageBox.Show("Не е въведено ЕГН.");
+                return null;
             }
+            
         }
         public static void SaveMarkForDiplom(long studentID)
         {

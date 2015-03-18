@@ -11,6 +11,7 @@
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
     using System.Data.Entity.Infrastructure;
+    using System.Drawing.Printing;
     public partial class TeacherForm : Form
     {
         int teacherID;
@@ -44,20 +45,22 @@
             tabControlMarksSummary.Parent = panelParent;
             tabControlMarksSummary.Dock = DockStyle.Fill;
             comboBoxSettlementName.Text = comboBoxSettlementNameInitialText;
+            printDocument.DefaultPageSettings.Color = false;
         }
-
         private void TeacherForm_Load(object sender, EventArgs e)
         {
             teacherName = Classes.TeacherDA.GetTeacher(teacherID).FullName;
             this.Text = teacherName;
             string className = Classes.TeacherDA.GetClassNameByTeacherID(teacherID, schoolYear);
+            string classNumber = className.Substring(0, 2);
+            string classChar = className.Substring(3, 1);
             labelHi.Text += teacherName + "!";
             labelSchooYear.Text += schoolYear + " година";
-            labelSchoolClassName.Text += className;
+            labelSchoolClassName.Text += string.Format("{0} \'{1}\' клас", classNumber, classChar);
             labelProfile.Text += Classes.ProfileDA.GetProfileByTeacher(teacherID);
             panelWelcome.BringToFront();
             labelTeacherName.Text += teacherName;
-            labelClassName.Text += className + " клас";
+            labelClassName.Text += string.Format("{0} \'{1}\' клас", classNumber, classChar);
             labelCurrentSchoolYear.Text += schoolYear + " година";
             ShowSchoolYears(textBoxFirstYear, textBoxSecondYear, textBoxThirdYear, textBoxFourthYear);
             ShowSchoolYears(textBoxFirstYearExtraSubject, textBoxSecondYearExtraSubject, textBoxThirdYearExtraSubject, textBoxFourthYearExtraSubject);
@@ -88,7 +91,6 @@
 
             studentID = Classes.StudentDA.GetStudentID(teacherID, studentFirstName, studentSecondName, studentLastName);
             FillTextFields();
-
             buttonSaveChanges.Enabled = true;
 
         }
@@ -110,39 +112,43 @@
         {
 
             var studentInfoToBeSaved = new Student();
-            if(textBoxFirstName.Text!=null && textBoxFirstName.Text!="")
+            if (textBoxFirstName.Text != null && textBoxFirstName.Text != "")
             {
                 studentInfoToBeSaved.FirstName = textBoxFirstName.Text;
             }
-            if(textBoxSecondName.Text!=null && textBoxSecondName.Text!="")
+            if (textBoxSecondName.Text != null && textBoxSecondName.Text != "")
             {
                 studentInfoToBeSaved.SecondName = textBoxSecondName.Text;
             }
-            if(textBoxLastName.Text!=null && textBoxLastName.Text!="")
+            if (textBoxLastName.Text != null && textBoxLastName.Text != "")
             {
                 studentInfoToBeSaved.LastName = textBoxLastName.Text;
             }
-            if(textBoxPersonalNumber.Text!=null && textBoxPersonalNumber.Text!="")
+            if (textBoxPersonalNumber.Text != null && textBoxPersonalNumber.Text != "")
             {
                 studentInfoToBeSaved.PersonalNumber = textBoxPersonalNumber.Text;
             }
-            if(textBoxPersonalCardNumber.Text!=null && textBoxPersonalCardNumber.Text!="")
+            if (textBoxPersonalCardNumber.Text != null && textBoxPersonalCardNumber.Text != "")
             {
                 studentInfoToBeSaved.PersonalCardNumber = textBoxPersonalCardNumber.Text;
             }
-            if(textBoxMobilePhone.Text!=null && textBoxMobilePhone.Text!="")
+            if (textBoxMobilePhone.Text != null && textBoxMobilePhone.Text != "")
             {
                 studentInfoToBeSaved.Phone = textBoxMobilePhone.Text;
             }
-            if(textBoxEnrollmentYear.Text!=null && textBoxEnrollmentYear.Text!="")
+            if (textBoxAddress.Text != null && textBoxAddress.Text != "")
+            {
+                studentInfoToBeSaved.Address = textBoxAddress.Text;
+            }
+            if (textBoxEnrollmentYear.Text != null && textBoxEnrollmentYear.Text != "")
             {
                 studentInfoToBeSaved.EnrollmentYear = int.Parse(textBoxEnrollmentYear.Text);
             }
-            if(textBoxLastName.Text!=null && textBoxLastName.Text!="")
+            if (textBoxLastName.Text != null && textBoxLastName.Text != "")
             {
                 studentInfoToBeSaved.LastName = textBoxLastName.Text;
             }
-            if(comboBoxSettlementName.SelectedValue!=null)
+            if (comboBoxSettlementName.SelectedValue != null)
             {
                 studentInfoToBeSaved.SettlementID = int.Parse(comboBoxSettlementName.SelectedValue.ToString());
             }
@@ -319,6 +325,8 @@
         private void timerSuccess_Tick(object sender, EventArgs e)
         {
             labelSuccessSaveMarks.Visible = false;
+            labelSuccessSecondTerm.Visible = false;
+            labelSuccessFirstTerm.Visible = false;
             timerSuccessSaveMarks.Stop();
         }
         #endregion
@@ -334,17 +342,17 @@
         private void buttonSaveMarksExtraSubjectsFirstTerm_Click(object sender, EventArgs e)
         {
             Classes.MarkDA.SaveMark(dataGridViewExtraSubjectsFirstTerm, teacherID, long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString()), 1, true);
-            ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarks, timerSaveSuccessExtraSubjects);
+            ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarksFirstTerm, timerSaveSuccessExtraSubjects);
         }
         private void buttonSaveMarksExtraSubjectsSecondTerm_Click(object sender, EventArgs e)
         {
             Classes.MarkDA.SaveMark(dataGridViewExtraSubjectsFirstTerm, teacherID, long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString()), 2, true);
-            ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarks, timerSaveSuccessExtraSubjects);
+            ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarksSecondTerm, timerSaveSuccessExtraSubjects);
         }
         private void buttonSaveMarksExtraSubjectsYear_Click(object sender, EventArgs e)
         {
             Classes.MarkDA.SaveMark(dataGridViewExtraSubjectsFirstTerm, teacherID, long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString()), 3, true);
-            ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarks, timerSaveSuccessExtraSubjects);
+            ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarksYear, timerSaveSuccessExtraSubjects);
         }
         private void buttonAddMarksExtraSubjects_Click(object sender, EventArgs e)
         {
@@ -373,7 +381,7 @@
         }
         private void timerSaveSuccessExtraSubjects_Tick(object sender, EventArgs e)
         {
-            labelSaveSuccessExtraSubjectsMarks.Visible = false;
+            labelSaveSuccessExtraSubjectsMarksYear.Visible = false;
             timerSaveSuccessExtraSubjects.Stop();
         }
         private void tabControlMarksExtraSubjects_SelectedIndexChanged(object sender, EventArgs e)
@@ -426,6 +434,13 @@
                 MessageBox.Show("Данните, които искате да запишете са вече въведени");
             }
 
+        }
+        private void comboBoxStudentsNamesAbsences_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            dataGridViewAbsences.Rows[0].Cells[1].Value = "";
+            dataGridViewAbsences.Rows[0].Cells[2].Value = "";
+            dataGridViewAbsences.Rows[1].Cells[1].Value = "";
+            dataGridViewAbsences.Rows[1].Cells[2].Value = "";
         }
         #endregion
 
@@ -535,7 +550,7 @@
 
             }
         }
-        
+
         private void ShowSchoolYears(TextBox firstYear, TextBox secondYear, TextBox thirdYear, TextBox fourthYear)
         {
             firstYear.Text = string.Format("{0}/{1} {2}", DateTime.Now.Year - 4, DateTime.Now.Year - 3, firstYear.Text);
@@ -581,7 +596,16 @@
             panelMarksExam.Visible = true;
             panelMarksExam.BringToFront();
         }
-
+        private void comboBoxStudentsNamesExam_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            textBoxFirstExamMark.Text = "";
+            textBoxSecondExamMark.Text = "";
+            textBoxThirdExamMark.Text = "";
+            comboBoxSecondExam.Items.Insert(0, "Изберете предмет");
+            comboBoxSecondExam.SelectedIndex = 0;
+            comboBoxThirdExam.Items.Insert(0, "Изберете предмет");
+            comboBoxThirdExam.SelectedIndex = 0;
+        }
         private void buttonSaveExamMarks_Click(object sender, EventArgs e)
         {
             try
@@ -768,7 +792,7 @@
             labelGraduationYear.Text = DateTime.Now.Year.ToString();
             if (student.MarkFromDiplom != null)
             {
-                labelDiplomMark.Text = student.MarkFromDiplom.ToString();
+                labelDiplomMark.Text = string.Format("{0:0.00}", double.Parse(student.MarkFromDiplom.ToString()));
                 labelDiplomMarkWithWords.Text = Classes.MarkDA.GetMarkWithWords(labelDiplomMark.Text);
             }
             else
@@ -842,6 +866,7 @@
             clearDiplomFields();
             ShowDiplomInfo();
             ShowDiplomMarks();
+            tabPageInfo.Focus();
         }
         private void ShowDiplomMarks()
         {
@@ -897,7 +922,7 @@
             ClearLabel(labelSecondExtraSubject);
             ClearLabel(labelThirdExtraSubject);
             ClearLabel(labelFourthExtraSubject);
-            ClearLabel(labelFifthExtraSubject);
+            ClearLabel(labelFourthExtraSubject);
             ClearLabel(labelFirstExtraSubjectMark);
             ClearLabel(labelSecondExtraSubjectMark);
             ClearLabel(labelThirdExtraSubjectMark);
@@ -908,7 +933,7 @@
             ClearLabel(labelFourthExtraSubjectMarkWords);
             ClearLabel(labelFifthExtraSubjectMarkWords);
             var studiedExtraSubjects = Classes.DiplomsDA.GetAllDiplomMarks(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), "СИП");
-            var studiedExtraSubjectsNamesLabels = new List<Label> { labelFirstExtraSubject, labelSecondExtraSubject, labelThirdExtraSubject, labelFourthExtraSubject, labelFifthExtraSubject };
+            var studiedExtraSubjectsNamesLabels = new List<Label> { labelFirstExtraSubject, labelSecondExtraSubject, labelThirdExtraSubject, labelFourthExtraSubject, labelFourthExtraSubject };
             var studiedExtraSubjectsMarks = new List<Label> { labelFirstExtraSubjectMark, labelSecondExtraSubjectMark, labelThirdExtraSubjectMark, labelFourthExtraSubjectMark, labelFifthExtraSubjectMark };
             var studeiedExtraSubjectsMarksWords = new List<Label> { labelFirstExtraSubjectMarkWords, labelSecondExtraSubjectMarkWords, labelThirdExtraSubjectMarkWords, labelFourthExtraSubjectMarkWords, labelFifthExtraSubjectMarkWords };
             for (int i = 0; i < studiedExtraSubjects.Count; i++)
@@ -922,7 +947,7 @@
             ClearLabel(labelFirstChosenSubject);
             ClearLabel(labelSecondChosenSubject);
             ClearLabel(labelThirdChosenSubject);
-            ClearLabel(labelFirstChosenSubjectMar);
+            ClearLabel(labelFirstChosenSubjectMark);
             ClearLabel(labelSecondChosenSubjectMark);
             ClearLabel(labelThirdChosenSubjectMark);
             ClearLabel(labelFirstChosenSubjectMarkWords);
@@ -930,7 +955,7 @@
             ClearLabel(labelThirdChosenSubjectMarkWords);
             var professionalSubjects = Classes.DiplomsDA.GetAllDiplomMarks(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), "ЗПП");
             var professionalSubjectsNames = new List<Label> { labelFirstChosenSubject, labelSecondChosenSubject, labelThirdChosenSubject };
-            var professionalSubjectsMarks = new List<Label> { labelFirstChosenSubjectMar, labelSecondChosenSubjectMark, labelThirdChosenSubjectMark };
+            var professionalSubjectsMarks = new List<Label> { labelFirstChosenSubjectMark, labelSecondChosenSubjectMark, labelThirdChosenSubjectMark };
             var professionalSubjectsMarksWords = new List<Label> { labelFirstChosenSubjectMarkWords, labelSecondChosenSubjectMarkWords, labelThirdChosenSubjectMarkWords };
             for (int i = 0; i < professionalSubjects.Count; i++)
             {
@@ -1022,6 +1047,47 @@
         }
         #endregion
 
-        
+        #region //Print
+        //печат на формата като графичен файл
+        Bitmap memoryImage;
+        public void GetPrintArea(TabPage tbcontrl)
+        {
+            memoryImage = new Bitmap(tbcontrl.Width, tbcontrl.Height);
+            tbcontrl.DrawToBitmap(memoryImage, new Rectangle(0, 0, tbcontrl.Width, tbcontrl.Height));
+        }
+        public void Print(TabPage tbcontrl)
+        {
+            //tabControlDiplom = tbcontrl;
+            GetPrintArea(tbcontrl);
+            printPreviewDialog.Document = printDocument;
+        }
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            tabPageInfo.VerticalScroll.Value = tabPageInfo.VerticalScroll.Maximum;
+            for (int i = 0; i < tabControlDiplom.TabPages.Count; i++)
+            {
+                tabControlDiplom.SelectedIndex = i;
+                Print(tabControlDiplom.TabPages[i]);
+                printPreviewDialog.ShowDialog();
+                //printDocument.Print();
+            }
+            tabControlDiplom.SelectedIndex = 0;
+            //Print(tabPageInfo);
+            //Print(tabPageMandatoryMarks);
+            //Print(tabPageExtraMarks);
+
+            
+        }
+        private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Rectangle pagearea = e.PageBounds;
+            // e.Graphics.DrawImage(memoryImage, (pagearea.Width / 2) - (this.panelMandatorySubjectsMarks.Width / 2), this.panelMandatorySubjectsMarks.Location.Y);
+
+            e.Graphics.DrawImage(memoryImage, (pagearea.Width / 2) - (tabControlDiplom.Width / 2), tabControlDiplom.Location.Y - 29);
+            // - 29 is set so it cuts the combobox for selecting students for better vizualisation
+        }
+        #endregion
+
+
     }
 }

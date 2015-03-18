@@ -89,14 +89,13 @@
             panelAddTeachers.Visible = true;
             panelAddTeachers.BringToFront();
 
-        } //done
-
+        }
         private void buttonAddTeachers_Click(object sender, EventArgs e)
-        {
+        {            
+            Classes.TeacherDA.AddTeachers(dataGridViewAddTeacher);
             listBoxAlreadyAddedTeachers.DataSource = Classes.TeacherDA.GetAllTeachersNames();
             listBoxAlreadyAddedTeachers.Refresh();
-            Classes.TeacherDA.AddTeachers(dataGridViewAddTeacher);
-        } //done
+        }
         #endregion
 
         #region//adding absences types
@@ -105,14 +104,13 @@
             listBoxAlreadyAddedAbsencesTypes.DataSource = Classes.AbsencesTypeDA.GetAbsencesTypes();
             panelAddAbsencesType.Visible = true;
             panelAddAbsencesType.BringToFront();
-        } //done
-
+        }
         private void buttonAddAbsencesTypes_Click(object sender, EventArgs e)
         {
+            Classes.AbsencesTypeDA.AddAbsencesType(dataGridViewAddAbsenceType);
             listBoxAlreadyAddedAbsencesTypes.DataSource = Classes.AbsencesTypeDA.GetAbsencesTypes();
             listBoxAlreadyAddedAbsencesTypes.Refresh();
-            Classes.AbsencesTypeDA.AddAbsencesType(dataGridViewAddAbsenceType);
-        } //done
+        }
         #endregion
 
         #region //managing terms methods
@@ -121,14 +119,13 @@
             listBoxAlreadyAddedTerms.DataSource = Classes.TermDA.GetTerms();
             panelManageTerms.Visible = true;
             panelManageTerms.BringToFront();
-        } //done
-
+        }
         private void buttonAddTerms_Click(object sender, EventArgs e)
         {
             Classes.TermDA.AddTerms(dataGridViewAddTerms);
             listBoxAlreadyAddedTerms.DataSource = Classes.TermDA.GetTerms();
             listBoxAlreadyAddedTerms.Refresh();
-        } //done
+        } 
         #endregion
 
         #region //managing classes
@@ -199,6 +196,8 @@
             comboBoxChooseArea.Refresh();
             comboBoxChooseManicipality.Refresh();
             textBoxCityName.Clear();
+            checkBoxIsManicipality.Checked = false;
+            checkBoxIsArea.Checked = false;
             labelAddCityDone.Visible = true;
             timerAddCityDone.Start();
         }
@@ -393,9 +392,6 @@
             }
         }
         #endregion
-
-        
-
-        
+       
     }
 }

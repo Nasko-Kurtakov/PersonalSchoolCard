@@ -135,24 +135,22 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>PersonalSchoolCard.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="PersonalSchoolCard.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PersonalSchoolCard.edmx</DependentUpon>
+      <LastGenOutput>PersonalSchoolCard.Context.cs</LastGenOutput>
+    </None>
     <None Include="PersonalSchoolCard.edmx.diagram">
       <DependentUpon>PersonalSchoolCard.edmx</DependentUpon>
+    </None>
+    <None Include="PersonalSchoolCard.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PersonalSchoolCard.edmx</DependentUpon>
+      <LastGenOutput>PersonalSchoolCard.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="PersonalSchoolCard.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PersonalSchoolCard.edmx</DependentUpon>
-      <LastGenOutput>PersonalSchoolCard.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="PersonalSchoolCard.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PersonalSchoolCard.edmx</DependentUpon>
-      <LastGenOutput>PersonalSchoolCard.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
