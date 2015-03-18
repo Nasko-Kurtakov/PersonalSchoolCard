@@ -927,15 +927,13 @@
             ClearLabel(labelSecondExtraSubjectMark);
             ClearLabel(labelThirdExtraSubjectMark);
             ClearLabel(labelFourthExtraSubjectMark);
-            ClearLabel(labelFifthExtraSubjectMark);
             ClearLabel(labelSecondExtraSubjectMarkWords);
             ClearLabel(labelThirdExtraSubjectMarkWords);
             ClearLabel(labelFourthExtraSubjectMarkWords);
-            ClearLabel(labelFifthExtraSubjectMarkWords);
             var studiedExtraSubjects = Classes.DiplomsDA.GetAllDiplomMarks(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), "СИП");
             var studiedExtraSubjectsNamesLabels = new List<Label> { labelFirstExtraSubject, labelSecondExtraSubject, labelThirdExtraSubject, labelFourthExtraSubject, labelFourthExtraSubject };
-            var studiedExtraSubjectsMarks = new List<Label> { labelFirstExtraSubjectMark, labelSecondExtraSubjectMark, labelThirdExtraSubjectMark, labelFourthExtraSubjectMark, labelFifthExtraSubjectMark };
-            var studeiedExtraSubjectsMarksWords = new List<Label> { labelFirstExtraSubjectMarkWords, labelSecondExtraSubjectMarkWords, labelThirdExtraSubjectMarkWords, labelFourthExtraSubjectMarkWords, labelFifthExtraSubjectMarkWords };
+            var studiedExtraSubjectsMarks = new List<Label> { labelFirstExtraSubjectMark, labelSecondExtraSubjectMark, labelThirdExtraSubjectMark, labelFourthExtraSubjectMark};
+            var studeiedExtraSubjectsMarksWords = new List<Label> { labelFirstExtraSubjectMarkWords, labelSecondExtraSubjectMarkWords, labelThirdExtraSubjectMarkWords, labelFourthExtraSubjectMarkWords};
             for (int i = 0; i < studiedExtraSubjects.Count; i++)
             {
 
@@ -1068,26 +1066,18 @@
             {
                 tabControlDiplom.SelectedIndex = i;
                 Print(tabControlDiplom.TabPages[i]);
-                printPreviewDialog.ShowDialog();
-                //printDocument.Print();
+                //printPreviewDialog.ShowDialog();
+                printDocument.Print();
             }
             tabControlDiplom.SelectedIndex = 0;
-            //Print(tabPageInfo);
-            //Print(tabPageMandatoryMarks);
-            //Print(tabPageExtraMarks);
-
-            
+            printDialog.ShowDialog();
         }
         private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Rectangle pagearea = e.PageBounds;
-            // e.Graphics.DrawImage(memoryImage, (pagearea.Width / 2) - (this.panelMandatorySubjectsMarks.Width / 2), this.panelMandatorySubjectsMarks.Location.Y);
-
             e.Graphics.DrawImage(memoryImage, (pagearea.Width / 2) - (tabControlDiplom.Width / 2), tabControlDiplom.Location.Y - 29);
             // - 29 is set so it cuts the combobox for selecting students for better vizualisation
         }
         #endregion
-
-
     }
 }
