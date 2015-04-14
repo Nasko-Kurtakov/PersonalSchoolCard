@@ -233,7 +233,7 @@
         #endregion
 
         #region//adding marks for mandtatory subjects (ЗП, ЗИП)
-        private void buttonAddMarksFirstTerm_Click(object sender, EventArgs e)
+        private void buttonAddMarks_Click(object sender, EventArgs e)
         {
             checkedListBoxSubjects.DataSource = Classes.SubjectDA.GetAllSubjects();
             checkedListBoxSubjects.DisplayMember = "SubjectName";
@@ -241,18 +241,26 @@
             tabControlMarks.Visible = true;
             tabControlMarks.BringToFront();
         }
-        private void dataGridViewMarksFirstTerm_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewMarks_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            MarksWithWords(dataGridViewMarksFirstTerm);
+            MarksWithWords(dataGridViewMarks);
         }
-        private void buttonSaveMarksFirstTerm_Click(object sender, EventArgs e)
+        private void buttonSaveMarks_Click(object sender, EventArgs e)
         {
             try
             {
-                if (dataGridViewMarksFirstTerm.Rows.Count != 0)
+                if (dataGridViewMarks.Rows.Count != 0)
                 {
-                    Classes.MarkDA.SaveMark(dataGridViewMarksFirstTerm, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), 1);
-                    ChangesMadeSuccessfully(labelSuccessFirstTerm, timerSuccessSaveMarks);
+                    if (tabControlMarks.SelectedIndex != 3)
+                    {
+                        Classes.MarkDA.SaveMark(dataGridViewMarks, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), (byte)tabControlMarks.SelectedIndex);
+                    }
+                    else
+                    {
+                        Classes.MarkDA.SaveMark(dataGridViewMarksYear, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), (byte)tabControlMarks.SelectedIndex);
+                        Classes.HoursStudiedSubjectDA.SaveHoursStudiedSubject(dataGridViewMarksYear, dataGridViewHoursStudiedSubject, teacherID);
+                    }
+                    ChangesMadeSuccessfully(labelSuccessSaveMarks, timerSuccessSaveMarks);
                 }
                 else
                 {
@@ -273,24 +281,10 @@
             }
 
         }
-        private void comboBoxStudentsNamesFirstTerm_MouseEnter(object sender, EventArgs e)
+        private void comboBoxStudentsNames_MouseEnter(object sender, EventArgs e)
         {
             ParseStudentsToComboBox(comboBoxStudentsNames);
-            comboBoxStudentsNames.MouseEnter -= comboBoxStudentsNamesFirstTerm_MouseEnter;
-        }
-        private void buttonSaveMarksSecondTerm_Click(object sender, EventArgs e)
-        {
-            Classes.MarkDA.SaveMark(dataGridViewMarksSecondTerm, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), 2);
-            ChangesMadeSuccessfully(labelSuccessSecondTerm, timerSuccessSaveMarks);
-        }
-        private void dataGridViewMarksSecondTerm_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            MarksWithWords(dataGridViewMarksSecondTerm);
-        }
-        private void buttonSaveMarksYear_Click(object sender, EventArgs e)
-        {
-            Classes.MarkDA.SaveMark(dataGridViewMarksYear, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), 3);
-            ChangesMadeSuccessfully(labelSuccessSaveMarks, timerSuccessSaveMarks);
+            comboBoxStudentsNames.MouseEnter -= comboBoxStudentsNames_MouseEnter;
         }
         private void dataGridViewMarksYear_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -301,32 +295,70 @@
             if (tabControlMarks.SelectedTab == tabControlMarks.TabPages[1])
             {
                 comboBoxStudentsNames.Parent = panelMarksFirstTerm;
+                dataGridViewMarks.Parent = panelMarksFirstTerm;
+                buttonSaveMarks.Parent = panelMarksFirstTerm;
+                labelSuccessSaveMarks.Parent = panelMarksFirstTerm;
+
+                labelSuccessSaveMarks.BringToFront();
+                buttonSaveMarks.BringToFront();
                 comboBoxStudentsNames.BringToFront();
+                dataGridViewMarks.BringToFront();
+                if (dataGridViewMarks.Rows.Count > 0)
+                {
+                    dataGridViewMarks.CurrentCell.Selected = false;
+                }
             }
             if (tabControlMarks.SelectedTab == tabControlMarks.TabPages[2])
             {
                 comboBoxStudentsNames.Parent = panelMarksSecondTerm;
+                dataGridViewMarks.Parent = panelMarksSecondTerm;
+                buttonSaveMarks.Parent = panelMarksSecondTerm;
+                labelSuccessSaveMarks.Parent = panelMarksSecondTerm;
+
+                labelSuccessSaveMarks.BringToFront();
+                buttonSaveMarks.BringToFront();
                 comboBoxStudentsNames.BringToFront();
+                dataGridViewMarks.BringToFront();
+                if(dataGridViewMarks.Rows.Count>0)
+                {
+                    dataGridViewMarks.CurrentCell.Selected = false;
+                }
             }
             if (tabControlMarks.SelectedTab == tabControlMarks.TabPages[3])
             {
                 comboBoxStudentsNames.Parent = panelMarksYear;
+                buttonSaveMarks.Parent = panelMarksYear;
+                labelSuccessSaveMarks.Parent = panelMarksYear;
+                if (dataGridViewHoursStudiedSubject.Rows.Count != dataGridViewMarksYear.Rows.Count)
+                {
+                    var m = dataGridViewMarksYear.Rows.Count;
+                    var n = dataGridViewHoursStudiedSubject.Rows.Count;
+                    for (int i = 0; i < m - n; i++)
+                    {
+                        dataGridViewHoursStudiedSubject.Rows.Add();
+                    }
+                }
                 comboBoxStudentsNames.BringToFront();
+                labelSuccessSaveMarks.BringToFront();
+                if (dataGridViewMarksYear.Rows.Count>0)
+                {
+                    dataGridViewMarksYear.CurrentCell.Selected = false;
+                }
+                if (dataGridViewHoursStudiedSubject.Rows.Count > 0)
+                {
+                    dataGridViewHoursStudiedSubject.CurrentCell.Selected = false;
+                }                    
             }
         }
         private void checkedListBoxSubjects_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             var selectedSubjectName = checkedListBoxSubjects.SelectedValue.ToString();
-            ParseSubjectsToDataGridView(dataGridViewMarksFirstTerm, e, selectedSubjectName);
-            ParseSubjectsToDataGridView(dataGridViewMarksSecondTerm, e, selectedSubjectName);
+            ParseSubjectsToDataGridView(dataGridViewMarks, e, selectedSubjectName);
             ParseSubjectsToDataGridView(dataGridViewMarksYear, e, selectedSubjectName);
-
         }
         private void timerSuccess_Tick(object sender, EventArgs e)
         {
             labelSuccessSaveMarks.Visible = false;
-            labelSuccessSecondTerm.Visible = false;
-            labelSuccessFirstTerm.Visible = false;
             timerSuccessSaveMarks.Stop();
         }
         #endregion
@@ -854,19 +886,26 @@
         }
         private void comboBoxStudentsNamesDiplom_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            var foreignLanguagesLabels = new List<Label>();
-            foreignLanguagesLabels.Add(labelFirstForeignLanguage);
-            foreignLanguagesLabels.Add(labelSecondForeignLanguage);
-            foreignLanguagesLabels.Add(labelThirdForeignLanguage);
-            var foreignLanguages = Classes.SubjectDA.GetForeignLanguage(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()));
-            for (int i = 0; i < foreignLanguages.Count; i++)
+            try
             {
-                foreignLanguagesLabels[i].Text = foreignLanguages[i].SubjectName;
+                var foreignLanguagesLabels = new List<Label>();
+                foreignLanguagesLabels.Add(labelFirstForeignLanguage);
+                foreignLanguagesLabels.Add(labelSecondForeignLanguage);
+                foreignLanguagesLabels.Add(labelThirdForeignLanguage);
+                var foreignLanguages = Classes.SubjectDA.GetForeignLanguage(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()));
+                for (int i = 0; i < foreignLanguages.Count; i++)
+                {
+                    foreignLanguagesLabels[i].Text = foreignLanguages[i].SubjectName;
+                }
+                clearDiplomFields();
+                ShowDiplomInfo();
+                ShowDiplomMarks();
+                tabPageInfo.Focus();
             }
-            clearDiplomFields();
-            ShowDiplomInfo();
-            ShowDiplomMarks();
-            tabPageInfo.Focus();
+            catch (Exception)
+            {
+                MessageBox.Show("За този ученик няма данни!");
+            }
         }
         private void ShowDiplomMarks()
         {
@@ -932,8 +971,8 @@
             ClearLabel(labelFourthExtraSubjectMarkWords);
             var studiedExtraSubjects = Classes.DiplomsDA.GetAllDiplomMarks(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), "СИП");
             var studiedExtraSubjectsNamesLabels = new List<Label> { labelFirstExtraSubject, labelSecondExtraSubject, labelThirdExtraSubject, labelFourthExtraSubject, labelFourthExtraSubject };
-            var studiedExtraSubjectsMarks = new List<Label> { labelFirstExtraSubjectMark, labelSecondExtraSubjectMark, labelThirdExtraSubjectMark, labelFourthExtraSubjectMark};
-            var studeiedExtraSubjectsMarksWords = new List<Label> { labelFirstExtraSubjectMarkWords, labelSecondExtraSubjectMarkWords, labelThirdExtraSubjectMarkWords, labelFourthExtraSubjectMarkWords};
+            var studiedExtraSubjectsMarks = new List<Label> { labelFirstExtraSubjectMark, labelSecondExtraSubjectMark, labelThirdExtraSubjectMark, labelFourthExtraSubjectMark };
+            var studeiedExtraSubjectsMarksWords = new List<Label> { labelFirstExtraSubjectMarkWords, labelSecondExtraSubjectMarkWords, labelThirdExtraSubjectMarkWords, labelFourthExtraSubjectMarkWords };
             for (int i = 0; i < studiedExtraSubjects.Count; i++)
             {
 
@@ -1061,10 +1100,10 @@
         }
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            tabPageInfo.VerticalScroll.Value = tabPageInfo.VerticalScroll.Maximum;
             for (int i = 0; i < tabControlDiplom.TabPages.Count; i++)
             {
                 tabControlDiplom.SelectedIndex = i;
+                tabControlDiplom.TabPages[i].VerticalScroll.Value = tabControlDiplom.TabPages[i].VerticalScroll.Maximum;
                 Print(tabControlDiplom.TabPages[i]);
                 //printPreviewDialog.ShowDialog();
                 printDocument.Print();
@@ -1079,5 +1118,23 @@
             // - 29 is set so it cuts the combobox for selecting students for better vizualisation
         }
         #endregion
+
+        private void comboBoxStudentsNames_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            clearMarksDatagridView(dataGridViewMarks);
+        }
+        private void clearMarksDatagridView(DataGridView gridView)
+        {
+            for (int j = 1; j < gridView.Columns.Count; j++)
+                for (int i = 0; i < gridView.Rows.Count; i++)
+                {
+                    gridView.Rows[i].Cells[j].Value = "";
+                }
+        }
+
+        private void buttonSignOut_Click(object sender, EventArgs e)
+        {
+            Classes.LogInClass.LogOut(this);
+        }
     }
 }

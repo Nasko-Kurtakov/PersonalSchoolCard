@@ -27,9 +27,15 @@
                         var newTeacherForm = new TeacherForm(loggedTeacherID);
                         newTeacherForm.Show();
 
-                    }
-                
+                    }                
             }
+        }
+        public static void LogOut(Form form)
+        {
+            var myLoginForm = new LoginForm();
+            myLoginForm.Show();
+            form.Hide();
+            form.Dispose();
         }
     }
 }
