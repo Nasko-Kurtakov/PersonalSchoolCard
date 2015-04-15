@@ -69,6 +69,10 @@
         {
             Application.Exit();
         }
+        private void buttonSignOut_Click(object sender, EventArgs e)
+        {
+            Classes.SignClass.LogOut(this);
+        }
 
         #region//editing students info methods
         private void buttonEditStudentsInfo_Click(object sender, EventArgs e)
@@ -251,14 +255,10 @@
             {
                 if (dataGridViewMarks.Rows.Count != 0)
                 {
-                    if (tabControlMarks.SelectedIndex != 3)
+                    Classes.MarkDA.SaveMark(dataGridViewMarks, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), (byte)tabControlMarks.SelectedIndex);
+                    if (tabControlMarks.SelectedIndex == 3)
                     {
-                        Classes.MarkDA.SaveMark(dataGridViewMarks, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), (byte)tabControlMarks.SelectedIndex);
-                    }
-                    else
-                    {
-                        Classes.MarkDA.SaveMark(dataGridViewMarksYear, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), (byte)tabControlMarks.SelectedIndex);
-                        Classes.HoursStudiedSubjectDA.SaveHoursStudiedSubject(dataGridViewMarksYear, dataGridViewHoursStudiedSubject, teacherID);
+                        Classes.HoursStudiedSubjectDA.SaveHoursStudiedSubject(dataGridViewMarks, dataGridViewHoursStudiedSubject, teacherID);
                     }
                     ChangesMadeSuccessfully(labelSuccessSaveMarks, timerSuccessSaveMarks);
                 }
@@ -279,16 +279,11 @@
             {
                 MessageBox.Show("Данните, които искате да запишете са вече въведени");
             }
-
         }
         private void comboBoxStudentsNames_MouseEnter(object sender, EventArgs e)
         {
             ParseStudentsToComboBox(comboBoxStudentsNames);
             comboBoxStudentsNames.MouseEnter -= comboBoxStudentsNames_MouseEnter;
-        }
-        private void dataGridViewMarksYear_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            MarksWithWords(dataGridViewMarksYear);
         }
         private void tabControlMarks_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -298,6 +293,7 @@
                 dataGridViewMarks.Parent = panelMarksFirstTerm;
                 buttonSaveMarks.Parent = panelMarksFirstTerm;
                 labelSuccessSaveMarks.Parent = panelMarksFirstTerm;
+                dataGridViewMarks.Location = new Point(262, 206);
 
                 labelSuccessSaveMarks.BringToFront();
                 buttonSaveMarks.BringToFront();
@@ -314,12 +310,13 @@
                 dataGridViewMarks.Parent = panelMarksSecondTerm;
                 buttonSaveMarks.Parent = panelMarksSecondTerm;
                 labelSuccessSaveMarks.Parent = panelMarksSecondTerm;
+                dataGridViewMarks.Location = new Point(262, 206);
 
                 labelSuccessSaveMarks.BringToFront();
                 buttonSaveMarks.BringToFront();
                 comboBoxStudentsNames.BringToFront();
                 dataGridViewMarks.BringToFront();
-                if(dataGridViewMarks.Rows.Count>0)
+                if (dataGridViewMarks.Rows.Count > 0)
                 {
                     dataGridViewMarks.CurrentCell.Selected = false;
                 }
@@ -328,38 +325,29 @@
             {
                 comboBoxStudentsNames.Parent = panelMarksYear;
                 buttonSaveMarks.Parent = panelMarksYear;
+                dataGridViewMarks.Parent = panelMarksYear;
                 labelSuccessSaveMarks.Parent = panelMarksYear;
-                if (dataGridViewHoursStudiedSubject.Rows.Count != dataGridViewMarksYear.Rows.Count)
-                {
-                    var m = dataGridViewMarksYear.Rows.Count;
-                    var n = dataGridViewHoursStudiedSubject.Rows.Count;
-                    for (int i = 0; i < m - n; i++)
-                    {
-                        dataGridViewHoursStudiedSubject.Rows.Add();
-                    }
-                }
+                dataGridViewMarks.Location = new Point(175, 208);
+
+                buttonSaveMarks.BringToFront();
                 comboBoxStudentsNames.BringToFront();
                 labelSuccessSaveMarks.BringToFront();
-                if (dataGridViewMarksYear.Rows.Count>0)
-                {
-                    dataGridViewMarksYear.CurrentCell.Selected = false;
-                }
-                if (dataGridViewHoursStudiedSubject.Rows.Count > 0)
-                {
-                    dataGridViewHoursStudiedSubject.CurrentCell.Selected = false;
-                }                    
+                addRowsToHoursStudiedGrid(dataGridViewMarks, dataGridViewHoursStudiedSubject);
             }
         }
         private void checkedListBoxSubjects_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             var selectedSubjectName = checkedListBoxSubjects.SelectedValue.ToString();
             ParseSubjectsToDataGridView(dataGridViewMarks, e, selectedSubjectName);
-            ParseSubjectsToDataGridView(dataGridViewMarksYear, e, selectedSubjectName);
         }
         private void timerSuccess_Tick(object sender, EventArgs e)
         {
             labelSuccessSaveMarks.Visible = false;
             timerSuccessSaveMarks.Stop();
+        }
+        private void comboBoxStudentsNames_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            clearMarksDatagridView(dataGridViewMarks);
         }
         #endregion
 
@@ -368,23 +356,40 @@
         {
             var selectedSubjectName = checkedListBoxExtraSubjects.SelectedValue.ToString();
             ParseSubjectsToDataGridView(dataGridViewExtraSubjectsFirstTerm, e, selectedSubjectName);
-            ParseSubjectsToDataGridView(dataGridViewExtraSubjectsSecondTerm, e, selectedSubjectName);
-            ParseSubjectsToDataGridView(dataGridViewExtraSubjectsYear, e, selectedSubjectName);
+            //ParseSubjectsToDataGridView(dataGridViewExtraSubjectsSecondTerm, e, selectedSubjectName);
+            //ParseSubjectsToDataGridView(dataGridViewExtraSubjectsYear, e, selectedSubjectName);
         }
         private void buttonSaveMarksExtraSubjectsFirstTerm_Click(object sender, EventArgs e)
         {
-            Classes.MarkDA.SaveMark(dataGridViewExtraSubjectsFirstTerm, teacherID, long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString()), 1, true);
-            ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarksFirstTerm, timerSaveSuccessExtraSubjects);
-        }
-        private void buttonSaveMarksExtraSubjectsSecondTerm_Click(object sender, EventArgs e)
-        {
-            Classes.MarkDA.SaveMark(dataGridViewExtraSubjectsFirstTerm, teacherID, long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString()), 2, true);
-            ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarksSecondTerm, timerSaveSuccessExtraSubjects);
-        }
-        private void buttonSaveMarksExtraSubjectsYear_Click(object sender, EventArgs e)
-        {
-            Classes.MarkDA.SaveMark(dataGridViewExtraSubjectsFirstTerm, teacherID, long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString()), 3, true);
-            ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarksYear, timerSaveSuccessExtraSubjects);
+            try
+            {
+                if (dataGridViewExtraSubjectsFirstTerm.Rows.Count != 0)
+                {
+                    Classes.MarkDA.SaveMark(dataGridViewExtraSubjectsFirstTerm, teacherID, long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString()), (byte)tabControlMarksExtraSubjects.SelectedIndex, true);
+
+                    if (tabControlMarksExtraSubjects.SelectedIndex == 3)
+                    {
+                        Classes.HoursStudiedSubjectDA.SaveHoursStudiedSubject(dataGridViewExtraSubjectsFirstTerm, dataGridViewHoursStudiedExtraSubjects, teacherID);
+                    }
+                    ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarksFirstTerm, timerSaveSuccessExtraSubjects);
+                }
+                else
+                {
+                    throw new InvalidProgramException();
+                }
+            }
+            catch (InvalidProgramException)
+            {
+                MessageBox.Show("Не сте избрали учебни предмети");
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Не сте въвели данни");
+            }
+            catch (DbUpdateException)
+            {
+                MessageBox.Show("Данните, които искате да запишете са вече въведени");
+            }
         }
         private void buttonAddMarksExtraSubjects_Click(object sender, EventArgs e)
         {
@@ -398,14 +403,6 @@
         {
             MarksWithWords(dataGridViewExtraSubjectsFirstTerm);
         }
-        private void dataGridViewExtraSubjectsSecondTerm_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            MarksWithWords(dataGridViewExtraSubjectsSecondTerm);
-        }
-        private void dataGridViewExtraSubjectsYear_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            MarksWithWords(dataGridViewExtraSubjectsYear);
-        }
         private void comboBoxStudentsNamesExtraSubjects_MouseEnter(object sender, EventArgs e)
         {
             ParseStudentsToComboBox(comboBoxStudentsNamesExtraSubjects);
@@ -413,7 +410,7 @@
         }
         private void timerSaveSuccessExtraSubjects_Tick(object sender, EventArgs e)
         {
-            labelSaveSuccessExtraSubjectsMarksYear.Visible = false;
+            labelSaveSuccessExtraSubjectsMarksFirstTerm.Visible = false;
             timerSaveSuccessExtraSubjects.Stop();
         }
         private void tabControlMarksExtraSubjects_SelectedIndexChanged(object sender, EventArgs e)
@@ -421,18 +418,52 @@
             if (tabControlMarksExtraSubjects.SelectedTab == tabControlMarksExtraSubjects.TabPages[1])
             {
                 comboBoxStudentsNamesExtraSubjects.Parent = panelExtraSubjectsFirstTerm;
+                dataGridViewExtraSubjectsFirstTerm.Parent = panelExtraSubjectsFirstTerm;
+                buttonSaveMarksExtraSubjectsFirstTerm.Parent = panelExtraSubjectsFirstTerm;
+                labelSaveSuccessExtraSubjectsMarksFirstTerm.Parent = panelExtraSubjectsFirstTerm;
+
+                labelSaveSuccessExtraSubjectsMarksFirstTerm.BringToFront();
+                panelExtraSubjectsFirstTerm.BringToFront();
+                dataGridViewExtraSubjectsFirstTerm.BringToFront();
                 comboBoxStudentsNamesExtraSubjects.BringToFront();
+                if (dataGridViewExtraSubjectsFirstTerm.Rows.Count > 0)
+                {
+                    dataGridViewExtraSubjectsFirstTerm.CurrentCell.Selected = false;
+                }
             }
             if (tabControlMarksExtraSubjects.SelectedTab == tabControlMarksExtraSubjects.TabPages[2])
             {
                 comboBoxStudentsNamesExtraSubjects.Parent = panelExtraSubjectsSecondTerm;
+                dataGridViewExtraSubjectsFirstTerm.Parent = panelExtraSubjectsSecondTerm;
+                buttonSaveMarksExtraSubjectsFirstTerm.Parent = panelExtraSubjectsSecondTerm;
+                labelSaveSuccessExtraSubjectsMarksFirstTerm.Parent = panelExtraSubjectsSecondTerm;
+
+                labelSaveSuccessExtraSubjectsMarksFirstTerm.BringToFront();
+                panelExtraSubjectsFirstTerm.BringToFront();
+                dataGridViewExtraSubjectsFirstTerm.BringToFront();
                 comboBoxStudentsNamesExtraSubjects.BringToFront();
+                if (dataGridViewExtraSubjectsFirstTerm.Rows.Count > 0)
+                {
+                    dataGridViewExtraSubjectsFirstTerm.CurrentCell.Selected = false;
+                }
             }
             if (tabControlMarksExtraSubjects.SelectedTab == tabControlMarksExtraSubjects.TabPages[3])
             {
                 comboBoxStudentsNamesExtraSubjects.Parent = panelExtraSubjectsYearTerm;
+                dataGridViewExtraSubjectsFirstTerm.Parent = panelExtraSubjectsYearTerm;
+                buttonSaveMarksExtraSubjectsFirstTerm.Parent = panelExtraSubjectsYearTerm;
+                labelSaveSuccessExtraSubjectsMarksFirstTerm.Parent = panelExtraSubjectsYearTerm;
+
+                labelSaveSuccessExtraSubjectsMarksFirstTerm.BringToFront();
+                panelExtraSubjectsFirstTerm.BringToFront();
+                dataGridViewExtraSubjectsFirstTerm.BringToFront();
                 comboBoxStudentsNamesExtraSubjects.BringToFront();
+                addRowsToHoursStudiedGrid(dataGridViewExtraSubjectsFirstTerm, dataGridViewHoursStudiedExtraSubjects);
             }
+        }
+        private void comboBoxStudentsNamesExtraSubjects_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            clearMarksDatagridView(dataGridViewExtraSubjectsFirstTerm);
         }
         #endregion
 
@@ -555,6 +586,26 @@
             comboBox.DataSource = Classes.StudentDA.GetStudentByTeacher(teacherID);
             comboBox.Text = text;
         }
+        private void addRowsToHoursStudiedGrid(DataGridView dataGridViewMarks, DataGridView dataGridViewHoursStudiedSubject)
+        {
+            if (dataGridViewHoursStudiedSubject.Rows.Count != dataGridViewMarks.Rows.Count)
+            {
+                var m = dataGridViewMarks.Rows.Count;
+                var n = dataGridViewHoursStudiedSubject.Rows.Count;
+                for (int i = 0; i < m - n; i++)
+                {
+                    dataGridViewHoursStudiedSubject.Rows.Add();
+                }
+                if (dataGridViewMarks.Rows.Count > 0)
+                {
+                    dataGridViewMarks.CurrentCell.Selected = false;
+                }
+                if (dataGridViewHoursStudiedSubject.Rows.Count > 0)
+                {
+                    dataGridViewHoursStudiedSubject.CurrentCell.Selected = false;
+                }
+            }
+        }
         private void ChangesMadeSuccessfully(Label infoLabel, Timer timer)
         {
             infoLabel.Visible = true;
@@ -582,7 +633,14 @@
 
             }
         }
-
+        private void clearMarksDatagridView(DataGridView gridView)
+        {
+            for (int j = 1; j < gridView.Columns.Count; j++)
+                for (int i = 0; i < gridView.Rows.Count; i++)
+                {
+                    gridView.Rows[i].Cells[j].Value = "";
+                }
+        }
         private void ShowSchoolYears(TextBox firstYear, TextBox secondYear, TextBox thirdYear, TextBox fourthYear)
         {
             firstYear.Text = string.Format("{0}/{1} {2}", DateTime.Now.Year - 4, DateTime.Now.Year - 3, firstYear.Text);
@@ -1085,7 +1143,7 @@
         #endregion
 
         #region //Print
-        //печат на формата като графичен файл
+        //prints the form as graphic file
         Bitmap memoryImage;
         public void GetPrintArea(TabPage tbcontrl)
         {
@@ -1094,7 +1152,6 @@
         }
         public void Print(TabPage tbcontrl)
         {
-            //tabControlDiplom = tbcontrl;
             GetPrintArea(tbcontrl);
             printPreviewDialog.Document = printDocument;
         }
@@ -1105,7 +1162,6 @@
                 tabControlDiplom.SelectedIndex = i;
                 tabControlDiplom.TabPages[i].VerticalScroll.Value = tabControlDiplom.TabPages[i].VerticalScroll.Maximum;
                 Print(tabControlDiplom.TabPages[i]);
-                //printPreviewDialog.ShowDialog();
                 printDocument.Print();
             }
             tabControlDiplom.SelectedIndex = 0;
@@ -1118,23 +1174,5 @@
             // - 29 is set so it cuts the combobox for selecting students for better vizualisation
         }
         #endregion
-
-        private void comboBoxStudentsNames_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            clearMarksDatagridView(dataGridViewMarks);
-        }
-        private void clearMarksDatagridView(DataGridView gridView)
-        {
-            for (int j = 1; j < gridView.Columns.Count; j++)
-                for (int i = 0; i < gridView.Rows.Count; i++)
-                {
-                    gridView.Rows[i].Cells[j].Value = "";
-                }
-        }
-
-        private void buttonSignOut_Click(object sender, EventArgs e)
-        {
-            Classes.LogInClass.LogOut(this);
-        }
     }
 }

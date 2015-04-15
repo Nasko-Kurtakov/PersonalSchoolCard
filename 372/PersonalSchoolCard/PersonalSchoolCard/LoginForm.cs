@@ -21,7 +21,7 @@ namespace PersonalShcoolCard
         {
             try
             {
-                Classes.LogInClass.LogIn(textBoxUserName.Text, textBoxPassword.Text);
+                Classes.SignClass.LogIn(textBoxUserName.Text, textBoxPassword.Text);
                 this.Close();
             }
             catch (System.Data.Entity.Core.EntityException)

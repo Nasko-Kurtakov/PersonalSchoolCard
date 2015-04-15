@@ -5,8 +5,9 @@
     using System.Windows.Forms;
     using System.Linq;
     using PersonalSchoolCard.Data;
-    public class LogInClass
+    public class SignClass
     {
+        //this class is used for loging in and out users
         public static void LogIn(string userName,string password)
         {
             if (userName=="admin" && password=="admin")

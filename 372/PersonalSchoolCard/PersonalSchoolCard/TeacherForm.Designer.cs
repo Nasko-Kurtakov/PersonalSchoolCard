@@ -30,10 +30,11 @@ namespace PersonalShcoolCard
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.buttonSignOut = new System.Windows.Forms.Button();
             this.buttonShowDiplomReady = new System.Windows.Forms.Button();
             this.buttonShowDiplom = new System.Windows.Forms.Button();
             this.buttonAddMarksFromExams = new System.Windows.Forms.Button();
@@ -76,8 +77,9 @@ namespace PersonalShcoolCard
             this.label15 = new System.Windows.Forms.Label();
             this.tabPageYear = new System.Windows.Forms.TabPage();
             this.panelMarksYear = new System.Windows.Forms.Panel();
+            this.dataGridViewHoursStudiedSubject = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox34 = new System.Windows.Forms.TextBox();
-            this.dataGridViewMarksYear = new System.Windows.Forms.DataGridView();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -374,27 +376,15 @@ namespace PersonalShcoolCard
             this.comboBoxStudentsNamesExtraSubjects = new System.Windows.Forms.ComboBox();
             this.tabPageMarksExtraSubjectsSecondTerm = new System.Windows.Forms.TabPage();
             this.panelExtraSubjectsSecondTerm = new System.Windows.Forms.Panel();
-            this.labelSaveSuccessExtraSubjectsMarksSecondTerm = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
-            this.buttonSaveMarksExtraSubjectsSecondTerm = new System.Windows.Forms.Button();
-            this.dataGridViewExtraSubjectsSecondTerm = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.СИПSecondTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label26 = new System.Windows.Forms.Label();
             this.tabPageMarksExtraSubjectsYear = new System.Windows.Forms.TabPage();
             this.panelExtraSubjectsYearTerm = new System.Windows.Forms.Panel();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
-            this.labelSaveSuccessExtraSubjectsMarksYear = new System.Windows.Forms.Label();
-            this.buttonSaveMarksExtraSubjectsYear = new System.Windows.Forms.Button();
-            this.dataGridViewExtraSubjectsYear = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.СИПYearGrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label28 = new System.Windows.Forms.Label();
             this.tabControlMarksSummary = new System.Windows.Forms.TabControl();
             this.tabPageMandatoryAndChosenSubjects = new System.Windows.Forms.TabPage();
@@ -509,13 +499,9 @@ namespace PersonalShcoolCard
             this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ЗПMarkYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ЗИПMarkYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewHoursStudiedSubject = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewHoursStudiedExtraSubjects = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox39 = new System.Windows.Forms.TextBox();
             this.textBoxPersonalCardNumber = new PersonalShcoolCard.Classes.WaterMark();
             this.textBoxDateOfBirth = new PersonalShcoolCard.Classes.WaterMark();
             this.textBoxMobilePhone = new PersonalShcoolCard.Classes.WaterMark();
@@ -525,7 +511,12 @@ namespace PersonalShcoolCard
             this.textBoxLastName = new PersonalShcoolCard.Classes.WaterMark();
             this.textBoxSecondName = new PersonalShcoolCard.Classes.WaterMark();
             this.textBoxFirstName = new PersonalShcoolCard.Classes.WaterMark();
-            this.buttonSignOut = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -541,7 +532,7 @@ namespace PersonalShcoolCard
             this.panelMarksSecondTerm.SuspendLayout();
             this.tabPageYear.SuspendLayout();
             this.panelMarksYear.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarksYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedSubject)).BeginInit();
             this.tabControlDiplom.SuspendLayout();
             this.tabPageInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentPortrait)).BeginInit();
@@ -564,10 +555,8 @@ namespace PersonalShcoolCard
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsFirstTerm)).BeginInit();
             this.tabPageMarksExtraSubjectsSecondTerm.SuspendLayout();
             this.panelExtraSubjectsSecondTerm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsSecondTerm)).BeginInit();
             this.tabPageMarksExtraSubjectsYear.SuspendLayout();
             this.panelExtraSubjectsYearTerm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsYear)).BeginInit();
             this.tabControlMarksSummary.SuspendLayout();
             this.tabPageMandatoryAndChosenSubjects.SuspendLayout();
             this.panelMarksMandatoryAndChosenSubjectsSummary.SuspendLayout();
@@ -576,7 +565,8 @@ namespace PersonalShcoolCard
             this.panelMarksExtraSubjectsSummary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiplomExtraSubjects)).BeginInit();
             this.panelMarksExam.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedSubject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedExtraSubjects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -606,6 +596,24 @@ namespace PersonalShcoolCard
             this.splitContainer1.Size = new System.Drawing.Size(1284, 730);
             this.splitContainer1.SplitterDistance = 242;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // buttonSignOut
+            // 
+            this.buttonSignOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSignOut.BackgroundImage")));
+            this.buttonSignOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSignOut.FlatAppearance.BorderSize = 0;
+            this.buttonSignOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.buttonSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.buttonSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSignOut.Location = new System.Drawing.Point(20, 670);
+            this.buttonSignOut.Name = "buttonSignOut";
+            this.buttonSignOut.Size = new System.Drawing.Size(208, 51);
+            this.buttonSignOut.TabIndex = 13;
+            this.buttonSignOut.Text = "Излизане от акаунта";
+            this.buttonSignOut.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonSignOut.UseVisualStyleBackColor = true;
+            this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
             // 
             // buttonShowDiplomReady
             // 
@@ -758,12 +766,12 @@ namespace PersonalShcoolCard
             // panelParent
             // 
             this.panelParent.Controls.Add(this.tabControlMarks);
+            this.panelParent.Controls.Add(this.tabControlMarksExtraSubjects);
             this.panelParent.Controls.Add(this.tabControlDiplom);
             this.panelParent.Controls.Add(this.panelWelcome);
             this.panelParent.Controls.Add(this.panelAddAbsences);
             this.panelParent.Controls.Add(this.panelEditStudentsInfo);
             this.panelParent.Controls.Add(this.panelEditTeacherInfo);
-            this.panelParent.Controls.Add(this.tabControlMarksExtraSubjects);
             this.panelParent.Controls.Add(this.tabControlMarksSummary);
             this.panelParent.Controls.Add(this.panelMarksExam);
             this.panelParent.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -778,10 +786,11 @@ namespace PersonalShcoolCard
             this.tabControlMarks.Controls.Add(this.tabPageFirstTerm);
             this.tabControlMarks.Controls.Add(this.tabPageSecondTerm);
             this.tabControlMarks.Controls.Add(this.tabPageYear);
-            this.tabControlMarks.Location = new System.Drawing.Point(0, 79);
+            this.tabControlMarks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlMarks.Location = new System.Drawing.Point(0, 0);
             this.tabControlMarks.Name = "tabControlMarks";
             this.tabControlMarks.SelectedIndex = 0;
-            this.tabControlMarks.Size = new System.Drawing.Size(1038, 37);
+            this.tabControlMarks.Size = new System.Drawing.Size(1038, 730);
             this.tabControlMarks.TabIndex = 1150;
             this.tabControlMarks.Visible = false;
             this.tabControlMarks.SelectedIndexChanged += new System.EventHandler(this.tabControlMarks_SelectedIndexChanged);
@@ -792,7 +801,7 @@ namespace PersonalShcoolCard
             this.tabPageSelectSubjects.Controls.Add(this.panelSelectSubjects);
             this.tabPageSelectSubjects.Location = new System.Drawing.Point(4, 22);
             this.tabPageSelectSubjects.Name = "tabPageSelectSubjects";
-            this.tabPageSelectSubjects.Size = new System.Drawing.Size(1030, 11);
+            this.tabPageSelectSubjects.Size = new System.Drawing.Size(1030, 704);
             this.tabPageSelectSubjects.TabIndex = 3;
             this.tabPageSelectSubjects.Text = "Предмети";
             // 
@@ -806,7 +815,7 @@ namespace PersonalShcoolCard
             this.panelSelectSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelSelectSubjects.Location = new System.Drawing.Point(0, 0);
             this.panelSelectSubjects.Name = "panelSelectSubjects";
-            this.panelSelectSubjects.Size = new System.Drawing.Size(1030, 11);
+            this.panelSelectSubjects.Size = new System.Drawing.Size(1030, 704);
             this.panelSelectSubjects.TabIndex = 1133;
             // 
             // label17
@@ -1156,9 +1165,9 @@ namespace PersonalShcoolCard
             // panelMarksYear
             // 
             this.panelMarksYear.AutoScroll = true;
+            this.panelMarksYear.Controls.Add(this.dataGridView1);
             this.panelMarksYear.Controls.Add(this.dataGridViewHoursStudiedSubject);
             this.panelMarksYear.Controls.Add(this.textBox34);
-            this.panelMarksYear.Controls.Add(this.dataGridViewMarksYear);
             this.panelMarksYear.Controls.Add(this.textBox8);
             this.panelMarksYear.Controls.Add(this.textBox9);
             this.panelMarksYear.Controls.Add(this.textBox10);
@@ -1171,6 +1180,31 @@ namespace PersonalShcoolCard
             this.panelMarksYear.Size = new System.Drawing.Size(1030, 704);
             this.panelMarksYear.TabIndex = 1140;
             // 
+            // dataGridViewHoursStudiedSubject
+            // 
+            this.dataGridViewHoursStudiedSubject.AllowUserToAddRows = false;
+            this.dataGridViewHoursStudiedSubject.AllowUserToDeleteRows = false;
+            this.dataGridViewHoursStudiedSubject.AllowUserToResizeColumns = false;
+            this.dataGridViewHoursStudiedSubject.AllowUserToResizeRows = false;
+            this.dataGridViewHoursStudiedSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewHoursStudiedSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHoursStudiedSubject.ColumnHeadersVisible = false;
+            this.dataGridViewHoursStudiedSubject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridViewHoursStudiedSubject.Location = new System.Drawing.Point(693, 208);
+            this.dataGridViewHoursStudiedSubject.MultiSelect = false;
+            this.dataGridViewHoursStudiedSubject.Name = "dataGridViewHoursStudiedSubject";
+            this.dataGridViewHoursStudiedSubject.RowHeadersVisible = false;
+            this.dataGridViewHoursStudiedSubject.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridViewHoursStudiedSubject.Size = new System.Drawing.Size(109, 443);
+            this.dataGridViewHoursStudiedSubject.TabIndex = 1149;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Хорариум";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
             // textBox34
             // 
             this.textBox34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1182,29 +1216,6 @@ namespace PersonalShcoolCard
             this.textBox34.TabIndex = 1148;
             this.textBox34.Text = "\r\n\r\n\r\n\r\nХОРАРИУМ";
             this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dataGridViewMarksYear
-            // 
-            this.dataGridViewMarksYear.AllowUserToAddRows = false;
-            this.dataGridViewMarksYear.AllowUserToDeleteRows = false;
-            this.dataGridViewMarksYear.AllowUserToResizeColumns = false;
-            this.dataGridViewMarksYear.AllowUserToResizeRows = false;
-            this.dataGridViewMarksYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewMarksYear.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMarksYear.ColumnHeadersVisible = false;
-            this.dataGridViewMarksYear.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn5,
-            this.ЗПMarkYear,
-            this.dataGridViewTextBoxColumn7,
-            this.ЗИПMarkYear});
-            this.dataGridViewMarksYear.Location = new System.Drawing.Point(175, 208);
-            this.dataGridViewMarksYear.MultiSelect = false;
-            this.dataGridViewMarksYear.Name = "dataGridViewMarksYear";
-            this.dataGridViewMarksYear.RowHeadersVisible = false;
-            this.dataGridViewMarksYear.Size = new System.Drawing.Size(519, 443);
-            this.dataGridViewMarksYear.TabIndex = 1146;
-            this.dataGridViewMarksYear.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarksYear_CellEndEdit);
             // 
             // textBox8
             // 
@@ -4373,7 +4384,7 @@ namespace PersonalShcoolCard
             this.tabPageChoseExtraSubjects.Location = new System.Drawing.Point(4, 22);
             this.tabPageChoseExtraSubjects.Name = "tabPageChoseExtraSubjects";
             this.tabPageChoseExtraSubjects.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageChoseExtraSubjects.Size = new System.Drawing.Size(1029, 13);
+            this.tabPageChoseExtraSubjects.Size = new System.Drawing.Size(1030, 704);
             this.tabPageChoseExtraSubjects.TabIndex = 3;
             this.tabPageChoseExtraSubjects.Text = "СИП предмети";
             // 
@@ -4387,7 +4398,7 @@ namespace PersonalShcoolCard
             this.panelChooseExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelChooseExtraSubjects.Location = new System.Drawing.Point(3, 3);
             this.panelChooseExtraSubjects.Name = "panelChooseExtraSubjects";
-            this.panelChooseExtraSubjects.Size = new System.Drawing.Size(1023, 7);
+            this.panelChooseExtraSubjects.Size = new System.Drawing.Size(1024, 698);
             this.panelChooseExtraSubjects.TabIndex = 1134;
             // 
             // label29
@@ -4478,13 +4489,14 @@ namespace PersonalShcoolCard
             this.dataGridViewExtraSubjectsFirstTerm.AllowUserToDeleteRows = false;
             this.dataGridViewExtraSubjectsFirstTerm.AllowUserToResizeColumns = false;
             this.dataGridViewExtraSubjectsFirstTerm.AllowUserToResizeRows = false;
+            this.dataGridViewExtraSubjectsFirstTerm.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewExtraSubjectsFirstTerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewExtraSubjectsFirstTerm.ColumnHeadersVisible = false;
             this.dataGridViewExtraSubjectsFirstTerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn8,
             this.СИПFirstTerm});
-            this.dataGridViewExtraSubjectsFirstTerm.Location = new System.Drawing.Point(349, 188);
+            this.dataGridViewExtraSubjectsFirstTerm.Location = new System.Drawing.Point(320, 179);
             this.dataGridViewExtraSubjectsFirstTerm.MultiSelect = false;
             this.dataGridViewExtraSubjectsFirstTerm.Name = "dataGridViewExtraSubjectsFirstTerm";
             this.dataGridViewExtraSubjectsFirstTerm.RowHeadersVisible = false;
@@ -4518,7 +4530,7 @@ namespace PersonalShcoolCard
             // 
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox15.Location = new System.Drawing.Point(549, 145);
+            this.textBox15.Location = new System.Drawing.Point(520, 137);
             this.textBox15.Margin = new System.Windows.Forms.Padding(0);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
@@ -4532,7 +4544,7 @@ namespace PersonalShcoolCard
             // textBox18
             // 
             this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox18.Location = new System.Drawing.Point(549, 78);
+            this.textBox18.Location = new System.Drawing.Point(520, 70);
             this.textBox18.Multiline = true;
             this.textBox18.Name = "textBox18";
             this.textBox18.ReadOnly = true;
@@ -4544,7 +4556,7 @@ namespace PersonalShcoolCard
             // textBox19
             // 
             this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox19.Location = new System.Drawing.Point(349, 78);
+            this.textBox19.Location = new System.Drawing.Point(320, 70);
             this.textBox19.Multiline = true;
             this.textBox19.Name = "textBox19";
             this.textBox19.ReadOnly = true;
@@ -4573,6 +4585,7 @@ namespace PersonalShcoolCard
             this.comboBoxStudentsNamesExtraSubjects.TabIndex = 1130;
             this.comboBoxStudentsNamesExtraSubjects.Text = "Изберете ученик от класа ви";
             this.comboBoxStudentsNamesExtraSubjects.ValueMember = "StudentID";
+            this.comboBoxStudentsNamesExtraSubjects.SelectionChangeCommitted += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjects_SelectionChangeCommitted);
             this.comboBoxStudentsNamesExtraSubjects.MouseEnter += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjects_MouseEnter);
             // 
             // tabPageMarksExtraSubjectsSecondTerm
@@ -4584,42 +4597,28 @@ namespace PersonalShcoolCard
             this.tabPageMarksExtraSubjectsSecondTerm.Location = new System.Drawing.Point(4, 22);
             this.tabPageMarksExtraSubjectsSecondTerm.Name = "tabPageMarksExtraSubjectsSecondTerm";
             this.tabPageMarksExtraSubjectsSecondTerm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMarksExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1029, 13);
+            this.tabPageMarksExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1030, 704);
             this.tabPageMarksExtraSubjectsSecondTerm.TabIndex = 1;
             this.tabPageMarksExtraSubjectsSecondTerm.Text = "Втори срок";
             // 
             // panelExtraSubjectsSecondTerm
             // 
             this.panelExtraSubjectsSecondTerm.AutoScroll = true;
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.labelSaveSuccessExtraSubjectsMarksSecondTerm);
             this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox14);
             this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox16);
             this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox30);
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.buttonSaveMarksExtraSubjectsSecondTerm);
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.dataGridViewExtraSubjectsSecondTerm);
             this.panelExtraSubjectsSecondTerm.Controls.Add(this.label26);
             this.panelExtraSubjectsSecondTerm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelExtraSubjectsSecondTerm.Location = new System.Drawing.Point(3, 3);
             this.panelExtraSubjectsSecondTerm.Name = "panelExtraSubjectsSecondTerm";
-            this.panelExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1023, 7);
+            this.panelExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1024, 698);
             this.panelExtraSubjectsSecondTerm.TabIndex = 1131;
-            // 
-            // labelSaveSuccessExtraSubjectsMarksSecondTerm
-            // 
-            this.labelSaveSuccessExtraSubjectsMarksSecondTerm.AutoSize = true;
-            this.labelSaveSuccessExtraSubjectsMarksSecondTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaveSuccessExtraSubjectsMarksSecondTerm.Location = new System.Drawing.Point(847, 456);
-            this.labelSaveSuccessExtraSubjectsMarksSecondTerm.Name = "labelSaveSuccessExtraSubjectsMarksSecondTerm";
-            this.labelSaveSuccessExtraSubjectsMarksSecondTerm.Size = new System.Drawing.Size(104, 25);
-            this.labelSaveSuccessExtraSubjectsMarksSecondTerm.TabIndex = 1143;
-            this.labelSaveSuccessExtraSubjectsMarksSecondTerm.Text = "Добавено";
-            this.labelSaveSuccessExtraSubjectsMarksSecondTerm.Visible = false;
             // 
             // textBox14
             // 
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox14.Location = new System.Drawing.Point(542, 162);
+            this.textBox14.Location = new System.Drawing.Point(520, 137);
             this.textBox14.Margin = new System.Windows.Forms.Padding(0);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
@@ -4633,7 +4632,7 @@ namespace PersonalShcoolCard
             // textBox16
             // 
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox16.Location = new System.Drawing.Point(542, 95);
+            this.textBox16.Location = new System.Drawing.Point(520, 70);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
@@ -4645,7 +4644,7 @@ namespace PersonalShcoolCard
             // textBox30
             // 
             this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox30.Location = new System.Drawing.Point(342, 95);
+            this.textBox30.Location = new System.Drawing.Point(320, 70);
             this.textBox30.Multiline = true;
             this.textBox30.Name = "textBox30";
             this.textBox30.ReadOnly = true;
@@ -4654,63 +4653,11 @@ namespace PersonalShcoolCard
             this.textBox30.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
             this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // buttonSaveMarksExtraSubjectsSecondTerm
-            // 
-            this.buttonSaveMarksExtraSubjectsSecondTerm.Location = new System.Drawing.Point(831, 391);
-            this.buttonSaveMarksExtraSubjectsSecondTerm.Name = "buttonSaveMarksExtraSubjectsSecondTerm";
-            this.buttonSaveMarksExtraSubjectsSecondTerm.Size = new System.Drawing.Size(136, 49);
-            this.buttonSaveMarksExtraSubjectsSecondTerm.TabIndex = 1138;
-            this.buttonSaveMarksExtraSubjectsSecondTerm.Text = "Запиши оценките";
-            this.buttonSaveMarksExtraSubjectsSecondTerm.UseVisualStyleBackColor = true;
-            this.buttonSaveMarksExtraSubjectsSecondTerm.Click += new System.EventHandler(this.buttonSaveMarksExtraSubjectsSecondTerm_Click);
-            // 
-            // dataGridViewExtraSubjectsSecondTerm
-            // 
-            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToAddRows = false;
-            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToDeleteRows = false;
-            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToResizeColumns = false;
-            this.dataGridViewExtraSubjectsSecondTerm.AllowUserToResizeRows = false;
-            this.dataGridViewExtraSubjectsSecondTerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExtraSubjectsSecondTerm.ColumnHeadersVisible = false;
-            this.dataGridViewExtraSubjectsSecondTerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.СИПSecondTerm});
-            this.dataGridViewExtraSubjectsSecondTerm.Location = new System.Drawing.Point(342, 205);
-            this.dataGridViewExtraSubjectsSecondTerm.MultiSelect = false;
-            this.dataGridViewExtraSubjectsSecondTerm.Name = "dataGridViewExtraSubjectsSecondTerm";
-            this.dataGridViewExtraSubjectsSecondTerm.RowHeadersVisible = false;
-            this.dataGridViewExtraSubjectsSecondTerm.Size = new System.Drawing.Size(379, 443);
-            this.dataGridViewExtraSubjectsSecondTerm.TabIndex = 1137;
-            this.dataGridViewExtraSubjectsSecondTerm.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExtraSubjectsSecondTerm_CellEndEdit);
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "SubjectName";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Предмети";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "ЗП-Първи скок";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 128;
-            // 
-            // СИПSecondTerm
-            // 
-            this.СИПSecondTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.СИПSecondTerm.HeaderText = "Оценка";
-            this.СИПSecondTerm.Name = "СИПSecondTerm";
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(368, 34);
+            this.label26.Location = new System.Drawing.Point(343, 20);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(405, 33);
             this.label26.TabIndex = 1131;
@@ -4723,31 +4670,30 @@ namespace PersonalShcoolCard
             this.tabPageMarksExtraSubjectsYear.Controls.Add(this.panelExtraSubjectsYearTerm);
             this.tabPageMarksExtraSubjectsYear.Location = new System.Drawing.Point(4, 22);
             this.tabPageMarksExtraSubjectsYear.Name = "tabPageMarksExtraSubjectsYear";
-            this.tabPageMarksExtraSubjectsYear.Size = new System.Drawing.Size(1029, 13);
+            this.tabPageMarksExtraSubjectsYear.Size = new System.Drawing.Size(1030, 704);
             this.tabPageMarksExtraSubjectsYear.TabIndex = 2;
             this.tabPageMarksExtraSubjectsYear.Text = "Годишени оценки";
             // 
             // panelExtraSubjectsYearTerm
             // 
             this.panelExtraSubjectsYearTerm.AutoScroll = true;
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.dataGridViewHoursStudiedExtraSubjects);
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox39);
             this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox20);
             this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox21);
             this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox22);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.labelSaveSuccessExtraSubjectsMarksYear);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.buttonSaveMarksExtraSubjectsYear);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.dataGridViewExtraSubjectsYear);
             this.panelExtraSubjectsYearTerm.Controls.Add(this.label28);
             this.panelExtraSubjectsYearTerm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelExtraSubjectsYearTerm.Location = new System.Drawing.Point(0, 0);
             this.panelExtraSubjectsYearTerm.Name = "panelExtraSubjectsYearTerm";
-            this.panelExtraSubjectsYearTerm.Size = new System.Drawing.Size(1029, 13);
+            this.panelExtraSubjectsYearTerm.Size = new System.Drawing.Size(1030, 704);
             this.panelExtraSubjectsYearTerm.TabIndex = 1140;
             // 
             // textBox20
             // 
             this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox20.Location = new System.Drawing.Point(542, 162);
+            this.textBox20.Location = new System.Drawing.Point(520, 137);
             this.textBox20.Margin = new System.Windows.Forms.Padding(0);
             this.textBox20.Multiline = true;
             this.textBox20.Name = "textBox20";
@@ -4761,7 +4707,7 @@ namespace PersonalShcoolCard
             // textBox21
             // 
             this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox21.Location = new System.Drawing.Point(542, 95);
+            this.textBox21.Location = new System.Drawing.Point(520, 70);
             this.textBox21.Multiline = true;
             this.textBox21.Name = "textBox21";
             this.textBox21.ReadOnly = true;
@@ -4773,7 +4719,7 @@ namespace PersonalShcoolCard
             // textBox22
             // 
             this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox22.Location = new System.Drawing.Point(342, 95);
+            this.textBox22.Location = new System.Drawing.Point(320, 70);
             this.textBox22.Multiline = true;
             this.textBox22.Name = "textBox22";
             this.textBox22.ReadOnly = true;
@@ -4782,74 +4728,11 @@ namespace PersonalShcoolCard
             this.textBox22.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
             this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // labelSaveSuccessExtraSubjectsMarksYear
-            // 
-            this.labelSaveSuccessExtraSubjectsMarksYear.AutoSize = true;
-            this.labelSaveSuccessExtraSubjectsMarksYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaveSuccessExtraSubjectsMarksYear.Location = new System.Drawing.Point(850, 459);
-            this.labelSaveSuccessExtraSubjectsMarksYear.Name = "labelSaveSuccessExtraSubjectsMarksYear";
-            this.labelSaveSuccessExtraSubjectsMarksYear.Size = new System.Drawing.Size(104, 25);
-            this.labelSaveSuccessExtraSubjectsMarksYear.TabIndex = 1132;
-            this.labelSaveSuccessExtraSubjectsMarksYear.Text = "Добавено";
-            this.labelSaveSuccessExtraSubjectsMarksYear.Visible = false;
-            // 
-            // buttonSaveMarksExtraSubjectsYear
-            // 
-            this.buttonSaveMarksExtraSubjectsYear.Location = new System.Drawing.Point(831, 391);
-            this.buttonSaveMarksExtraSubjectsYear.Name = "buttonSaveMarksExtraSubjectsYear";
-            this.buttonSaveMarksExtraSubjectsYear.Size = new System.Drawing.Size(136, 49);
-            this.buttonSaveMarksExtraSubjectsYear.TabIndex = 1147;
-            this.buttonSaveMarksExtraSubjectsYear.Text = "Запиши оценките";
-            this.buttonSaveMarksExtraSubjectsYear.UseVisualStyleBackColor = true;
-            this.buttonSaveMarksExtraSubjectsYear.Click += new System.EventHandler(this.buttonSaveMarksExtraSubjectsYear_Click);
-            // 
-            // dataGridViewExtraSubjectsYear
-            // 
-            this.dataGridViewExtraSubjectsYear.AllowUserToAddRows = false;
-            this.dataGridViewExtraSubjectsYear.AllowUserToDeleteRows = false;
-            this.dataGridViewExtraSubjectsYear.AllowUserToResizeColumns = false;
-            this.dataGridViewExtraSubjectsYear.AllowUserToResizeRows = false;
-            this.dataGridViewExtraSubjectsYear.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExtraSubjectsYear.ColumnHeadersVisible = false;
-            this.dataGridViewExtraSubjectsYear.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.СИПYearGrade});
-            this.dataGridViewExtraSubjectsYear.Location = new System.Drawing.Point(342, 205);
-            this.dataGridViewExtraSubjectsYear.MultiSelect = false;
-            this.dataGridViewExtraSubjectsYear.Name = "dataGridViewExtraSubjectsYear";
-            this.dataGridViewExtraSubjectsYear.RowHeadersVisible = false;
-            this.dataGridViewExtraSubjectsYear.Size = new System.Drawing.Size(379, 443);
-            this.dataGridViewExtraSubjectsYear.TabIndex = 1146;
-            this.dataGridViewExtraSubjectsYear.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExtraSubjectsYear_CellEndEdit);
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "SubjectName";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Предмети";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            this.dataGridViewTextBoxColumn17.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.HeaderText = "ЗП-Първи скок";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Width = 128;
-            // 
-            // СИПYearGrade
-            // 
-            this.СИПYearGrade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.СИПYearGrade.HeaderText = "Оценка";
-            this.СИПYearGrade.Name = "СИПYearGrade";
-            // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(368, 34);
+            this.label28.Location = new System.Drawing.Point(343, 20);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(351, 33);
             this.label28.TabIndex = 1140;
@@ -5049,14 +4932,14 @@ namespace PersonalShcoolCard
             this.AverageMarkMandatorySubject,
             this.WithWordsChosenFinal,
             this.AverageMarkChosenSubject});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDiplom.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDiplom.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewDiplom.Location = new System.Drawing.Point(42, 156);
             this.dataGridViewDiplom.Name = "dataGridViewDiplom";
             this.dataGridViewDiplom.RowHeadersVisible = false;
@@ -5594,14 +5477,14 @@ namespace PersonalShcoolCard
             this.dataGridViewExtraSubjectFourthYear,
             this.FinalMark,
             this.dataGridViewFinalMark});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDiplomExtraSubjects.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDiplomExtraSubjects.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewDiplomExtraSubjects.Location = new System.Drawing.Point(42, 147);
             this.dataGridViewDiplomExtraSubjects.Name = "dataGridViewDiplomExtraSubjects";
             this.dataGridViewDiplomExtraSubjects.RowHeadersVisible = false;
@@ -6127,64 +6010,42 @@ namespace PersonalShcoolCard
             this.printPreviewDialog.Name = "printPreviewDialog";
             this.printPreviewDialog.Visible = false;
             // 
-            // dataGridViewTextBoxColumn3
+            // dataGridViewHoursStudiedExtraSubjects
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Предмети";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 200;
+            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToAddRows = false;
+            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToDeleteRows = false;
+            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToResizeColumns = false;
+            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToResizeRows = false;
+            this.dataGridViewHoursStudiedExtraSubjects.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewHoursStudiedExtraSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHoursStudiedExtraSubjects.ColumnHeadersVisible = false;
+            this.dataGridViewHoursStudiedExtraSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2});
+            this.dataGridViewHoursStudiedExtraSubjects.Location = new System.Drawing.Point(698, 179);
+            this.dataGridViewHoursStudiedExtraSubjects.MultiSelect = false;
+            this.dataGridViewHoursStudiedExtraSubjects.Name = "dataGridViewHoursStudiedExtraSubjects";
+            this.dataGridViewHoursStudiedExtraSubjects.RowHeadersVisible = false;
+            this.dataGridViewHoursStudiedExtraSubjects.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridViewHoursStudiedExtraSubjects.Size = new System.Drawing.Size(109, 443);
+            this.dataGridViewHoursStudiedExtraSubjects.TabIndex = 1153;
             // 
-            // dataGridViewTextBoxColumn5
+            // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "ЗП-Първи скок";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 128;
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Хорариум";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // ЗПMarkYear
+            // textBox39
             // 
-            this.ЗПMarkYear.HeaderText = "Оценка";
-            this.ЗПMarkYear.Name = "ЗПMarkYear";
-            this.ЗПMarkYear.Width = 30;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "ЗПП-Първи срок";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 128;
-            // 
-            // ЗИПMarkYear
-            // 
-            this.ЗИПMarkYear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ЗИПMarkYear.HeaderText = "Оценка";
-            this.ЗИПMarkYear.Name = "ЗИПMarkYear";
-            // 
-            // dataGridViewHoursStudiedSubject
-            // 
-            this.dataGridViewHoursStudiedSubject.AllowUserToAddRows = false;
-            this.dataGridViewHoursStudiedSubject.AllowUserToDeleteRows = false;
-            this.dataGridViewHoursStudiedSubject.AllowUserToResizeColumns = false;
-            this.dataGridViewHoursStudiedSubject.AllowUserToResizeRows = false;
-            this.dataGridViewHoursStudiedSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewHoursStudiedSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHoursStudiedSubject.ColumnHeadersVisible = false;
-            this.dataGridViewHoursStudiedSubject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            this.dataGridViewHoursStudiedSubject.Location = new System.Drawing.Point(693, 208);
-            this.dataGridViewHoursStudiedSubject.MultiSelect = false;
-            this.dataGridViewHoursStudiedSubject.Name = "dataGridViewHoursStudiedSubject";
-            this.dataGridViewHoursStudiedSubject.RowHeadersVisible = false;
-            this.dataGridViewHoursStudiedSubject.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridViewHoursStudiedSubject.Size = new System.Drawing.Size(109, 443);
-            this.dataGridViewHoursStudiedSubject.TabIndex = 1149;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Хорариум";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox39.Location = new System.Drawing.Point(698, 70);
+            this.textBox39.Multiline = true;
+            this.textBox39.Name = "textBox39";
+            this.textBox39.ReadOnly = true;
+            this.textBox39.Size = new System.Drawing.Size(109, 110);
+            this.textBox39.TabIndex = 1152;
+            this.textBox39.Text = "\r\n\r\n\r\n\r\nХОРАРИУМ";
+            this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxPersonalCardNumber
             // 
@@ -6285,23 +6146,61 @@ namespace PersonalShcoolCard
             this.textBoxFirstName.WaterMarkColor = System.Drawing.Color.Gray;
             this.textBoxFirstName.WaterMarkText = "Име";
             // 
-            // buttonSignOut
+            // dataGridView1
             // 
-            this.buttonSignOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSignOut.BackgroundImage")));
-            this.buttonSignOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSignOut.FlatAppearance.BorderSize = 0;
-            this.buttonSignOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.buttonSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.buttonSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSignOut.Location = new System.Drawing.Point(20, 670);
-            this.buttonSignOut.Name = "buttonSignOut";
-            this.buttonSignOut.Size = new System.Drawing.Size(208, 51);
-            this.buttonSignOut.TabIndex = 13;
-            this.buttonSignOut.Text = "Излизане от акаунта";
-            this.buttonSignOut.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonSignOut.UseVisualStyleBackColor = true;
-            this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn10});
+            this.dataGridView1.Location = new System.Drawing.Point(175, 208);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(519, 443);
+            this.dataGridView1.TabIndex = 1150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Предмети";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "ЗП-Първи скок";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 128;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Оценка";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "ЗПП-Първи срок";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 128;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Оценка";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // TeacherForm
             // 
@@ -6334,7 +6233,7 @@ namespace PersonalShcoolCard
             this.tabPageYear.ResumeLayout(false);
             this.panelMarksYear.ResumeLayout(false);
             this.panelMarksYear.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarksYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedSubject)).EndInit();
             this.tabControlDiplom.ResumeLayout(false);
             this.tabPageInfo.ResumeLayout(false);
             this.tabPageInfo.PerformLayout();
@@ -6369,11 +6268,9 @@ namespace PersonalShcoolCard
             this.tabPageMarksExtraSubjectsSecondTerm.ResumeLayout(false);
             this.panelExtraSubjectsSecondTerm.ResumeLayout(false);
             this.panelExtraSubjectsSecondTerm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsSecondTerm)).EndInit();
             this.tabPageMarksExtraSubjectsYear.ResumeLayout(false);
             this.panelExtraSubjectsYearTerm.ResumeLayout(false);
             this.panelExtraSubjectsYearTerm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExtraSubjectsYear)).EndInit();
             this.tabControlMarksSummary.ResumeLayout(false);
             this.tabPageMandatoryAndChosenSubjects.ResumeLayout(false);
             this.panelMarksMandatoryAndChosenSubjectsSummary.ResumeLayout(false);
@@ -6385,7 +6282,8 @@ namespace PersonalShcoolCard
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiplomExtraSubjects)).EndInit();
             this.panelMarksExam.ResumeLayout(false);
             this.panelMarksExam.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedSubject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedExtraSubjects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6462,7 +6360,6 @@ namespace PersonalShcoolCard
         private System.Windows.Forms.DataGridViewTextBoxColumn MarkChoosenWithWordsSubjectsFirstTerm;
         private System.Windows.Forms.DataGridViewTextBoxColumn ЗИПFirstTerm;
         private System.Windows.Forms.Panel panelMarksYear;
-        private System.Windows.Forms.DataGridView dataGridViewMarksYear;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
@@ -6504,14 +6401,9 @@ namespace PersonalShcoolCard
         private System.Windows.Forms.ComboBox comboBoxStudentsNamesExtraSubjects;
         private System.Windows.Forms.TabPage tabPageMarksExtraSubjectsSecondTerm;
         private System.Windows.Forms.Panel panelExtraSubjectsSecondTerm;
-        private System.Windows.Forms.Button buttonSaveMarksExtraSubjectsSecondTerm;
-        private System.Windows.Forms.DataGridView dataGridViewExtraSubjectsSecondTerm;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TabPage tabPageMarksExtraSubjectsYear;
         private System.Windows.Forms.Panel panelExtraSubjectsYearTerm;
-        private System.Windows.Forms.Label labelSaveSuccessExtraSubjectsMarksYear;
-        private System.Windows.Forms.Button buttonSaveMarksExtraSubjectsYear;
-        private System.Windows.Forms.DataGridView dataGridViewExtraSubjectsYear;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TabPage tabPageChoseExtraSubjects;
         private System.Windows.Forms.Panel panelChooseExtraSubjects;
@@ -6652,12 +6544,6 @@ namespace PersonalShcoolCard
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn СИПFirstTerm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn СИПSecondTerm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn СИПYearGrade;
         private System.Windows.Forms.Button buttonSaveDiplomMarks;
         private System.Windows.Forms.Button buttonSaveMaksFinalExtraSubjects;
         private System.Windows.Forms.Label labelSchooYear;
@@ -6713,7 +6599,6 @@ namespace PersonalShcoolCard
         private System.Windows.Forms.TextBox textBoxAverageMandatorySubjects;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label labelSaveSuccessExtraSubjectsMarksFirstTerm;
-        private System.Windows.Forms.Label labelSaveSuccessExtraSubjectsMarksSecondTerm;
         private PrintDocument printDocument;
         private System.Windows.Forms.PrintDialog printDialog;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
@@ -6878,12 +6763,16 @@ namespace PersonalShcoolCard
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.TextBox textBox34;
         private System.Windows.Forms.DataGridView dataGridViewHoursStudiedSubject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ЗПMarkYear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ЗИПMarkYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button buttonSignOut;
+        private System.Windows.Forms.DataGridView dataGridViewHoursStudiedExtraSubjects;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TextBox textBox39;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

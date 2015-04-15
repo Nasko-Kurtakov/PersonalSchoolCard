@@ -95,7 +95,7 @@
     <Compile Include="Classes\AbsencesTypeDA.cs" />
     <Compile Include="Classes\TermDA.cs" />
     <Compile Include="Classes\SchoolClassDA.cs" />
-    <Compile Include="Classes\LogIn.cs" />
+    <Compile Include="Classes\SignClass.cs" />
     <Compile Include="Classes\SchoolClassInfo.cs" />
     <Compile Include="Classes\SchoolInfoDA.cs" />
     <Compile Include="Classes\SchoolYearDA.cs" />
