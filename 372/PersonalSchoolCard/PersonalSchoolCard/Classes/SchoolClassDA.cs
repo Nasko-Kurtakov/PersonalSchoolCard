@@ -55,17 +55,17 @@
                         string schoolYear = gridView.Rows[rows].Cells[1].Value.ToString();
                         string teacherName = gridView.Rows[rows].Cells[3].Value.ToString();
                         int profileID = int.Parse(gridView.Rows[rows].Cells[2].Value.ToString());
-                        string newClassName = (int.Parse(className.Substring(0, 2))+1).ToString();
-                        if (newClassName!="13")
+                        string newClassName = (int.Parse(className.Substring(0, 2)) + 1).ToString();
+                        if (newClassName != "13")
                         {
-                                    var schoolClass = new SchoolClassInfo
-                                    {
-                                        ClassName = GetNextClassName(className),
-                                        SchoolYear = SchoolYearDA.GetNextSchoolYear(schoolYear),
-                                        ProfileID = profileID,
-                                        TeacherName = teacherName
-                                    };
-                                    schoolClassesList.Add(schoolClass);
+                            var schoolClass = new SchoolClassInfo
+                            {
+                                ClassName = GetNextClassName(className),
+                                SchoolYear = SchoolYearDA.GetNextSchoolYear(schoolYear),
+                                ProfileID = profileID,
+                                TeacherName = teacherName
+                            };
+                            schoolClassesList.Add(schoolClass);
                         }
                     }
                     return schoolClassesList;
@@ -76,7 +76,7 @@
                     return null;
                 }
             }
-        }        
+        }
         private static string GetNextClassName(string className)
         {
             if (className.Length < 4 && className != "12")
@@ -174,8 +174,8 @@
                                            .Where(schoolYear => schoolYear.SchoolYearName == nextSchoolYear)
                                            .Select(schoolYear => schoolYear.SchoolYearID)
                                            .First();
-                        if(schoolYearID==0)
-                        {                            
+                        if (schoolYearID == 0)
+                        {
                             throw new Exception(string.Format("Моля първо веведете учебна година {0}", nextSchoolYear));
                         }
 
@@ -190,7 +190,7 @@
                     }
                     context.SaveChanges();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -218,13 +218,16 @@
             }
 
         }
-        public static int GetClassID (string className)
+        public static int GetClassID(string className, string schoolYear = "")
         {
-            using(var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
-                var currentSchoolYearID = SchoolYearDA.GetCurrentSchoolYearID();
+                if(schoolYear=="")
+                {
+                    schoolYear = SchoolYearDA.GetCurrentSchoolYear();
+                }
                 var classID = context.SchoolClasses
-                                    .Where(schoolClass => schoolClass.ClassName == className && schoolClass.SchoolYearID == currentSchoolYearID)
+                                    .Where(schoolClass => schoolClass.ClassName == className && schoolClass.SchoolYear.SchoolYearName == schoolYear)
                                     .Select(schoolClass => schoolClass.ClassID)
                                     .First();
                 return classID;
@@ -240,6 +243,21 @@
                                         .Select(schoolClass => schoolClass.ClassID)
                                         .FirstOrDefault();
                 return classID;
+            }
+        }              
+        public static SchoolClass GetSchoolClassByTeacherID(int teacherID, string schoolYear="")
+        {
+            if(schoolYear=="")
+            {
+                schoolYear = SchoolYearDA.GetCurrentSchoolYear();
+            }
+            using (var context = new PersonalSchoolCardEntities())
+            { 
+                var selectedSchoolClass = context.SchoolClasses
+                                .Where(schoolClass => schoolClass.TeacherID == teacherID && schoolClass.SchoolYear.SchoolYearName == schoolYear)
+                                .Select(schoolClass => schoolClass)
+                                .FirstOrDefault();
+                return selectedSchoolClass;
             }
         }
     }

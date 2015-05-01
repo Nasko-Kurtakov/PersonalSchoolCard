@@ -41,7 +41,6 @@
             }
 
         }
-
         public static List<TypeAbsence> GetAbsencesTypes()
         {
             using (var context = new PersonalSchoolCardEntities())

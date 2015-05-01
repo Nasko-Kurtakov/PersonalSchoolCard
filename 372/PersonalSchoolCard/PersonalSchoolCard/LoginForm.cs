@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity.Core;
 using PersonalSchoolCard.Data;
 
 namespace PersonalShcoolCard
@@ -24,14 +25,14 @@ namespace PersonalShcoolCard
                 Classes.SignClass.LogIn(textBoxUserName.Text, textBoxPassword.Text);
                 this.Close();
             }
-            catch (System.Data.Entity.Core.EntityException)
+            catch (EntityException)
             {
                 MessageBox.Show("Няма свързана база от данни.");
                 textBoxUserName.Clear();
                 textBoxPassword.Clear();
                 textBoxUserName.Focus();
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Невалидно потребителско име или парола.");
                 textBoxUserName.Clear();

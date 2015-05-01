@@ -10,8 +10,8 @@
     using System.Threading.Tasks;
     using System.Windows.Forms;
     using PersonalSchoolCard.Data;
-    using System.Data.Entity.Infrastructure;
     using System.Drawing.Printing;
+    using System.Data.Entity.Infrastructure;
     public partial class TeacherForm : Form
     {
         int teacherID;
@@ -51,7 +51,7 @@
         {
             teacherName = Classes.TeacherDA.GetTeacher(teacherID).FullName;
             this.Text = teacherName;
-            string className = Classes.TeacherDA.GetClassNameByTeacherID(teacherID, schoolYear);
+            string className = Classes.SchoolClassDA.GetSchoolClassByTeacherID(teacherID, schoolYear).ClassName;
             string classNumber = className.Substring(0, 2);
             string classChar = className.Substring(3, 1);
             labelHi.Text += teacherName + "!";
@@ -251,33 +251,46 @@
         }
         private void buttonSaveMarks_Click(object sender, EventArgs e)
         {
+            bool success = false;
             try
             {
-                if (dataGridViewMarks.Rows.Count != 0)
-                {
-                    Classes.MarkDA.SaveMark(dataGridViewMarks, teacherID, long.Parse(comboBoxStudentsNames.SelectedValue.ToString()), (byte)tabControlMarks.SelectedIndex);
-                    if (tabControlMarks.SelectedIndex == 3)
-                    {
-                        Classes.HoursStudiedSubjectDA.SaveHoursStudiedSubject(dataGridViewMarks, dataGridViewHoursStudiedSubject, teacherID);
-                    }
-                    ChangesMadeSuccessfully(labelSuccessSaveMarks, timerSuccessSaveMarks);
-                }
-                else
-                {
-                    throw new InvalidProgramException();
-                }
-            }
-            catch (InvalidProgramException)
-            {
-                MessageBox.Show("Не сте избрали учебни предмети");
+                long.Parse(comboBoxStudentsNames.SelectedValue.ToString());
             }
             catch (NullReferenceException)
             {
-                MessageBox.Show("Не сте въвели данни");
+                MessageBox.Show("Не сте избрали ученик.");
+                return;
+            }
+            try
+            {
+                if (dataGridViewMarks.Rows.Count == 0)
+                {
+                    throw new InvalidOperationException();
+                }
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Не сте избрали учебни предмети.");
+            }
+            try
+            {
+                Classes.MarkDA.SaveMark(dataGridViewMarks, teacherID, studentID, (byte)tabControlMarks.SelectedIndex);
+                success = true;
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Не сте въвели данни или те са в грешен формат.");
             }
             catch (DbUpdateException)
             {
-                MessageBox.Show("Данните, които искате да запишете са вече въведени");
+                MessageBox.Show("Данните, които искате да запишете са вече въведени.");
+            }
+            finally
+            {
+                if (success == true)
+                {
+                    ChangesMadeSuccessfully(labelSuccessSaveMarks, timerSuccessSaveMarks);
+                }
             }
         }
         private void comboBoxStudentsNames_MouseEnter(object sender, EventArgs e)
@@ -293,7 +306,6 @@
                 dataGridViewMarks.Parent = panelMarksFirstTerm;
                 buttonSaveMarks.Parent = panelMarksFirstTerm;
                 labelSuccessSaveMarks.Parent = panelMarksFirstTerm;
-                dataGridViewMarks.Location = new Point(262, 206);
 
                 labelSuccessSaveMarks.BringToFront();
                 buttonSaveMarks.BringToFront();
@@ -310,7 +322,6 @@
                 dataGridViewMarks.Parent = panelMarksSecondTerm;
                 buttonSaveMarks.Parent = panelMarksSecondTerm;
                 labelSuccessSaveMarks.Parent = panelMarksSecondTerm;
-                dataGridViewMarks.Location = new Point(262, 206);
 
                 labelSuccessSaveMarks.BringToFront();
                 buttonSaveMarks.BringToFront();
@@ -327,11 +338,11 @@
                 buttonSaveMarks.Parent = panelMarksYear;
                 dataGridViewMarks.Parent = panelMarksYear;
                 labelSuccessSaveMarks.Parent = panelMarksYear;
-                dataGridViewMarks.Location = new Point(175, 208);
 
                 buttonSaveMarks.BringToFront();
                 comboBoxStudentsNames.BringToFront();
                 labelSuccessSaveMarks.BringToFront();
+                dataGridViewMarks.BringToFront();
                 addRowsToHoursStudiedGrid(dataGridViewMarks, dataGridViewHoursStudiedSubject);
             }
         }
@@ -339,6 +350,7 @@
         {
             var selectedSubjectName = checkedListBoxSubjects.SelectedValue.ToString();
             ParseSubjectsToDataGridView(dataGridViewMarks, e, selectedSubjectName);
+            ParseSubjectsToDataGridView(dataGridViewHoursStudiedSubject, e, selectedSubjectName);
         }
         private void timerSuccess_Tick(object sender, EventArgs e)
         {
@@ -349,46 +361,143 @@
         {
             clearMarksDatagridView(dataGridViewMarks);
         }
+        private void buttonSaveHoursStudied_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewHoursStudiedSubject.Rows.Count != 0)
+            {
+                bool success = false;
+                try
+                {
+                    Classes.HoursStudiedSubjectDA.SaveHoursStudiedSubject(dataGridViewHoursStudiedSubject, teacherID, "ЗП");
+                    success = true;
+                }
+                catch (Exception ex)
+                {
+                    if (ex is DbUpdateException)
+                    {
+                        MessageBox.Show("Тези данни са вече въведени.");
+                    }
+                    if (ex is NullReferenceException)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Проверете входните данни.");
+                    }
+                }
+                finally
+                {
+                    if (success)
+                    {
+                        ChangesMadeSuccessfully(labelHoursStudiedSubjectsSuccess, timerSaveSuccessExtraSubjects);
+                        tabPageHoursStudiedd.Select();
+                        buttonSaveHoursStudiedSuccess.Enabled = false;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не сте избрали учебни предмети.");
+            }
+        }
+        private void timerSaveHoursStudiedSuccess_Tick(object sender, EventArgs e)
+        {
+            labelHoursStudiedSubjectsSuccess.Visible = false;
+            labelHoursStudiedExtraSubjectsSuccess.Visible = false;
+            timerSaveHoursStudiedSuccess.Stop();
+        }
         #endregion
 
         #region//adding extra subjects marks(СИП)
         private void checkedListBoxExtraSubjects_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             var selectedSubjectName = checkedListBoxExtraSubjects.SelectedValue.ToString();
-            ParseSubjectsToDataGridView(dataGridViewExtraSubjectsFirstTerm, e, selectedSubjectName);
-            //ParseSubjectsToDataGridView(dataGridViewExtraSubjectsSecondTerm, e, selectedSubjectName);
-            //ParseSubjectsToDataGridView(dataGridViewExtraSubjectsYear, e, selectedSubjectName);
+            ParseSubjectsToDataGridView(dataGridViewExtraSubjects, e, selectedSubjectName);
+            ParseSubjectsToDataGridView(dataGridViewHoursStudiedExtraSubjects, e, selectedSubjectName);
         }
         private void buttonSaveMarksExtraSubjectsFirstTerm_Click(object sender, EventArgs e)
         {
+            bool success = false;
             try
             {
-                if (dataGridViewExtraSubjectsFirstTerm.Rows.Count != 0)
-                {
-                    Classes.MarkDA.SaveMark(dataGridViewExtraSubjectsFirstTerm, teacherID, long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString()), (byte)tabControlMarksExtraSubjects.SelectedIndex, true);
-
-                    if (tabControlMarksExtraSubjects.SelectedIndex == 3)
-                    {
-                        Classes.HoursStudiedSubjectDA.SaveHoursStudiedSubject(dataGridViewExtraSubjectsFirstTerm, dataGridViewHoursStudiedExtraSubjects, teacherID);
-                    }
-                    ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarksFirstTerm, timerSaveSuccessExtraSubjects);
-                }
-                else
-                {
-                    throw new InvalidProgramException();
-                }
-            }
-            catch (InvalidProgramException)
-            {
-                MessageBox.Show("Не сте избрали учебни предмети");
+                long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString());
             }
             catch (NullReferenceException)
             {
-                MessageBox.Show("Не сте въвели данни");
+                MessageBox.Show("Не сте избрали ученик.");
+                return;
+            }
+            try
+            {
+                if (dataGridViewExtraSubjects.Rows.Count == 0)
+                {
+                    throw new InvalidOperationException();
+                }
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Не сте избрали учебни предмети.");
+            }
+            try
+            {
+                Classes.MarkDA.SaveMark(dataGridViewExtraSubjects, teacherID, long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString()), (byte)tabControlMarksExtraSubjects.SelectedIndex, true);
+                success = true;
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Не сте въвели данни или те са в грешен формат.");
             }
             catch (DbUpdateException)
             {
-                MessageBox.Show("Данните, които искате да запишете са вече въведени");
+                MessageBox.Show("Данните, които искате да запишете са вече въведени.");
+            }
+            finally
+            {
+                if (success == true)
+                {
+                    ChangesMadeSuccessfully(labelSaveSuccessExtraSubjectsMarksFirstTerm, timerSaveSuccessExtraSubjects);
+                }
+            }
+        }
+        private void buttonSaveHoursStudiedExtraSubjects_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewHoursStudiedExtraSubjects.Rows.Count != 0)
+            {
+                bool success = false;
+                try
+                {
+                    Classes.HoursStudiedSubjectDA.SaveHoursStudiedSubject(dataGridViewHoursStudiedExtraSubjects, teacherID, "СИП");
+                    success = true;
+                }
+                catch (Exception ex)
+                {
+                    if (ex is DbUpdateException)
+                    {
+                        MessageBox.Show("Тези данни са вече въведени.");
+                    }
+                    if (ex is NullReferenceException)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Проверете входните данни.");
+                    }
+                }
+                finally
+                {
+                    if (success)
+                    {
+                        ChangesMadeSuccessfully(labelHoursStudiedExtraSubjectsSuccess, timerSaveSuccessExtraSubjects);
+                        buttonSaveHoursStudiedExtraSubjects.Enabled = false;
+                        panelHoursStudiedExtraSubjects.Select();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не сте избрали учебни предмети.");
             }
         }
         private void buttonAddMarksExtraSubjects_Click(object sender, EventArgs e)
@@ -401,7 +510,7 @@
         }
         private void dataGridViewExtraSubjectsFirstTerm_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            MarksWithWords(dataGridViewExtraSubjectsFirstTerm);
+            MarksWithWords(dataGridViewExtraSubjects);
         }
         private void comboBoxStudentsNamesExtraSubjects_MouseEnter(object sender, EventArgs e)
         {
@@ -418,52 +527,52 @@
             if (tabControlMarksExtraSubjects.SelectedTab == tabControlMarksExtraSubjects.TabPages[1])
             {
                 comboBoxStudentsNamesExtraSubjects.Parent = panelExtraSubjectsFirstTerm;
-                dataGridViewExtraSubjectsFirstTerm.Parent = panelExtraSubjectsFirstTerm;
+                dataGridViewExtraSubjects.Parent = panelExtraSubjectsFirstTerm;
                 buttonSaveMarksExtraSubjectsFirstTerm.Parent = panelExtraSubjectsFirstTerm;
                 labelSaveSuccessExtraSubjectsMarksFirstTerm.Parent = panelExtraSubjectsFirstTerm;
 
                 labelSaveSuccessExtraSubjectsMarksFirstTerm.BringToFront();
                 panelExtraSubjectsFirstTerm.BringToFront();
-                dataGridViewExtraSubjectsFirstTerm.BringToFront();
+                dataGridViewExtraSubjects.BringToFront();
                 comboBoxStudentsNamesExtraSubjects.BringToFront();
-                if (dataGridViewExtraSubjectsFirstTerm.Rows.Count > 0)
+                if (dataGridViewExtraSubjects.Rows.Count > 0)
                 {
-                    dataGridViewExtraSubjectsFirstTerm.CurrentCell.Selected = false;
+                    dataGridViewExtraSubjects.CurrentCell.Selected = false;
                 }
             }
             if (tabControlMarksExtraSubjects.SelectedTab == tabControlMarksExtraSubjects.TabPages[2])
             {
                 comboBoxStudentsNamesExtraSubjects.Parent = panelExtraSubjectsSecondTerm;
-                dataGridViewExtraSubjectsFirstTerm.Parent = panelExtraSubjectsSecondTerm;
+                dataGridViewExtraSubjects.Parent = panelExtraSubjectsSecondTerm;
                 buttonSaveMarksExtraSubjectsFirstTerm.Parent = panelExtraSubjectsSecondTerm;
                 labelSaveSuccessExtraSubjectsMarksFirstTerm.Parent = panelExtraSubjectsSecondTerm;
 
                 labelSaveSuccessExtraSubjectsMarksFirstTerm.BringToFront();
                 panelExtraSubjectsFirstTerm.BringToFront();
-                dataGridViewExtraSubjectsFirstTerm.BringToFront();
+                dataGridViewExtraSubjects.BringToFront();
                 comboBoxStudentsNamesExtraSubjects.BringToFront();
-                if (dataGridViewExtraSubjectsFirstTerm.Rows.Count > 0)
+                if (dataGridViewExtraSubjects.Rows.Count > 0)
                 {
-                    dataGridViewExtraSubjectsFirstTerm.CurrentCell.Selected = false;
+                    dataGridViewExtraSubjects.CurrentCell.Selected = false;
                 }
             }
             if (tabControlMarksExtraSubjects.SelectedTab == tabControlMarksExtraSubjects.TabPages[3])
             {
                 comboBoxStudentsNamesExtraSubjects.Parent = panelExtraSubjectsYearTerm;
-                dataGridViewExtraSubjectsFirstTerm.Parent = panelExtraSubjectsYearTerm;
+                dataGridViewExtraSubjects.Parent = panelExtraSubjectsYearTerm;
                 buttonSaveMarksExtraSubjectsFirstTerm.Parent = panelExtraSubjectsYearTerm;
                 labelSaveSuccessExtraSubjectsMarksFirstTerm.Parent = panelExtraSubjectsYearTerm;
 
                 labelSaveSuccessExtraSubjectsMarksFirstTerm.BringToFront();
                 panelExtraSubjectsFirstTerm.BringToFront();
-                dataGridViewExtraSubjectsFirstTerm.BringToFront();
+                dataGridViewExtraSubjects.BringToFront();
                 comboBoxStudentsNamesExtraSubjects.BringToFront();
-                addRowsToHoursStudiedGrid(dataGridViewExtraSubjectsFirstTerm, dataGridViewHoursStudiedExtraSubjects);
+                addRowsToHoursStudiedGrid(dataGridViewExtraSubjects, dataGridViewHoursStudiedExtraSubjects);
             }
         }
         private void comboBoxStudentsNamesExtraSubjects_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            clearMarksDatagridView(dataGridViewExtraSubjectsFirstTerm);
+            clearMarksDatagridView(dataGridViewExtraSubjects);
         }
         #endregion
 
@@ -486,7 +595,6 @@
             try
             {
                 Classes.AbsencesDA.SaveAbsences(dataGridViewAbsences, long.Parse(comboBoxStudentsNamesAbsences.SelectedValue.ToString()), teacherID);
-                ChangesMadeSuccessfully(labelAbsecesSaveSusseccful, timerAbcensesSaveSuccessful);
             }
             catch (NullReferenceException)
             {
@@ -495,6 +603,10 @@
             catch (DbUpdateException)
             {
                 MessageBox.Show("Данните, които искате да запишете са вече въведени");
+            }
+            finally
+            {
+                ChangesMadeSuccessfully(labelAbsecesSaveSusseccful, timerAbcensesSaveSuccessful);
             }
 
         }
@@ -678,7 +790,7 @@
         #region//adding marks for the end of 12 grade exams
         private void buttonAddMarksFromExams_Click(object sender, EventArgs e)
         {
-            if (Classes.TeacherDA.GetClassNumberByTeacherID(teacherID) != 12)
+            if (Classes.SchoolClassDA.GetSchoolClassByTeacherID(teacherID).ClassNumber != 12)
             {
                 labelExamWarning.Visible = true;
                 buttonSaveExamMarks.Enabled = false;
@@ -792,6 +904,103 @@
             labelSchoolCityName.Text = "";
             labelSchoolManicipality.Text = "";
             labelSchoolArea.Text = "";
+            labelBulgarianLanguageMarkWords.Text = "-";
+            labelBulgarianLanguageMark.Text = "-";
+            labelBulgarianLanguageHoursStudied.Text = "-";
+            labelFirstForeignLanguageMarkWords.Text = "-";
+            labelFirstForeignLanguage.Text = "-";
+            labelFirstForeignLanguageMark.Text = "-";
+            labelFirstForeignLanguageHoursStudied.Text = "-";
+            labelFirstForeignLanguageMarkWords.Text = "-";
+            labelSecondForeignLanguage.Text = "-";
+            labelSecondForeignLanguageMark.Text = "-";
+            labelSecondForeignLanguageMarkWords.Text = "-";
+            labelSecondForeignLanguageHoursStudied.Text = "-";
+            labelThirdForeignLanguage.Text = "-";
+            labelThirdForeignLanguageMarkWords.Text = "-";
+            labelThirdForeignLanguageMark.Text = "-";
+            labelMathsMarkWords.Text = "-";
+            labelMathsMark.Text = "-";
+            labelMathsHoursStudied.Text = "-";
+            labelInformaticsMarkWords.Text = "-";
+            labelInformaticsMark.Text = "-";
+            labelInformaticsHoursStudied.Text = "-";
+            labelInformationTechMarkWords.Text = "-";
+            labelInformationTechMark.Text = "-";
+            labelInformationTechHoursStudied.Text = "-";
+            labelHistoryMarkWords.Text = "-";
+            labelHistoryMark.Text = "-";
+            labelHistoryHoursStudied.Text = "-";
+            labelGeographyMarkWords.Text = "-";
+            labelGeographyMark.Text = "-";
+            labelGeographyHoursStudied.Text = "-";
+            labelPsychologyAndLogicMarkWords.Text = "-";
+            labelPsychologyAndLogicMark.Text = "-";
+            labelPsychologyAndLogicHoursStudied.Text = "-";
+            labelEticsAndRightMarkWords.Text = "-";
+            labelEticsAndRightMark.Text = "-";
+            labelEticsAndRightHoursStudied.Text = "-";
+            labelPhilosophyMarkWords.Text = "-";
+            labelPhilosophyMark.Text = "-";
+            labelPhilosophyHoursStudied.Text = "-";
+            labelWPSubjectMarkWords.Text = "-";
+            labelWPSubjectMark.Text = "-";
+            labelWPSubjectHoursStudied.Text = "-";
+            labelBiologyMarkWords.Text = "-";
+            labelBiologyMark.Text = "-";
+            labelBiologyHoursStudied.Text = "-";
+            labelPhysicsMarkWords.Text = "-";
+            labelPhysicsMark.Text = "-";
+            labelPhysicsHoursStudied.Text = "-";
+            labelChemistryMarkWords.Text = "-";
+            labelChemistryMark.Text = "-";
+            labelChemistryHoursStudied.Text = "-";
+            labelMusicMarkWords.Text = "-";
+            labelMusicHoursStudied.Text = "-";
+            labelMusicMark.Text = "-";
+            labelArtMarkWords.Text = "-";
+            labelArtMark.Text = "-";
+            labelArtHoursStudied.Text = "-";
+            labelSportsMarkWords.Text = "-";
+            labelSportsMark.Text = "-";
+            labelSportsHoursStudied.Text = "-";
+            labelFirstChosenSubject.Text = "-";
+            labelFirstChosenSubjectMarkWords.Text = "-";
+            labelFirstChosenSubjectMark.Text = "-";
+            labelFirstChosenSubjectHoursStudied.Text = "-";
+            labelSecondChosenSubject.Text = "-";
+            labelSecondChosenSubjectMarkWords.Text = "-";
+            labelSecondChosenSubjectMark.Text = "-";
+            labelSecondChosenSubjectHoursStudied.Text = "-";
+            labelThirdChosenSubject.Text = "-";
+            labelThirdChosenSubjectMarkWords.Text = "-";
+            labelThirdChosenSubjectMark.Text = "-";
+            labelThirdChosenSubjectHoursStudied.Text = "-";
+            labelFirstExam.Text = "-";
+            labelFirstExamMarkWords.Text = "-";
+            labelFirstExamMark.Text = "-";
+            labelSecondExam.Text = "-";
+            labelSecondExamMarkWords.Text = "-";
+            labelSecondExamMark.Text = "-";
+            labelThirdExam.Text = "-";
+            labelThirdExamMarkWords.Text = "-";
+            labelThirdExamMark.Text = "-";
+            labelFirstExtraSubject.Text = "-";
+            labelFirstExtraSubjectMarkWords.Text = "-";
+            labelFirstExtraSubjectMark.Text = "-";
+            labelFirstExtraSubjectHoursStudied.Text = "-";
+            labelSecondExtraSubject.Text = "-";
+            labelSecondExtraSubjectMarkWords.Text = "-";
+            labelSecondExtraSubjectMark.Text = "-";
+            labelSecondExtraSubjectHoursStudied.Text = "-";
+            labelThirdExtraSubject.Text = "-";
+            labelThirdExtraSubjectMarkWords.Text = "-";
+            labelThirdExtraSubjectMark.Text = "-";
+            labelThirdExtraSubjectHoursStudied.Text = "-";
+            labelFourthExtraSubject.Text = "-";
+            labelFourthExtraSubjectMarkWords.Text = "-";
+            labelFourthExtraSubjectMark.Text = "-";
+            labelFourthExtraSubjectHoursStudied.Text = "-";
             pictureBoxStudentPortrait.Image = null;
             labelPictureNotAvailable.Visible = true;
         }
@@ -946,6 +1155,7 @@
         {
             try
             {
+                clearDiplomFields();
                 var foreignLanguagesLabels = new List<Label>();
                 foreignLanguagesLabels.Add(labelFirstForeignLanguage);
                 foreignLanguagesLabels.Add(labelSecondForeignLanguage);
@@ -955,64 +1165,66 @@
                 {
                     foreignLanguagesLabels[i].Text = foreignLanguages[i].SubjectName;
                 }
-                clearDiplomFields();
+
                 ShowDiplomInfo();
                 ShowDiplomMarks();
+                ShowDiplomHoursStudied();
                 tabPageInfo.Focus();
             }
-            catch (Exception)
+            catch (NullReferenceException)
             {
                 MessageBox.Show("За този ученик няма данни!");
             }
         }
         private void ShowDiplomMarks()
         {
-            labelBulgarianLanguageMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelBulgarianLanguage.Text, "ЗП");
+            long studentId = long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString());
+            labelBulgarianLanguageMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelBulgarianLanguage.Text, "ЗП");
             labelBulgarianLanguageMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelBulgarianLanguageMark.Text);
             if (labelFirstForeignLanguage.Text != "-")
             {
-                labelFirstForeignLanguageMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelFirstForeignLanguage.Text, "ЗП");
+                labelFirstForeignLanguageMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelFirstForeignLanguage.Text, "ЗП");
                 labelFirstForeignLanguageMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelFirstForeignLanguageMark.Text);
             }
             if (labelSecondForeignLanguage.Text != "-")
             {
-                labelSecondForeignLanguageMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelSecondForeignLanguage.Text, "ЗП");
+                labelSecondForeignLanguageMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelSecondForeignLanguage.Text, "ЗП");
                 labelSecondForeignLanguageMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelSecondForeignLanguageMark.Text);
             }
             if (labelThirdForeignLanguage.Text != "-")
             {
-                labelThirdForeignLanguageMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelThirdForeignLanguage.Text, "ЗП");
+                labelThirdForeignLanguageMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelThirdForeignLanguage.Text, "ЗП");
                 labelThirdForeignLanguageMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelThirdForeignLanguageMark.Text);
             }
-            labelMathsMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelMaths.Text, "ЗП");
+            labelMathsMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelMaths.Text, "ЗП");
             labelMathsMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelMathsMark.Text);
-            labelInformaticsMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelInformatics.Text, "ЗП");
+            labelInformaticsMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelInformatics.Text, "ЗП");
             labelInformaticsMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelInformaticsMark.Text);
-            labelInformationTechMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelInformationTech.Text, "ЗП");
+            labelInformationTechMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelInformationTech.Text, "ЗП");
             labelInformationTechMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelInformationTechMark.Text);
-            labelHistoryMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelHistory.Text, "ЗП");
+            labelHistoryMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelHistory.Text, "ЗП");
             labelHistoryMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelHistoryMark.Text);
-            labelGeographyMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelGeography.Text, "ЗП");
+            labelGeographyMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelGeography.Text, "ЗП");
             labelGeographyMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelGeographyMark.Text);
-            labelPsychologyAndLogicMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelPsychologyAndLogic.Text, "ЗП");
+            labelPsychologyAndLogicMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelPsychologyAndLogic.Text, "ЗП");
             labelPsychologyAndLogicMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelPsychologyAndLogicMark.Text);
-            labelEticsAndRightMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelEticsAndRight.Text, "ЗП");
+            labelEticsAndRightMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelEticsAndRight.Text, "ЗП");
             labelEticsAndRightMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelEticsAndRightMark.Text);
-            labelPhilosophyMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelPhilosophy.Text, "ЗП");
+            labelPhilosophyMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelPhilosophy.Text, "ЗП");
             labelPhilosophyMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelPhilosophyMark.Text);
-            labelWPSubjectMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelWPSubject.Text, "ЗП");
+            labelWPSubjectMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelWPSubject.Text, "ЗП");
             labelWPSubjectMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelWPSubjectMark.Text);
-            labelBiologyMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelBiology.Text, "ЗП");
+            labelBiologyMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelBiology.Text, "ЗП");
             labelBiologyMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelBiologyMark.Text);
-            labelPhysicsMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelPhysics.Text, "ЗП");
+            labelPhysicsMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelPhysics.Text, "ЗП");
             labelPhysicsMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelPhysicsMark.Text);
-            labelChemistryMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelChemistry.Text, "ЗП");
+            labelChemistryMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelChemistry.Text, "ЗП");
             labelChemistryMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelChemistryMark.Text);
-            labelMusicMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelMusic.Text, "ЗП");
+            labelMusicMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelMusic.Text, "ЗП");
             labelMusicMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelMusicMark.Text);
-            labelArtMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelArt.Text, "ЗП");
+            labelArtMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelArt.Text, "ЗП");
             labelArtMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelArtMark.Text);
-            labelSportsMark.Text = Classes.DiplomsDA.GetMarkOnSubject(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), labelSports.Text, "ЗП");
+            labelSportsMark.Text = Classes.DiplomsDA.GetMarkOnSubject(studentId, labelSports.Text, "ЗП");
             labelSportsMarkWords.Text = Classes.MarkDA.GetMarkWithWords(labelSportsMark.Text);
             //extra subjects(СИП)
             ClearLabel(labelFirstExtraSubject);
@@ -1027,7 +1239,7 @@
             ClearLabel(labelSecondExtraSubjectMarkWords);
             ClearLabel(labelThirdExtraSubjectMarkWords);
             ClearLabel(labelFourthExtraSubjectMarkWords);
-            var studiedExtraSubjects = Classes.DiplomsDA.GetAllDiplomMarks(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), "СИП");
+            var studiedExtraSubjects = Classes.DiplomsDA.GetAllDiplomMarks(studentId, "СИП");
             var studiedExtraSubjectsNamesLabels = new List<Label> { labelFirstExtraSubject, labelSecondExtraSubject, labelThirdExtraSubject, labelFourthExtraSubject, labelFourthExtraSubject };
             var studiedExtraSubjectsMarks = new List<Label> { labelFirstExtraSubjectMark, labelSecondExtraSubjectMark, labelThirdExtraSubjectMark, labelFourthExtraSubjectMark };
             var studeiedExtraSubjectsMarksWords = new List<Label> { labelFirstExtraSubjectMarkWords, labelSecondExtraSubjectMarkWords, labelThirdExtraSubjectMarkWords, labelFourthExtraSubjectMarkWords };
@@ -1048,7 +1260,7 @@
             ClearLabel(labelFirstChosenSubjectMarkWords);
             ClearLabel(labelSecondChosenSubjectMarkWords);
             ClearLabel(labelThirdChosenSubjectMarkWords);
-            var professionalSubjects = Classes.DiplomsDA.GetAllDiplomMarks(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), "ЗПП");
+            var professionalSubjects = Classes.DiplomsDA.GetAllDiplomMarks(studentId, "ЗПП");
             var professionalSubjectsNames = new List<Label> { labelFirstChosenSubject, labelSecondChosenSubject, labelThirdChosenSubject };
             var professionalSubjectsMarks = new List<Label> { labelFirstChosenSubjectMark, labelSecondChosenSubjectMark, labelThirdChosenSubjectMark };
             var professionalSubjectsMarksWords = new List<Label> { labelFirstChosenSubjectMarkWords, labelSecondChosenSubjectMarkWords, labelThirdChosenSubjectMarkWords };
@@ -1068,7 +1280,7 @@
             ClearLabel(labelThirdExam);
             ClearLabel(labelThirdExamMark);
             ClearLabel(labelThirdExamMarkWords);
-            var examSubjects = Classes.DiplomsDA.GetAllDiplomMarks(long.Parse(comboBoxStudentsNamesDiplom.SelectedValue.ToString()), "ДЗИ");
+            var examSubjects = Classes.DiplomsDA.GetAllDiplomMarks(studentId, "ДЗИ");
             var examSubjectsNames = new List<Label> { labelFirstExam, labelSecondExam, labelThirdExam };
             var examSubjectsMarks = new List<Label> { labelFirstExamMark, labelSecondExamMark, labelThirdExamMark };
             var examSubjectsMarksWords = new List<Label> { labelFirstExamMarkWords, labelSecondExamMarkWords, labelThirdExamMarkWords };
@@ -1078,6 +1290,38 @@
                 examSubjectsMarks[i].Text = examSubjects[i].Mark.ToString("f2");
                 examSubjectsMarksWords[i].Text = Classes.MarkDA.GetMarkWithWords(examSubjectsMarks[i].Text);
             }
+        }
+        private void ShowDiplomHoursStudied()
+        {
+            labelBulgarianLanguageHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelBulgarianLanguage.Text, "ЗП");
+            if (labelFirstForeignLanguage.Text != "-")
+            {
+                labelFirstForeignLanguageHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelFirstForeignLanguage.Text, "ЗП");
+            }
+            if (labelSecondForeignLanguage.Text != "-")
+            {
+                labelSecondForeignLanguageHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelSecondForeignLanguage.Text, "ЗП");
+            }
+            if (labelThirdForeignLanguage.Text != "-")
+            {
+                labelThirdForeignLanguageHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelThirdForeignLanguage.Text, "ЗП");
+            }
+            labelMathsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelMaths.Text, "ЗП");
+            labelInformaticsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelThirdForeignLanguage.Text, "ЗП");
+            labelInformationTechHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelInformatics.Text, "ЗП");
+            labelHistoryHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelHistory.Text, "ЗП");
+            labelGeographyHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelGeography.Text, "ЗП");
+            labelPsychologyAndLogicHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelPsychologyAndLogic.Text, "ЗП");
+            labelEticsAndRightHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelEticsAndRight.Text, "ЗП");
+            labelPhilosophyHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelPhilosophy.Text, "ЗП");
+            labelWPSubjectHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelWPSubject.Text, "ЗП");
+            labelBiologyHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelBiology.Text, "ЗП");
+            labelPhysicsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelPhysics.Text, "ЗП");
+            labelChemistryHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelChemistry.Text, "ЗП");
+            labelMusicHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelMusic.Text, "ЗП");
+            labelArtHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelArt.Text, "ЗП");
+            labelSportsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelSports.Text, "ЗП");
+
         }
         #endregion
 
@@ -1174,5 +1418,8 @@
             // - 29 is set so it cuts the combobox for selecting students for better vizualisation
         }
         #endregion
+
+
+
     }
 }

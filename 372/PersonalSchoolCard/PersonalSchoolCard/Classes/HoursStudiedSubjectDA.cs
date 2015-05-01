@@ -7,31 +7,69 @@
     using System.Windows.Forms;
     public class HoursStudiedSubjectDA
     {
-        public static void SaveHoursStudiedSubject(DataGridView gridViewSubjects, DataGridView gridViewHoursStudied, int teacherID)
+        public static void SaveHoursStudiedSubject(DataGridView gridViewHoursStudied, int teacherID,string subjectType)
         {
             using (var context = new PersonalSchoolCardEntities())
             {
-                for (int i = 0; i < gridViewSubjects.Rows.Count; i++)
+                var subjectTypeID = SubjectDA.GetSubjectTypeID(subjectType);
+                for (int i = 0; i < gridViewHoursStudied.Rows.Count; i++)
                 {
-                    if (gridViewHoursStudied.Rows[i].Cells[0].Value != null)
+                    if (gridViewHoursStudied.Rows[i].Cells[1].Value != null)
                     {
-                        var subjectID = SubjectDA.GetSubjectID(gridViewSubjects.Rows[i].Cells[0].Value.ToString());
-                        var subjectTypeID = SubjectDA.GetSubjectTypeID(gridViewSubjects.Columns[2].Name.ToString().Substring(0, 2));
-                        var profileID = ProfileDA.GetProfileIDByClassName(TeacherDA.GetClassNameByTeacherID(teacherID,SchoolYearDA.GetCurrentSchoolYear()));
-                        var classID = TeacherDA.GetClassIDByTeacherID(teacherID);
+                        var subjectID = SubjectDA.GetSubjectID(gridViewHoursStudied.Rows[i].Cells[0].Value.ToString());                                                
+                        var classID = SchoolClassDA.GetSchoolClassByTeacherID(teacherID).ClassID;
                         var hoursStudiedSubject = new HoursStudiedSubject
                         {
                             ClassID = classID,
-                            ProfileID = profileID,
                             SubjectID = subjectID,
                             SubjectTypeID = subjectTypeID,
-                            HoursStudied = int.Parse(gridViewHoursStudied.Rows[i].Cells[0].Value.ToString())
+                            HoursStudied = int.Parse(gridViewHoursStudied.Rows[i].Cells[1].Value.ToString())
                         };
                         context.HoursStudiedSubjects.Add(hoursStudiedSubject);
-                        
+                    }
+                    else
+                    {
+                        throw new NullReferenceException("Не са въведени данни.");
                     }
                 }
                 context.SaveChanges();
+            }
+        }
+        public static string GetHoursStudiedOnSubject(int teacherID, string subjectName, string subjectType)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var studiedYears = SchoolYearDA.GetAllStudiedYears();
+                studiedYears.Reverse();
+                var schoolClass = SchoolClassDA.GetSchoolClassByTeacherID(teacherID);
+                var schoolClassChar = schoolClass.ClassChar;
+                var schoolClassNumber = schoolClass.ClassNumber;
+                var subjectId = SubjectDA.GetSubjectID(subjectName);
+                var subjectTypeId = SubjectDA.GetSubjectTypeID(subjectType);
+                int hoursStudiedTotal = 0;
+                for (int i = 0; i < studiedYears.Count; i++)
+                {
+                    string year = studiedYears[i];
+                    string className = string.Format("{0} {1}", schoolClassNumber - i, schoolClassChar);
+                    var schoolClassID = context.SchoolClasses
+                                            .Where(entity => entity.SchoolYear.SchoolYearName == year && entity.ClassName == className)
+                                            .Select(entity => entity.ClassID)
+                                            .First();
+
+                    var hoursStudied = context.HoursStudiedSubjects
+                                    .Where(entity => entity.ClassID == schoolClassID && entity.SubjectID == subjectId && entity.SubjectTypeID == subjectTypeId)
+                                    .Select(entity => entity.HoursStudied)
+                                    .FirstOrDefault();
+                    hoursStudiedTotal += hoursStudied;
+                }
+                if (hoursStudiedTotal.ToString()=="0")
+                {
+                    return "-";
+                }
+                else
+                {
+                    return hoursStudiedTotal.ToString();
+                }
             }
         }
     }

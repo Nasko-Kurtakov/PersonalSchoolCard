@@ -91,7 +91,7 @@
 
         }
         private void buttonAddTeachers_Click(object sender, EventArgs e)
-        {            
+        {
             Classes.TeacherDA.AddTeachers(dataGridViewAddTeacher);
             listBoxAlreadyAddedTeachers.DataSource = Classes.TeacherDA.GetAllTeachersNames();
             listBoxAlreadyAddedTeachers.Refresh();
@@ -125,7 +125,7 @@
             Classes.TermDA.AddTerms(dataGridViewAddTerms);
             listBoxAlreadyAddedTerms.DataSource = Classes.TermDA.GetTerms();
             listBoxAlreadyAddedTerms.Refresh();
-        } 
+        }
         #endregion
 
         #region //managing classes
@@ -310,7 +310,7 @@
             labelSchoolInfoChangesDone.Visible = false;
             timerChangesDone.Stop();
         }
-        
+
         #endregion
 
         #region//adding new school years
@@ -392,6 +392,13 @@
             }
         }
         #endregion
-       
+
+
+        private void buttonSignOut_Click(object sender, EventArgs e)
+        {
+            Classes.SignClass.LogOut(this);
+        }
+
+
     }
 }

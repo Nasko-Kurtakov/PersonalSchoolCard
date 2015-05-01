@@ -131,7 +131,7 @@
                 
                 var mark = context.Diploms
                                         .Where(entity => entity.StudentID == studentID && entity.Subject.SubjectName==subjectName &&  entity.SubjectType.SubjectTypeName == subjectType)
-                                        .Select(entity => entity.Mark).First();
+                                        .Select(entity => entity.Mark).FirstOrDefault();
                 return mark.ToString("f2");
             }
         }

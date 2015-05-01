@@ -11,7 +11,7 @@
         {
             using (var contex = new PersonalSchoolCardEntities())
             {
-                var classID = TeacherDA.GetClassIDByTeacherID(teacherID);
+                var classID = SchoolClassDA.GetSchoolClassByTeacherID(teacherID).ClassID;
 
                 for (int i = 0; i < gridView.Rows.Count; i++)
                 {

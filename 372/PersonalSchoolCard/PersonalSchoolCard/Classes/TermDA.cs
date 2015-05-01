@@ -38,7 +38,6 @@
                 }
             }
         }
-
         public static List<string> GetTerms()
         {
             using (var context = new PersonalSchoolCardEntities())

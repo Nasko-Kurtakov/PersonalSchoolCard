@@ -103,11 +103,20 @@
         }
         public static List<string> GetAllStudiedYears()
         {
+            int finalYear;
             var years = new List<string>();
-            years.Add(string.Format("{0}/{1}", DateTime.Now.Year - 4, DateTime.Now.Year - 3));
-            years.Add(string.Format("{0}/{1}", DateTime.Now.Year - 3, DateTime.Now.Year - 2));
-            years.Add(string.Format("{0}/{1}", DateTime.Now.Year - 2, DateTime.Now.Year - 1));
-            years.Add(string.Format("{0}/{1}", DateTime.Now.Year - 1, DateTime.Now.Year));
+            if (DateTime.Now.Month < 9)
+            {
+               finalYear = DateTime.Now.Year;
+            }
+            else
+            {
+               finalYear = DateTime.Now.Year + 1;
+            }
+            years.Add(string.Format("{0}/{1}", finalYear - 4, finalYear - 3));
+            years.Add(string.Format("{0}/{1}", finalYear - 3, finalYear - 2));
+            years.Add(string.Format("{0}/{1}", finalYear - 2, finalYear - 1));
+            years.Add(string.Format("{0}/{1}", finalYear - 1, finalYear));
             return years;
         }
         public static string GetNextSchoolYear(string currentSchoolYear = "")
@@ -122,6 +131,17 @@
             int schoolYearSecondHalfAsInt = int.Parse(schoolYearSecondHalf) + 1;
             string schoolYearChanged = string.Format("{0}/{1}", shoolYearFirstHalfAsInt, schoolYearSecondHalfAsInt);
             return schoolYearChanged;
+        }
+        public static int GetSchoolYearID(string schoolYearName)
+        {
+            using(var context = new PersonalSchoolCardEntities())
+            {
+                var schoolYearId = context.SchoolYears
+                                    .Where(schoolYear => schoolYear.SchoolYearName == schoolYearName)
+                                    .Select(schoolYear => schoolYear.SchoolYearID)
+                                    .First();
+                return schoolYearId;
+            }
         }
     }
 }

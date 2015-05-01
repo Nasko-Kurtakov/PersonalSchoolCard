@@ -70,7 +70,7 @@
         {
             using (var context = new PersonalSchoolCardEntities())
             {
-                var profileID = TeacherDA.GetClassProfileIDByTeacher(teacherID, SchoolYearDA.GetCurrentSchoolYear());
+                var profileID = ProfileDA.GetClassProfileIDByTeacher(teacherID, SchoolYearDA.GetCurrentSchoolYear());
                 var profileName = context.Profiles
                                 .Where(profile => profile.ProfileID == profileID)
                                 .Select(profile => profile.ProfileName)
@@ -88,6 +88,17 @@
                                     .Select(schoolClass => schoolClass.ProfileID)
                                     .First();
                 return profileID;
+            }
+        }
+        public static int? GetClassProfileIDByTeacher(int teacherID, string schoolYear)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var profileId = context.SchoolClasses
+                                    .Where(schoolClass => schoolClass.TeacherID == teacherID && schoolClass.SchoolYear.SchoolYearName == schoolYear)
+                                    .Select(schoolClass => schoolClass.ProfileID)
+                                    .FirstOrDefault();
+                return profileId;
             }
         }
     }

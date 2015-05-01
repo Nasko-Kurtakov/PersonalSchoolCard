@@ -73,7 +73,6 @@
                 }
             }
         }
-
         public static List<Settlement> GetAreas()
         {
             using (var context = new PersonalSchoolCardEntities())
@@ -115,7 +114,6 @@
                 }
             }
         }
-
         public static Settlement GetStudentSettlement(int? settlementID)
         {
             using(var context = new PersonalSchoolCardEntities())

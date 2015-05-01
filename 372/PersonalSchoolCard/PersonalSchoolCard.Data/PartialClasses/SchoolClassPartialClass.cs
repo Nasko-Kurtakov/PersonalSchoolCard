@@ -17,5 +17,12 @@
                 }
             }
         }
+        public string ClassChar
+        {
+            get
+            {
+                return this.ClassName.Substring(this.ClassName.Length - 1, 1);
+            }
+        }
     }
 }
