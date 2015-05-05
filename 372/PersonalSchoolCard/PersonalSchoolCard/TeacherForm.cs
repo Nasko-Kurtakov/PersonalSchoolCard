@@ -252,9 +252,10 @@
         private void buttonSaveMarks_Click(object sender, EventArgs e)
         {
             bool success = false;
+            long studentID = 0;
             try
             {
-                long.Parse(comboBoxStudentsNames.SelectedValue.ToString());
+                studentID = long.Parse(comboBoxStudentsNames.SelectedValue.ToString());
             }
             catch (NullReferenceException)
             {
@@ -419,9 +420,10 @@
         private void buttonSaveMarksExtraSubjectsFirstTerm_Click(object sender, EventArgs e)
         {
             bool success = false;
+            long studentID = 0;
             try
             {
-                long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString());
+                studentID = long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString());
             }
             catch (NullReferenceException)
             {
@@ -441,7 +443,7 @@
             }
             try
             {
-                Classes.MarkDA.SaveMark(dataGridViewExtraSubjects, teacherID, long.Parse(comboBoxStudentsNamesExtraSubjects.SelectedValue.ToString()), (byte)tabControlMarksExtraSubjects.SelectedIndex, true);
+                Classes.MarkDA.SaveMark(dataGridViewExtraSubjects, teacherID, studentID, (byte)tabControlMarksExtraSubjects.SelectedIndex, true);
                 success = true;
             }
             catch (FormatException)
@@ -967,15 +969,12 @@
             labelFirstChosenSubject.Text = "-";
             labelFirstChosenSubjectMarkWords.Text = "-";
             labelFirstChosenSubjectMark.Text = "-";
-            labelFirstChosenSubjectHoursStudied.Text = "-";
             labelSecondChosenSubject.Text = "-";
             labelSecondChosenSubjectMarkWords.Text = "-";
             labelSecondChosenSubjectMark.Text = "-";
-            labelSecondChosenSubjectHoursStudied.Text = "-";
             labelThirdChosenSubject.Text = "-";
             labelThirdChosenSubjectMarkWords.Text = "-";
             labelThirdChosenSubjectMark.Text = "-";
-            labelThirdChosenSubjectHoursStudied.Text = "-";
             labelFirstExam.Text = "-";
             labelFirstExamMarkWords.Text = "-";
             labelFirstExamMark.Text = "-";

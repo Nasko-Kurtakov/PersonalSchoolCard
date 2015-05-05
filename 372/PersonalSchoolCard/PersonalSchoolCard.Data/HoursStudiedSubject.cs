@@ -15,7 +15,6 @@ namespace PersonalSchoolCard.Data
     public partial class HoursStudiedSubject
     {
         public int ClassID { get; set; }
-        public Nullable<int> ProfileID { get; set; }
         public int SubjectID { get; set; }
         public byte SubjectTypeID { get; set; }
         public int HoursStudied { get; set; }

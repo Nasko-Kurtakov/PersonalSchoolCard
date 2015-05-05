@@ -37,7 +37,6 @@
             <PropertyRef Name="SubjectTypeID" />
           </Key>
           <Property Name="ClassID" Type="int" Nullable="false" />
-          <Property Name="ProfileID" Type="int" />
           <Property Name="SubjectID" Type="int" Nullable="false" />
           <Property Name="SubjectTypeID" Type="tinyint" Nullable="false" />
           <Property Name="HoursStudied" Type="int" Nullable="false" />
@@ -649,7 +648,6 @@
             <PropertyRef Name="SubjectTypeID" />
           </Key>
           <Property Name="ClassID" Type="Int32" Nullable="false" />
-          <Property Name="ProfileID" Type="Int32" />
           <Property Name="SubjectID" Type="Int32" Nullable="false" />
           <Property Name="SubjectTypeID" Type="Byte" Nullable="false" />
           <Property Name="HoursStudied" Type="Int32" Nullable="false" />
@@ -1255,7 +1253,6 @@
             <EntityTypeMapping TypeName="PersonalSchoolCardModel.HoursStudiedSubject">
               <MappingFragment StoreEntitySet="HoursStudiedSubject">
                 <ScalarProperty Name="ClassID" ColumnName="ClassID" />
-                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
                 <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
                 <ScalarProperty Name="SubjectTypeID" ColumnName="SubjectTypeID" />
                 <ScalarProperty Name="HoursStudied" ColumnName="HoursStudied" />

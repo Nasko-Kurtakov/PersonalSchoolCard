@@ -115,7 +115,6 @@
                     context.SaveChanges();
                 }
             }
-
         }
         public static byte? GetMark(long studentID, string subjectName, int subjectTypeID, byte termID, int teacherID)
         {
