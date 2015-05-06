@@ -31,8 +31,8 @@ namespace PersonalShcoolCard
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.buttonSignOut = new System.Windows.Forms.Button();
             this.buttonShowDiplomReady = new System.Windows.Forms.Button();
@@ -46,6 +46,26 @@ namespace PersonalShcoolCard
             this.panelParent = new System.Windows.Forms.Panel();
             this.tabControlDiplom = new System.Windows.Forms.TabControl();
             this.tabPageInfo = new System.Windows.Forms.TabPage();
+            this.label131 = new System.Windows.Forms.Label();
+            this.label130 = new System.Windows.Forms.Label();
+            this.label129 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.label127 = new System.Windows.Forms.Label();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.labelStudentName = new System.Windows.Forms.Label();
             this.buttonPrintStudentInfo = new System.Windows.Forms.Button();
             this.labelPictureNotAvailable = new System.Windows.Forms.Label();
@@ -254,6 +274,46 @@ namespace PersonalShcoolCard
             this.label98 = new System.Windows.Forms.Label();
             this.label99 = new System.Windows.Forms.Label();
             this.label3First = new System.Windows.Forms.Label();
+            this.tabControlMarksExtraSubjects = new System.Windows.Forms.TabControl();
+            this.tabPageChoseExtraSubjects = new System.Windows.Forms.TabPage();
+            this.panelChooseExtraSubjects = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.checkedListBoxExtraSubjects = new System.Windows.Forms.CheckedListBox();
+            this.tabPageMarksExtraSubjectsFirstTerm = new System.Windows.Forms.TabPage();
+            this.panelExtraSubjectsFirstTerm = new System.Windows.Forms.Panel();
+            this.labelSaveSuccessExtraSubjectsMarksFirstTerm = new System.Windows.Forms.Label();
+            this.buttonSaveMarksExtraSubjectsFirstTerm = new System.Windows.Forms.Button();
+            this.dataGridViewExtraSubjects = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.СИПFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.comboBoxStudentsNamesExtraSubjects = new System.Windows.Forms.ComboBox();
+            this.tabPageMarksExtraSubjectsSecondTerm = new System.Windows.Forms.TabPage();
+            this.panelExtraSubjectsSecondTerm = new System.Windows.Forms.Panel();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tabPageMarksExtraSubjectsYear = new System.Windows.Forms.TabPage();
+            this.panelExtraSubjectsYearTerm = new System.Windows.Forms.Panel();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.panelHoursStudiedExtraSubjects = new System.Windows.Forms.TabPage();
+            this.label119 = new System.Windows.Forms.Label();
+            this.labelHoursStudiedExtraSubjectsSuccess = new System.Windows.Forms.Label();
+            this.textBox43 = new System.Windows.Forms.TextBox();
+            this.buttonSaveHoursStudiedExtraSubjects = new System.Windows.Forms.Button();
+            this.dataGridViewHoursStudiedExtraSubjects = new System.Windows.Forms.DataGridView();
+            this.Subjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.СИПХорариум = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox39 = new System.Windows.Forms.TextBox();
             this.tabControlMarks = new System.Windows.Forms.TabControl();
             this.tabPageSelectSubjects = new System.Windows.Forms.TabPage();
             this.panelSelectSubjects = new System.Windows.Forms.Panel();
@@ -299,44 +359,9 @@ namespace PersonalShcoolCard
             this.textBox48 = new System.Windows.Forms.TextBox();
             this.buttonSaveHoursStudiedSuccess = new System.Windows.Forms.Button();
             this.dataGridViewHoursStudiedSubject = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox54 = new System.Windows.Forms.TextBox();
-            this.tabControlMarksExtraSubjects = new System.Windows.Forms.TabControl();
-            this.tabPageChoseExtraSubjects = new System.Windows.Forms.TabPage();
-            this.panelChooseExtraSubjects = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.checkedListBoxExtraSubjects = new System.Windows.Forms.CheckedListBox();
-            this.tabPageMarksExtraSubjectsFirstTerm = new System.Windows.Forms.TabPage();
-            this.panelExtraSubjectsFirstTerm = new System.Windows.Forms.Panel();
-            this.labelSaveSuccessExtraSubjectsMarksFirstTerm = new System.Windows.Forms.Label();
-            this.buttonSaveMarksExtraSubjectsFirstTerm = new System.Windows.Forms.Button();
-            this.dataGridViewExtraSubjects = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.СИПFirstTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.comboBoxStudentsNamesExtraSubjects = new System.Windows.Forms.ComboBox();
-            this.tabPageMarksExtraSubjectsSecondTerm = new System.Windows.Forms.TabPage();
-            this.panelExtraSubjectsSecondTerm = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.tabPageMarksExtraSubjectsYear = new System.Windows.Forms.TabPage();
-            this.panelExtraSubjectsYearTerm = new System.Windows.Forms.Panel();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.panelHoursStudiedExtraSubjects = new System.Windows.Forms.TabPage();
-            this.labelHoursStudiedExtraSubjectsSuccess = new System.Windows.Forms.Label();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.buttonSaveHoursStudiedExtraSubjects = new System.Windows.Forms.Button();
-            this.dataGridViewHoursStudiedExtraSubjects = new System.Windows.Forms.DataGridView();
-            this.textBox39 = new System.Windows.Forms.TextBox();
             this.panelAddAbsences = new System.Windows.Forms.Panel();
             this.labelAbsecesSaveSusseccful = new System.Windows.Forms.Label();
             this.comboBoxStudentsNamesAbsences = new System.Windows.Forms.ComboBox();
@@ -449,6 +474,15 @@ namespace PersonalShcoolCard
             this.labelCurrentSchoolYear = new System.Windows.Forms.Label();
             this.labelTeacherName = new System.Windows.Forms.Label();
             this.labelClassName = new System.Windows.Forms.Label();
+            this.textBoxPersonalCardNumber = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxDateOfBirth = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxMobilePhone = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxEnrollmentYear = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxAddress = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxPersonalNumber = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxLastName = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxSecondName = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxFirstName = new PersonalShcoolCard.Classes.WaterMark();
             this.labelPictureNotSelected = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -512,40 +546,6 @@ namespace PersonalShcoolCard
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.timerSaveHoursStudiedSuccess = new System.Windows.Forms.Timer(this.components);
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label104 = new System.Windows.Forms.Label();
-            this.label110 = new System.Windows.Forms.Label();
-            this.label112 = new System.Windows.Forms.Label();
-            this.label113 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.label120 = new System.Windows.Forms.Label();
-            this.label122 = new System.Windows.Forms.Label();
-            this.label123 = new System.Windows.Forms.Label();
-            this.label124 = new System.Windows.Forms.Label();
-            this.label125 = new System.Windows.Forms.Label();
-            this.label126 = new System.Windows.Forms.Label();
-            this.label127 = new System.Windows.Forms.Label();
-            this.label128 = new System.Windows.Forms.Label();
-            this.label129 = new System.Windows.Forms.Label();
-            this.label130 = new System.Windows.Forms.Label();
-            this.label131 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.СИПХорариум = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxPersonalCardNumber = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxDateOfBirth = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxMobilePhone = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxEnrollmentYear = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxAddress = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxPersonalNumber = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxLastName = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxSecondName = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxFirstName = new PersonalShcoolCard.Classes.WaterMark();
-            this.label119 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -556,18 +556,6 @@ namespace PersonalShcoolCard
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentPortrait)).BeginInit();
             this.tabPageMandatoryMarks.SuspendLayout();
             this.tabPageExtraMarks.SuspendLayout();
-            this.tabControlMarks.SuspendLayout();
-            this.tabPageSelectSubjects.SuspendLayout();
-            this.panelSelectSubjects.SuspendLayout();
-            this.tabPageFirstTerm.SuspendLayout();
-            this.panelMarksFirstTerm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).BeginInit();
-            this.tabPageSecondTerm.SuspendLayout();
-            this.panelMarksSecondTerm.SuspendLayout();
-            this.tabPageYear.SuspendLayout();
-            this.panelMarksYear.SuspendLayout();
-            this.tabPageHoursStudiedd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedSubject)).BeginInit();
             this.tabControlMarksExtraSubjects.SuspendLayout();
             this.tabPageChoseExtraSubjects.SuspendLayout();
             this.panelChooseExtraSubjects.SuspendLayout();
@@ -580,6 +568,18 @@ namespace PersonalShcoolCard
             this.panelExtraSubjectsYearTerm.SuspendLayout();
             this.panelHoursStudiedExtraSubjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedExtraSubjects)).BeginInit();
+            this.tabControlMarks.SuspendLayout();
+            this.tabPageSelectSubjects.SuspendLayout();
+            this.panelSelectSubjects.SuspendLayout();
+            this.tabPageFirstTerm.SuspendLayout();
+            this.panelMarksFirstTerm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).BeginInit();
+            this.tabPageSecondTerm.SuspendLayout();
+            this.panelMarksSecondTerm.SuspendLayout();
+            this.tabPageYear.SuspendLayout();
+            this.panelMarksYear.SuspendLayout();
+            this.tabPageHoursStudiedd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedSubject)).BeginInit();
             this.panelAddAbsences.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbsences)).BeginInit();
             this.tabControlMarksSummary.SuspendLayout();
@@ -795,9 +795,9 @@ namespace PersonalShcoolCard
             // 
             // panelParent
             // 
+            this.panelParent.Controls.Add(this.tabControlDiplom);
             this.panelParent.Controls.Add(this.tabControlMarksExtraSubjects);
             this.panelParent.Controls.Add(this.tabControlMarks);
-            this.panelParent.Controls.Add(this.tabControlDiplom);
             this.panelParent.Controls.Add(this.panelAddAbsences);
             this.panelParent.Controls.Add(this.tabControlMarksSummary);
             this.panelParent.Controls.Add(this.panelWelcome);
@@ -815,10 +815,11 @@ namespace PersonalShcoolCard
             this.tabControlDiplom.Controls.Add(this.tabPageInfo);
             this.tabControlDiplom.Controls.Add(this.tabPageMandatoryMarks);
             this.tabControlDiplom.Controls.Add(this.tabPageExtraMarks);
-            this.tabControlDiplom.Location = new System.Drawing.Point(0, 167);
+            this.tabControlDiplom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlDiplom.Location = new System.Drawing.Point(0, 0);
             this.tabControlDiplom.Name = "tabControlDiplom";
             this.tabControlDiplom.SelectedIndex = 0;
-            this.tabControlDiplom.Size = new System.Drawing.Size(1038, 60);
+            this.tabControlDiplom.Size = new System.Drawing.Size(1038, 730);
             this.tabControlDiplom.TabIndex = 1153;
             this.tabControlDiplom.Visible = false;
             // 
@@ -882,9 +883,234 @@ namespace PersonalShcoolCard
             this.tabPageInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPageInfo.Name = "tabPageInfo";
             this.tabPageInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInfo.Size = new System.Drawing.Size(1030, 34);
+            this.tabPageInfo.Size = new System.Drawing.Size(1030, 704);
             this.tabPageInfo.TabIndex = 0;
             this.tabPageInfo.Text = "Първа страница";
+            // 
+            // label131
+            // 
+            this.label131.BackColor = System.Drawing.Color.Olive;
+            this.label131.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label131.Location = new System.Drawing.Point(131, 657);
+            this.label131.Name = "label131";
+            this.label131.Size = new System.Drawing.Size(763, 4);
+            this.label131.TabIndex = 1189;
+            // 
+            // label130
+            // 
+            this.label130.AutoSize = true;
+            this.label130.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label130.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label130.Location = new System.Drawing.Point(168, 626);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(54, 17);
+            this.label130.TabIndex = 1188;
+            this.label130.Text = "област";
+            // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label129.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label129.Location = new System.Drawing.Point(592, 586);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(275, 9);
+            this.label129.TabIndex = 1187;
+            this.label129.Text = "................................................................................." +
+    "......................................................";
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label128.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label128.Location = new System.Drawing.Point(527, 580);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(59, 17);
+            this.label128.TabIndex = 1186;
+            this.label128.Text = "община";
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label127.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label127.Location = new System.Drawing.Point(168, 582);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(72, 17);
+            this.label127.TabIndex = 1185;
+            this.label127.Text = "град/село";
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label126.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label126.Location = new System.Drawing.Point(296, 545);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(189, 9);
+            this.label126.TabIndex = 1184;
+            this.label126.Text = "................................................................................." +
+    "...........";
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label125.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label125.Location = new System.Drawing.Point(490, 539);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(53, 17);
+            this.label125.TabIndex = 1183;
+            this.label125.Text = "години";
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label124.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label124.Location = new System.Drawing.Point(168, 441);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(66, 17);
+            this.label124.TabIndex = 1182;
+            this.label124.Text = "завърши";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label123.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label123.Location = new System.Drawing.Point(447, 406);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(347, 9);
+            this.label123.TabIndex = 1181;
+            this.label123.Text = "................................................................................." +
+    "................................................................................" +
+    "..........";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label122.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label122.Location = new System.Drawing.Point(794, 398);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(53, 17);
+            this.label122.TabIndex = 1180;
+            this.label122.Text = "година";
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label120.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label120.Location = new System.Drawing.Point(409, 400);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(39, 17);
+            this.label120.TabIndex = 1179;
+            this.label120.Text = "през";
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label114.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label114.Location = new System.Drawing.Point(168, 400);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(38, 17);
+            this.label114.TabIndex = 1178;
+            this.label114.Text = "ЛНЧ";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label113.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label113.Location = new System.Drawing.Point(608, 365);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(239, 9);
+            this.label113.TabIndex = 1177;
+            this.label113.Text = "................................................................................." +
+    "...................................,";
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label112.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label112.Location = new System.Drawing.Point(546, 359);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(54, 17);
+            this.label112.TabIndex = 1176;
+            this.label112.Text = "област";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label110.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label110.Location = new System.Drawing.Point(168, 359);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(59, 17);
+            this.label110.TabIndex = 1175;
+            this.label110.Text = "община";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label104.Location = new System.Drawing.Point(500, 322);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(349, 9);
+            this.label104.TabIndex = 1174;
+            this.label104.Text = "................................................................................." +
+    "................................................................................" +
+    "..........,";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label84.Location = new System.Drawing.Point(357, 322);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(57, 9);
+            this.label84.TabIndex = 1173;
+            this.label84.Text = "..........................";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label83.Location = new System.Drawing.Point(417, 314);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(83, 17);
+            this.label83.TabIndex = 1172;
+            this.label83.Text = "в град/село";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label46.Location = new System.Drawing.Point(317, 316);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(40, 17);
+            this.label46.TabIndex = 1171;
+            this.label46.Text = "роде";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label45.Location = new System.Drawing.Point(168, 316);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(35, 17);
+            this.label45.TabIndex = 1170;
+            this.label45.Text = "ЕГН";
             // 
             // labelStudentName
             // 
@@ -1353,7 +1579,7 @@ namespace PersonalShcoolCard
             this.tabPageMandatoryMarks.Location = new System.Drawing.Point(4, 22);
             this.tabPageMandatoryMarks.Name = "tabPageMandatoryMarks";
             this.tabPageMandatoryMarks.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMandatoryMarks.Size = new System.Drawing.Size(1030, 34);
+            this.tabPageMandatoryMarks.Size = new System.Drawing.Size(1030, 704);
             this.tabPageMandatoryMarks.TabIndex = 1;
             this.tabPageMandatoryMarks.Text = "Втора страница";
             // 
@@ -1641,7 +1867,7 @@ namespace PersonalShcoolCard
             // 
             this.labelSportsMarkWords.AutoSize = true;
             this.labelSportsMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSportsMarkWords.Location = new System.Drawing.Point(507, 618);
+            this.labelSportsMarkWords.Location = new System.Drawing.Point(508, 618);
             this.labelSportsMarkWords.Name = "labelSportsMarkWords";
             this.labelSportsMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelSportsMarkWords.TabIndex = 404;
@@ -1651,7 +1877,7 @@ namespace PersonalShcoolCard
             // 
             this.labelArtMarkWords.AutoSize = true;
             this.labelArtMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelArtMarkWords.Location = new System.Drawing.Point(507, 592);
+            this.labelArtMarkWords.Location = new System.Drawing.Point(508, 592);
             this.labelArtMarkWords.Name = "labelArtMarkWords";
             this.labelArtMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelArtMarkWords.TabIndex = 403;
@@ -1661,7 +1887,7 @@ namespace PersonalShcoolCard
             // 
             this.labelPhysicsMarkWords.AutoSize = true;
             this.labelPhysicsMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhysicsMarkWords.Location = new System.Drawing.Point(507, 518);
+            this.labelPhysicsMarkWords.Location = new System.Drawing.Point(508, 518);
             this.labelPhysicsMarkWords.Name = "labelPhysicsMarkWords";
             this.labelPhysicsMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelPhysicsMarkWords.TabIndex = 402;
@@ -1671,7 +1897,7 @@ namespace PersonalShcoolCard
             // 
             this.labelChemistryMarkWords.AutoSize = true;
             this.labelChemistryMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChemistryMarkWords.Location = new System.Drawing.Point(507, 543);
+            this.labelChemistryMarkWords.Location = new System.Drawing.Point(508, 543);
             this.labelChemistryMarkWords.Name = "labelChemistryMarkWords";
             this.labelChemistryMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelChemistryMarkWords.TabIndex = 401;
@@ -1681,7 +1907,7 @@ namespace PersonalShcoolCard
             // 
             this.labelMusicMarkWords.AutoSize = true;
             this.labelMusicMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMusicMarkWords.Location = new System.Drawing.Point(507, 567);
+            this.labelMusicMarkWords.Location = new System.Drawing.Point(508, 567);
             this.labelMusicMarkWords.Name = "labelMusicMarkWords";
             this.labelMusicMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelMusicMarkWords.TabIndex = 400;
@@ -1691,7 +1917,7 @@ namespace PersonalShcoolCard
             // 
             this.labelPsychologyAndLogicMarkWords.AutoSize = true;
             this.labelPsychologyAndLogicMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPsychologyAndLogicMarkWords.Location = new System.Drawing.Point(507, 393);
+            this.labelPsychologyAndLogicMarkWords.Location = new System.Drawing.Point(508, 393);
             this.labelPsychologyAndLogicMarkWords.Name = "labelPsychologyAndLogicMarkWords";
             this.labelPsychologyAndLogicMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelPsychologyAndLogicMarkWords.TabIndex = 399;
@@ -1701,7 +1927,7 @@ namespace PersonalShcoolCard
             // 
             this.labelEticsAndRightMarkWords.AutoSize = true;
             this.labelEticsAndRightMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEticsAndRightMarkWords.Location = new System.Drawing.Point(507, 420);
+            this.labelEticsAndRightMarkWords.Location = new System.Drawing.Point(508, 420);
             this.labelEticsAndRightMarkWords.Name = "labelEticsAndRightMarkWords";
             this.labelEticsAndRightMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelEticsAndRightMarkWords.TabIndex = 398;
@@ -1711,7 +1937,7 @@ namespace PersonalShcoolCard
             // 
             this.labelPhilosophyMarkWords.AutoSize = true;
             this.labelPhilosophyMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhilosophyMarkWords.Location = new System.Drawing.Point(507, 443);
+            this.labelPhilosophyMarkWords.Location = new System.Drawing.Point(508, 443);
             this.labelPhilosophyMarkWords.Name = "labelPhilosophyMarkWords";
             this.labelPhilosophyMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelPhilosophyMarkWords.TabIndex = 397;
@@ -1721,7 +1947,7 @@ namespace PersonalShcoolCard
             // 
             this.labelWPSubjectMarkWords.AutoSize = true;
             this.labelWPSubjectMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWPSubjectMarkWords.Location = new System.Drawing.Point(507, 470);
+            this.labelWPSubjectMarkWords.Location = new System.Drawing.Point(508, 470);
             this.labelWPSubjectMarkWords.Name = "labelWPSubjectMarkWords";
             this.labelWPSubjectMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelWPSubjectMarkWords.TabIndex = 396;
@@ -1731,7 +1957,7 @@ namespace PersonalShcoolCard
             // 
             this.labelBiologyMarkWords.AutoSize = true;
             this.labelBiologyMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBiologyMarkWords.Location = new System.Drawing.Point(507, 493);
+            this.labelBiologyMarkWords.Location = new System.Drawing.Point(508, 493);
             this.labelBiologyMarkWords.Name = "labelBiologyMarkWords";
             this.labelBiologyMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelBiologyMarkWords.TabIndex = 395;
@@ -2053,7 +2279,7 @@ namespace PersonalShcoolCard
             // 
             this.labelInformationTechMarkWords.AutoSize = true;
             this.labelInformationTechMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInformationTechMarkWords.Location = new System.Drawing.Point(507, 294);
+            this.labelInformationTechMarkWords.Location = new System.Drawing.Point(508, 294);
             this.labelInformationTechMarkWords.Name = "labelInformationTechMarkWords";
             this.labelInformationTechMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelInformationTechMarkWords.TabIndex = 366;
@@ -2063,7 +2289,7 @@ namespace PersonalShcoolCard
             // 
             this.labelGeographyMarkWords.AutoSize = true;
             this.labelGeographyMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGeographyMarkWords.Location = new System.Drawing.Point(507, 345);
+            this.labelGeographyMarkWords.Location = new System.Drawing.Point(508, 345);
             this.labelGeographyMarkWords.Name = "labelGeographyMarkWords";
             this.labelGeographyMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelGeographyMarkWords.TabIndex = 365;
@@ -2073,7 +2299,7 @@ namespace PersonalShcoolCard
             // 
             this.labelHistoryMarkWords.AutoSize = true;
             this.labelHistoryMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHistoryMarkWords.Location = new System.Drawing.Point(507, 321);
+            this.labelHistoryMarkWords.Location = new System.Drawing.Point(508, 316);
             this.labelHistoryMarkWords.Name = "labelHistoryMarkWords";
             this.labelHistoryMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelHistoryMarkWords.TabIndex = 364;
@@ -2083,7 +2309,7 @@ namespace PersonalShcoolCard
             // 
             this.labelMathsMarkWords.AutoSize = true;
             this.labelMathsMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMathsMarkWords.Location = new System.Drawing.Point(507, 246);
+            this.labelMathsMarkWords.Location = new System.Drawing.Point(508, 246);
             this.labelMathsMarkWords.Name = "labelMathsMarkWords";
             this.labelMathsMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelMathsMarkWords.TabIndex = 363;
@@ -2234,7 +2460,7 @@ namespace PersonalShcoolCard
             // 
             this.labelFirstForeignLanguageMarkWords.AutoSize = true;
             this.labelFirstForeignLanguageMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFirstForeignLanguageMarkWords.Location = new System.Drawing.Point(506, 172);
+            this.labelFirstForeignLanguageMarkWords.Location = new System.Drawing.Point(508, 170);
             this.labelFirstForeignLanguageMarkWords.Name = "labelFirstForeignLanguageMarkWords";
             this.labelFirstForeignLanguageMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelFirstForeignLanguageMarkWords.TabIndex = 350;
@@ -2272,7 +2498,7 @@ namespace PersonalShcoolCard
             // labelThirdForeignLanguageMark
             // 
             this.labelThirdForeignLanguageMark.AutoSize = true;
-            this.labelThirdForeignLanguageMark.Location = new System.Drawing.Point(636, 219);
+            this.labelThirdForeignLanguageMark.Location = new System.Drawing.Point(636, 223);
             this.labelThirdForeignLanguageMark.Name = "labelThirdForeignLanguageMark";
             this.labelThirdForeignLanguageMark.Size = new System.Drawing.Size(10, 13);
             this.labelThirdForeignLanguageMark.TabIndex = 348;
@@ -2332,7 +2558,7 @@ namespace PersonalShcoolCard
             // 
             this.labelSecondForeignLanguageMarkWords.AutoSize = true;
             this.labelSecondForeignLanguageMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSecondForeignLanguageMarkWords.Location = new System.Drawing.Point(507, 195);
+            this.labelSecondForeignLanguageMarkWords.Location = new System.Drawing.Point(508, 191);
             this.labelSecondForeignLanguageMarkWords.Name = "labelSecondForeignLanguageMarkWords";
             this.labelSecondForeignLanguageMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelSecondForeignLanguageMarkWords.TabIndex = 340;
@@ -2342,7 +2568,7 @@ namespace PersonalShcoolCard
             // 
             this.labelThirdForeignLanguageMarkWords.AutoSize = true;
             this.labelThirdForeignLanguageMarkWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelThirdForeignLanguageMarkWords.Location = new System.Drawing.Point(507, 219);
+            this.labelThirdForeignLanguageMarkWords.Location = new System.Drawing.Point(508, 220);
             this.labelThirdForeignLanguageMarkWords.Name = "labelThirdForeignLanguageMarkWords";
             this.labelThirdForeignLanguageMarkWords.Size = new System.Drawing.Size(11, 15);
             this.labelThirdForeignLanguageMarkWords.TabIndex = 339;
@@ -2632,14 +2858,14 @@ namespace PersonalShcoolCard
             this.tabPageExtraMarks.Location = new System.Drawing.Point(4, 22);
             this.tabPageExtraMarks.Name = "tabPageExtraMarks";
             this.tabPageExtraMarks.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageExtraMarks.Size = new System.Drawing.Size(1030, 34);
+            this.tabPageExtraMarks.Size = new System.Drawing.Size(1030, 704);
             this.tabPageExtraMarks.TabIndex = 2;
             this.tabPageExtraMarks.Text = "Трета страница";
             // 
             // labelFourthExtraSubjectHoursStudied
             // 
             this.labelFourthExtraSubjectHoursStudied.AutoSize = true;
-            this.labelFourthExtraSubjectHoursStudied.Location = new System.Drawing.Point(813, 582);
+            this.labelFourthExtraSubjectHoursStudied.Location = new System.Drawing.Point(813, 585);
             this.labelFourthExtraSubjectHoursStudied.Name = "labelFourthExtraSubjectHoursStudied";
             this.labelFourthExtraSubjectHoursStudied.Size = new System.Drawing.Size(10, 13);
             this.labelFourthExtraSubjectHoursStudied.TabIndex = 339;
@@ -2648,7 +2874,7 @@ namespace PersonalShcoolCard
             // labelThirdExtraSubjectHoursStudied
             // 
             this.labelThirdExtraSubjectHoursStudied.AutoSize = true;
-            this.labelThirdExtraSubjectHoursStudied.Location = new System.Drawing.Point(813, 546);
+            this.labelThirdExtraSubjectHoursStudied.Location = new System.Drawing.Point(814, 551);
             this.labelThirdExtraSubjectHoursStudied.Name = "labelThirdExtraSubjectHoursStudied";
             this.labelThirdExtraSubjectHoursStudied.Size = new System.Drawing.Size(10, 13);
             this.labelThirdExtraSubjectHoursStudied.TabIndex = 338;
@@ -2657,7 +2883,7 @@ namespace PersonalShcoolCard
             // labelSecondExtraSubjectHoursStudied
             // 
             this.labelSecondExtraSubjectHoursStudied.AutoSize = true;
-            this.labelSecondExtraSubjectHoursStudied.Location = new System.Drawing.Point(813, 515);
+            this.labelSecondExtraSubjectHoursStudied.Location = new System.Drawing.Point(814, 519);
             this.labelSecondExtraSubjectHoursStudied.Name = "labelSecondExtraSubjectHoursStudied";
             this.labelSecondExtraSubjectHoursStudied.Size = new System.Drawing.Size(10, 13);
             this.labelSecondExtraSubjectHoursStudied.TabIndex = 337;
@@ -2666,7 +2892,7 @@ namespace PersonalShcoolCard
             // labelFirstExtraSubjectHoursStudied
             // 
             this.labelFirstExtraSubjectHoursStudied.AutoSize = true;
-            this.labelFirstExtraSubjectHoursStudied.Location = new System.Drawing.Point(813, 490);
+            this.labelFirstExtraSubjectHoursStudied.Location = new System.Drawing.Point(814, 487);
             this.labelFirstExtraSubjectHoursStudied.Name = "labelFirstExtraSubjectHoursStudied";
             this.labelFirstExtraSubjectHoursStudied.Size = new System.Drawing.Size(10, 13);
             this.labelFirstExtraSubjectHoursStudied.TabIndex = 336;
@@ -2946,7 +3172,7 @@ namespace PersonalShcoolCard
             // labelFourthExtraSubjectMark
             // 
             this.labelFourthExtraSubjectMark.AutoSize = true;
-            this.labelFourthExtraSubjectMark.Location = new System.Drawing.Point(704, 582);
+            this.labelFourthExtraSubjectMark.Location = new System.Drawing.Point(702, 585);
             this.labelFourthExtraSubjectMark.Name = "labelFourthExtraSubjectMark";
             this.labelFourthExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelFourthExtraSubjectMark.TabIndex = 175;
@@ -2973,7 +3199,7 @@ namespace PersonalShcoolCard
             // labelThirdExtraSubjectMark
             // 
             this.labelThirdExtraSubjectMark.AutoSize = true;
-            this.labelThirdExtraSubjectMark.Location = new System.Drawing.Point(701, 546);
+            this.labelThirdExtraSubjectMark.Location = new System.Drawing.Point(701, 551);
             this.labelThirdExtraSubjectMark.Name = "labelThirdExtraSubjectMark";
             this.labelThirdExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelThirdExtraSubjectMark.TabIndex = 168;
@@ -2982,7 +3208,7 @@ namespace PersonalShcoolCard
             // labelSecondExtraSubjectMark
             // 
             this.labelSecondExtraSubjectMark.AutoSize = true;
-            this.labelSecondExtraSubjectMark.Location = new System.Drawing.Point(701, 512);
+            this.labelSecondExtraSubjectMark.Location = new System.Drawing.Point(701, 519);
             this.labelSecondExtraSubjectMark.Name = "labelSecondExtraSubjectMark";
             this.labelSecondExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelSecondExtraSubjectMark.TabIndex = 167;
@@ -2991,7 +3217,7 @@ namespace PersonalShcoolCard
             // labelFirstExtraSubjectMark
             // 
             this.labelFirstExtraSubjectMark.AutoSize = true;
-            this.labelFirstExtraSubjectMark.Location = new System.Drawing.Point(701, 485);
+            this.labelFirstExtraSubjectMark.Location = new System.Drawing.Point(699, 487);
             this.labelFirstExtraSubjectMark.Name = "labelFirstExtraSubjectMark";
             this.labelFirstExtraSubjectMark.Size = new System.Drawing.Size(10, 13);
             this.labelFirstExtraSubjectMark.TabIndex = 166;
@@ -3009,7 +3235,7 @@ namespace PersonalShcoolCard
             // labelSecondExtraSubjectMarkWords
             // 
             this.labelSecondExtraSubjectMarkWords.AutoSize = true;
-            this.labelSecondExtraSubjectMarkWords.Location = new System.Drawing.Point(516, 515);
+            this.labelSecondExtraSubjectMarkWords.Location = new System.Drawing.Point(516, 519);
             this.labelSecondExtraSubjectMarkWords.Name = "labelSecondExtraSubjectMarkWords";
             this.labelSecondExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelSecondExtraSubjectMarkWords.TabIndex = 164;
@@ -3018,7 +3244,7 @@ namespace PersonalShcoolCard
             // labelFirstExtraSubjectMarkWords
             // 
             this.labelFirstExtraSubjectMarkWords.AutoSize = true;
-            this.labelFirstExtraSubjectMarkWords.Location = new System.Drawing.Point(516, 485);
+            this.labelFirstExtraSubjectMarkWords.Location = new System.Drawing.Point(516, 487);
             this.labelFirstExtraSubjectMarkWords.Name = "labelFirstExtraSubjectMarkWords";
             this.labelFirstExtraSubjectMarkWords.Size = new System.Drawing.Size(10, 13);
             this.labelFirstExtraSubjectMarkWords.TabIndex = 163;
@@ -3238,6 +3464,488 @@ namespace PersonalShcoolCard
             this.label3First.Name = "label3First";
             this.label3First.Size = new System.Drawing.Size(763, 4);
             this.label3First.TabIndex = 95;
+            // 
+            // tabControlMarksExtraSubjects
+            // 
+            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageChoseExtraSubjects);
+            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsFirstTerm);
+            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsSecondTerm);
+            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsYear);
+            this.tabControlMarksExtraSubjects.Controls.Add(this.panelHoursStudiedExtraSubjects);
+            this.tabControlMarksExtraSubjects.Location = new System.Drawing.Point(1, 119);
+            this.tabControlMarksExtraSubjects.Name = "tabControlMarksExtraSubjects";
+            this.tabControlMarksExtraSubjects.SelectedIndex = 0;
+            this.tabControlMarksExtraSubjects.Size = new System.Drawing.Size(1038, 38);
+            this.tabControlMarksExtraSubjects.TabIndex = 1151;
+            this.tabControlMarksExtraSubjects.Visible = false;
+            this.tabControlMarksExtraSubjects.SelectedIndexChanged += new System.EventHandler(this.tabControlMarksExtraSubjects_SelectedIndexChanged);
+            // 
+            // tabPageChoseExtraSubjects
+            // 
+            this.tabPageChoseExtraSubjects.AutoScroll = true;
+            this.tabPageChoseExtraSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageChoseExtraSubjects.Controls.Add(this.panelChooseExtraSubjects);
+            this.tabPageChoseExtraSubjects.Location = new System.Drawing.Point(4, 22);
+            this.tabPageChoseExtraSubjects.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageChoseExtraSubjects.Name = "tabPageChoseExtraSubjects";
+            this.tabPageChoseExtraSubjects.Size = new System.Drawing.Size(1030, 12);
+            this.tabPageChoseExtraSubjects.TabIndex = 3;
+            this.tabPageChoseExtraSubjects.Text = "СИП предмети";
+            // 
+            // panelChooseExtraSubjects
+            // 
+            this.panelChooseExtraSubjects.AutoScroll = true;
+            this.panelChooseExtraSubjects.Controls.Add(this.label29);
+            this.panelChooseExtraSubjects.Controls.Add(this.label30);
+            this.panelChooseExtraSubjects.Controls.Add(this.checkedListBoxExtraSubjects);
+            this.panelChooseExtraSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChooseExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelChooseExtraSubjects.Location = new System.Drawing.Point(0, 0);
+            this.panelChooseExtraSubjects.Name = "panelChooseExtraSubjects";
+            this.panelChooseExtraSubjects.Size = new System.Drawing.Size(1030, 12);
+            this.panelChooseExtraSubjects.TabIndex = 1134;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(339, 123);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(421, 75);
+            this.label29.TabIndex = 1134;
+            this.label29.Text = "Маркирайте СИП предметите, \r\nкоито се изучават през тази учебна година \r\nот вашия" +
+    " клас.";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(309, 53);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(405, 33);
+            this.label30.TabIndex = 1133;
+            this.label30.Text = "Избор на изучавани СИП предмети";
+            // 
+            // checkedListBoxExtraSubjects
+            // 
+            this.checkedListBoxExtraSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.checkedListBoxExtraSubjects.CheckOnClick = true;
+            this.checkedListBoxExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBoxExtraSubjects.FormattingEnabled = true;
+            this.checkedListBoxExtraSubjects.Location = new System.Drawing.Point(330, 222);
+            this.checkedListBoxExtraSubjects.Name = "checkedListBoxExtraSubjects";
+            this.checkedListBoxExtraSubjects.Size = new System.Drawing.Size(383, 418);
+            this.checkedListBoxExtraSubjects.TabIndex = 1132;
+            this.checkedListBoxExtraSubjects.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxExtraSubjects_ItemCheck);
+            // 
+            // tabPageMarksExtraSubjectsFirstTerm
+            // 
+            this.tabPageMarksExtraSubjectsFirstTerm.AutoScroll = true;
+            this.tabPageMarksExtraSubjectsFirstTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageMarksExtraSubjectsFirstTerm.Controls.Add(this.panelExtraSubjectsFirstTerm);
+            this.tabPageMarksExtraSubjectsFirstTerm.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMarksExtraSubjectsFirstTerm.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageMarksExtraSubjectsFirstTerm.Name = "tabPageMarksExtraSubjectsFirstTerm";
+            this.tabPageMarksExtraSubjectsFirstTerm.Size = new System.Drawing.Size(1030, 12);
+            this.tabPageMarksExtraSubjectsFirstTerm.TabIndex = 0;
+            this.tabPageMarksExtraSubjectsFirstTerm.Text = "Първи срок";
+            // 
+            // panelExtraSubjectsFirstTerm
+            // 
+            this.panelExtraSubjectsFirstTerm.AutoScroll = true;
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.labelSaveSuccessExtraSubjectsMarksFirstTerm);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.buttonSaveMarksExtraSubjectsFirstTerm);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.dataGridViewExtraSubjects);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox15);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox18);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox19);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.label25);
+            this.panelExtraSubjectsFirstTerm.Controls.Add(this.comboBoxStudentsNamesExtraSubjects);
+            this.panelExtraSubjectsFirstTerm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelExtraSubjectsFirstTerm.Location = new System.Drawing.Point(0, 0);
+            this.panelExtraSubjectsFirstTerm.Margin = new System.Windows.Forms.Padding(0);
+            this.panelExtraSubjectsFirstTerm.Name = "panelExtraSubjectsFirstTerm";
+            this.panelExtraSubjectsFirstTerm.Size = new System.Drawing.Size(1030, 12);
+            this.panelExtraSubjectsFirstTerm.TabIndex = 40;
+            // 
+            // labelSaveSuccessExtraSubjectsMarksFirstTerm
+            // 
+            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.AutoSize = true;
+            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Location = new System.Drawing.Point(853, 434);
+            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Name = "labelSaveSuccessExtraSubjectsMarksFirstTerm";
+            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Size = new System.Drawing.Size(104, 25);
+            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.TabIndex = 1133;
+            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Text = "Добавено";
+            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Visible = false;
+            // 
+            // buttonSaveMarksExtraSubjectsFirstTerm
+            // 
+            this.buttonSaveMarksExtraSubjectsFirstTerm.Location = new System.Drawing.Point(838, 374);
+            this.buttonSaveMarksExtraSubjectsFirstTerm.Name = "buttonSaveMarksExtraSubjectsFirstTerm";
+            this.buttonSaveMarksExtraSubjectsFirstTerm.Size = new System.Drawing.Size(136, 49);
+            this.buttonSaveMarksExtraSubjectsFirstTerm.TabIndex = 1129;
+            this.buttonSaveMarksExtraSubjectsFirstTerm.Text = "Запиши оценките";
+            this.buttonSaveMarksExtraSubjectsFirstTerm.UseVisualStyleBackColor = true;
+            this.buttonSaveMarksExtraSubjectsFirstTerm.Click += new System.EventHandler(this.buttonSaveMarksExtraSubjectsFirstTerm_Click);
+            // 
+            // dataGridViewExtraSubjects
+            // 
+            this.dataGridViewExtraSubjects.AllowUserToAddRows = false;
+            this.dataGridViewExtraSubjects.AllowUserToDeleteRows = false;
+            this.dataGridViewExtraSubjects.AllowUserToResizeColumns = false;
+            this.dataGridViewExtraSubjects.AllowUserToResizeRows = false;
+            this.dataGridViewExtraSubjects.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewExtraSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewExtraSubjects.ColumnHeadersVisible = false;
+            this.dataGridViewExtraSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn8,
+            this.СИПFirstTerm});
+            this.dataGridViewExtraSubjects.Location = new System.Drawing.Point(320, 179);
+            this.dataGridViewExtraSubjects.MultiSelect = false;
+            this.dataGridViewExtraSubjects.Name = "dataGridViewExtraSubjects";
+            this.dataGridViewExtraSubjects.RowHeadersVisible = false;
+            this.dataGridViewExtraSubjects.Size = new System.Drawing.Size(379, 443);
+            this.dataGridViewExtraSubjects.TabIndex = 1128;
+            this.dataGridViewExtraSubjects.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExtraSubjectsFirstTerm_CellEndEdit);
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "SubjectName";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Предмети";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "СИП-Първи скок";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 128;
+            // 
+            // СИПFirstTerm
+            // 
+            this.СИПFirstTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.СИПFirstTerm.HeaderText = "Оценка";
+            this.СИПFirstTerm.Name = "СИПFirstTerm";
+            // 
+            // textBox15
+            // 
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox15.Location = new System.Drawing.Point(520, 137);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox15.Multiline = true;
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(179, 43);
+            this.textBox15.TabIndex = 1126;
+            this.textBox15.TabStop = false;
+            this.textBox15.Text = "Оценка \r\nпърви учебен \r\n    срок\r\n\r\n";
+            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox18
+            // 
+            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox18.Location = new System.Drawing.Point(520, 70);
+            this.textBox18.Multiline = true;
+            this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
+            this.textBox18.Size = new System.Drawing.Size(179, 68);
+            this.textBox18.TabIndex = 1124;
+            this.textBox18.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
+            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox19
+            // 
+            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox19.Location = new System.Drawing.Point(320, 70);
+            this.textBox19.Multiline = true;
+            this.textBox19.Name = "textBox19";
+            this.textBox19.ReadOnly = true;
+            this.textBox19.Size = new System.Drawing.Size(201, 110);
+            this.textBox19.TabIndex = 1123;
+            this.textBox19.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(343, 20);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(402, 33);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Въвеждане на оценки за първи срок";
+            // 
+            // comboBoxStudentsNamesExtraSubjects
+            // 
+            this.comboBoxStudentsNamesExtraSubjects.DisplayMember = "FullName";
+            this.comboBoxStudentsNamesExtraSubjects.FormattingEnabled = true;
+            this.comboBoxStudentsNamesExtraSubjects.Location = new System.Drawing.Point(42, 78);
+            this.comboBoxStudentsNamesExtraSubjects.Name = "comboBoxStudentsNamesExtraSubjects";
+            this.comboBoxStudentsNamesExtraSubjects.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxStudentsNamesExtraSubjects.TabIndex = 1130;
+            this.comboBoxStudentsNamesExtraSubjects.Text = "Изберете ученик от класа ви";
+            this.comboBoxStudentsNamesExtraSubjects.ValueMember = "StudentID";
+            this.comboBoxStudentsNamesExtraSubjects.SelectionChangeCommitted += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjects_SelectionChangeCommitted);
+            this.comboBoxStudentsNamesExtraSubjects.MouseEnter += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjects_MouseEnter);
+            // 
+            // tabPageMarksExtraSubjectsSecondTerm
+            // 
+            this.tabPageMarksExtraSubjectsSecondTerm.AutoScroll = true;
+            this.tabPageMarksExtraSubjectsSecondTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageMarksExtraSubjectsSecondTerm.Controls.Add(this.panelExtraSubjectsSecondTerm);
+            this.tabPageMarksExtraSubjectsSecondTerm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabPageMarksExtraSubjectsSecondTerm.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMarksExtraSubjectsSecondTerm.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageMarksExtraSubjectsSecondTerm.Name = "tabPageMarksExtraSubjectsSecondTerm";
+            this.tabPageMarksExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1030, 12);
+            this.tabPageMarksExtraSubjectsSecondTerm.TabIndex = 1;
+            this.tabPageMarksExtraSubjectsSecondTerm.Text = "Втори срок";
+            // 
+            // panelExtraSubjectsSecondTerm
+            // 
+            this.panelExtraSubjectsSecondTerm.AutoScroll = true;
+            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox14);
+            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox16);
+            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox30);
+            this.panelExtraSubjectsSecondTerm.Controls.Add(this.label26);
+            this.panelExtraSubjectsSecondTerm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelExtraSubjectsSecondTerm.Location = new System.Drawing.Point(0, 0);
+            this.panelExtraSubjectsSecondTerm.Name = "panelExtraSubjectsSecondTerm";
+            this.panelExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1030, 12);
+            this.panelExtraSubjectsSecondTerm.TabIndex = 1131;
+            // 
+            // textBox14
+            // 
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox14.Location = new System.Drawing.Point(520, 137);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox14.Multiline = true;
+            this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
+            this.textBox14.Size = new System.Drawing.Size(179, 43);
+            this.textBox14.TabIndex = 1142;
+            this.textBox14.TabStop = false;
+            this.textBox14.Text = "Оценка \r\nвтори учебен \r\n    срок\r\n\r\n";
+            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox16
+            // 
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox16.Location = new System.Drawing.Point(520, 70);
+            this.textBox16.Multiline = true;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
+            this.textBox16.Size = new System.Drawing.Size(179, 68);
+            this.textBox16.TabIndex = 1141;
+            this.textBox16.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
+            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox30
+            // 
+            this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox30.Location = new System.Drawing.Point(320, 70);
+            this.textBox30.Multiline = true;
+            this.textBox30.Name = "textBox30";
+            this.textBox30.ReadOnly = true;
+            this.textBox30.Size = new System.Drawing.Size(201, 110);
+            this.textBox30.TabIndex = 1140;
+            this.textBox30.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(343, 20);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(405, 33);
+            this.label26.TabIndex = 1131;
+            this.label26.Text = "Въвеждане на оценки за втори срок";
+            // 
+            // tabPageMarksExtraSubjectsYear
+            // 
+            this.tabPageMarksExtraSubjectsYear.AutoScroll = true;
+            this.tabPageMarksExtraSubjectsYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageMarksExtraSubjectsYear.Controls.Add(this.panelExtraSubjectsYearTerm);
+            this.tabPageMarksExtraSubjectsYear.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMarksExtraSubjectsYear.Name = "tabPageMarksExtraSubjectsYear";
+            this.tabPageMarksExtraSubjectsYear.Size = new System.Drawing.Size(1030, 12);
+            this.tabPageMarksExtraSubjectsYear.TabIndex = 2;
+            this.tabPageMarksExtraSubjectsYear.Text = "Годишени оценки";
+            // 
+            // panelExtraSubjectsYearTerm
+            // 
+            this.panelExtraSubjectsYearTerm.AutoScroll = true;
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox20);
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox21);
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox22);
+            this.panelExtraSubjectsYearTerm.Controls.Add(this.label28);
+            this.panelExtraSubjectsYearTerm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelExtraSubjectsYearTerm.Location = new System.Drawing.Point(0, 0);
+            this.panelExtraSubjectsYearTerm.Name = "panelExtraSubjectsYearTerm";
+            this.panelExtraSubjectsYearTerm.Size = new System.Drawing.Size(1030, 12);
+            this.panelExtraSubjectsYearTerm.TabIndex = 1140;
+            // 
+            // textBox20
+            // 
+            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox20.Location = new System.Drawing.Point(520, 137);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox20.Multiline = true;
+            this.textBox20.Name = "textBox20";
+            this.textBox20.ReadOnly = true;
+            this.textBox20.Size = new System.Drawing.Size(179, 43);
+            this.textBox20.TabIndex = 1151;
+            this.textBox20.TabStop = false;
+            this.textBox20.Text = "Оценка \r\nза годината\r\n\r\n";
+            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox21
+            // 
+            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox21.Location = new System.Drawing.Point(520, 70);
+            this.textBox21.Multiline = true;
+            this.textBox21.Name = "textBox21";
+            this.textBox21.ReadOnly = true;
+            this.textBox21.Size = new System.Drawing.Size(179, 68);
+            this.textBox21.TabIndex = 1150;
+            this.textBox21.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
+            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox22
+            // 
+            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox22.Location = new System.Drawing.Point(320, 70);
+            this.textBox22.Multiline = true;
+            this.textBox22.Name = "textBox22";
+            this.textBox22.ReadOnly = true;
+            this.textBox22.Size = new System.Drawing.Size(201, 110);
+            this.textBox22.TabIndex = 1149;
+            this.textBox22.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(343, 20);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(351, 33);
+            this.label28.TabIndex = 1140;
+            this.label28.Text = "Въвеждане на годишни оценки ";
+            // 
+            // panelHoursStudiedExtraSubjects
+            // 
+            this.panelHoursStudiedExtraSubjects.AutoScroll = true;
+            this.panelHoursStudiedExtraSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelHoursStudiedExtraSubjects.Controls.Add(this.label119);
+            this.panelHoursStudiedExtraSubjects.Controls.Add(this.labelHoursStudiedExtraSubjectsSuccess);
+            this.panelHoursStudiedExtraSubjects.Controls.Add(this.textBox43);
+            this.panelHoursStudiedExtraSubjects.Controls.Add(this.buttonSaveHoursStudiedExtraSubjects);
+            this.panelHoursStudiedExtraSubjects.Controls.Add(this.dataGridViewHoursStudiedExtraSubjects);
+            this.panelHoursStudiedExtraSubjects.Controls.Add(this.textBox39);
+            this.panelHoursStudiedExtraSubjects.Location = new System.Drawing.Point(4, 22);
+            this.panelHoursStudiedExtraSubjects.Name = "panelHoursStudiedExtraSubjects";
+            this.panelHoursStudiedExtraSubjects.Padding = new System.Windows.Forms.Padding(3);
+            this.panelHoursStudiedExtraSubjects.Size = new System.Drawing.Size(1030, 12);
+            this.panelHoursStudiedExtraSubjects.TabIndex = 4;
+            this.panelHoursStudiedExtraSubjects.Text = "Хорариум";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label119.Location = new System.Drawing.Point(234, 24);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(483, 33);
+            this.label119.TabIndex = 1167;
+            this.label119.Text = "Въвеждане на хорариум по СИП предмети";
+            // 
+            // labelHoursStudiedExtraSubjectsSuccess
+            // 
+            this.labelHoursStudiedExtraSubjectsSuccess.AutoSize = true;
+            this.labelHoursStudiedExtraSubjectsSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHoursStudiedExtraSubjectsSuccess.Location = new System.Drawing.Point(758, 426);
+            this.labelHoursStudiedExtraSubjectsSuccess.Name = "labelHoursStudiedExtraSubjectsSuccess";
+            this.labelHoursStudiedExtraSubjectsSuccess.Size = new System.Drawing.Size(104, 25);
+            this.labelHoursStudiedExtraSubjectsSuccess.TabIndex = 1162;
+            this.labelHoursStudiedExtraSubjectsSuccess.Text = "Добавено";
+            this.labelHoursStudiedExtraSubjectsSuccess.Visible = false;
+            // 
+            // textBox43
+            // 
+            this.textBox43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox43.Location = new System.Drawing.Point(303, 77);
+            this.textBox43.Multiline = true;
+            this.textBox43.Name = "textBox43";
+            this.textBox43.ReadOnly = true;
+            this.textBox43.Size = new System.Drawing.Size(201, 110);
+            this.textBox43.TabIndex = 1161;
+            this.textBox43.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
+            this.textBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonSaveHoursStudiedExtraSubjects
+            // 
+            this.buttonSaveHoursStudiedExtraSubjects.Location = new System.Drawing.Point(736, 335);
+            this.buttonSaveHoursStudiedExtraSubjects.Name = "buttonSaveHoursStudiedExtraSubjects";
+            this.buttonSaveHoursStudiedExtraSubjects.Size = new System.Drawing.Size(133, 63);
+            this.buttonSaveHoursStudiedExtraSubjects.TabIndex = 1160;
+            this.buttonSaveHoursStudiedExtraSubjects.Text = "Запиши хорариум";
+            this.buttonSaveHoursStudiedExtraSubjects.UseVisualStyleBackColor = true;
+            this.buttonSaveHoursStudiedExtraSubjects.Click += new System.EventHandler(this.buttonSaveHoursStudiedExtraSubjects_Click);
+            // 
+            // dataGridViewHoursStudiedExtraSubjects
+            // 
+            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToAddRows = false;
+            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToDeleteRows = false;
+            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToResizeColumns = false;
+            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToResizeRows = false;
+            this.dataGridViewHoursStudiedExtraSubjects.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewHoursStudiedExtraSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHoursStudiedExtraSubjects.ColumnHeadersVisible = false;
+            this.dataGridViewHoursStudiedExtraSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Subjects,
+            this.СИПХорариум});
+            this.dataGridViewHoursStudiedExtraSubjects.Location = new System.Drawing.Point(303, 187);
+            this.dataGridViewHoursStudiedExtraSubjects.MultiSelect = false;
+            this.dataGridViewHoursStudiedExtraSubjects.Name = "dataGridViewHoursStudiedExtraSubjects";
+            this.dataGridViewHoursStudiedExtraSubjects.RowHeadersVisible = false;
+            this.dataGridViewHoursStudiedExtraSubjects.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridViewHoursStudiedExtraSubjects.Size = new System.Drawing.Size(309, 442);
+            this.dataGridViewHoursStudiedExtraSubjects.TabIndex = 1159;
+            // 
+            // Subjects
+            // 
+            this.Subjects.HeaderText = "Предмети";
+            this.Subjects.Name = "Subjects";
+            this.Subjects.ReadOnly = true;
+            this.Subjects.Width = 200;
+            // 
+            // СИПХорариум
+            // 
+            this.СИПХорариум.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.СИПХорариум.HeaderText = "Хорариум";
+            this.СИПХорариум.Name = "СИПХорариум";
+            // 
+            // textBox39
+            // 
+            this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox39.Location = new System.Drawing.Point(503, 77);
+            this.textBox39.Multiline = true;
+            this.textBox39.Name = "textBox39";
+            this.textBox39.ReadOnly = true;
+            this.textBox39.Size = new System.Drawing.Size(109, 110);
+            this.textBox39.TabIndex = 1158;
+            this.textBox39.Text = "\r\n\r\n\r\n\r\nХОРАРИУМ";
+            this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tabControlMarks
             // 
@@ -3798,6 +4506,19 @@ namespace PersonalShcoolCard
             this.dataGridViewHoursStudiedSubject.Size = new System.Drawing.Size(309, 442);
             this.dataGridViewHoursStudiedSubject.TabIndex = 1163;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Предмети";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Хорариум";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
             // textBox54
             // 
             this.textBox54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -3809,465 +4530,6 @@ namespace PersonalShcoolCard
             this.textBox54.TabIndex = 1162;
             this.textBox54.Text = "\r\n\r\n\r\nХОРАРИУМ";
             this.textBox54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tabControlMarksExtraSubjects
-            // 
-            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageChoseExtraSubjects);
-            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsFirstTerm);
-            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsSecondTerm);
-            this.tabControlMarksExtraSubjects.Controls.Add(this.tabPageMarksExtraSubjectsYear);
-            this.tabControlMarksExtraSubjects.Controls.Add(this.panelHoursStudiedExtraSubjects);
-            this.tabControlMarksExtraSubjects.Location = new System.Drawing.Point(1, 119);
-            this.tabControlMarksExtraSubjects.Name = "tabControlMarksExtraSubjects";
-            this.tabControlMarksExtraSubjects.SelectedIndex = 0;
-            this.tabControlMarksExtraSubjects.Size = new System.Drawing.Size(1038, 38);
-            this.tabControlMarksExtraSubjects.TabIndex = 1151;
-            this.tabControlMarksExtraSubjects.Visible = false;
-            this.tabControlMarksExtraSubjects.SelectedIndexChanged += new System.EventHandler(this.tabControlMarksExtraSubjects_SelectedIndexChanged);
-            // 
-            // tabPageChoseExtraSubjects
-            // 
-            this.tabPageChoseExtraSubjects.AutoScroll = true;
-            this.tabPageChoseExtraSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageChoseExtraSubjects.Controls.Add(this.panelChooseExtraSubjects);
-            this.tabPageChoseExtraSubjects.Location = new System.Drawing.Point(4, 22);
-            this.tabPageChoseExtraSubjects.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageChoseExtraSubjects.Name = "tabPageChoseExtraSubjects";
-            this.tabPageChoseExtraSubjects.Size = new System.Drawing.Size(1030, 12);
-            this.tabPageChoseExtraSubjects.TabIndex = 3;
-            this.tabPageChoseExtraSubjects.Text = "СИП предмети";
-            // 
-            // panelChooseExtraSubjects
-            // 
-            this.panelChooseExtraSubjects.AutoScroll = true;
-            this.panelChooseExtraSubjects.Controls.Add(this.label29);
-            this.panelChooseExtraSubjects.Controls.Add(this.label30);
-            this.panelChooseExtraSubjects.Controls.Add(this.checkedListBoxExtraSubjects);
-            this.panelChooseExtraSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChooseExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelChooseExtraSubjects.Location = new System.Drawing.Point(0, 0);
-            this.panelChooseExtraSubjects.Name = "panelChooseExtraSubjects";
-            this.panelChooseExtraSubjects.Size = new System.Drawing.Size(1030, 12);
-            this.panelChooseExtraSubjects.TabIndex = 1134;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(339, 123);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(421, 75);
-            this.label29.TabIndex = 1134;
-            this.label29.Text = "Маркирайте СИП предметите, \r\nкоито се изучават през тази учебна година \r\nот вашия" +
-    " клас.";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(309, 53);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(405, 33);
-            this.label30.TabIndex = 1133;
-            this.label30.Text = "Избор на изучавани СИП предмети";
-            // 
-            // checkedListBoxExtraSubjects
-            // 
-            this.checkedListBoxExtraSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkedListBoxExtraSubjects.CheckOnClick = true;
-            this.checkedListBoxExtraSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBoxExtraSubjects.FormattingEnabled = true;
-            this.checkedListBoxExtraSubjects.Location = new System.Drawing.Point(330, 222);
-            this.checkedListBoxExtraSubjects.Name = "checkedListBoxExtraSubjects";
-            this.checkedListBoxExtraSubjects.Size = new System.Drawing.Size(383, 418);
-            this.checkedListBoxExtraSubjects.TabIndex = 1132;
-            this.checkedListBoxExtraSubjects.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxExtraSubjects_ItemCheck);
-            // 
-            // tabPageMarksExtraSubjectsFirstTerm
-            // 
-            this.tabPageMarksExtraSubjectsFirstTerm.AutoScroll = true;
-            this.tabPageMarksExtraSubjectsFirstTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageMarksExtraSubjectsFirstTerm.Controls.Add(this.panelExtraSubjectsFirstTerm);
-            this.tabPageMarksExtraSubjectsFirstTerm.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMarksExtraSubjectsFirstTerm.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageMarksExtraSubjectsFirstTerm.Name = "tabPageMarksExtraSubjectsFirstTerm";
-            this.tabPageMarksExtraSubjectsFirstTerm.Size = new System.Drawing.Size(1030, 704);
-            this.tabPageMarksExtraSubjectsFirstTerm.TabIndex = 0;
-            this.tabPageMarksExtraSubjectsFirstTerm.Text = "Първи срок";
-            // 
-            // panelExtraSubjectsFirstTerm
-            // 
-            this.panelExtraSubjectsFirstTerm.AutoScroll = true;
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.labelSaveSuccessExtraSubjectsMarksFirstTerm);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.buttonSaveMarksExtraSubjectsFirstTerm);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.dataGridViewExtraSubjects);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox15);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox18);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.textBox19);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.label25);
-            this.panelExtraSubjectsFirstTerm.Controls.Add(this.comboBoxStudentsNamesExtraSubjects);
-            this.panelExtraSubjectsFirstTerm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelExtraSubjectsFirstTerm.Location = new System.Drawing.Point(0, 0);
-            this.panelExtraSubjectsFirstTerm.Margin = new System.Windows.Forms.Padding(0);
-            this.panelExtraSubjectsFirstTerm.Name = "panelExtraSubjectsFirstTerm";
-            this.panelExtraSubjectsFirstTerm.Size = new System.Drawing.Size(1030, 704);
-            this.panelExtraSubjectsFirstTerm.TabIndex = 40;
-            // 
-            // labelSaveSuccessExtraSubjectsMarksFirstTerm
-            // 
-            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.AutoSize = true;
-            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Location = new System.Drawing.Point(853, 434);
-            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Name = "labelSaveSuccessExtraSubjectsMarksFirstTerm";
-            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Size = new System.Drawing.Size(104, 25);
-            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.TabIndex = 1133;
-            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Text = "Добавено";
-            this.labelSaveSuccessExtraSubjectsMarksFirstTerm.Visible = false;
-            // 
-            // buttonSaveMarksExtraSubjectsFirstTerm
-            // 
-            this.buttonSaveMarksExtraSubjectsFirstTerm.Location = new System.Drawing.Point(838, 374);
-            this.buttonSaveMarksExtraSubjectsFirstTerm.Name = "buttonSaveMarksExtraSubjectsFirstTerm";
-            this.buttonSaveMarksExtraSubjectsFirstTerm.Size = new System.Drawing.Size(136, 49);
-            this.buttonSaveMarksExtraSubjectsFirstTerm.TabIndex = 1129;
-            this.buttonSaveMarksExtraSubjectsFirstTerm.Text = "Запиши оценките";
-            this.buttonSaveMarksExtraSubjectsFirstTerm.UseVisualStyleBackColor = true;
-            this.buttonSaveMarksExtraSubjectsFirstTerm.Click += new System.EventHandler(this.buttonSaveMarksExtraSubjectsFirstTerm_Click);
-            // 
-            // dataGridViewExtraSubjects
-            // 
-            this.dataGridViewExtraSubjects.AllowUserToAddRows = false;
-            this.dataGridViewExtraSubjects.AllowUserToDeleteRows = false;
-            this.dataGridViewExtraSubjects.AllowUserToResizeColumns = false;
-            this.dataGridViewExtraSubjects.AllowUserToResizeRows = false;
-            this.dataGridViewExtraSubjects.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewExtraSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExtraSubjects.ColumnHeadersVisible = false;
-            this.dataGridViewExtraSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn8,
-            this.СИПFirstTerm});
-            this.dataGridViewExtraSubjects.Location = new System.Drawing.Point(320, 179);
-            this.dataGridViewExtraSubjects.MultiSelect = false;
-            this.dataGridViewExtraSubjects.Name = "dataGridViewExtraSubjects";
-            this.dataGridViewExtraSubjects.RowHeadersVisible = false;
-            this.dataGridViewExtraSubjects.Size = new System.Drawing.Size(379, 443);
-            this.dataGridViewExtraSubjects.TabIndex = 1128;
-            this.dataGridViewExtraSubjects.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExtraSubjectsFirstTerm_CellEndEdit);
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "SubjectName";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Предмети";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "СИП-Първи скок";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 128;
-            // 
-            // СИПFirstTerm
-            // 
-            this.СИПFirstTerm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.СИПFirstTerm.HeaderText = "Оценка";
-            this.СИПFirstTerm.Name = "СИПFirstTerm";
-            // 
-            // textBox15
-            // 
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox15.Location = new System.Drawing.Point(520, 137);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(179, 43);
-            this.textBox15.TabIndex = 1126;
-            this.textBox15.TabStop = false;
-            this.textBox15.Text = "Оценка \r\nпърви учебен \r\n    срок\r\n\r\n";
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox18
-            // 
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox18.Location = new System.Drawing.Point(520, 70);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(179, 68);
-            this.textBox18.TabIndex = 1124;
-            this.textBox18.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox19
-            // 
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox19.Location = new System.Drawing.Point(320, 70);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(201, 110);
-            this.textBox19.TabIndex = 1123;
-            this.textBox19.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(343, 20);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(402, 33);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "Въвеждане на оценки за първи срок";
-            // 
-            // comboBoxStudentsNamesExtraSubjects
-            // 
-            this.comboBoxStudentsNamesExtraSubjects.DisplayMember = "FullName";
-            this.comboBoxStudentsNamesExtraSubjects.FormattingEnabled = true;
-            this.comboBoxStudentsNamesExtraSubjects.Location = new System.Drawing.Point(42, 78);
-            this.comboBoxStudentsNamesExtraSubjects.Name = "comboBoxStudentsNamesExtraSubjects";
-            this.comboBoxStudentsNamesExtraSubjects.Size = new System.Drawing.Size(229, 21);
-            this.comboBoxStudentsNamesExtraSubjects.TabIndex = 1130;
-            this.comboBoxStudentsNamesExtraSubjects.Text = "Изберете ученик от класа ви";
-            this.comboBoxStudentsNamesExtraSubjects.ValueMember = "StudentID";
-            this.comboBoxStudentsNamesExtraSubjects.SelectionChangeCommitted += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjects_SelectionChangeCommitted);
-            this.comboBoxStudentsNamesExtraSubjects.MouseEnter += new System.EventHandler(this.comboBoxStudentsNamesExtraSubjects_MouseEnter);
-            // 
-            // tabPageMarksExtraSubjectsSecondTerm
-            // 
-            this.tabPageMarksExtraSubjectsSecondTerm.AutoScroll = true;
-            this.tabPageMarksExtraSubjectsSecondTerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageMarksExtraSubjectsSecondTerm.Controls.Add(this.panelExtraSubjectsSecondTerm);
-            this.tabPageMarksExtraSubjectsSecondTerm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabPageMarksExtraSubjectsSecondTerm.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMarksExtraSubjectsSecondTerm.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageMarksExtraSubjectsSecondTerm.Name = "tabPageMarksExtraSubjectsSecondTerm";
-            this.tabPageMarksExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1030, 704);
-            this.tabPageMarksExtraSubjectsSecondTerm.TabIndex = 1;
-            this.tabPageMarksExtraSubjectsSecondTerm.Text = "Втори срок";
-            // 
-            // panelExtraSubjectsSecondTerm
-            // 
-            this.panelExtraSubjectsSecondTerm.AutoScroll = true;
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox14);
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox16);
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.textBox30);
-            this.panelExtraSubjectsSecondTerm.Controls.Add(this.label26);
-            this.panelExtraSubjectsSecondTerm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelExtraSubjectsSecondTerm.Location = new System.Drawing.Point(0, 0);
-            this.panelExtraSubjectsSecondTerm.Name = "panelExtraSubjectsSecondTerm";
-            this.panelExtraSubjectsSecondTerm.Size = new System.Drawing.Size(1030, 704);
-            this.panelExtraSubjectsSecondTerm.TabIndex = 1131;
-            // 
-            // textBox14
-            // 
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox14.Location = new System.Drawing.Point(520, 137);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(179, 43);
-            this.textBox14.TabIndex = 1142;
-            this.textBox14.TabStop = false;
-            this.textBox14.Text = "Оценка \r\nвтори учебен \r\n    срок\r\n\r\n";
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox16
-            // 
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox16.Location = new System.Drawing.Point(520, 70);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(179, 68);
-            this.textBox16.TabIndex = 1141;
-            this.textBox16.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox30
-            // 
-            this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox30.Location = new System.Drawing.Point(320, 70);
-            this.textBox30.Multiline = true;
-            this.textBox30.Name = "textBox30";
-            this.textBox30.ReadOnly = true;
-            this.textBox30.Size = new System.Drawing.Size(201, 110);
-            this.textBox30.TabIndex = 1140;
-            this.textBox30.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(343, 20);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(405, 33);
-            this.label26.TabIndex = 1131;
-            this.label26.Text = "Въвеждане на оценки за втори срок";
-            // 
-            // tabPageMarksExtraSubjectsYear
-            // 
-            this.tabPageMarksExtraSubjectsYear.AutoScroll = true;
-            this.tabPageMarksExtraSubjectsYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPageMarksExtraSubjectsYear.Controls.Add(this.panelExtraSubjectsYearTerm);
-            this.tabPageMarksExtraSubjectsYear.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMarksExtraSubjectsYear.Name = "tabPageMarksExtraSubjectsYear";
-            this.tabPageMarksExtraSubjectsYear.Size = new System.Drawing.Size(1030, 704);
-            this.tabPageMarksExtraSubjectsYear.TabIndex = 2;
-            this.tabPageMarksExtraSubjectsYear.Text = "Годишени оценки";
-            // 
-            // panelExtraSubjectsYearTerm
-            // 
-            this.panelExtraSubjectsYearTerm.AutoScroll = true;
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox20);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox21);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.textBox22);
-            this.panelExtraSubjectsYearTerm.Controls.Add(this.label28);
-            this.panelExtraSubjectsYearTerm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelExtraSubjectsYearTerm.Location = new System.Drawing.Point(0, 0);
-            this.panelExtraSubjectsYearTerm.Name = "panelExtraSubjectsYearTerm";
-            this.panelExtraSubjectsYearTerm.Size = new System.Drawing.Size(1030, 704);
-            this.panelExtraSubjectsYearTerm.TabIndex = 1140;
-            // 
-            // textBox20
-            // 
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox20.Location = new System.Drawing.Point(520, 137);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(179, 43);
-            this.textBox20.TabIndex = 1151;
-            this.textBox20.TabStop = false;
-            this.textBox20.Text = "Оценка \r\nза годината\r\n\r\n";
-            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox21
-            // 
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox21.Location = new System.Drawing.Point(520, 70);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(179, 68);
-            this.textBox21.TabIndex = 1150;
-            this.textBox21.Text = "\r\nСВОБОДНО ИЗБИРАЕМА ПОДГОТОВКА (СИП)";
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox22
-            // 
-            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox22.Location = new System.Drawing.Point(320, 70);
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(201, 110);
-            this.textBox22.TabIndex = 1149;
-            this.textBox22.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(343, 20);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(351, 33);
-            this.label28.TabIndex = 1140;
-            this.label28.Text = "Въвеждане на годишни оценки ";
-            // 
-            // panelHoursStudiedExtraSubjects
-            // 
-            this.panelHoursStudiedExtraSubjects.AutoScroll = true;
-            this.panelHoursStudiedExtraSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelHoursStudiedExtraSubjects.Controls.Add(this.label119);
-            this.panelHoursStudiedExtraSubjects.Controls.Add(this.labelHoursStudiedExtraSubjectsSuccess);
-            this.panelHoursStudiedExtraSubjects.Controls.Add(this.textBox43);
-            this.panelHoursStudiedExtraSubjects.Controls.Add(this.buttonSaveHoursStudiedExtraSubjects);
-            this.panelHoursStudiedExtraSubjects.Controls.Add(this.dataGridViewHoursStudiedExtraSubjects);
-            this.panelHoursStudiedExtraSubjects.Controls.Add(this.textBox39);
-            this.panelHoursStudiedExtraSubjects.Location = new System.Drawing.Point(4, 22);
-            this.panelHoursStudiedExtraSubjects.Name = "panelHoursStudiedExtraSubjects";
-            this.panelHoursStudiedExtraSubjects.Padding = new System.Windows.Forms.Padding(3);
-            this.panelHoursStudiedExtraSubjects.Size = new System.Drawing.Size(1030, 704);
-            this.panelHoursStudiedExtraSubjects.TabIndex = 4;
-            this.panelHoursStudiedExtraSubjects.Text = "Хорариум";
-            // 
-            // labelHoursStudiedExtraSubjectsSuccess
-            // 
-            this.labelHoursStudiedExtraSubjectsSuccess.AutoSize = true;
-            this.labelHoursStudiedExtraSubjectsSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHoursStudiedExtraSubjectsSuccess.Location = new System.Drawing.Point(758, 426);
-            this.labelHoursStudiedExtraSubjectsSuccess.Name = "labelHoursStudiedExtraSubjectsSuccess";
-            this.labelHoursStudiedExtraSubjectsSuccess.Size = new System.Drawing.Size(104, 25);
-            this.labelHoursStudiedExtraSubjectsSuccess.TabIndex = 1162;
-            this.labelHoursStudiedExtraSubjectsSuccess.Text = "Добавено";
-            this.labelHoursStudiedExtraSubjectsSuccess.Visible = false;
-            // 
-            // textBox43
-            // 
-            this.textBox43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox43.Location = new System.Drawing.Point(303, 77);
-            this.textBox43.Multiline = true;
-            this.textBox43.Name = "textBox43";
-            this.textBox43.ReadOnly = true;
-            this.textBox43.Size = new System.Drawing.Size(201, 110);
-            this.textBox43.TabIndex = 1161;
-            this.textBox43.Text = "\r\n\r\n\r\nУЧЕБНИ ПРЕДМЕТИ";
-            this.textBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // buttonSaveHoursStudiedExtraSubjects
-            // 
-            this.buttonSaveHoursStudiedExtraSubjects.Location = new System.Drawing.Point(736, 335);
-            this.buttonSaveHoursStudiedExtraSubjects.Name = "buttonSaveHoursStudiedExtraSubjects";
-            this.buttonSaveHoursStudiedExtraSubjects.Size = new System.Drawing.Size(133, 63);
-            this.buttonSaveHoursStudiedExtraSubjects.TabIndex = 1160;
-            this.buttonSaveHoursStudiedExtraSubjects.Text = "Запиши хорариум";
-            this.buttonSaveHoursStudiedExtraSubjects.UseVisualStyleBackColor = true;
-            this.buttonSaveHoursStudiedExtraSubjects.Click += new System.EventHandler(this.buttonSaveHoursStudiedExtraSubjects_Click);
-            // 
-            // dataGridViewHoursStudiedExtraSubjects
-            // 
-            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToAddRows = false;
-            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToDeleteRows = false;
-            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToResizeColumns = false;
-            this.dataGridViewHoursStudiedExtraSubjects.AllowUserToResizeRows = false;
-            this.dataGridViewHoursStudiedExtraSubjects.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewHoursStudiedExtraSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHoursStudiedExtraSubjects.ColumnHeadersVisible = false;
-            this.dataGridViewHoursStudiedExtraSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Subjects,
-            this.СИПХорариум});
-            this.dataGridViewHoursStudiedExtraSubjects.Location = new System.Drawing.Point(303, 187);
-            this.dataGridViewHoursStudiedExtraSubjects.MultiSelect = false;
-            this.dataGridViewHoursStudiedExtraSubjects.Name = "dataGridViewHoursStudiedExtraSubjects";
-            this.dataGridViewHoursStudiedExtraSubjects.RowHeadersVisible = false;
-            this.dataGridViewHoursStudiedExtraSubjects.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridViewHoursStudiedExtraSubjects.Size = new System.Drawing.Size(309, 442);
-            this.dataGridViewHoursStudiedExtraSubjects.TabIndex = 1159;
-            // 
-            // textBox39
-            // 
-            this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox39.Location = new System.Drawing.Point(503, 77);
-            this.textBox39.Multiline = true;
-            this.textBox39.Name = "textBox39";
-            this.textBox39.ReadOnly = true;
-            this.textBox39.Size = new System.Drawing.Size(109, 110);
-            this.textBox39.TabIndex = 1158;
-            this.textBox39.Text = "\r\n\r\n\r\n\r\nХОРАРИУМ";
-            this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panelAddAbsences
             // 
@@ -4630,14 +4892,14 @@ namespace PersonalShcoolCard
             this.AverageMarkMandatorySubject,
             this.WithWordsChosenFinal,
             this.AverageMarkChosenSubject});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDiplom.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDiplom.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewDiplom.Location = new System.Drawing.Point(42, 156);
             this.dataGridViewDiplom.Name = "dataGridViewDiplom";
             this.dataGridViewDiplom.RowHeadersVisible = false;
@@ -5175,14 +5437,14 @@ namespace PersonalShcoolCard
             this.dataGridViewExtraSubjectFourthYear,
             this.FinalMark,
             this.dataGridViewFinalMark});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDiplomExtraSubjects.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDiplomExtraSubjects.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewDiplomExtraSubjects.Location = new System.Drawing.Point(42, 147);
             this.dataGridViewDiplomExtraSubjects.Name = "dataGridViewDiplomExtraSubjects";
             this.dataGridViewDiplomExtraSubjects.RowHeadersVisible = false;
@@ -5606,6 +5868,105 @@ namespace PersonalShcoolCard
             this.labelClassName.Size = new System.Drawing.Size(27, 17);
             this.labelClassName.TabIndex = 37;
             this.labelClassName.Text = "от ";
+            // 
+            // textBoxPersonalCardNumber
+            // 
+            this.textBoxPersonalCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxPersonalCardNumber.Location = new System.Drawing.Point(821, 189);
+            this.textBoxPersonalCardNumber.Multiline = true;
+            this.textBoxPersonalCardNumber.Name = "textBoxPersonalCardNumber";
+            this.textBoxPersonalCardNumber.Size = new System.Drawing.Size(153, 23);
+            this.textBoxPersonalCardNumber.TabIndex = 36;
+            this.textBoxPersonalCardNumber.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxPersonalCardNumber.WaterMarkText = "ЛНЧ";
+            // 
+            // textBoxDateOfBirth
+            // 
+            this.textBoxDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxDateOfBirth.Location = new System.Drawing.Point(821, 259);
+            this.textBoxDateOfBirth.Multiline = true;
+            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
+            this.textBoxDateOfBirth.Size = new System.Drawing.Size(153, 23);
+            this.textBoxDateOfBirth.TabIndex = 35;
+            this.textBoxDateOfBirth.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxDateOfBirth.WaterMarkText = "ДД/ММ/ГГГГ";
+            // 
+            // textBoxMobilePhone
+            // 
+            this.textBoxMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxMobilePhone.Location = new System.Drawing.Point(820, 329);
+            this.textBoxMobilePhone.Multiline = true;
+            this.textBoxMobilePhone.Name = "textBoxMobilePhone";
+            this.textBoxMobilePhone.Size = new System.Drawing.Size(153, 23);
+            this.textBoxMobilePhone.TabIndex = 34;
+            this.textBoxMobilePhone.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxMobilePhone.WaterMarkText = "Номер";
+            // 
+            // textBoxEnrollmentYear
+            // 
+            this.textBoxEnrollmentYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxEnrollmentYear.Location = new System.Drawing.Point(586, 329);
+            this.textBoxEnrollmentYear.Multiline = true;
+            this.textBoxEnrollmentYear.Name = "textBoxEnrollmentYear";
+            this.textBoxEnrollmentYear.Size = new System.Drawing.Size(153, 23);
+            this.textBoxEnrollmentYear.TabIndex = 33;
+            this.textBoxEnrollmentYear.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxEnrollmentYear.WaterMarkText = "Година на приемане";
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxAddress.Location = new System.Drawing.Point(586, 407);
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(388, 23);
+            this.textBoxAddress.TabIndex = 32;
+            this.textBoxAddress.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxAddress.WaterMarkText = "Адрес";
+            // 
+            // textBoxPersonalNumber
+            // 
+            this.textBoxPersonalNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxPersonalNumber.Location = new System.Drawing.Point(820, 121);
+            this.textBoxPersonalNumber.Multiline = true;
+            this.textBoxPersonalNumber.Name = "textBoxPersonalNumber";
+            this.textBoxPersonalNumber.Size = new System.Drawing.Size(153, 23);
+            this.textBoxPersonalNumber.TabIndex = 31;
+            this.textBoxPersonalNumber.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxPersonalNumber.WaterMarkText = "ЕГН";
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxLastName.Location = new System.Drawing.Point(586, 259);
+            this.textBoxLastName.Multiline = true;
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(153, 23);
+            this.textBoxLastName.TabIndex = 30;
+            this.textBoxLastName.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxLastName.WaterMarkText = "Фамилия";
+            // 
+            // textBoxSecondName
+            // 
+            this.textBoxSecondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxSecondName.Location = new System.Drawing.Point(586, 189);
+            this.textBoxSecondName.Multiline = true;
+            this.textBoxSecondName.Name = "textBoxSecondName";
+            this.textBoxSecondName.Size = new System.Drawing.Size(153, 23);
+            this.textBoxSecondName.TabIndex = 29;
+            this.textBoxSecondName.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxSecondName.WaterMarkText = "Презиме";
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxFirstName.Location = new System.Drawing.Point(586, 121);
+            this.textBoxFirstName.Multiline = true;
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(153, 23);
+            this.textBoxFirstName.TabIndex = 28;
+            this.textBoxFirstName.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxFirstName.WaterMarkText = "Име";
             // 
             // labelPictureNotSelected
             // 
@@ -6216,366 +6577,6 @@ namespace PersonalShcoolCard
             this.timerSaveHoursStudiedSuccess.Interval = 3000;
             this.timerSaveHoursStudiedSuccess.Tick += new System.EventHandler(this.timerSaveHoursStudiedSuccess_Tick);
             // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label45.Location = new System.Drawing.Point(168, 316);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(35, 17);
-            this.label45.TabIndex = 1170;
-            this.label45.Text = "ЕГН";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label46.Location = new System.Drawing.Point(317, 316);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(40, 17);
-            this.label46.TabIndex = 1171;
-            this.label46.Text = "роде";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label83.Location = new System.Drawing.Point(417, 314);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(83, 17);
-            this.label83.TabIndex = 1172;
-            this.label83.Text = "в град/село";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label84.Location = new System.Drawing.Point(357, 322);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(57, 9);
-            this.label84.TabIndex = 1173;
-            this.label84.Text = "..........................";
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = true;
-            this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label104.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label104.Location = new System.Drawing.Point(500, 322);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(349, 9);
-            this.label104.TabIndex = 1174;
-            this.label104.Text = "................................................................................." +
-    "................................................................................" +
-    "..........,";
-            // 
-            // label110
-            // 
-            this.label110.AutoSize = true;
-            this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label110.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label110.Location = new System.Drawing.Point(168, 359);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(59, 17);
-            this.label110.TabIndex = 1175;
-            this.label110.Text = "община";
-            // 
-            // label112
-            // 
-            this.label112.AutoSize = true;
-            this.label112.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label112.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label112.Location = new System.Drawing.Point(546, 359);
-            this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(54, 17);
-            this.label112.TabIndex = 1176;
-            this.label112.Text = "област";
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label113.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label113.Location = new System.Drawing.Point(608, 365);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(239, 9);
-            this.label113.TabIndex = 1177;
-            this.label113.Text = "................................................................................." +
-    "...................................,";
-            // 
-            // label114
-            // 
-            this.label114.AutoSize = true;
-            this.label114.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label114.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label114.Location = new System.Drawing.Point(168, 400);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(38, 17);
-            this.label114.TabIndex = 1178;
-            this.label114.Text = "ЛНЧ";
-            // 
-            // label120
-            // 
-            this.label120.AutoSize = true;
-            this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label120.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label120.Location = new System.Drawing.Point(409, 400);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(39, 17);
-            this.label120.TabIndex = 1179;
-            this.label120.Text = "през";
-            // 
-            // label122
-            // 
-            this.label122.AutoSize = true;
-            this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label122.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label122.Location = new System.Drawing.Point(794, 398);
-            this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(53, 17);
-            this.label122.TabIndex = 1180;
-            this.label122.Text = "година";
-            // 
-            // label123
-            // 
-            this.label123.AutoSize = true;
-            this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label123.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label123.Location = new System.Drawing.Point(447, 406);
-            this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(347, 9);
-            this.label123.TabIndex = 1181;
-            this.label123.Text = "................................................................................." +
-    "................................................................................" +
-    "..........";
-            // 
-            // label124
-            // 
-            this.label124.AutoSize = true;
-            this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label124.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label124.Location = new System.Drawing.Point(168, 441);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(66, 17);
-            this.label124.TabIndex = 1182;
-            this.label124.Text = "завърши";
-            // 
-            // label125
-            // 
-            this.label125.AutoSize = true;
-            this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label125.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label125.Location = new System.Drawing.Point(490, 539);
-            this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(53, 17);
-            this.label125.TabIndex = 1183;
-            this.label125.Text = "години";
-            // 
-            // label126
-            // 
-            this.label126.AutoSize = true;
-            this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label126.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label126.Location = new System.Drawing.Point(296, 545);
-            this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(189, 9);
-            this.label126.TabIndex = 1184;
-            this.label126.Text = "................................................................................." +
-    "...........";
-            // 
-            // label127
-            // 
-            this.label127.AutoSize = true;
-            this.label127.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label127.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label127.Location = new System.Drawing.Point(168, 582);
-            this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(72, 17);
-            this.label127.TabIndex = 1185;
-            this.label127.Text = "град/село";
-            // 
-            // label128
-            // 
-            this.label128.AutoSize = true;
-            this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label128.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label128.Location = new System.Drawing.Point(527, 580);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(59, 17);
-            this.label128.TabIndex = 1186;
-            this.label128.Text = "община";
-            // 
-            // label129
-            // 
-            this.label129.AutoSize = true;
-            this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label129.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label129.Location = new System.Drawing.Point(592, 586);
-            this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(275, 9);
-            this.label129.TabIndex = 1187;
-            this.label129.Text = "................................................................................." +
-    "......................................................";
-            // 
-            // label130
-            // 
-            this.label130.AutoSize = true;
-            this.label130.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label130.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label130.Location = new System.Drawing.Point(168, 626);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(54, 17);
-            this.label130.TabIndex = 1188;
-            this.label130.Text = "област";
-            // 
-            // label131
-            // 
-            this.label131.BackColor = System.Drawing.Color.Olive;
-            this.label131.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label131.Location = new System.Drawing.Point(131, 657);
-            this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(763, 4);
-            this.label131.TabIndex = 1189;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Предмети";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Хорариум";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // Subjects
-            // 
-            this.Subjects.HeaderText = "Предмети";
-            this.Subjects.Name = "Subjects";
-            this.Subjects.ReadOnly = true;
-            this.Subjects.Width = 200;
-            // 
-            // СИПХорариум
-            // 
-            this.СИПХорариум.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.СИПХорариум.HeaderText = "Хорариум";
-            this.СИПХорариум.Name = "СИПХорариум";
-            // 
-            // textBoxPersonalCardNumber
-            // 
-            this.textBoxPersonalCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxPersonalCardNumber.Location = new System.Drawing.Point(821, 189);
-            this.textBoxPersonalCardNumber.Multiline = true;
-            this.textBoxPersonalCardNumber.Name = "textBoxPersonalCardNumber";
-            this.textBoxPersonalCardNumber.Size = new System.Drawing.Size(153, 23);
-            this.textBoxPersonalCardNumber.TabIndex = 36;
-            this.textBoxPersonalCardNumber.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxPersonalCardNumber.WaterMarkText = "ЛНЧ";
-            // 
-            // textBoxDateOfBirth
-            // 
-            this.textBoxDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxDateOfBirth.Location = new System.Drawing.Point(821, 259);
-            this.textBoxDateOfBirth.Multiline = true;
-            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
-            this.textBoxDateOfBirth.Size = new System.Drawing.Size(153, 23);
-            this.textBoxDateOfBirth.TabIndex = 35;
-            this.textBoxDateOfBirth.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxDateOfBirth.WaterMarkText = "ДД/ММ/ГГГГ";
-            // 
-            // textBoxMobilePhone
-            // 
-            this.textBoxMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxMobilePhone.Location = new System.Drawing.Point(820, 329);
-            this.textBoxMobilePhone.Multiline = true;
-            this.textBoxMobilePhone.Name = "textBoxMobilePhone";
-            this.textBoxMobilePhone.Size = new System.Drawing.Size(153, 23);
-            this.textBoxMobilePhone.TabIndex = 34;
-            this.textBoxMobilePhone.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxMobilePhone.WaterMarkText = "Номер";
-            // 
-            // textBoxEnrollmentYear
-            // 
-            this.textBoxEnrollmentYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxEnrollmentYear.Location = new System.Drawing.Point(586, 329);
-            this.textBoxEnrollmentYear.Multiline = true;
-            this.textBoxEnrollmentYear.Name = "textBoxEnrollmentYear";
-            this.textBoxEnrollmentYear.Size = new System.Drawing.Size(153, 23);
-            this.textBoxEnrollmentYear.TabIndex = 33;
-            this.textBoxEnrollmentYear.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxEnrollmentYear.WaterMarkText = "Година на приемане";
-            // 
-            // textBoxAddress
-            // 
-            this.textBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxAddress.Location = new System.Drawing.Point(586, 407);
-            this.textBoxAddress.Multiline = true;
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(388, 23);
-            this.textBoxAddress.TabIndex = 32;
-            this.textBoxAddress.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxAddress.WaterMarkText = "Адрес";
-            // 
-            // textBoxPersonalNumber
-            // 
-            this.textBoxPersonalNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxPersonalNumber.Location = new System.Drawing.Point(820, 121);
-            this.textBoxPersonalNumber.Multiline = true;
-            this.textBoxPersonalNumber.Name = "textBoxPersonalNumber";
-            this.textBoxPersonalNumber.Size = new System.Drawing.Size(153, 23);
-            this.textBoxPersonalNumber.TabIndex = 31;
-            this.textBoxPersonalNumber.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxPersonalNumber.WaterMarkText = "ЕГН";
-            // 
-            // textBoxLastName
-            // 
-            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxLastName.Location = new System.Drawing.Point(586, 259);
-            this.textBoxLastName.Multiline = true;
-            this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(153, 23);
-            this.textBoxLastName.TabIndex = 30;
-            this.textBoxLastName.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxLastName.WaterMarkText = "Фамилия";
-            // 
-            // textBoxSecondName
-            // 
-            this.textBoxSecondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxSecondName.Location = new System.Drawing.Point(586, 189);
-            this.textBoxSecondName.Multiline = true;
-            this.textBoxSecondName.Name = "textBoxSecondName";
-            this.textBoxSecondName.Size = new System.Drawing.Size(153, 23);
-            this.textBoxSecondName.TabIndex = 29;
-            this.textBoxSecondName.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxSecondName.WaterMarkText = "Презиме";
-            // 
-            // textBoxFirstName
-            // 
-            this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxFirstName.Location = new System.Drawing.Point(586, 121);
-            this.textBoxFirstName.Multiline = true;
-            this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(153, 23);
-            this.textBoxFirstName.TabIndex = 28;
-            this.textBoxFirstName.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxFirstName.WaterMarkText = "Име";
-            // 
-            // label119
-            // 
-            this.label119.AutoSize = true;
-            this.label119.Font = new System.Drawing.Font("Monotype Corsiva", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label119.Location = new System.Drawing.Point(234, 24);
-            this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(483, 33);
-            this.label119.TabIndex = 1167;
-            this.label119.Text = "Въвеждане на хорариум по СИП предмети";
-            // 
             // TeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6601,23 +6602,6 @@ namespace PersonalShcoolCard
             this.tabPageMandatoryMarks.PerformLayout();
             this.tabPageExtraMarks.ResumeLayout(false);
             this.tabPageExtraMarks.PerformLayout();
-            this.tabControlMarks.ResumeLayout(false);
-            this.tabPageSelectSubjects.ResumeLayout(false);
-            this.panelSelectSubjects.ResumeLayout(false);
-            this.panelSelectSubjects.PerformLayout();
-            this.tabPageFirstTerm.ResumeLayout(false);
-            this.panelMarksFirstTerm.ResumeLayout(false);
-            this.panelMarksFirstTerm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).EndInit();
-            this.tabPageSecondTerm.ResumeLayout(false);
-            this.panelMarksSecondTerm.ResumeLayout(false);
-            this.panelMarksSecondTerm.PerformLayout();
-            this.tabPageYear.ResumeLayout(false);
-            this.panelMarksYear.ResumeLayout(false);
-            this.panelMarksYear.PerformLayout();
-            this.tabPageHoursStudiedd.ResumeLayout(false);
-            this.tabPageHoursStudiedd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedSubject)).EndInit();
             this.tabControlMarksExtraSubjects.ResumeLayout(false);
             this.tabPageChoseExtraSubjects.ResumeLayout(false);
             this.panelChooseExtraSubjects.ResumeLayout(false);
@@ -6635,6 +6619,23 @@ namespace PersonalShcoolCard
             this.panelHoursStudiedExtraSubjects.ResumeLayout(false);
             this.panelHoursStudiedExtraSubjects.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedExtraSubjects)).EndInit();
+            this.tabControlMarks.ResumeLayout(false);
+            this.tabPageSelectSubjects.ResumeLayout(false);
+            this.panelSelectSubjects.ResumeLayout(false);
+            this.panelSelectSubjects.PerformLayout();
+            this.tabPageFirstTerm.ResumeLayout(false);
+            this.panelMarksFirstTerm.ResumeLayout(false);
+            this.panelMarksFirstTerm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).EndInit();
+            this.tabPageSecondTerm.ResumeLayout(false);
+            this.panelMarksSecondTerm.ResumeLayout(false);
+            this.panelMarksSecondTerm.PerformLayout();
+            this.tabPageYear.ResumeLayout(false);
+            this.panelMarksYear.ResumeLayout(false);
+            this.panelMarksYear.PerformLayout();
+            this.tabPageHoursStudiedd.ResumeLayout(false);
+            this.tabPageHoursStudiedd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHoursStudiedSubject)).EndInit();
             this.panelAddAbsences.ResumeLayout(false);
             this.panelAddAbsences.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbsences)).EndInit();

@@ -999,7 +999,7 @@
             labelFourthExtraSubject.Text = "-";
             labelFourthExtraSubjectMarkWords.Text = "-";
             labelFourthExtraSubjectMark.Text = "-";
-            labelFourthExtraSubjectHoursStudied.Text = "-";
+            labelFourthExtraSubjectHoursStudied.Text = "";
             pictureBoxStudentPortrait.Image = null;
             labelPictureNotAvailable.Visible = true;
         }
@@ -1291,7 +1291,7 @@
             }
         }
         private void ShowDiplomHoursStudied()
-        {
+        {       
             labelBulgarianLanguageHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelBulgarianLanguage.Text, "ЗП");
             if (labelFirstForeignLanguage.Text != "-")
             {
@@ -1306,8 +1306,8 @@
                 labelThirdForeignLanguageHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelThirdForeignLanguage.Text, "ЗП");
             }
             labelMathsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelMaths.Text, "ЗП");
-            labelInformaticsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelThirdForeignLanguage.Text, "ЗП");
-            labelInformationTechHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelInformatics.Text, "ЗП");
+            labelInformaticsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelInformatics.Text, "ЗП");
+            labelInformationTechHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelInformationTech.Text, "ЗП");
             labelHistoryHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelHistory.Text, "ЗП");
             labelGeographyHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelGeography.Text, "ЗП");
             labelPsychologyAndLogicHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelPsychologyAndLogic.Text, "ЗП");
@@ -1319,8 +1319,39 @@
             labelChemistryHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelChemistry.Text, "ЗП");
             labelMusicHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelMusic.Text, "ЗП");
             labelArtHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelArt.Text, "ЗП");
-            labelSportsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelSports.Text, "ЗП");
-
+            labelSportsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelSports.Text, "ЗП");            
+            
+            if (labelFirstExtraSubject.Text != "-")
+            {
+                labelFirstExtraSubjectHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelFirstExtraSubject.Text, "СИП");
+            }else
+            {
+                ClearLabel(labelFirstExtraSubjectHoursStudied);
+            }
+            if (labelSecondExtraSubject.Text != "-")
+            {
+                labelSecondExtraSubjectHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelSecondExtraSubject.Text, "СИП");
+            }
+            else
+            {
+                ClearLabel(labelSecondExtraSubjectHoursStudied);
+            }
+            if (labelThirdExtraSubject.Text != "")
+            {
+                labelThirdExtraSubjectHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelThirdExtraSubject.Text, "СИП");
+            }
+            else
+            {
+                ClearLabel(labelThirdExtraSubjectHoursStudied);
+            }
+            if (labelFourthExtraSubject.Text != "")
+            {
+                labelFourthExtraSubjectHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelFourthExtraSubject.Text, "СИП");
+            }
+            else
+            {
+                ClearLabel(labelFourthExtraSubjectHoursStudied);
+            }
         }
         #endregion
 
@@ -1412,13 +1443,11 @@
         }
         private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+            printDocument.DefaultPageSettings.Color = false;
             Rectangle pagearea = e.PageBounds;
             e.Graphics.DrawImage(memoryImage, (pagearea.Width / 2) - (tabControlDiplom.Width / 2), tabControlDiplom.Location.Y - 29);
             // - 29 is set so it cuts the combobox for selecting students for better vizualisation
         }
         #endregion
-
-
-
     }
 }

@@ -17,7 +17,7 @@
                     if (gridViewHoursStudied.Rows[i].Cells[1].Value != null)
                     {
                         var subjectID = SubjectDA.GetSubjectID(gridViewHoursStudied.Rows[i].Cells[0].Value.ToString());                                                
-                        var classID = 22/*SchoolClassDA.GetSchoolClassByTeacherID(teacherID).ClassID*/;
+                        var classID = SchoolClassDA.GetSchoolClassByTeacherID(teacherID).ClassID;
                         var hoursStudiedSubject = new HoursStudiedSubject
                         {
                             ClassID = classID,
