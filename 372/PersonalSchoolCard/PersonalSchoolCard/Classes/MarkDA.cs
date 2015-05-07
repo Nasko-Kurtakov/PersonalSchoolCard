@@ -9,31 +9,33 @@
     {
         public static string GetMarkWithWords(string value)
         {
-            
+
             var valueAsFloat = float.Parse(value);
-            if(valueAsFloat>=2.0 && valueAsFloat<=2.49)
+            if (valueAsFloat >= 2.0 && valueAsFloat <= 2.49)
             {
                 return "Слаб";
-            }else
-            if(valueAsFloat>=2.50 && valueAsFloat<=3.49)
-            {
-                return "Среден";
             }
-            else if(valueAsFloat>=3.50 && valueAsFloat<=4.49)
-            {
-                return "Добър";
-            }
-            else if(valueAsFloat>=4.50 && valueAsFloat<=5.49)
-            {
-                return "Мн. добър";
-            }
-            else if(valueAsFloat>=5.50 && valueAsFloat<=6.00)
-            {
-                return "Отличен";
-            }else
-            {
-                return "Грешни входни данни";
-            }
+            else
+                if (valueAsFloat >= 2.50 && valueAsFloat <= 3.49)
+                {
+                    return "Среден";
+                }
+                else if (valueAsFloat >= 3.50 && valueAsFloat <= 4.49)
+                {
+                    return "Добър";
+                }
+                else if (valueAsFloat >= 4.50 && valueAsFloat <= 5.49)
+                {
+                    return "Мн. добър";
+                }
+                else if (valueAsFloat >= 5.50 && valueAsFloat <= 6.00)
+                {
+                    return "Отличен";
+                }
+                else
+                {
+                    return "Грешни входни данни";
+                }
         }
         public static void SaveMark(DataGridView gridView, int teacherID, long studentID, byte termID, bool isForExtraSubjects = false)
         {
@@ -44,7 +46,7 @@
                 {
                     for (int i = 0; i < gridView.Rows.Count; i++)
                     {
-                        if (gridView.Rows[i].Cells[2].Value != null)
+                        if (gridView.Rows[i].Cells[2].Value.ToString() != "")
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
                             var subjectID = SubjectDA.GetSubjectID(subjectName);
@@ -60,7 +62,7 @@
                             };
                             context.Marks.Add(mark);
                         }
-                        if (gridView.Rows[i].Cells[4].Value != null)
+                        if (gridView.Rows[i].Cells[4].Value.ToString() != "")
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
                             var subjectID = SubjectDA.GetSubjectID(subjectName);
@@ -76,11 +78,11 @@
                             };
                             context.Marks.Add(mark);
                         }
-                        if (gridView.Rows[i].Cells[2].Value == null)
+                        if (gridView.Rows[i].Cells[2].Value.ToString() == "")
                         {
                             continue;
                         }
-                        if (gridView.Rows[i].Cells[4].Value == null)
+                        if (gridView.Rows[i].Cells[4].Value.ToString() == "")
                         {
                             continue;
                         }
@@ -91,7 +93,7 @@
                 {
                     for (int i = 0; i < gridView.Rows.Count; i++)
                     {
-                        if (gridView.Rows[i].Cells[2].Value != null)
+                        if (gridView.Rows[i].Cells[2].Value.ToString() != "")
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
                             var subjectID = SubjectDA.GetSubjectID(subjectName);
@@ -107,7 +109,7 @@
                             };
                             context.Marks.Add(mark);
                         }
-                        if (gridView.Rows[i].Cells[2].Value == null)
+                        if (gridView.Rows[i].Cells[2].Value.ToString() == "")
                         {
                             continue;
                         }

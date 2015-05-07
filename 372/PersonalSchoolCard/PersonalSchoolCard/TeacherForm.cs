@@ -114,7 +114,6 @@
         }
         private void buttonSaveChanges_Click(object sender, EventArgs e)
         {
-
             var studentInfoToBeSaved = new Student();
             if (textBoxFirstName.Text != null && textBoxFirstName.Text != "")
             {
@@ -130,15 +129,36 @@
             }
             if (textBoxPersonalNumber.Text != null && textBoxPersonalNumber.Text != "")
             {
-                studentInfoToBeSaved.PersonalNumber = textBoxPersonalNumber.Text;
+                if (textBoxPersonalNumber.Text.Length == 10)
+                {
+                    studentInfoToBeSaved.PersonalNumber = textBoxPersonalNumber.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Невалиден формат на ЕГН.");
+                }
             }
             if (textBoxPersonalCardNumber.Text != null && textBoxPersonalCardNumber.Text != "")
             {
-                studentInfoToBeSaved.PersonalCardNumber = textBoxPersonalCardNumber.Text;
+                if (textBoxPersonalCardNumber.Text.Length == 10)
+                {
+                    studentInfoToBeSaved.PersonalCardNumber = textBoxPersonalCardNumber.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Невалиден формат на ЛНЧ.");
+                }
             }
             if (textBoxMobilePhone.Text != null && textBoxMobilePhone.Text != "")
             {
-                studentInfoToBeSaved.Phone = textBoxMobilePhone.Text;
+                if (textBoxMobilePhone.Text.Length <= 20)
+                {
+                    studentInfoToBeSaved.Phone = textBoxMobilePhone.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Невалиден формат на телефония номер.");
+                }
             }
             if (textBoxAddress.Text != null && textBoxAddress.Text != "")
             {
@@ -278,13 +298,16 @@
                 Classes.MarkDA.SaveMark(dataGridViewMarks, teacherID, studentID, (byte)tabControlMarks.SelectedIndex);
                 success = true;
             }
-            catch (FormatException)
+            catch (Exception ex)
             {
-                MessageBox.Show("Не сте въвели данни или те са в грешен формат.");
-            }
-            catch (DbUpdateException)
-            {
-                MessageBox.Show("Данните, които искате да запишете са вече въведени.");
+                if (ex is FormatException)
+                {
+                    MessageBox.Show("Не сте въвели данни или те са в грешен формат.");
+                }
+                if (ex is DbUpdateException)
+                {
+                    MessageBox.Show("Данните, които искате да запишете са вече въведени.");
+                }
             }
             finally
             {
@@ -360,7 +383,7 @@
         }
         private void comboBoxStudentsNames_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            clearMarksDatagridView(dataGridViewMarks);
+            clearDatagridView(dataGridViewMarks);
         }
         private void buttonSaveHoursStudied_Click(object sender, EventArgs e)
         {
@@ -376,7 +399,7 @@
                 {
                     if (ex is DbUpdateException)
                     {
-                        MessageBox.Show("Тези данни са вече въведени.");
+                        MessageBox.Show("Тези данни са вече записани.");
                     }
                     if (ex is NullReferenceException)
                     {
@@ -574,11 +597,16 @@
         }
         private void comboBoxStudentsNamesExtraSubjects_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            clearMarksDatagridView(dataGridViewExtraSubjects);
+            clearDatagridView(dataGridViewExtraSubjects);
         }
         #endregion
 
         #region//saving absences
+        private void comboBoxStudentsNamesAbsences_Click(object sender, EventArgs e)
+        {
+            ParseStudentsToComboBox(comboBoxStudentsNamesAbsences);
+            buttonSaveAbsences.Enabled = true;
+        }
         private void buttonAddAbseces_Click(object sender, EventArgs e)
         {
             dataGridViewAbsences.AutoGenerateColumns = false;
@@ -586,31 +614,37 @@
             panelAddAbsences.Visible = true;
             panelAddAbsences.BringToFront();
         }
-        private void comboBoxStudentsNamesAbsences_MouseEnter(object sender, EventArgs e)
-        {
-            ParseStudentsToComboBox(comboBoxStudentsNamesAbsences);
-            comboBoxStudentsNamesAbsences.MouseEnter -= comboBoxStudentsNamesAbsences_MouseEnter;
-            buttonSaveAbsences.Enabled = true;
-        }
         private void buttonSaveAbsences_Click(object sender, EventArgs e)
         {
+            bool success = false;
+            long selectedStudentID;
             try
             {
-                Classes.AbsencesDA.SaveAbsences(dataGridViewAbsences, long.Parse(comboBoxStudentsNamesAbsences.SelectedValue.ToString()), teacherID);
+                selectedStudentID = long.Parse(comboBoxStudentsNamesAbsences.SelectedValue.ToString());
             }
             catch (NullReferenceException)
             {
                 MessageBox.Show("Не сте избрали ученик.");
             }
-            catch (DbUpdateException)
+            try
             {
-                MessageBox.Show("Данните, които искате да запишете са вече въведени");
+                Classes.AbsencesDA.SaveAbsences(dataGridViewAbsences, long.Parse(comboBoxStudentsNamesAbsences.SelectedValue.ToString()), teacherID);
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                if (ex is DbUpdateException)
+                {
+                    MessageBox.Show("Данните, които искате да запишете са вече въведени");
+                }
             }
             finally
             {
-                ChangesMadeSuccessfully(labelAbsecesSaveSusseccful, timerAbcensesSaveSuccessful);
+                if (success)
+                {
+                    ChangesMadeSuccessfully(labelAbsecesSaveSusseccful, timerAbcensesSaveSuccessful);
+                }
             }
-
         }
         private void comboBoxStudentsNamesAbsences_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -618,6 +652,11 @@
             dataGridViewAbsences.Rows[0].Cells[2].Value = "";
             dataGridViewAbsences.Rows[1].Cells[1].Value = "";
             dataGridViewAbsences.Rows[1].Cells[2].Value = "";
+        }
+        private void timerAbcensesSaveSuccessful_Tick(object sender, EventArgs e)
+        {
+            labelAbsecesSaveSusseccful.Visible = false;
+            timerAbcensesSaveSuccessful.Stop();
         }
         #endregion
 
@@ -747,7 +786,7 @@
 
             }
         }
-        private void clearMarksDatagridView(DataGridView gridView)
+        private void clearDatagridView(DataGridView gridView)
         {
             for (int j = 1; j < gridView.Columns.Count; j++)
                 for (int i = 0; i < gridView.Rows.Count; i++)
@@ -812,68 +851,74 @@
         }
         private void buttonSaveExamMarks_Click(object sender, EventArgs e)
         {
+            string firstExamMark="";
+            string secondSubject="";
+            string secondExamMark="";
+            string thirdSubject;
+            string thirdExamMark;
+            long selectedStudentID=0;
+            bool success = false;
             try
             {
-
-                studentID = long.Parse(comboBoxStudentsNamesExam.SelectedValue.ToString());
-                string markFirstExam;
-                string secondSubject;
-                string secondExamMark;
-                string thirdSubject;
-                string thirdMark;
-                if (textBoxFirstExamMark.Text != null && textBoxFirstExamMark.Text != "")
-                {
-                    markFirstExam = textBoxFirstExamMark.Text;
-                }
-                else
-                {
-                    throw new FormatException(string.Format("Не сте въвели оценка по {0}.", textBoxFirstExam.Text));
-                }
-                if (comboBoxSecondExam.SelectedItem != null)
-                {
-                    secondSubject = comboBoxSecondExam.SelectedItem.ToString();
-                    if (textBoxSecondExamMark.Text != null && textBoxSecondExamMark.Text != "")
-                    {
-
-                        secondExamMark = textBoxSecondExamMark.Text;
-                    }
-                    else
-                    {
-                        throw new FormatException("Не сте въвели оценка по вторият предмет.");
-                    }
-                }
-                else
-                {
-                    throw new FormatException(string.Format("Не стe избрали втори предмет."));
-                }
-                if (comboBoxThirdExam.SelectedItem != null)
-                {
-                    thirdSubject = comboBoxThirdExam.SelectedItem.ToString();
-                    if (textBoxSecondExamMark.Text != null)
-                    {
-                        thirdMark = textBoxThirdExamMark.Text;
-                    }
-                    else
-                    {
-                        throw new FormatException(string.Format("Не стe избрали трети предмет."));
-                    }
-                    Classes.DiplomsDA.SaveMarkExam(studentID, thirdSubject, thirdMark);
-                }
-
-                Classes.DiplomsDA.SaveMarkExam(studentID, textBoxFirstExam.Text, markFirstExam);
-                Classes.DiplomsDA.SaveMarkExam(studentID, secondSubject, secondExamMark);
+                selectedStudentID = long.Parse(comboBoxStudentsNamesExam.SelectedValue.ToString());
             }
-            catch (NullReferenceException)
+            catch
             {
                 MessageBox.Show("Не сте избрали ученик");
+                return;
             }
-            catch (FormatException ex)
+            if (textBoxFirstExamMark.Text != null && textBoxFirstExamMark.Text != "")
             {
-                MessageBox.Show(ex.Message);
+                firstExamMark = textBoxFirstExamMark.Text;
+                success = true;
             }
-            catch (DbUpdateException)
+            else
             {
-                MessageBox.Show("Вече има въведени оценки на този ученик");
+                MessageBox.Show(string.Format("Не сте въвели оценка по {0}.", textBoxFirstExam.Text));
+            }
+            if (comboBoxSecondExam.SelectedItem != "Изберете предмет")
+            {
+                secondSubject = comboBoxSecondExam.SelectedItem.ToString();
+                if (textBoxSecondExamMark.Text != null && textBoxSecondExamMark.Text != "")
+                {
+                    secondExamMark = textBoxSecondExamMark.Text;
+                    success = true;
+                }
+                else
+                {
+                    MessageBox.Show("Не сте въвели оценка по вторият предмет.");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не стe избрали втори предмет.");
+                success = false;
+            }
+            if (comboBoxThirdExam.SelectedItem == "Изберете предмет" && textBoxThirdExamMark.Text!="")
+            {
+                MessageBox.Show("Не сте избрали трерти предмет.");
+                success = false;
+            }
+            if (comboBoxThirdExam.SelectedItem != "Изберете предмет")
+            {
+                thirdSubject = comboBoxThirdExam.SelectedItem.ToString();
+                if (textBoxThirdExamMark.Text != "")
+                {
+                    thirdExamMark = textBoxThirdExamMark.Text;
+                    success = true;
+                    Classes.DiplomsDA.SaveMarkExam(selectedStudentID, thirdSubject, thirdExamMark);
+                }
+                else
+                {
+                    MessageBox.Show(string.Format("Не сте въвели оценка по {0}.",comboBoxThirdExam.SelectedItem.ToString()));
+                    success = false;
+                }
+            }
+            if (success)
+            {
+                Classes.DiplomsDA.SaveMarkExam(selectedStudentID, textBoxFirstExam.Text, firstExamMark);
+                Classes.DiplomsDA.SaveMarkExam(selectedStudentID, secondSubject, secondExamMark);
             }
         }
 
@@ -1235,9 +1280,12 @@
             ClearLabel(labelSecondExtraSubjectMark);
             ClearLabel(labelThirdExtraSubjectMark);
             ClearLabel(labelFourthExtraSubjectMark);
+            ClearLabel(labelFirstExtraSubjectMarkWords);
             ClearLabel(labelSecondExtraSubjectMarkWords);
             ClearLabel(labelThirdExtraSubjectMarkWords);
             ClearLabel(labelFourthExtraSubjectMarkWords);
+            ClearLabel(labelFirstExtraSubjectHoursStudied);
+            ClearLabel(labelSecondExtraSubjectHoursStudied);
             var studiedExtraSubjects = Classes.DiplomsDA.GetAllDiplomMarks(studentId, "СИП");
             var studiedExtraSubjectsNamesLabels = new List<Label> { labelFirstExtraSubject, labelSecondExtraSubject, labelThirdExtraSubject, labelFourthExtraSubject, labelFourthExtraSubject };
             var studiedExtraSubjectsMarks = new List<Label> { labelFirstExtraSubjectMark, labelSecondExtraSubjectMark, labelThirdExtraSubjectMark, labelFourthExtraSubjectMark };
@@ -1291,7 +1339,7 @@
             }
         }
         private void ShowDiplomHoursStudied()
-        {       
+        {
             labelBulgarianLanguageHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelBulgarianLanguage.Text, "ЗП");
             if (labelFirstForeignLanguage.Text != "-")
             {
@@ -1319,16 +1367,17 @@
             labelChemistryHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelChemistry.Text, "ЗП");
             labelMusicHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelMusic.Text, "ЗП");
             labelArtHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelArt.Text, "ЗП");
-            labelSportsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelSports.Text, "ЗП");            
-            
-            if (labelFirstExtraSubject.Text != "-")
+            labelSportsHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelSports.Text, "ЗП");
+
+            if (labelFirstExtraSubject.Text != "")
             {
                 labelFirstExtraSubjectHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelFirstExtraSubject.Text, "СИП");
-            }else
+            }
+            else
             {
                 ClearLabel(labelFirstExtraSubjectHoursStudied);
             }
-            if (labelSecondExtraSubject.Text != "-")
+            if (labelSecondExtraSubject.Text != "")
             {
                 labelSecondExtraSubjectHoursStudied.Text = Classes.HoursStudiedSubjectDA.GetHoursStudiedOnSubject(teacherID, labelSecondExtraSubject.Text, "СИП");
             }
@@ -1374,18 +1423,36 @@
             textBoxAverageMandatorySubjects.Clear();
             textBoxAverageChosenSubjects.Clear();
             textBoxAverageExams.Clear();
+            bool success = false;
 
             var isAcceped = WarningMessageBox("Ще запишете окончателните оценки по предметите за дипломата както и общия успех на ученика за дипломата. \nПриемате ли?", "Внимание", true);
             if (isAcceped == true)
             {
-                Classes.DiplomsDA.SaveMarkFinal(dataGridViewDiplom, long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ЗП", teacherID);
-                Classes.DiplomsDA.SaveMarkFinal(dataGridViewDiplom, long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ЗИП", teacherID);
-                textBoxAverageMandatorySubjects.Text = Classes.DiplomsDA.CalculateAverageMark(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ЗП").ToString();
-                textBoxAverageChosenSubjects.Text = Classes.DiplomsDA.CalculateAverageMark(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ЗИП").ToString();
-                textBoxAverageExams.Text = Classes.DiplomsDA.CalculateAverageMark(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ДЗИ").ToString("f2");
-                Classes.StudentDA.SaveMarkForDiplom(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()));
+                try
+                {
+                    Classes.DiplomsDA.SaveMarkFinal(dataGridViewDiplom, long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ЗП", teacherID);
+                    Classes.DiplomsDA.SaveMarkFinal(dataGridViewDiplom, long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ЗИП", teacherID);
+                    textBoxAverageMandatorySubjects.Text = Classes.DiplomsDA.CalculateAverageMark(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ЗП").ToString();
+                    textBoxAverageChosenSubjects.Text = Classes.DiplomsDA.CalculateAverageMark(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ЗИП").ToString();
+                    textBoxAverageExams.Text = Classes.DiplomsDA.CalculateAverageMark(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()), "ДЗИ").ToString("f2");
+                    Classes.StudentDA.SaveMarkForDiplom(long.Parse(comboBoxStudentsNamesDiplomMarks.SelectedValue.ToString()));
+                    success = true;
+                }
+                catch (Exception ex)
+                {
+                    if (ex is DbUpdateException)
+                    {
+                        MessageBox.Show("Тези данни са вече записани.");
+                    }
+                }
+                finally
+                {
+                    if (success)
+                    {
+                        ChangesMadeSuccessfully(labelDiplomMarksSaveSuccessful, timerDiplomMarksSaved);
+                    }
+                }
             }
-            ChangesMadeSuccessfully(labelDiplomMarksSaveSuccessful, timerDiplomMarksSaved);
         }
         private void comboBoxStudentsNamesDiplomMarks_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -1449,5 +1516,9 @@
             // - 29 is set so it cuts the combobox for selecting students for better vizualisation
         }
         #endregion
+
+
+
+
     }
 }

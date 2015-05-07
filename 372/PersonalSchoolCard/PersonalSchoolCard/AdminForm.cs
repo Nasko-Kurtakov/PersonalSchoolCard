@@ -46,6 +46,11 @@
         {
             Application.Exit();
         }
+        private void buttonSignOut_Click(object sender, EventArgs e)
+        {
+            Classes.SignClass.LogOut(this);
+        }
+
         #region//subjects and subject types methods
         private void buttonAddSubjectTypes_Click(object sender, EventArgs e)
         {
@@ -392,13 +397,5 @@
             }
         }
         #endregion
-
-
-        private void buttonSignOut_Click(object sender, EventArgs e)
-        {
-            Classes.SignClass.LogOut(this);
-        }
-
-
     }
 }
