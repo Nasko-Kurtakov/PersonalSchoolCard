@@ -18,26 +18,30 @@ namespace PersonalShcoolCard
         {
             InitializeComponent();
         }
+        string schoolYear = Classes.SchoolYearDA.GetCurrentSchoolYear();
         private void LoginButt_Click(object sender, EventArgs e)
         {
-            try
+             try
             {
                 Classes.SignClass.LogIn(textBoxUserName.Text, textBoxPassword.Text);
                 this.Close();
             }
-            catch (EntityException)
+            catch (Exception ex)
             {
-                MessageBox.Show("Няма свързана база от данни.");
-                textBoxUserName.Clear();
-                textBoxPassword.Clear();
-                textBoxUserName.Focus();
-            }
-            catch
-            {
-                MessageBox.Show("Невалидно потребителско име или парола.");
-                textBoxUserName.Clear();
-                textBoxPassword.Clear();
-                textBoxUserName.Focus();
+                if (ex is EntityException)
+                {
+                    MessageBox.Show("Няма свързана база от данни.");
+                    textBoxUserName.Clear();
+                    textBoxPassword.Clear();
+                    textBoxUserName.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Невалидно потребителско име или парола.");
+                    textBoxUserName.Clear();
+                    textBoxPassword.Clear();
+                    textBoxUserName.Focus();
+                }
             }
         }
         private void LoginForm_KeyPress(object sender, KeyPressEventArgs e)

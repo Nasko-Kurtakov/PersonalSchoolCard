@@ -98,8 +98,36 @@
         private void buttonAddTeachers_Click(object sender, EventArgs e)
         {
             Classes.TeacherDA.AddTeachers(dataGridViewAddTeacher);
+            labelSaveTeacher.Visible = true;
+            timerChangesMade.Start();
             listBoxAlreadyAddedTeachers.DataSource = Classes.TeacherDA.GetAllTeachersNames();
             listBoxAlreadyAddedTeachers.Refresh();
+        }
+        private void comboBoxTeachersNames_Click(object sender, EventArgs e)
+        {
+            comboBoxTeachersNames.DataSource = Classes.TeacherDA.GetAllTeachers();
+        }
+        private void buttonEditTeacher_Click(object sender, EventArgs e)
+        {
+            Classes.TeacherDA.EditTeacherInfo(int.Parse(comboBoxTeachersNames.SelectedValue.ToString()), textBoxFirstName.Text, textBoxLastName.Text, textBoxUsername.Text, textBoxPassword.Text);
+            labelEditTeacher.Visible = true;
+            timerChangesMade.Start();
+        }
+        private void comboBoxTeachersNames_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var teacher = Classes.TeacherDA.GetTeacher(int.Parse(comboBoxTeachersNames.SelectedValue.ToString()));
+            textBoxFirstName.Text = teacher.FirstName;
+            textBoxLastName.Text = teacher.LastName;
+            textBoxUsername.Text = teacher.UserName;
+            textBoxPassword.Text = teacher.Password;
+        }
+        private void textBoxPassword_MouseEnter(object sender, EventArgs e)
+        {
+            textBoxPassword.PasswordChar = '\0';
+        }
+        private void textBoxPassword_MouseLeave(object sender, EventArgs e)
+        {
+            textBoxPassword.PasswordChar = '*';
         }
         #endregion
 
@@ -157,19 +185,13 @@
             labelWarning.Visible = false;
             buttonAccept.Visible = false;
             labelUpdatedScholClassesDone.Visible = true;
-            timerManageSchoolClasses.Start();
+            timerChangesMade.Start();
         }
         private void buttonAddNewSchoolClasses_Click(object sender, EventArgs e)
         {
             Classes.SchoolClassDA.SaveNewSchoolClasses(dataGridViewAddNewSchoolClasses);
             labelAddedNewSchoolClassesDone.Visible = true;
-            timerManageSchoolClasses.Start();
-        }
-        private void timerManageSchoolClasses_Tick(object sender, EventArgs e)
-        {
-            labelAddedNewSchoolClassesDone.Visible = false;
-            labelUpdatedScholClassesDone.Visible = false;
-            timerManageSchoolClasses.Stop();
+            timerChangesMade.Start();
         }
         #endregion
 
@@ -204,12 +226,7 @@
             checkBoxIsManicipality.Checked = false;
             checkBoxIsArea.Checked = false;
             labelAddCityDone.Visible = true;
-            timerAddCityDone.Start();
-        }
-        private void timerAddCityDone_Tick(object sender, EventArgs e)
-        {
-            labelAddCityDone.Visible = false;
-            timerAddCityDone.Stop();
+            timerChangesMade.Start();
         }
         private void checkBoxIsManicipality_CheckedChanged(object sender, EventArgs e)
         {
@@ -276,13 +293,13 @@
         {
             Classes.SchoolInfoDA.UpdatePrincipalNames(textBoxPrincipalFirstName.Text, textBoxPrincipalSecondName.Text, textBoxPrincipalLastName.Text);
             labelSchoolInfoChangesDone.Visible = true;
-            timerChangesDone.Start();
+            timerChangesMade.Start();
         }
         private void buttonChangeSchoolName_Click(object sender, EventArgs e)
         {
             Classes.SchoolInfoDA.UpdateSchoolName(textBoxSchoolName.Text);
             labelSchoolInfoChangesDone.Visible = true;
-            timerChangesDone.Start();
+            timerChangesMade.Start();
         }
         private void buttonAddPrincipal_Click(object sender, EventArgs e)
         {
@@ -291,7 +308,7 @@
             textBoxNewPrincipalSecondName.Clear();
             textBoxNewPrincipalLastName.Clear();
             labelAddedPrincipalDone.Visible = true;
-            timerAddedNewPrincipal.Start();
+            timerChangesMade.Start();
         }
         private void buttonBack_Click(object sender, EventArgs e)
         {
@@ -301,19 +318,9 @@
             panelAddNewPrincipal.Visible = false;
             panelSchoolInfo.BringToFront();
         }
-        private void timerAddedNewPrincipal_Tick(object sender, EventArgs e)
-        {
-            labelAddedPrincipalDone.Visible = false;
-            timerAddedNewPrincipal.Stop();
-        }
         private void buttonChangeCity_Click(object sender, EventArgs e)
         {
             Classes.SchoolInfoDA.ChangeSchoolCity(int.Parse(comboBoxSchoolCity.SelectedValue.ToString()));
-        }
-        private void timerChangesDone_Tick(object sender, EventArgs e)
-        {
-            labelSchoolInfoChangesDone.Visible = false;
-            timerChangesDone.Stop();
         }
 
         #endregion
@@ -339,12 +346,7 @@
             listBoxAlreadyAddedSchoolYears.DataSource = Classes.SchoolYearDA.GetAllSchoolYears();
             listBoxAlreadyAddedSchoolYears.Refresh();
             labelAddedSchoolYearDone.Visible = true;
-            timerAddSchoolYear.Start();
-        }
-        private void timerAddSchoolYear_Tick(object sender, EventArgs e)
-        {
-            labelAddedSchoolYearDone.Visible = false;
-            timerAddSchoolYear.Stop();
+            timerChangesMade.Start();
         }
 
         private void buttonAddNextOnly_Click(object sender, EventArgs e)
@@ -354,7 +356,7 @@
             listBoxAlreadyAddedSchoolYears.Refresh();
             buttonAddNextOnly.Enabled = false;
             labelAddedSchoolYearDone.Visible = true;
-            timerAddSchoolYear.Start();
+            timerChangesMade.Start();
         }
         #endregion
 
@@ -378,13 +380,20 @@
             Classes.StudentDA.AddStudent(dataGridViewAddStudents, comboBoxClassesForCurrentSchoolYear);
             listBoxAlreadyAddedStudents.DataSource = Classes.StudentDA.GetStudentsInClasses(comboBoxClassesForCurrentSchoolYear.SelectedItem.ToString(), Classes.SchoolYearDA.GetCurrentSchoolYear());
             labelAddedNewStudents.Visible = true;
-            timerAddedStudentsDone.Start();
+            timerChangesMade.Start();
         }
-
         private void timerAddedStudentsDone_Tick(object sender, EventArgs e)
         {
+            labelSaveTeacher.Visible = false;
+            labelEditTeacher.Visible = false;
             labelAddedNewStudents.Visible = false;
-            timerAddedStudentsDone.Stop();
+            labelAddCityDone.Visible = false;
+            labelAddedPrincipalDone.Visible = false;
+            labelSchoolInfoChangesDone.Visible = false;
+            labelAddedNewSchoolClassesDone.Visible = false;
+            labelUpdatedScholClassesDone.Visible = false;
+            labelAddedSchoolYearDone.Visible = false;
+            timerChangesMade.Stop();
         }
 
         private void buttonAddStudentsFromExcel_Click(object sender, EventArgs e)
@@ -397,5 +406,7 @@
             }
         }
         #endregion
+
+        
     }
 }

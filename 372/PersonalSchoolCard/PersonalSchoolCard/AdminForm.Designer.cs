@@ -43,15 +43,6 @@
             this.buttonAddSubjectsAndTypes = new System.Windows.Forms.Button();
             this.buttonCreateProfile = new System.Windows.Forms.Button();
             this.panelParent = new System.Windows.Forms.Panel();
-            this.panelAddProfiles = new System.Windows.Forms.Panel();
-            this.listBoxAlreadyAddedProfiles = new System.Windows.Forms.ListBox();
-            this.dataGridViewAddProfile = new System.Windows.Forms.DataGridView();
-            this.ProfileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label13 = new System.Windows.Forms.Label();
-            this.buttonAddProfile = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panelSchoolInfo = new System.Windows.Forms.Panel();
             this.labelSchoolInfoChangesDone = new System.Windows.Forms.Label();
             this.buttonChangeCity = new System.Windows.Forms.Button();
@@ -154,15 +145,6 @@
             this.dataGridViewSchoolYears = new System.Windows.Forms.DataGridView();
             this.SchoolYearAdd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label16 = new System.Windows.Forms.Label();
-            this.panelAddTeachers = new System.Windows.Forms.Panel();
-            this.buttonAddTeachers = new System.Windows.Forms.Button();
-            this.dataGridViewAddTeacher = new System.Windows.Forms.DataGridView();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listBoxAlreadyAddedTeachers = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelAddSubjects = new System.Windows.Forms.Panel();
             this.listBoxAlreadyAddedSubjects = new System.Windows.Forms.ListBox();
             this.listBoxAlreadyAddedSubjectTypes = new System.Windows.Forms.ListBox();
@@ -174,22 +156,47 @@
             this.dataGridViewSubjectTypes = new System.Windows.Forms.DataGridView();
             this.SubjectType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelAddProfiles = new System.Windows.Forms.Panel();
+            this.listBoxAlreadyAddedProfiles = new System.Windows.Forms.ListBox();
+            this.dataGridViewAddProfile = new System.Windows.Forms.DataGridView();
+            this.ProfileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label13 = new System.Windows.Forms.Label();
+            this.buttonAddProfile = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panelStartPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.timerAddSchoolYear = new System.Windows.Forms.Timer(this.components);
-            this.timerAddCityDone = new System.Windows.Forms.Timer(this.components);
-            this.timerAddedNewPrincipal = new System.Windows.Forms.Timer(this.components);
-            this.timerChangesDone = new System.Windows.Forms.Timer(this.components);
-            this.timerManageSchoolClasses = new System.Windows.Forms.Timer(this.components);
-            this.timerAddedStudentsDone = new System.Windows.Forms.Timer(this.components);
+            this.timerChangesMade = new System.Windows.Forms.Timer(this.components);
             this.openFileDialogLoadFromExcel = new System.Windows.Forms.OpenFileDialog();
+            this.panelAddTeachers = new System.Windows.Forms.TabControl();
+            this.tabPageEditTeachers = new System.Windows.Forms.TabPage();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.comboBoxTeachersNames = new System.Windows.Forms.ComboBox();
+            this.buttonEditTeacher = new System.Windows.Forms.Button();
+            this.labelEditTeacher = new System.Windows.Forms.Label();
+            this.tabPageSaveTeachers = new System.Windows.Forms.TabPage();
+            this.buttonAddTeachers = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listBoxAlreadyAddedTeachers = new System.Windows.Forms.ListBox();
+            this.dataGridViewAddTeacher = new System.Windows.Forms.DataGridView();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelSaveTeacher = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panelParent.SuspendLayout();
-            this.panelAddProfiles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddProfile)).BeginInit();
             this.panelSchoolInfo.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -209,12 +216,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddAbsenceType)).BeginInit();
             this.panelAddSchoolYears.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchoolYears)).BeginInit();
-            this.panelAddTeachers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTeacher)).BeginInit();
             this.panelAddSubjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).BeginInit();
+            this.panelAddProfiles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddProfile)).BeginInit();
             this.panelStartPanel.SuspendLayout();
+            this.panelAddTeachers.SuspendLayout();
+            this.tabPageEditTeachers.SuspendLayout();
+            this.tabPageSaveTeachers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTeacher)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -362,6 +373,8 @@
             // 
             this.panelParent.AutoScroll = true;
             this.panelParent.BackColor = System.Drawing.SystemColors.Control;
+            this.panelParent.Controls.Add(this.panelStartPanel);
+            this.panelParent.Controls.Add(this.panelAddTeachers);
             this.panelParent.Controls.Add(this.panelSchoolInfo);
             this.panelParent.Controls.Add(this.AddNewSchoolClass);
             this.panelParent.Controls.Add(this.panelAddStudent);
@@ -369,106 +382,13 @@
             this.panelParent.Controls.Add(this.panelSettlements);
             this.panelParent.Controls.Add(this.panelAddAbsencesType);
             this.panelParent.Controls.Add(this.panelAddSchoolYears);
-            this.panelParent.Controls.Add(this.panelAddTeachers);
             this.panelParent.Controls.Add(this.panelAddSubjects);
             this.panelParent.Controls.Add(this.panelAddProfiles);
-            this.panelParent.Controls.Add(this.panelStartPanel);
             this.panelParent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelParent.Location = new System.Drawing.Point(0, 0);
             this.panelParent.Name = "panelParent";
             this.panelParent.Size = new System.Drawing.Size(514, 517);
             this.panelParent.TabIndex = 1;
-            // 
-            // panelAddProfiles
-            // 
-            this.panelAddProfiles.AutoScroll = true;
-            this.panelAddProfiles.BackColor = System.Drawing.SystemColors.Control;
-            this.panelAddProfiles.Controls.Add(this.listBoxAlreadyAddedProfiles);
-            this.panelAddProfiles.Controls.Add(this.dataGridViewAddProfile);
-            this.panelAddProfiles.Controls.Add(this.label13);
-            this.panelAddProfiles.Controls.Add(this.buttonAddProfile);
-            this.panelAddProfiles.Controls.Add(this.label12);
-            this.panelAddProfiles.Controls.Add(this.label11);
-            this.panelAddProfiles.Controls.Add(this.label10);
-            this.panelAddProfiles.Location = new System.Drawing.Point(0, 12);
-            this.panelAddProfiles.Name = "panelAddProfiles";
-            this.panelAddProfiles.Size = new System.Drawing.Size(505, 60);
-            this.panelAddProfiles.TabIndex = 29;
-            this.panelAddProfiles.Visible = false;
-            // 
-            // listBoxAlreadyAddedProfiles
-            // 
-            this.listBoxAlreadyAddedProfiles.FormattingEnabled = true;
-            this.listBoxAlreadyAddedProfiles.Location = new System.Drawing.Point(44, 315);
-            this.listBoxAlreadyAddedProfiles.Name = "listBoxAlreadyAddedProfiles";
-            this.listBoxAlreadyAddedProfiles.Size = new System.Drawing.Size(404, 108);
-            this.listBoxAlreadyAddedProfiles.TabIndex = 15;
-            // 
-            // dataGridViewAddProfile
-            // 
-            this.dataGridViewAddProfile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAddProfile.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProfileName});
-            this.dataGridViewAddProfile.Location = new System.Drawing.Point(44, 95);
-            this.dataGridViewAddProfile.Name = "dataGridViewAddProfile";
-            this.dataGridViewAddProfile.RowHeadersVisible = false;
-            this.dataGridViewAddProfile.Size = new System.Drawing.Size(404, 134);
-            this.dataGridViewAddProfile.TabIndex = 14;
-            // 
-            // ProfileName
-            // 
-            this.ProfileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProfileName.HeaderText = "Име на профила";
-            this.ProfileName.Name = "ProfileName";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(41, 291);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 13);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Добавени предмети";
-            // 
-            // buttonAddProfile
-            // 
-            this.buttonAddProfile.Location = new System.Drawing.Point(154, 432);
-            this.buttonAddProfile.Name = "buttonAddProfile";
-            this.buttonAddProfile.Size = new System.Drawing.Size(159, 40);
-            this.buttonAddProfile.TabIndex = 11;
-            this.buttonAddProfile.Text = "Добави профил";
-            this.buttonAddProfile.UseVisualStyleBackColor = true;
-            this.buttonAddProfile.Click += new System.EventHandler(this.buttonAddProfile_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(77, 246);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(413, 20);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Пример: Информатика, Математика, Английски език";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(86, 70);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(138, 18);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Въведете профил:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(112, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(280, 31);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Добавяне на профил";
             // 
             // panelSchoolInfo
             // 
@@ -855,7 +775,7 @@
             this.ManageSchoolClassesTabPage.Location = new System.Drawing.Point(4, 22);
             this.ManageSchoolClassesTabPage.Name = "ManageSchoolClassesTabPage";
             this.ManageSchoolClassesTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ManageSchoolClassesTabPage.Size = new System.Drawing.Size(506, 491);
+            this.ManageSchoolClassesTabPage.Size = new System.Drawing.Size(485, 17);
             this.ManageSchoolClassesTabPage.TabIndex = 1;
             this.ManageSchoolClassesTabPage.Text = "Преминаване в по-горен клас";
             // 
@@ -1424,9 +1344,9 @@
             this.panelAddSchoolYears.Controls.Add(this.listBoxAlreadyAddedSchoolYears);
             this.panelAddSchoolYears.Controls.Add(this.dataGridViewSchoolYears);
             this.panelAddSchoolYears.Controls.Add(this.label16);
-            this.panelAddSchoolYears.Location = new System.Drawing.Point(6, 176);
+            this.panelAddSchoolYears.Location = new System.Drawing.Point(6, 188);
             this.panelAddSchoolYears.Name = "panelAddSchoolYears";
-            this.panelAddSchoolYears.Size = new System.Drawing.Size(493, 61);
+            this.panelAddSchoolYears.Size = new System.Drawing.Size(493, 49);
             this.panelAddSchoolYears.TabIndex = 23;
             this.panelAddSchoolYears.Visible = false;
             // 
@@ -1496,85 +1416,6 @@
             this.label16.Size = new System.Drawing.Size(364, 31);
             this.label16.TabIndex = 23;
             this.label16.Text = "Добавяне на учебни години";
-            // 
-            // panelAddTeachers
-            // 
-            this.panelAddTeachers.AutoScroll = true;
-            this.panelAddTeachers.BackColor = System.Drawing.SystemColors.Control;
-            this.panelAddTeachers.Controls.Add(this.buttonAddTeachers);
-            this.panelAddTeachers.Controls.Add(this.dataGridViewAddTeacher);
-            this.panelAddTeachers.Controls.Add(this.listBoxAlreadyAddedTeachers);
-            this.panelAddTeachers.Controls.Add(this.label2);
-            this.panelAddTeachers.Location = new System.Drawing.Point(0, 133);
-            this.panelAddTeachers.Name = "panelAddTeachers";
-            this.panelAddTeachers.Size = new System.Drawing.Size(508, 37);
-            this.panelAddTeachers.TabIndex = 7;
-            this.panelAddTeachers.Visible = false;
-            // 
-            // buttonAddTeachers
-            // 
-            this.buttonAddTeachers.Location = new System.Drawing.Point(199, 446);
-            this.buttonAddTeachers.Name = "buttonAddTeachers";
-            this.buttonAddTeachers.Size = new System.Drawing.Size(117, 39);
-            this.buttonAddTeachers.TabIndex = 3;
-            this.buttonAddTeachers.Text = "Добави учители";
-            this.buttonAddTeachers.UseVisualStyleBackColor = true;
-            this.buttonAddTeachers.Click += new System.EventHandler(this.buttonAddTeachers_Click);
-            // 
-            // dataGridViewAddTeacher
-            // 
-            this.dataGridViewAddTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAddTeacher.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FirstName,
-            this.LastName,
-            this.Username,
-            this.Password});
-            this.dataGridViewAddTeacher.Location = new System.Drawing.Point(27, 58);
-            this.dataGridViewAddTeacher.Name = "dataGridViewAddTeacher";
-            this.dataGridViewAddTeacher.RowHeadersVisible = false;
-            this.dataGridViewAddTeacher.Size = new System.Drawing.Size(460, 150);
-            this.dataGridViewAddTeacher.TabIndex = 0;
-            // 
-            // FirstName
-            // 
-            this.FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FirstName.HeaderText = "Име";
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.LastName.HeaderText = "Фамилия";
-            this.LastName.Name = "LastName";
-            // 
-            // Username
-            // 
-            this.Username.HeaderText = "Потребителско име";
-            this.Username.Name = "Username";
-            // 
-            // Password
-            // 
-            this.Password.HeaderText = "Парола";
-            this.Password.Name = "Password";
-            // 
-            // listBoxAlreadyAddedTeachers
-            // 
-            this.listBoxAlreadyAddedTeachers.DisplayMember = "FullName";
-            this.listBoxAlreadyAddedTeachers.FormattingEnabled = true;
-            this.listBoxAlreadyAddedTeachers.Location = new System.Drawing.Point(85, 249);
-            this.listBoxAlreadyAddedTeachers.Name = "listBoxAlreadyAddedTeachers";
-            this.listBoxAlreadyAddedTeachers.Size = new System.Drawing.Size(345, 173);
-            this.listBoxAlreadyAddedTeachers.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(112, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Добавяне на учители\r\n";
             // 
             // panelAddSubjects
             // 
@@ -1681,9 +1522,100 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Добавяне на предмети";
             // 
+            // panelAddProfiles
+            // 
+            this.panelAddProfiles.AutoScroll = true;
+            this.panelAddProfiles.BackColor = System.Drawing.SystemColors.Control;
+            this.panelAddProfiles.Controls.Add(this.listBoxAlreadyAddedProfiles);
+            this.panelAddProfiles.Controls.Add(this.dataGridViewAddProfile);
+            this.panelAddProfiles.Controls.Add(this.label13);
+            this.panelAddProfiles.Controls.Add(this.buttonAddProfile);
+            this.panelAddProfiles.Controls.Add(this.label12);
+            this.panelAddProfiles.Controls.Add(this.label11);
+            this.panelAddProfiles.Controls.Add(this.label10);
+            this.panelAddProfiles.Location = new System.Drawing.Point(0, 12);
+            this.panelAddProfiles.Name = "panelAddProfiles";
+            this.panelAddProfiles.Size = new System.Drawing.Size(505, 60);
+            this.panelAddProfiles.TabIndex = 29;
+            this.panelAddProfiles.Visible = false;
+            // 
+            // listBoxAlreadyAddedProfiles
+            // 
+            this.listBoxAlreadyAddedProfiles.FormattingEnabled = true;
+            this.listBoxAlreadyAddedProfiles.Location = new System.Drawing.Point(44, 315);
+            this.listBoxAlreadyAddedProfiles.Name = "listBoxAlreadyAddedProfiles";
+            this.listBoxAlreadyAddedProfiles.Size = new System.Drawing.Size(404, 108);
+            this.listBoxAlreadyAddedProfiles.TabIndex = 15;
+            // 
+            // dataGridViewAddProfile
+            // 
+            this.dataGridViewAddProfile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAddProfile.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProfileName});
+            this.dataGridViewAddProfile.Location = new System.Drawing.Point(44, 95);
+            this.dataGridViewAddProfile.Name = "dataGridViewAddProfile";
+            this.dataGridViewAddProfile.RowHeadersVisible = false;
+            this.dataGridViewAddProfile.Size = new System.Drawing.Size(404, 134);
+            this.dataGridViewAddProfile.TabIndex = 14;
+            // 
+            // ProfileName
+            // 
+            this.ProfileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProfileName.HeaderText = "Име на профила";
+            this.ProfileName.Name = "ProfileName";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(41, 291);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 13);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Добавени предмети";
+            // 
+            // buttonAddProfile
+            // 
+            this.buttonAddProfile.Location = new System.Drawing.Point(154, 432);
+            this.buttonAddProfile.Name = "buttonAddProfile";
+            this.buttonAddProfile.Size = new System.Drawing.Size(159, 40);
+            this.buttonAddProfile.TabIndex = 11;
+            this.buttonAddProfile.Text = "Добави профил";
+            this.buttonAddProfile.UseVisualStyleBackColor = true;
+            this.buttonAddProfile.Click += new System.EventHandler(this.buttonAddProfile_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(77, 246);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(413, 20);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Пример: Информатика, Математика, Английски език";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(86, 70);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(138, 18);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Въведете профил:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(112, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(280, 31);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Добавяне на профил";
+            // 
             // panelStartPanel
             // 
-            this.panelStartPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panelStartPanel.BackColor = System.Drawing.SystemColors.Control;
             this.panelStartPanel.Controls.Add(this.label3);
             this.panelStartPanel.Location = new System.Drawing.Point(5, 3);
             this.panelStartPanel.Name = "panelStartPanel";
@@ -1695,45 +1627,245 @@
             this.label3.AutoSize = true;
             this.label3.CausesValidation = false;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(194, 246);
+            this.label3.Location = new System.Drawing.Point(183, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 26);
             this.label3.TabIndex = 0;
             this.label3.Text = "Добре дошли";
             // 
-            // timerAddSchoolYear
+            // timerChangesMade
             // 
-            this.timerAddSchoolYear.Interval = 3000;
-            this.timerAddSchoolYear.Tick += new System.EventHandler(this.timerAddSchoolYear_Tick);
-            // 
-            // timerAddCityDone
-            // 
-            this.timerAddCityDone.Interval = 3000;
-            this.timerAddCityDone.Tick += new System.EventHandler(this.timerAddCityDone_Tick);
-            // 
-            // timerAddedNewPrincipal
-            // 
-            this.timerAddedNewPrincipal.Interval = 3000;
-            this.timerAddedNewPrincipal.Tick += new System.EventHandler(this.timerAddedNewPrincipal_Tick);
-            // 
-            // timerChangesDone
-            // 
-            this.timerChangesDone.Interval = 3000;
-            this.timerChangesDone.Tick += new System.EventHandler(this.timerChangesDone_Tick);
-            // 
-            // timerManageSchoolClasses
-            // 
-            this.timerManageSchoolClasses.Interval = 3000;
-            this.timerManageSchoolClasses.Tick += new System.EventHandler(this.timerManageSchoolClasses_Tick);
-            // 
-            // timerAddedStudentsDone
-            // 
-            this.timerAddedStudentsDone.Interval = 3000;
-            this.timerAddedStudentsDone.Tick += new System.EventHandler(this.timerAddedStudentsDone_Tick);
+            this.timerChangesMade.Interval = 3000;
+            this.timerChangesMade.Tick += new System.EventHandler(this.timerAddedStudentsDone_Tick);
             // 
             // openFileDialogLoadFromExcel
             // 
             this.openFileDialogLoadFromExcel.FileName = "Изберете файл";
+            // 
+            // panelAddTeachers
+            // 
+            this.panelAddTeachers.Controls.Add(this.tabPageSaveTeachers);
+            this.panelAddTeachers.Controls.Add(this.tabPageEditTeachers);
+            this.panelAddTeachers.Location = new System.Drawing.Point(5, 144);
+            this.panelAddTeachers.Name = "panelAddTeachers";
+            this.panelAddTeachers.SelectedIndex = 0;
+            this.panelAddTeachers.Size = new System.Drawing.Size(514, 36);
+            this.panelAddTeachers.TabIndex = 12;
+            this.panelAddTeachers.Visible = false;
+            // 
+            // tabPageEditTeachers
+            // 
+            this.tabPageEditTeachers.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageEditTeachers.Controls.Add(this.labelEditTeacher);
+            this.tabPageEditTeachers.Controls.Add(this.buttonEditTeacher);
+            this.tabPageEditTeachers.Controls.Add(this.comboBoxTeachersNames);
+            this.tabPageEditTeachers.Controls.Add(this.textBoxFirstName);
+            this.tabPageEditTeachers.Controls.Add(this.label30);
+            this.tabPageEditTeachers.Controls.Add(this.textBoxLastName);
+            this.tabPageEditTeachers.Controls.Add(this.textBoxPassword);
+            this.tabPageEditTeachers.Controls.Add(this.labelName);
+            this.tabPageEditTeachers.Controls.Add(this.label29);
+            this.tabPageEditTeachers.Controls.Add(this.label28);
+            this.tabPageEditTeachers.Controls.Add(this.textBoxUsername);
+            this.tabPageEditTeachers.Location = new System.Drawing.Point(4, 22);
+            this.tabPageEditTeachers.Name = "tabPageEditTeachers";
+            this.tabPageEditTeachers.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEditTeachers.Size = new System.Drawing.Size(506, 10);
+            this.tabPageEditTeachers.TabIndex = 1;
+            this.tabPageEditTeachers.Text = "Редактиране на информацията";
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Location = new System.Drawing.Point(166, 263);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(143, 20);
+            this.textBoxUsername.TabIndex = 8;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(163, 187);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(56, 13);
+            this.label28.TabIndex = 7;
+            this.label28.Text = "Фамилия";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(163, 240);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(108, 13);
+            this.label29.TabIndex = 9;
+            this.label29.Text = "Потребителско име";
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(163, 138);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(29, 13);
+            this.labelName.TabIndex = 6;
+            this.labelName.Text = "Име";
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Location = new System.Drawing.Point(166, 316);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(143, 20);
+            this.textBoxPassword.TabIndex = 10;
+            this.textBoxPassword.MouseEnter += new System.EventHandler(this.textBoxPassword_MouseEnter);
+            this.textBoxPassword.MouseLeave += new System.EventHandler(this.textBoxPassword_MouseLeave);
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Location = new System.Drawing.Point(166, 210);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(143, 20);
+            this.textBoxLastName.TabIndex = 5;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(163, 293);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(45, 13);
+            this.label30.TabIndex = 11;
+            this.label30.Text = "Парола";
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Location = new System.Drawing.Point(166, 157);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(143, 20);
+            this.textBoxFirstName.TabIndex = 4;
+            // 
+            // comboBoxTeachersNames
+            // 
+            this.comboBoxTeachersNames.DisplayMember = "FullName";
+            this.comboBoxTeachersNames.FormattingEnabled = true;
+            this.comboBoxTeachersNames.Location = new System.Drawing.Point(145, 61);
+            this.comboBoxTeachersNames.Name = "comboBoxTeachersNames";
+            this.comboBoxTeachersNames.Size = new System.Drawing.Size(190, 21);
+            this.comboBoxTeachersNames.TabIndex = 12;
+            this.comboBoxTeachersNames.Text = "Изберете учител";
+            this.comboBoxTeachersNames.ValueMember = "TeacherID";
+            this.comboBoxTeachersNames.SelectionChangeCommitted += new System.EventHandler(this.comboBoxTeachersNames_SelectionChangeCommitted);
+            this.comboBoxTeachersNames.Click += new System.EventHandler(this.comboBoxTeachersNames_Click);
+            // 
+            // buttonEditTeacher
+            // 
+            this.buttonEditTeacher.Location = new System.Drawing.Point(180, 401);
+            this.buttonEditTeacher.Name = "buttonEditTeacher";
+            this.buttonEditTeacher.Size = new System.Drawing.Size(117, 39);
+            this.buttonEditTeacher.TabIndex = 13;
+            this.buttonEditTeacher.Text = "Редактирате";
+            this.buttonEditTeacher.UseVisualStyleBackColor = true;
+            this.buttonEditTeacher.Click += new System.EventHandler(this.buttonEditTeacher_Click);
+            // 
+            // labelEditTeacher
+            // 
+            this.labelEditTeacher.AutoSize = true;
+            this.labelEditTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditTeacher.Location = new System.Drawing.Point(358, 231);
+            this.labelEditTeacher.Name = "labelEditTeacher";
+            this.labelEditTeacher.Size = new System.Drawing.Size(121, 20);
+            this.labelEditTeacher.TabIndex = 14;
+            this.labelEditTeacher.Text = "Редактирано";
+            this.labelEditTeacher.Visible = false;
+            // 
+            // tabPageSaveTeachers
+            // 
+            this.tabPageSaveTeachers.AutoScroll = true;
+            this.tabPageSaveTeachers.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageSaveTeachers.Controls.Add(this.labelSaveTeacher);
+            this.tabPageSaveTeachers.Controls.Add(this.dataGridViewAddTeacher);
+            this.tabPageSaveTeachers.Controls.Add(this.listBoxAlreadyAddedTeachers);
+            this.tabPageSaveTeachers.Controls.Add(this.label2);
+            this.tabPageSaveTeachers.Controls.Add(this.buttonAddTeachers);
+            this.tabPageSaveTeachers.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSaveTeachers.Name = "tabPageSaveTeachers";
+            this.tabPageSaveTeachers.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSaveTeachers.Size = new System.Drawing.Size(506, 10);
+            this.tabPageSaveTeachers.TabIndex = 0;
+            this.tabPageSaveTeachers.Text = "Добавяне ня учители";
+            // 
+            // buttonAddTeachers
+            // 
+            this.buttonAddTeachers.Location = new System.Drawing.Point(195, 413);
+            this.buttonAddTeachers.Name = "buttonAddTeachers";
+            this.buttonAddTeachers.Size = new System.Drawing.Size(117, 39);
+            this.buttonAddTeachers.TabIndex = 3;
+            this.buttonAddTeachers.Text = "Добави учители";
+            this.buttonAddTeachers.UseVisualStyleBackColor = true;
+            this.buttonAddTeachers.Click += new System.EventHandler(this.buttonAddTeachers_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(112, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(283, 31);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Добавяне на учители\r\n";
+            // 
+            // listBoxAlreadyAddedTeachers
+            // 
+            this.listBoxAlreadyAddedTeachers.DisplayMember = "FullName";
+            this.listBoxAlreadyAddedTeachers.FormattingEnabled = true;
+            this.listBoxAlreadyAddedTeachers.Location = new System.Drawing.Point(81, 263);
+            this.listBoxAlreadyAddedTeachers.Name = "listBoxAlreadyAddedTeachers";
+            this.listBoxAlreadyAddedTeachers.Size = new System.Drawing.Size(345, 121);
+            this.listBoxAlreadyAddedTeachers.TabIndex = 2;
+            // 
+            // dataGridViewAddTeacher
+            // 
+            this.dataGridViewAddTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAddTeacher.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FirstName,
+            this.LastName,
+            this.Username,
+            this.Password});
+            this.dataGridViewAddTeacher.Location = new System.Drawing.Point(54, 55);
+            this.dataGridViewAddTeacher.Name = "dataGridViewAddTeacher";
+            this.dataGridViewAddTeacher.RowHeadersVisible = false;
+            this.dataGridViewAddTeacher.Size = new System.Drawing.Size(399, 150);
+            this.dataGridViewAddTeacher.TabIndex = 0;
+            // 
+            // Password
+            // 
+            this.Password.HeaderText = "Парола";
+            this.Password.Name = "Password";
+            // 
+            // Username
+            // 
+            this.Username.HeaderText = "Потребителско име";
+            this.Username.Name = "Username";
+            // 
+            // LastName
+            // 
+            this.LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LastName.HeaderText = "Фамилия";
+            this.LastName.Name = "LastName";
+            // 
+            // FirstName
+            // 
+            this.FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FirstName.HeaderText = "Име";
+            this.FirstName.Name = "FirstName";
+            // 
+            // labelSaveTeacher
+            // 
+            this.labelSaveTeacher.AutoSize = true;
+            this.labelSaveTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSaveTeacher.Location = new System.Drawing.Point(207, 229);
+            this.labelSaveTeacher.Name = "labelSaveTeacher";
+            this.labelSaveTeacher.Size = new System.Drawing.Size(92, 20);
+            this.labelSaveTeacher.TabIndex = 4;
+            this.labelSaveTeacher.Text = "Добавено";
+            this.labelSaveTeacher.Visible = false;
             // 
             // AdminForm
             // 
@@ -1754,9 +1886,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panelParent.ResumeLayout(false);
-            this.panelAddProfiles.ResumeLayout(false);
-            this.panelAddProfiles.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddProfile)).EndInit();
             this.panelSchoolInfo.ResumeLayout(false);
             this.panelSchoolInfo.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1786,15 +1915,21 @@
             this.panelAddSchoolYears.ResumeLayout(false);
             this.panelAddSchoolYears.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchoolYears)).EndInit();
-            this.panelAddTeachers.ResumeLayout(false);
-            this.panelAddTeachers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTeacher)).EndInit();
             this.panelAddSubjects.ResumeLayout(false);
             this.panelAddSubjects.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjectTypes)).EndInit();
+            this.panelAddProfiles.ResumeLayout(false);
+            this.panelAddProfiles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddProfile)).EndInit();
             this.panelStartPanel.ResumeLayout(false);
             this.panelStartPanel.PerformLayout();
+            this.panelAddTeachers.ResumeLayout(false);
+            this.tabPageEditTeachers.ResumeLayout(false);
+            this.tabPageEditTeachers.PerformLayout();
+            this.tabPageSaveTeachers.ResumeLayout(false);
+            this.tabPageSaveTeachers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTeacher)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1822,11 +1957,6 @@
         private System.Windows.Forms.ListBox listBoxAlreadyAddedSubjectTypes;
         private System.Windows.Forms.ListBox listBoxAlreadyAddedSubjects;
         private System.Windows.Forms.Button buttonOpenAddTeachersPanel;
-        private System.Windows.Forms.Panel panelAddTeachers;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBoxAlreadyAddedTeachers;
-        private System.Windows.Forms.Button buttonAddTeachers;
-        private System.Windows.Forms.DataGridView dataGridViewAddTeacher;
         private System.Windows.Forms.Panel panelStartPanel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelParent;
@@ -1841,10 +1971,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonAddTerms;
         private System.Windows.Forms.ListBox listBoxAlreadyAddedTerms;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.Panel panelSettlements;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.CheckBox checkBoxIsManicipality;
@@ -1904,9 +2030,7 @@
         private System.Windows.Forms.Button buttonAddAbsencesTypes;
         private System.Windows.Forms.Button buttonAddNewPrincipal;
         private System.Windows.Forms.Label labelAddedSchoolYearDone;
-        private System.Windows.Forms.Timer timerAddSchoolYear;
         private System.Windows.Forms.Label labelAddCityDone;
-        private System.Windows.Forms.Timer timerAddCityDone;
         private System.Windows.Forms.Label labelSchowCurrentSchoolYear;
         private System.Windows.Forms.Label labelcurrentSchoolYear;
         private System.Windows.Forms.Button buttonChangeCity;
@@ -1922,12 +2046,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label labelAddedPrincipalDone;
-        private System.Windows.Forms.Timer timerAddedNewPrincipal;
         private System.Windows.Forms.Label labelSchoolInfoChangesDone;
-        private System.Windows.Forms.Timer timerChangesDone;
         private System.Windows.Forms.Label labelAddedNewSchoolClassesDone;
         private System.Windows.Forms.Label labelUpdatedScholClassesDone;
-        private System.Windows.Forms.Timer timerManageSchoolClasses;
         private System.Windows.Forms.Panel panelAddStudent;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ListBox listBoxAlreadyAddedStudents;
@@ -1938,7 +2059,7 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Button buttonAddNewStudents;
         private System.Windows.Forms.Label labelAddedNewStudents;
-        private System.Windows.Forms.Timer timerAddedStudentsDone;
+        private System.Windows.Forms.Timer timerChangesMade;
         private System.Windows.Forms.Button buttonAddStudentsFromExcel;
         private System.Windows.Forms.OpenFileDialog openFileDialogLoadFromExcel;
         private System.Windows.Forms.DataGridViewTextBoxColumn NewStudentFirstName;
@@ -1954,5 +2075,28 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button buttonSignOut;
+        private System.Windows.Forms.TabControl panelAddTeachers;
+        private System.Windows.Forms.TabPage tabPageSaveTeachers;
+        private System.Windows.Forms.Label labelSaveTeacher;
+        private System.Windows.Forms.DataGridView dataGridViewAddTeacher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.ListBox listBoxAlreadyAddedTeachers;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonAddTeachers;
+        private System.Windows.Forms.TabPage tabPageEditTeachers;
+        private System.Windows.Forms.Label labelEditTeacher;
+        private System.Windows.Forms.Button buttonEditTeacher;
+        private System.Windows.Forms.ComboBox comboBoxTeachersNames;
+        private System.Windows.Forms.TextBox textBoxFirstName;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBoxLastName;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox textBoxUsername;
     }
 }

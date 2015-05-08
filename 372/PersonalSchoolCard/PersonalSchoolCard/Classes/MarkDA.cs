@@ -118,20 +118,6 @@
                 }
             }
         }
-        public static byte? GetMark(long studentID, string subjectName, int subjectTypeID, byte termID, int teacherID)
-        {
-            using (var context = new PersonalSchoolCardEntities())
-            {
-                var subjectID = SubjectDA.GetSubjectID(subjectName);
-                var classID = SchoolClassDA.GetSchoolClassByTeacherID(teacherID).ClassID;
-                var mark = context.Marks
-                            .Where(subject => subject.StudentID == studentID && subject.SubjectID == subjectID
-                                    && subject.ClassID == classID && subject.SubjectTypeID == subjectTypeID && subject.TermID == termID)
-                                    .Select(grade => grade.Grade)
-                                    .FirstOrDefault();
-                return mark;
-            }
-        }
         public static byte? GetFinalMarkForSchoolYear(long studentID, int subjectID, string subjectTypeName, string schoolYear)
         {
             using (var context = new PersonalSchoolCardEntities())

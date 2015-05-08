@@ -29,14 +29,14 @@
                                 {
                                     if (userName != null && userName != "" && userName != " ")
                                     {
-                                        
+
                                         var teacher = new Teacher
                                         {
                                             FirstName = firstName,
                                             LastName = lastName,
                                             UserName = userName,
-                                            Password= password
-                                             
+                                            Password = password
+
                                         };
                                         context.Teachers.Add(teacher);
                                     }
@@ -44,11 +44,10 @@
                             }
                         }
 
-                        else if (firstName == null || firstName == "" || firstName == " " 
-                                || lastName == null || lastName == ""|| lastName== " " ||
-                                    userName == null || userName == "" || userName==" " ||
-                                    password == null || password=="" || password==" ")
-
+                        else if (firstName == null || firstName == "" || firstName == " "
+                                || lastName == null || lastName == "" || lastName == " " ||
+                                    userName == null || userName == "" || userName == " " ||
+                                    password == null || password == "" || password == " ")
                         {
                             throw new ArgumentNullException("Невалидни входни параметри");
                         }
@@ -66,23 +65,15 @@
         {
             using (var context = new PersonalSchoolCardEntities())
             {
-                try
-                {
-                    var teachersList = context.Teachers
-                                          .Select(teacher => teacher).ToList();
+                var teachersList = context.Teachers
+                                      .Select(teacher => teacher).ToList();
 
-                    var teachersNamesList = new List<string>();
-                    foreach (var teacher in teachersList)
-                    {
-                        teachersNamesList.Add(teacher.FullName);
-                    }
-                    return teachersNamesList;
-                }
-                catch (Exception ex)
+                var teachersnameslist = new List<string>();
+                foreach (var teacher in teachersList)
                 {
-                    MessageBox.Show(ex.Message);
-                    return null;
+                    teachersnameslist.Add(teacher.FullName);
                 }
+                return teachersnameslist;
             }
         }
         public static Teacher GetTeacher(int teacherID)
@@ -95,10 +86,21 @@
 
                 return teacher;
             }
-        }        
-        public static void EditTeacherInfo(int teacherID,string firstName,string lastName,string userName,string password)
+        }
+        public static Teacher SearchTeacher(string username,string password)
         {
-            using(var context =  new PersonalSchoolCardEntities())
+            using(var context = new PersonalSchoolCardEntities())
+            {
+                var searchedTeacher = context.Teachers
+                                .Where(teacher => teacher.UserName == username && teacher.Password == password)
+                                .Select(teacher => teacher)
+                                .First();
+                return searchedTeacher;
+            }
+        }
+        public static void EditTeacherInfo(int teacherID, string firstName, string lastName, string userName, string password)
+        {
+            using (var context = new PersonalSchoolCardEntities())
             {
                 var selectedTeacher = context.Teachers
                                 .Where(teacher => teacher.TeacherID == teacherID)
@@ -109,6 +111,16 @@
                 selectedTeacher.UserName = userName;
                 selectedTeacher.Password = password;
                 context.SaveChanges();
+            }
+        }
+        public static List<Teacher> GetAllTeachers()
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var teachersList = context.Teachers
+                                      .Select(teacher => teacher)
+                                      .ToList();
+                return teachersList;
             }
         }
     }

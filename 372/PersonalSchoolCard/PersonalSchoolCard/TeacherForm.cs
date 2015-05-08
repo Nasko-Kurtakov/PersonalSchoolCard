@@ -1516,9 +1516,5 @@
             // - 29 is set so it cuts the combobox for selecting students for better vizualisation
         }
         #endregion
-
-
-
-
     }
 }
