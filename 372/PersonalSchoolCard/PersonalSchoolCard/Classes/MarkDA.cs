@@ -46,7 +46,7 @@
                 {
                     for (int i = 0; i < gridView.Rows.Count; i++)
                     {
-                        if (gridView.Rows[i].Cells[2].Value.ToString() != "")
+                        if (gridView.Rows[i].Cells[2].Value.ToString() != "" && int.Parse(gridView.Rows[i].Cells[2].Value.ToString()) >= 2 && int.Parse(gridView.Rows[i].Cells[2].Value.ToString()) <=6)
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
                             var subjectID = SubjectDA.GetSubjectID(subjectName);
@@ -62,7 +62,11 @@
                             };
                             context.Marks.Add(mark);
                         }
-                        if (gridView.Rows[i].Cells[4].Value.ToString() != "")
+                        else
+                        {
+                            throw new IndexOutOfRangeException("Грешен формат на входните данни.");
+                        }
+                        if (gridView.Rows[i].Cells[4].Value.ToString() != "" && int.Parse(gridView.Rows[i].Cells[4].Value.ToString()) >= 2 && int.Parse(gridView.Rows[i].Cells[4].Value.ToString()) <=6)
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
                             var subjectID = SubjectDA.GetSubjectID(subjectName);
@@ -77,6 +81,10 @@
                                 Grade = byte.Parse(gridView.Rows[i].Cells[2].Value.ToString())
                             };
                             context.Marks.Add(mark);
+                        }
+                        else
+                        {
+                            throw new IndexOutOfRangeException("Грешен формат на входните данни.");
                         }
                         if (gridView.Rows[i].Cells[2].Value.ToString() == "")
                         {
@@ -93,7 +101,7 @@
                 {
                     for (int i = 0; i < gridView.Rows.Count; i++)
                     {
-                        if (gridView.Rows[i].Cells[2].Value.ToString() != "")
+                        if (gridView.Rows[i].Cells[2].Value.ToString() != "" && int.Parse(gridView.Rows[i].Cells[2].Value.ToString()) >= 2 && int.Parse(gridView.Rows[i].Cells[2].Value.ToString()) <=6)
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
                             var subjectID = SubjectDA.GetSubjectID(subjectName);
@@ -108,6 +116,10 @@
                                 Grade = byte.Parse(gridView.Rows[i].Cells[2].Value.ToString())
                             };
                             context.Marks.Add(mark);
+                        }
+                        else
+                        {
+                            throw new IndexOutOfRangeException("Грешен формат на входните данни.");
                         }
                         if (gridView.Rows[i].Cells[2].Value.ToString() == "")
                         {

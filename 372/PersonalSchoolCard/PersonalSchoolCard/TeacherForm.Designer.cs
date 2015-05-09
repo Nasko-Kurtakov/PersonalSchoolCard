@@ -31,10 +31,7 @@ namespace PersonalShcoolCard
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,15 +39,18 @@ namespace PersonalShcoolCard
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -525,6 +525,15 @@ namespace PersonalShcoolCard
             this.labelCurrentSchoolYear = new System.Windows.Forms.Label();
             this.labelTeacherName = new System.Windows.Forms.Label();
             this.labelClassName = new System.Windows.Forms.Label();
+            this.textBoxPersonalCardNumber = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxDateOfBirth = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxMobilePhone = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxEnrollmentYear = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxAddress = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxPersonalNumber = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxLastName = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxSecondName = new PersonalShcoolCard.Classes.WaterMark();
+            this.textBoxFirstName = new PersonalShcoolCard.Classes.WaterMark();
             this.labelPictureNotSelected = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -557,15 +566,6 @@ namespace PersonalShcoolCard
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.timerSaveHoursStudiedSuccess = new System.Windows.Forms.Timer(this.components);
-            this.textBoxPersonalCardNumber = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxDateOfBirth = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxMobilePhone = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxEnrollmentYear = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxAddress = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxPersonalNumber = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxLastName = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxSecondName = new PersonalShcoolCard.Classes.WaterMark();
-            this.textBoxFirstName = new PersonalShcoolCard.Classes.WaterMark();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -815,8 +815,8 @@ namespace PersonalShcoolCard
             // 
             // panelParent
             // 
-            this.panelParent.Controls.Add(this.tabControlMarksSummary);
             this.panelParent.Controls.Add(this.tabControlMarks);
+            this.panelParent.Controls.Add(this.tabControlMarksSummary);
             this.panelParent.Controls.Add(this.panelMarksExam);
             this.panelParent.Controls.Add(this.panelAddAbsences);
             this.panelParent.Controls.Add(this.tabControlDiplom);
@@ -834,11 +834,10 @@ namespace PersonalShcoolCard
             // 
             this.tabControlMarksSummary.Controls.Add(this.tabPageMandatoryAndChosenSubjects);
             this.tabControlMarksSummary.Controls.Add(this.tabPageExtraSubjects);
-            this.tabControlMarksSummary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlMarksSummary.Location = new System.Drawing.Point(0, 0);
+            this.tabControlMarksSummary.Location = new System.Drawing.Point(0, 159);
             this.tabControlMarksSummary.Name = "tabControlMarksSummary";
             this.tabControlMarksSummary.SelectedIndex = 0;
-            this.tabControlMarksSummary.Size = new System.Drawing.Size(1038, 730);
+            this.tabControlMarksSummary.Size = new System.Drawing.Size(1038, 43);
             this.tabControlMarksSummary.TabIndex = 1133;
             this.tabControlMarksSummary.Visible = false;
             // 
@@ -849,7 +848,7 @@ namespace PersonalShcoolCard
             this.tabPageMandatoryAndChosenSubjects.Location = new System.Drawing.Point(4, 22);
             this.tabPageMandatoryAndChosenSubjects.Name = "tabPageMandatoryAndChosenSubjects";
             this.tabPageMandatoryAndChosenSubjects.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMandatoryAndChosenSubjects.Size = new System.Drawing.Size(1030, 704);
+            this.tabPageMandatoryAndChosenSubjects.Size = new System.Drawing.Size(1030, 17);
             this.tabPageMandatoryAndChosenSubjects.TabIndex = 0;
             this.tabPageMandatoryAndChosenSubjects.Text = "Успех от ЗП и ЗИП";
             // 
@@ -891,7 +890,7 @@ namespace PersonalShcoolCard
             this.panelMarksMandatoryAndChosenSubjectsSummary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMarksMandatoryAndChosenSubjectsSummary.Location = new System.Drawing.Point(3, 3);
             this.panelMarksMandatoryAndChosenSubjectsSummary.Name = "panelMarksMandatoryAndChosenSubjectsSummary";
-            this.panelMarksMandatoryAndChosenSubjectsSummary.Size = new System.Drawing.Size(1024, 698);
+            this.panelMarksMandatoryAndChosenSubjectsSummary.Size = new System.Drawing.Size(1024, 11);
             this.panelMarksMandatoryAndChosenSubjectsSummary.TabIndex = 1155;
             // 
             // labelDiplomMarksSaveSuccessful
@@ -1025,14 +1024,14 @@ namespace PersonalShcoolCard
             this.AverageMarkMandatorySubject,
             this.WithWordsChosenFinal,
             this.AverageMarkChosenSubject});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDiplom.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDiplom.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewDiplom.Location = new System.Drawing.Point(45, 156);
             this.dataGridViewDiplom.Name = "dataGridViewDiplom";
             this.dataGridViewDiplom.RowHeadersVisible = false;
@@ -1049,8 +1048,8 @@ namespace PersonalShcoolCard
             // 
             // WithWordsMandatoryFirstYear
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.WithWordsMandatoryFirstYear.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.WithWordsMandatoryFirstYear.DefaultCellStyle = dataGridViewCellStyle4;
             this.WithWordsMandatoryFirstYear.HeaderText = "Оценка";
             this.WithWordsMandatoryFirstYear.Name = "WithWordsMandatoryFirstYear";
             this.WithWordsMandatoryFirstYear.ReadOnly = true;
@@ -1066,8 +1065,8 @@ namespace PersonalShcoolCard
             // 
             // WithWordsChosenFirstYear
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.WithWordsChosenFirstYear.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.WithWordsChosenFirstYear.DefaultCellStyle = dataGridViewCellStyle5;
             this.WithWordsChosenFirstYear.HeaderText = "Оценка";
             this.WithWordsChosenFirstYear.Name = "WithWordsChosenFirstYear";
             this.WithWordsChosenFirstYear.ReadOnly = true;
@@ -1083,8 +1082,8 @@ namespace PersonalShcoolCard
             // 
             // WithWordsMandatorySecondYear
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.WithWordsMandatorySecondYear.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.WithWordsMandatorySecondYear.DefaultCellStyle = dataGridViewCellStyle6;
             this.WithWordsMandatorySecondYear.HeaderText = "Оценка";
             this.WithWordsMandatorySecondYear.Name = "WithWordsMandatorySecondYear";
             this.WithWordsMandatorySecondYear.ReadOnly = true;
@@ -1100,8 +1099,8 @@ namespace PersonalShcoolCard
             // 
             // WithWordsChosenSecondYear
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.WithWordsChosenSecondYear.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.WithWordsChosenSecondYear.DefaultCellStyle = dataGridViewCellStyle7;
             this.WithWordsChosenSecondYear.HeaderText = "Оценка";
             this.WithWordsChosenSecondYear.Name = "WithWordsChosenSecondYear";
             this.WithWordsChosenSecondYear.ReadOnly = true;
@@ -1117,8 +1116,8 @@ namespace PersonalShcoolCard
             // 
             // WithWordsMandatoryThirdYear
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.WithWordsMandatoryThirdYear.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.WithWordsMandatoryThirdYear.DefaultCellStyle = dataGridViewCellStyle8;
             this.WithWordsMandatoryThirdYear.HeaderText = "Оценка";
             this.WithWordsMandatoryThirdYear.Name = "WithWordsMandatoryThirdYear";
             this.WithWordsMandatoryThirdYear.ReadOnly = true;
@@ -1134,8 +1133,8 @@ namespace PersonalShcoolCard
             // 
             // WithWordsChosenThirdYear
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.WithWordsChosenThirdYear.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.WithWordsChosenThirdYear.DefaultCellStyle = dataGridViewCellStyle9;
             this.WithWordsChosenThirdYear.HeaderText = "Оценка";
             this.WithWordsChosenThirdYear.Name = "WithWordsChosenThirdYear";
             this.WithWordsChosenThirdYear.ReadOnly = true;
@@ -1151,8 +1150,8 @@ namespace PersonalShcoolCard
             // 
             // WithWordsMandatoryFourthYear
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.WithWordsMandatoryFourthYear.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.WithWordsMandatoryFourthYear.DefaultCellStyle = dataGridViewCellStyle10;
             this.WithWordsMandatoryFourthYear.HeaderText = "Оценка";
             this.WithWordsMandatoryFourthYear.Name = "WithWordsMandatoryFourthYear";
             this.WithWordsMandatoryFourthYear.ReadOnly = true;
@@ -1168,8 +1167,8 @@ namespace PersonalShcoolCard
             // 
             // WithWordsChosenFourthYear
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.WithWordsChosenFourthYear.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.WithWordsChosenFourthYear.DefaultCellStyle = dataGridViewCellStyle11;
             this.WithWordsChosenFourthYear.HeaderText = "Оценка";
             this.WithWordsChosenFourthYear.Name = "WithWordsChosenFourthYear";
             this.WithWordsChosenFourthYear.ReadOnly = true;
@@ -1185,8 +1184,8 @@ namespace PersonalShcoolCard
             // 
             // WithWordsMandatoryFinal
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.WithWordsMandatoryFinal.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.WithWordsMandatoryFinal.DefaultCellStyle = dataGridViewCellStyle12;
             this.WithWordsMandatoryFinal.HeaderText = "Оценка";
             this.WithWordsMandatoryFinal.Name = "WithWordsMandatoryFinal";
             this.WithWordsMandatoryFinal.ReadOnly = true;
@@ -1202,8 +1201,8 @@ namespace PersonalShcoolCard
             // 
             // WithWordsChosenFinal
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.WithWordsChosenFinal.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.WithWordsChosenFinal.DefaultCellStyle = dataGridViewCellStyle13;
             this.WithWordsChosenFinal.HeaderText = "Оценка";
             this.WithWordsChosenFinal.Name = "WithWordsChosenFinal";
             this.WithWordsChosenFinal.ReadOnly = true;
@@ -1590,14 +1589,14 @@ namespace PersonalShcoolCard
             this.dataGridViewExtraSubjectFourthYear,
             this.FinalMark,
             this.dataGridViewFinalMark});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDiplomExtraSubjects.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewDiplomExtraSubjects.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewDiplomExtraSubjects.Location = new System.Drawing.Point(45, 147);
             this.dataGridViewDiplomExtraSubjects.Name = "dataGridViewDiplomExtraSubjects";
             this.dataGridViewDiplomExtraSubjects.RowHeadersVisible = false;
@@ -1614,8 +1613,8 @@ namespace PersonalShcoolCard
             // 
             // dataGridViewTextBoxColumn14
             // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewTextBoxColumn14.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewTextBoxColumn14.DefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewTextBoxColumn14.HeaderText = "Оценка";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
@@ -1631,8 +1630,8 @@ namespace PersonalShcoolCard
             // 
             // dataGridViewTextBoxColumn16
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewTextBoxColumn16.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewTextBoxColumn16.DefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridViewTextBoxColumn16.HeaderText = "Оценка";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             this.dataGridViewTextBoxColumn16.ReadOnly = true;
@@ -1648,8 +1647,8 @@ namespace PersonalShcoolCard
             // 
             // dataGridViewTextBoxColumn22
             // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewTextBoxColumn22.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewTextBoxColumn22.DefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewTextBoxColumn22.HeaderText = "Оценка";
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             this.dataGridViewTextBoxColumn22.ReadOnly = true;
@@ -1665,8 +1664,8 @@ namespace PersonalShcoolCard
             // 
             // dataGridViewTextBoxColumn28
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewTextBoxColumn28.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewTextBoxColumn28.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewTextBoxColumn28.HeaderText = "Оценка";
             this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
             this.dataGridViewTextBoxColumn28.ReadOnly = true;
@@ -1682,8 +1681,8 @@ namespace PersonalShcoolCard
             // 
             // FinalMark
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.FinalMark.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.FinalMark.DefaultCellStyle = dataGridViewCellStyle19;
             this.FinalMark.HeaderText = "Оценка";
             this.FinalMark.Name = "FinalMark";
             this.FinalMark.ReadOnly = true;
@@ -1908,10 +1907,11 @@ namespace PersonalShcoolCard
             this.tabControlMarks.Controls.Add(this.tabPageSecondTerm);
             this.tabControlMarks.Controls.Add(this.tabPageYear);
             this.tabControlMarks.Controls.Add(this.tabPageHoursStudiedd);
-            this.tabControlMarks.Location = new System.Drawing.Point(1, 79);
+            this.tabControlMarks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlMarks.Location = new System.Drawing.Point(0, 0);
             this.tabControlMarks.Name = "tabControlMarks";
             this.tabControlMarks.SelectedIndex = 0;
-            this.tabControlMarks.Size = new System.Drawing.Size(1038, 34);
+            this.tabControlMarks.Size = new System.Drawing.Size(1038, 730);
             this.tabControlMarks.TabIndex = 1150;
             this.tabControlMarks.Visible = false;
             this.tabControlMarks.SelectedIndexChanged += new System.EventHandler(this.tabControlMarks_SelectedIndexChanged);
@@ -1922,7 +1922,7 @@ namespace PersonalShcoolCard
             this.tabPageSelectSubjects.Controls.Add(this.panelSelectSubjects);
             this.tabPageSelectSubjects.Location = new System.Drawing.Point(4, 22);
             this.tabPageSelectSubjects.Name = "tabPageSelectSubjects";
-            this.tabPageSelectSubjects.Size = new System.Drawing.Size(1030, 8);
+            this.tabPageSelectSubjects.Size = new System.Drawing.Size(1030, 704);
             this.tabPageSelectSubjects.TabIndex = 3;
             this.tabPageSelectSubjects.Text = "Предмети";
             // 
@@ -1936,7 +1936,7 @@ namespace PersonalShcoolCard
             this.panelSelectSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelSelectSubjects.Location = new System.Drawing.Point(0, 0);
             this.panelSelectSubjects.Name = "panelSelectSubjects";
-            this.panelSelectSubjects.Size = new System.Drawing.Size(1030, 8);
+            this.panelSelectSubjects.Size = new System.Drawing.Size(1030, 704);
             this.panelSelectSubjects.TabIndex = 1133;
             // 
             // label17
@@ -1980,7 +1980,7 @@ namespace PersonalShcoolCard
             this.tabPageFirstTerm.Location = new System.Drawing.Point(4, 22);
             this.tabPageFirstTerm.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageFirstTerm.Name = "tabPageFirstTerm";
-            this.tabPageFirstTerm.Size = new System.Drawing.Size(1030, 8);
+            this.tabPageFirstTerm.Size = new System.Drawing.Size(1030, 704);
             this.tabPageFirstTerm.TabIndex = 0;
             this.tabPageFirstTerm.Text = "Първи срок";
             // 
@@ -2001,7 +2001,7 @@ namespace PersonalShcoolCard
             this.panelMarksFirstTerm.Location = new System.Drawing.Point(0, 0);
             this.panelMarksFirstTerm.Margin = new System.Windows.Forms.Padding(0);
             this.panelMarksFirstTerm.Name = "panelMarksFirstTerm";
-            this.panelMarksFirstTerm.Size = new System.Drawing.Size(1030, 8);
+            this.panelMarksFirstTerm.Size = new System.Drawing.Size(1030, 704);
             this.panelMarksFirstTerm.TabIndex = 40;
             // 
             // labelSuccessSaveMarks
@@ -2058,8 +2058,8 @@ namespace PersonalShcoolCard
             // 
             // MarkMandatoryWithWordsSubjectsFirstTerm
             // 
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MarkMandatoryWithWordsSubjectsFirstTerm.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MarkMandatoryWithWordsSubjectsFirstTerm.DefaultCellStyle = dataGridViewCellStyle1;
             this.MarkMandatoryWithWordsSubjectsFirstTerm.HeaderText = "ЗП-Първи скок";
             this.MarkMandatoryWithWordsSubjectsFirstTerm.Name = "MarkMandatoryWithWordsSubjectsFirstTerm";
             this.MarkMandatoryWithWordsSubjectsFirstTerm.ReadOnly = true;
@@ -2073,8 +2073,8 @@ namespace PersonalShcoolCard
             // 
             // MarkChoosenWithWordsSubjectsFirstTerm
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MarkChoosenWithWordsSubjectsFirstTerm.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MarkChoosenWithWordsSubjectsFirstTerm.DefaultCellStyle = dataGridViewCellStyle2;
             this.MarkChoosenWithWordsSubjectsFirstTerm.HeaderText = "ЗПП-Първи срок";
             this.MarkChoosenWithWordsSubjectsFirstTerm.Name = "MarkChoosenWithWordsSubjectsFirstTerm";
             this.MarkChoosenWithWordsSubjectsFirstTerm.ReadOnly = true;
@@ -2466,8 +2466,8 @@ namespace PersonalShcoolCard
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn2.HeaderText = "Предмети";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -6270,6 +6270,105 @@ namespace PersonalShcoolCard
             this.labelClassName.TabIndex = 37;
             this.labelClassName.Text = "от ";
             // 
+            // textBoxPersonalCardNumber
+            // 
+            this.textBoxPersonalCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxPersonalCardNumber.Location = new System.Drawing.Point(810, 189);
+            this.textBoxPersonalCardNumber.Multiline = true;
+            this.textBoxPersonalCardNumber.Name = "textBoxPersonalCardNumber";
+            this.textBoxPersonalCardNumber.Size = new System.Drawing.Size(153, 23);
+            this.textBoxPersonalCardNumber.TabIndex = 36;
+            this.textBoxPersonalCardNumber.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxPersonalCardNumber.WaterMarkText = "ЛНЧ";
+            // 
+            // textBoxDateOfBirth
+            // 
+            this.textBoxDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxDateOfBirth.Location = new System.Drawing.Point(810, 259);
+            this.textBoxDateOfBirth.Multiline = true;
+            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
+            this.textBoxDateOfBirth.Size = new System.Drawing.Size(153, 23);
+            this.textBoxDateOfBirth.TabIndex = 35;
+            this.textBoxDateOfBirth.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxDateOfBirth.WaterMarkText = "ДД/ММ/ГГГГ";
+            // 
+            // textBoxMobilePhone
+            // 
+            this.textBoxMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxMobilePhone.Location = new System.Drawing.Point(809, 329);
+            this.textBoxMobilePhone.Multiline = true;
+            this.textBoxMobilePhone.Name = "textBoxMobilePhone";
+            this.textBoxMobilePhone.Size = new System.Drawing.Size(153, 23);
+            this.textBoxMobilePhone.TabIndex = 34;
+            this.textBoxMobilePhone.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxMobilePhone.WaterMarkText = "Номер";
+            // 
+            // textBoxEnrollmentYear
+            // 
+            this.textBoxEnrollmentYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxEnrollmentYear.Location = new System.Drawing.Point(575, 329);
+            this.textBoxEnrollmentYear.Multiline = true;
+            this.textBoxEnrollmentYear.Name = "textBoxEnrollmentYear";
+            this.textBoxEnrollmentYear.Size = new System.Drawing.Size(153, 23);
+            this.textBoxEnrollmentYear.TabIndex = 33;
+            this.textBoxEnrollmentYear.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxEnrollmentYear.WaterMarkText = "Година на приемане";
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxAddress.Location = new System.Drawing.Point(575, 407);
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(388, 23);
+            this.textBoxAddress.TabIndex = 32;
+            this.textBoxAddress.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxAddress.WaterMarkText = "Адрес";
+            // 
+            // textBoxPersonalNumber
+            // 
+            this.textBoxPersonalNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxPersonalNumber.Location = new System.Drawing.Point(807, 121);
+            this.textBoxPersonalNumber.Multiline = true;
+            this.textBoxPersonalNumber.Name = "textBoxPersonalNumber";
+            this.textBoxPersonalNumber.Size = new System.Drawing.Size(153, 23);
+            this.textBoxPersonalNumber.TabIndex = 31;
+            this.textBoxPersonalNumber.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxPersonalNumber.WaterMarkText = "ЕГН";
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxLastName.Location = new System.Drawing.Point(575, 259);
+            this.textBoxLastName.Multiline = true;
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(153, 23);
+            this.textBoxLastName.TabIndex = 30;
+            this.textBoxLastName.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxLastName.WaterMarkText = "Фамилия";
+            // 
+            // textBoxSecondName
+            // 
+            this.textBoxSecondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxSecondName.Location = new System.Drawing.Point(575, 189);
+            this.textBoxSecondName.Multiline = true;
+            this.textBoxSecondName.Name = "textBoxSecondName";
+            this.textBoxSecondName.Size = new System.Drawing.Size(153, 23);
+            this.textBoxSecondName.TabIndex = 29;
+            this.textBoxSecondName.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxSecondName.WaterMarkText = "Презиме";
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxFirstName.Location = new System.Drawing.Point(573, 121);
+            this.textBoxFirstName.Multiline = true;
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(153, 23);
+            this.textBoxFirstName.TabIndex = 28;
+            this.textBoxFirstName.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textBoxFirstName.WaterMarkText = "Име";
+            // 
             // labelPictureNotSelected
             // 
             this.labelPictureNotSelected.AutoSize = true;
@@ -6547,105 +6646,6 @@ namespace PersonalShcoolCard
             // 
             this.timerSaveHoursStudiedSuccess.Interval = 3000;
             this.timerSaveHoursStudiedSuccess.Tick += new System.EventHandler(this.timerSaveHoursStudiedSuccess_Tick);
-            // 
-            // textBoxPersonalCardNumber
-            // 
-            this.textBoxPersonalCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxPersonalCardNumber.Location = new System.Drawing.Point(810, 189);
-            this.textBoxPersonalCardNumber.Multiline = true;
-            this.textBoxPersonalCardNumber.Name = "textBoxPersonalCardNumber";
-            this.textBoxPersonalCardNumber.Size = new System.Drawing.Size(153, 23);
-            this.textBoxPersonalCardNumber.TabIndex = 36;
-            this.textBoxPersonalCardNumber.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxPersonalCardNumber.WaterMarkText = "ЛНЧ";
-            // 
-            // textBoxDateOfBirth
-            // 
-            this.textBoxDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxDateOfBirth.Location = new System.Drawing.Point(810, 259);
-            this.textBoxDateOfBirth.Multiline = true;
-            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
-            this.textBoxDateOfBirth.Size = new System.Drawing.Size(153, 23);
-            this.textBoxDateOfBirth.TabIndex = 35;
-            this.textBoxDateOfBirth.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxDateOfBirth.WaterMarkText = "ДД/ММ/ГГГГ";
-            // 
-            // textBoxMobilePhone
-            // 
-            this.textBoxMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxMobilePhone.Location = new System.Drawing.Point(809, 329);
-            this.textBoxMobilePhone.Multiline = true;
-            this.textBoxMobilePhone.Name = "textBoxMobilePhone";
-            this.textBoxMobilePhone.Size = new System.Drawing.Size(153, 23);
-            this.textBoxMobilePhone.TabIndex = 34;
-            this.textBoxMobilePhone.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxMobilePhone.WaterMarkText = "Номер";
-            // 
-            // textBoxEnrollmentYear
-            // 
-            this.textBoxEnrollmentYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxEnrollmentYear.Location = new System.Drawing.Point(575, 329);
-            this.textBoxEnrollmentYear.Multiline = true;
-            this.textBoxEnrollmentYear.Name = "textBoxEnrollmentYear";
-            this.textBoxEnrollmentYear.Size = new System.Drawing.Size(153, 23);
-            this.textBoxEnrollmentYear.TabIndex = 33;
-            this.textBoxEnrollmentYear.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxEnrollmentYear.WaterMarkText = "Година на приемане";
-            // 
-            // textBoxAddress
-            // 
-            this.textBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxAddress.Location = new System.Drawing.Point(575, 407);
-            this.textBoxAddress.Multiline = true;
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(388, 23);
-            this.textBoxAddress.TabIndex = 32;
-            this.textBoxAddress.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxAddress.WaterMarkText = "Адрес";
-            // 
-            // textBoxPersonalNumber
-            // 
-            this.textBoxPersonalNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxPersonalNumber.Location = new System.Drawing.Point(807, 121);
-            this.textBoxPersonalNumber.Multiline = true;
-            this.textBoxPersonalNumber.Name = "textBoxPersonalNumber";
-            this.textBoxPersonalNumber.Size = new System.Drawing.Size(153, 23);
-            this.textBoxPersonalNumber.TabIndex = 31;
-            this.textBoxPersonalNumber.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxPersonalNumber.WaterMarkText = "ЕГН";
-            // 
-            // textBoxLastName
-            // 
-            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxLastName.Location = new System.Drawing.Point(575, 259);
-            this.textBoxLastName.Multiline = true;
-            this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(153, 23);
-            this.textBoxLastName.TabIndex = 30;
-            this.textBoxLastName.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxLastName.WaterMarkText = "Фамилия";
-            // 
-            // textBoxSecondName
-            // 
-            this.textBoxSecondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxSecondName.Location = new System.Drawing.Point(575, 189);
-            this.textBoxSecondName.Multiline = true;
-            this.textBoxSecondName.Name = "textBoxSecondName";
-            this.textBoxSecondName.Size = new System.Drawing.Size(153, 23);
-            this.textBoxSecondName.TabIndex = 29;
-            this.textBoxSecondName.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxSecondName.WaterMarkText = "Презиме";
-            // 
-            // textBoxFirstName
-            // 
-            this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBoxFirstName.Location = new System.Drawing.Point(573, 121);
-            this.textBoxFirstName.Multiline = true;
-            this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(153, 23);
-            this.textBoxFirstName.TabIndex = 28;
-            this.textBoxFirstName.WaterMarkColor = System.Drawing.Color.Gray;
-            this.textBoxFirstName.WaterMarkText = "Име";
             // 
             // TeacherForm
             // 

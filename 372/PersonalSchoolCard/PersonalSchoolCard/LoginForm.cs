@@ -21,27 +21,43 @@ namespace PersonalShcoolCard
         string schoolYear = Classes.SchoolYearDA.GetCurrentSchoolYear();
         private void LoginButt_Click(object sender, EventArgs e)
         {
-             try
+            if (textBoxUserName.Text != "admin" && textBoxPassword.Text != "admin")
+                try
+                {
+                    if (Classes.TeacherDA.HasClass(Classes.TeacherDA.SearchTeacher(textBoxUserName.Text, textBoxPassword.Text).TeacherID, Classes.SchoolYearDA.GetCurrentSchoolYear()))
+                    {
+                        Classes.SignClass.LogIn(textBoxUserName.Text, textBoxPassword.Text);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Не ви е назначен клас.");
+                        textBoxUserName.Clear();
+                        textBoxPassword.Clear();
+                        textBoxUserName.Focus();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    if (ex is EntityException)
+                    {
+                        MessageBox.Show("Няма свързана база от данни.");
+                        textBoxUserName.Clear();
+                        textBoxPassword.Clear();
+                        textBoxUserName.Focus();
+                    }
+                    if (ex is InvalidOperationException)
+                    {
+                        MessageBox.Show("Невалидно потребителско име или парола.");
+                        textBoxUserName.Clear();
+                        textBoxPassword.Clear();
+                        textBoxUserName.Focus();
+                    }
+                }
+            else
             {
                 Classes.SignClass.LogIn(textBoxUserName.Text, textBoxPassword.Text);
                 this.Close();
-            }
-            catch (Exception ex)
-            {
-                if (ex is EntityException)
-                {
-                    MessageBox.Show("Няма свързана база от данни.");
-                    textBoxUserName.Clear();
-                    textBoxPassword.Clear();
-                    textBoxUserName.Focus();
-                }
-                else
-                {
-                    MessageBox.Show("Невалидно потребителско име или парола.");
-                    textBoxUserName.Clear();
-                    textBoxPassword.Clear();
-                    textBoxUserName.Focus();
-                }
             }
         }
         private void LoginForm_KeyPress(object sender, KeyPressEventArgs e)

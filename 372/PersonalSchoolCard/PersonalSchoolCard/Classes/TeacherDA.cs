@@ -87,9 +87,9 @@
                 return teacher;
             }
         }
-        public static Teacher SearchTeacher(string username,string password)
+        public static Teacher SearchTeacher(string username, string password)
         {
-            using(var context = new PersonalSchoolCardEntities())
+            using (var context = new PersonalSchoolCardEntities())
             {
                 var searchedTeacher = context.Teachers
                                 .Where(teacher => teacher.UserName == username && teacher.Password == password)
@@ -121,6 +121,24 @@
                                       .Select(teacher => teacher)
                                       .ToList();
                 return teachersList;
+            }
+        }
+        public static bool HasClass(int teacherID, string schoolYear)
+        {
+            using (var context = new PersonalSchoolCardEntities())
+            {
+                var searchedTeacherID = context.SchoolClasses
+                                .Where(schoolClass => schoolClass.TeacherID == teacherID && schoolClass.SchoolYear.SchoolYearName == schoolYear)
+                                .Select(schoolClass => schoolClass)
+                                .FirstOrDefault();
+                if(searchedTeacherID!=null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
     }

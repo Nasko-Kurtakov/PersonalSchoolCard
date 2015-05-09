@@ -308,6 +308,10 @@
                 {
                     MessageBox.Show("Данните, които искате да запишете са вече въведени.");
                 }
+                if (ex is IndexOutOfRangeException)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
             finally
             {
@@ -469,13 +473,20 @@
                 Classes.MarkDA.SaveMark(dataGridViewExtraSubjects, teacherID, studentID, (byte)tabControlMarksExtraSubjects.SelectedIndex, true);
                 success = true;
             }
-            catch (FormatException)
+            catch (Exception ex)
             {
-                MessageBox.Show("Не сте въвели данни или те са в грешен формат.");
-            }
-            catch (DbUpdateException)
-            {
-                MessageBox.Show("Данните, които искате да запишете са вече въведени.");
+                if (ex is FormatException)
+                {
+                    MessageBox.Show("Не сте въвели данни или те са в грешен формат.");
+                }
+                if (ex is DbUpdateException)
+                {
+                    MessageBox.Show("Данните, които искате да запишете са вече въведени.");
+                }
+                if (ex is IndexOutOfRangeException)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
             finally
             {
@@ -851,12 +862,12 @@
         }
         private void buttonSaveExamMarks_Click(object sender, EventArgs e)
         {
-            string firstExamMark="";
-            string secondSubject="";
-            string secondExamMark="";
+            string firstExamMark = "";
+            string secondSubject = "";
+            string secondExamMark = "";
             string thirdSubject;
             string thirdExamMark;
-            long selectedStudentID=0;
+            long selectedStudentID = 0;
             bool success = false;
             try
             {
@@ -895,7 +906,7 @@
                 MessageBox.Show("Не стe избрали втори предмет.");
                 success = false;
             }
-            if (comboBoxThirdExam.SelectedItem == "Изберете предмет" && textBoxThirdExamMark.Text!="")
+            if (comboBoxThirdExam.SelectedItem == "Изберете предмет" && textBoxThirdExamMark.Text != "")
             {
                 MessageBox.Show("Не сте избрали трерти предмет.");
                 success = false;
@@ -911,7 +922,7 @@
                 }
                 else
                 {
-                    MessageBox.Show(string.Format("Не сте въвели оценка по {0}.",comboBoxThirdExam.SelectedItem.ToString()));
+                    MessageBox.Show(string.Format("Не сте въвели оценка по {0}.", comboBoxThirdExam.SelectedItem.ToString()));
                     success = false;
                 }
             }
