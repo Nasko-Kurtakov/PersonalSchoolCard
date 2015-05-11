@@ -1,0 +1,30 @@
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.dll.config
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.dll
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.pdb
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.dll
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.xml
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.dll
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.pdb
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.csprojResolveAssemblyReference.cache
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.dll.config
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.pdb
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.dll
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.xml
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.csprojResolveAssemblyReference.cache
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.pdb
+D:\PersonalSchoolCard1\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.dll.config
+D:\PersonalSchoolCard1\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard1\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\PersonalSchoolCard.Data.pdb
+D:\PersonalSchoolCard1\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.dll
+D:\PersonalSchoolCard1\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\PersonalSchoolCard1\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.xml
+D:\PersonalSchoolCard1\372\PersonalSchoolCard\PersonalSchoolCard.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\PersonalSchoolCard1\372\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.csprojResolveAssemblyReference.cache
+D:\PersonalSchoolCard1\372\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard1\372\PersonalSchoolCard\PersonalSchoolCard.Data\obj\Debug\PersonalSchoolCard.Data.pdb

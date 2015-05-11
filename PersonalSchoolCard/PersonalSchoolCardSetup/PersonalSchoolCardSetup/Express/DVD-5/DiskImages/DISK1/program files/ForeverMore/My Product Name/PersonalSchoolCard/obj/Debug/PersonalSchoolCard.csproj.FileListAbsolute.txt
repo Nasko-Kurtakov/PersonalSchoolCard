@@ -1,0 +1,36 @@
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.exe.config
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalSchoolCard.csprojResolveAssemblyReference.cache
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.AdminForm.resources
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.LoginForm.resources
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.TeacherForm.resources
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.exe
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.pdb
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.dll
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.Data.dll
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.Data.pdb
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.xml
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.Properties.Resources.resources
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalSchoolCard.exe
+C:\Users\Nasko Kurtakov\Desktop\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalSchoolCard.pdb
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.exe.config
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalSchoolCard.exe
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalSchoolCard.pdb
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.exe
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.pdb
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.dll
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.SqlServer.dll
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.Data.dll
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\PersonalSchoolCard.Data.pdb
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.xml
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\bin\Debug\EntityFramework.SqlServer.xml
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalSchoolCard.csprojResolveAssemblyReference.cache
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.AdminForm.resources
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.LoginForm.resources
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.Properties.Resources.resources
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalShcoolCard.TeacherForm.resources
+D:\PersonalSchoolCard\372\PersonalSchoolCard\PersonalSchoolCard\obj\Debug\PersonalSchoolCard.csproj.GenerateResource.Cache
