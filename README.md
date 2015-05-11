@@ -7,4 +7,3 @@ The project is totally complete and ready to install and use if only the databas
 placed on 10th place at the Bulgarian national information thechnology olympics.
 
 Be happy to use it for any purposes you desire. :)
-Ongoing Project for making personal card for every student.
