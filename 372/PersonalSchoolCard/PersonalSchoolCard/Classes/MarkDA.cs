@@ -46,7 +46,7 @@
                 {
                     for (int i = 0; i < gridView.Rows.Count; i++)
                     {
-                        if (gridView.Rows[i].Cells[2].Value.ToString() != "" && int.Parse(gridView.Rows[i].Cells[2].Value.ToString()) >= 2 && int.Parse(gridView.Rows[i].Cells[2].Value.ToString()) <=6)
+                        if (gridView.Rows[i].Cells[2].Value.ToString() != "" && int.Parse(gridView.Rows[i].Cells[2].Value.ToString()) >= 2 && int.Parse(gridView.Rows[i].Cells[2].Value.ToString()) <= 6)
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
                             var subjectID = SubjectDA.GetSubjectID(subjectName);
@@ -66,7 +66,7 @@
                         {
                             throw new IndexOutOfRangeException("Грешен формат на входните данни.");
                         }
-                        if (gridView.Rows[i].Cells[4].Value.ToString() != "" && int.Parse(gridView.Rows[i].Cells[4].Value.ToString()) >= 2 && int.Parse(gridView.Rows[i].Cells[4].Value.ToString()) <=6)
+                        if (gridView.Rows[i].Cells[4].Value.ToString() != "")
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
                             var subjectID = SubjectDA.GetSubjectID(subjectName);
@@ -81,10 +81,6 @@
                                 Grade = byte.Parse(gridView.Rows[i].Cells[2].Value.ToString())
                             };
                             context.Marks.Add(mark);
-                        }
-                        else
-                        {
-                            throw new IndexOutOfRangeException("Грешен формат на входните данни.");
                         }
                         if (gridView.Rows[i].Cells[2].Value.ToString() == "")
                         {
@@ -101,7 +97,7 @@
                 {
                     for (int i = 0; i < gridView.Rows.Count; i++)
                     {
-                        if (gridView.Rows[i].Cells[2].Value.ToString() != "" && int.Parse(gridView.Rows[i].Cells[2].Value.ToString()) >= 2 && int.Parse(gridView.Rows[i].Cells[2].Value.ToString()) <=6)
+                        if (gridView.Rows[i].Cells[2].Value.ToString() != "")
                         {
                             var subjectName = gridView.Rows[i].Cells[0].Value.ToString();
                             var subjectID = SubjectDA.GetSubjectID(subjectName);
